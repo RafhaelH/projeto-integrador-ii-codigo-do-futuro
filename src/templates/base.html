@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Plataforma Código do Futuro">
+  <title>{% block title %}Código do Futuro{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header">
+    <a class="brand" href="{% url 'home' %}" aria-label="Página inicial do Código do Futuro">
+      <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+      <span>
+        <strong>Código do Futuro</strong>
+        <small>Programação que transforma</small>
+      </span>
+    </a>
+
+    {% if user.is_authenticated %}
+      <nav class="user-nav" aria-label="Navegação do usuário">
+        <span>Olá, {{ user.get_short_name }}</span>
+        <form action="{% url 'logout' %}" method="post">
+          {% csrf_token %}
+          <button class="button button-ghost" type="submit">Sair</button>
+        </form>
+      </nav>
+    {% endif %}
+  </header>
+
+  <main id="conteudo" class="page-shell" tabindex="-1">
+    {% if messages %}
+      <div class="messages" aria-live="polite">
+        {% for message in messages %}
+          <div class="message message-{{ message.tags|default:'info' }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    Projeto Integrador Transdisciplinar em Engenharia de Software II
+  </footer>
+</body>
+</html>

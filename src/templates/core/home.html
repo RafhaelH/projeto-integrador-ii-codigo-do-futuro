@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Início | Código do Futuro{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Ambiente acadêmico</span>
+      <h1>Bem-vindo ao Código do Futuro</h1>
+      <p>
+        A fundação da plataforma está pronta para receber os módulos de oficinas,
+        turmas e acompanhamento dos participantes.
+      </p>
+    </div>
+    <div class="status-pill"><span aria-hidden="true"></span> Sistema operacional</div>
+  </section>
+
+  <section aria-labelledby="modulos-title">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">Próximas entregas</span>
+        <h2 id="modulos-title">Módulos planejados</h2>
+      </div>
+    </div>
+
+    <div class="card-grid">
+      <article class="card">
+        <span class="card-icon" aria-hidden="true">01</span>
+        <h3>Pessoas</h3>
+        <p>Participantes, responsáveis, instrutores e instituições parceiras.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon" aria-hidden="true">02</span>
+        <h3>Oficinas e turmas</h3>
+        <p>Ofertas pedagógicas, cronogramas, vagas e encontros presenciais.</p>
+      </article>
+      <article class="card">
+        <span class="card-icon" aria-hidden="true">03</span>
+        <h3>Acompanhamento</h3>
+        <p>Inscrições, frequência, projetos, avaliações e certificados.</p>
+      </article>
+    </div>
+  </section>
+{% endblock %}

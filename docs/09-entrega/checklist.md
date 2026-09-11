@@ -24,9 +24,9 @@
 
 - [x] Repositório GitHub criado
 - [x] Estratégia de branches e commits definida
-- [ ] Fundação Django criada
-- [ ] PostgreSQL configurado
-- [ ] Autenticação e autorização
+- [x] Fundação Django criada
+- [x] PostgreSQL configurado
+- [ ] Autenticação e autorização por perfil em todos os módulos
 - [ ] Participantes, responsáveis e instrutores
 - [ ] Oficinas, turmas e encontros
 - [ ] Inscrições, vagas e lista de espera
@@ -35,11 +35,11 @@
 - [ ] Avaliações e conclusão
 - [ ] Certificados
 - [ ] Painéis e relatórios
-- [ ] Interface responsiva
+- [ ] Interface responsiva em todos os módulos
 - [ ] Tratamento de erros
 - [ ] Dados fictícios de demonstração
-- [ ] Testes automatizados
-- [ ] Integração contínua
+- [ ] Testes automatizados de todos os requisitos Must
+- [x] Integração contínua configurada
 - [ ] Ambiente publicado
 
 ## Situação 3 — Validação e melhoria

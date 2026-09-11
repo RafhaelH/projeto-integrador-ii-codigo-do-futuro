@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Participantes | Código do Futuro{% endblock %}
+
+{% block content %}
+  <div class="page-heading page-heading-actions">
+    <div>
+      <span class="eyebrow">Pessoas</span>
+      <h1>Participantes</h1>
+      <p>CPF protegido na listagem conforme as regras de privacidade.</p>
+    </div>
+    <a class="button button-primary" href="{% url 'people:participant-create' %}">Novo participante</a>
+  </div>
+
+  <form class="search-bar" method="get" role="search">
+    <label class="sr-only" for="participant-search">Buscar participante</label>
+    <input id="participant-search" name="q" type="search" value="{{ request.GET.q }}" placeholder="Buscar por nome">
+    <button class="button button-secondary" type="submit">Buscar</button>
+  </form>
+
+  <div class="table-shell">
+    <table>
+      <thead><tr><th>Nome</th><th>CPF</th><th>Nascimento</th><th>Situação</th><th><span class="sr-only">Ações</span></th></tr></thead>
+      <tbody>
+        {% for participant in participants %}
+          <tr>
+            <td><a href="{% url 'people:participant-detail' participant.pk %}">{{ participant.full_name }}</a></td>
+            <td>{{ participant.masked_cpf }}</td>
+            <td>{{ participant.birth_date|date:"d/m/Y" }}</td>
+            <td><span class="badge {% if participant.is_active %}badge-success{% else %}badge-muted{% endif %}">{% if participant.is_active %}Ativo{% else %}Inativo{% endif %}</span></td>
+            <td class="table-action"><a href="{% url 'people:participant-update' participant.pk %}">Editar</a></td>
+          </tr>
+        {% empty %}
+          <tr><td class="empty-state" colspan="5">Nenhum participante encontrado.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% include "people/_pagination.html" %}
+{% endblock %}

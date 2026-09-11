@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Instituições | Código do Futuro{% endblock %}
+
+{% block content %}
+  <div class="page-heading page-heading-actions">
+    <div><span class="eyebrow">Parceiros</span><h1>Instituições</h1><p>Organizações que apoiam e recebem as oficinas.</p></div>
+    <a class="button button-primary" href="{% url 'people:institution-create' %}">Nova instituição</a>
+  </div>
+  <form class="search-bar" method="get" role="search">
+    <label class="sr-only" for="institution-search">Buscar instituição</label>
+    <input id="institution-search" name="q" type="search" value="{{ request.GET.q }}" placeholder="Buscar por nome">
+    <button class="button button-secondary" type="submit">Buscar</button>
+  </form>
+  <div class="table-shell"><table>
+    <thead><tr><th>Instituição</th><th>Contato</th><th>Telefone</th><th>Situação</th><th><span class="sr-only">Ações</span></th></tr></thead>
+    <tbody>{% for institution in institutions %}<tr>
+      <td>{{ institution.name }}</td><td>{{ institution.contact_name|default:"—" }}</td><td>{{ institution.formatted_contact_phone }}</td>
+      <td><span class="badge {% if institution.is_active %}badge-success{% else %}badge-muted{% endif %}">{% if institution.is_active %}Ativa{% else %}Inativa{% endif %}</span></td>
+      <td class="table-action"><a href="{% url 'people:institution-update' institution.pk %}">Editar</a></td>
+    </tr>{% empty %}<tr><td class="empty-state" colspan="5">Nenhuma instituição encontrada.</td></tr>{% endfor %}</tbody>
+  </table></div>
+  {% include "people/_pagination.html" %}
+{% endblock %}

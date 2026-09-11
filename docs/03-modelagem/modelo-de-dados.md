@@ -62,6 +62,7 @@ erDiagram
 - uma inscrição tem no máximo uma frequência por encontro;
 - uma inscrição tem no máximo um projeto, uma avaliação e um certificado ativo;
 - uma turma só referencia uma instituição, que pode sediar várias turmas.
+- um participante pode possuir no máximo um responsável marcado como principal.
 
 ## Estados
 

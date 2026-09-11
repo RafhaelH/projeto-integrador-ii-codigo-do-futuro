@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}{{ participant.full_name }} | Código do Futuro{% endblock %}
+
+{% block content %}
+  <div class="page-heading page-heading-actions">
+    <div>
+      <span class="eyebrow">Participante</span>
+      <h1>{{ participant.full_name }}</h1>
+      <p>Cadastro e responsáveis autorizados.</p>
+    </div>
+    <a class="button button-secondary" href="{% url 'people:participant-update' participant.pk %}">Editar participante</a>
+  </div>
+
+  <div class="detail-grid">
+    <section class="panel" aria-labelledby="participant-data-title">
+      <h2 id="participant-data-title">Dados principais</h2>
+      <dl class="detail-list">
+        <div><dt>CPF</dt><dd>{{ participant.formatted_cpf }}</dd></div>
+        <div><dt>Data de nascimento</dt><dd>{{ participant.birth_date|date:"d/m/Y" }}</dd></div>
+        <div><dt>E-mail</dt><dd>{{ participant.contact_email|default:"Não informado" }}</dd></div>
+        <div><dt>Telefone</dt><dd>{{ participant.formatted_phone }}</dd></div>
+        <div><dt>Acesso</dt><dd>{{ participant.user.email|default:"Sem usuário vinculado" }}</dd></div>
+        <div><dt>Situação</dt><dd>{% if participant.is_active %}Ativo{% else %}Inativo{% endif %}</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel" aria-labelledby="guardian-title">
+      <div class="panel-heading">
+        <h2 id="guardian-title">Responsáveis</h2>
+        <a href="{% url 'people:guardian-link-create' participant.pk %}">Vincular</a>
+      </div>
+      <div class="stack-list">
+        {% for link in participant.guardian_links.all %}
+          <div class="stack-item">
+            <div>
+              <strong>{{ link.guardian.full_name }}</strong>
+              <small>{{ link.get_relationship_display }} · {{ link.guardian.formatted_phone }}</small>
+            </div>
+            {% if link.is_primary %}<span class="badge badge-primary">Principal</span>{% endif %}
+          </div>
+        {% empty %}
+          <p class="empty-copy">Nenhum responsável vinculado.</p>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+
+  <a class="back-link" href="{% url 'people:participant-list' %}">← Voltar para participantes</a>
+{% endblock %}

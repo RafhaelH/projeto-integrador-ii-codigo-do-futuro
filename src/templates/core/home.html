@@ -28,6 +28,9 @@
         <span class="card-icon" aria-hidden="true">01</span>
         <h3>Pessoas</h3>
         <p>Participantes, responsáveis, instrutores e instituições parceiras.</p>
+        {% if user.role == "ADMIN" %}
+          <a class="card-link" href="{% url 'people:index' %}">Gerenciar pessoas</a>
+        {% endif %}
       </article>
       <article class="card">
         <span class="card-icon" aria-hidden="true">02</span>

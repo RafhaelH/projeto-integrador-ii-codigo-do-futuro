@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Responsáveis | Código do Futuro{% endblock %}
+
+{% block content %}
+  <div class="page-heading page-heading-actions">
+    <div><span class="eyebrow">Pessoas</span><h1>Responsáveis</h1><p>Contatos legais dos participantes menores.</p></div>
+    <a class="button button-primary" href="{% url 'people:guardian-create' %}">Novo responsável</a>
+  </div>
+  <form class="search-bar" method="get" role="search">
+    <label class="sr-only" for="guardian-search">Buscar responsável</label>
+    <input id="guardian-search" name="q" type="search" value="{{ request.GET.q }}" placeholder="Buscar por nome">
+    <button class="button button-secondary" type="submit">Buscar</button>
+  </form>
+  <div class="table-shell"><table>
+    <thead><tr><th>Nome</th><th>Telefone</th><th>E-mail</th><th>Situação</th><th><span class="sr-only">Ações</span></th></tr></thead>
+    <tbody>{% for guardian in guardians %}<tr>
+      <td>{{ guardian.full_name }}</td><td>{{ guardian.formatted_phone }}</td><td>{{ guardian.email|default:"—" }}</td>
+      <td><span class="badge {% if guardian.is_active %}badge-success{% else %}badge-muted{% endif %}">{% if guardian.is_active %}Ativo{% else %}Inativo{% endif %}</span></td>
+      <td class="table-action"><a href="{% url 'people:guardian-update' guardian.pk %}">Editar</a></td>
+    </tr>{% empty %}<tr><td class="empty-state" colspan="5">Nenhum responsável encontrado.</td></tr>{% endfor %}</tbody>
+  </table></div>
+  {% include "people/_pagination.html" %}
+{% endblock %}

@@ -97,7 +97,8 @@ Nunca versione `.env`, credenciais, backups ou dados pessoais reais.
 src/
 ├── apps/
 │   ├── accounts/    # usuário customizado, autenticação e autorização
-│   └── core/        # páginas compartilhadas e health check
+│   ├── core/        # páginas compartilhadas e health check
+│   └── people/      # participantes, responsáveis, instrutores e instituições
 ├── config/
 │   └── settings/    # base, local, test e production
 ├── static/          # estilos e recursos públicos
@@ -105,7 +106,7 @@ src/
 └── manage.py
 ```
 
-Os módulos `people`, `workshops`, `enrollments`, `learning` e `reporting` serão adicionados incrementalmente conforme o backlog.
+Os módulos `workshops`, `enrollments`, `learning` e `reporting` serão adicionados incrementalmente conforme o backlog.
 
 ## Documentação
 

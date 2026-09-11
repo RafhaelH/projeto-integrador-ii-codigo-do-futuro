@@ -62,8 +62,12 @@
 | relationship | varchar(30) | Sim | mãe, pai, tutor ou outro |
 | is_primary | boolean | Sim | responsável principal |
 | created_at | datetime | Sim | criação |
+| updated_at | datetime | Sim | última alteração |
 
-Restrição única: `(participant_id, guardian_id)`.
+Restrições únicas:
+
+- `(participant_id, guardian_id)`;
+- apenas um vínculo com `is_primary = true` por participante.
 
 ## instructor
 

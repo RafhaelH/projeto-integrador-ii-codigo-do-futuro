@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Pessoas e instituições | Código do Futuro{% endblock %}
+
+{% block content %}
+  <div class="page-heading">
+    <div>
+      <span class="eyebrow">Cadastros fundamentais</span>
+      <h1>Pessoas e instituições</h1>
+      <p>Gerencie quem participa, ensina, responde pelos jovens e apoia as oficinas.</p>
+    </div>
+  </div>
+
+  <div class="card-grid">
+    <article class="card">
+      <span class="card-icon" aria-hidden="true">01</span>
+      <h2>Participantes</h2>
+      <p>Dados pessoais, acesso e responsáveis vinculados.</p>
+      <a class="card-link" href="{% url 'people:participant-list' %}">Abrir participantes</a>
+    </article>
+    <article class="card">
+      <span class="card-icon" aria-hidden="true">02</span>
+      <h2>Responsáveis</h2>
+      <p>Contatos responsáveis por participantes menores.</p>
+      <a class="card-link" href="{% url 'people:guardian-list' %}">Abrir responsáveis</a>
+    </article>
+    <article class="card">
+      <span class="card-icon" aria-hidden="true">03</span>
+      <h2>Instrutores</h2>
+      <p>Perfis que conduzirão as oficinas e avaliações.</p>
+      <a class="card-link" href="{% url 'people:instructor-list' %}">Abrir instrutores</a>
+    </article>
+    <article class="card">
+      <span class="card-icon" aria-hidden="true">04</span>
+      <h2>Instituições</h2>
+      <p>Bibliotecas, escolas e demais organizações parceiras.</p>
+      <a class="card-link" href="{% url 'people:institution-list' %}">Abrir instituições</a>
+    </article>
+  </div>
+{% endblock %}

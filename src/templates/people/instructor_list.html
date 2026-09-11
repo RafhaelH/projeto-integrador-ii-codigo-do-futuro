@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Instrutores | Código do Futuro{% endblock %}
+
+{% block content %}
+  <div class="page-heading page-heading-actions">
+    <div><span class="eyebrow">Pessoas</span><h1>Instrutores</h1><p>Profissionais responsáveis pelas turmas.</p></div>
+    <a class="button button-primary" href="{% url 'people:instructor-create' %}">Novo instrutor</a>
+  </div>
+  <form class="search-bar" method="get" role="search">
+    <label class="sr-only" for="instructor-search">Buscar instrutor</label>
+    <input id="instructor-search" name="q" type="search" value="{{ request.GET.q }}" placeholder="Buscar por nome">
+    <button class="button button-secondary" type="submit">Buscar</button>
+  </form>
+  <div class="table-shell"><table>
+    <thead><tr><th>Nome</th><th>E-mail</th><th>Especialidades</th><th>Situação</th><th><span class="sr-only">Ações</span></th></tr></thead>
+    <tbody>{% for instructor in instructors %}<tr>
+      <td>{{ instructor.user.full_name }}</td><td>{{ instructor.user.email }}</td><td>{{ instructor.specialties|default:"—" }}</td>
+      <td><span class="badge {% if instructor.is_active %}badge-success{% else %}badge-muted{% endif %}">{% if instructor.is_active %}Ativo{% else %}Inativo{% endif %}</span></td>
+      <td class="table-action"><a href="{% url 'people:instructor-update' instructor.pk %}">Editar</a></td>
+    </tr>{% empty %}<tr><td class="empty-state" colspan="5">Nenhum instrutor encontrado.</td></tr>{% endfor %}</tbody>
+  </table></div>
+  {% include "people/_pagination.html" %}
+{% endblock %}

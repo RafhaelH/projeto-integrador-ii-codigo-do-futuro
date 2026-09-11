@@ -1,0 +1,1 @@
+"""Pessoas e instituições parceiras."""

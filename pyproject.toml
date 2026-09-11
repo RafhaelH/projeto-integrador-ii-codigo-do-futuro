@@ -28,7 +28,7 @@ package = false
 DJANGO_SETTINGS_MODULE = "config.settings.test"
 pythonpath = ["src"]
 testpaths = ["tests"]
-addopts = "--strict-markers --strict-config --cov=src/apps --cov-report=term-missing --cov-fail-under=80"
+addopts = "--import-mode=importlib --strict-markers --strict-config --cov=src/apps --cov-report=term-missing --cov-fail-under=80"
 
 [tool.coverage.run]
 branch = true

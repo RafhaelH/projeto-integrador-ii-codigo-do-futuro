@@ -27,7 +27,7 @@
 - [x] Fundação Django criada
 - [x] PostgreSQL configurado
 - [ ] Autenticação e autorização por perfil em todos os módulos
-- [ ] Participantes, responsáveis e instrutores
+- [x] Participantes, responsáveis, instrutores e instituições
 - [ ] Oficinas, turmas e encontros
 - [ ] Inscrições, vagas e lista de espera
 - [ ] Frequência

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Entrar | Código do Futuro{% endblock %}
+
+{% block content %}
+  <div class="auth-layout">
+    <section class="auth-intro">
+      <span class="eyebrow">Aprender • Criar • Transformar</span>
+      <h1>Tecnologia abrindo caminhos para o futuro.</h1>
+      <p>Acompanhe oficinas, projetos e a evolução de cada participante em um só lugar.</p>
+    </section>
+
+    <section class="auth-card" aria-labelledby="login-title">
+      <h2 id="login-title">Acesse sua conta</h2>
+      <p>Informe o e-mail e a senha cadastrados.</p>
+
+      {% if form.non_field_errors %}
+        <div class="form-alert" role="alert">
+          E-mail ou senha inválidos. Confira os dados e tente novamente.
+        </div>
+      {% endif %}
+
+      <form method="post" novalidate>
+        {% csrf_token %}
+        <div class="form-field">
+          <label for="{{ form.username.id_for_label }}">E-mail</label>
+          <input
+            id="{{ form.username.id_for_label }}"
+            name="{{ form.username.html_name }}"
+            type="email"
+            value="{{ form.username.value|default:'' }}"
+            autocomplete="email"
+            required
+          >
+          {% for error in form.username.errors %}<small class="field-error">{{ error }}</small>{% endfor %}
+        </div>
+        <div class="form-field">
+          <label for="{{ form.password.id_for_label }}">Senha</label>
+          <input
+            id="{{ form.password.id_for_label }}"
+            name="{{ form.password.html_name }}"
+            type="password"
+            autocomplete="current-password"
+            required
+          >
+          {% for error in form.password.errors %}<small class="field-error">{{ error }}</small>{% endfor %}
+        </div>
+        {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+        <button class="button button-primary button-block" type="submit">Entrar</button>
+      </form>
+
+      <a class="auth-link" href="{% url 'password_reset' %}">Esqueci minha senha</a>
+    </section>
+  </div>
+{% endblock %}

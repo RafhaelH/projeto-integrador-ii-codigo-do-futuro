@@ -6,7 +6,7 @@ A plataforma Código do Futuro apoiará a organização de oficinas gratuitas de
 
 ## Situação do projeto
 
-O projeto está na fase de especificação e modelagem. A fundação documental foi criada antes da implementação para garantir rastreabilidade entre problema, requisitos, regras de negócio, código e testes.
+A especificação e a fundação executável estão concluídas. O repositório já possui projeto Django, usuário customizado, configurações por ambiente, PostgreSQL local, autenticação, recuperação de senha, interface-base responsiva, testes automatizados e integração contínua.
 
 ## Objetivo
 
@@ -25,16 +25,87 @@ Centralizar a gestão das oficinas e substituir controles dispersos por um fluxo
 - conclusão e emissão de certificados;
 - painel gerencial e relatórios básicos.
 
-## Stack planejada
+## Stack
 
-- Python e Django;
-- PostgreSQL;
+- Python 3.12 e Django 5.2 LTS;
+- PostgreSQL 17;
 - templates Django, HTML, CSS e JavaScript;
-- Bootstrap para a base responsiva da interface;
 - Pytest para testes automatizados;
+- Ruff para lint e formatação;
+- uv para dependências reproduzíveis;
 - GitHub Actions para integração contínua.
 
-As versões serão fixadas quando a fundação executável for criada, utilizando versões oficialmente suportadas na data da implementação.
+As versões exatas resolvidas estão registradas em `uv.lock`.
+
+## Executar localmente
+
+### Pré-requisitos
+
+- Python 3.12;
+- [uv](https://docs.astral.sh/uv/);
+- Docker com Compose para o PostgreSQL.
+
+### Linux/macOS
+
+```bash
+cp .env.example .env
+uv sync
+docker compose up -d database
+uv run python src/manage.py migrate
+uv run python src/manage.py createsuperuser
+uv run python src/manage.py runserver
+```
+
+### Windows PowerShell
+
+```powershell
+Copy-Item .env.example .env
+uv sync
+docker compose up -d database
+uv run python src/manage.py migrate
+uv run python src/manage.py createsuperuser
+uv run python src/manage.py runserver
+```
+
+A aplicação ficará disponível em `http://127.0.0.1:8000/` e a área administrativa em `http://127.0.0.1:8000/admin/`.
+
+## Verificações
+
+```bash
+uv run ruff check .
+uv run ruff format --check .
+uv run pytest
+DJANGO_SETTINGS_MODULE=config.settings.test uv run python src/manage.py check
+DJANGO_SETTINGS_MODULE=config.settings.test uv run python src/manage.py makemigrations --check --dry-run
+```
+
+O limite mínimo inicial de cobertura é 80%. Regras críticas devem possuir cobertura direta independentemente da porcentagem global.
+
+## Configurações
+
+| Ambiente | Módulo | Finalidade |
+|---|---|---|
+| Desenvolvimento | `config.settings.local` | debug, e-mail no console e banco configurado no `.env` |
+| Testes | `config.settings.test` | execução isolada e determinística |
+| Produção | `config.settings.production` | HTTPS, cookies seguros, HSTS e variáveis obrigatórias |
+
+Nunca versione `.env`, credenciais, backups ou dados pessoais reais.
+
+## Estrutura do código
+
+```text
+src/
+├── apps/
+│   ├── accounts/    # usuário customizado, autenticação e autorização
+│   └── core/        # páginas compartilhadas e health check
+├── config/
+│   └── settings/    # base, local, test e production
+├── static/          # estilos e recursos públicos
+├── templates/       # templates globais e autenticação
+└── manage.py
+```
+
+Os módulos `people`, `workshops`, `enrollments`, `learning` e `reporting` serão adicionados incrementalmente conforme o backlog.
 
 ## Documentação
 
@@ -63,6 +134,8 @@ Documentos centrais:
 - `feat/<descricao>`: funcionalidades;
 - `fix/<descricao>`: correções;
 - `docs/<descricao>`: documentação.
+
+Cada branch deve sair de `develop` e retornar por pull request após lint, testes e revisão das migrações.
 
 ## Origem acadêmica
 

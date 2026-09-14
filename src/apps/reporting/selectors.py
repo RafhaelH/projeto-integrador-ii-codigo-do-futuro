@@ -114,9 +114,7 @@ def dashboard_snapshot(queryset: QuerySet[ClassGroup]) -> DashboardSnapshot:
     capacity = queryset.aggregate(total=Sum("capacity"))["total"] or 0
     occupied = academic_enrollments.count()
     approved = final_enrollments.filter(status=EnrollmentStatus.APPROVED).count()
-    not_completed = final_enrollments.filter(
-        status=EnrollmentStatus.NOT_COMPLETED
-    ).count()
+    not_completed = final_enrollments.filter(status=EnrollmentStatus.NOT_COMPLETED).count()
 
     attendance_rows = academic_enrollments.annotate(
         completed_meetings=Count(

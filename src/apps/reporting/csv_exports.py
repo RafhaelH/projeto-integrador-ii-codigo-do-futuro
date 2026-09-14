@@ -189,8 +189,7 @@ def _completion_report(class_groups, *, filters: dict) -> HttpResponse:
                 enrollment.participant.full_name,
                 class_group.workshop.title,
                 class_group.code,
-                f"{_format_date(class_group.start_date)} a "
-                f"{_format_date(class_group.end_date)}",
+                f"{_format_date(class_group.start_date)} a {_format_date(class_group.end_date)}",
                 enrollment.get_status_display(),
                 _format_decimal(evaluation.final_score if evaluation else None),
                 "Sim" if project and project.is_delivered else "Não",

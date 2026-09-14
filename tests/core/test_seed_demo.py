@@ -33,9 +33,7 @@ def demo_counts() -> dict[str, int]:
         "institutions": Institution.objects.filter(name__startswith="[DEMO]").count(),
         "workshops": Workshop.objects.filter(slug__startswith="demo-").count(),
         "classes": demo_classes.count(),
-        "instructor_links": ClassInstructor.objects.filter(
-            class_group__in=demo_classes
-        ).count(),
+        "instructor_links": ClassInstructor.objects.filter(class_group__in=demo_classes).count(),
         "meetings": Meeting.objects.filter(class_group__in=demo_classes).count(),
         "enrollments": demo_enrollments.count(),
         "histories": EnrollmentStatusHistory.objects.filter(

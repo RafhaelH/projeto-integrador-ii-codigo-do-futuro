@@ -605,11 +605,7 @@ class DemoSeeder:
             ("diego_web", "web2", AttendanceStatus.ABSENT, ""),
         ]
         for enrollment_key, meeting_key, status, note in rows:
-            class_key = (
-                "larissa"
-                if enrollment_key in {"ana_python", "bruno_python"}
-                else "rafael"
-            )
+            class_key = "larissa" if enrollment_key in {"ana_python", "bruno_python"} else "rafael"
             Attendance.objects.update_or_create(
                 enrollment=self.enrollments[enrollment_key],
                 meeting=self.meetings[meeting_key],

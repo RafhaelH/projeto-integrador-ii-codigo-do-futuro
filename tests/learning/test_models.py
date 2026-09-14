@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 from django.db import IntegrityError
 from django.utils import timezone
 
-from apps.learning.models import Attendance, AttendanceStatus
+from apps.learning.models import Attendance, AttendanceStatus, Evaluation, StudentProject
 from apps.workshops.models import ClassGroup, Meeting
 
 pytestmark = pytest.mark.django_db
@@ -75,3 +75,42 @@ def test_attendance_string_identifies_participant_and_meeting(
 
     assert confirmed_enrollment.participant.full_name in str(attendance)
     assert past_meeting.title in str(attendance)
+
+
+def test_only_one_project_is_allowed_per_enrollment(confirmed_enrollment):
+    StudentProject.objects.create(
+        enrollment=confirmed_enrollment,
+        title="Portfólio",
+        description="Página pessoal.",
+    )
+
+    with pytest.raises(IntegrityError):
+        StudentProject.objects.create(
+            enrollment=confirmed_enrollment,
+            title="Segundo projeto",
+            description="Não permitido no MVP.",
+        )
+
+
+def test_delivered_project_requires_delivery_date(confirmed_enrollment):
+    project = StudentProject(
+        enrollment=confirmed_enrollment,
+        title="Portfólio",
+        description="Página pessoal.",
+        is_delivered=True,
+    )
+
+    with pytest.raises(ValidationError, match="quando"):
+        project.full_clean()
+
+
+def test_evaluation_rejects_score_above_ten(confirmed_enrollment, admin_user):
+    evaluation = Evaluation(
+        enrollment=confirmed_enrollment,
+        final_score="10.1",
+        feedback="Boa evolução.",
+        evaluated_by=admin_user,
+    )
+
+    with pytest.raises(ValidationError):
+        evaluation.full_clean()

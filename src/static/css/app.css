@@ -476,6 +476,14 @@ textarea {
   box-shadow: var(--shadow);
 }
 
+.table-wrap {
+  overflow-x: auto;
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;

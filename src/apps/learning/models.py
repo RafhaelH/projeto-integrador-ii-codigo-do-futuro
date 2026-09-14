@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.core.exceptions import ValidationError
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 from apps.core.models import UUIDTimestampedModel
@@ -69,3 +70,73 @@ class Attendance(UUIDTimestampedModel):
 
     def __str__(self) -> str:
         return f"{self.enrollment.participant} — {self.meeting.title}"
+
+
+class StudentProject(UUIDTimestampedModel):
+    enrollment = models.OneToOneField(
+        Enrollment,
+        verbose_name="inscrição",
+        related_name="student_project",
+        on_delete=models.PROTECT,
+    )
+    title = models.CharField("título", max_length=150)
+    description = models.TextField("descrição")
+    repository_url = models.URLField("repositório", blank=True)
+    demonstration_url = models.URLField("demonstração", blank=True)
+    is_delivered = models.BooleanField("entregue", default=False)
+    delivered_at = models.DateTimeField("entregue em", null=True, blank=True)
+    review_notes = models.TextField("devolutiva", blank=True)
+
+    class Meta:
+        verbose_name = "projeto do participante"
+        verbose_name_plural = "projetos dos participantes"
+        ordering = ["enrollment__participant__full_name"]
+
+    def clean(self) -> None:
+        super().clean()
+        if self.is_delivered and not self.delivered_at:
+            raise ValidationError({"delivered_at": "Informe quando o projeto foi entregue."})
+        if not self.is_delivered and self.delivered_at:
+            raise ValidationError(
+                {"delivered_at": "Um projeto não entregue não pode ter data de entrega."}
+            )
+
+    def __str__(self) -> str:
+        return f"{self.title} — {self.enrollment.participant}"
+
+
+class Evaluation(UUIDTimestampedModel):
+    enrollment = models.OneToOneField(
+        Enrollment,
+        verbose_name="inscrição",
+        related_name="evaluation",
+        on_delete=models.PROTECT,
+    )
+    final_score = models.DecimalField(
+        "nota final",
+        max_digits=3,
+        decimal_places=1,
+        validators=[MinValueValidator(0), MaxValueValidator(10)],
+    )
+    feedback = models.TextField("devolutiva")
+    evaluated_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        verbose_name="avaliada por",
+        related_name="recorded_evaluations",
+        on_delete=models.PROTECT,
+    )
+    published_at = models.DateTimeField("publicada em", null=True, blank=True)
+
+    class Meta:
+        verbose_name = "avaliação final"
+        verbose_name_plural = "avaliações finais"
+        ordering = ["enrollment__participant__full_name"]
+        constraints = [
+            models.CheckConstraint(
+                condition=models.Q(final_score__gte=0, final_score__lte=10),
+                name="learning_evaluation_score_range",
+            )
+        ]
+
+    def __str__(self) -> str:
+        return f"{self.enrollment.participant} — {self.final_score}"

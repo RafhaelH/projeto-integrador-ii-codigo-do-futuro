@@ -1,6 +1,14 @@
 from django.urls import path
 
-from .views import ClassAttendanceView, MeetingAttendanceView, ParticipantFrequencyView
+from .views import (
+    ClassAttendanceView,
+    CompleteClassGroupView,
+    EvaluationView,
+    MeetingAttendanceView,
+    ParticipantFrequencyView,
+    ParticipantProjectView,
+    ProjectReviewView,
+)
 
 app_name = "learning"
 
@@ -15,5 +23,21 @@ urlpatterns = [
         "encontros/<uuid:meeting_pk>/chamada/",
         MeetingAttendanceView.as_view(),
         name="meeting-attendance",
+    ),
+    path(
+        "inscricoes/<uuid:enrollment_pk>/projeto/",
+        ParticipantProjectView.as_view(),
+        name="participant-project",
+    ),
+    path("projetos/<uuid:pk>/revisao/", ProjectReviewView.as_view(), name="project-review"),
+    path(
+        "inscricoes/<uuid:enrollment_pk>/avaliacao/",
+        EvaluationView.as_view(),
+        name="evaluation",
+    ),
+    path(
+        "turmas/<uuid:class_pk>/conclusao/",
+        CompleteClassGroupView.as_view(),
+        name="complete-class",
     ),
 ]

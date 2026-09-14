@@ -6,9 +6,16 @@ from django.core.exceptions import PermissionDenied, ValidationError
 from django.utils import timezone
 
 from apps.enrollments.models import EnrollmentStatus
-from apps.learning.models import Attendance, AttendanceStatus
-from apps.learning.services import calculate_attendance_summary, record_meeting_attendance
-from apps.workshops.models import Meeting, MeetingStatus
+from apps.learning.models import Attendance, AttendanceStatus, Evaluation, StudentProject
+from apps.learning.services import (
+    calculate_attendance_summary,
+    complete_class_group,
+    record_meeting_attendance,
+    review_student_project,
+    save_evaluation,
+    save_student_project,
+)
+from apps.workshops.models import ClassGroupStatus, Meeting, MeetingStatus
 
 pytestmark = pytest.mark.django_db
 
@@ -164,3 +171,148 @@ def test_frequency_without_completed_meetings_is_zero(confirmed_enrollment):
 
     assert summary.completed_meetings == 0
     assert summary.percentage == Decimal("0.00")
+
+
+def test_participant_creates_and_delivers_own_project(confirmed_enrollment):
+    project = save_student_project(
+        confirmed_enrollment,
+        data={
+            "title": "  Meu portfólio  ",
+            "description": "  Página com meus projetos.  ",
+            "repository_url": "https://github.com/exemplo/portfolio",
+            "demonstration_url": "",
+            "is_delivered": True,
+        },
+        actor=confirmed_enrollment.participant.user,
+    )
+
+    assert project.title == "Meu portfólio"
+    assert project.delivered_at is not None
+    assert project.is_delivered is True
+
+
+def test_participant_cannot_change_another_project(
+    confirmed_enrollment, second_confirmed_enrollment
+):
+    with pytest.raises(PermissionDenied, match="próprio projeto"):
+        save_student_project(
+            confirmed_enrollment,
+            data={"title": "X", "description": "Y", "is_delivered": False},
+            actor=second_confirmed_enrollment.participant.user,
+        )
+
+
+def test_assigned_instructor_reviews_project(confirmed_enrollment, assigned_instructor):
+    project = StudentProject.objects.create(
+        enrollment=confirmed_enrollment,
+        title="Robô virtual",
+        description="Automação educacional.",
+    )
+
+    reviewed = review_student_project(
+        project,
+        review_notes="  Explique melhor o público-alvo.  ",
+        actor=assigned_instructor.user,
+    )
+
+    assert reviewed.review_notes == "Explique melhor o público-alvo."
+
+
+def test_evaluation_records_author_and_publication(confirmed_enrollment, assigned_instructor):
+    evaluation = save_evaluation(
+        confirmed_enrollment,
+        final_score=Decimal("8.5"),
+        feedback="Ótima evolução.",
+        publish=True,
+        actor=assigned_instructor.user,
+    )
+
+    assert evaluation.evaluated_by == assigned_instructor.user
+    assert evaluation.published_at is not None
+
+
+def test_unassigned_instructor_cannot_evaluate(confirmed_enrollment, instructor_user):
+    with pytest.raises(PermissionDenied):
+        save_evaluation(
+            confirmed_enrollment,
+            final_score=Decimal("8.0"),
+            feedback="Não autorizado.",
+            publish=False,
+            actor=instructor_user,
+        )
+
+
+def test_completion_approves_only_participant_who_meets_all_criteria(
+    confirmed_enrollment,
+    second_confirmed_enrollment,
+    past_meeting,
+    admin_user,
+):
+    past_meeting.status = MeetingStatus.COMPLETED
+    past_meeting.save()
+    Attendance.objects.create(
+        enrollment=confirmed_enrollment,
+        meeting=past_meeting,
+        status=AttendanceStatus.PRESENT,
+        recorded_by=admin_user,
+    )
+    StudentProject.objects.create(
+        enrollment=confirmed_enrollment,
+        title="Projeto entregue",
+        description="Solução completa.",
+        is_delivered=True,
+        delivered_at=timezone.now(),
+    )
+    Evaluation.objects.create(
+        enrollment=confirmed_enrollment,
+        final_score=Decimal("6.0"),
+        feedback="Aprovado.",
+        evaluated_by=admin_user,
+    )
+    Evaluation.objects.create(
+        enrollment=second_confirmed_enrollment,
+        final_score=Decimal("5.0"),
+        feedback="Critérios pendentes.",
+        evaluated_by=admin_user,
+    )
+
+    result = complete_class_group(confirmed_enrollment.class_group, actor=admin_user)
+    confirmed_enrollment.refresh_from_db()
+    second_confirmed_enrollment.refresh_from_db()
+    confirmed_enrollment.class_group.refresh_from_db()
+
+    assert result.approved == 1
+    assert result.not_completed == 1
+    assert confirmed_enrollment.status == EnrollmentStatus.APPROVED
+    assert second_confirmed_enrollment.status == EnrollmentStatus.NOT_COMPLETED
+    assert "frequência mínima" in second_confirmed_enrollment.status_reason
+    assert "nota mínima" in second_confirmed_enrollment.status_reason
+    assert "projeto entregue" in second_confirmed_enrollment.status_reason
+    assert confirmed_enrollment.class_group.status == ClassGroupStatus.COMPLETED
+    assert confirmed_enrollment.status_history.filter(
+        to_status=EnrollmentStatus.APPROVED,
+        changed_by=admin_user,
+    ).exists()
+
+
+def test_completion_requires_all_meetings_processed(confirmed_enrollment, past_meeting, admin_user):
+    Evaluation.objects.create(
+        enrollment=confirmed_enrollment,
+        final_score=Decimal("8.0"),
+        feedback="Bom trabalho.",
+        evaluated_by=admin_user,
+    )
+
+    with pytest.raises(ValidationError, match="todos os encontros"):
+        complete_class_group(confirmed_enrollment.class_group, actor=admin_user)
+
+
+def test_completion_requires_every_final_evaluation(confirmed_enrollment, past_meeting, admin_user):
+    past_meeting.status = MeetingStatus.COMPLETED
+    past_meeting.save()
+
+    with pytest.raises(ValidationError, match="avaliação final"):
+        complete_class_group(confirmed_enrollment.class_group, actor=admin_user)
+
+    confirmed_enrollment.refresh_from_db()
+    assert confirmed_enrollment.status == EnrollmentStatus.CONFIRMED

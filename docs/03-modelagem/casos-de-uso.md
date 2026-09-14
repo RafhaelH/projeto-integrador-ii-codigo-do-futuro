@@ -78,8 +78,9 @@
 2. O sistema lista os participantes confirmados.
 3. O ator marca presente, ausente ou falta justificada.
 4. O sistema valida um resultado por participante.
-5. O sistema salva chamada, autoria e horário.
-6. O percentual de frequência é recalculado na consulta.
+5. O sistema salva chamada, autoria e horário e marca o encontro como realizado.
+6. Uma correção atualiza o mesmo registro, sem criar duplicidade.
+7. O percentual de frequência é recalculado na consulta.
 
 **Alternativas:** encontro cancelado ou futuro não aceita chamada; ator sem vínculo recebe acesso negado.
 

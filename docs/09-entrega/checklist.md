@@ -30,7 +30,7 @@
 - [x] Participantes, responsáveis, instrutores e instituições
 - [x] Oficinas, turmas e encontros
 - [x] Inscrições, vagas e lista de espera
-- [ ] Frequência
+- [x] Frequência
 - [ ] Projetos
 - [ ] Avaliações e conclusão
 - [ ] Certificados

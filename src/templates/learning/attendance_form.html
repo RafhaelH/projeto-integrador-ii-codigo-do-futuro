@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Chamada de {{ meeting.title }} | Código do Futuro{% endblock %}
+
+{% block content %}
+<section class="attendance-page">
+  <header class="page-heading"><a class="back-link" href="{{ cancel_url }}">← Frequência da turma</a><span class="eyebrow">{{ class_group.code }}</span><h1>Chamada: {{ meeting.title }}</h1><p>{{ meeting.starts_at|date:'d/m/Y H:i' }}–{{ meeting.ends_at|date:'H:i' }}</p></header>
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.management_form }}
+    {% if form.non_form_errors %}<div class="form-alert">{{ form.non_form_errors }}</div>{% endif %}
+    <div class="attendance-list">
+      {% for entry in form %}
+        <article class="attendance-entry panel">
+          {{ entry.enrollment_id }}
+          <div class="form-field participant-field"><label for="{{ entry.participant_name.id_for_label }}">{{ entry.participant_name.label }}</label>{{ entry.participant_name }}</div>
+          <div class="form-field"><label for="{{ entry.status.id_for_label }}">{{ entry.status.label }}</label>{{ entry.status }}{% for error in entry.status.errors %}<span class="field-error">{{ error }}</span>{% endfor %}</div>
+          <div class="form-field"><label for="{{ entry.note.id_for_label }}">{{ entry.note.label }}</label>{{ entry.note }}{% for error in entry.note.errors %}<span class="field-error">{{ error }}</span>{% endfor %}</div>
+        </article>
+      {% empty %}<div class="panel empty-state">Não há participantes confirmados para esta chamada.</div>{% endfor %}
+    </div>
+    {% if form.forms %}<div class="form-actions attendance-actions"><a class="button button-secondary" href="{{ cancel_url }}">Cancelar</a><button class="button button-primary" type="submit">Salvar chamada</button></div>{% endif %}
+  </form>
+</section>
+{% endblock %}
+

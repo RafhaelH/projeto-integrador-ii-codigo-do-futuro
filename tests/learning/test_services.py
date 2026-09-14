@@ -19,8 +19,8 @@ from apps.learning.services import (
     complete_class_group,
     issue_certificate,
     record_meeting_attendance,
-    revoke_certificate,
     review_student_project,
+    revoke_certificate,
     save_evaluation,
     save_student_project,
 )

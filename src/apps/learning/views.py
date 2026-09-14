@@ -1,5 +1,6 @@
 from django.contrib import messages
 from django.core.exceptions import PermissionDenied, ValidationError
+from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
 from django.views import View
@@ -10,13 +11,23 @@ from apps.accounts.models import UserRole
 from apps.enrollments.models import Enrollment, EnrollmentStatus
 from apps.workshops.models import ClassGroup, ClassGroupStatus, Meeting, MeetingStatus
 
-from .forms import AttendanceFormSet, EvaluationForm, ProjectReviewForm, StudentProjectForm
-from .models import Attendance, Evaluation, StudentProject
+from .forms import (
+    AttendanceFormSet,
+    CertificateRevocationForm,
+    EvaluationForm,
+    ProjectReviewForm,
+    StudentProjectForm,
+)
+from .models import Attendance, Certificate, Evaluation, StudentProject
+from .pdf import render_certificate_pdf
+from .selectors import certificates_for_user
 from .services import (
     ACADEMIC_ENROLLMENT_STATUSES,
     calculate_attendance_summary,
     complete_class_group,
+    issue_certificate,
     record_meeting_attendance,
+    revoke_certificate,
     review_student_project,
     save_evaluation,
     save_student_project,
@@ -49,7 +60,7 @@ class ClassAttendanceView(ClassAttendanceAccessMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         enrollments = self.class_group.enrollments.filter(
             status__in=ACADEMIC_ENROLLMENT_STATUSES
-        ).select_related("participant", "student_project", "evaluation")
+        ).select_related("participant", "student_project", "evaluation", "certificate")
         context.update(
             {
                 "class_group": self.class_group,
@@ -152,6 +163,7 @@ class ParticipantFrequencyView(RoleRequiredMixin, TemplateView):
             "class_group__workshop",
             "student_project",
             "evaluation",
+            "certificate",
         )
         context["frequency_rows"] = [
             (enrollment, calculate_attendance_summary(enrollment)) for enrollment in enrollments
@@ -326,3 +338,96 @@ class CompleteClassGroupView(RoleRequiredMixin, View):
                 f"{summary.not_completed} não concluinte(s).",
             )
         return redirect("learning:class-attendance", class_pk=class_pk)
+
+
+
+class CertificateListView(RoleRequiredMixin, TemplateView):
+    allowed_roles = (UserRole.ADMIN, UserRole.INSTRUCTOR, UserRole.PARTICIPANT)
+    template_name = "learning/certificate_list.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["certificates"] = certificates_for_user(self.request.user)
+        if self.request.user.role == UserRole.ADMIN:
+            context["eligible_enrollments"] = (
+                Enrollment.objects.filter(
+                    status=EnrollmentStatus.APPROVED,
+                    certificate__isnull=True,
+                )
+                .select_related("participant", "class_group__workshop")
+                .order_by("participant__full_name")
+            )
+        return context
+
+
+class CertificateDetailView(RoleRequiredMixin, TemplateView):
+    allowed_roles = (UserRole.ADMIN, UserRole.INSTRUCTOR, UserRole.PARTICIPANT)
+    template_name = "learning/certificate_detail.html"
+
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return super().dispatch(request, *args, **kwargs)
+        self.certificate = get_object_or_404(
+            certificates_for_user(request.user),
+            pk=kwargs["pk"],
+        )
+        return super().dispatch(request, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        return super().get_context_data(**kwargs) | {
+            "certificate": self.certificate,
+            "revocation_form": CertificateRevocationForm(),
+        }
+
+
+class CertificateDownloadView(RoleRequiredMixin, View):
+    allowed_roles = (UserRole.ADMIN, UserRole.INSTRUCTOR, UserRole.PARTICIPANT)
+
+    def get(self, request, pk):
+        certificate = get_object_or_404(certificates_for_user(request.user), pk=pk)
+        if not certificate.is_active:
+            raise PermissionDenied("Certificados revogados não podem ser baixados.")
+        response = HttpResponse(
+            render_certificate_pdf(certificate),
+            content_type="application/pdf",
+        )
+        response["Content-Disposition"] = (
+            f'attachment; filename="certificado-{certificate.verification_code}.pdf"'
+        )
+        return response
+
+
+class IssueCertificateView(RoleRequiredMixin, View):
+    allowed_roles = (UserRole.ADMIN,)
+
+    def post(self, request, enrollment_pk):
+        enrollment = get_object_or_404(Enrollment, pk=enrollment_pk)
+        try:
+            certificate = issue_certificate(enrollment, actor=request.user)
+        except ValidationError as error:
+            messages.error(request, "; ".join(error.messages))
+            return redirect("learning:certificate-list")
+        messages.success(request, "Certificado emitido com sucesso.")
+        return redirect("learning:certificate-detail", pk=certificate.pk)
+
+
+class RevokeCertificateView(RoleRequiredMixin, View):
+    allowed_roles = (UserRole.ADMIN,)
+
+    def post(self, request, pk):
+        certificate = get_object_or_404(Certificate, pk=pk)
+        form = CertificateRevocationForm(request.POST)
+        if not form.is_valid():
+            messages.error(request, "Informe o motivo da revogação.")
+            return redirect("learning:certificate-detail", pk=pk)
+        try:
+            revoke_certificate(
+                certificate,
+                reason=form.cleaned_data["reason"],
+                actor=request.user,
+            )
+        except ValidationError as error:
+            messages.error(request, "; ".join(error.messages))
+        else:
+            messages.success(request, "Certificado revogado e bloqueado para download.")
+        return redirect("learning:certificate-detail", pk=pk)

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Certificados | Código do Futuro{% endblock %}
+
+{% block content %}
+<header class="page-heading">
+  <span class="eyebrow">Resultados</span>
+  <h1>{% if user.role == "PARTICIPANT" %}Meus certificados{% else %}Certificados{% endif %}</h1>
+  <p>Consulte certificados emitidos e baixe os documentos ativos em PDF.</p>
+</header>
+
+{% if user.role == "ADMIN" and eligible_enrollments %}
+<section class="panel summary-panel">
+  <div class="panel-heading">
+    <h2>Aguardando emissão</h2>
+    <span class="badge badge-warning">{{ eligible_enrollments|length }} aprovado(s)</span>
+  </div>
+  {% for enrollment in eligible_enrollments %}
+    <div class="stack-item">
+      <div>
+        <strong>{{ enrollment.participant }}</strong>
+        <small>{{ enrollment.class_group.code }} · {{ enrollment.class_group.workshop.title }}</small>
+      </div>
+      <form method="post" action="{% url 'learning:certificate-issue' enrollment.pk %}">
+        {% csrf_token %}
+        <button class="button button-primary" type="submit">Emitir certificado</button>
+      </form>
+    </div>
+  {% endfor %}
+</section>
+{% endif %}
+
+<section class="panel">
+  <div class="panel-heading">
+    <h2>Documentos emitidos</h2>
+    <span class="badge badge-muted">Acesso autenticado</span>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Participante</th>
+          <th>Oficina e turma</th>
+          <th>Carga horária</th>
+          <th>Emissão</th>
+          <th>Situação</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for certificate in certificates %}
+        <tr>
+          <td><strong>{{ certificate.enrollment.participant }}</strong></td>
+          <td>{{ certificate.enrollment.class_group.workshop.title }}<br><small>{{ certificate.enrollment.class_group.code }}</small></td>
+          <td>{{ certificate.workload_hours }} h</td>
+          <td>{{ certificate.issued_at|date:"d/m/Y" }}</td>
+          <td>{% if certificate.is_active %}<span class="badge badge-success">Ativo</span>{% else %}<span class="badge badge-danger">Revogado</span>{% endif %}</td>
+          <td><div class="action-row"><a href="{% url 'learning:certificate-detail' certificate.pk %}">Consultar</a>{% if certificate.is_active %}<a href="{% url 'learning:certificate-download' certificate.pk %}">Baixar PDF</a>{% endif %}</div></td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="6">Nenhum certificado disponível.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}

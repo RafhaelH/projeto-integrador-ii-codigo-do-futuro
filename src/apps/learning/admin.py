@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Attendance, Evaluation, StudentProject
+from .models import Attendance, Certificate, Evaluation, StudentProject
 
 
 @admin.register(Attendance)
@@ -42,6 +42,43 @@ class EvaluationAdmin(admin.ModelAdmin):
     list_filter = ("enrollment__class_group", "published_at")
     search_fields = ("enrollment__participant__full_name",)
     readonly_fields = ("created_at", "updated_at")
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
+
+
+@admin.register(Certificate)
+class CertificateAdmin(admin.ModelAdmin):
+    list_display = (
+        "verification_code",
+        "enrollment",
+        "issued_at",
+        "workload_hours",
+        "is_active",
+    )
+    list_filter = ("is_active", "enrollment__class_group")
+    search_fields = (
+        "verification_code",
+        "enrollment__participant__full_name",
+    )
+    readonly_fields = (
+        "enrollment",
+        "verification_code",
+        "issued_at",
+        "workload_hours",
+        "is_active",
+        "revoked_at",
+        "revocation_reason",
+        "created_at",
+        "updated_at",
+    )
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
 
     def has_delete_permission(self, request, obj=None):
         return False

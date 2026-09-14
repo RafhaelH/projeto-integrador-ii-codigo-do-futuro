@@ -2,7 +2,13 @@ import pytest
 from django.urls import reverse
 from django.utils import timezone
 
-from apps.learning.models import Attendance, AttendanceStatus, Evaluation, StudentProject
+from apps.learning.models import (
+    Attendance,
+    AttendanceStatus,
+    Evaluation,
+    StudentProject,
+)
+from apps.learning.services import issue_certificate, revoke_certificate
 from apps.workshops.models import MeetingStatus
 
 pytestmark = pytest.mark.django_db
@@ -273,3 +279,180 @@ def test_admin_completes_class_through_academic_flow(
 
     assert response.status_code == 302
     assert confirmed_enrollment.status == "APPROVED"
+
+
+
+def prepare_certificate(enrollment, meeting, admin_user):
+    enrollment.status = "APPROVED"
+    enrollment.save(update_fields=["status", "updated_at"])
+    meeting.status = MeetingStatus.COMPLETED
+    meeting.save(update_fields=["status", "updated_at"])
+    return issue_certificate(enrollment, actor=admin_user)
+
+
+def test_certificate_list_requires_authentication(client):
+    response = client.get(reverse("learning:certificate-list"))
+
+    assert response.status_code == 302
+    assert response.url.startswith(reverse("login"))
+
+
+def test_admin_issues_certificate_through_view(
+    client,
+    confirmed_enrollment,
+    past_meeting,
+    admin_user,
+):
+    confirmed_enrollment.status = "APPROVED"
+    confirmed_enrollment.save(update_fields=["status", "updated_at"])
+    past_meeting.status = MeetingStatus.COMPLETED
+    past_meeting.save(update_fields=["status", "updated_at"])
+    client.force_login(admin_user)
+
+    response = client.post(
+        reverse(
+            "learning:certificate-issue",
+            kwargs={"enrollment_pk": confirmed_enrollment.pk},
+        )
+    )
+
+    certificate = confirmed_enrollment.certificate
+    assert response.status_code == 302
+    assert response.url == reverse(
+        "learning:certificate-detail",
+        kwargs={"pk": certificate.pk},
+    )
+
+
+def test_participant_downloads_own_certificate(
+    client,
+    confirmed_enrollment,
+    past_meeting,
+    admin_user,
+):
+    certificate = prepare_certificate(confirmed_enrollment, past_meeting, admin_user)
+    client.force_login(confirmed_enrollment.participant.user)
+
+    response = client.get(
+        reverse(
+            "learning:certificate-download",
+            kwargs={"pk": certificate.pk},
+        )
+    )
+
+    assert response.status_code == 200
+    assert response["Content-Type"] == "application/pdf"
+    assert response.content.startswith(b"%PDF-1.4")
+    assert certificate.verification_code in response["Content-Disposition"]
+
+
+def test_participant_cannot_access_another_certificate(
+    client,
+    second_confirmed_enrollment,
+    past_meeting,
+    admin_user,
+    participant_user,
+):
+    certificate = prepare_certificate(
+        second_confirmed_enrollment,
+        past_meeting,
+        admin_user,
+    )
+    client.force_login(participant_user)
+
+    response = client.get(
+        reverse(
+            "learning:certificate-detail",
+            kwargs={"pk": certificate.pk},
+        )
+    )
+
+    assert response.status_code == 404
+
+
+def test_assigned_instructor_views_certificate(
+    client,
+    confirmed_enrollment,
+    past_meeting,
+    admin_user,
+    assigned_instructor,
+):
+    certificate = prepare_certificate(confirmed_enrollment, past_meeting, admin_user)
+    client.force_login(assigned_instructor.user)
+
+    response = client.get(
+        reverse(
+            "learning:certificate-detail",
+            kwargs={"pk": certificate.pk},
+        )
+    )
+
+    assert response.status_code == 200
+    assert certificate.verification_code in response.content.decode()
+
+
+def test_unassigned_instructor_cannot_access_certificate(
+    client,
+    confirmed_enrollment,
+    past_meeting,
+    admin_user,
+    instructor_user,
+):
+    certificate = prepare_certificate(confirmed_enrollment, past_meeting, admin_user)
+    client.force_login(instructor_user)
+
+    response = client.get(
+        reverse(
+            "learning:certificate-detail",
+            kwargs={"pk": certificate.pk},
+        )
+    )
+
+    assert response.status_code == 404
+
+
+def test_revoked_certificate_cannot_be_downloaded(
+    client,
+    confirmed_enrollment,
+    past_meeting,
+    admin_user,
+):
+    certificate = prepare_certificate(confirmed_enrollment, past_meeting, admin_user)
+    revoke_certificate(
+        certificate,
+        reason="Documento substituído.",
+        actor=admin_user,
+    )
+    client.force_login(admin_user)
+
+    response = client.get(
+        reverse(
+            "learning:certificate-download",
+            kwargs={"pk": certificate.pk},
+        )
+    )
+
+    assert response.status_code == 403
+
+
+def test_admin_revokes_certificate_through_view(
+    client,
+    confirmed_enrollment,
+    past_meeting,
+    admin_user,
+):
+    certificate = prepare_certificate(confirmed_enrollment, past_meeting, admin_user)
+    client.force_login(admin_user)
+
+    response = client.post(
+        reverse(
+            "learning:certificate-revoke",
+            kwargs={"pk": certificate.pk},
+        ),
+        {"reason": "Dados incorretos."},
+    )
+
+    certificate.refresh_from_db()
+    assert response.status_code == 302
+    assert not certificate.is_active
+    assert certificate.revocation_reason == "Dados incorretos."

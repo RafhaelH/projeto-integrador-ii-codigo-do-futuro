@@ -251,7 +251,9 @@ Restrição única: `(enrollment_id, meeting_id)`.
 | workload_hours | decimal(5,2) | Sim | carga calculada na emissão |
 | is_active | boolean | Sim | permite revogação sem exclusão |
 | revoked_at | datetime | Não | data da revogação |
-| revocation_reason | text | Não | motivo da revogação |
+| revocation_reason | text | Não | motivo obrigatório quando revogado |
+| created_at | datetime | Sim | criação do registro |
+| updated_at | datetime | Sim | última alteração |
 
 ## Campos derivados não persistidos
 

@@ -81,3 +81,11 @@ class EvaluationForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         if self.instance and self.instance.pk:
             self.fields["publish"].initial = self.instance.published_at is not None
+
+
+
+class CertificateRevocationForm(forms.Form):
+    reason = forms.CharField(
+        label="Motivo da revogação",
+        widget=forms.Textarea(attrs={"rows": 4}),
+    )

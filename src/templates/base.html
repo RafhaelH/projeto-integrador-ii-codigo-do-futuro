@@ -33,6 +33,7 @@
           <a class="nav-link" href="{% url 'learning:participant-frequency' %}">Minha jornada</a>
         {% endif %}
         <a class="nav-link" href="{% url 'enrollments:list' %}">{% if user.role == "PARTICIPANT" %}Minhas inscrições{% else %}Inscrições{% endif %}</a>
+        <a class="nav-link" href="{% url 'learning:certificate-list' %}">{% if user.role == "PARTICIPANT" %}Meus certificados{% else %}Certificados{% endif %}</a>
         <span>Olá, {{ user.get_short_name }}</span>
         <form action="{% url 'logout' %}" method="post">
           {% csrf_token %}

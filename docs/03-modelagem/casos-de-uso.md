@@ -119,6 +119,25 @@ encerramento da turma, projeto e devolutiva ficam somente para consulta.
 7. Os demais são marcados como não concluídos, com motivos.
 8. O sistema habilita certificado apenas para aprovados.
 
+## UC-011 — Emitir e consultar certificado
+
+**Objetivo:** disponibilizar o documento de conclusão para uma inscrição aprovada.
+
+**Pré-condições:** turma concluída; inscrição aprovada; ator autenticado e autorizado.
+
+**Fluxo principal:**
+
+1. O administrador consulta as inscrições aprovadas sem certificado.
+2. Solicita a emissão para uma inscrição elegível.
+3. O sistema calcula a carga horária dos encontros realizados.
+4. O sistema gera um código único e não sequencial.
+5. O certificado fica disponível em consulta autenticada.
+6. O participante titular e os instrutores vinculados podem consultar e baixar o PDF.
+7. O administrador pode revogar o documento mediante justificativa.
+
+**Alternativas:** inscrição não aprovada não aceita emissão; usuário sem vínculo recebe acesso negado;
+certificado revogado permanece auditável para o administrador e não pode ser baixado.
+
 ## UC-012 — Consultar indicadores
 
 **Objetivo:** apoiar acompanhamento e prestação de contas.

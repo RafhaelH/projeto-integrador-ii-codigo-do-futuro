@@ -5,7 +5,13 @@ from django.core.exceptions import ValidationError
 from django.db import IntegrityError
 from django.utils import timezone
 
-from apps.learning.models import Attendance, AttendanceStatus, Evaluation, StudentProject
+from apps.learning.models import (
+    Attendance,
+    AttendanceStatus,
+    Certificate,
+    Evaluation,
+    StudentProject,
+)
 from apps.workshops.models import ClassGroup, Meeting
 
 pytestmark = pytest.mark.django_db
@@ -114,3 +120,42 @@ def test_evaluation_rejects_score_above_ten(confirmed_enrollment, admin_user):
 
     with pytest.raises(ValidationError):
         evaluation.full_clean()
+
+
+
+def test_certificate_is_unique_per_enrollment(confirmed_enrollment):
+    confirmed_enrollment.status = "APPROVED"
+    confirmed_enrollment.save(update_fields=["status", "updated_at"])
+    Certificate.objects.create(
+        enrollment=confirmed_enrollment,
+        workload_hours="2.00",
+    )
+
+    with pytest.raises(IntegrityError):
+        Certificate.objects.create(
+            enrollment=confirmed_enrollment,
+            workload_hours="2.00",
+        )
+
+
+def test_certificate_rejects_non_approved_enrollment(confirmed_enrollment):
+    certificate = Certificate(
+        enrollment=confirmed_enrollment,
+        workload_hours="2.00",
+    )
+
+    with pytest.raises(ValidationError, match="aprovada"):
+        certificate.full_clean()
+
+
+def test_active_certificate_rejects_revocation_data(confirmed_enrollment):
+    confirmed_enrollment.status = "APPROVED"
+    confirmed_enrollment.save(update_fields=["status", "updated_at"])
+    certificate = Certificate(
+        enrollment=confirmed_enrollment,
+        workload_hours="2.00",
+        revocation_reason="Dados incorretos.",
+    )
+
+    with pytest.raises(ValidationError, match="ativo"):
+        certificate.full_clean()

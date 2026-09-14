@@ -6,11 +6,20 @@ from django.core.exceptions import PermissionDenied, ValidationError
 from django.utils import timezone
 
 from apps.enrollments.models import EnrollmentStatus
-from apps.learning.models import Attendance, AttendanceStatus, Evaluation, StudentProject
+from apps.learning.models import (
+    Attendance,
+    AttendanceStatus,
+    Certificate,
+    Evaluation,
+    StudentProject,
+)
 from apps.learning.services import (
     calculate_attendance_summary,
+    calculate_certificate_workload,
     complete_class_group,
+    issue_certificate,
     record_meeting_attendance,
+    revoke_certificate,
     review_student_project,
     save_evaluation,
     save_student_project,
@@ -316,3 +325,91 @@ def test_completion_requires_every_final_evaluation(confirmed_enrollment, past_m
 
     confirmed_enrollment.refresh_from_db()
     assert confirmed_enrollment.status == EnrollmentStatus.CONFIRMED
+
+
+
+def prepare_approved_enrollment(enrollment, meeting):
+    enrollment.status = EnrollmentStatus.APPROVED
+    enrollment.save(update_fields=["status", "updated_at"])
+    meeting.status = MeetingStatus.COMPLETED
+    meeting.save(update_fields=["status", "updated_at"])
+
+
+def test_certificate_workload_sums_completed_meetings(confirmed_enrollment, past_meeting):
+    prepare_approved_enrollment(confirmed_enrollment, past_meeting)
+
+    assert calculate_certificate_workload(confirmed_enrollment) == Decimal("2.00")
+
+
+def test_admin_issues_certificate_for_approved_enrollment(
+    confirmed_enrollment,
+    past_meeting,
+    admin_user,
+):
+    prepare_approved_enrollment(confirmed_enrollment, past_meeting)
+
+    certificate = issue_certificate(confirmed_enrollment, actor=admin_user)
+
+    assert certificate.enrollment == confirmed_enrollment
+    assert certificate.workload_hours == Decimal("2.00")
+    assert certificate.verification_code.startswith("CDF-")
+    assert certificate.is_active
+
+
+def test_certificate_issue_is_idempotent(confirmed_enrollment, past_meeting, admin_user):
+    prepare_approved_enrollment(confirmed_enrollment, past_meeting)
+
+    first = issue_certificate(confirmed_enrollment, actor=admin_user)
+    second = issue_certificate(confirmed_enrollment, actor=admin_user)
+
+    assert first.pk == second.pk
+    assert Certificate.objects.count() == 1
+
+
+def test_non_approved_enrollment_cannot_receive_certificate(
+    confirmed_enrollment,
+    admin_user,
+):
+    with pytest.raises(ValidationError, match="aprovadas"):
+        issue_certificate(confirmed_enrollment, actor=admin_user)
+
+
+def test_instructor_cannot_issue_certificate(
+    confirmed_enrollment,
+    past_meeting,
+    assigned_instructor,
+):
+    prepare_approved_enrollment(confirmed_enrollment, past_meeting)
+
+    with pytest.raises(PermissionDenied, match="administradores"):
+        issue_certificate(
+            confirmed_enrollment,
+            actor=assigned_instructor.user,
+        )
+
+
+def test_admin_revokes_certificate(
+    confirmed_enrollment,
+    past_meeting,
+    admin_user,
+):
+    prepare_approved_enrollment(confirmed_enrollment, past_meeting)
+    certificate = issue_certificate(confirmed_enrollment, actor=admin_user)
+
+    revoked = revoke_certificate(
+        certificate,
+        reason="Nome corrigido no cadastro.",
+        actor=admin_user,
+    )
+
+    assert not revoked.is_active
+    assert revoked.revoked_at is not None
+    assert revoked.revocation_reason == "Nome corrigido no cadastro."
+
+
+def test_revocation_requires_reason(confirmed_enrollment, past_meeting, admin_user):
+    prepare_approved_enrollment(confirmed_enrollment, past_meeting)
+    certificate = issue_certificate(confirmed_enrollment, actor=admin_user)
+
+    with pytest.raises(ValidationError, match="motivo"):
+        revoke_certificate(certificate, reason="  ", actor=admin_user)

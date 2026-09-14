@@ -327,7 +327,6 @@ def test_completion_requires_every_final_evaluation(confirmed_enrollment, past_m
     assert confirmed_enrollment.status == EnrollmentStatus.CONFIRMED
 
 
-
 def prepare_approved_enrollment(enrollment, meeting):
     enrollment.status = EnrollmentStatus.APPROVED
     enrollment.save(update_fields=["status", "updated_at"])

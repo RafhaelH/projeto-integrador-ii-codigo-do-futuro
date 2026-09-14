@@ -340,7 +340,6 @@ class CompleteClassGroupView(RoleRequiredMixin, View):
         return redirect("learning:class-attendance", class_pk=class_pk)
 
 
-
 class CertificateListView(RoleRequiredMixin, TemplateView):
     allowed_roles = (UserRole.ADMIN, UserRole.INSTRUCTOR, UserRole.PARTICIPANT)
     template_name = "learning/certificate_list.html"

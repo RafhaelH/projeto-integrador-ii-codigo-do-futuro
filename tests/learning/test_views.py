@@ -281,7 +281,6 @@ def test_admin_completes_class_through_academic_flow(
     assert confirmed_enrollment.status == "APPROVED"
 
 
-
 def prepare_certificate(enrollment, meeting, admin_user):
     enrollment.status = "APPROVED"
     enrollment.save(update_fields=["status", "updated_at"])

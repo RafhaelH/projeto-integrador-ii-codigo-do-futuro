@@ -47,7 +47,6 @@ class EvaluationAdmin(admin.ModelAdmin):
         return False
 
 
-
 @admin.register(Certificate)
 class CertificateAdmin(admin.ModelAdmin):
     list_display = (

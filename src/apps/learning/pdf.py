@@ -87,9 +87,10 @@ def render_certificate_pdf(certificate: Certificate) -> bytes:
             b"/Contents 6 0 R >>"
         ),
         b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>",
-        b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold "
-        b"/Encoding /WinAnsiEncoding >>",
-        b"<< /Length " + str(len(stream)).encode("ascii") + b" >>\nstream\n"
+        b"<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>",
+        b"<< /Length "
+        + str(len(stream)).encode("ascii")
+        + b" >>\nstream\n"
         + stream
         + b"\nendstream",
     ]

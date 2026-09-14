@@ -351,14 +351,11 @@ def complete_class_group(class_group: ClassGroup, *, actor: User) -> CompletionS
     return CompletionSummary(approved=approved, not_completed=not_completed)
 
 
-
 def calculate_certificate_workload(enrollment: Enrollment) -> Decimal:
     total_seconds = sum(
         (
             meeting.ends_at - meeting.starts_at
-            for meeting in enrollment.class_group.meetings.filter(
-                status=MeetingStatus.COMPLETED
-            )
+            for meeting in enrollment.class_group.meetings.filter(status=MeetingStatus.COMPLETED)
         ),
         start=timedelta(),
     ).total_seconds()
@@ -381,9 +378,7 @@ def issue_certificate(enrollment: Enrollment, *, actor: User) -> Certificate:
     if locked_enrollment.status != EnrollmentStatus.APPROVED:
         raise ValidationError("Somente inscrições aprovadas podem receber certificado.")
 
-    existing = Certificate.objects.select_for_update().filter(
-        enrollment=locked_enrollment
-    ).first()
+    existing = Certificate.objects.select_for_update().filter(enrollment=locked_enrollment).first()
     if existing:
         if existing.is_active:
             return existing

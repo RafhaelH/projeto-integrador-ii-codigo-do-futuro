@@ -122,7 +122,6 @@ def test_evaluation_rejects_score_above_ten(confirmed_enrollment, admin_user):
         evaluation.full_clean()
 
 
-
 def test_certificate_is_unique_per_enrollment(confirmed_enrollment):
     confirmed_enrollment.status = "APPROVED"
     confirmed_enrollment.save(update_fields=["status", "updated_at"])

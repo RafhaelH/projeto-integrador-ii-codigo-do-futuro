@@ -145,7 +145,6 @@ class Evaluation(UUIDTimestampedModel):
         return f"{self.enrollment.participant} — {self.final_score}"
 
 
-
 def generate_certificate_code() -> str:
     return f"CDF-{uuid.uuid4().hex.upper()}"
 

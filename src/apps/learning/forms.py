@@ -83,7 +83,6 @@ class EvaluationForm(forms.ModelForm):
             self.fields["publish"].initial = self.instance.published_at is not None
 
 
-
 class CertificateRevocationForm(forms.Form):
     reason = forms.CharField(
         label="Motivo da revogação",

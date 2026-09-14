@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "apps.enrollments.apps.EnrollmentsConfig",
     "apps.learning.apps.LearningConfig",
     "apps.people.apps.PeopleConfig",
+    "apps.reporting.apps.ReportingConfig",
     "apps.workshops.apps.WorkshopsConfig",
 ]
 

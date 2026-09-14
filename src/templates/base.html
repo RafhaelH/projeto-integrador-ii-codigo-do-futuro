@@ -27,6 +27,7 @@
         {% endif %}
         {% if user.role == "ADMIN" or user.role == "INSTRUCTOR" %}
           <a class="nav-link" href="{% url 'workshops:class-list' %}">{% if user.role == "INSTRUCTOR" %}Minhas turmas{% else %}Turmas{% endif %}</a>
+          <a class="nav-link" href="{% url 'reporting:dashboard' %}">Painel</a>
         {% endif %}
         {% if user.role == "PARTICIPANT" %}
           <a class="nav-link" href="{% url 'enrollments:available-classes' %}">Turmas disponíveis</a>

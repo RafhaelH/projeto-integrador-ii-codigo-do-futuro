@@ -32,7 +32,7 @@ flowchart TB
 | `workshops` | oficinas, turmas, instrutores da turma e encontros |
 | `enrollments` | inscrição, vagas, fila de espera e transições |
 | `learning` | frequência, projetos, avaliação, conclusão e certificados |
-| `reporting` | indicadores, filtros e exportações |
+| `reporting` | indicadores por escopo, filtros comuns e exportações CSV somente leitura |
 
 ## Estrutura executável planejada
 

@@ -79,7 +79,11 @@ Credenciais de demonstração não serão usadas em produção real e serão doc
 | CT-032-01 | Participante acessa certificado de terceiro | acesso negado | RN-043; CA-032-02 |
 | CT-032-02 | Instrutor acessa certificado de turma não vinculada | acesso negado | RN-044; CA-032-02 |
 | CT-032-03 | Download de certificado revogado | acesso negado e histórico preservado | RN-040; CA-032-01 |
+| CT-033-01 | Painel administrativo filtrado | todos os indicadores usam o mesmo universo | RN-045; CA-033-01 |
 | CT-034-01 | Painel do instrutor | somente turmas vinculadas | RN-044; CA-034-01 |
+| CT-035-01 | Relatório com filtro de período | somente registros das turmas filtradas | RN-045; CA-035-01 |
+| CT-036-01 | Administrador exporta CSV | arquivo UTF-8 sem CPF, telefone ou e-mail | RN-046, RN-048; CA-036-01 |
+| CT-036-02 | Instrutor tenta exportar CSV | acesso negado | RN-044, RN-048; CA-036-01 |
 
 ## Testes não funcionais
 

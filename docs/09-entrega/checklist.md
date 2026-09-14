@@ -34,7 +34,7 @@
 - [x] Projetos
 - [x] Avaliações e conclusão
 - [x] Certificados
-- [ ] Painéis e relatórios
+- [x] Painéis e relatórios
 - [ ] Interface responsiva em todos os módulos
 - [ ] Tratamento de erros
 - [ ] Dados fictícios de demonstração

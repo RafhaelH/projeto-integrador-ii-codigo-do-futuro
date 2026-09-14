@@ -138,6 +138,16 @@ Os critérios abaixo descrevem comportamentos observáveis. Os identificadores s
 
 **Dado** um instrutor autenticado, **quando** abrir o painel, **então** nenhuma informação de turma não vinculada pode aparecer.
 
+### CA-035-01 — Relatórios filtrados
+
+**Dado** filtros válidos de período, oficina e situação, **quando** o administrador consultar ou exportar um relatório, **então** os registros devem pertencer ao mesmo universo informado no painel.
+
+### CA-036-01 — Exportação protegida
+
+**Dado** um administrador autenticado, **quando** exportar inscrições, frequência ou conclusão, **então** o sistema deve entregar CSV em UTF-8 sem CPF, telefone ou e-mail.
+
+**Dado** um instrutor ou participante, **quando** tentar acessar diretamente uma exportação, **então** o sistema deve negar a operação.
+
 ## Matriz de rastreabilidade inicial
 
 | Fluxo | Requisitos | Regras | Casos de uso | Testes mínimos |

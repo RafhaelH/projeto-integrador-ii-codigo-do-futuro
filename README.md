@@ -6,7 +6,7 @@ A plataforma Código do Futuro apoiará a organização de oficinas gratuitas de
 
 ## Situação do projeto
 
-A especificação, a fundação executável, a gestão de pessoas, a oferta educacional, as inscrições e o controle de frequência estão concluídos. O sistema já permite autenticação, recuperação de senha, gestão de participantes, responsáveis, instrutores, instituições, oficinas, turmas, encontros, inscrições, vagas, lista de espera e chamadas, com permissões por perfil, testes automatizados e integração contínua.
+A especificação, a fundação executável, a gestão de pessoas, a oferta educacional, as inscrições e o acompanhamento acadêmico até a conclusão estão concluídos. O sistema já permite autenticação, recuperação de senha, gestão de participantes, responsáveis, instrutores, instituições, oficinas, turmas, encontros, inscrições, vagas, lista de espera, frequência, projetos, avaliações e processamento objetivo do resultado, com permissões por perfil, testes automatizados e integração contínua.
 
 ## Objetivo
 
@@ -109,8 +109,8 @@ src/
 └── manage.py
 ```
 
-Os recursos de projetos, avaliações e certificados serão adicionados ao módulo `learning`; o
-módulo `reporting` será criado incrementalmente conforme o backlog.
+Os certificados serão adicionados ao módulo `learning`; o módulo `reporting` será criado
+incrementalmente conforme o backlog.
 
 ## Documentação
 

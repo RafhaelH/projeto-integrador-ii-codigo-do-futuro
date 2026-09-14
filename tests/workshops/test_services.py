@@ -52,9 +52,23 @@ def test_class_follows_complete_lifecycle(planned_class, instructor_user):
 
     opened = transition_class_group(planned_class, ClassGroupStatus.OPEN)
     started = transition_class_group(opened, ClassGroupStatus.IN_PROGRESS)
-    completed = transition_class_group(started, ClassGroupStatus.COMPLETED)
+    completed = transition_class_group(
+        started,
+        ClassGroupStatus.COMPLETED,
+        academic_completion_validated=True,
+    )
 
     assert completed.status == ClassGroupStatus.COMPLETED
+
+
+def test_class_cannot_bypass_academic_completion(planned_class, instructor_user):
+    instructor = Instructor.objects.create(user=instructor_user)
+    ClassInstructor.objects.create(class_group=planned_class, instructor=instructor)
+    planned_class.status = ClassGroupStatus.IN_PROGRESS
+    planned_class.save()
+
+    with pytest.raises(ValidationError, match="processamento acadêmico"):
+        transition_class_group(planned_class, ClassGroupStatus.COMPLETED)
 
 
 def test_starting_class_requires_meeting(planned_class, instructor_user):

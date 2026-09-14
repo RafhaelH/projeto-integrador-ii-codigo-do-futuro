@@ -2,19 +2,24 @@ from django.contrib import messages
 from django.core.exceptions import PermissionDenied, ValidationError
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
+from django.views import View
 from django.views.generic import FormView, TemplateView
 
 from apps.accounts.mixins import RoleRequiredMixin
 from apps.accounts.models import UserRole
-from apps.enrollments.models import Enrollment
-from apps.workshops.models import ClassGroup, Meeting, MeetingStatus
+from apps.enrollments.models import Enrollment, EnrollmentStatus
+from apps.workshops.models import ClassGroup, ClassGroupStatus, Meeting, MeetingStatus
 
-from .forms import AttendanceFormSet
-from .models import Attendance
+from .forms import AttendanceFormSet, EvaluationForm, ProjectReviewForm, StudentProjectForm
+from .models import Attendance, Evaluation, StudentProject
 from .services import (
     ACADEMIC_ENROLLMENT_STATUSES,
     calculate_attendance_summary,
+    complete_class_group,
     record_meeting_attendance,
+    review_student_project,
+    save_evaluation,
+    save_student_project,
 )
 
 
@@ -44,7 +49,7 @@ class ClassAttendanceView(ClassAttendanceAccessMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         enrollments = self.class_group.enrollments.filter(
             status__in=ACADEMIC_ENROLLMENT_STATUSES
-        ).select_related("participant")
+        ).select_related("participant", "student_project", "evaluation")
         context.update(
             {
                 "class_group": self.class_group,
@@ -141,8 +146,183 @@ class ParticipantFrequencyView(RoleRequiredMixin, TemplateView):
         enrollments = Enrollment.objects.filter(
             participant__user=self.request.user,
             status__in=ACADEMIC_ENROLLMENT_STATUSES,
-        ).select_related("participant", "class_group", "class_group__workshop")
+        ).select_related(
+            "participant",
+            "class_group",
+            "class_group__workshop",
+            "student_project",
+            "evaluation",
+        )
         context["frequency_rows"] = [
             (enrollment, calculate_attendance_summary(enrollment)) for enrollment in enrollments
         ]
         return context
+
+
+class ParticipantProjectView(RoleRequiredMixin, FormView):
+    allowed_roles = (UserRole.PARTICIPANT,)
+    form_class = StudentProjectForm
+    template_name = "learning/entity_form.html"
+
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return super().dispatch(request, *args, **kwargs)
+        self.enrollment = get_object_or_404(
+            Enrollment.objects.select_related("participant", "class_group"),
+            pk=kwargs["enrollment_pk"],
+            participant__user=request.user,
+        )
+        if (
+            self.enrollment.status != EnrollmentStatus.CONFIRMED
+            or self.enrollment.class_group.status != ClassGroupStatus.IN_PROGRESS
+        ):
+            raise PermissionDenied("O projeto só pode ser alterado durante a turma.")
+        return super().dispatch(request, *args, **kwargs)
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs["instance"] = StudentProject.objects.filter(enrollment=self.enrollment).first()
+        return kwargs
+
+    def form_valid(self, form):
+        try:
+            save_student_project(
+                self.enrollment,
+                data=form.cleaned_data,
+                actor=self.request.user,
+            )
+        except (PermissionDenied, ValidationError) as error:
+            message = "; ".join(error.messages) if hasattr(error, "messages") else str(error)
+            form.add_error(None, message)
+            return self.form_invalid(form)
+        messages.success(self.request, "Projeto atualizado com sucesso.")
+        return redirect("learning:participant-frequency")
+
+    def get_context_data(self, **kwargs):
+        return super().get_context_data(**kwargs) | {
+            "page_title": "Meu projeto",
+            "page_description": self.enrollment.class_group.title,
+            "cancel_url": reverse("learning:participant-frequency"),
+        }
+
+
+class ProjectReviewView(ClassAttendanceAccessMixin, FormView):
+    form_class = ProjectReviewForm
+    template_name = "learning/entity_form.html"
+
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return super().dispatch(request, *args, **kwargs)
+        self.project = get_object_or_404(
+            StudentProject.objects.select_related(
+                "enrollment__class_group",
+                "enrollment__participant",
+            ),
+            pk=kwargs["pk"],
+        )
+        if not self.get_class_queryset().filter(pk=self.project.enrollment.class_group_id).exists():
+            raise PermissionDenied
+        if (
+            self.project.enrollment.status != EnrollmentStatus.CONFIRMED
+            or self.project.enrollment.class_group.status != ClassGroupStatus.IN_PROGRESS
+        ):
+            raise PermissionDenied("A revisão só pode ser alterada durante a turma.")
+        return super().dispatch(request, *args, **kwargs)
+
+    def get_form_kwargs(self):
+        return super().get_form_kwargs() | {"instance": self.project}
+
+    def form_valid(self, form):
+        try:
+            review_student_project(
+                self.project,
+                review_notes=form.cleaned_data["review_notes"],
+                actor=self.request.user,
+            )
+        except ValidationError as error:
+            form.add_error(None, "; ".join(error.messages))
+            return self.form_invalid(form)
+        messages.success(self.request, "Devolutiva do projeto registrada.")
+        return redirect(
+            "learning:class-attendance",
+            class_pk=self.project.enrollment.class_group_id,
+        )
+
+    def get_context_data(self, **kwargs):
+        return super().get_context_data(**kwargs) | {
+            "page_title": f"Revisar projeto de {self.project.enrollment.participant}",
+            "page_description": self.project.title,
+            "cancel_url": reverse(
+                "learning:class-attendance",
+                kwargs={"class_pk": self.project.enrollment.class_group_id},
+            ),
+        }
+
+
+class EvaluationView(ClassAttendanceAccessMixin, FormView):
+    form_class = EvaluationForm
+    template_name = "learning/entity_form.html"
+
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return super().dispatch(request, *args, **kwargs)
+        self.enrollment = get_object_or_404(
+            Enrollment.objects.select_related("participant", "class_group"),
+            pk=kwargs["enrollment_pk"],
+        )
+        if not self.get_class_queryset().filter(pk=self.enrollment.class_group_id).exists():
+            raise PermissionDenied
+        if (
+            self.enrollment.status != EnrollmentStatus.CONFIRMED
+            or self.enrollment.class_group.status != ClassGroupStatus.IN_PROGRESS
+        ):
+            raise PermissionDenied("A avaliação só pode ser alterada durante a turma.")
+        return super().dispatch(request, *args, **kwargs)
+
+    def get_form_kwargs(self):
+        return super().get_form_kwargs() | {
+            "instance": Evaluation.objects.filter(enrollment=self.enrollment).first()
+        }
+
+    def form_valid(self, form):
+        try:
+            save_evaluation(
+                self.enrollment,
+                final_score=form.cleaned_data["final_score"],
+                feedback=form.cleaned_data["feedback"],
+                publish=form.cleaned_data["publish"],
+                actor=self.request.user,
+            )
+        except ValidationError as error:
+            form.add_error(None, "; ".join(error.messages))
+            return self.form_invalid(form)
+        messages.success(self.request, "Avaliação final registrada.")
+        return redirect("learning:class-attendance", class_pk=self.enrollment.class_group_id)
+
+    def get_context_data(self, **kwargs):
+        return super().get_context_data(**kwargs) | {
+            "page_title": f"Avaliar {self.enrollment.participant}",
+            "page_description": self.enrollment.class_group.title,
+            "cancel_url": reverse(
+                "learning:class-attendance",
+                kwargs={"class_pk": self.enrollment.class_group_id},
+            ),
+        }
+
+
+class CompleteClassGroupView(RoleRequiredMixin, View):
+    allowed_roles = (UserRole.ADMIN,)
+
+    def post(self, request, class_pk):
+        class_group = get_object_or_404(ClassGroup, pk=class_pk)
+        try:
+            summary = complete_class_group(class_group, actor=request.user)
+        except ValidationError as error:
+            messages.error(request, "; ".join(error.messages))
+        else:
+            messages.success(
+                request,
+                f"Turma concluída: {summary.approved} aprovado(s) e "
+                f"{summary.not_completed} não concluinte(s).",
+            )
+        return redirect("learning:class-attendance", class_pk=class_pk)

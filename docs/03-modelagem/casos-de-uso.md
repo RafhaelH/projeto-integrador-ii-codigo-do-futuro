@@ -84,6 +84,24 @@
 
 **Alternativas:** encontro cancelado ou futuro não aceita chamada; ator sem vínculo recebe acesso negado.
 
+## UC-009 — Registrar e revisar projeto
+
+**Objetivo:** manter uma entrega prática individual vinculada à inscrição.
+
+**Pré-condições:** turma em andamento; inscrição confirmada; ator autorizado.
+
+**Fluxo principal:**
+
+1. O participante abre sua jornada e acessa o projeto da turma.
+2. Informa título, descrição e, opcionalmente, links do repositório e da demonstração.
+3. O participante pode manter o projeto como rascunho ou marcá-lo como entregue.
+4. O sistema preserva um único projeto por inscrição e registra a data da entrega.
+5. O instrutor vinculado ou administrador consulta o projeto.
+6. O ator autorizado registra uma devolutiva, exibida na jornada do participante.
+
+**Alternativas:** projeto de outra pessoa ou turma não vinculada recebe acesso negado; após o
+encerramento da turma, projeto e devolutiva ficam somente para consulta.
+
 ## UC-010 — Avaliar e concluir participante
 
 **Objetivo:** registrar o resultado final e determinar a conclusão.

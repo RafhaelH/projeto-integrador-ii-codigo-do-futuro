@@ -21,7 +21,12 @@ def transition_workshop(workshop: Workshop, target: str) -> Workshop:
 
 
 @transaction.atomic
-def transition_class_group(class_group: ClassGroup, target: str) -> ClassGroup:
+def transition_class_group(
+    class_group: ClassGroup,
+    target: str,
+    *,
+    academic_completion_validated: bool = False,
+) -> ClassGroup:
     current = ClassGroup.objects.select_for_update().get(pk=class_group.pk)
     allowed = {
         ClassGroupStatus.PLANNED: {ClassGroupStatus.OPEN, ClassGroupStatus.CANCELLED},
@@ -32,6 +37,8 @@ def transition_class_group(class_group: ClassGroup, target: str) -> ClassGroup:
     }
     if target not in allowed[current.status]:
         raise ValidationError("Transição de situação da turma não permitida.")
+    if target == ClassGroupStatus.COMPLETED and not academic_completion_validated:
+        raise ValidationError("Conclua a turma pelo processamento acadêmico.")
 
     active_instructors = current.instructor_links.filter(instructor__is_active=True).exists()
     if target == ClassGroupStatus.OPEN:

@@ -31,8 +31,8 @@
 - [x] Oficinas, turmas e encontros
 - [x] Inscrições, vagas e lista de espera
 - [x] Frequência
-- [ ] Projetos
-- [ ] Avaliações e conclusão
+- [x] Projetos
+- [x] Avaliações e conclusão
 - [ ] Certificados
 - [ ] Painéis e relatórios
 - [ ] Interface responsiva em todos os módulos

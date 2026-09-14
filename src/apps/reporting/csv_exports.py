@@ -7,7 +7,6 @@ from django.utils import timezone
 
 from apps.enrollments.models import Enrollment, EnrollmentStatus
 from apps.learning.services import ACADEMIC_ENROLLMENT_STATUSES, calculate_attendance_summary
-from apps.workshops.models import ClassGroup
 
 
 def _format_date(value) -> str:

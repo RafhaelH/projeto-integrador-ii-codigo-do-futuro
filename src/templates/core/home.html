@@ -8,8 +8,8 @@
       <span class="eyebrow">Ambiente acadêmico</span>
       <h1>Bem-vindo ao Código do Futuro</h1>
       <p>
-        A fundação da plataforma está pronta para receber os módulos de oficinas,
-        turmas e acompanhamento dos participantes.
+        A plataforma já organiza pessoas, oficinas, turmas, instrutores e cronogramas,
+        preparando a próxima etapa de inscrições e acompanhamento.
       </p>
     </div>
     <div class="status-pill"><span aria-hidden="true"></span> Sistema operacional</div>
@@ -18,8 +18,8 @@
   <section aria-labelledby="modulos-title">
     <div class="section-heading">
       <div>
-        <span class="eyebrow">Próximas entregas</span>
-        <h2 id="modulos-title">Módulos planejados</h2>
+        <span class="eyebrow">Visão do produto</span>
+        <h2 id="modulos-title">Módulos da plataforma</h2>
       </div>
     </div>
 
@@ -36,6 +36,9 @@
         <span class="card-icon" aria-hidden="true">02</span>
         <h3>Oficinas e turmas</h3>
         <p>Ofertas pedagógicas, cronogramas, vagas e encontros presenciais.</p>
+        {% if user.role == "ADMIN" or user.role == "INSTRUCTOR" %}
+          <a class="card-link" href="{% url 'workshops:class-list' %}">Consultar turmas</a>
+        {% endif %}
       </article>
       <article class="card">
         <span class="card-icon" aria-hidden="true">03</span>

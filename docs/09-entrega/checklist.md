@@ -18,7 +18,7 @@
 - [x] Arquitetura definida
 - [ ] Protótipos das telas
 - [ ] Revisão final dos diagramas após implementação
-- [ ] Projeto físico gerado pelas migrações
+- [x] Projeto físico inicial gerado pelas migrações
 
 ## Situação 2 — Desenvolvimento
 
@@ -28,7 +28,7 @@
 - [x] PostgreSQL configurado
 - [ ] Autenticação e autorização por perfil em todos os módulos
 - [x] Participantes, responsáveis, instrutores e instituições
-- [ ] Oficinas, turmas e encontros
+- [x] Oficinas, turmas e encontros
 - [ ] Inscrições, vagas e lista de espera
 - [ ] Frequência
 - [ ] Projetos

@@ -36,7 +36,9 @@ a {
 }
 
 button,
-input {
+input,
+select,
+textarea {
   font: inherit;
 }
 
@@ -524,6 +526,76 @@ tbody tr:last-child td {
   background: #e3f0f7;
 }
 
+.badge-danger {
+  color: #8b1e1e;
+  background: #feecec;
+}
+
+.button-danger {
+  color: #8b1e1e;
+  background: #feecec;
+}
+
+.action-row,
+.subnav {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.action-row form {
+  margin: 0;
+}
+
+.subnav {
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.subnav a {
+  padding: 0.7rem 0.2rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.subnav a[aria-current="page"] {
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.section-gap {
+  margin-top: 1rem;
+}
+
+.summary-panel {
+  margin-bottom: 1rem;
+}
+
+.schedule-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.schedule-item small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--color-muted);
+}
+
+.link-button {
+  padding: 0;
+  color: #8b1e1e;
+  font-weight: 700;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .empty-state,
 .empty-copy {
   color: var(--color-muted);
@@ -614,6 +686,11 @@ tbody tr:last-child td {
   .page-heading-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .user-nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   .auth-intro {

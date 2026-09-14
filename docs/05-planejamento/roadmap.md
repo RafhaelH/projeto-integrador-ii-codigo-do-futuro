@@ -14,9 +14,9 @@ O roadmap é orientado por dependências, não por datas fixas. As datas do cron
 | 7. Validação | testes técnicos, cinco avaliações e correções | nenhum erro crítico; decisões documentadas |
 | 8. Entrega | manual, PDF de evidências, versão estável e vídeo | checklist acadêmico integralmente atendido |
 
-Fases 0 a 5 possuem implementação versionada. Na fase 6, os painéis gerenciais por escopo,
-filtros coerentes e relatórios CSV protegidos estão implementados. A carga fictícia de
-demonstração encerra essa fase e prepara os testes com cinco avaliadores.
+As fases 0 a 6 possuem implementação versionada. Os painéis gerenciais, filtros, relatórios
+CSV e a carga fictícia determinística encerram a fase de gestão. A fase 7 começa pelos testes
+orientados com cinco avaliadores e pelo registro das melhorias identificadas.
 
 ## Marcos
 

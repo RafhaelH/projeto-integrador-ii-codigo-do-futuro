@@ -84,6 +84,8 @@ Credenciais de demonstração não serão usadas em produção real e serão doc
 | CT-035-01 | Relatório com filtro de período | somente registros das turmas filtradas | RN-045; CA-035-01 |
 | CT-036-01 | Administrador exporta CSV | arquivo UTF-8 sem CPF, telefone ou e-mail | RN-046, RN-048; CA-036-01 |
 | CT-036-02 | Instrutor tenta exportar CSV | acesso negado | RN-044, RN-048; CA-036-01 |
+| CT-DEMO-01 | Executar a carga duas vezes | mesmas entidades e quantidades, sem duplicidade | RNF-020 |
+| CT-DEMO-02 | Executar a carga com `DEBUG=False` | bloqueio sem autorização e senha explícitas | RNF-017; RNF-025 |
 
 ## Testes não funcionais
 

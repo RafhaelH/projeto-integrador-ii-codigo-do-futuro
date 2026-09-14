@@ -122,6 +122,14 @@ Os critérios abaixo descrevem comportamentos observáveis. Os identificadores s
 
 **Dado** inscrição ainda ativa ou não concluída, **quando** tentarem gerar certificado, **então** o sistema deve negar a emissão.
 
+### CA-032-01 — Consulta autorizada
+
+**Dado** um certificado ativo, **quando** o participante titular, o administrador ou um instrutor vinculado consultar ou baixar o documento, **então** o sistema deve permitir o acesso.
+
+### CA-032-02 — Consulta bloqueada
+
+**Dado** um certificado de outro participante ou de turma não vinculada, **quando** houver tentativa de acesso, **então** o sistema deve negar a consulta sem expor os dados do documento.
+
 ### CA-033-01 — Painel filtrado
 
 **Dado** um período e filtros selecionados, **quando** o administrador consultar o painel, **então** todos os indicadores devem representar o mesmo universo filtrado.

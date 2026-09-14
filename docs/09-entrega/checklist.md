@@ -33,7 +33,7 @@
 - [x] Frequência
 - [x] Projetos
 - [x] Avaliações e conclusão
-- [ ] Certificados
+- [x] Certificados
 - [ ] Painéis e relatórios
 - [ ] Interface responsiva em todos os módulos
 - [ ] Tratamento de erros

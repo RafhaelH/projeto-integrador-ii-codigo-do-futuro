@@ -75,6 +75,10 @@ Credenciais de demonstração não serão usadas em produção real e serão doc
 | CT-030-01 | 75%, nota 6 e projeto entregue | aprovação | RN-036; CA-030-01 |
 | CT-030-02 | 74,9%, nota 10 e projeto entregue | não conclusão | RN-036–037; CA-030-02 |
 | CT-031-01 | Certificado de não concluinte | emissão negada | RN-039; CA-031-02 |
+| CT-031-02 | Certificado de aprovado | PDF com código e carga realizada | RN-040–042; CA-031-01 |
+| CT-032-01 | Participante acessa certificado de terceiro | acesso negado | RN-043; CA-032-02 |
+| CT-032-02 | Instrutor acessa certificado de turma não vinculada | acesso negado | RN-044; CA-032-02 |
+| CT-032-03 | Download de certificado revogado | acesso negado e histórico preservado | RN-040; CA-032-01 |
 | CT-034-01 | Painel do instrutor | somente turmas vinculadas | RN-044; CA-034-01 |
 
 ## Testes não funcionais

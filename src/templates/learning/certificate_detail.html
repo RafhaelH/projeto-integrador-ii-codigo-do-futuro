@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Certificado {{ certificate.verification_code }} | Código do Futuro{% endblock %}
+
+{% block content %}
+<header class="page-heading page-heading-actions">
+  <div>
+    <a class="back-link" href="{% url 'learning:certificate-list' %}">← Certificados</a>
+    <h1>Certificado de conclusão</h1>
+    <p>{{ certificate.enrollment.participant }} · {{ certificate.enrollment.class_group.code }}</p>
+  </div>
+  {% if certificate.is_active %}
+    <a class="button button-primary" href="{% url 'learning:certificate-download' certificate.pk %}">Baixar PDF</a>
+  {% endif %}
+</header>
+
+<section class="certificate-preview {% if not certificate.is_active %}certificate-revoked{% endif %}">
+  <span class="eyebrow">Código do Futuro</span>
+  <h2>Certificado de conclusão</h2>
+  <p>Certificamos que</p>
+  <strong class="certificate-name">{{ certificate.enrollment.participant.full_name }}</strong>
+  <p>concluiu com aprovação a oficina <strong>{{ certificate.enrollment.class_group.workshop.title }}</strong>.</p>
+  <dl class="certificate-metadata">
+    <div><dt>Turma</dt><dd>{{ certificate.enrollment.class_group.code }}</dd></div>
+    <div><dt>Período</dt><dd>{{ certificate.enrollment.class_group.start_date|date:"d/m/Y" }} a {{ certificate.enrollment.class_group.end_date|date:"d/m/Y" }}</dd></div>
+    <div><dt>Carga horária</dt><dd>{{ certificate.workload_hours }} horas</dd></div>
+    <div><dt>Emitido em</dt><dd>{{ certificate.issued_at|date:"d/m/Y" }}</dd></div>
+  </dl>
+  <p class="certificate-code">Código de identificação: <strong>{{ certificate.verification_code }}</strong></p>
+  {% if not certificate.is_active %}<span class="certificate-stamp">REVOGADO</span>{% endif %}
+</section>
+
+{% if user.role == "ADMIN" and certificate.is_active %}
+<section class="panel section-gap">
+  <h2>Revogar certificado</h2>
+  <p class="muted">A revogação preserva o histórico e bloqueia novos downloads.</p>
+  <form method="post" action="{% url 'learning:certificate-revoke' certificate.pk %}">
+    {% csrf_token %}
+    <div class="form-field">
+      <label for="{{ revocation_form.reason.id_for_label }}">{{ revocation_form.reason.label }}</label>
+      {{ revocation_form.reason }}
+    </div>
+    <div class="form-actions">
+      <button class="button button-danger" type="submit">Revogar certificado</button>
+    </div>
+  </form>
+</section>
+{% elif user.role == "ADMIN" and not certificate.is_active %}
+<section class="panel section-gap">
+  <h2>Histórico da revogação</h2>
+  <p><strong>{{ certificate.revoked_at|date:"d/m/Y H:i" }}</strong> · {{ certificate.revocation_reason }}</p>
+</section>
+{% endif %}
+{% endblock %}

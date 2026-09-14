@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from datetime import timedelta
 from decimal import ROUND_HALF_UP, Decimal
 
 from django.core.exceptions import PermissionDenied, ValidationError
@@ -11,7 +12,7 @@ from apps.people.models import Instructor
 from apps.workshops.models import ClassGroup, ClassGroupStatus, Meeting, MeetingStatus
 from apps.workshops.services import transition_class_group
 
-from .models import Attendance, AttendanceStatus, Evaluation, StudentProject
+from .models import Attendance, AttendanceStatus, Certificate, Evaluation, StudentProject
 
 MINIMUM_ATTENDANCE_PERCENTAGE = Decimal("75.00")
 ACADEMIC_ENROLLMENT_STATUSES = (
@@ -348,3 +349,77 @@ def complete_class_group(class_group: ClassGroup, *, actor: User) -> CompletionS
         academic_completion_validated=True,
     )
     return CompletionSummary(approved=approved, not_completed=not_completed)
+
+
+def calculate_certificate_workload(enrollment: Enrollment) -> Decimal:
+    total_seconds = sum(
+        (
+            meeting.ends_at - meeting.starts_at
+            for meeting in enrollment.class_group.meetings.filter(status=MeetingStatus.COMPLETED)
+        ),
+        start=timedelta(),
+    ).total_seconds()
+    return (Decimal(str(total_seconds)) / Decimal("3600")).quantize(
+        Decimal("0.01"),
+        rounding=ROUND_HALF_UP,
+    )
+
+
+@transaction.atomic
+def issue_certificate(enrollment: Enrollment, *, actor: User) -> Certificate:
+    if actor.role != UserRole.ADMIN:
+        raise PermissionDenied("Somente administradores podem emitir certificados.")
+
+    locked_enrollment = (
+        Enrollment.objects.select_for_update()
+        .select_related("participant", "class_group__workshop")
+        .get(pk=enrollment.pk)
+    )
+    if locked_enrollment.status != EnrollmentStatus.APPROVED:
+        raise ValidationError("Somente inscrições aprovadas podem receber certificado.")
+
+    existing = Certificate.objects.select_for_update().filter(enrollment=locked_enrollment).first()
+    if existing:
+        if existing.is_active:
+            return existing
+        raise ValidationError("Um certificado revogado não pode ser reemitido no MVP.")
+
+    certificate = Certificate(
+        enrollment=locked_enrollment,
+        workload_hours=calculate_certificate_workload(locked_enrollment),
+    )
+    certificate.full_clean()
+    certificate.save()
+    return certificate
+
+
+@transaction.atomic
+def revoke_certificate(
+    certificate: Certificate,
+    *,
+    reason: str,
+    actor: User,
+) -> Certificate:
+    if actor.role != UserRole.ADMIN:
+        raise PermissionDenied("Somente administradores podem revogar certificados.")
+
+    locked_certificate = Certificate.objects.select_for_update().get(pk=certificate.pk)
+    if not locked_certificate.is_active:
+        raise ValidationError("O certificado já está revogado.")
+    normalized_reason = reason.strip()
+    if not normalized_reason:
+        raise ValidationError("Informe o motivo da revogação.")
+
+    locked_certificate.is_active = False
+    locked_certificate.revoked_at = timezone.now()
+    locked_certificate.revocation_reason = normalized_reason
+    locked_certificate.full_clean()
+    locked_certificate.save(
+        update_fields=[
+            "is_active",
+            "revoked_at",
+            "revocation_reason",
+            "updated_at",
+        ]
+    )
+    return locked_certificate

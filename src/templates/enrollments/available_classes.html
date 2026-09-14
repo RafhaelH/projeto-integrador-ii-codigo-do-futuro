@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Turmas disponíveis | Código do Futuro{% endblock %}
+
+{% block content %}
+<header class="page-heading page-heading-actions"><div><span class="eyebrow">Novas oportunidades</span><h1>Turmas disponíveis</h1><p>Consulte os períodos, vagas e solicite sua participação.</p></div><a class="button button-secondary" href="{% url 'enrollments:list' %}">Minhas inscrições</a></header>
+
+{% if not participant_profile %}
+  <div class="form-alert">Seu usuário ainda não possui um cadastro de participante ativo. Solicite a regularização ao administrador.</div>
+{% else %}
+  <div class="card-grid enrollment-grid">
+  {% for class in class_groups %}
+    <article class="card class-card">
+      <div class="panel-heading"><span class="badge badge-success">Inscrições abertas</span><strong>{{ class.code }}</strong></div>
+      <h2>{{ class.title }}</h2>
+      <p>{{ class.workshop.summary }}</p>
+      <dl class="compact-details"><div><dt>Local</dt><dd>{{ class.location }}</dd></div><div><dt>Início</dt><dd>{{ class.start_date|date:'d/m/Y' }}</dd></div><div><dt>Vagas</dt><dd>{% if class.vacancies > 0 %}{{ class.vacancies }} de {{ class.capacity }}{% elif class.waitlist_enabled %}Lista de espera{% else %}Aguardando análise{% endif %}</dd></div></dl>
+      <form method="post" action="{% url 'enrollments:participant-create' class.pk %}">{% csrf_token %}<button class="button button-primary button-block" type="submit">Solicitar inscrição</button></form>
+    </article>
+  {% empty %}<div class="panel empty-state">Não há novas turmas disponíveis neste momento.</div>{% endfor %}
+  </div>
+{% endif %}
+{% endblock %}
+

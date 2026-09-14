@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Inscrições | Código do Futuro{% endblock %}
+
+{% block content %}
+<header class="page-heading page-heading-actions">
+  <div>
+    <span class="eyebrow">Jornada acadêmica</span>
+    <h1>{% if user.role == 'PARTICIPANT' %}Minhas inscrições{% else %}Inscrições{% endif %}</h1>
+    <p>Acompanhe solicitações, confirmações e listas de espera.</p>
+  </div>
+  {% if user.role == 'ADMIN' %}<a class="button button-primary" href="{% url 'enrollments:admin-create' %}">Nova inscrição</a>{% elif user.role == 'PARTICIPANT' %}<a class="button button-primary" href="{% url 'enrollments:available-classes' %}">Encontrar turma</a>{% endif %}
+</header>
+
+<form class="search-bar search-bar-wrap" method="get">
+  <label class="sr-only" for="q">Buscar inscrição</label>
+  <input id="q" name="q" value="{{ request.GET.q }}" placeholder="Participante, turma ou código">
+  <label class="sr-only" for="status">Filtrar por situação</label>
+  <select id="status" name="status">
+    <option value="">Todas as situações</option>
+    {% for value, label in status_choices %}<option value="{{ value }}" {% if request.GET.status == value %}selected{% endif %}>{{ label }}</option>{% endfor %}
+  </select>
+  <button class="button button-secondary" type="submit">Filtrar</button>
+</form>
+
+<div class="table-shell"><table><thead><tr>{% if user.role != 'PARTICIPANT' %}<th>Participante</th>{% endif %}<th>Turma</th><th>Solicitada em</th><th>Situação</th><th></th></tr></thead><tbody>
+{% for enrollment in enrollments %}<tr>{% if user.role != 'PARTICIPANT' %}<td><strong>{{ enrollment.participant }}</strong></td>{% endif %}<td>{{ enrollment.class_group.code }}<br><small>{{ enrollment.class_group.title }}</small></td><td>{{ enrollment.created_at|date:'d/m/Y H:i' }}</td><td><span class="badge {% if enrollment.status == 'CONFIRMED' or enrollment.status == 'APPROVED' %}badge-success{% elif enrollment.status == 'REJECTED' or enrollment.status == 'CANCELLED' or enrollment.status == 'NOT_COMPLETED' %}badge-danger{% elif enrollment.status == 'WAITLISTED' %}badge-warning{% else %}badge-primary{% endif %}">{{ enrollment.get_status_display }}</span>{% if enrollment.waitlist_position %}<small class="status-detail">Posição {{ enrollment.waitlist_position }}</small>{% endif %}</td><td class="table-action">{% if user.role == 'ADMIN' or user.role == 'INSTRUCTOR' %}<a href="{% url 'enrollments:class-queue' enrollment.class_group_id %}">Ver turma</a>{% elif enrollment.status == 'PENDING' or enrollment.status == 'WAITLISTED' or enrollment.status == 'CONFIRMED' %}<form method="post" action="{% url 'enrollments:cancel' enrollment.pk %}">{% csrf_token %}<button class="link-button" type="submit">Cancelar</button></form>{% endif %}</td></tr>
+{% empty %}<tr><td class="empty-state" colspan="5">Nenhuma inscrição encontrada.</td></tr>{% endfor %}
+</tbody></table></div>
+{% include "people/_pagination.html" %}
+{% endblock %}
+

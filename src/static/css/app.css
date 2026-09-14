@@ -531,6 +531,11 @@ tbody tr:last-child td {
   background: #feecec;
 }
 
+.badge-warning {
+  color: #725000;
+  background: #fff2cd;
+}
+
 .button-danger {
   color: #8b1e1e;
   background: #feecec;
@@ -546,6 +551,91 @@ tbody tr:last-child td {
 
 .action-row form {
   margin: 0;
+}
+
+.action-row-end {
+  justify-content: flex-end;
+}
+
+.link-button-success {
+  color: #0f6948;
+}
+
+.link-success {
+  color: #0f6948;
+}
+
+.link-danger {
+  color: #8b1e1e;
+}
+
+.status-detail {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--color-muted);
+}
+
+.search-bar select {
+  min-height: 44px;
+  padding: 0.65rem 0.8rem;
+  background: white;
+  border: 1px solid #b8c7d1;
+  border-radius: 10px;
+}
+
+.search-bar-wrap {
+  flex-wrap: wrap;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.metric-card {
+  padding: 1.15rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
+.metric-card small,
+.compact-details dt {
+  color: var(--color-muted);
+}
+
+.metric-card strong {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 1.7rem;
+}
+
+.enrollment-grid {
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+.class-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.compact-details {
+  margin: 1rem 0;
+}
+
+.compact-details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.compact-details dd {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
 }
 
 .subnav {
@@ -679,7 +769,8 @@ tbody tr:last-child td {
   .auth-layout,
   .card-grid,
   .detail-grid,
-  .form-grid {
+  .form-grid,
+  .metric-grid {
     grid-template-columns: 1fr;
   }
 

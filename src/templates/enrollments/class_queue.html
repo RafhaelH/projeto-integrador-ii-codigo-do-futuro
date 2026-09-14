@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Inscrições de {{ class_group.code }} | Código do Futuro{% endblock %}
+
+{% block content %}
+<header class="page-heading page-heading-actions"><div><a class="back-link" href="{% url 'workshops:class-detail' class_group.pk %}">← {{ class_group.code }}</a><h1>Inscrições da turma</h1><p>{{ class_group.title }} · {{ class_group.workshop.title }}</p></div>{% if user.role == 'ADMIN' %}<div class="action-row"><a class="button button-primary" href="{% url 'enrollments:class-create' class_group.pk %}">Registrar inscrição</a>{% if available > 0 and waitlisted_count > 0 %}<form method="post" action="{% url 'enrollments:promote-waitlist' class_group.pk %}">{% csrf_token %}<button class="button button-secondary" type="submit">Promover primeiro da fila</button></form>{% endif %}</div>{% endif %}</header>
+
+<section class="metric-grid" aria-label="Resumo das vagas"><article class="metric-card"><small>Capacidade</small><strong>{{ class_group.capacity }}</strong></article><article class="metric-card"><small>Confirmadas</small><strong>{{ occupied }}</strong></article><article class="metric-card"><small>Disponíveis</small><strong>{{ available }}</strong></article><article class="metric-card"><small>Pendentes / espera</small><strong>{{ pending_count }} / {{ waitlisted_count }}</strong></article></section>
+
+<div class="table-shell section-gap"><table><thead><tr><th>Participante</th><th>Solicitação</th><th>Situação</th><th>Motivo</th><th></th></tr></thead><tbody>
+{% for enrollment in enrollments %}<tr><td><strong>{{ enrollment.participant }}</strong></td><td>{{ enrollment.created_at|date:'d/m/Y H:i' }}</td><td><span class="badge {% if enrollment.status == 'CONFIRMED' or enrollment.status == 'APPROVED' %}badge-success{% elif enrollment.status == 'REJECTED' or enrollment.status == 'CANCELLED' %}badge-danger{% elif enrollment.status == 'WAITLISTED' %}badge-warning{% else %}badge-primary{% endif %}">{{ enrollment.get_status_display }}</span>{% if enrollment.waitlist_position %}<small class="status-detail">Posição {{ enrollment.waitlist_position }}</small>{% endif %}</td><td>{{ enrollment.status_reason|default:'—' }}</td><td class="table-action">{% if user.role == 'ADMIN' %}<div class="action-row action-row-end">{% if enrollment.status == 'PENDING' or enrollment.status == 'WAITLISTED' %}<a class="link-success" href="{% url 'enrollments:confirm' enrollment.pk %}">Confirmar</a>{% endif %}{% if enrollment.status == 'PENDING' %}<a href="{% url 'enrollments:reject' enrollment.pk %}">Rejeitar</a>{% endif %}{% if enrollment.status == 'PENDING' or enrollment.status == 'WAITLISTED' or enrollment.status == 'CONFIRMED' %}<a class="link-danger" href="{% url 'enrollments:cancel' enrollment.pk %}">Cancelar</a>{% endif %}</div>{% endif %}</td></tr>
+{% empty %}<tr><td class="empty-state" colspan="5">Nenhuma inscrição registrada nesta turma.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

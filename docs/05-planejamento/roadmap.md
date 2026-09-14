@@ -14,6 +14,9 @@ O roadmap é orientado por dependências, não por datas fixas. As datas do cron
 | 7. Validação | testes técnicos, cinco avaliações e correções | nenhum erro crítico; decisões documentadas |
 | 8. Entrega | manual, PDF de evidências, versão estável e vídeo | checklist acadêmico integralmente atendido |
 
+Fases 0 a 4 possuem implementação versionada. A fase 4 inclui solicitação e análise de
+inscrições, ocupação transacional, lista de espera ordenada, promoção e cancelamento auditável.
+
 ## Marcos
 
 - **M1 — Especificação congelada:** fim da fase 0.

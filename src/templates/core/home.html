@@ -8,8 +8,8 @@
       <span class="eyebrow">Ambiente acadêmico</span>
       <h1>Bem-vindo ao Código do Futuro</h1>
       <p>
-        A plataforma já organiza pessoas, oficinas, turmas, instrutores e cronogramas,
-        preparando a próxima etapa de inscrições e acompanhamento.
+        A plataforma organiza pessoas, oficinas, turmas, cronogramas, inscrições,
+        vagas e listas de espera em um único ambiente.
       </p>
     </div>
     <div class="status-pill"><span aria-hidden="true"></span> Sistema operacional</div>
@@ -42,8 +42,13 @@
       </article>
       <article class="card">
         <span class="card-icon" aria-hidden="true">03</span>
-        <h3>Acompanhamento</h3>
-        <p>Inscrições, frequência, projetos, avaliações e certificados.</p>
+        <h3>Inscrições</h3>
+        <p>Solicitações, análise administrativa, vagas e lista de espera.</p>
+        {% if user.role == "PARTICIPANT" %}
+          <a class="card-link" href="{% url 'enrollments:available-classes' %}">Encontrar turma</a>
+        {% else %}
+          <a class="card-link" href="{% url 'enrollments:list' %}">Consultar inscrições</a>
+        {% endif %}
       </article>
     </div>
   </section>

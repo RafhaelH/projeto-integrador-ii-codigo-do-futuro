@@ -6,7 +6,7 @@ A plataforma Código do Futuro apoiará a organização de oficinas gratuitas de
 
 ## Situação do projeto
 
-A especificação, a fundação executável, a gestão de pessoas, a oferta educacional, as inscrições e a jornada acadêmica completa até o certificado estão concluídos. O sistema já permite autenticação, recuperação de senha, gestão de participantes, responsáveis, instrutores, instituições, oficinas, turmas, encontros, inscrições, vagas, lista de espera, frequência, projetos, avaliações e processamento objetivo do resultado e certificados em PDF, com permissões por perfil, testes automatizados e integração contínua.
+A especificação, a fundação executável e os módulos operacionais do MVP estão concluídos. O sistema já permite autenticação, recuperação de senha, gestão de participantes, responsáveis, instrutores, instituições, oficinas, turmas, encontros, inscrições, vagas, lista de espera, frequência, projetos, avaliações e processamento objetivo do resultado, certificados em PDF, painéis por perfil e relatórios CSV protegidos, com testes automatizados e integração contínua.
 
 ## Objetivo
 
@@ -101,6 +101,7 @@ src/
 │   ├── enrollments/ # inscrições, vagas, fila e histórico de transições
 │   ├── learning/    # frequência e evolução da jornada acadêmica
 │   ├── people/      # participantes, responsáveis, instrutores e instituições
+│   ├── reporting/   # indicadores, filtros e relatórios CSV
 │   └── workshops/   # oficinas, turmas, instrutores vinculados e encontros
 ├── config/
 │   └── settings/    # base, local, test e production
@@ -109,8 +110,8 @@ src/
 └── manage.py
 ```
 
-Os certificados integram o módulo `learning`; o módulo `reporting` será criado
-incrementalmente conforme o backlog.
+Os certificados integram o módulo `learning`; indicadores e exportações ficam isolados no
+módulo `reporting`, que consulta os demais domínios sem alterar seus registros.
 
 ## Documentação
 

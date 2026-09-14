@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Painel de indicadores | Código do Futuro{% endblock %}
+
+{% block content %}
+<header class="page-heading page-heading-actions">
+  <div>
+    <span class="eyebrow">{% if user.role == "INSTRUCTOR" %}Minhas turmas{% else %}Visão gerencial{% endif %}</span>
+    <h1>Painel de indicadores</h1>
+    <p>Universo considerado: turmas iniciadas em {{ period_description }}.</p>
+  </div>
+  {% if user.role == "ADMIN" %}
+    <div class="action-row">
+      <a class="button button-secondary" href="{% url 'reporting:export' 'inscricoes' %}{% if filter_query %}?{{ filter_query }}{% endif %}">Inscrições CSV</a>
+      <a class="button button-secondary" href="{% url 'reporting:export' 'frequencia' %}{% if filter_query %}?{{ filter_query }}{% endif %}">Frequência CSV</a>
+      <a class="button button-secondary" href="{% url 'reporting:export' 'conclusao' %}{% if filter_query %}?{{ filter_query }}{% endif %}">Conclusão CSV</a>
+    </div>
+  {% endif %}
+</header>
+
+<form class="panel reporting-filters" method="get">
+  {% if filter_form.non_field_errors %}
+    <div class="form-alert form-span">{{ filter_form.non_field_errors }}</div>
+  {% endif %}
+  {% for field in filter_form %}
+    <div class="form-field">
+      <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+      {{ field }}
+      {% for error in field.errors %}<small class="field-error">{{ error }}</small>{% endfor %}
+    </div>
+  {% endfor %}
+  <div class="form-actions">
+    <a class="button button-ghost" href="{% url 'reporting:dashboard' %}">Limpar</a>
+    <button class="button button-primary" type="submit">Aplicar filtros</button>
+  </div>
+</form>
+
+<section class="metric-grid reporting-metrics" aria-label="Indicadores consolidados">
+  <article class="metric-card"><small>Turmas</small><strong>{{ snapshot.classes }}</strong></article>
+  <article class="metric-card"><small>Participantes únicos</small><strong>{{ snapshot.participants }}</strong></article>
+  <article class="metric-card"><small>Inscrições</small><strong>{{ snapshot.enrollments }}</strong></article>
+  <article class="metric-card"><small>Ocupação</small><strong>{{ snapshot.occupancy_percentage }}%</strong><span>{{ snapshot.occupied }} de {{ snapshot.capacity }} vagas</span></article>
+  <article class="metric-card"><small>Frequência média</small><strong>{{ snapshot.average_attendance }}%</strong></article>
+  <article class="metric-card"><small>Projetos entregues</small><strong>{{ snapshot.delivered_projects }}</strong></article>
+  <article class="metric-card"><small>Aprovados</small><strong>{{ snapshot.approved }}</strong><span>{{ snapshot.not_completed }} não concluinte(s)</span></article>
+  <article class="metric-card"><small>Taxa de aprovação</small><strong>{{ snapshot.completion_percentage }}%</strong></article>
+</section>
+
+<div class="detail-grid section-gap">
+  <section class="panel">
+    <div class="panel-heading"><h2>Situação das turmas</h2><span class="badge badge-muted">{{ snapshot.classes }} no universo</span></div>
+    {% for item in snapshot.class_statuses %}
+      <div class="distribution-row"><span>{{ item.label }}</span><strong>{{ item.total }}</strong></div>
+    {% empty %}<p class="empty-copy">Nenhuma turma encontrada.</p>{% endfor %}
+  </section>
+  <section class="panel">
+    <div class="panel-heading"><h2>Situação das inscrições</h2><span class="badge badge-muted">{{ snapshot.enrollments }} registros</span></div>
+    {% for item in snapshot.enrollment_statuses %}
+      <div class="distribution-row"><span>{{ item.label }}</span><strong>{{ item.total }}</strong></div>
+    {% empty %}<p class="empty-copy">Nenhuma inscrição encontrada.</p>{% endfor %}
+  </section>
+</div>
+
+<section class="panel section-gap">
+  <div class="panel-heading"><h2>Resumo por turma</h2><span class="badge badge-primary">Mesmo universo dos indicadores</span></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Turma</th><th>Oficina</th><th>Início</th><th>Situação</th><th>Ocupação</th><th>Espera</th><th>Resultado</th></tr></thead>
+      <tbody>
+      {% for class_group in class_rows %}
+        <tr>
+          <td><strong>{{ class_group.code }}</strong><br><small>{{ class_group.title }}</small></td>
+          <td>{{ class_group.workshop.title }}</td>
+          <td>{{ class_group.start_date|date:"d/m/Y" }}</td>
+          <td><span class="badge badge-muted">{{ class_group.get_status_display }}</span></td>
+          <td>{{ class_group.occupied_count }}/{{ class_group.capacity }}</td>
+          <td>{{ class_group.waitlisted_count }}</td>
+          <td>{{ class_group.approved_count }} aprovado(s)<br><small>{{ class_group.not_completed_count }} não concluinte(s)</small></td>
+        </tr>
+      {% empty %}
+        <tr><td colspan="7">Nenhuma turma corresponde aos filtros selecionados.</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+{% if user.role == "ADMIN" %}
+<p class="privacy-note">As exportações são destinadas à prestação de contas acadêmica ou operacional. Elas incluem somente o nome necessário à identificação e nunca exibem CPF.</p>
+{% endif %}
+{% endblock %}

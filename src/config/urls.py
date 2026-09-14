@@ -44,5 +44,6 @@ urlpatterns = [
     path("oficinas/", include("apps.workshops.urls")),
     path("inscricoes/", include("apps.enrollments.urls")),
     path("acompanhamento/", include("apps.learning.urls")),
+    path("painel/", include("apps.reporting.urls")),
     path("", include("apps.core.urls")),
 ]

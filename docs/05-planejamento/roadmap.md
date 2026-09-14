@@ -14,9 +14,9 @@ O roadmap é orientado por dependências, não por datas fixas. As datas do cron
 | 7. Validação | testes técnicos, cinco avaliações e correções | nenhum erro crítico; decisões documentadas |
 | 8. Entrega | manual, PDF de evidências, versão estável e vídeo | checklist acadêmico integralmente atendido |
 
-Fases 0 a 5 possuem implementação versionada. A jornada acadêmica está completa, incluindo
-frequência, projeto individual, revisão, avaliação final, conclusão e certificados autenticados.
-A fase 6 inicia os painéis, indicadores, relatórios e dados de demonstração.
+Fases 0 a 5 possuem implementação versionada. Na fase 6, os painéis gerenciais por escopo,
+filtros coerentes e relatórios CSV protegidos estão implementados. A carga fictícia de
+demonstração encerra essa fase e prepara os testes com cinco avaliadores.
 
 ## Marcos
 

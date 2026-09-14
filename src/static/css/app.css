@@ -638,6 +638,62 @@ tbody tr:last-child td {
   text-align: right;
 }
 
+.frequency-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.frequency-row small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--color-muted);
+}
+
+.frequency-value {
+  color: var(--color-primary-dark);
+  font-size: 1.25rem;
+}
+
+.attendance-page {
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+.attendance-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.attendance-entry {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(170px, 0.5fr) minmax(240px, 1fr);
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  align-items: end;
+}
+
+.attendance-entry .form-field {
+  margin: 0;
+}
+
+.attendance-entry input:disabled {
+  color: var(--color-ink);
+  background: #f5f8fa;
+  opacity: 1;
+}
+
+.attendance-actions {
+  margin-top: 1rem;
+}
+
+.frequency-card h2 {
+  margin-bottom: 0.35rem;
+}
+
 .subnav {
   margin-bottom: 1.25rem;
   border-bottom: 1px solid var(--color-border);
@@ -770,7 +826,8 @@ tbody tr:last-child td {
   .card-grid,
   .detail-grid,
   .form-grid,
-  .metric-grid {
+  .metric-grid,
+  .attendance-entry {
     grid-template-columns: 1fr;
   }
 

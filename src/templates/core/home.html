@@ -9,7 +9,7 @@
       <h1>Bem-vindo ao Código do Futuro</h1>
       <p>
         A plataforma organiza pessoas, oficinas, turmas, cronogramas, inscrições,
-        vagas e listas de espera em um único ambiente.
+        vagas, listas de espera e frequência em um único ambiente.
       </p>
     </div>
     <div class="status-pill"><span aria-hidden="true"></span> Sistema operacional</div>
@@ -48,6 +48,16 @@
           <a class="card-link" href="{% url 'enrollments:available-classes' %}">Encontrar turma</a>
         {% else %}
           <a class="card-link" href="{% url 'enrollments:list' %}">Consultar inscrições</a>
+        {% endif %}
+      </article>
+      <article class="card">
+        <span class="card-icon" aria-hidden="true">04</span>
+        <h3>Frequência</h3>
+        <p>Chamadas por encontro e acompanhamento do percentual de presença.</p>
+        {% if user.role == "PARTICIPANT" %}
+          <a class="card-link" href="{% url 'learning:participant-frequency' %}">Ver minha frequência</a>
+        {% else %}
+          <a class="card-link" href="{% url 'workshops:class-list' %}">Selecionar turma</a>
         {% endif %}
       </article>
     </div>

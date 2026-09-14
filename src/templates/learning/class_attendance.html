@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Frequência de {{ class_group.code }} | Código do Futuro{% endblock %}
+
+{% block content %}
+<header class="page-heading page-heading-actions">
+  <div><a class="back-link" href="{% url 'workshops:class-detail' class_group.pk %}">← {{ class_group.code }}</a><h1>Frequência da turma</h1><p>{{ class_group.title }} · chamada e percentuais acumulados</p></div>
+</header>
+
+<div class="detail-grid">
+  <section class="panel">
+    <div class="panel-heading"><h2>Encontros</h2><span class="badge badge-primary">{{ meetings|length }} no cronograma</span></div>
+    {% for meeting in meetings %}
+      <div class="schedule-item"><div><strong>{{ meeting.title }}</strong><small>{{ meeting.starts_at|date:'d/m/Y H:i' }}–{{ meeting.ends_at|date:'H:i' }} · {{ meeting.get_status_display }}</small></div>{% if meeting.status != 'CANCELLED' %}<a href="{% url 'learning:meeting-attendance' meeting.pk %}">{% if meeting.status == 'COMPLETED' %}Corrigir chamada{% else %}Registrar chamada{% endif %}</a>{% endif %}</div>
+    {% empty %}<p class="empty-copy">Nenhum encontro planejado.</p>{% endfor %}
+  </section>
+
+  <section class="panel">
+    <div class="panel-heading"><h2>Resumo da turma</h2><span class="badge badge-muted">Atualização automática</span></div>
+    {% for enrollment, summary in frequency_rows %}
+      <div class="frequency-row"><div><strong>{{ enrollment.participant }}</strong><small>{{ summary.presents }} presença(s) em {{ summary.completed_meetings }} encontro(s)</small></div><strong class="frequency-value">{{ summary.percentage }}%</strong></div>
+    {% empty %}<p class="empty-copy">Nenhum participante confirmado.</p>{% endfor %}
+  </section>
+</div>
+{% endblock %}
+

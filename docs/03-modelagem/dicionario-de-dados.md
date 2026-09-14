@@ -181,6 +181,21 @@ Restrição única: `(class_group_id, starts_at)`.
 
 Restrição única: `(participant_id, class_group_id)`.
 
+## enrollment_status_history
+
+| Campo | Tipo | Obrigatório | Restrições/descrição |
+|---|---|---:|---|
+| id | bigint | Sim | PK |
+| enrollment_id | uuid | Sim | FK para `enrollment` |
+| from_status | varchar(30) | Não | situação anterior; nulo na criação |
+| to_status | varchar(30) | Sim | nova situação da inscrição |
+| reason | text | Não | justificativa registrada na transição |
+| changed_by_id | uuid | Sim | FK para o usuário responsável |
+| created_at | datetime | Sim | instante imutável da alteração |
+
+O histórico é criado pelos serviços de domínio e não pode ser incluído, alterado ou excluído
+pelas telas administrativas.
+
 ## attendance
 
 | Campo | Tipo | Obrigatório | Restrições/descrição |

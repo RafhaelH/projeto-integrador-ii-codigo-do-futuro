@@ -59,6 +59,7 @@ erDiagram
 - uma oficina pode originar várias turmas;
 - uma turma possui um ou mais instrutores;
 - um participante tem no máximo uma inscrição por turma;
+- cada transição de inscrição gera uma entrada imutável em seu histórico de situação;
 - uma inscrição tem no máximo uma frequência por encontro;
 - uma inscrição tem no máximo um projeto, uma avaliação e um certificado ativo;
 - uma turma só referencia uma instituição, que pode sediar várias turmas.

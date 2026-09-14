@@ -29,7 +29,7 @@
 - [ ] Autenticação e autorização por perfil em todos os módulos
 - [x] Participantes, responsáveis, instrutores e instituições
 - [x] Oficinas, turmas e encontros
-- [ ] Inscrições, vagas e lista de espera
+- [x] Inscrições, vagas e lista de espera
 - [ ] Frequência
 - [ ] Projetos
 - [ ] Avaliações e conclusão

@@ -28,6 +28,10 @@
         {% if user.role == "ADMIN" or user.role == "INSTRUCTOR" %}
           <a class="nav-link" href="{% url 'workshops:class-list' %}">{% if user.role == "INSTRUCTOR" %}Minhas turmas{% else %}Turmas{% endif %}</a>
         {% endif %}
+        {% if user.role == "PARTICIPANT" %}
+          <a class="nav-link" href="{% url 'enrollments:available-classes' %}">Turmas disponíveis</a>
+        {% endif %}
+        <a class="nav-link" href="{% url 'enrollments:list' %}">{% if user.role == "PARTICIPANT" %}Minhas inscrições{% else %}Inscrições{% endif %}</a>
         <span>Olá, {{ user.get_short_name }}</span>
         <form action="{% url 'logout' %}" method="post">
           {% csrf_token %}

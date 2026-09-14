@@ -145,6 +145,8 @@ Restrições únicas:
 
 Restrição única: `(class_group_id, instructor_id)`.
 
+Também existe no máximo um instrutor principal por turma.
+
 ## meeting
 
 | Campo | Tipo | Obrigatório | Restrições/descrição |

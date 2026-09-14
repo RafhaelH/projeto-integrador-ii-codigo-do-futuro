@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Turmas | Código do Futuro{% endblock %}
+
+{% block content %}
+<header class="page-heading page-heading-actions"><div><span class="eyebrow">Agenda</span><h1>{% if user.role == 'INSTRUCTOR' %}Minhas turmas{% else %}Turmas{% endif %}</h1><p>Cronogramas, instrutores e ciclo de vida.</p></div>{% if user.role == 'ADMIN' %}<a class="button button-primary" href="{% url 'workshops:class-create' %}">Nova turma</a>{% endif %}</header>
+{% if user.role == 'ADMIN' %}<nav class="subnav" aria-label="Oferta educacional"><a href="{% url 'workshops:workshop-list' %}">Oficinas</a><a aria-current="page" href="{% url 'workshops:class-list' %}">Turmas</a></nav>{% endif %}
+<form class="search-bar" method="get"><label class="sr-only" for="q">Buscar turma</label><input id="q" name="q" value="{{ request.GET.q }}" placeholder="Buscar por título"><button class="button button-secondary" type="submit">Buscar</button></form>
+<div class="table-shell"><table><thead><tr><th>Código</th><th>Turma</th><th>Período</th><th>Situação</th><th></th></tr></thead><tbody>{% for class in class_groups %}<tr><td><strong>{{ class.code }}</strong></td><td>{{ class.title }}<br><small>{{ class.workshop.title }}</small></td><td>{{ class.start_date|date:'d/m/Y' }} a {{ class.end_date|date:'d/m/Y' }}</td><td><span class="badge {% if class.status == 'OPEN' or class.status == 'IN_PROGRESS' %}badge-success{% elif class.status == 'CANCELLED' %}badge-danger{% elif class.status == 'COMPLETED' %}badge-muted{% else %}badge-primary{% endif %}">{{ class.get_status_display }}</span></td><td class="table-action"><a href="{% url 'workshops:class-detail' class.pk %}">Ver agenda</a></td></tr>{% empty %}<tr><td class="empty-state" colspan="5">Nenhuma turma encontrada.</td></tr>{% endfor %}</tbody></table></div>
+{% include "people/_pagination.html" %}
+{% endblock %}

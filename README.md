@@ -6,7 +6,7 @@ A plataforma Código do Futuro apoiará a organização de oficinas gratuitas de
 
 ## Situação do projeto
 
-A especificação e a fundação executável estão concluídas. O repositório já possui projeto Django, usuário customizado, configurações por ambiente, PostgreSQL local, autenticação, recuperação de senha, interface-base responsiva, testes automatizados e integração contínua.
+A especificação, a fundação executável, a gestão de pessoas e a oferta educacional estão concluídas. O sistema já permite autenticação, recuperação de senha, gestão de participantes, responsáveis, instrutores, instituições, oficinas, turmas e encontros, com permissões por perfil, testes automatizados e integração contínua.
 
 ## Objetivo
 
@@ -98,7 +98,8 @@ src/
 ├── apps/
 │   ├── accounts/    # usuário customizado, autenticação e autorização
 │   ├── core/        # páginas compartilhadas e health check
-│   └── people/      # participantes, responsáveis, instrutores e instituições
+│   ├── people/      # participantes, responsáveis, instrutores e instituições
+│   └── workshops/   # oficinas, turmas, instrutores vinculados e encontros
 ├── config/
 │   └── settings/    # base, local, test e production
 ├── static/          # estilos e recursos públicos
@@ -106,7 +107,7 @@ src/
 └── manage.py
 ```
 
-Os módulos `workshops`, `enrollments`, `learning` e `reporting` serão adicionados incrementalmente conforme o backlog.
+Os módulos `enrollments`, `learning` e `reporting` serão adicionados incrementalmente conforme o backlog.
 
 ## Documentação
 

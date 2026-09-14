@@ -60,6 +60,10 @@ Credenciais de demonstração não serão usadas em produção real e serão doc
 | CT-008-01 | Inscrição de menor sem responsável | operação bloqueada | RN-005; CA-008-02 |
 | CT-012-01 | Turma com datas inválidas | formulário rejeitado | RN-011–012; CA-012-02 |
 | CT-016-01 | Abrir turma sem instrutor | transição bloqueada | RN-014; CA-016-01 |
+| CT-014-01 | Encontro fora do período da turma | formulário rejeitado | RN-016; CA-014-01 |
+| CT-015-01 | Iniciar turma sem encontro | transição bloqueada | RN-015; RF-016 |
+| CT-017-01 | Cancelar turma com encontros futuros | encontros futuros cancelados e histórico preservado | RN-017; RF-012 |
+| CT-015-02 | Instrutor consulta agenda | somente turmas vinculadas são exibidas | RF-015; CA-005-01 |
 | CT-018-01 | Duas inscrições na mesma turma | segunda rejeitada | RN-018; CA-018-01 |
 | CT-020-01 | Duas confirmações para última vaga | apenas uma confirmada | RN-022; CA-020-01 |
 | CT-021-01 | Inscrição em turma lotada | entrada correta na fila | RN-023–024; CA-021-01 |

@@ -25,6 +25,9 @@
         {% if user.role == "ADMIN" %}
           <a class="nav-link" href="{% url 'people:index' %}">Pessoas</a>
         {% endif %}
+        {% if user.role == "ADMIN" or user.role == "INSTRUCTOR" %}
+          <a class="nav-link" href="{% url 'workshops:class-list' %}">{% if user.role == "INSTRUCTOR" %}Minhas turmas{% else %}Turmas{% endif %}</a>
+        {% endif %}
         <span>Olá, {{ user.get_short_name }}</span>
         <form action="{% url 'logout' %}" method="post">
           {% csrf_token %}

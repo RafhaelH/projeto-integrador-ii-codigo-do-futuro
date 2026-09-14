@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Oficinas | Código do Futuro{% endblock %}
+
+{% block content %}
+<header class="page-heading page-heading-actions">
+  <div><span class="eyebrow">Oferta educacional</span><h1>Oficinas</h1><p>Propostas pedagógicas reutilizáveis para as turmas.</p></div>
+  <a class="button button-primary" href="{% url 'workshops:workshop-create' %}">Nova oficina</a>
+</header>
+<nav class="subnav" aria-label="Oferta educacional"><a aria-current="page" href="{% url 'workshops:workshop-list' %}">Oficinas</a><a href="{% url 'workshops:class-list' %}">Turmas</a></nav>
+<form class="search-bar" method="get"><label class="sr-only" for="q">Buscar oficina</label><input id="q" name="q" value="{{ request.GET.q }}" placeholder="Buscar por nome"><button class="button button-secondary" type="submit">Buscar</button></form>
+<div class="table-shell">
+  <table><thead><tr><th>Oficina</th><th>Carga horária</th><th>Situação</th><th></th></tr></thead>
+  <tbody>{% for workshop in workshops %}<tr><td><strong>{{ workshop.title }}</strong><br><small>{{ workshop.summary|truncatechars:85 }}</small></td><td>{{ workshop.estimated_hours }}h</td><td><span class="badge {% if workshop.status == 'PUBLISHED' %}badge-success{% elif workshop.status == 'ARCHIVED' %}badge-muted{% else %}badge-primary{% endif %}">{{ workshop.get_status_display }}</span></td><td class="table-action"><a href="{% url 'workshops:workshop-detail' workshop.pk %}">Ver detalhes</a></td></tr>{% empty %}<tr><td class="empty-state" colspan="4">Nenhuma oficina encontrada.</td></tr>{% endfor %}</tbody></table>
+</div>
+{% include "people/_pagination.html" %}
+{% endblock %}

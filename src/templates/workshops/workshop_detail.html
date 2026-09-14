@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ workshop.title }} | Código do Futuro{% endblock %}
+
+{% block content %}
+<header class="page-heading page-heading-actions">
+  <div><a class="back-link" href="{% url 'workshops:workshop-list' %}">← Oficinas</a><h1>{{ workshop.title }}</h1><p>{{ workshop.summary }}</p></div>
+  <div class="action-row"><a class="button button-secondary" href="{% url 'workshops:workshop-update' workshop.pk %}">Editar</a>{% if workshop.status == 'DRAFT' %}<form method="post" action="{% url 'workshops:workshop-transition' workshop.pk 'published' %}">{% csrf_token %}<button class="button button-primary">Publicar</button></form>{% elif workshop.status == 'PUBLISHED' %}<form method="post" action="{% url 'workshops:workshop-transition' workshop.pk 'archived' %}">{% csrf_token %}<button class="button button-danger">Arquivar</button></form>{% endif %}</div>
+</header>
+<div class="detail-grid">
+  <section class="panel"><h2>Proposta pedagógica</h2><dl class="detail-list"><div><dt>Situação</dt><dd>{{ workshop.get_status_display }}</dd></div><div><dt>Carga horária</dt><dd>{{ workshop.estimated_hours }} horas</dd></div><div><dt>Objetivo</dt><dd>{{ workshop.objective|linebreaksbr }}</dd></div><div><dt>Conteúdo</dt><dd>{{ workshop.syllabus|linebreaksbr }}</dd></div></dl></section>
+  <section class="panel"><div class="panel-heading"><h2>Turmas</h2>{% if workshop.status == 'PUBLISHED' %}<a href="{% url 'workshops:class-create' %}">Nova turma</a>{% endif %}</div>{% for class in workshop.class_groups.all %}<div class="stack-item"><div><strong>{{ class.code }}</strong><small>{{ class.title }} · {{ class.get_status_display }}</small></div><a href="{% url 'workshops:class-detail' class.pk %}">Abrir</a></div>{% empty %}<p class="empty-copy">Nenhuma turma criada.</p>{% endfor %}</section>
+</div>
+{% endblock %}

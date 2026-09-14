@@ -36,6 +36,7 @@ Esta documentação é a fonte oficial das decisões do projeto. Cada requisito 
 ## 6. Qualidade
 
 - [Plano de testes](06-testes/plano-de-testes.md)
+- [Dados de demonstração](06-testes/dados-de-demonstracao.md)
 - [Modelo de caso de teste](06-testes/modelo-caso-de-teste.md)
 
 ## 7. Avaliação com usuários

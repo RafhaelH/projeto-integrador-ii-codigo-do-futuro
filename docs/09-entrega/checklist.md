@@ -37,7 +37,7 @@
 - [x] Painéis e relatórios
 - [ ] Interface responsiva em todos os módulos
 - [ ] Tratamento de erros
-- [ ] Dados fictícios de demonstração
+- [x] Dados fictícios de demonstração
 - [ ] Testes automatizados de todos os requisitos Must
 - [x] Integração contínua configurada
 - [ ] Ambiente publicado

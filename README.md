@@ -53,6 +53,7 @@ uv sync
 docker compose up -d database
 uv run python src/manage.py migrate
 uv run python src/manage.py createsuperuser
+uv run python src/manage.py seed_demo
 uv run python src/manage.py runserver
 ```
 
@@ -64,10 +65,13 @@ uv sync
 docker compose up -d database
 uv run python src/manage.py migrate
 uv run python src/manage.py createsuperuser
+uv run python src/manage.py seed_demo
 uv run python src/manage.py runserver
 ```
 
 A aplicação ficará disponível em `http://127.0.0.1:8000/` e a área administrativa em `http://127.0.0.1:8000/admin/`.
+
+O comando `seed_demo` é opcional e cria somente dados fictícios reservados para apresentação. Consulte [Dados de demonstração](docs/06-testes/dados-de-demonstracao.md) para ver credenciais, cenários e cuidados de execução.
 
 ## Verificações
 

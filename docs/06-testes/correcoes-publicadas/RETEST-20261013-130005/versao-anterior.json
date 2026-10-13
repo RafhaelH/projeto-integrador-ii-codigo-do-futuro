@@ -1,0 +1,9 @@
+{
+  "commit": "00665be5889ae639e9c1facec8be6c853f5895fa",
+  "source_sha256_matches_commit": true,
+  "verified_files": 115,
+  "container": "/codigo-do-futuro-app-1",
+  "image": "sha256:dc5d59ebc59598bc5f46fb4d976e12fdc4b28f1db0a33a2d87c51448ef03604f",
+  "container_id": "e76f29bae7a920641b3014f4873e77dedc04c53645dc6bce804373b18c9fbffa",
+  "timestamp_utc": "2026-10-13T16:15:38Z"
+}

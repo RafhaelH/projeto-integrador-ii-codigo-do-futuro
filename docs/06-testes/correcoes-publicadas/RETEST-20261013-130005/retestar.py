@@ -6,6 +6,7 @@ Credenciais, cookies e tokens não entram nas evidências. Não executa deploy o
 """
 
 import argparse
+import concurrent.futures
 import importlib.util
 import json
 import os
@@ -57,7 +58,7 @@ def profiles(creds):
         unchanged=True,
     )
     v.test(
-        "POST de perfil anônimo exige login",
+        "POST de perfil anônimo sem CSRF bloqueado",
         "Perfil próprio",
         anonymous,
         path,
@@ -66,6 +67,9 @@ def profiles(creds):
         expected="CSRF rejeita POST sem token",
         checks=v.status(403),
         unchanged=True,
+        source="/entrar/",
+        csrf="missing",
+        verify=False,
     )
     users = {
         alias: v.find(v.snapshot(), "accounts.User", role="ADMIN")["id"]
@@ -471,10 +475,149 @@ def reset_password(creds):
     )
 
 
+def restore_context(creds):
+    """Restore only this run's context; login repetitions remain in the request trail."""
+    v.CASES.extend(json.loads((OUT / "matriz.json").read_text()))
+    v.REQUESTS.extend(json.loads((OUT / "requisicoes.json").read_text()))
+    v.CREDS = creds
+    for alias in creds:
+        v.login(alias, creds)
+    state = v.snapshot()
+    for alias in ["p1", "p2", "p3", "minor"]:
+        v.PARTICIPANTS[alias] = v.find(
+            state, "people.Participant", full_name=RUN + " " + alias.upper()
+        )["id"]
+    for alias in ["i1", "i2"]:
+        user = v.find(state, "accounts.User", full_name=RUN + " " + alias.upper())["id"]
+        v.INSTRUCTORS[alias] = v.find(state, "people.Instructor", user_id=user)["id"]
+    for alias in ["queue", "race", "academic", "other"]:
+        v.CLASSES[alias] = v.find(state, "workshops.ClassGroup", code=v.class_code(alias))["id"]
+    for participant_alias, participant_id in v.PARTICIPANTS.items():
+        for class_alias, class_id in v.CLASSES.items():
+            matches = [
+                e
+                for e in state["enrollments.Enrollment"]
+                if e["participant_id"] == participant_id and e["class_group_id"] == class_id
+            ]
+            if matches:
+                assert len(matches) == 1
+                v.ENROLLMENTS[(participant_alias, class_alias)] = matches[0]["id"]
+    today = datetime.now(v.TZ).date()
+    v.GLOBALS.update(
+        {
+            "today": today,
+            "workshop": v.find(state, "workshops.Workshop", slug=RUN.lower())["id"],
+            "institution": v.find(state, "people.Institution", name=RUN + " INSTITUTION")["id"],
+            "guardian": v.find(state, "people.Guardian", full_name=RUN + " GUARDIAN_EDITED")["id"],
+            "future": v.find(state, "workshops.Meeting", title=RUN + " FUTURE_MEETING")["id"],
+        }
+    )
+    v.MEETINGS.extend(
+        v.find(state, "workshops.Meeting", title=RUN + f" MEETING_{i}")["id"] for i in range(1, 5)
+    )
+    v.SYNTHETIC["cpf"] = v.orm(
+        "from apps.people.models import Participant\n"
+        f"print(json.dumps(Participant.objects.get(pk={v.PARTICIPANTS['p1']!r}).cpf))"
+    )
+    v.CLASS_DATA["queue"] = {
+        "workshop": v.GLOBALS["workshop"],
+        "institution": v.GLOBALS["institution"],
+        "code": v.class_code("queue"),
+        "title": RUN + " QUEUE",
+        "capacity": "1",
+        "location": RUN + " sala fictícia",
+        "waitlist_enabled": "on",
+        "registration_opens_at": (today - timedelta(days=1)).isoformat() + "T00:00",
+        "registration_closes_at": today.isoformat() + "T23:00",
+        "start_date": (today + timedelta(days=1)).isoformat(),
+        "end_date": (today + timedelta(days=7)).isoformat(),
+    }
+    return state
+
+
+def resume_after_enrollments(creds):
+    """Resume only the audited stop before the two last-seat confirmations."""
+    prior = json.loads((OUT / "matriz.json").read_text())
+    assert prior[-1]["functionality"] == "Solicitar inscrição p2 race"
+    assert all(c["classification"] == "APROVADO" for c in prior)
+    state = restore_context(creds)
+    race_ids = [v.ENROLLMENTS[(alias, "race")] for alias in ["p1", "p2"]]
+    assert all(
+        v.find(state, "enrollments.Enrollment", id=pk)["status"] == "PENDING" for pk in race_ids
+    )
+    clients, payloads = [], []
+    before, first = v.snapshot(), len(v.REQUESTS)
+    for enrollment_id in race_ids:
+        client = v.Session("ADMIN_CONCURRENCY")
+        response = client.post(
+            "/entrar/",
+            {"username": creds["admin"]["email"], "password": creds["admin"]["password"]},
+        )
+        assert response["status"] == 302
+        page = client.request(f"/inscricoes/{enrollment_id}/confirmar/")
+        token = next(
+            form["fields"]["csrfmiddlewaretoken"]
+            for form in v.Forms(page["text"]).forms
+            if "reason" in form["names"]
+        )
+        clients.append(client)
+        payloads.append({"reason": "", "csrfmiddlewaretoken": token})
+    with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+        results = list(
+            executor.map(
+                lambda args: args[0].request(f"/inscricoes/{args[1]}/confirmar/", "POST", args[2]),
+                zip(clients, race_ids, payloads, strict=True),
+            )
+        )
+    after = v.snapshot()
+    occupied = sum(
+        e["class_group_id"] == v.CLASSES["race"] and e["status"] == "CONFIRMED"
+        for e in after["enrollments.Enrollment"]
+    )
+    ok = (
+        occupied == 1
+        and sorted(result["status"] for result in results) == [200, 302]
+        and len(after["enrollments.EnrollmentStatusHistory"])
+        == len(before["enrollments.EnrollmentStatusHistory"]) + 1
+    )
+    case = {
+        "id": f"HTTP-{len(v.CASES) + 1:03d}",
+        "functionality": "Concorrência última vaga (duas requisições)",
+        "group": "Vagas",
+        "endpoint": "/inscricoes/<race-enrollment>/confirmar/",
+        "method": "POST x2",
+        "profile": "ADMIN",
+        "preconditions": {"capacity": 1, "pending": 2},
+        "expected": "Uma confirmação; outra rejeitada; ocupação 1",
+        "observed": f"HTTP {[result['status'] for result in results]}; confirmadas={occupied}",
+        "status": [result["status"] for result in results],
+        "checks": {"uma_confirmacao": ok},
+        "classification": "APROVADO" if ok else "REPROVADO",
+        "timestamp": datetime.now(v.TZ).isoformat(),
+        "requests": list(range(first + 1, len(v.REQUESTS) + 1)),
+        "persisted_effects": v.changes(before, after),
+    }
+    v.CASES.append(case)
+    v.save()
+    print(case["id"], case["classification"], case["functionality"], flush=True)
+    assert ok
+    admin = v.CLIENTS["admin"]
+    v.academic(admin)
+    v.reports(admin)
+    v.recovery(creds)
+    client = v.CLIENTS["p3"]
+    v.get("Logout por GET rejeitado", "Autenticação", client, "/sair/", 405)
+    v.post("Logout por POST", "Autenticação", client, "/sair/", source="/", unchanged=True)
+    v.get("Acesso após logout", "Autenticação", client, "/", 302)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--private-dir", required=True, type=Path)
+    parser.add_argument("--resume-after-enrollments", action="store_true")
+    parser.add_argument("--resume-before-profiles", action="store_true")
     args = parser.parse_args()
+    assert not (args.resume_after_enrollments and args.resume_before_profiles)
     v.RUN, v.OUT, v.PRIVATE = RUN, OUT, args.private_dir
     v.PRIVATE.mkdir(parents=True, exist_ok=True, mode=0o700)
     os.chmod(v.PRIVATE, 0o700)
@@ -484,6 +627,7 @@ def main():
 
     def prepare():
         credentials.update(original_prep())
+        v.CREDS = credentials
         return credentials
 
     def post(name, group, client, path, *args, **kwargs):
@@ -508,7 +652,11 @@ def main():
 
     v.prep, v.post, v.get, v.test = prepare, post, get, test
     write(
-        "inicio-http.json",
+        "retomada-perfil-http.json"
+        if args.resume_before_profiles
+        else "retomada-http.json"
+        if args.resume_after_enrollments
+        else "inicio-http.json",
         {
             "timestamp": datetime.now(v.TZ).isoformat(),
             "run": RUN,
@@ -518,9 +666,38 @@ def main():
         },
     )
     try:
-        v.main()
-        administrative_paths()
+        if args.resume_before_profiles:
+            prior = json.loads((OUT / "matriz.json").read_text())
+            assert prior[-1]["id"] == "HTTP-240"
+            assert prior[-1]["classification"] == "BLOQUEADO" and prior[-1]["status"] is None
+            assert all(c["classification"] == "APROVADO" for c in prior[:-1])
+            credentials.update(json.loads((v.PRIVATE / "credentials.json").read_text()))
+            restore_context(credentials)
+        elif args.resume_after_enrollments:
+            credentials.update(json.loads((v.PRIVATE / "credentials.json").read_text()))
+            resume_after_enrollments(credentials)
+        else:
+            v.main()
+        if not args.resume_before_profiles:
+            administrative_paths()
         profiles(credentials)
+        if args.resume_before_profiles:
+            legacy = next(c for c in v.CASES if c["id"] == "HTTP-240")
+            retest = next(
+                c
+                for c in v.CASES
+                if c["functionality"] == "POST de perfil anônimo sem CSRF bloqueado"
+            )
+            assert retest["classification"] == "APROVADO" and retest["status"] == 403
+            legacy["previous_classification"] = "BLOQUEADO"
+            legacy["classification"] = "SUPERADO_EXECUTOR"
+            legacy["executor_revision"] = {
+                "cause": "Anonymous POST used protected GET as CSRF form source; POST not sent",
+                "correction": "Fetch public login form, omit CSRF deliberately, verify=False",
+                "retest": retest["id"],
+                "application_failure": False,
+                "original_record": "matriz-segunda-passagem.json",
+            }
         reset_password(credentials)
     finally:
         if credentials:
@@ -550,7 +727,11 @@ def main():
                 "timestamp": datetime.now(v.TZ).isoformat(),
                 "http_requests": len(v.REQUESTS),
                 "checks_including_setup_and_repetitions": len(v.CASES),
-                "failed": [c["id"] for c in v.CASES if c["classification"] != "APROVADO"],
+                "failed": [
+                    c["id"]
+                    for c in v.CASES
+                    if c["classification"] not in {"APROVADO", "SUPERADO_EXECUTOR"}
+                ],
             },
         )
 

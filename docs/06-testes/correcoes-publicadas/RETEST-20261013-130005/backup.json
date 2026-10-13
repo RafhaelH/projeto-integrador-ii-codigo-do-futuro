@@ -1,0 +1,10 @@
+{
+  "path": "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro/backups/codigo-futuro-20261013T161538Z.dump",
+  "bytes": 105278,
+  "mode": "0o600",
+  "sha256": "d3c59db9b0fed8673a43113ecd4c0b1ddcbc40a6c89f1e9e4486b5ad6057ceb3",
+  "catalog_entries": 193,
+  "checksum_valid": true,
+  "catalog_readable": true,
+  "restore_in_live_database": false
+}

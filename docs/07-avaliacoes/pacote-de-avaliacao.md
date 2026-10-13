@@ -4,6 +4,19 @@ Este pacote deve ser usado somente depois que a release candidata estiver public
 precisa registrar a versão testada, as tarefas realizadas, os problemas observados e a opinião do
 avaliador sem esconder resultados negativos.
 
+## Candidata corrigida para as sessões
+
+Domínio: https://projeto-integrador.tesseratointegra.com.br. Commit do código corrigido:
+`cccfa6ee7fb13f0c428e8375dbed5b8a3a9e4fa1`, branch local
+`fix/validacao-publicada-20261013`. Confira o resultado e as limitações no
+[relatório de correções e retestes](../06-testes/correcoes-publicadas/RETEST-20261013-130005/relatorio.md).
+A versão definitiva da disciplina continua dependente das cinco avaliações humanas.
+
+Inclua em cada sessão a consulta de **Meu perfil**; para edição, utilize uma conta fictícia
+exclusiva da sessão, preservando as contas e cenários DEMO. Verifique clareza de nome/e-mail,
+mensagens de validação e acesso pela navegação. Usabilidade, responsividade e acessibilidade
+precisam ser avaliadas por pessoas; a validação HTTP não comprova esses aspectos nem entrega SMTP.
+
 ## Distribuição recomendada
 
 | Avaliação | Perspectiva | Conta sugerida | Foco |

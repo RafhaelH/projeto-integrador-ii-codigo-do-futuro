@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-10-13T13:33:58.062386-03:00",
+  "http_requests": 397,
+  "checks_including_setup_and_repetitions": 240,
+  "failed": [
+    "HTTP-240"
+  ]
+}

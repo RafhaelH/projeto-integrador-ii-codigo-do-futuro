@@ -1,0 +1,66 @@
+{
+  "accounts.User": {
+    "rows": 16,
+    "sha256": "a423bf4bd02ccb15872847dffef8f4876a762f6e70fb8219042d4d168dffe9eb"
+  },
+  "people.Participant": {
+    "rows": 10,
+    "sha256": "7cea6764cc9e8116da70267f65f9db95e213f92f85b6ceb3a9c8d39e8af9bdc8"
+  },
+  "people.Guardian": {
+    "rows": 4,
+    "sha256": "909f15681f4b8a58e682bdc2a81aaed8d4d5126e98f4a7b68054dcd7267114e1"
+  },
+  "people.Instructor": {
+    "rows": 4,
+    "sha256": "cfae48257d8d52a4ee387bc71ec7d1aa52785cbb8cdb1119e47fcfbc0f1b33dd"
+  },
+  "people.Institution": {
+    "rows": 2,
+    "sha256": "fdd9a775fdc21ad65490125bf03baf5f15d374f61542f122a3a3b41d0b90de32"
+  },
+  "people.ParticipantGuardian": {
+    "rows": 4,
+    "sha256": "550fdbc49a154dd1812eaa7569aadb65a8c862201fdd7f0e023b5c045e109e79"
+  },
+  "workshops.Workshop": {
+    "rows": 4,
+    "sha256": "a121ac449420c41725a6f1716ea0ccbb5d7ff6d99bacd3e5942dd012c74a93fa"
+  },
+  "workshops.ClassGroup": {
+    "rows": 13,
+    "sha256": "ad53e44d3118e56532106cab2970233cc3eb994d7b6b7a26f9facb67a191dca0"
+  },
+  "workshops.ClassInstructor": {
+    "rows": 13,
+    "sha256": "ba9d6a8f87aed1f4a7602dff9e6cfb432ccf5f0b302c5961d2f99bf7b912ba56"
+  },
+  "workshops.Meeting": {
+    "rows": 18,
+    "sha256": "d6c1d389d8dcb14b1b7ff63be88355e1bde6de1cc2801ed7964fe3e6a485a2d1"
+  },
+  "enrollments.Enrollment": {
+    "rows": 25,
+    "sha256": "9d9d5bda40e864a851c46b2be5b3fcdf2b1b7623fcdb48c3b1c97c93b2fa95af"
+  },
+  "enrollments.EnrollmentStatusHistory": {
+    "rows": 56,
+    "sha256": "0a947fdaedeaf22906006006a44756f8d5028cac602ca54ff2b55c28d122d56b"
+  },
+  "learning.Attendance": {
+    "rows": 28,
+    "sha256": "a75dd21ddec81aaf7dcaa992af67b40d905118702d7c90845ea7560f09211519"
+  },
+  "learning.StudentProject": {
+    "rows": 7,
+    "sha256": "0a0a75af4858688634ddbb378f9983448ac8921af548c32be54f2654844186b8"
+  },
+  "learning.Evaluation": {
+    "rows": 7,
+    "sha256": "bbeac8ac15ebc76f742f449ca1145b4a6d58cba9fea6c5f4f1a82c405fa0f6a5"
+  },
+  "learning.Certificate": {
+    "rows": 2,
+    "sha256": "1d9b8374ead005029100f5ed74398af1f1b049ad8bbf08bdd2363ab227a3253c"
+  }
+}

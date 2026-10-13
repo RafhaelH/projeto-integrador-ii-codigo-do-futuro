@@ -1,0 +1,20 @@
+{
+  "compose_project": "codigo-do-futuro",
+  "services": [
+    "app",
+    "database"
+  ],
+  "app_bind": "127.0.0.1:8031",
+  "database_host_port": null,
+  "backend_internal": true,
+  "env_mode": "600",
+  "database_credentials_consistent": true,
+  "settings_checks": {
+    "debug_disabled": true,
+    "secure_session": true,
+    "secure_csrf": true,
+    "https_redirect": true,
+    "csrf_middleware": true
+  },
+  "secrets_disclosed": false
+}

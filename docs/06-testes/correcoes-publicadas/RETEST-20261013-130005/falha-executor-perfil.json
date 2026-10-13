@@ -1,0 +1,8 @@
+{
+  "case": "HTTP-240",
+  "classification": "BLOQUEADO",
+  "cause": "Protected GET was incorrectly used as CSRF form source; no POST was sent",
+  "application_failure": false,
+  "correction": "Public login CSRF source, deliberate omission of token; expected POST 403",
+  "second_pass_preserved": true
+}

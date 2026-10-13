@@ -1,0 +1,30 @@
+{
+  "run": "RETEST-20261013-130005",
+  "deployed_commit": "cccfa6ee7fb13f0c428e8375dbed5b8a3a9e4fa1",
+  "image": "sha256:ffc5670680bfaafd39bac9c5690173d53743f901b26c9d99c69e82719ccaf993",
+  "automatic_tests_passed": 225,
+  "coverage": 89.11,
+  "http_requests": 465,
+  "consolidated_scenarios": 25,
+  "checks_including_setup_and_repetitions": 279,
+  "approved_checks_including_setup_and_repetitions": 278,
+  "setup_steps": 9,
+  "classifications": {
+    "APROVADO": 278,
+    "SUPERADO_EXECUTOR": 1
+  },
+  "defects": {
+    "DEF-001": "RESOLVIDO",
+    "DEF-002": "RESOLVIDO",
+    "DEF-003": "RESOLVIDO"
+  },
+  "ready_to_start_five_human_evaluations": true,
+  "pending": [
+    "SMTP real",
+    "cinco avaliações humanas/usabilidade",
+    "responsividade",
+    "acessibilidade"
+  ],
+  "other_services_unchanged": true,
+  "preexisting_data_unchanged": true
+}

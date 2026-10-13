@@ -1,0 +1,19 @@
+{
+  "header": [
+    "Participante",
+    "Oficina",
+    "Turma",
+    "Encontros realizados",
+    "Presenças",
+    "Ausências",
+    "Faltas justificadas",
+    "Frequência"
+  ],
+  "data_rows": 4,
+  "sha256": "e22c546254e1a1a47e2c744960db421bfb5a553686ed2b40f9036945632c2486",
+  "filters": {
+    "workshop_id": "c3672b51-e42c-413d-8c83-c8a504fb72fb",
+    "class_status": "COMPLETED"
+  },
+  "contains_protected_fields": false
+}

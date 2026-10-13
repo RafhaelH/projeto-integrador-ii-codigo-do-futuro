@@ -1,0 +1,1012 @@
+{
+  "accounts.User": [
+    {
+      "last_login": "2026-10-13T16:38:41.673Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T16:18:52.034Z",
+      "id": "0bdeb2e5-ad63-4982-afb7-c583e480562b",
+      "full_name": "RETEST-20261013-130005 P1 EDITADO",
+      "role": "PARTICIPANT",
+      "created_at": "2026-10-13T16:18:52.237Z",
+      "updated_at": "2026-10-13T16:38:51.066Z"
+    },
+    {
+      "last_login": "2026-10-13T16:37:26.253Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T16:18:55.170Z",
+      "id": "5b156e8b-ceb1-4239-995b-a072a814d82d",
+      "full_name": "RETEST-20261013-130005 P2",
+      "role": "PARTICIPANT",
+      "created_at": "2026-10-13T16:18:55.389Z",
+      "updated_at": "2026-10-13T16:18:55.389Z"
+    },
+    {
+      "last_login": "2026-10-13T16:37:19.882Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T16:18:48.687Z",
+      "id": "6790a315-b560-47f9-864d-80fa7cd60c42",
+      "full_name": "RETEST-20261013-130005 I2",
+      "role": "INSTRUCTOR",
+      "created_at": "2026-10-13T16:18:48.919Z",
+      "updated_at": "2026-10-13T16:18:48.919Z"
+    },
+    {
+      "last_login": "2026-10-13T16:37:32.669Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T16:19:02.873Z",
+      "id": "68972af7-6f8f-463e-8db8-b5d352a04cef",
+      "full_name": "RETEST-20261013-130005 MINOR",
+      "role": "PARTICIPANT",
+      "created_at": "2026-10-13T16:19:03.153Z",
+      "updated_at": "2026-10-13T16:19:03.153Z"
+    },
+    {
+      "last_login": "2026-10-13T16:39:41.977Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T16:18:58.117Z",
+      "id": "6e197b44-39d6-4f87-a673-e6f981ecab37",
+      "full_name": "RETEST-20261013-130005 P3",
+      "role": "PARTICIPANT",
+      "created_at": "2026-10-13T16:18:58.318Z",
+      "updated_at": "2026-10-13T16:39:34.406Z"
+    },
+    {
+      "last_login": "2026-10-13T16:38:06.079Z",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-10-13T16:18:03.900Z",
+      "id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "full_name": "RETEST-20261013-130005 ADMIN EDITADO",
+      "role": "ADMIN",
+      "created_at": "2026-10-13T16:18:04.108Z",
+      "updated_at": "2026-10-13T16:37:59.149Z"
+    },
+    {
+      "last_login": "2026-10-13T16:38:23.725Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T16:18:45.664Z",
+      "id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5",
+      "full_name": "RETEST-20261013-130005 I1 EDITADO",
+      "role": "INSTRUCTOR",
+      "created_at": "2026-10-13T16:18:45.898Z",
+      "updated_at": "2026-10-13T16:38:19.011Z"
+    }
+  ],
+  "people.Participant": [
+    {
+      "id": "701197d7-7f18-42fd-9e21-cc7cd1fe54a5",
+      "created_at": "2026-10-13T16:20:29.565Z",
+      "updated_at": "2026-10-13T16:20:29.565Z",
+      "user_id": "6e197b44-39d6-4f87-a673-e6f981ecab37",
+      "full_name": "RETEST-20261013-130005 P3",
+      "is_active": true,
+      "privacy_consent_at": "2026-10-13T16:20:00Z",
+      "image_authorization": false
+    },
+    {
+      "id": "9247dbb9-b8ac-48ac-8dfe-ab747a4063e3",
+      "created_at": "2026-10-13T16:20:32.285Z",
+      "updated_at": "2026-10-13T16:20:32.285Z",
+      "user_id": "68972af7-6f8f-463e-8db8-b5d352a04cef",
+      "full_name": "RETEST-20261013-130005 MINOR",
+      "is_active": true,
+      "privacy_consent_at": "2026-10-13T16:20:00Z",
+      "image_authorization": false
+    },
+    {
+      "id": "b01c7288-5cbd-44f1-8553-5f5adf46950f",
+      "created_at": "2026-10-13T16:20:23.901Z",
+      "updated_at": "2026-10-13T16:20:41.739Z",
+      "user_id": "0bdeb2e5-ad63-4982-afb7-c583e480562b",
+      "full_name": "RETEST-20261013-130005 P1",
+      "is_active": true,
+      "privacy_consent_at": "2026-10-13T16:20:00Z",
+      "image_authorization": true
+    },
+    {
+      "id": "e09f0869-b844-4ec5-9254-b069795a88d2",
+      "created_at": "2026-10-13T16:20:26.912Z",
+      "updated_at": "2026-10-13T16:20:26.912Z",
+      "user_id": "5b156e8b-ceb1-4239-995b-a072a814d82d",
+      "full_name": "RETEST-20261013-130005 P2",
+      "is_active": true,
+      "privacy_consent_at": "2026-10-13T16:20:00Z",
+      "image_authorization": false
+    }
+  ],
+  "people.Guardian": [
+    {
+      "id": "d2b371f5-54f4-421a-a54a-e87b632fe77d",
+      "created_at": "2026-10-13T16:20:50.402Z",
+      "updated_at": "2026-10-13T16:20:57.704Z",
+      "full_name": "RETEST-20261013-130005 GUARDIAN_EDITED",
+      "is_active": true
+    }
+  ],
+  "people.Instructor": [
+    {
+      "id": "1fe1d6de-1acb-4adf-87ff-7470214c6a58",
+      "created_at": "2026-10-13T16:21:07.515Z",
+      "updated_at": "2026-10-13T16:21:07.515Z",
+      "user_id": "6790a315-b560-47f9-864d-80fa7cd60c42",
+      "biography": "RETEST-20261013-130005 biografia fictícia",
+      "specialties": "Python",
+      "is_active": true
+    },
+    {
+      "id": "3ea62448-a65b-4db9-a209-5c5e22b4aa1a",
+      "created_at": "2026-10-13T16:21:01.833Z",
+      "updated_at": "2026-10-13T16:21:01.833Z",
+      "user_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5",
+      "biography": "RETEST-20261013-130005 biografia fictícia",
+      "specialties": "Python",
+      "is_active": true
+    }
+  ],
+  "people.Institution": [
+    {
+      "id": "e25b7026-fa27-43de-b6c9-e9210268ecc2",
+      "created_at": "2026-10-13T16:21:15.587Z",
+      "updated_at": "2026-10-13T16:21:23.196Z",
+      "name": "RETEST-20261013-130005 INSTITUTION",
+      "contact_name": "",
+      "address": "RETEST-20261013-130005 endereço fictício editado",
+      "is_active": true
+    }
+  ],
+  "people.ParticipantGuardian": [
+    {
+      "id": "146ac415-eec2-4ce9-a232-ce8158efae1b",
+      "created_at": "2026-10-13T16:23:42.191Z",
+      "updated_at": "2026-10-13T16:23:42.191Z",
+      "participant_id": "9247dbb9-b8ac-48ac-8dfe-ab747a4063e3",
+      "guardian_id": "d2b371f5-54f4-421a-a54a-e87b632fe77d",
+      "relationship": "LEGAL_GUARDIAN",
+      "is_primary": true
+    }
+  ],
+  "workshops.Workshop": [
+    {
+      "id": "c3672b51-e42c-413d-8c83-c8a504fb72fb",
+      "created_at": "2026-10-13T16:21:33.973Z",
+      "updated_at": "2026-10-13T16:21:44.036Z",
+      "title": "RETEST-20261013-130005 WORKSHOP",
+      "slug": "retest-20261013-130005",
+      "summary": "RETEST-20261013-130005 resumo editado",
+      "objective": "RETEST-20261013-130005 objetivo",
+      "syllabus": "RETEST-20261013-130005 conteúdo",
+      "estimated_hours": "4.00",
+      "status": "PUBLISHED",
+      "created_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682"
+    }
+  ],
+  "workshops.ClassGroup": [
+    {
+      "id": "0fcd4ffb-b0b8-4316-9d2c-e15a6a181197",
+      "created_at": "2026-10-13T16:33:05.605Z",
+      "updated_at": "2026-10-13T16:33:18.467Z",
+      "workshop_id": "c3672b51-e42c-413d-8c83-c8a504fb72fb",
+      "institution_id": "e25b7026-fa27-43de-b6c9-e9210268ecc2",
+      "code": "RETEST-20261013-130005-B",
+      "title": "RETEST-20261013-130005 GUARDA_ADMIN_EDITADO",
+      "location": "RETEST-20261013-130005 sala fictícia",
+      "capacity": 1,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-12T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-20",
+      "status": "PLANNED",
+      "created_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682"
+    },
+    {
+      "id": "50914295-b699-4700-8533-11f661e12d30",
+      "created_at": "2026-10-13T16:22:12.686Z",
+      "updated_at": "2026-10-13T16:22:19.923Z",
+      "workshop_id": "c3672b51-e42c-413d-8c83-c8a504fb72fb",
+      "institution_id": "e25b7026-fa27-43de-b6c9-e9210268ecc2",
+      "code": "RETEST-20261013-130005-R",
+      "title": "RETEST-20261013-130005 RACE",
+      "location": "RETEST-20261013-130005 sala fictícia",
+      "capacity": 1,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-12T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-20",
+      "status": "OPEN",
+      "created_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682"
+    },
+    {
+      "id": "af2f1899-5fd2-42a0-8de5-aab541d6b8a3",
+      "created_at": "2026-10-13T16:22:33.278Z",
+      "updated_at": "2026-10-13T16:22:40.481Z",
+      "workshop_id": "c3672b51-e42c-413d-8c83-c8a504fb72fb",
+      "institution_id": "e25b7026-fa27-43de-b6c9-e9210268ecc2",
+      "code": "RETEST-20261013-130005-O",
+      "title": "RETEST-20261013-130005 OTHER",
+      "location": "RETEST-20261013-130005 sala fictícia",
+      "capacity": 1,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-12T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-20",
+      "status": "OPEN",
+      "created_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682"
+    },
+    {
+      "id": "d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84",
+      "created_at": "2026-10-13T16:22:22.820Z",
+      "updated_at": "2026-10-13T16:30:52.534Z",
+      "workshop_id": "c3672b51-e42c-413d-8c83-c8a504fb72fb",
+      "institution_id": "e25b7026-fa27-43de-b6c9-e9210268ecc2",
+      "code": "RETEST-20261013-130005-A",
+      "title": "RETEST-20261013-130005 ACADEMIC",
+      "location": "RETEST-20261013-130005 sala fictícia",
+      "capacity": 4,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-12T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-20",
+      "status": "COMPLETED",
+      "created_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682"
+    },
+    {
+      "id": "f7323a58-76e8-41d8-a5ce-c7bfe876857d",
+      "created_at": "2026-10-13T16:21:53.939Z",
+      "updated_at": "2026-10-13T16:22:09.804Z",
+      "workshop_id": "c3672b51-e42c-413d-8c83-c8a504fb72fb",
+      "institution_id": "e25b7026-fa27-43de-b6c9-e9210268ecc2",
+      "code": "RETEST-20261013-130005-Q",
+      "title": "RETEST-20261013-130005 QUEUE",
+      "location": "RETEST-20261013-130005 sala editada",
+      "capacity": 1,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-12T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-20",
+      "status": "OPEN",
+      "created_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682"
+    }
+  ],
+  "workshops.ClassInstructor": [
+    {
+      "id": "0b5de0c3-ec3d-4c17-856e-404a2f580092",
+      "created_at": "2026-10-13T16:22:06.595Z",
+      "updated_at": "2026-10-13T16:22:06.595Z",
+      "class_group_id": "f7323a58-76e8-41d8-a5ce-c7bfe876857d",
+      "instructor_id": "3ea62448-a65b-4db9-a209-5c5e22b4aa1a",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T16:22:06.595Z"
+    },
+    {
+      "id": "0b829000-1506-4beb-8840-d76f6b26d7ec",
+      "created_at": "2026-10-13T16:22:37.571Z",
+      "updated_at": "2026-10-13T16:22:37.571Z",
+      "class_group_id": "af2f1899-5fd2-42a0-8de5-aab541d6b8a3",
+      "instructor_id": "1fe1d6de-1acb-4adf-87ff-7470214c6a58",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T16:22:37.571Z"
+    },
+    {
+      "id": "4ed5ab63-38e1-4bdf-9d51-dbed3b82c27b",
+      "created_at": "2026-10-13T16:22:16.761Z",
+      "updated_at": "2026-10-13T16:22:16.761Z",
+      "class_group_id": "50914295-b699-4700-8533-11f661e12d30",
+      "instructor_id": "3ea62448-a65b-4db9-a209-5c5e22b4aa1a",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T16:22:16.761Z"
+    },
+    {
+      "id": "b9e323e6-409d-4e8d-b38b-9f13b7a338b3",
+      "created_at": "2026-10-13T16:22:27.443Z",
+      "updated_at": "2026-10-13T16:22:27.443Z",
+      "class_group_id": "d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84",
+      "instructor_id": "3ea62448-a65b-4db9-a209-5c5e22b4aa1a",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T16:22:27.443Z"
+    }
+  ],
+  "workshops.Meeting": [
+    {
+      "id": "42d9d1b9-7545-471e-a1a1-070248d84736",
+      "created_at": "2026-10-13T16:22:58.008Z",
+      "updated_at": "2026-10-13T16:29:09.076Z",
+      "class_group_id": "d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84",
+      "title": "RETEST-20261013-130005 MEETING_3",
+      "description": "RETEST-20261013-130005",
+      "starts_at": "2026-10-13T05:00:00Z",
+      "ends_at": "2026-10-13T06:00:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "5d5221aa-4c5f-4ec6-acd2-c978e4a7ba47",
+      "created_at": "2026-10-13T16:33:21.516Z",
+      "updated_at": "2026-10-13T16:33:28.544Z",
+      "class_group_id": "0fcd4ffb-b0b8-4316-9d2c-e15a6a181197",
+      "title": "RETEST-20261013-130005 GUARDA_MEETING",
+      "description": "RETEST-20261013-130005 editado",
+      "starts_at": "2026-10-14T12:00:00Z",
+      "ends_at": "2026-10-14T13:00:00Z",
+      "status": "PLANNED"
+    },
+    {
+      "id": "8002294d-0519-4034-bfe6-efba4ce9f68d",
+      "created_at": "2026-10-13T16:22:49.028Z",
+      "updated_at": "2026-10-13T16:29:01.085Z",
+      "class_group_id": "d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84",
+      "title": "RETEST-20261013-130005 MEETING_1",
+      "description": "RETEST-20261013-130005 editado",
+      "starts_at": "2026-10-13T03:00:00Z",
+      "ends_at": "2026-10-13T04:00:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "8c7f99ef-6082-49de-9f49-b36a883d608d",
+      "created_at": "2026-10-13T16:23:03.779Z",
+      "updated_at": "2026-10-13T16:29:12.127Z",
+      "class_group_id": "d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84",
+      "title": "RETEST-20261013-130005 MEETING_4",
+      "description": "RETEST-20261013-130005",
+      "starts_at": "2026-10-13T06:00:00Z",
+      "ends_at": "2026-10-13T07:00:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "8d55d834-5d7c-4045-ada9-0106f7b1eaa4",
+      "created_at": "2026-10-13T16:22:53.638Z",
+      "updated_at": "2026-10-13T16:29:05.647Z",
+      "class_group_id": "d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84",
+      "title": "RETEST-20261013-130005 MEETING_2",
+      "description": "RETEST-20261013-130005",
+      "starts_at": "2026-10-13T04:00:00Z",
+      "ends_at": "2026-10-13T05:00:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e9c82716-5de9-4d3e-817f-7a13a2eb289b",
+      "created_at": "2026-10-13T16:23:14.861Z",
+      "updated_at": "2026-10-13T16:29:27.221Z",
+      "class_group_id": "d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84",
+      "title": "RETEST-20261013-130005 FUTURE_MEETING",
+      "description": "",
+      "starts_at": "2026-10-14T11:00:00Z",
+      "ends_at": "2026-10-14T12:00:00Z",
+      "status": "CANCELLED"
+    }
+  ],
+  "enrollments.Enrollment": [
+    {
+      "id": "0c1481b9-bc5e-4840-91ba-86863ed4c4e5",
+      "created_at": "2026-10-13T16:28:20.247Z",
+      "updated_at": "2026-10-13T16:30:52.522Z",
+      "participant_id": "e09f0869-b844-4ec5-9254-b069795a88d2",
+      "class_group_id": "d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84",
+      "status": "NOT_COMPLETED",
+      "status_reason": "Critérios não atendidos: frequência mínima de 75% (obtida 50.00%).",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T16:28:24.317Z",
+      "cancelled_at": null,
+      "created_by_id": "5b156e8b-ceb1-4239-995b-a072a814d82d"
+    },
+    {
+      "id": "1576ddad-4fbe-4d5e-bba6-bf1e79329aac",
+      "created_at": "2026-10-13T16:24:58.710Z",
+      "updated_at": "2026-10-13T16:28:10.382Z",
+      "participant_id": "e09f0869-b844-4ec5-9254-b069795a88d2",
+      "class_group_id": "50914295-b699-4700-8533-11f661e12d30",
+      "status": "CONFIRMED",
+      "status_reason": "",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T16:28:10.382Z",
+      "cancelled_at": null,
+      "created_by_id": "5b156e8b-ceb1-4239-995b-a072a814d82d"
+    },
+    {
+      "id": "1ee83e94-66e7-4cec-a665-5a77dcd58088",
+      "created_at": "2026-10-13T16:23:52.929Z",
+      "updated_at": "2026-10-13T16:24:46.004Z",
+      "participant_id": "9247dbb9-b8ac-48ac-8dfe-ab747a4063e3",
+      "class_group_id": "f7323a58-76e8-41d8-a5ce-c7bfe876857d",
+      "status": "REJECTED",
+      "status_reason": "RETEST-20261013-130005 motivo fictício",
+      "waitlisted_at": null,
+      "confirmed_at": null,
+      "cancelled_at": null,
+      "created_by_id": "68972af7-6f8f-463e-8db8-b5d352a04cef"
+    },
+    {
+      "id": "20b620fa-5911-4201-9c99-6f7afd2efa01",
+      "created_at": "2026-10-13T16:28:27.021Z",
+      "updated_at": "2026-10-13T16:30:52.514Z",
+      "participant_id": "701197d7-7f18-42fd-9e21-cc7cd1fe54a5",
+      "class_group_id": "d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84",
+      "status": "NOT_COMPLETED",
+      "status_reason": "Critérios não atendidos: nota mínima 6,0 (obtida 5.9).",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T16:28:31.057Z",
+      "cancelled_at": null,
+      "created_by_id": "6e197b44-39d6-4f87-a673-e6f981ecab37"
+    },
+    {
+      "id": "20f5849c-b8f3-43f4-9fb3-73d5b0b936f0",
+      "created_at": "2026-10-13T16:24:54.629Z",
+      "updated_at": "2026-10-13T16:24:54.630Z",
+      "participant_id": "b01c7288-5cbd-44f1-8553-5f5adf46950f",
+      "class_group_id": "50914295-b699-4700-8533-11f661e12d30",
+      "status": "PENDING",
+      "status_reason": "",
+      "waitlisted_at": null,
+      "confirmed_at": null,
+      "cancelled_at": null,
+      "created_by_id": "0bdeb2e5-ad63-4982-afb7-c583e480562b"
+    },
+    {
+      "id": "83fa097f-54ef-4dc5-a47c-ded4aa4e65cb",
+      "created_at": "2026-10-13T16:23:48.647Z",
+      "updated_at": "2026-10-13T16:24:40.054Z",
+      "participant_id": "b01c7288-5cbd-44f1-8553-5f5adf46950f",
+      "class_group_id": "f7323a58-76e8-41d8-a5ce-c7bfe876857d",
+      "status": "CANCELLED",
+      "status_reason": "",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T16:24:06.249Z",
+      "cancelled_at": "2026-10-13T16:24:40.053Z",
+      "created_by_id": "0bdeb2e5-ad63-4982-afb7-c583e480562b"
+    },
+    {
+      "id": "85068db3-53b2-429a-82fd-d6f09031470e",
+      "created_at": "2026-10-13T16:24:12.739Z",
+      "updated_at": "2026-10-13T16:24:51.762Z",
+      "participant_id": "e09f0869-b844-4ec5-9254-b069795a88d2",
+      "class_group_id": "f7323a58-76e8-41d8-a5ce-c7bfe876857d",
+      "status": "CANCELLED",
+      "status_reason": "RETEST-20261013-130005 cancelamento",
+      "waitlisted_at": "2026-10-13T16:24:12.738Z",
+      "confirmed_at": "2026-10-13T16:24:40.073Z",
+      "cancelled_at": "2026-10-13T16:24:51.762Z",
+      "created_by_id": "5b156e8b-ceb1-4239-995b-a072a814d82d"
+    },
+    {
+      "id": "c8f2390e-4eff-4a4d-a874-56e323a5aa62",
+      "created_at": "2026-10-13T16:24:17.238Z",
+      "updated_at": "2026-10-13T16:24:51.769Z",
+      "participant_id": "701197d7-7f18-42fd-9e21-cc7cd1fe54a5",
+      "class_group_id": "f7323a58-76e8-41d8-a5ce-c7bfe876857d",
+      "status": "CONFIRMED",
+      "status_reason": "Promoção automática da lista de espera.",
+      "waitlisted_at": "2026-10-13T16:24:17.237Z",
+      "confirmed_at": "2026-10-13T16:24:51.769Z",
+      "cancelled_at": null,
+      "created_by_id": "6e197b44-39d6-4f87-a673-e6f981ecab37"
+    },
+    {
+      "id": "e0d9fde8-4b22-4174-80a5-4ea1c514a5b3",
+      "created_at": "2026-10-13T16:28:33.939Z",
+      "updated_at": "2026-10-13T16:30:52.502Z",
+      "participant_id": "9247dbb9-b8ac-48ac-8dfe-ab747a4063e3",
+      "class_group_id": "d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84",
+      "status": "NOT_COMPLETED",
+      "status_reason": "Critérios não atendidos: projeto entregue.",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T16:28:38.424Z",
+      "cancelled_at": null,
+      "created_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682"
+    },
+    {
+      "id": "fdf655fa-3261-454d-9d15-265606a55931",
+      "created_at": "2026-10-13T16:28:13.173Z",
+      "updated_at": "2026-10-13T16:30:52.529Z",
+      "participant_id": "b01c7288-5cbd-44f1-8553-5f5adf46950f",
+      "class_group_id": "d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84",
+      "status": "APPROVED",
+      "status_reason": "",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T16:28:17.182Z",
+      "cancelled_at": null,
+      "created_by_id": "0bdeb2e5-ad63-4982-afb7-c583e480562b"
+    }
+  ],
+  "enrollments.EnrollmentStatusHistory": [
+    {
+      "id": 57,
+      "enrollment_id": "83fa097f-54ef-4dc5-a47c-ded4aa4e65cb",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "0bdeb2e5-ad63-4982-afb7-c583e480562b",
+      "created_at": "2026-10-13T16:23:48.649Z"
+    },
+    {
+      "id": 58,
+      "enrollment_id": "1ee83e94-66e7-4cec-a665-5a77dcd58088",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "68972af7-6f8f-463e-8db8-b5d352a04cef",
+      "created_at": "2026-10-13T16:23:52.929Z"
+    },
+    {
+      "id": 59,
+      "enrollment_id": "83fa097f-54ef-4dc5-a47c-ded4aa4e65cb",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:24:06.251Z"
+    },
+    {
+      "id": 60,
+      "enrollment_id": "85068db3-53b2-429a-82fd-d6f09031470e",
+      "from_status": null,
+      "to_status": "WAITLISTED",
+      "reason": "",
+      "changed_by_id": "5b156e8b-ceb1-4239-995b-a072a814d82d",
+      "created_at": "2026-10-13T16:24:12.739Z"
+    },
+    {
+      "id": 61,
+      "enrollment_id": "c8f2390e-4eff-4a4d-a874-56e323a5aa62",
+      "from_status": null,
+      "to_status": "WAITLISTED",
+      "reason": "",
+      "changed_by_id": "6e197b44-39d6-4f87-a673-e6f981ecab37",
+      "created_at": "2026-10-13T16:24:17.240Z"
+    },
+    {
+      "id": 62,
+      "enrollment_id": "83fa097f-54ef-4dc5-a47c-ded4aa4e65cb",
+      "from_status": "CONFIRMED",
+      "to_status": "CANCELLED",
+      "reason": "",
+      "changed_by_id": "0bdeb2e5-ad63-4982-afb7-c583e480562b",
+      "created_at": "2026-10-13T16:24:40.060Z"
+    },
+    {
+      "id": 63,
+      "enrollment_id": "85068db3-53b2-429a-82fd-d6f09031470e",
+      "from_status": "WAITLISTED",
+      "to_status": "CONFIRMED",
+      "reason": "Promoção automática da lista de espera.",
+      "changed_by_id": "0bdeb2e5-ad63-4982-afb7-c583e480562b",
+      "created_at": "2026-10-13T16:24:40.076Z"
+    },
+    {
+      "id": 64,
+      "enrollment_id": "1ee83e94-66e7-4cec-a665-5a77dcd58088",
+      "from_status": "PENDING",
+      "to_status": "REJECTED",
+      "reason": "RETEST-20261013-130005 motivo fictício",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:24:46.006Z"
+    },
+    {
+      "id": 65,
+      "enrollment_id": "85068db3-53b2-429a-82fd-d6f09031470e",
+      "from_status": "CONFIRMED",
+      "to_status": "CANCELLED",
+      "reason": "RETEST-20261013-130005 cancelamento",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:24:51.763Z"
+    },
+    {
+      "id": 66,
+      "enrollment_id": "c8f2390e-4eff-4a4d-a874-56e323a5aa62",
+      "from_status": "WAITLISTED",
+      "to_status": "CONFIRMED",
+      "reason": "Promoção automática da lista de espera.",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:24:51.770Z"
+    },
+    {
+      "id": 67,
+      "enrollment_id": "20f5849c-b8f3-43f4-9fb3-73d5b0b936f0",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "0bdeb2e5-ad63-4982-afb7-c583e480562b",
+      "created_at": "2026-10-13T16:24:54.630Z"
+    },
+    {
+      "id": 68,
+      "enrollment_id": "1576ddad-4fbe-4d5e-bba6-bf1e79329aac",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "5b156e8b-ceb1-4239-995b-a072a814d82d",
+      "created_at": "2026-10-13T16:24:58.711Z"
+    },
+    {
+      "id": 69,
+      "enrollment_id": "1576ddad-4fbe-4d5e-bba6-bf1e79329aac",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:28:10.383Z"
+    },
+    {
+      "id": 70,
+      "enrollment_id": "fdf655fa-3261-454d-9d15-265606a55931",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "0bdeb2e5-ad63-4982-afb7-c583e480562b",
+      "created_at": "2026-10-13T16:28:13.174Z"
+    },
+    {
+      "id": 71,
+      "enrollment_id": "fdf655fa-3261-454d-9d15-265606a55931",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:28:17.183Z"
+    },
+    {
+      "id": 72,
+      "enrollment_id": "0c1481b9-bc5e-4840-91ba-86863ed4c4e5",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "5b156e8b-ceb1-4239-995b-a072a814d82d",
+      "created_at": "2026-10-13T16:28:20.248Z"
+    },
+    {
+      "id": 73,
+      "enrollment_id": "0c1481b9-bc5e-4840-91ba-86863ed4c4e5",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:28:24.319Z"
+    },
+    {
+      "id": 74,
+      "enrollment_id": "20b620fa-5911-4201-9c99-6f7afd2efa01",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "6e197b44-39d6-4f87-a673-e6f981ecab37",
+      "created_at": "2026-10-13T16:28:27.022Z"
+    },
+    {
+      "id": 75,
+      "enrollment_id": "20b620fa-5911-4201-9c99-6f7afd2efa01",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:28:31.060Z"
+    },
+    {
+      "id": 76,
+      "enrollment_id": "e0d9fde8-4b22-4174-80a5-4ea1c514a5b3",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:28:33.940Z"
+    },
+    {
+      "id": 77,
+      "enrollment_id": "e0d9fde8-4b22-4174-80a5-4ea1c514a5b3",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:28:38.425Z"
+    },
+    {
+      "id": 78,
+      "enrollment_id": "e0d9fde8-4b22-4174-80a5-4ea1c514a5b3",
+      "from_status": "CONFIRMED",
+      "to_status": "NOT_COMPLETED",
+      "reason": "Critérios não atendidos: projeto entregue.",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:30:52.504Z"
+    },
+    {
+      "id": 79,
+      "enrollment_id": "20b620fa-5911-4201-9c99-6f7afd2efa01",
+      "from_status": "CONFIRMED",
+      "to_status": "NOT_COMPLETED",
+      "reason": "Critérios não atendidos: nota mínima 6,0 (obtida 5.9).",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:30:52.515Z"
+    },
+    {
+      "id": 80,
+      "enrollment_id": "0c1481b9-bc5e-4840-91ba-86863ed4c4e5",
+      "from_status": "CONFIRMED",
+      "to_status": "NOT_COMPLETED",
+      "reason": "Critérios não atendidos: frequência mínima de 75% (obtida 50.00%).",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:30:52.523Z"
+    },
+    {
+      "id": 81,
+      "enrollment_id": "fdf655fa-3261-454d-9d15-265606a55931",
+      "from_status": "CONFIRMED",
+      "to_status": "APPROVED",
+      "reason": "",
+      "changed_by_id": "c8c53d77-72fe-466b-a22c-fe22af3b8682",
+      "created_at": "2026-10-13T16:30:52.530Z"
+    }
+  ],
+  "learning.Attendance": [
+    {
+      "id": "18495037-7122-4c79-a812-4509a2cc0ab1",
+      "created_at": "2026-10-13T16:29:12.106Z",
+      "updated_at": "2026-10-13T16:29:12.106Z",
+      "enrollment_id": "e0d9fde8-4b22-4174-80a5-4ea1c514a5b3",
+      "meeting_id": "8c7f99ef-6082-49de-9f49-b36a883d608d",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "2e445784-c599-4188-b3c7-37ae30c4657b",
+      "created_at": "2026-10-13T16:29:05.643Z",
+      "updated_at": "2026-10-13T16:29:05.643Z",
+      "enrollment_id": "fdf655fa-3261-454d-9d15-265606a55931",
+      "meeting_id": "8d55d834-5d7c-4045-ada9-0106f7b1eaa4",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "3fb73be9-8f88-41a2-92c5-8cf87a7cdc66",
+      "created_at": "2026-10-13T16:29:12.114Z",
+      "updated_at": "2026-10-13T16:29:12.114Z",
+      "enrollment_id": "fdf655fa-3261-454d-9d15-265606a55931",
+      "meeting_id": "8c7f99ef-6082-49de-9f49-b36a883d608d",
+      "status": "ABSENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "48ff7f8a-6e66-4113-b75e-4b5c3daea047",
+      "created_at": "2026-10-13T16:29:09.070Z",
+      "updated_at": "2026-10-13T16:29:09.070Z",
+      "enrollment_id": "e0d9fde8-4b22-4174-80a5-4ea1c514a5b3",
+      "meeting_id": "42d9d1b9-7545-471e-a1a1-070248d84736",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "51b15909-0570-4eef-ab45-0584358d8f7a",
+      "created_at": "2026-10-13T16:29:05.647Z",
+      "updated_at": "2026-10-13T16:29:05.647Z",
+      "enrollment_id": "20b620fa-5911-4201-9c99-6f7afd2efa01",
+      "meeting_id": "8d55d834-5d7c-4045-ada9-0106f7b1eaa4",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "5346226e-56e0-4890-90a3-0c44c08170e0",
+      "created_at": "2026-10-13T16:29:01.076Z",
+      "updated_at": "2026-10-13T16:29:18.342Z",
+      "enrollment_id": "fdf655fa-3261-454d-9d15-265606a55931",
+      "meeting_id": "8002294d-0519-4034-bfe6-efba4ce9f68d",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "5dddb17a-2b89-4b82-b841-dbd7834587f4",
+      "created_at": "2026-10-13T16:29:09.074Z",
+      "updated_at": "2026-10-13T16:29:09.074Z",
+      "enrollment_id": "0c1481b9-bc5e-4840-91ba-86863ed4c4e5",
+      "meeting_id": "42d9d1b9-7545-471e-a1a1-070248d84736",
+      "status": "JUSTIFIED",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "8d2bc5b3-8012-4147-9c98-cd294ded79d0",
+      "created_at": "2026-10-13T16:29:09.072Z",
+      "updated_at": "2026-10-13T16:29:09.072Z",
+      "enrollment_id": "fdf655fa-3261-454d-9d15-265606a55931",
+      "meeting_id": "42d9d1b9-7545-471e-a1a1-070248d84736",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "915fb4b6-a96e-443f-bb22-cba3904c5c1b",
+      "created_at": "2026-10-13T16:29:12.122Z",
+      "updated_at": "2026-10-13T16:29:12.122Z",
+      "enrollment_id": "0c1481b9-bc5e-4840-91ba-86863ed4c4e5",
+      "meeting_id": "8c7f99ef-6082-49de-9f49-b36a883d608d",
+      "status": "ABSENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "aaf290c0-1d93-4a16-aad0-f8d1816fcb22",
+      "created_at": "2026-10-13T16:29:12.126Z",
+      "updated_at": "2026-10-13T16:29:12.126Z",
+      "enrollment_id": "20b620fa-5911-4201-9c99-6f7afd2efa01",
+      "meeting_id": "8c7f99ef-6082-49de-9f49-b36a883d608d",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "ae1627e2-c203-447d-aeab-f319d84d7be5",
+      "created_at": "2026-10-13T16:29:01.084Z",
+      "updated_at": "2026-10-13T16:29:18.351Z",
+      "enrollment_id": "20b620fa-5911-4201-9c99-6f7afd2efa01",
+      "meeting_id": "8002294d-0519-4034-bfe6-efba4ce9f68d",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "bf146634-1a88-4ce1-8c17-140fcf27be8d",
+      "created_at": "2026-10-13T16:29:05.640Z",
+      "updated_at": "2026-10-13T16:29:05.640Z",
+      "enrollment_id": "e0d9fde8-4b22-4174-80a5-4ea1c514a5b3",
+      "meeting_id": "8d55d834-5d7c-4045-ada9-0106f7b1eaa4",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "cc91dcc6-aa4d-495b-bda9-064b8b1639b0",
+      "created_at": "2026-10-13T16:29:05.645Z",
+      "updated_at": "2026-10-13T16:29:05.645Z",
+      "enrollment_id": "0c1481b9-bc5e-4840-91ba-86863ed4c4e5",
+      "meeting_id": "8d55d834-5d7c-4045-ada9-0106f7b1eaa4",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "e4923adb-1477-4193-ad44-2e06ff0a6e24",
+      "created_at": "2026-10-13T16:29:01.068Z",
+      "updated_at": "2026-10-13T16:29:18.336Z",
+      "enrollment_id": "e0d9fde8-4b22-4174-80a5-4ea1c514a5b3",
+      "meeting_id": "8002294d-0519-4034-bfe6-efba4ce9f68d",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "ebbba57d-c6b6-406f-8f4b-595e306782f0",
+      "created_at": "2026-10-13T16:29:01.080Z",
+      "updated_at": "2026-10-13T16:29:18.346Z",
+      "enrollment_id": "0c1481b9-bc5e-4840-91ba-86863ed4c4e5",
+      "meeting_id": "8002294d-0519-4034-bfe6-efba4ce9f68d",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    },
+    {
+      "id": "ed7481c5-aa48-4551-8fc8-3560dbac34b3",
+      "created_at": "2026-10-13T16:29:09.075Z",
+      "updated_at": "2026-10-13T16:29:09.075Z",
+      "enrollment_id": "20b620fa-5911-4201-9c99-6f7afd2efa01",
+      "meeting_id": "42d9d1b9-7545-471e-a1a1-070248d84736",
+      "status": "PRESENT",
+      "note": "RETEST-20261013-130005 frequência fictícia",
+      "recorded_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5"
+    }
+  ],
+  "learning.StudentProject": [
+    {
+      "id": "070a6090-2bcd-45f1-9599-f7664dba9d7c",
+      "created_at": "2026-10-13T16:29:47.084Z",
+      "updated_at": "2026-10-13T16:29:47.086Z",
+      "enrollment_id": "20b620fa-5911-4201-9c99-6f7afd2efa01",
+      "title": "RETEST-20261013-130005 PROJECT_P3",
+      "description": "RETEST-20261013-130005 entrega fictícia",
+      "repository_url": "https://example.com/retest-20261013-130005",
+      "demonstration_url": "",
+      "is_delivered": true,
+      "delivered_at": "2026-10-13T16:29:47.084Z",
+      "review_notes": ""
+    },
+    {
+      "id": "146b8f44-3212-4ebb-977b-56de20ff0d1a",
+      "created_at": "2026-10-13T16:29:44.334Z",
+      "updated_at": "2026-10-13T16:29:44.336Z",
+      "enrollment_id": "0c1481b9-bc5e-4840-91ba-86863ed4c4e5",
+      "title": "RETEST-20261013-130005 PROJECT_P2",
+      "description": "RETEST-20261013-130005 entrega fictícia",
+      "repository_url": "https://example.com/retest-20261013-130005",
+      "demonstration_url": "",
+      "is_delivered": true,
+      "delivered_at": "2026-10-13T16:29:44.334Z",
+      "review_notes": ""
+    },
+    {
+      "id": "89876066-2888-4f72-af17-f7c1978490e2",
+      "created_at": "2026-10-13T16:29:38.726Z",
+      "updated_at": "2026-10-13T16:29:56.653Z",
+      "enrollment_id": "fdf655fa-3261-454d-9d15-265606a55931",
+      "title": "RETEST-20261013-130005 PROJECT_P1",
+      "description": "RETEST-20261013-130005 entrega fictícia",
+      "repository_url": "https://example.com/retest-20261013-130005",
+      "demonstration_url": "",
+      "is_delivered": true,
+      "delivered_at": "2026-10-13T16:29:41.514Z",
+      "review_notes": "RETEST-20261013-130005 revisão"
+    }
+  ],
+  "learning.Evaluation": [
+    {
+      "id": "40c39995-d527-457f-8104-a370e5b59adf",
+      "created_at": "2026-10-13T16:30:11.748Z",
+      "updated_at": "2026-10-13T16:30:18.269Z",
+      "enrollment_id": "fdf655fa-3261-454d-9d15-265606a55931",
+      "final_score": "6.0",
+      "feedback": "RETEST-20261013-130005 FEEDBACK_P1",
+      "evaluated_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5",
+      "published_at": "2026-10-13T16:30:18.263Z"
+    },
+    {
+      "id": "807be2d0-0b75-4ea8-9bcc-b120852d2ef2",
+      "created_at": "2026-10-13T16:30:21.901Z",
+      "updated_at": "2026-10-13T16:30:24.912Z",
+      "enrollment_id": "0c1481b9-bc5e-4840-91ba-86863ed4c4e5",
+      "final_score": "10.0",
+      "feedback": "RETEST-20261013-130005 FEEDBACK_P2",
+      "evaluated_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5",
+      "published_at": "2026-10-13T16:30:24.908Z"
+    },
+    {
+      "id": "db6e2d59-9043-466c-a80d-1e736a3d69d0",
+      "created_at": "2026-10-13T16:30:27.882Z",
+      "updated_at": "2026-10-13T16:30:31.066Z",
+      "enrollment_id": "20b620fa-5911-4201-9c99-6f7afd2efa01",
+      "final_score": "5.9",
+      "feedback": "RETEST-20261013-130005 FEEDBACK_P3",
+      "evaluated_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5",
+      "published_at": "2026-10-13T16:30:31.060Z"
+    },
+    {
+      "id": "e8e19fe4-56bd-4309-84b7-3da179802960",
+      "created_at": "2026-10-13T16:30:33.872Z",
+      "updated_at": "2026-10-13T16:30:37.028Z",
+      "enrollment_id": "e0d9fde8-4b22-4174-80a5-4ea1c514a5b3",
+      "final_score": "10.0",
+      "feedback": "RETEST-20261013-130005 FEEDBACK_MINOR",
+      "evaluated_by_id": "d0da18ee-1818-4bc7-bb37-98c6e24d0fd5",
+      "published_at": "2026-10-13T16:30:37.010Z"
+    }
+  ],
+  "learning.Certificate": [
+    {
+      "id": "ed3566b4-2c27-498d-9fab-57384997ec26",
+      "created_at": "2026-10-13T16:31:10.067Z",
+      "updated_at": "2026-10-13T16:31:42.931Z",
+      "enrollment_id": "fdf655fa-3261-454d-9d15-265606a55931",
+      "verification_code": "CDF-DCDD8DE033B74239AF4D871CE9E76201",
+      "issued_at": "2026-10-13T16:31:10.060Z",
+      "workload_hours": "4.00",
+      "is_active": false,
+      "revoked_at": "2026-10-13T16:31:42.924Z",
+      "revocation_reason": "RETEST-20261013-130005 revogação de teste"
+    }
+  ]
+}

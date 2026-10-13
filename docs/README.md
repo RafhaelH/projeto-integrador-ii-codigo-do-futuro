@@ -26,6 +26,7 @@ Esta documentação é a fonte oficial das decisões do projeto. Cada requisito 
 ## 4. Arquitetura
 
 - [Arquitetura da solução](04-arquitetura/arquitetura.md)
+- [Implantação na VPS](04-arquitetura/implantacao-vps.md)
 - [ADR 0001 — Monólito modular Django](04-arquitetura/adr/0001-monolito-modular-django.md)
 
 ## 5. Planejamento
@@ -36,6 +37,7 @@ Esta documentação é a fonte oficial das decisões do projeto. Cada requisito 
 ## 6. Qualidade
 
 - [Plano de testes](06-testes/plano-de-testes.md)
+- [Evidências automatizadas](06-testes/evidencias-automatizadas.md)
 - [Dados de demonstração](06-testes/dados-de-demonstracao.md)
 - [Modelo de caso de teste](06-testes/modelo-caso-de-teste.md)
 
@@ -43,15 +45,20 @@ Esta documentação é a fonte oficial das decisões do projeto. Cada requisito 
 
 - [Plano de avaliação](07-avaliacoes/plano-de-avaliacao.md)
 - [Formulário de avaliação](07-avaliacoes/formulario-de-avaliacao.md)
+- [Pacote das cinco avaliações](07-avaliacoes/pacote-de-avaliacao.md)
 - [Registro de melhorias](07-avaliacoes/registro-de-melhorias.md)
 
 ## 8. Manual
 
-- [Estrutura do manual do usuário](08-manual/README.md)
+- [Manual do usuário](08-manual/README.md)
+- [Plano de capturas](08-manual/plano-de-capturas.md)
 
 ## 9. Entrega acadêmica
 
 - [Checklist completo](09-entrega/checklist.md)
+- [Plano de fechamento](09-entrega/plano-de-fechamento.md)
+- [Relatório final — base](09-entrega/relatorio-final.md)
+- [Roteiro do vídeo](09-entrega/roteiro-video.md)
 
 ## Padrão de identificação
 

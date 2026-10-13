@@ -46,6 +46,15 @@ jobs:
       - name: Install dependencies
         run: uv sync --frozen
 
+      - name: Validate production manifest
+        run: |
+          cp deploy/production.env.example deploy/production.env
+          chmod 600 deploy/production.env
+          docker compose --env-file deploy/production.env -f compose.production.yaml config --quiet
+
+      - name: Build production image
+        run: docker build --tag codigo-do-futuro:ci .
+
       - name: Lint
         run: uv run ruff check .
 

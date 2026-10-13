@@ -25,6 +25,10 @@ staticfiles/
 .env
 .env.*
 !.env.example
+deploy/production.env
+
+# Runtime and backups
+backups/
 
 # IDE and operating system
 .idea/

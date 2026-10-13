@@ -146,4 +146,8 @@ Em cada pull request serão executados:
 
 ## Estratégia de implantação
 
-A aplicação deverá ser empacotada de forma reproduzível. O ambiente de produção terá aplicação web, PostgreSQL, arquivos estáticos, HTTPS, variáveis de ambiente e rotina de backup. O provedor será escolhido mais próximo da publicação, sem acoplar o domínio a uma plataforma específica.
+A aplicação é empacotada de forma reproduzível em uma imagem Docker. A publicação acadêmica
+usa Gunicorn e PostgreSQL 17 em uma rede Docker interna, com o Nginx da VPS terminando HTTPS e
+encaminhando somente para uma porta vinculada ao loopback. Segredos ficam fora do Git, dados e
+mídias usam volumes persistentes, e os procedimentos de backup, restauração, atualização e smoke
+test estão descritos no [guia de implantação](implantacao-vps.md).

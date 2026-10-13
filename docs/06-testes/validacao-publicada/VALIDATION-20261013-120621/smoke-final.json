@@ -1,0 +1,13 @@
+{
+  "command": "./deploy/smoke-test.sh https://projeto-integrador.tesseratointegra.com.br",
+  "observed_output": "Smoke test aprovado em https://projeto-integrador.tesseratointegra.com.br",
+  "exit_code": 0,
+  "endpoints": [
+    "/healthz/",
+    "/readyz/",
+    "/entrar/"
+  ],
+  "origin": "VPS",
+  "recorded_at": "2026-10-13T12:40:43.074024-03:00",
+  "evidence_source": "execução final do comando, após a consolidação"
+}

@@ -1,0 +1,66 @@
+{
+  "accounts.User": {
+    "rows": 9,
+    "sha256": "d57296501f46f050feed8addc22dd28c1840cfdb59429a49c022e3ed845f9ffc"
+  },
+  "people.Participant": {
+    "rows": 6,
+    "sha256": "eb9bd9d34bdb10ba47ad924c05e8649e942df6b1f4600950ae5d91c905c42c19"
+  },
+  "people.Guardian": {
+    "rows": 3,
+    "sha256": "4d9b5dd0ff409e59f94819bf76068770c115f3cbb7a131a396d5eede138d9bbc"
+  },
+  "people.Instructor": {
+    "rows": 2,
+    "sha256": "bee50373ed6bb25480befe3f2c7409d2b825f241198eccc44f55209401f755c8"
+  },
+  "people.Institution": {
+    "rows": 1,
+    "sha256": "d0c5d4e4f6623e81457021e55db0e94edd993920a4044ad7e887aa5034b9e5e3"
+  },
+  "people.ParticipantGuardian": {
+    "rows": 3,
+    "sha256": "015e1e18f97d93324d7debb42cf0b25dd4576e9218ef65f909b1c3096db2f686"
+  },
+  "workshops.Workshop": {
+    "rows": 3,
+    "sha256": "4d9987519c849fccb723a57d89a9980e919ef8ccc2a6ad1be50a93da6d058c6d"
+  },
+  "workshops.ClassGroup": {
+    "rows": 4,
+    "sha256": "d2614b866074871829415cac2a35f6edf7857e2088895a587e13086a4a638dff"
+  },
+  "workshops.ClassInstructor": {
+    "rows": 5,
+    "sha256": "fb3b33387d0af2539e8311d7af623929fcd6e7d23fde65401ca65f8aa97e71ef"
+  },
+  "workshops.Meeting": {
+    "rows": 10,
+    "sha256": "89b5b0d517a7c867c7c772a7120d0d3cb766b3a1c676b74b4f33c118a7557c5f"
+  },
+  "enrollments.Enrollment": {
+    "rows": 9,
+    "sha256": "7bf20155fd8609b8544f3e587a689bc114a0d5672b7ef2d3a08a068a413b31a3"
+  },
+  "enrollments.EnrollmentStatusHistory": {
+    "rows": 20,
+    "sha256": "cdd63a19d8246fc6b9a29a9d3378c8f82fb00280627c15f4498b04a36e603483"
+  },
+  "learning.Attendance": {
+    "rows": 12,
+    "sha256": "97c837860b3853e1d445f0a55acd27c4fdf475790dcb0e304e86db6477a427f9"
+  },
+  "learning.StudentProject": {
+    "rows": 4,
+    "sha256": "ac731d23fc8baaa4f9c6cc525e8febf204c04a58902e824166b8c5b5fbe90f17"
+  },
+  "learning.Evaluation": {
+    "rows": 3,
+    "sha256": "513c9c9a0664a19f829dacfd0c139883ff73237deb92462321f8c04fd3b6a303"
+  },
+  "learning.Certificate": {
+    "rows": 1,
+    "sha256": "da6dabdceb78f9f9ba3725fef3c21053435186480462fae4807378925d8768ab"
+  }
+}

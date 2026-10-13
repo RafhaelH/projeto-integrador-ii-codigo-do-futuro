@@ -1,0 +1,1375 @@
+[
+  {
+    "id": "e76f29bae7a920641b3014f4873e77dedc04c53645dc6bce804373b18c9fbffa",
+    "name": "/codigo-do-futuro-app-1",
+    "image": "sha256:dc5d59ebc59598bc5f46fb4d976e12fdc4b28f1db0a33a2d87c51448ef03604f",
+    "started": "2026-10-13T14:42:30.878341386Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8031"
+        }
+      ]
+    },
+    "project": "codigo-do-futuro",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "587d98b312802167d9226aaa074d51eb0702869ddcf54800d92f458e6a744204",
+    "name": "/codigo-do-futuro-database-1",
+    "image": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+    "started": "2026-10-13T14:42:25.256233798Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": null
+    },
+    "project": "codigo-do-futuro",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "b791d345f9e51994e3c9b070f8cdc035e6f22a1cb1d3c24aa4927d12e0000e1a",
+    "name": "/rodomalia_frontend",
+    "image": "sha256:bcc61a0afb08fc69e2cf2fa3e25ca0c11c2de6bc8ba46eb0538617a2dfa08d33",
+    "started": "2026-10-07T16:46:58.571244742Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "3011"
+        }
+      ]
+    },
+    "project": "rodomalia",
+    "limits": {
+      "Memory": 805306368,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "16764d50cd5c60761b32f6bac2ad61561f5fa204a232787b4dbcf0dd46214b36",
+    "name": "/rodomalia_backend",
+    "image": "sha256:acaf936993ef83106e94d9e0c1b1a9dc65a61fda52c488eaed35080240ba5eb9",
+    "started": "2026-10-06T20:08:10.125097975Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8011"
+        }
+      ]
+    },
+    "project": "rodomalia",
+    "limits": {
+      "Memory": 1073741824,
+      "NanoCpus": 1500000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "0d57952309646b5aa7462c32eb079feb4fe455d917690253faae0cea7164149c",
+    "name": "/nexora_frontend",
+    "image": "sha256:c72eef87c8f4de1623ca5e0a82c46e0db5647d21cd8f860c341186f29a237808",
+    "started": "2026-10-06T13:58:31.425203995Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "3004"
+        }
+      ]
+    },
+    "project": "nexora",
+    "limits": {
+      "Memory": 805306368,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "7b6bd59d905e7ba08fa32392278d0bbe1731721715a9b8784a45d6f77973e538",
+    "name": "/systemtransfer_frontend",
+    "image": "sha256:2a19fb679437acdb5b9f851a2c261517e3334a8253c2fd642cfa44bb6a1b7661",
+    "started": "2026-10-05T21:57:06.334892251Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "3010"
+        }
+      ]
+    },
+    "project": "systemtransfer",
+    "limits": {
+      "Memory": 805306368,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "90379cbff126a94093da8e20d6a0f956a6214971767c1fe543823e7af2a08adf",
+    "name": "/systemtransfer_backend",
+    "image": "sha256:016e278e6e9633f32de116d4f302109ac91103fc99f509a70d046386da0f323d",
+    "started": "2026-10-05T21:57:05.854012447Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8010"
+        }
+      ]
+    },
+    "project": "systemtransfer",
+    "limits": {
+      "Memory": 1073741824,
+      "NanoCpus": 1500000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "3484b8f5c80d75461abf1d7e6af28c05eadda05a413e278b2650247e51e7be62",
+    "name": "/systemtransfer_celery_worker",
+    "image": "sha256:016e278e6e9633f32de116d4f302109ac91103fc99f509a70d046386da0f323d",
+    "started": "2026-10-05T21:57:05.848730262Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": null
+    },
+    "project": "systemtransfer",
+    "limits": {
+      "Memory": 1073741824,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "5c1ccfbe34caaef3ab51a3b8e0ab46ac2dbafff0dc7795dc2ac73b072ed9b3ef",
+    "name": "/systemtransfer_celery_beat",
+    "image": "sha256:016e278e6e9633f32de116d4f302109ac91103fc99f509a70d046386da0f323d",
+    "started": "2026-10-05T21:57:05.854869626Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": null
+    },
+    "project": "systemtransfer",
+    "limits": {
+      "Memory": 536870912,
+      "NanoCpus": 500000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "451daef8fec2fa1e3f0b476fd2f7298e368c3a6dc477e51eb6e2ddcf6087cf31",
+    "name": "/oficina_web",
+    "image": "sha256:a7ca041e1b151a42e2382f3c66608d29876f87553b567bc5f7cc59dbea0ee7e9",
+    "started": "2026-10-02T13:32:21.261144673Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "3005"
+        }
+      ]
+    },
+    "project": "oficina",
+    "limits": {
+      "Memory": 805306368,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "13ebded6252f47e4b26db04b4c106224b086bc1ac5304ce50931530be108bdd9",
+    "name": "/oficina_api",
+    "image": "sha256:e32ef70f2ea509d8edc7f60a18166895e108e2eaae8cf9a1ff42a558711feb0d",
+    "started": "2026-10-02T13:32:20.814077263Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8080/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8090"
+        }
+      ]
+    },
+    "project": "oficina",
+    "limits": {
+      "Memory": 1073741824,
+      "NanoCpus": 1500000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "8f4f6643ed96567075007daf28c0b0eee7cbd012e412cf4e21ebb4dbb641205a",
+    "name": "/rodomalia_evolution",
+    "image": "sha256:7e5aab8844cadf499bd8afe4b15e3fde3f0f85de6ab4ccae611197af03ab11ef",
+    "started": "2026-09-30T17:47:13.439171113Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "8080/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8085"
+        }
+      ]
+    },
+    "project": "rodomalia",
+    "limits": {
+      "Memory": 1073741824,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "107e656dd808b4bd56ec5384ebf946a7c60a4fe633c9c77ec893f13d1cd0cdcb",
+    "name": "/systemtransfer_postgres",
+    "image": "sha256:11a9d238fbb48bab14599c57e41123254452b1a2d93c6c8595bce96f346bd082",
+    "started": "2026-09-30T12:49:49.926946034Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": null
+    },
+    "project": "systemtransfer",
+    "limits": {
+      "Memory": 2147483648,
+      "NanoCpus": 2000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "1f7eb3b12049bd1e795841a5cce63e6ad41968b0af03a6a1af939c79bb59b02a",
+    "name": "/commerce-staging-web",
+    "image": "sha256:b1d618729a64bf813a6b4115a6db683ce7c6e83fab25305b2409c58f68388d32",
+    "started": "2026-09-29T19:09:08.834126931Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "3014"
+        }
+      ]
+    },
+    "project": "commerce-hub-staging",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "480ec4b19feb6be990fcf318807bd3af0caf1d7980da0f8a05387a8357291241",
+    "name": "/commerce-staging-webhook",
+    "image": "sha256:9720e2092f7e33d4905b6d3eb6b5949d007a47f31f68fec29395eeaeda8e6176",
+    "started": "2026-09-29T19:09:02.723502809Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8081/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8015"
+        }
+      ]
+    },
+    "project": "commerce-hub-staging",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "466bf70be1550e040b97916f4914ec310fe278b713f918d4cb0ae7266eeb30ba",
+    "name": "/commerce-staging-worker",
+    "image": "sha256:3cad8b3c3be13863ec8b74e2bc1e536fee896288803bd7244c61c9d806d29cb1",
+    "started": "2026-09-29T19:09:02.780511954Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {},
+    "project": "commerce-hub-staging",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "9545b530cf5c9548d87fa43aa1d14c0306ee770c59c4e2c272df6297715442d4",
+    "name": "/commerce-staging-api",
+    "image": "sha256:81eca4cbfd612e67fb29f3079450c8dd54af18302ffaff1dae45e9623e56d83b",
+    "started": "2026-09-29T19:09:02.774437648Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8080/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8014"
+        }
+      ]
+    },
+    "project": "commerce-hub-staging",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "748183d65988fc907ad11b6ef470fcc8b6d03dcc6054451e6cdb5fc08cc07150",
+    "name": "/commerce-staging-devseed",
+    "image": "sha256:da1b5c5acb46ac6b529d44a33c9b0ce3f4e0658fe5b691af904f8f1bfd5ee7c8",
+    "started": "2026-09-29T19:08:36.981034222Z",
+    "status": "exited",
+    "health": null,
+    "restarts": 0,
+    "ports": {},
+    "project": "commerce-hub-staging",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "b9cb2bfcf0f83950dca5b5abfc94173a3eae49d48e5f3ee974bf03e4eecf7e59",
+    "name": "/commerce-staging-migrate",
+    "image": "sha256:1668c22dbb5f12d7d48f0de34e769eda0811f9a58c279231a4fe517476051a4f",
+    "started": "2026-09-29T19:08:36.086523053Z",
+    "status": "exited",
+    "health": null,
+    "restarts": 0,
+    "ports": {},
+    "project": "commerce-hub-staging",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "fdd4c5a737cf6f24541d0cdabb54dfddbf058cbe6ffb7a9c8a05cdf3aebd0666",
+    "name": "/commerce-staging-postgres",
+    "image": "sha256:5a5a84b19854a9ffaa54082c166ff4ec27473a361e496e5ea167f298f2da9722",
+    "started": "2026-09-29T19:08:29.899269449Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "5439"
+        }
+      ]
+    },
+    "project": "commerce-hub-staging",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "7f46e31179f555cd9f205f982c42580b196bbd4e9bab97190cdc817877c5069c",
+    "name": "/nexora_backend",
+    "image": "sha256:aee350b3b0eab488013e30c6369423535c3e6291b4f3540c5dfdc19029170465",
+    "started": "2026-10-06T13:58:32.870997833Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8004"
+        }
+      ]
+    },
+    "project": "nexora",
+    "limits": {
+      "Memory": 1073741824,
+      "NanoCpus": 1500000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "9f932e9cf2342bba7e400e6de73aef7173c5118709461995673ef9a36d9febad",
+    "name": "/nexora_celery_beat",
+    "image": "sha256:61d4f2c9b49793522784f67ca2188e97d491cb6f9c6b65c14a00620a797acd8a",
+    "started": "2026-10-06T13:58:35.421050096Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": null
+    },
+    "project": "nexora",
+    "limits": {
+      "Memory": 268435456,
+      "NanoCpus": 500000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "d1ea700b0e09d5f5b13e94268caa98eea6b24eb676518ce61cb5e1b7cef0def6",
+    "name": "/nexora_celery_worker",
+    "image": "sha256:b777e923a9e74d0582cdf02f0241926c2e7aa5210f63ccf9ff0d956d19be856c",
+    "started": "2026-10-06T13:58:36.693506068Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": null
+    },
+    "project": "nexora",
+    "limits": {
+      "Memory": 536870912,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "f9e1d84d991fbba160392740e54b45b8fa02ae8c92871310e8c08ce5b4a4e97f",
+    "name": "/nexora_postgres",
+    "image": "sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea",
+    "started": "2026-09-26T19:58:56.423071897Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "5436"
+        }
+      ]
+    },
+    "project": "nexora",
+    "limits": {
+      "Memory": 2147483648,
+      "NanoCpus": 2000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "52ae353c9fa10ef69140d0efe85e18452cf1d6a93d4c0d218744afdf23990c68",
+    "name": "/nexora_docs",
+    "image": "sha256:9ec163d9b55b32a9b3f96e7c0e4f1332dc644fb8e53df619b405e63057ab6a8d",
+    "started": "2026-09-26T19:58:56.414177563Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8005"
+        }
+      ]
+    },
+    "project": "nexora",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "d19fc05ab1f52cc1411cd057dbd78d4ef2b1b22e31539a230c3f1e63902fe5ca",
+    "name": "/nexora_redis",
+    "image": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+    "started": "2026-09-26T19:58:56.428287169Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "6379/tcp": null
+    },
+    "project": "nexora",
+    "limits": {
+      "Memory": 536870912,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "af4a5edf87e8ec3b0ef1f2b54a47b493f916a200f43cced2a09e810bb45f30d2",
+    "name": "/hospitalar-staging-web",
+    "image": "sha256:18ee736feddca3badacb7e7d376910d46c886c77038a14f2097c2c77056b1133",
+    "started": "2026-09-24T01:06:05.151134099Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "3007"
+        }
+      ]
+    },
+    "project": "hospitalar-staging",
+    "limits": {
+      "Memory": 536870912,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "d69cac0866c1d147f352d9340a294dfa938d940c07be9b4ca71fb7dc5b5ab9be",
+    "name": "/hospitalar-staging-worker",
+    "image": "sha256:bc6151f552721f69ac1a90ad50f3d0895d072298dc6ac7b5219f0e5bb84ecf94",
+    "started": "2026-10-13T14:23:52.246246994Z",
+    "status": "running",
+    "health": null,
+    "restarts": 46,
+    "ports": {
+      "8000/tcp": null
+    },
+    "project": "hospitalar-staging",
+    "limits": {
+      "Memory": 536870912,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "e74798b94896960d2c8e411ff769dcede9dea9751975f0e42e087ce6ba6e751f",
+    "name": "/hospitalar-staging-api",
+    "image": "sha256:bc6151f552721f69ac1a90ad50f3d0895d072298dc6ac7b5219f0e5bb84ecf94",
+    "started": "2026-09-24T01:05:54.195761424Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8007"
+        }
+      ]
+    },
+    "project": "hospitalar-staging",
+    "limits": {
+      "Memory": 1073741824,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "5f6fd9b0a462e5fd4daa7cc97d8fdb5b348af5046ed48deb415cc4889a59eba5",
+    "name": "/hospitalar-staging-docs",
+    "image": "sha256:360c5b91d8285c01cbb7e77336a636c72bf0c5d9955ad76db71e069e9c8772c3",
+    "started": "2026-09-24T01:05:43.800836865Z",
+    "status": "running",
+    "health": "unhealthy",
+    "restarts": 0,
+    "ports": {
+      "80/tcp": null,
+      "8000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8087"
+        }
+      ]
+    },
+    "project": "hospitalar-staging",
+    "limits": {
+      "Memory": 134217728,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "6239988edecab1ed5369d9e05487fc9e1d234a7eef84db4dc5c4676088d5a617",
+    "name": "/hospitalar-staging-migrate",
+    "image": "sha256:bc6151f552721f69ac1a90ad50f3d0895d072298dc6ac7b5219f0e5bb84ecf94",
+    "started": "2026-09-24T01:05:44.286453208Z",
+    "status": "exited",
+    "health": "unhealthy",
+    "restarts": 0,
+    "ports": {},
+    "project": "hospitalar-staging",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "c530b163503f4852b7aec128d3e224e15886b5c3f0861169d201f38797454cc0",
+    "name": "/hospitalar-staging-beat",
+    "image": "sha256:bc6151f552721f69ac1a90ad50f3d0895d072298dc6ac7b5219f0e5bb84ecf94",
+    "started": "2026-09-24T01:05:44.281585318Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": null
+    },
+    "project": "hospitalar-staging",
+    "limits": {
+      "Memory": 268435456,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "2e4e2c38ca00321438536c8e391da72193c6d25e05263804d801f6143a365441",
+    "name": "/hospitalar-staging-db",
+    "image": "sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea",
+    "started": "2026-09-21T23:19:34.992710719Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "5437"
+        }
+      ]
+    },
+    "project": "hospitalar-staging",
+    "limits": {
+      "Memory": 536870912,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "05e2a4d3fb58989dec97997235b31abcaae76fb2745fbafef828a70014588ee7",
+    "name": "/hospitalar-staging-redis",
+    "image": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+    "started": "2026-09-21T23:19:34.993643742Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "6379/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "6387"
+        }
+      ]
+    },
+    "project": "hospitalar-staging",
+    "limits": {
+      "Memory": 268435456,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "e121605a50711753f2ca17427ac3a47ea39c8f7afa336fdbd55cb44cb2be1404",
+    "name": "/commerce-staging-redis",
+    "image": "sha256:5d8b44c11651c3b5ab51357ecf38104737026837e7b6ce05dc7de326e3358e8a",
+    "started": "2026-09-20T21:43:01.275223178Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "6379/tcp": null
+    },
+    "project": "commerce-hub-staging",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "6d3519c12a985de5725e1ca072c8431cd30450ad26e874ec6c297eb4b0d216ee",
+    "name": "/commerce-staging-nats",
+    "image": "sha256:d4ac35882ac65aff236cd65b9d3fa4d24332c681e1a85f94eedccd3cdd65b1da",
+    "started": "2026-09-20T18:38:15.987850881Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "4222/tcp": null,
+      "6222/tcp": null,
+      "8222/tcp": null
+    },
+    "project": "commerce-hub-staging",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "dba5db04387b3e28d6c44ff17f1f5e6438e5dbaf59b76c54ef9abf15d65a9490",
+    "name": "/rodomalia_postgres",
+    "image": "sha256:b3968e348b48f1198cc6de6611d055dbad91cd561b7990c406c3fc28d7095b21",
+    "started": "2026-09-18T08:46:09.822490428Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": null
+    },
+    "project": "rodomalia",
+    "limits": {
+      "Memory": 2147483648,
+      "NanoCpus": 2000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "d817724a38722c91be730ef1988d895e9b18fa40312cfffc4fe1118f448325c2",
+    "name": "/sapatilhaecia-web",
+    "image": "sha256:1bfa4ae6de2a3af2d33ce9d8ffe38395df377a3cf5dff389ced36b907ddff2d0",
+    "started": "2026-09-17T20:45:30.737945284Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "3009"
+        }
+      ]
+    },
+    "project": "sapatilhaecia",
+    "limits": {
+      "Memory": 536870912,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "754e64cb45f9ab21cf890009b57152f4672c99aa9fce98337f3f3f52bd3db4d9",
+    "name": "/sapatilhaecia-api",
+    "image": "sha256:bca5cf2ac0c269ffa5055335c53f22d11e02bbe2177b0ed71475cb5da516abd2",
+    "started": "2026-09-17T20:45:30.404916859Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8080/tcp": null
+    },
+    "project": "sapatilhaecia",
+    "limits": {
+      "Memory": 536870912,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "8ffc33915f1d178a9ac4b1a64650728c64a8e3320321ea9f5ebdb38ed4306ab8",
+    "name": "/ohana_loja",
+    "image": "sha256:8d91690d2f0c3db429dcfbe0d23651705678934fb2cbff095d7d575574c99c65",
+    "started": "2026-09-13T14:05:39.302604452Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "3012"
+        }
+      ]
+    },
+    "project": "ohana",
+    "limits": {
+      "Memory": 805306368,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "a8bae2885a0d99b39ad6a23a5ec5d7b7880ca96908a3d48eea79db2d095c653f",
+    "name": "/ohana_api",
+    "image": "sha256:90e61dbda7ea06d14e26f2691ce88eedf1265ab05c82e3879cb32a0682e2d277",
+    "started": "2026-10-08T22:18:35.239906559Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8080/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8091"
+        }
+      ]
+    },
+    "project": "ohana",
+    "limits": {
+      "Memory": 1073741824,
+      "NanoCpus": 1500000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "ce4bbfaa9568453d10817122a5bf15c3f3f022d6156554e45871ab1c3b7c2045",
+    "name": "/ohana_web",
+    "image": "sha256:fbb1d4ce7ede1ca01109e9f7f9b306903a5b14819c3f8816571115abbd71f5e8",
+    "started": "2026-09-13T14:05:39.304786056Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "3006"
+        }
+      ]
+    },
+    "project": "ohana",
+    "limits": {
+      "Memory": 805306368,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "efa47e670b1c0892e9b6594537c53175e6f976d27d98035ed1c5838a3422dc87",
+    "name": "/ohana_db",
+    "image": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+    "started": "2026-09-13T13:19:35.48820986Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": null
+    },
+    "project": "ohana",
+    "limits": {
+      "Memory": 2147483648,
+      "NanoCpus": 2000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "d06b24464e26c5d1220326708b827a35d84e50e7462406f478a861613664f5e1",
+    "name": "/anpa_web",
+    "image": "sha256:7b2fe725b9938b2988f3a4f4fd3c49910a368cf3092c751d58aab59f5e8e66ce",
+    "started": "2026-09-13T12:03:27.898344863Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "3008"
+        }
+      ]
+    },
+    "project": "anpa",
+    "limits": {
+      "Memory": 805306368,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "08cae590668e17ce77dac38abef0795e193e11be87b9b6ad77896d7556e48c1f",
+    "name": "/anpa_api",
+    "image": "sha256:0c48f65a15978c75c260ac85f92fe4093c0a85fdff6d4fd52b4480ed8c184702",
+    "started": "2026-09-13T11:50:56.432602761Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8080/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8092"
+        }
+      ]
+    },
+    "project": "anpa",
+    "limits": {
+      "Memory": 1073741824,
+      "NanoCpus": 1500000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "93c365c7a8eb8682e58960677046f9404e509ccb4b9f812e08720ee055b78cf7",
+    "name": "/anpa_db",
+    "image": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+    "started": "2026-09-13T11:50:45.672650592Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": null
+    },
+    "project": "anpa",
+    "limits": {
+      "Memory": 1073741824,
+      "NanoCpus": 1500000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "3a2f2b9ddf6f08228754ec8feb747285b074c65b013404741c5c02cfa0c27617",
+    "name": "/systemtransfer_redis",
+    "image": "sha256:e9b2e45ecd47fbb69b877cf8d045d5cccaaaed52524b6e098b4abe8212994f73",
+    "started": "2026-09-08T17:33:15.164180077Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "6379/tcp": null
+    },
+    "project": "systemtransfer",
+    "limits": {
+      "Memory": 536870912,
+      "NanoCpus": 1000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "6188a839db38a58eff6bba1bde88b5e5ed49ad175efb4dd4596df2a45a122ab6",
+    "name": "/tesserato_frontend",
+    "image": "sha256:5cf8d50cf562820abc92a39eb5fa6c6d1ed329e29671ad8b24c084fa3f349f0a",
+    "started": "2026-09-01T22:46:11.04500003Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "0.0.0.0",
+          "HostPort": "3002"
+        },
+        {
+          "HostIp": "::",
+          "HostPort": "3002"
+        }
+      ]
+    },
+    "project": "intitucional",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "a1bae166c026ca4d153fc8331f721a7e8ed33331e43935d97125b5be0ed53587",
+    "name": "/tesserato_backend",
+    "image": "sha256:4e8ed96dc056e0145e1c9ea03ca31a467dbf34fea77de73c3dd38c2467560ad4",
+    "started": "2026-09-01T22:46:10.370052929Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": [
+        {
+          "HostIp": "0.0.0.0",
+          "HostPort": "8002"
+        },
+        {
+          "HostIp": "::",
+          "HostPort": "8002"
+        }
+      ]
+    },
+    "project": "intitucional",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "4d854181ba6dbac9ea1fe8a1de6aae0e2adf2c7ec7005904cb5cbd8dec1f3514",
+    "name": "/oficina_db",
+    "image": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+    "started": "2026-08-20T10:46:16.503930647Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": null
+    },
+    "project": "oficina",
+    "limits": {
+      "Memory": 2147483648,
+      "NanoCpus": 2000000000,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "adc89d3b9ee2362ea2c680ed04ffffec0e9cc914703483da5920c1d9af10a5aa",
+    "name": "/sapatilhaecia-db",
+    "image": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+    "started": "2026-07-10T11:56:24.282390787Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "5438"
+        }
+      ]
+    },
+    "project": "sapatilhaecia",
+    "limits": {
+      "Memory": 536870912,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "a9a79c6e3f3b1d52b1aa099db4665162ea89fcd16ebbae42748fc3b5565d974f",
+    "name": "/giovanna-site-frontend-1",
+    "image": "sha256:d70cd5e241eb6e67c6a9f4aa51df3454c9436b9917ab2879de3234e159489f4e",
+    "started": "2026-07-07T10:37:27.229532248Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "80/tcp": null
+    },
+    "project": "giovanna-site",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "970dc387dbfd852f49d3c7b55b696772a3970d12c13888e7ede1f3d6d84f1c78",
+    "name": "/postgresql-2410",
+    "image": "sha256:d278ff0b2a0195df3d8b417fe748531ebb3a0a7d928c47c50113f813c59ead42",
+    "started": "2026-07-07T10:37:27.424971206Z",
+    "status": "exited",
+    "health": null,
+    "restarts": 0,
+    "ports": {},
+    "project": "protheus",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "36a35233b2495f09e578780a885bee277d2a5d560ef7ab6be485ab5c6c0f9efc",
+    "name": "/giovanna-site-backend-1",
+    "image": "sha256:712c7fd79b0bea063f35c6ec35f02dd59b70462ebce0aacb655b2f30f58b149d",
+    "started": "2026-07-07T10:37:27.395985456Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "8004/tcp": null
+    },
+    "project": "giovanna-site",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "9f10826e493027d44c781b4c4e4b23474f334aaa8e53d5a13dd5e2229a638468",
+    "name": "/giovanna-site-admin-1",
+    "image": "sha256:1b2d5cf708291c3a63608a0d26164b743b2faece2953c26933faa52a56414848",
+    "started": "2026-07-07T10:37:27.321941172Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "80/tcp": null
+    },
+    "project": "giovanna-site",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "8068fc72d189fe1b374fd0d7795de8e6885f6e5a6a2eb1cf27a7bb0bc03713cf",
+    "name": "/giovanna-site-nginx-1",
+    "image": "sha256:1d13701a5f9f3fb01aaa88cef2344d65b6b5bf6b7d9fa4cf0dca557a8d7702ba",
+    "started": "2026-07-07T10:37:27.230239498Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "80/tcp": [
+        {
+          "HostIp": "0.0.0.0",
+          "HostPort": "8006"
+        },
+        {
+          "HostIp": "::",
+          "HostPort": "8006"
+        }
+      ]
+    },
+    "project": "giovanna-site",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "aa832f46c6493fa8973462dea722cd8831d068cd51aadd505862f30b009be1e3",
+    "name": "/giovanna-site-postgres-1",
+    "image": "sha256:b3968e348b48f1198cc6de6611d055dbad91cd561b7990c406c3fc28d7095b21",
+    "started": "2026-07-07T10:37:27.397749111Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": null
+    },
+    "project": "giovanna-site",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "7116deef03598e9fc2167fd7647f9e266d592e7dc79704ea95f23946ef9802c8",
+    "name": "/protheus-2410",
+    "image": "sha256:6fe1ed473f1c61a1ce61a66f681670c5d3684ee4c9b16cb9b4ce648d9b82cc54",
+    "started": "2026-07-07T10:37:27.182605753Z",
+    "status": "exited",
+    "health": null,
+    "restarts": 0,
+    "ports": {},
+    "project": "protheus",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "2e9dd3e31d15242bcdb83c9f745e452970b9d1dfdc929c2817f8cd61e4deda28",
+    "name": "/smartview-2410",
+    "image": "sha256:36bbc132d70e8846f571aa9147e42933ad3e89d22f1ac4c1e45a5ec024ec7912",
+    "started": "2026-07-07T10:37:27.021195316Z",
+    "status": "exited",
+    "health": null,
+    "restarts": 0,
+    "ports": {},
+    "project": "protheus",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "e98801b4a11a201f1cd267faa58a352aed2a241a59b0177e99f630f38a9ffaa6",
+    "name": "/dbaccess-2410",
+    "image": "sha256:817cf36708c533ce1b16905525340bdbe006344a0a8e8a189fd475937a7ae3af",
+    "started": "2026-07-07T10:37:27.123573282Z",
+    "status": "exited",
+    "health": null,
+    "restarts": 0,
+    "ports": {},
+    "project": "protheus",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "bd35829098a525dafc4273bf791c9348b1f7e17a0d733be511d44a85917005d6",
+    "name": "/license-server-2410",
+    "image": "sha256:f6f44675ef0221156e5155d4bd5ec2b4b034d9a334e9643ac107b2ae20efe219",
+    "started": "2026-07-07T10:37:27.266018556Z",
+    "status": "exited",
+    "health": null,
+    "restarts": 0,
+    "ports": {},
+    "project": "protheus",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "16d0d6d35eee9a585a16416b6a127f989143d417bb1cfcea8289d82141412876",
+    "name": "/bancodetalentos_frontend",
+    "image": "sha256:9206097ae0d78fa1a7f81e381002989aff434c41600a3a7b49406dfdc8326fc8",
+    "started": "2026-08-21T15:00:32.081949388Z",
+    "status": "running",
+    "health": "unhealthy",
+    "restarts": 4,
+    "ports": {
+      "3000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "3000"
+        }
+      ]
+    },
+    "project": "bancodetalentos",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "eb251863fd58e62af4490123f3c69d82176a134d908f5f80b1dde90cf58c250c",
+    "name": "/bancodetalentos_backend",
+    "image": "sha256:200347db43b1c359f555d82748d67ad615379d4593b34ceb8d98fc7e71a812f1",
+    "started": "2026-07-07T10:37:27.395377224Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "8000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8000"
+        }
+      ]
+    },
+    "project": "bancodetalentos",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "a39b80f401486cd1b3ad662025e96070e767d874ecc9b42703019d8b84d21275",
+    "name": "/bancodetalentos_postgres",
+    "image": "sha256:dafc4d8e8369da730a5ee9a320a0f0b3c6aa516f41244689c4493a27dc84472d",
+    "started": "2026-07-07T10:37:27.093025199Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": null
+    },
+    "project": "bancodetalentos",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "e98388bc8228208149bf6f151c6051e717b787fc6ca2566f2bb8be5d75904914",
+    "name": "/bancodetalentos_evolution",
+    "image": "sha256:6b195676b09abbbd8ac9372cd961674dea2587f23dc9bc1d1e6a595372556fb1",
+    "started": "2026-07-07T10:37:27.434344503Z",
+    "status": "running",
+    "health": null,
+    "restarts": 0,
+    "ports": {
+      "8080/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8081"
+        }
+      ]
+    },
+    "project": "bancodetalentos",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "249d0768b5b85ead9fb90123651a25296f67d1a65b73b26541421c512e5ac633",
+    "name": "/bancodetalentos_redis",
+    "image": "sha256:ee64a64eaab618d88051c3ade8f6352d11531fcf79d9a4818b9b183d8c1d18ba",
+    "started": "2026-07-07T10:37:27.274467466Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "6379/tcp": null
+    },
+    "project": "bancodetalentos",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  },
+  {
+    "id": "b2c531b64288db5b5f87ee8b26f2f49ee651f7cdf450358445d06ab956d826b7",
+    "name": "/tesserato_db",
+    "image": "sha256:b3968e348b48f1198cc6de6611d055dbad91cd561b7990c406c3fc28d7095b21",
+    "started": "2026-07-07T10:37:27.398446127Z",
+    "status": "running",
+    "health": "healthy",
+    "restarts": 0,
+    "ports": {
+      "5432/tcp": null
+    },
+    "project": "intitucional",
+    "limits": {
+      "Memory": 0,
+      "NanoCpus": 0,
+      "PidsLimit": null
+    }
+  }
+]

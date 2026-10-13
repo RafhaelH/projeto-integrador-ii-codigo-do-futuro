@@ -1,0 +1,109 @@
+[
+  {
+    "id": "HTTP-161",
+    "previous_classification": "REPROVADO",
+    "previous_checks": {
+      "http_esperado": true,
+      "erro_url": false,
+      "dados_de_negocio_preservados": true
+    },
+    "reason": "Resposta 200 e ausência de alterações já comprovadas. Seletor field-error do executor estava errado: este formulário usa errorlist; reteste HTTP confirmou a mensagem de URL inválida.",
+    "retests": [
+      "HTTP-335"
+    ]
+  },
+  {
+    "id": "HTTP-317",
+    "previous_classification": "REPROVADO",
+    "previous_checks": {
+      "http_esperado": true,
+      "erro_url_visivel": false,
+      "dados_de_negocio_preservados": true
+    },
+    "reason": "O seletor do executor esperava Insira, mas a aplicação usa Informe uma URL válida. Requisição real adicional preservou a mensagem sanitizada e confirmou a rejeição sem gravação.",
+    "retests": [
+      "HTTP-335"
+    ]
+  },
+  {
+    "id": "HTTP-170",
+    "previous_classification": "REPROVADO",
+    "previous_checks": {
+      "http_esperado": true,
+      "erro_nota": false,
+      "dados_de_negocio_preservados": true
+    },
+    "reason": "Resposta 200 e ausência de alterações já comprovadas. Seletor field-error do executor estava errado; reteste HTTP confirmou mensagem de limite 10.",
+    "retests": [
+      "HTTP-318"
+    ]
+  },
+  {
+    "id": "HTTP-201",
+    "previous_classification": "REPROVADO",
+    "previous_checks": {
+      "http_esperado": false,
+      "dados_de_negocio_preservados": true
+    },
+    "reason": "HTTP 404 observado: o seletor oculta revogados para titulares. Administrador recebe 403 no download; ambos os comportamentos foram retestados.",
+    "retests": [
+      "HTTP-256",
+      "HTTP-259"
+    ]
+  },
+  {
+    "id": "HTTP-202",
+    "previous_classification": "REPROVADO",
+    "previous_checks": {
+      "http_esperado": false,
+      "dados_de_negocio_preservados": true
+    },
+    "reason": "HTTP 404 ao titular estava correto. Expectativa inicial de histórico visível ao titular foi corrigida; administrador consultou o histórico real por HTTP 200.",
+    "retests": [
+      "HTTP-257",
+      "HTTP-258"
+    ]
+  },
+  {
+    "id": "HTTP-208",
+    "previous_classification": "REPROVADO",
+    "previous_checks": {
+      "http_esperado": true,
+      "mime_csv": true,
+      "csv_conferido_sem_dados_protegidos": false,
+      "dados_de_negocio_preservados": true
+    },
+    "reason": "Contexto do CPF sintético se perdeu na retomada do executor. Repetição HTTP passou todas as verificações; o SHA-256 do CSV é idêntico ao da resposta inicial.",
+    "retests": [
+      "HTTP-244"
+    ]
+  },
+  {
+    "id": "HTTP-211",
+    "previous_classification": "REPROVADO",
+    "previous_checks": {
+      "http_esperado": true,
+      "mime_csv": true,
+      "csv_conferido_sem_dados_protegidos": false,
+      "dados_de_negocio_preservados": true
+    },
+    "reason": "Contexto do CPF sintético se perdeu na retomada do executor. Repetição HTTP passou todas as verificações; o SHA-256 do CSV é idêntico ao da resposta inicial.",
+    "retests": [
+      "HTTP-247"
+    ]
+  },
+  {
+    "id": "HTTP-214",
+    "previous_classification": "REPROVADO",
+    "previous_checks": {
+      "http_esperado": true,
+      "mime_csv": true,
+      "csv_conferido_sem_dados_protegidos": false,
+      "dados_de_negocio_preservados": true
+    },
+    "reason": "Contexto do CPF sintético se perdeu na retomada do executor. Repetição HTTP passou todas as verificações; o SHA-256 do CSV é idêntico ao da resposta inicial.",
+    "retests": [
+      "HTTP-250"
+    ]
+  }
+]

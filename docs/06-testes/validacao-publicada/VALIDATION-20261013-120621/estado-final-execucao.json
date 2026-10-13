@@ -1,0 +1,1319 @@
+{
+  "accounts.User": [
+    {
+      "last_login": "2026-10-13T15:37:05.086Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T15:15:35.632Z",
+      "id": "55605414-8f07-4f40-8560-5d21b2991f12",
+      "full_name": "VALIDATION-20261013-120621 P1",
+      "role": "PARTICIPANT",
+      "created_at": "2026-10-13T15:15:35.807Z",
+      "updated_at": "2026-10-13T15:15:35.807Z"
+    },
+    {
+      "last_login": "2026-10-13T15:33:30.898Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T15:15:44.692Z",
+      "id": "62a58e48-0a6e-4e31-a787-60a0a5ccf234",
+      "full_name": "VALIDATION-20261013-120621 MINOR",
+      "role": "PARTICIPANT",
+      "created_at": "2026-10-13T15:15:44.873Z",
+      "updated_at": "2026-10-13T15:15:44.873Z"
+    },
+    {
+      "last_login": "2026-10-13T15:30:57.938Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T15:15:32.636Z",
+      "id": "6c894aaa-caa2-45a2-8225-19e788c14a00",
+      "full_name": "VALIDATION-20261013-120621 I2",
+      "role": "INSTRUCTOR",
+      "created_at": "2026-10-13T15:15:32.862Z",
+      "updated_at": "2026-10-13T15:15:32.862Z"
+    },
+    {
+      "last_login": "2026-10-13T15:30:54.796Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T15:15:29.656Z",
+      "id": "aae00440-8786-444e-83ae-fda9c805e245",
+      "full_name": "VALIDATION-20261013-120621 I1",
+      "role": "INSTRUCTOR",
+      "created_at": "2026-10-13T15:15:29.869Z",
+      "updated_at": "2026-10-13T15:15:29.869Z"
+    },
+    {
+      "last_login": "2026-10-13T15:30:48.414Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T15:15:38.566Z",
+      "id": "c5163e3d-d824-4c7c-a186-05a6be2e8238",
+      "full_name": "VALIDATION-20261013-120621 P2",
+      "role": "PARTICIPANT",
+      "created_at": "2026-10-13T15:15:38.778Z",
+      "updated_at": "2026-10-13T15:15:38.778Z"
+    },
+    {
+      "last_login": "2026-10-13T15:30:41.651Z",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-10-13T15:14:42.505Z",
+      "id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "full_name": "VALIDATION-20261013-120621 ADMIN",
+      "role": "ADMIN",
+      "created_at": "2026-10-13T15:14:42.708Z",
+      "updated_at": "2026-10-13T15:14:42.708Z"
+    },
+    {
+      "last_login": "2026-10-13T15:35:54.540Z",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-10-13T15:15:41.645Z",
+      "id": "e8e28246-d644-4004-b2e8-44a7ccfbb4bd",
+      "full_name": "VALIDATION-20261013-120621 P3",
+      "role": "PARTICIPANT",
+      "created_at": "2026-10-13T15:15:41.897Z",
+      "updated_at": "2026-10-13T15:35:44.292Z"
+    }
+  ],
+  "people.Participant": [
+    {
+      "id": "2f64a5d9-b78d-4bf1-aff3-33fecf800999",
+      "created_at": "2026-10-13T15:17:06.738Z",
+      "updated_at": "2026-10-13T15:17:25.236Z",
+      "user_id": "55605414-8f07-4f40-8560-5d21b2991f12",
+      "full_name": "VALIDATION-20261013-120621 P1",
+      "is_active": true,
+      "privacy_consent_at": "2026-10-13T15:16:00Z",
+      "image_authorization": true
+    },
+    {
+      "id": "46cd96dc-9392-4e31-98de-d39234b2b656",
+      "created_at": "2026-10-13T15:17:15.346Z",
+      "updated_at": "2026-10-13T15:33:48.868Z",
+      "user_id": "62a58e48-0a6e-4e31-a787-60a0a5ccf234",
+      "full_name": "VALIDATION-20261013-120621 MINOR",
+      "is_active": true,
+      "privacy_consent_at": null,
+      "image_authorization": false
+    },
+    {
+      "id": "4d0105eb-d4bc-4a43-b16f-f9cb697c1444",
+      "created_at": "2026-10-13T15:17:12.647Z",
+      "updated_at": "2026-10-13T15:32:49.078Z",
+      "user_id": "e8e28246-d644-4004-b2e8-44a7ccfbb4bd",
+      "full_name": "VALIDATION-20261013-120621 P3",
+      "is_active": true,
+      "privacy_consent_at": null,
+      "image_authorization": false
+    },
+    {
+      "id": "5f670902-3efc-4d6d-a595-05ee0566aa64",
+      "created_at": "2026-10-13T15:17:09.833Z",
+      "updated_at": "2026-10-13T15:33:46.137Z",
+      "user_id": "c5163e3d-d824-4c7c-a186-05a6be2e8238",
+      "full_name": "VALIDATION-20261013-120621 P2",
+      "is_active": true,
+      "privacy_consent_at": null,
+      "image_authorization": false
+    }
+  ],
+  "people.Guardian": [
+    {
+      "id": "1ebed838-74aa-46b7-ad6a-ea7b934f42a8",
+      "created_at": "2026-10-13T15:17:33.890Z",
+      "updated_at": "2026-10-13T15:17:40.762Z",
+      "full_name": "VALIDATION-20261013-120621 GUARDIAN_EDITED",
+      "is_active": true
+    }
+  ],
+  "people.Instructor": [
+    {
+      "id": "52a694e2-7a37-4188-b753-9e5aca48a4a3",
+      "created_at": "2026-10-13T15:17:46.462Z",
+      "updated_at": "2026-10-13T15:17:46.462Z",
+      "user_id": "6c894aaa-caa2-45a2-8225-19e788c14a00",
+      "biography": "VALIDATION-20261013-120621 biografia fictícia",
+      "specialties": "Python",
+      "is_active": true
+    },
+    {
+      "id": "a7dd9dbe-92a1-45f2-9bc2-0b0cc4fbc929",
+      "created_at": "2026-10-13T15:17:43.658Z",
+      "updated_at": "2026-10-13T15:32:32.045Z",
+      "user_id": "aae00440-8786-444e-83ae-fda9c805e245",
+      "biography": "VALIDATION-20261013-120621 biografia editada",
+      "specialties": "Python, HTTP",
+      "is_active": true
+    }
+  ],
+  "people.Institution": [
+    {
+      "id": "75a729e6-6d5b-41f3-8fa7-f27f760847cd",
+      "created_at": "2026-10-13T15:17:53.356Z",
+      "updated_at": "2026-10-13T15:36:20.512Z",
+      "name": "VALIDATION-20261013-120621 INSTITUTION",
+      "contact_name": "",
+      "address": "VALIDATION-20261013-120621 endereço fictício editado",
+      "is_active": false
+    }
+  ],
+  "people.ParticipantGuardian": [
+    {
+      "id": "7013991c-03a2-40d2-94c2-fcf1ac76d0bf",
+      "created_at": "2026-10-13T15:22:37.102Z",
+      "updated_at": "2026-10-13T15:22:37.102Z",
+      "participant_id": "46cd96dc-9392-4e31-98de-d39234b2b656",
+      "guardian_id": "1ebed838-74aa-46b7-ad6a-ea7b934f42a8",
+      "relationship": "LEGAL_GUARDIAN",
+      "is_primary": true
+    }
+  ],
+  "workshops.Workshop": [
+    {
+      "id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+      "created_at": "2026-10-13T15:18:12.152Z",
+      "updated_at": "2026-10-13T15:36:00.866Z",
+      "title": "VALIDATION-20261013-120621 WORKSHOP",
+      "slug": "validation-20261013-120621",
+      "summary": "VALIDATION-20261013-120621 resumo editado",
+      "objective": "VALIDATION-20261013-120621 objetivo",
+      "syllabus": "VALIDATION-20261013-120621 conteúdo",
+      "estimated_hours": "4.00",
+      "status": "ARCHIVED",
+      "created_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c"
+    }
+  ],
+  "workshops.ClassGroup": [
+    {
+      "id": "3b60081f-ad7e-42b0-a919-9863cfbb0f5d",
+      "created_at": "2026-10-13T15:21:21.447Z",
+      "updated_at": "2026-10-13T15:26:36.534Z",
+      "workshop_id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+      "institution_id": "75a729e6-6d5b-41f3-8fa7-f27f760847cd",
+      "code": "VALIDATION-20261013-120621-A",
+      "title": "VALIDATION-20261013-120621 ACADEMIC",
+      "location": "VALIDATION-20261013-120621 sala fictícia",
+      "capacity": 4,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-12T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-20",
+      "status": "COMPLETED",
+      "created_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c"
+    },
+    {
+      "id": "50e1da1a-26a6-4738-abc6-c35753c85665",
+      "created_at": "2026-10-13T15:20:53.647Z",
+      "updated_at": "2026-10-13T15:21:08.783Z",
+      "workshop_id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+      "institution_id": "75a729e6-6d5b-41f3-8fa7-f27f760847cd",
+      "code": "VALIDATION-20261013-120621-Q",
+      "title": "VALIDATION-20261013-120621 QUEUE",
+      "location": "VALIDATION-20261013-120621 sala editada",
+      "capacity": 1,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-12T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-20",
+      "status": "OPEN",
+      "created_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c"
+    },
+    {
+      "id": "68cf97aa-be63-462e-9234-fa01125cef88",
+      "created_at": "2026-10-13T15:33:09.591Z",
+      "updated_at": "2026-10-13T15:33:16.691Z",
+      "workshop_id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+      "institution_id": "75a729e6-6d5b-41f3-8fa7-f27f760847cd",
+      "code": "VALIDATION-20261013-120621-M",
+      "title": "VALIDATION-20261013-120621 MANUAL",
+      "location": "VALIDATION-20261013-120621 sala",
+      "capacity": 1,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-10T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-16",
+      "status": "OPEN",
+      "created_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c"
+    },
+    {
+      "id": "6b4df6ea-3d89-49ae-8aa0-7bf1c91373b8",
+      "created_at": "2026-10-13T15:34:09.323Z",
+      "updated_at": "2026-10-13T15:34:16.717Z",
+      "workshop_id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+      "institution_id": "75a729e6-6d5b-41f3-8fa7-f27f760847cd",
+      "code": "VALIDATION-20261013-120621-N",
+      "title": "VALIDATION-20261013-120621 NO-WAITLIST",
+      "location": "VALIDATION-20261013-120621 sala",
+      "capacity": 1,
+      "waitlist_enabled": false,
+      "registration_opens_at": "2026-10-10T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-16",
+      "status": "OPEN",
+      "created_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c"
+    },
+    {
+      "id": "755f7d9c-45c0-4f73-bb94-49120f6a383d",
+      "created_at": "2026-10-13T15:34:34.947Z",
+      "updated_at": "2026-10-13T15:34:42.374Z",
+      "workshop_id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+      "institution_id": "75a729e6-6d5b-41f3-8fa7-f27f760847cd",
+      "code": "VALIDATION-20261013-120621-X",
+      "title": "VALIDATION-20261013-120621 EXPIRED",
+      "location": "VALIDATION-20261013-120621 sala",
+      "capacity": 1,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-10T03:00:00Z",
+      "registration_closes_at": "2026-10-13T02:00:00Z",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-16",
+      "status": "OPEN",
+      "created_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c"
+    },
+    {
+      "id": "98425e99-d13b-4492-b1f2-0611eab0abaf",
+      "created_at": "2026-10-13T15:21:31.676Z",
+      "updated_at": "2026-10-13T15:36:10.376Z",
+      "workshop_id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+      "institution_id": "75a729e6-6d5b-41f3-8fa7-f27f760847cd",
+      "code": "VALIDATION-20261013-120621-O",
+      "title": "VALIDATION-20261013-120621 OTHER",
+      "location": "VALIDATION-20261013-120621 sala fictícia",
+      "capacity": 1,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-12T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-20",
+      "status": "CANCELLED",
+      "created_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c"
+    },
+    {
+      "id": "a0015464-d362-4efe-af79-9cf1842e8c04",
+      "created_at": "2026-10-13T15:21:11.667Z",
+      "updated_at": "2026-10-13T15:21:18.633Z",
+      "workshop_id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+      "institution_id": "75a729e6-6d5b-41f3-8fa7-f27f760847cd",
+      "code": "VALIDATION-20261013-120621-R",
+      "title": "VALIDATION-20261013-120621 RACE",
+      "location": "VALIDATION-20261013-120621 sala fictícia",
+      "capacity": 1,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-12T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-20",
+      "status": "OPEN",
+      "created_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c"
+    },
+    {
+      "id": "e5cc292f-8b69-4ba2-9419-10d5ae2bb15f",
+      "created_at": "2026-10-13T15:35:29.243Z",
+      "updated_at": "2026-10-13T15:35:34.621Z",
+      "workshop_id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+      "institution_id": "75a729e6-6d5b-41f3-8fa7-f27f760847cd",
+      "code": "VALIDATION-20261013-120621-B",
+      "title": "VALIDATION-20261013-120621 BYPASS",
+      "location": "VALIDATION-20261013-120621 sala fictícia",
+      "capacity": 1,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-12T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-16",
+      "status": "COMPLETED",
+      "created_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c"
+    },
+    {
+      "id": "fee34a71-0da9-4df9-95c8-33c219ececd9",
+      "created_at": "2026-10-13T15:34:48.640Z",
+      "updated_at": "2026-10-13T15:35:18.867Z",
+      "workshop_id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+      "institution_id": "75a729e6-6d5b-41f3-8fa7-f27f760847cd",
+      "code": "VALIDATION-20261013-120621-S",
+      "title": "VALIDATION-20261013-120621 STARTED",
+      "location": "VALIDATION-20261013-120621 sala",
+      "capacity": 1,
+      "waitlist_enabled": true,
+      "registration_opens_at": "2026-10-10T03:00:00Z",
+      "registration_closes_at": "2026-10-14T02:00:00Z",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-16",
+      "status": "IN_PROGRESS",
+      "created_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c"
+    }
+  ],
+  "workshops.ClassInstructor": [
+    {
+      "id": "057b22ba-9e70-4d33-8f8f-a321f3c2ed97",
+      "created_at": "2026-10-13T15:21:15.775Z",
+      "updated_at": "2026-10-13T15:21:15.775Z",
+      "class_group_id": "a0015464-d362-4efe-af79-9cf1842e8c04",
+      "instructor_id": "a7dd9dbe-92a1-45f2-9bc2-0b0cc4fbc929",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T15:21:15.775Z"
+    },
+    {
+      "id": "1db72988-910f-4e22-a09f-8b5cbeb218a0",
+      "created_at": "2026-10-13T15:21:25.851Z",
+      "updated_at": "2026-10-13T15:21:25.851Z",
+      "class_group_id": "3b60081f-ad7e-42b0-a919-9863cfbb0f5d",
+      "instructor_id": "a7dd9dbe-92a1-45f2-9bc2-0b0cc4fbc929",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T15:21:25.851Z"
+    },
+    {
+      "id": "2e2436da-4738-4826-93b0-20f0d2b9007e",
+      "created_at": "2026-10-13T15:33:13.857Z",
+      "updated_at": "2026-10-13T15:33:13.857Z",
+      "class_group_id": "68cf97aa-be63-462e-9234-fa01125cef88",
+      "instructor_id": "a7dd9dbe-92a1-45f2-9bc2-0b0cc4fbc929",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T15:33:13.857Z"
+    },
+    {
+      "id": "45d9af52-6f0d-466e-834c-f14797dbe2ca",
+      "created_at": "2026-10-13T15:34:13.752Z",
+      "updated_at": "2026-10-13T15:34:13.752Z",
+      "class_group_id": "6b4df6ea-3d89-49ae-8aa0-7bf1c91373b8",
+      "instructor_id": "a7dd9dbe-92a1-45f2-9bc2-0b0cc4fbc929",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T15:34:13.752Z"
+    },
+    {
+      "id": "6100aad4-070e-45e9-8da2-e32b65ce38bf",
+      "created_at": "2026-10-13T15:34:54.263Z",
+      "updated_at": "2026-10-13T15:34:54.263Z",
+      "class_group_id": "fee34a71-0da9-4df9-95c8-33c219ececd9",
+      "instructor_id": "a7dd9dbe-92a1-45f2-9bc2-0b0cc4fbc929",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T15:34:54.263Z"
+    },
+    {
+      "id": "61b7933e-b04c-4d1d-9b41-dac26f24e0de",
+      "created_at": "2026-10-13T15:34:39.260Z",
+      "updated_at": "2026-10-13T15:34:39.260Z",
+      "class_group_id": "755f7d9c-45c0-4f73-bb94-49120f6a383d",
+      "instructor_id": "a7dd9dbe-92a1-45f2-9bc2-0b0cc4fbc929",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T15:34:39.260Z"
+    },
+    {
+      "id": "b7da0192-5d82-44dc-bd18-b32ed380cd92",
+      "created_at": "2026-10-13T15:21:35.840Z",
+      "updated_at": "2026-10-13T15:21:35.840Z",
+      "class_group_id": "98425e99-d13b-4492-b1f2-0611eab0abaf",
+      "instructor_id": "52a694e2-7a37-4188-b753-9e5aca48a4a3",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T15:21:35.840Z"
+    },
+    {
+      "id": "be3f0a2e-682a-4b2c-88b6-082e8cf68d3d",
+      "created_at": "2026-10-13T15:21:05.675Z",
+      "updated_at": "2026-10-13T15:21:05.675Z",
+      "class_group_id": "50e1da1a-26a6-4738-abc6-c35753c85665",
+      "instructor_id": "a7dd9dbe-92a1-45f2-9bc2-0b0cc4fbc929",
+      "is_lead": true,
+      "assigned_at": "2026-10-13T15:21:05.675Z"
+    }
+  ],
+  "workshops.Meeting": [
+    {
+      "id": "3d5529d5-243e-43ac-bc34-06bb60c675aa",
+      "created_at": "2026-10-13T15:21:46.992Z",
+      "updated_at": "2026-10-13T15:24:45.349Z",
+      "class_group_id": "3b60081f-ad7e-42b0-a919-9863cfbb0f5d",
+      "title": "VALIDATION-20261013-120621 MEETING_1",
+      "description": "VALIDATION-20261013-120621 editado",
+      "starts_at": "2026-10-13T03:00:00Z",
+      "ends_at": "2026-10-13T04:00:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "3dd6a160-9444-4eee-9105-5c8db8b16ab6",
+      "created_at": "2026-10-13T15:35:15.408Z",
+      "updated_at": "2026-10-13T15:35:15.408Z",
+      "class_group_id": "fee34a71-0da9-4df9-95c8-33c219ececd9",
+      "title": "VALIDATION-20261013-120621 STARTED_MEETING",
+      "description": "",
+      "starts_at": "2026-10-13T03:00:00Z",
+      "ends_at": "2026-10-13T04:00:00Z",
+      "status": "PLANNED"
+    },
+    {
+      "id": "6d8f36e5-cfee-4afb-9ba6-2b1abf97b6a4",
+      "created_at": "2026-10-13T15:21:59.363Z",
+      "updated_at": "2026-10-13T15:24:54.441Z",
+      "class_group_id": "3b60081f-ad7e-42b0-a919-9863cfbb0f5d",
+      "title": "VALIDATION-20261013-120621 MEETING_4",
+      "description": "VALIDATION-20261013-120621",
+      "starts_at": "2026-10-13T06:00:00Z",
+      "ends_at": "2026-10-13T07:00:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "7c2fb205-f79b-40d6-8294-6774f67f4c4f",
+      "created_at": "2026-10-13T15:22:12.883Z",
+      "updated_at": "2026-10-13T15:25:14.697Z",
+      "class_group_id": "3b60081f-ad7e-42b0-a919-9863cfbb0f5d",
+      "title": "VALIDATION-20261013-120621 FUTURE_MEETING",
+      "description": "",
+      "starts_at": "2026-10-14T11:00:00Z",
+      "ends_at": "2026-10-14T12:00:00Z",
+      "status": "CANCELLED"
+    },
+    {
+      "id": "a12b6348-e158-4673-a22e-4db3e530dbf1",
+      "created_at": "2026-10-13T15:34:00.360Z",
+      "updated_at": "2026-10-13T15:34:00.361Z",
+      "class_group_id": "68cf97aa-be63-462e-9234-fa01125cef88",
+      "title": "VALIDATION-20261013-120621 DUPLICATE_BASE",
+      "description": "",
+      "starts_at": "2026-10-14T11:00:00Z",
+      "ends_at": "2026-10-14T12:00:00Z",
+      "status": "PLANNED"
+    },
+    {
+      "id": "bd9393d1-bdd9-45f8-98bb-c4cfdd12a70e",
+      "created_at": "2026-10-13T15:21:51.185Z",
+      "updated_at": "2026-10-13T15:24:48.280Z",
+      "class_group_id": "3b60081f-ad7e-42b0-a919-9863cfbb0f5d",
+      "title": "VALIDATION-20261013-120621 MEETING_2",
+      "description": "VALIDATION-20261013-120621",
+      "starts_at": "2026-10-13T04:00:00Z",
+      "ends_at": "2026-10-13T05:00:00Z",
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e20253da-eef9-4552-9c20-a47ab8ca93ad",
+      "created_at": "2026-10-13T15:36:05.945Z",
+      "updated_at": "2026-10-13T15:36:10.378Z",
+      "class_group_id": "98425e99-d13b-4492-b1f2-0611eab0abaf",
+      "title": "VALIDATION-20261013-120621 CANCEL_ON_CLASS",
+      "description": "",
+      "starts_at": "2026-10-14T11:00:00Z",
+      "ends_at": "2026-10-14T12:00:00Z",
+      "status": "CANCELLED"
+    },
+    {
+      "id": "f4584d44-62f0-403a-9171-c09f96ea6035",
+      "created_at": "2026-10-13T15:21:55.479Z",
+      "updated_at": "2026-10-13T15:24:51.381Z",
+      "class_group_id": "3b60081f-ad7e-42b0-a919-9863cfbb0f5d",
+      "title": "VALIDATION-20261013-120621 MEETING_3",
+      "description": "VALIDATION-20261013-120621",
+      "starts_at": "2026-10-13T05:00:00Z",
+      "ends_at": "2026-10-13T06:00:00Z",
+      "status": "COMPLETED"
+    }
+  ],
+  "enrollments.Enrollment": [
+    {
+      "id": "051179f1-d2c7-4d75-a881-0f56d9ec06a8",
+      "created_at": "2026-10-13T15:24:04.263Z",
+      "updated_at": "2026-10-13T15:26:36.522Z",
+      "participant_id": "5f670902-3efc-4d6d-a595-05ee0566aa64",
+      "class_group_id": "3b60081f-ad7e-42b0-a919-9863cfbb0f5d",
+      "status": "NOT_COMPLETED",
+      "status_reason": "Critérios não atendidos: frequência mínima de 75% (obtida 50.00%).",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T15:24:08.491Z",
+      "cancelled_at": null,
+      "created_by_id": "c5163e3d-d824-4c7c-a186-05a6be2e8238"
+    },
+    {
+      "id": "06f2002d-986d-4a31-8d84-d38c13c5ea96",
+      "created_at": "2026-10-13T15:22:46.803Z",
+      "updated_at": "2026-10-13T15:23:34.505Z",
+      "participant_id": "46cd96dc-9392-4e31-98de-d39234b2b656",
+      "class_group_id": "50e1da1a-26a6-4738-abc6-c35753c85665",
+      "status": "REJECTED",
+      "status_reason": "VALIDATION-20261013-120621 motivo fictício",
+      "waitlisted_at": null,
+      "confirmed_at": null,
+      "cancelled_at": null,
+      "created_by_id": "62a58e48-0a6e-4e31-a787-60a0a5ccf234"
+    },
+    {
+      "id": "0cd35336-dd9a-40bd-b563-dd98c7e6a6b4",
+      "created_at": "2026-10-13T15:24:11.368Z",
+      "updated_at": "2026-10-13T15:26:36.512Z",
+      "participant_id": "4d0105eb-d4bc-4a43-b16f-f9cb697c1444",
+      "class_group_id": "3b60081f-ad7e-42b0-a919-9863cfbb0f5d",
+      "status": "NOT_COMPLETED",
+      "status_reason": "Critérios não atendidos: nota mínima 6,0 (obtida 5.9).",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T15:24:15.746Z",
+      "cancelled_at": null,
+      "created_by_id": "e8e28246-d644-4004-b2e8-44a7ccfbb4bd"
+    },
+    {
+      "id": "229f9149-a0ec-46b0-b3a3-544b6041c35d",
+      "created_at": "2026-10-13T15:34:19.693Z",
+      "updated_at": "2026-10-13T15:34:24.040Z",
+      "participant_id": "2f64a5d9-b78d-4bf1-aff3-33fecf800999",
+      "class_group_id": "6b4df6ea-3d89-49ae-8aa0-7bf1c91373b8",
+      "status": "CONFIRMED",
+      "status_reason": "",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T15:34:24.039Z",
+      "cancelled_at": null,
+      "created_by_id": "55605414-8f07-4f40-8560-5d21b2991f12"
+    },
+    {
+      "id": "2b1b14fa-df43-47b9-8083-139ad1a02e2d",
+      "created_at": "2026-10-13T15:23:55.332Z",
+      "updated_at": "2026-10-13T15:26:36.530Z",
+      "participant_id": "2f64a5d9-b78d-4bf1-aff3-33fecf800999",
+      "class_group_id": "3b60081f-ad7e-42b0-a919-9863cfbb0f5d",
+      "status": "APPROVED",
+      "status_reason": "",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T15:23:59.374Z",
+      "cancelled_at": null,
+      "created_by_id": "55605414-8f07-4f40-8560-5d21b2991f12"
+    },
+    {
+      "id": "5ccd1775-c044-44b6-b557-0a4d3ce19755",
+      "created_at": "2026-10-13T15:33:19.521Z",
+      "updated_at": "2026-10-13T15:33:43.354Z",
+      "participant_id": "2f64a5d9-b78d-4bf1-aff3-33fecf800999",
+      "class_group_id": "68cf97aa-be63-462e-9234-fa01125cef88",
+      "status": "CANCELLED",
+      "status_reason": "VALIDATION-20261013-120621 cenário de promoção manual",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T15:33:23.765Z",
+      "cancelled_at": "2026-10-13T15:33:43.354Z",
+      "created_by_id": "55605414-8f07-4f40-8560-5d21b2991f12"
+    },
+    {
+      "id": "6644cbeb-6aca-49cf-9330-2c736e101b6c",
+      "created_at": "2026-10-13T15:22:42.812Z",
+      "updated_at": "2026-10-13T15:23:28.845Z",
+      "participant_id": "2f64a5d9-b78d-4bf1-aff3-33fecf800999",
+      "class_group_id": "50e1da1a-26a6-4738-abc6-c35753c85665",
+      "status": "CANCELLED",
+      "status_reason": "",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T15:22:56.360Z",
+      "cancelled_at": "2026-10-13T15:23:28.845Z",
+      "created_by_id": "55605414-8f07-4f40-8560-5d21b2991f12"
+    },
+    {
+      "id": "7209b36c-1db6-4003-9788-86a099b19cf6",
+      "created_at": "2026-10-13T15:33:33.641Z",
+      "updated_at": "2026-10-13T15:33:33.641Z",
+      "participant_id": "46cd96dc-9392-4e31-98de-d39234b2b656",
+      "class_group_id": "68cf97aa-be63-462e-9234-fa01125cef88",
+      "status": "WAITLISTED",
+      "status_reason": "",
+      "waitlisted_at": "2026-10-13T15:33:33.641Z",
+      "confirmed_at": null,
+      "cancelled_at": null,
+      "created_by_id": "62a58e48-0a6e-4e31-a787-60a0a5ccf234"
+    },
+    {
+      "id": "841e1f7a-846d-43d2-9f6f-893e531b497a",
+      "created_at": "2026-10-13T15:23:47.391Z",
+      "updated_at": "2026-10-13T15:23:47.391Z",
+      "participant_id": "5f670902-3efc-4d6d-a595-05ee0566aa64",
+      "class_group_id": "a0015464-d362-4efe-af79-9cf1842e8c04",
+      "status": "PENDING",
+      "status_reason": "",
+      "waitlisted_at": null,
+      "confirmed_at": null,
+      "cancelled_at": null,
+      "created_by_id": "c5163e3d-d824-4c7c-a186-05a6be2e8238"
+    },
+    {
+      "id": "9fcee5bc-dc65-4211-aba8-8b84f987a543",
+      "created_at": "2026-10-13T15:23:07.640Z",
+      "updated_at": "2026-10-13T15:23:40.153Z",
+      "participant_id": "4d0105eb-d4bc-4a43-b16f-f9cb697c1444",
+      "class_group_id": "50e1da1a-26a6-4738-abc6-c35753c85665",
+      "status": "CONFIRMED",
+      "status_reason": "Promoção automática da lista de espera.",
+      "waitlisted_at": "2026-10-13T15:23:07.640Z",
+      "confirmed_at": "2026-10-13T15:23:40.153Z",
+      "cancelled_at": null,
+      "created_by_id": "e8e28246-d644-4004-b2e8-44a7ccfbb4bd"
+    },
+    {
+      "id": "a159d0fd-bf06-46cd-bd3a-15b9792bc905",
+      "created_at": "2026-10-13T15:24:18.648Z",
+      "updated_at": "2026-10-13T15:26:36.494Z",
+      "participant_id": "46cd96dc-9392-4e31-98de-d39234b2b656",
+      "class_group_id": "3b60081f-ad7e-42b0-a919-9863cfbb0f5d",
+      "status": "NOT_COMPLETED",
+      "status_reason": "Critérios não atendidos: projeto entregue.",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T15:24:22.889Z",
+      "cancelled_at": null,
+      "created_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c"
+    },
+    {
+      "id": "a693b459-f675-4f68-87f3-17af8239d3db",
+      "created_at": "2026-10-13T15:34:27.207Z",
+      "updated_at": "2026-10-13T15:34:27.207Z",
+      "participant_id": "5f670902-3efc-4d6d-a595-05ee0566aa64",
+      "class_group_id": "6b4df6ea-3d89-49ae-8aa0-7bf1c91373b8",
+      "status": "PENDING",
+      "status_reason": "",
+      "waitlisted_at": null,
+      "confirmed_at": null,
+      "cancelled_at": null,
+      "created_by_id": "c5163e3d-d824-4c7c-a186-05a6be2e8238"
+    },
+    {
+      "id": "aabb3f48-83f2-4c44-b4c4-b21b25c754af",
+      "created_at": "2026-10-13T15:35:01.966Z",
+      "updated_at": "2026-10-13T15:35:08.876Z",
+      "participant_id": "2f64a5d9-b78d-4bf1-aff3-33fecf800999",
+      "class_group_id": "fee34a71-0da9-4df9-95c8-33c219ececd9",
+      "status": "CONFIRMED",
+      "status_reason": "",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T15:35:08.876Z",
+      "cancelled_at": null,
+      "created_by_id": "55605414-8f07-4f40-8560-5d21b2991f12"
+    },
+    {
+      "id": "c67cf134-1b27-4e8c-9ea7-a6872c67df87",
+      "created_at": "2026-10-13T15:33:26.636Z",
+      "updated_at": "2026-10-13T15:33:57.260Z",
+      "participant_id": "5f670902-3efc-4d6d-a595-05ee0566aa64",
+      "class_group_id": "68cf97aa-be63-462e-9234-fa01125cef88",
+      "status": "CONFIRMED",
+      "status_reason": "Promoção automática da lista de espera.",
+      "waitlisted_at": "2026-10-13T15:33:26.636Z",
+      "confirmed_at": "2026-10-13T15:33:57.259Z",
+      "cancelled_at": null,
+      "created_by_id": "c5163e3d-d824-4c7c-a186-05a6be2e8238"
+    },
+    {
+      "id": "c7f73d32-9456-4b76-aa1a-1efe7e257f21",
+      "created_at": "2026-10-13T15:23:43.226Z",
+      "updated_at": "2026-10-13T15:23:52.500Z",
+      "participant_id": "2f64a5d9-b78d-4bf1-aff3-33fecf800999",
+      "class_group_id": "a0015464-d362-4efe-af79-9cf1842e8c04",
+      "status": "CONFIRMED",
+      "status_reason": "",
+      "waitlisted_at": null,
+      "confirmed_at": "2026-10-13T15:23:52.500Z",
+      "cancelled_at": null,
+      "created_by_id": "55605414-8f07-4f40-8560-5d21b2991f12"
+    },
+    {
+      "id": "de2d0c49-400c-4567-bb70-253eafe3fdb5",
+      "created_at": "2026-10-13T15:23:03.052Z",
+      "updated_at": "2026-10-13T15:23:40.145Z",
+      "participant_id": "5f670902-3efc-4d6d-a595-05ee0566aa64",
+      "class_group_id": "50e1da1a-26a6-4738-abc6-c35753c85665",
+      "status": "CANCELLED",
+      "status_reason": "VALIDATION-20261013-120621 cancelamento",
+      "waitlisted_at": "2026-10-13T15:23:03.052Z",
+      "confirmed_at": "2026-10-13T15:23:28.850Z",
+      "cancelled_at": "2026-10-13T15:23:40.145Z",
+      "created_by_id": "c5163e3d-d824-4c7c-a186-05a6be2e8238"
+    }
+  ],
+  "enrollments.EnrollmentStatusHistory": [
+    {
+      "id": 21,
+      "enrollment_id": "6644cbeb-6aca-49cf-9330-2c736e101b6c",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "55605414-8f07-4f40-8560-5d21b2991f12",
+      "created_at": "2026-10-13T15:22:42.813Z"
+    },
+    {
+      "id": 22,
+      "enrollment_id": "06f2002d-986d-4a31-8d84-d38c13c5ea96",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "62a58e48-0a6e-4e31-a787-60a0a5ccf234",
+      "created_at": "2026-10-13T15:22:46.804Z"
+    },
+    {
+      "id": 23,
+      "enrollment_id": "6644cbeb-6aca-49cf-9330-2c736e101b6c",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:22:56.361Z"
+    },
+    {
+      "id": 24,
+      "enrollment_id": "de2d0c49-400c-4567-bb70-253eafe3fdb5",
+      "from_status": null,
+      "to_status": "WAITLISTED",
+      "reason": "",
+      "changed_by_id": "c5163e3d-d824-4c7c-a186-05a6be2e8238",
+      "created_at": "2026-10-13T15:23:03.054Z"
+    },
+    {
+      "id": 25,
+      "enrollment_id": "9fcee5bc-dc65-4211-aba8-8b84f987a543",
+      "from_status": null,
+      "to_status": "WAITLISTED",
+      "reason": "",
+      "changed_by_id": "e8e28246-d644-4004-b2e8-44a7ccfbb4bd",
+      "created_at": "2026-10-13T15:23:07.641Z"
+    },
+    {
+      "id": 26,
+      "enrollment_id": "6644cbeb-6aca-49cf-9330-2c736e101b6c",
+      "from_status": "CONFIRMED",
+      "to_status": "CANCELLED",
+      "reason": "",
+      "changed_by_id": "55605414-8f07-4f40-8560-5d21b2991f12",
+      "created_at": "2026-10-13T15:23:28.846Z"
+    },
+    {
+      "id": 27,
+      "enrollment_id": "de2d0c49-400c-4567-bb70-253eafe3fdb5",
+      "from_status": "WAITLISTED",
+      "to_status": "CONFIRMED",
+      "reason": "Promoção automática da lista de espera.",
+      "changed_by_id": "55605414-8f07-4f40-8560-5d21b2991f12",
+      "created_at": "2026-10-13T15:23:28.851Z"
+    },
+    {
+      "id": 28,
+      "enrollment_id": "06f2002d-986d-4a31-8d84-d38c13c5ea96",
+      "from_status": "PENDING",
+      "to_status": "REJECTED",
+      "reason": "VALIDATION-20261013-120621 motivo fictício",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:23:34.506Z"
+    },
+    {
+      "id": 29,
+      "enrollment_id": "de2d0c49-400c-4567-bb70-253eafe3fdb5",
+      "from_status": "CONFIRMED",
+      "to_status": "CANCELLED",
+      "reason": "VALIDATION-20261013-120621 cancelamento",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:23:40.146Z"
+    },
+    {
+      "id": 30,
+      "enrollment_id": "9fcee5bc-dc65-4211-aba8-8b84f987a543",
+      "from_status": "WAITLISTED",
+      "to_status": "CONFIRMED",
+      "reason": "Promoção automática da lista de espera.",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:23:40.154Z"
+    },
+    {
+      "id": 31,
+      "enrollment_id": "c7f73d32-9456-4b76-aa1a-1efe7e257f21",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "55605414-8f07-4f40-8560-5d21b2991f12",
+      "created_at": "2026-10-13T15:23:43.227Z"
+    },
+    {
+      "id": 32,
+      "enrollment_id": "841e1f7a-846d-43d2-9f6f-893e531b497a",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "c5163e3d-d824-4c7c-a186-05a6be2e8238",
+      "created_at": "2026-10-13T15:23:47.392Z"
+    },
+    {
+      "id": 33,
+      "enrollment_id": "c7f73d32-9456-4b76-aa1a-1efe7e257f21",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:23:52.502Z"
+    },
+    {
+      "id": 34,
+      "enrollment_id": "2b1b14fa-df43-47b9-8083-139ad1a02e2d",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "55605414-8f07-4f40-8560-5d21b2991f12",
+      "created_at": "2026-10-13T15:23:55.332Z"
+    },
+    {
+      "id": 35,
+      "enrollment_id": "2b1b14fa-df43-47b9-8083-139ad1a02e2d",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:23:59.375Z"
+    },
+    {
+      "id": 36,
+      "enrollment_id": "051179f1-d2c7-4d75-a881-0f56d9ec06a8",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "c5163e3d-d824-4c7c-a186-05a6be2e8238",
+      "created_at": "2026-10-13T15:24:04.265Z"
+    },
+    {
+      "id": 37,
+      "enrollment_id": "051179f1-d2c7-4d75-a881-0f56d9ec06a8",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:24:08.492Z"
+    },
+    {
+      "id": 38,
+      "enrollment_id": "0cd35336-dd9a-40bd-b563-dd98c7e6a6b4",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "e8e28246-d644-4004-b2e8-44a7ccfbb4bd",
+      "created_at": "2026-10-13T15:24:11.368Z"
+    },
+    {
+      "id": 39,
+      "enrollment_id": "0cd35336-dd9a-40bd-b563-dd98c7e6a6b4",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:24:15.747Z"
+    },
+    {
+      "id": 40,
+      "enrollment_id": "a159d0fd-bf06-46cd-bd3a-15b9792bc905",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:24:18.649Z"
+    },
+    {
+      "id": 41,
+      "enrollment_id": "a159d0fd-bf06-46cd-bd3a-15b9792bc905",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:24:22.891Z"
+    },
+    {
+      "id": 42,
+      "enrollment_id": "a159d0fd-bf06-46cd-bd3a-15b9792bc905",
+      "from_status": "CONFIRMED",
+      "to_status": "NOT_COMPLETED",
+      "reason": "Critérios não atendidos: projeto entregue.",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:26:36.498Z"
+    },
+    {
+      "id": 43,
+      "enrollment_id": "0cd35336-dd9a-40bd-b563-dd98c7e6a6b4",
+      "from_status": "CONFIRMED",
+      "to_status": "NOT_COMPLETED",
+      "reason": "Critérios não atendidos: nota mínima 6,0 (obtida 5.9).",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:26:36.513Z"
+    },
+    {
+      "id": 44,
+      "enrollment_id": "051179f1-d2c7-4d75-a881-0f56d9ec06a8",
+      "from_status": "CONFIRMED",
+      "to_status": "NOT_COMPLETED",
+      "reason": "Critérios não atendidos: frequência mínima de 75% (obtida 50.00%).",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:26:36.523Z"
+    },
+    {
+      "id": 45,
+      "enrollment_id": "2b1b14fa-df43-47b9-8083-139ad1a02e2d",
+      "from_status": "CONFIRMED",
+      "to_status": "APPROVED",
+      "reason": "",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:26:36.531Z"
+    },
+    {
+      "id": 46,
+      "enrollment_id": "5ccd1775-c044-44b6-b557-0a4d3ce19755",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "55605414-8f07-4f40-8560-5d21b2991f12",
+      "created_at": "2026-10-13T15:33:19.522Z"
+    },
+    {
+      "id": 47,
+      "enrollment_id": "5ccd1775-c044-44b6-b557-0a4d3ce19755",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:33:23.767Z"
+    },
+    {
+      "id": 48,
+      "enrollment_id": "c67cf134-1b27-4e8c-9ea7-a6872c67df87",
+      "from_status": null,
+      "to_status": "WAITLISTED",
+      "reason": "",
+      "changed_by_id": "c5163e3d-d824-4c7c-a186-05a6be2e8238",
+      "created_at": "2026-10-13T15:33:26.636Z"
+    },
+    {
+      "id": 49,
+      "enrollment_id": "7209b36c-1db6-4003-9788-86a099b19cf6",
+      "from_status": null,
+      "to_status": "WAITLISTED",
+      "reason": "",
+      "changed_by_id": "62a58e48-0a6e-4e31-a787-60a0a5ccf234",
+      "created_at": "2026-10-13T15:33:33.643Z"
+    },
+    {
+      "id": 50,
+      "enrollment_id": "5ccd1775-c044-44b6-b557-0a4d3ce19755",
+      "from_status": "CONFIRMED",
+      "to_status": "CANCELLED",
+      "reason": "VALIDATION-20261013-120621 cenário de promoção manual",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:33:43.356Z"
+    },
+    {
+      "id": 51,
+      "enrollment_id": "c67cf134-1b27-4e8c-9ea7-a6872c67df87",
+      "from_status": "WAITLISTED",
+      "to_status": "CONFIRMED",
+      "reason": "Promoção automática da lista de espera.",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:33:57.261Z"
+    },
+    {
+      "id": 52,
+      "enrollment_id": "229f9149-a0ec-46b0-b3a3-544b6041c35d",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "55605414-8f07-4f40-8560-5d21b2991f12",
+      "created_at": "2026-10-13T15:34:19.694Z"
+    },
+    {
+      "id": 53,
+      "enrollment_id": "229f9149-a0ec-46b0-b3a3-544b6041c35d",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:34:24.042Z"
+    },
+    {
+      "id": 54,
+      "enrollment_id": "a693b459-f675-4f68-87f3-17af8239d3db",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "c5163e3d-d824-4c7c-a186-05a6be2e8238",
+      "created_at": "2026-10-13T15:34:27.211Z"
+    },
+    {
+      "id": 55,
+      "enrollment_id": "aabb3f48-83f2-4c44-b4c4-b21b25c754af",
+      "from_status": null,
+      "to_status": "PENDING",
+      "reason": "",
+      "changed_by_id": "55605414-8f07-4f40-8560-5d21b2991f12",
+      "created_at": "2026-10-13T15:35:01.984Z"
+    },
+    {
+      "id": 56,
+      "enrollment_id": "aabb3f48-83f2-4c44-b4c4-b21b25c754af",
+      "from_status": "PENDING",
+      "to_status": "CONFIRMED",
+      "reason": "",
+      "changed_by_id": "e4a2a0a3-371b-47fc-8a35-030b3e4a217c",
+      "created_at": "2026-10-13T15:35:08.879Z"
+    }
+  ],
+  "learning.Attendance": [
+    {
+      "id": "253efb4a-d094-4b94-b49f-31b64543158d",
+      "created_at": "2026-10-13T15:24:48.273Z",
+      "updated_at": "2026-10-13T15:24:48.273Z",
+      "enrollment_id": "2b1b14fa-df43-47b9-8083-139ad1a02e2d",
+      "meeting_id": "bd9393d1-bdd9-45f8-98bb-c4cfdd12a70e",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "2d0e3eb0-f3dc-482d-a271-00652d93477f",
+      "created_at": "2026-10-13T15:24:45.344Z",
+      "updated_at": "2026-10-13T15:25:02.774Z",
+      "enrollment_id": "051179f1-d2c7-4d75-a881-0f56d9ec06a8",
+      "meeting_id": "3d5529d5-243e-43ac-bc34-06bb60c675aa",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "3798f518-5c98-4f47-a2e5-a7537040ea9b",
+      "created_at": "2026-10-13T15:24:54.438Z",
+      "updated_at": "2026-10-13T15:24:54.438Z",
+      "enrollment_id": "051179f1-d2c7-4d75-a881-0f56d9ec06a8",
+      "meeting_id": "6d8f36e5-cfee-4afb-9ba6-2b1abf97b6a4",
+      "status": "ABSENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "69b7dd54-5ee3-4dfb-95e9-503426e28be8",
+      "created_at": "2026-10-13T15:24:51.371Z",
+      "updated_at": "2026-10-13T15:24:51.371Z",
+      "enrollment_id": "051179f1-d2c7-4d75-a881-0f56d9ec06a8",
+      "meeting_id": "f4584d44-62f0-403a-9171-c09f96ea6035",
+      "status": "JUSTIFIED",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "7015faf1-1492-4575-b07a-6ce001406655",
+      "created_at": "2026-10-13T15:24:54.434Z",
+      "updated_at": "2026-10-13T15:24:54.434Z",
+      "enrollment_id": "a159d0fd-bf06-46cd-bd3a-15b9792bc905",
+      "meeting_id": "6d8f36e5-cfee-4afb-9ba6-2b1abf97b6a4",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "86918674-9a99-4e8c-a6f7-e746c3725693",
+      "created_at": "2026-10-13T15:24:45.339Z",
+      "updated_at": "2026-10-13T15:25:02.680Z",
+      "enrollment_id": "a159d0fd-bf06-46cd-bd3a-15b9792bc905",
+      "meeting_id": "3d5529d5-243e-43ac-bc34-06bb60c675aa",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "887c7a7d-9c07-4388-b9ec-ce66e7ca9a1b",
+      "created_at": "2026-10-13T15:24:48.279Z",
+      "updated_at": "2026-10-13T15:24:48.279Z",
+      "enrollment_id": "0cd35336-dd9a-40bd-b563-dd98c7e6a6b4",
+      "meeting_id": "bd9393d1-bdd9-45f8-98bb-c4cfdd12a70e",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "8a018703-5f8d-45b9-8a2d-49e7ad8ae7c7",
+      "created_at": "2026-10-13T15:24:51.379Z",
+      "updated_at": "2026-10-13T15:24:51.379Z",
+      "enrollment_id": "0cd35336-dd9a-40bd-b563-dd98c7e6a6b4",
+      "meeting_id": "f4584d44-62f0-403a-9171-c09f96ea6035",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "8aeadc1a-1d96-4f0a-8bc8-7c671760a8aa",
+      "created_at": "2026-10-13T15:24:54.440Z",
+      "updated_at": "2026-10-13T15:24:54.440Z",
+      "enrollment_id": "0cd35336-dd9a-40bd-b563-dd98c7e6a6b4",
+      "meeting_id": "6d8f36e5-cfee-4afb-9ba6-2b1abf97b6a4",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "91d30b02-ede8-4987-8e97-be7900d67f40",
+      "created_at": "2026-10-13T15:24:51.367Z",
+      "updated_at": "2026-10-13T15:24:51.367Z",
+      "enrollment_id": "2b1b14fa-df43-47b9-8083-139ad1a02e2d",
+      "meeting_id": "f4584d44-62f0-403a-9171-c09f96ea6035",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "a1fc7d9d-661b-4f87-94e7-589f56a6f08d",
+      "created_at": "2026-10-13T15:24:48.268Z",
+      "updated_at": "2026-10-13T15:24:48.268Z",
+      "enrollment_id": "a159d0fd-bf06-46cd-bd3a-15b9792bc905",
+      "meeting_id": "bd9393d1-bdd9-45f8-98bb-c4cfdd12a70e",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "acc60fb9-4e4f-4e6c-b7b0-007e53649f58",
+      "created_at": "2026-10-13T15:24:45.347Z",
+      "updated_at": "2026-10-13T15:25:02.807Z",
+      "enrollment_id": "0cd35336-dd9a-40bd-b563-dd98c7e6a6b4",
+      "meeting_id": "3d5529d5-243e-43ac-bc34-06bb60c675aa",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "b3cbff25-2edb-423d-a87c-e239e3829bcf",
+      "created_at": "2026-10-13T15:24:45.342Z",
+      "updated_at": "2026-10-13T15:25:02.731Z",
+      "enrollment_id": "2b1b14fa-df43-47b9-8083-139ad1a02e2d",
+      "meeting_id": "3d5529d5-243e-43ac-bc34-06bb60c675aa",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "c25611a2-d4de-4499-8f62-ab8f8a19bd55",
+      "created_at": "2026-10-13T15:24:51.364Z",
+      "updated_at": "2026-10-13T15:24:51.364Z",
+      "enrollment_id": "a159d0fd-bf06-46cd-bd3a-15b9792bc905",
+      "meeting_id": "f4584d44-62f0-403a-9171-c09f96ea6035",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "efdf367a-e328-4222-9c5e-39c907758b55",
+      "created_at": "2026-10-13T15:24:54.436Z",
+      "updated_at": "2026-10-13T15:24:54.436Z",
+      "enrollment_id": "2b1b14fa-df43-47b9-8083-139ad1a02e2d",
+      "meeting_id": "6d8f36e5-cfee-4afb-9ba6-2b1abf97b6a4",
+      "status": "ABSENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    },
+    {
+      "id": "f0303a88-55ea-42b9-8347-521acda70128",
+      "created_at": "2026-10-13T15:24:48.276Z",
+      "updated_at": "2026-10-13T15:24:48.276Z",
+      "enrollment_id": "051179f1-d2c7-4d75-a881-0f56d9ec06a8",
+      "meeting_id": "bd9393d1-bdd9-45f8-98bb-c4cfdd12a70e",
+      "status": "PRESENT",
+      "note": "VALIDATION-20261013-120621 frequência fictícia",
+      "recorded_by_id": "aae00440-8786-444e-83ae-fda9c805e245"
+    }
+  ],
+  "learning.StudentProject": [
+    {
+      "id": "63538110-c591-4d20-a80a-ebbd8b42d66e",
+      "created_at": "2026-10-13T15:25:33.572Z",
+      "updated_at": "2026-10-13T15:25:33.575Z",
+      "enrollment_id": "051179f1-d2c7-4d75-a881-0f56d9ec06a8",
+      "title": "VALIDATION-20261013-120621 PROJECT_P2",
+      "description": "VALIDATION-20261013-120621 entrega fictícia",
+      "repository_url": "https://example.com/validation-20261013-120621",
+      "demonstration_url": "",
+      "is_delivered": true,
+      "delivered_at": "2026-10-13T15:25:33.573Z",
+      "review_notes": ""
+    },
+    {
+      "id": "6a43a6ad-155c-4b9c-9d91-b8a4e9a0cd35",
+      "created_at": "2026-10-13T15:25:36.439Z",
+      "updated_at": "2026-10-13T15:25:36.442Z",
+      "enrollment_id": "0cd35336-dd9a-40bd-b563-dd98c7e6a6b4",
+      "title": "VALIDATION-20261013-120621 PROJECT_P3",
+      "description": "VALIDATION-20261013-120621 entrega fictícia",
+      "repository_url": "https://example.com/validation-20261013-120621",
+      "demonstration_url": "",
+      "is_delivered": true,
+      "delivered_at": "2026-10-13T15:25:36.440Z",
+      "review_notes": ""
+    },
+    {
+      "id": "b618afce-7054-425b-b4ee-5298dec0d761",
+      "created_at": "2026-10-13T15:25:27.534Z",
+      "updated_at": "2026-10-13T15:25:46.409Z",
+      "enrollment_id": "2b1b14fa-df43-47b9-8083-139ad1a02e2d",
+      "title": "VALIDATION-20261013-120621 PROJECT_P1",
+      "description": "VALIDATION-20261013-120621 entrega fictícia",
+      "repository_url": "https://example.com/validation-20261013-120621",
+      "demonstration_url": "",
+      "is_delivered": true,
+      "delivered_at": "2026-10-13T15:25:30.707Z",
+      "review_notes": "VALIDATION-20261013-120621 revisão"
+    }
+  ],
+  "learning.Evaluation": [
+    {
+      "id": "188648b0-4d78-4bc2-9044-0f9676c9c9f9",
+      "created_at": "2026-10-13T15:26:08.584Z",
+      "updated_at": "2026-10-13T15:26:11.420Z",
+      "enrollment_id": "051179f1-d2c7-4d75-a881-0f56d9ec06a8",
+      "final_score": "10.0",
+      "feedback": "VALIDATION-20261013-120621 FEEDBACK_P2",
+      "evaluated_by_id": "aae00440-8786-444e-83ae-fda9c805e245",
+      "published_at": "2026-10-13T15:26:11.416Z"
+    },
+    {
+      "id": "20e57363-ce5c-459f-b68f-4d3e6cbe0da0",
+      "created_at": "2026-10-13T15:26:14.157Z",
+      "updated_at": "2026-10-13T15:26:16.839Z",
+      "enrollment_id": "0cd35336-dd9a-40bd-b563-dd98c7e6a6b4",
+      "final_score": "5.9",
+      "feedback": "VALIDATION-20261013-120621 FEEDBACK_P3",
+      "evaluated_by_id": "aae00440-8786-444e-83ae-fda9c805e245",
+      "published_at": "2026-10-13T15:26:16.835Z"
+    },
+    {
+      "id": "21f726f1-e16e-429b-9468-66308cf8427e",
+      "created_at": "2026-10-13T15:26:19.403Z",
+      "updated_at": "2026-10-13T15:26:22.415Z",
+      "enrollment_id": "a159d0fd-bf06-46cd-bd3a-15b9792bc905",
+      "final_score": "10.0",
+      "feedback": "VALIDATION-20261013-120621 FEEDBACK_MINOR",
+      "evaluated_by_id": "aae00440-8786-444e-83ae-fda9c805e245",
+      "published_at": "2026-10-13T15:26:22.412Z"
+    },
+    {
+      "id": "3b98e9bd-997c-4622-a234-c94ed7a966d3",
+      "created_at": "2026-10-13T15:25:56.131Z",
+      "updated_at": "2026-10-13T15:26:05.686Z",
+      "enrollment_id": "2b1b14fa-df43-47b9-8083-139ad1a02e2d",
+      "final_score": "6.0",
+      "feedback": "VALIDATION-20261013-120621 FEEDBACK_P1",
+      "evaluated_by_id": "aae00440-8786-444e-83ae-fda9c805e245",
+      "published_at": "2026-10-13T15:26:05.681Z"
+    }
+  ],
+  "learning.Certificate": [
+    {
+      "id": "d162ef37-50c1-48c4-95d6-35b0649bbea2",
+      "created_at": "2026-10-13T15:26:50.235Z",
+      "updated_at": "2026-10-13T15:27:22.936Z",
+      "enrollment_id": "2b1b14fa-df43-47b9-8083-139ad1a02e2d",
+      "verification_code": "CDF-51833D7C29AA499DB18DB86839026024",
+      "issued_at": "2026-10-13T15:26:50.231Z",
+      "workload_hours": "4.00",
+      "is_active": false,
+      "revoked_at": "2026-10-13T15:27:22.931Z",
+      "revocation_reason": "VALIDATION-20261013-120621 revogação de teste"
+    }
+  ]
+}

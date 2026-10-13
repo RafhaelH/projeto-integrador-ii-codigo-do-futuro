@@ -1,0 +1,85 @@
+classDiagram
+    direction TB
+    class Workshop {
+        UUID id
+        string title
+        string slug
+        decimal estimated_hours
+        string status
+    }
+    class ClassGroup {
+        UUID id
+        string code
+        int capacity
+        datetime registration_opens_at
+        datetime registration_closes_at
+        date start_date
+        date end_date
+        string status
+        clean()
+    }
+    class ClassInstructor {
+        UUID id
+        bool is_lead
+        datetime assigned_at
+    }
+    class Meeting {
+        UUID id
+        datetime starts_at
+        datetime ends_at
+        string status
+        clean()
+    }
+    class Enrollment {
+        UUID id
+        string status
+        string status_reason
+        datetime waitlisted_at
+        clean()
+        delete()
+    }
+    class EnrollmentStatusHistory {
+        bigint id
+        string from_status
+        string to_status
+        string reason
+        datetime created_at
+    }
+    class Attendance {
+        UUID id
+        string status
+        string note
+        clean()
+    }
+    class StudentProject {
+        UUID id
+        string title
+        bool is_delivered
+        datetime delivered_at
+        clean()
+    }
+    class Evaluation {
+        UUID id
+        decimal final_score
+        string feedback
+        datetime published_at
+    }
+    class Certificate {
+        UUID id
+        string verification_code
+        decimal workload_hours
+        bool is_active
+        datetime revoked_at
+        clean()
+        delete()
+    }
+    Workshop "1" -- "0..*" ClassGroup
+    ClassGroup "1" -- "0..*" ClassInstructor
+    ClassGroup "1" -- "0..*" Meeting
+    ClassGroup "1" -- "0..*" Enrollment
+    Enrollment "1" -- "0..*" EnrollmentStatusHistory
+    Enrollment "1" -- "0..*" Attendance
+    Meeting "1" -- "0..*" Attendance
+    Enrollment "1" -- "0..1" StudentProject
+    Enrollment "1" -- "0..1" Evaluation
+    Enrollment "1" -- "0..1" Certificate

@@ -62,7 +62,7 @@
 | US-026 | Como avaliador, quero dados fictícios coerentes para testar todos os fluxos. | Must | RN-047 |
 | US-027 | Como desenvolvedor, quero testes automatizados e integração contínua para reduzir regressões. | Must | RNF-023–024 |
 | US-028 | Como usuário, quero mensagens claras quando uma operação falhar ou for concluída. | Must | RF-039; RNF-002–003 |
-| US-029 | Como autor, quero aplicar testes com cinco pessoas e registrar as melhorias. | Must | exigência acadêmica |
+| US-029 | Como autor, quero aplicar testes com cinco colegas de curso ou profissionais da área e registrar as melhorias. | Must | exigência acadêmica |
 | US-030 | Como avaliador acadêmico, quero manual, evidências e vídeo para conferir a solução. | Must | exigência acadêmica |
 
 ## Ordem de implementação
@@ -84,3 +84,9 @@
 - testes automatizados relevantes aprovados;
 - interface responsiva e com mensagens de estado;
 - documentação e rastreabilidade atualizadas.
+
+## Revisão do estado em 13/10/2026
+
+Histórias operacionais dos épicos E1–E6 possuem implementação e testes ligados na [rastreabilidade](../02-requisitos/rastreabilidade-implementada.md). A definição de pronto de US-004 ainda depende de observação humana/metas de acessibilidade; não se presume aceitação de clareza somente por CSS. US-026/027/028 têm dados/controle técnico documentados, mas não aprovam metas de carga/navegadores sem medição.
+
+US-029 está **PENDENTE** (cinco colegas/profissionais reais). US-030 está **PARCIAL**: manual, evidências e modelos preparados, vídeo/PDF real pendentes. Não inventar sugestões humanas para gerar novas histórias. [Checklist e sequência de fechamento](../09-entrega/checklist-final.md) concentram ações restantes, incluindo planejamento I e modelo AVA.

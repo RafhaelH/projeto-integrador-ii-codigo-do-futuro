@@ -1,108 +1,40 @@
-# Roteiro do vídeo final — cinco minutos
+# Roteiro único de vídeo — exatamente 5:00
 
-O documento da disciplina contém as expressões “até cinco minutos” e “pelo menos cinco minutos”.
-Para atender às duas orientações, a gravação deve terminar em **5:00**, com tolerância apenas da
-plataforma de vídeo. A narração deve ser feita pelo autor e usar a mesma tag da entrega.
+## Preparação e escolha da duração
 
-## Preparação
+O PDF pede até cinco minutos (p.36) e pelo menos cinco (p.38); **300 segundos exatos** atendem ambos. Referência: [enunciado conferido](referencia-academica.md). Incluir abertura/encerramento nesse total, ensaiar e conferir duração do arquivo exportado. Não anunciar vídeo pronto: só existe este roteiro. **Narração pelo estudante**, com sua própria voz; não usar depoimentos fictícios.
 
-- fechar notificações e abas pessoais;
-- usar dados exclusivamente fictícios;
-- ampliar o cursor e definir zoom legível;
-- deixar abertas as contas necessárias em perfis separados do navegador;
-- confirmar domínio, HTTPS, tag/SHA e smoke test;
-- ensaiar com cronômetro antes da gravação final.
+Preparar abas já autenticadas das contas dedicadas de captura, sem exibir senhas. Usar dados fictícios, fechar notificações/pessoais e registrar versão efetiva. Não usar A01–A05 durante sessões nem submeter ações que modifiquem cenários estáveis. As consultas existentes demonstram resultados; se quiser demonstrar nova operação, preparar dados exclusivos em trabalho operacional separado após backup. Não ocultar limitações.
 
-## Cronograma e fala-base
+## Cronograma (soma 300 segundos)
 
-### 0:00–0:30 — Problema e público
+| Intervalo | Segundos | Tela/material e ação | Fala-base pelo estudante |
+|---|---:|---|---|
+| 0:00–0:25 | 25 | Login vazio/Início | “Sou o autor deste projeto. Código do Futuro organiza oficinas gratuitas para jovens de 14 a 21 anos. Controles dispersos dificultam acompanhar vagas, frequência e resultados. Esta demonstração usa dados fictícios.” |
+| 0:25–0:45 | 20 | Navegação e Meu perfil | “Administrador organiza ofertas e indicadores; instrutor acompanha suas turmas; participante consulta sua jornada. Meu perfil permite editar apenas nome e e-mail da própria conta.” |
+| 0:45–1:20 | 35 | ADMIN → Ana/responsável, oficina e WEB cronograma | “Cadastros distinguem participante, responsável e instrutor. Oficina é a proposta; turma é sua edição; encontros formam o cronograma. Menores exigem responsável ativo, e datas devem ser coerentes.” |
+| 1:20–1:45 | 25 | ROB-2026-01 → fila (consulta) | “Robótica tem duas vagas confirmadas, nenhuma disponível, uma espera e uma pendente. Pendências não ocupam vagas. Confirmações usam transação e bloqueio para preservar capacidade e ordem da fila.” |
+| 1:45–2:25 | 40 | INSTRUCTOR → Web → frequência/projeto/avaliação | “O instrutor vê suas turmas. Carla tem 100% e Diego 50% nos encontros realizados. Chamada preserva autoria; projeto admite rascunho e entrega. A nota acadêmica de Carla ainda não foi publicada.” |
+| 2:25–2:55 | 30 | PARTICIPANT → jornada e Python concluída | “O participante acessa dados próprios. Para aprovação são necessários 75% de frequência, nota mínima seis e projeto entregue. Ana cumpre; Bruno ficou não concluinte por frequência, com motivo conservado.” |
+| 2:55–3:20 | 25 | Certificado de Ana e PDF real | “O certificado ativo de Ana tem oito horas, calculadas em quatro encontros de duas horas. Só inscrição aprovada recebe certificado; download depende de vínculo e revogação conserva o histórico.” |
+| 3:20–3:50 | 30 | ADMIN → painel Python/abril, CSV; arquitetura | “No mesmo filtro há dois participantes, média de frequência 75% e uma aprovação. O CSV corresponde ao universo. Django usa templates, views coordenadoras, serviços e models; PostgreSQL guarda restrições. A publicação usa HTTPS.” |
+| 3:50–4:20 | 30 | GitHub/CI e consolidação de testes | “A candidata tem 235 testes aprovados em PostgreSQL isolado e cobertura 89,84%. Houve reteste com 25 cenários HTTP consolidados e 57 verificações na preparação atual. Requisições repetidas não são cenários nem avaliações humanas.” |
+| 4:20–4:45 | 25 | Relatório de três defeitos; decisões humanas se reais | “A validação técnica encontrou encontro duplicado retornando 500, ausência de perfil próprio e conclusão indevida pelo admin. Foram corrigidos e retestados. As sugestões humanas e decisões serão apresentadas somente após as cinco sessões reais.” |
+| 4:45–5:00 | 15 | Índice tutor/links, manual, PDF e encerramento | “Repositório, manual, modelos e evidências estão organizados no índice de entrega. As cinco avaliações e o vídeo final completam as pendências acadêmicas; a matriz mostra exatamente o que foi comprovado.” |
 
-“Este é o Código do Futuro, desenvolvido no Projeto Integrador Transdisciplinar em Engenharia de
-Software II. A plataforma substitui controles dispersos na gestão de oficinas gratuitas de
-programação para jovens de 14 a 21 anos, centralizando pessoas, turmas e acompanhamento.”
+## Ajuste após avaliações reais
 
-Mostrar a tela de entrada e a identidade da solução.
+As falas acima descrevem o estado atual com avaliações pendentes. Para gravação definitiva depois das sessões, substituir os trechos 4:20–4:45 e 4:45–5:00 por achados/decisões reais, indicação do PDF preenchido e materiais efetivamente entregues, **mantendo 25 e 15 segundos**. Citar origem Axx/tarefa, alteração/PR e reteste de uma melhoria pertinente, ou justificar por que nenhuma sugestão foi implementada. Não afirmar cinco avaliações concluídas enquanto faltarem fichas.
 
-### 0:30–1:00 — Objetivo e perfis
+Se a versão final mudar, substituir contagem/cobertura/SHA pelos resultados comprovados dessa versão e atualizar telas/links; conservar exatamente os intervalos. Os critérios e números da candidata não devem ser copiados como se fossem resultados de outra versão.
 
-“O sistema possui três perfis. O administrador organiza a oferta e acompanha indicadores; o
-instrutor registra a jornada pedagógica somente das turmas vinculadas; e o participante consulta
-inscrições, frequência, projeto, avaliação e certificado.”
+## Conferência antes de publicar
 
-Mostrar rapidamente a navegação de cada perfil.
-
-### 1:00–2:00 — Administração da oficina
-
-No perfil administrador:
-
-1. abrir Pessoas e mostrar participante com responsável;
-2. abrir uma oficina publicada;
-3. abrir turma com capacidade, instrutores e encontros;
-4. mostrar inscrição pendente e lista de espera.
-
-Fala-chave: “As regras impedem duplicidade, validam menores com responsável e protegem a última
-vaga com transação no banco.”
-
-### 2:00–3:00 — Jornada pedagógica
-
-No perfil instrutor:
-
-1. mostrar somente as turmas vinculadas;
-2. abrir o acompanhamento;
-3. mostrar chamada por encontro;
-4. mostrar projeto, avaliação e critérios de conclusão.
-
-Fala-chave: “A aprovação exige 75% de frequência, nota mínima 6,0 e projeto entregue. As
-alterações registram autoria e preservam o histórico.”
-
-### 3:00–3:35 — Experiência do participante
-
-No perfil participante:
-
-1. abrir Minha jornada;
-2. mostrar frequência, devolutiva e resultado;
-3. abrir certificado e iniciar o download do PDF.
-
-### 3:35–4:05 — Painel, relatórios e arquitetura
-
-No administrador, mostrar o painel filtrado e os três CSVs. Explicar em uma frase:
-
-“A solução é um monólito modular em Django 5.2 e Python 3.12, com PostgreSQL 17, Gunicorn, Nginx,
-Docker e HTTPS. A separação em módulos mantém as regras testáveis sem aumentar a operação.”
-
-### 4:05–4:30 — Verificação e validação
-
-Mostrar a página do repositório/CI e uma evidência consolidada:
-
-“A versão final possui testes automatizados de modelos, serviços, permissões, interface,
-concorrência e relatórios, executados em PostgreSQL na integração contínua. Também foi avaliada
-por cinco pessoas nas perspectivas de participante, instrutor e administrador.”
-
-Substituir pela contagem e cobertura exatas da tag final.
-
-### 4:30–4:50 — Melhorias das avaliações
-
-Apresentar de duas a três mudanças reais, sempre com origem e resultado:
-
-“As avaliações identificaram [ACHADO]. A decisão foi [DECISÃO], implementada em [ALTERAÇÃO]. O
-reteste confirmou [RESULTADO]. Sugestões fora do MVP foram justificadas no relatório.”
-
-Não inventar melhorias antes das avaliações.
-
-### 4:50–5:00 — Encerramento
-
-“O Código do Futuro entrega uma gestão rastreável das oficinas e evidencia um ciclo completo de
-planejamento, implementação, testes, validação e melhoria contínua. Repositório, manual e PDF das
-avaliações acompanham a entrega.”
-
-## Checklist da gravação
-
-- [ ] Autor narrou o vídeo.
-- [ ] Duração final conferida em 5:00.
-- [ ] Problema, público e objetivo apresentados.
-- [ ] Front-end e back-end em funcionamento demonstrados.
-- [ ] Arquitetura e tecnologias explicadas.
-- [ ] Testes automatizados e cinco avaliações mencionados.
-- [ ] Melhorias reais apresentadas.
-- [ ] Nenhum dado pessoal ou segredo exposto.
-- [ ] Aplicação, manual, PDF e vídeo usam a mesma tag.
+- [ ] Estudante narrou com sua própria voz.
+- [ ] Arquivo exportado mede 5:00 (300 segundos), não só a soma do roteiro.
+- [ ] Problema, solução, três papéis e fluxos em funcionamento aparecem legíveis.
+- [ ] Testes e mudanças adotadas são mostrados com origem/resultado verdadeiros.
+- [ ] Cinco opiniões e PDF são mencionados conforme estado real.
+- [ ] Referências aos materiais e acesso do tutor conferidos.
+- [ ] Versão, dados e manual correspondem ao que foi gravado.
+- [ ] Sem credenciais, notificações pessoais ou imagens/identidades não autorizadas.

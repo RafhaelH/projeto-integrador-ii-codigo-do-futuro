@@ -2,15 +2,19 @@
 
 Projeto acadêmico desenvolvido para o **Projeto Integrador Transdisciplinar em Engenharia de Software II**.
 
-A plataforma Código do Futuro apoiará a organização de oficinas gratuitas de programação e tecnologia, permitindo acompanhar participantes, responsáveis, instrutores, turmas, inscrições, encontros, frequência, projetos, avaliações, certificados e indicadores de resultado.
+A plataforma Código do Futuro apoia a organização de oficinas gratuitas de programação e tecnologia, permitindo acompanhar participantes, responsáveis, instrutores, turmas, inscrições, encontros, frequência, projetos, avaliações, certificados e indicadores de resultado.
 
 ## Situação do projeto
 
 A especificação, a fundação executável e os módulos operacionais do MVP estão concluídos. O sistema já permite autenticação, recuperação de senha, gestão de participantes, responsáveis, instrutores, instituições, oficinas, turmas, encontros, inscrições, vagas, lista de espera, frequência, projetos, avaliações e processamento objetivo do resultado, certificados em PDF, painéis por perfil e relatórios CSV protegidos, com testes automatizados e integração contínua. A release candidata também possui empacotamento Docker, configuração de produção, health checks, backup e material para as cinco avaliações exigidas pela disciplina.
 
+## Estado acadêmico verificado
+
+Em 13/10/2026, develop está em `644e7a6` e código publicado em `a351c5a` (mesmo src), com 235 testes em PostgreSQL isolado e cobertura 89,84%. Manual ilustrado, 38 imagens e modelos estão preparados; **cinco avaliações humanas e vídeo narrado continuam pendentes**. O [índice para o tutor](docs/09-entrega/README.md), a [matriz](docs/09-entrega/matriz-conformidade.md) e o [checklist](docs/09-entrega/checklist-final.md) distinguem evidências e lacunas. A revisão do planejamento original I e o modelo específico AVA ainda precisam ser conferidos pelo estudante. Main permanece preservada.
+
 ## Objetivo
 
-Centralizar a gestão das oficinas e substituir controles dispersos por um fluxo único, confiável e acessível, permitindo que administradores e instrutores acompanhem a jornada de cada participante e que os jovens consultem sua própria evolução.
+Centralizar a gestão das oficinas e substituir controles dispersos por um fluxo único, com regras verificáveis, permitindo que administradores e instrutores acompanhem a jornada de cada participante e que os jovens consultem sua própria evolução.
 
 ## Escopo do MVP
 
@@ -29,7 +33,7 @@ Centralizar a gestão das oficinas e substituir controles dispersos por um fluxo
 
 - Python 3.12 e Django 5.2 LTS;
 - PostgreSQL 17;
-- templates Django, HTML, CSS e JavaScript;
+- templates Django, HTML e CSS;
 - Pytest para testes automatizados;
 - Ruff para lint e formatação;
 - uv para dependências reproduzíveis;
@@ -71,7 +75,7 @@ uv run python src/manage.py runserver
 
 A aplicação ficará disponível em `http://127.0.0.1:8000/` e a área administrativa em `http://127.0.0.1:8000/admin/`.
 
-O comando `seed_demo` é opcional e cria somente dados fictícios reservados para apresentação. Consulte [Dados de demonstração](docs/06-testes/dados-de-demonstracao.md) para ver credenciais, cenários e cuidados de execução.
+O comando `seed_demo` é opcional e cria somente dados fictícios reservados para apresentação. Consulte [Dados de demonstração](docs/06-testes/dados-de-demonstracao.md) para cenários e cuidados de execução. A candidata publicada usa preparação própria e credenciais restritas fora do Git.
 
 ## Publicar na VPS
 

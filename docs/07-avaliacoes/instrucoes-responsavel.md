@@ -2,7 +2,7 @@
 
 Estado: **aguardando avaliação humana**.
 
-Antes: selecione cinco pessoas reais e explique o uso acadêmico das respostas; registre identificação autorizada em armazenamento privado. Entregue uma conta por pessoa, sem compartilhar o arquivo geral de credenciais. Registre data, dispositivo, navegador, URL e versão efetivamente em uso. Faça novo backup do projeto antes das sessões. Confira o checklist e a disponibilidade da turma exclusiva.
+Antes: selecione cinco colegas de curso ou profissionais da área distintos e explique o uso acadêmico das respostas; registre identificação autorizada em armazenamento privado. Entregue uma conta por pessoa, sem compartilhar o arquivo geral de credenciais. Registre data, dispositivo, navegador, URL e versão efetivamente em uso. Faça novo backup do projeto antes das sessões. Confira o checklist e a disponibilidade da turma exclusiva.
 
 A referência da carga é 13/10/2026. PY-2026-A05-I aceita inscrições até **16/10/2026 às 18h**, inicia em 20/10/2026; Robótica abre até **03/11/2026 às 18h**, inicia em 10/11/2026. Se a avaliação ocorrer depois desses prazos, pare apenas a tarefa de inscrição e prepare uma nova oferta exclusiva mediante revisão/backup; registre a alteração. Não mude datas ou estados dos cenários de captura nem rode seed_demo para renovar a carga.
 
@@ -17,3 +17,5 @@ Evidências: use `A01-tarefa-03.png` etc., sem senha, cookie, token ou identidad
 Depois: mantenha formulário original; consolide achados sem inventar respostas ausentes. Classifique severidade e decisão, justifique adiamentos/rejeições, relacione correção e reteste. Preencha os resultados apenas após as sessões reais. Não promova main automaticamente; o vídeo definitivo e o manual final precisam corresponder à versão aprovada.
 
 Credenciais de captura: `captura-admin`, `captura-instrutor`, `captura-participante`, `captura-projeto` no mesmo arquivo restrito. São independentes dos acessos A01–A05. Os aliases `aluno-A01` a `aluno-A04` são contas fictícias de apoio da carga, não avaliadores adicionais.
+
+As contas A01–A05 são papéis fictícios; não são os cinco avaliadores. Guarde nome/condição reais no original destinado ao tutor. O [modelo consolidado](modelo-pdf-consolidado.md) organiza o PDF futuro sem preencher opiniões.

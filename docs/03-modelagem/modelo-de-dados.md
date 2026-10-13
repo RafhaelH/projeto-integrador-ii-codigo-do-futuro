@@ -1,125 +1,56 @@
-# Modelo de dados
+# Modelo conceitual e normalização implementados
 
-## Decisões de modelagem
+## Entidades e cardinalidades
 
-1. `User` será o modelo autenticável e usará e-mail como identificador.
-2. Dados específicos ficam em perfis de participante e instrutor.
-3. Oficina e turma são entidades separadas para permitir várias edições da mesma oferta.
-4. Inscrição concentra a jornada e não é apagada após confirmação.
-5. Frequência usa unicidade entre inscrição e encontro.
-6. Situações são valores controlados no código e protegidos por validações e restrições quando possível.
-7. Datas de criação e alteração usam campos comuns herdados de um modelo abstrato.
+Os [DERs e UML](diagramas.md) descrevem os 16 models próprios; [modelo lógico](modelo-logico.md) lista todas as colunas e chaves e [dicionário](dicionario-de-dados.md) os domínios físicos. User autentica; Participant descreve o jovem; Guardian é responsável; ParticipantGuardian associa os dois; Instructor é perfil de User; Institution é parceira; Workshop é oferta reutilizável; ClassGroup é edição; ClassInstructor atribui instrutor; Meeting é encontro; Enrollment é vínculo/jornada; EnrollmentStatusHistory registra transições; Attendance é presença; StudentProject é entrega; Evaluation é avaliação acadêmica; Certificate identifica conclusão.
 
-## Modelo conceitual
-
-```mermaid
-erDiagram
-    USER ||--o| PARTICIPANT : possui
-    USER ||--o| INSTRUCTOR : possui
-    PARTICIPANT ||--o{ PARTICIPANT_GUARDIAN : vincula
-    GUARDIAN ||--o{ PARTICIPANT_GUARDIAN : responde
-    INSTITUTION ||--o{ CLASS_GROUP : acolhe
-    WORKSHOP ||--o{ CLASS_GROUP : origina
-    CLASS_GROUP ||--o{ CLASS_INSTRUCTOR : designa
-    INSTRUCTOR ||--o{ CLASS_INSTRUCTOR : ministra
-    CLASS_GROUP ||--o{ MEETING : contem
-    PARTICIPANT ||--o{ ENROLLMENT : realiza
-    CLASS_GROUP ||--o{ ENROLLMENT : recebe
-    ENROLLMENT ||--o{ ATTENDANCE : registra
-    MEETING ||--o{ ATTENDANCE : apura
-    ENROLLMENT ||--o| STUDENT_PROJECT : entrega
-    ENROLLMENT ||--o| EVALUATION : recebe
-    ENROLLMENT ||--o| CERTIFICATE : gera
-```
-
-## Entidades e responsabilidades
-
-| Entidade | Responsabilidade |
+| Relação | Cardinalidade real e condição |
 |---|---|
-| User | identidade, autenticação, situação e perfil de acesso |
-| Participant | dados pessoais e acadêmicos do jovem |
-| Guardian | dados mínimos do responsável legal |
-| ParticipantGuardian | vínculo e indicação de responsável principal |
-| Instructor | apresentação e especialidades do instrutor |
-| Institution | identificação do parceiro e local de referência |
-| Workshop | definição pedagógica reutilizável |
-| ClassGroup | oferta calendarizada, capacidade e situação |
-| ClassInstructor | atribuição de instrutores à turma |
-| Meeting | encontro planejado ou realizado |
-| Enrollment | vínculo do participante com a turma e sua jornada |
-| Attendance | resultado da presença por encontro |
-| StudentProject | entrega prática individual |
-| Evaluation | nota, devolutiva e autoria |
-| Certificate | identificação e emissão do certificado |
+| User–Participant | User 0..1 perfil; Participant 0..1 User (FK única anulável) |
+| User–Instructor | User 0..1 perfil; Instructor exatamente 1 User |
+| Participant–Guardian | N:N via ParticipantGuardian; par único e no máximo um principal; podem existir zero vínculos, mas menor elegível exige responsável ativo |
+| Workshop–ClassGroup | Oficina 0..N turmas; turma exatamente 1 oficina |
+| Institution–ClassGroup | Instituição 0..N turmas; turma 0..1 instituição |
+| Instructor–ClassGroup | N:N via ClassInstructor; par único e no máximo um principal; turma planejada pode ter zero, abrir/iniciar exige ativo |
+| ClassGroup–Meeting/Enrollment | Turma 0..N de cada; cada encontro/inscrição pertence exatamente a uma turma |
+| Participant–Enrollment | Participante 0..N inscrições; cada inscrição exatamente um participante; par participante/turma único |
+| Enrollment–History | Inscrição 0..N linhas no schema; serviços criam linha inicial e cada transição; histórico tem um ator obrigatório |
+| Enrollment–Meeting | N:N para frequência via Attendance; par único e mesma turma verificada em Python |
+| Enrollment–Project/Evaluation/Certificate | 0..1 de cada por inscrição; cada dependente exatamente 1 inscrição |
+| User–registros autorais | 0..N registros por usuário; autoria obrigatória em oficinas/turmas/inscrições/histórico/frequência/avaliação |
 
-## Cardinalidades e restrições essenciais
+Certificate.enrollment é único mesmo inativo: não há vários certificados históricos por inscrição nem reemissão após revogação. Role do usuário é distinto dos perfis acadêmicos; responsáveis não possuem login próprio.
 
-- um e-mail identifica no máximo um usuário;
-- um participante pode ter vários responsáveis e vice-versa;
-- uma oficina pode originar várias turmas;
-- uma turma possui um ou mais instrutores;
-- um participante tem no máximo uma inscrição por turma;
-- cada transição de inscrição gera uma entrada imutável em seu histórico de situação;
-- uma inscrição tem no máximo uma frequência por encontro;
-- uma inscrição tem no máximo um projeto, uma avaliação e um certificado ativo;
-- uma turma só referencia uma instituição, que pode sediar várias turmas.
-- um participante pode possuir no máximo um responsável marcado como principal.
+## Modelo lógico e dependências funcionais
 
-## Estados
+O [modelo relacional](modelo-logico.md) usa nomes físicos reais, não nomes singularizados hipotéticos. Todas as chaves alternativas, FKs, nulabilidade e constraints constam no inventário gerado. Dependências relevantes:
 
-### Oficina
+| Relação | Determinantes e separação |
+|---|---|
+| accounts_user | id → identidade/papel/flags/datas; email normalizado também identifica uma conta |
+| people_participant/instructor | id → atributos locais; user_id não nulo identifica no máximo um perfil |
+| people_participantguardian | id e (participant_id,guardian_id) → relationship/is_primary/datas; nomes/contatos ficam nas pessoas |
+| workshops_workshop/classgroup | id e slug/code → atributos próprios; título/objetivo de oficina não se repetem nos encontros |
+| workshops_classinstructor | id e (class_group_id,instructor_id) → atribuição; vínculo N:N sem lista multivalorada |
+| enrollments_enrollment | id e (participant_id,class_group_id) → status/timestamps/ator; dados de pessoa/oficina são referenciados |
+| enrollments_enrollmentstatushistory | id → inscrição, de/para, motivo, ator e instante; múltiplas transições não são colunas repetidas |
+| learning_attendance | id e (enrollment_id,meeting_id) → status/note/ator/datas |
+| learning_studentproject/evaluation/certificate | id e enrollment_id → atributos próprios; verification_code também identifica certificado |
 
-```mermaid
-stateDiagram-v2
-    [*] --> Rascunho
-    Rascunho --> Publicada
-    Publicada --> Arquivada
-```
+## Justificativa de normalização
 
-### Turma
+**1FN:** valores escalares por coluna; não há grupos de responsáveis, instrutores ou frequências em um campo. Biography/syllabus/specialties são textos livres, não tabelas ocultas com chaves relacionais. Associações possuem linhas independentes.
 
-```mermaid
-stateDiagram-v2
-    [*] --> Planejada
-    Planejada --> InscricoesAbertas
-    InscricoesAbertas --> EmAndamento
-    EmAndamento --> Concluida
-    Planejada --> Cancelada
-    InscricoesAbertas --> Cancelada
-    EmAndamento --> Cancelada
-```
+**2FN:** em ParticipantGuardian/ClassInstructor/Enrollment/Attendance, atributos dependem do par completo que forma a chave alternativa, e não de apenas uma pessoa/turma/encontro. Nomes e descrições dessas entidades são mantidos na tabela correspondente. PK substituta UUID não dispensa analisar os pares únicos.
 
-### Inscrição
+**3FN:** não se copia institution.name na turma, workshop.title no encontro ou participant.birth_date na inscrição. FKs remetem à entidade que determina esses atributos. Projetos/avaliações são separados porque têm responsabilidades e ciclo próprios, não por exigir divisão arbitrária de toda tabela. Conforme as dependências documentadas, as relações visam 3FN; isso não é uma prova de ausência de qualquer redundância de negócio.
 
-```mermaid
-stateDiagram-v2
-    [*] --> Pendente
-    Pendente --> Confirmada
-    Pendente --> ListaDeEspera
-    Pendente --> Rejeitada
-    ListaDeEspera --> Confirmada
-    ListaDeEspera --> Cancelada
-    Confirmada --> Cancelada
-    Confirmada --> Aprovada
-    Confirmada --> NaoConcluida
-```
+**Redundâncias intencionais/semântica temporal:** Participant.full_name e User.full_name atendem cadastro acadêmico e identidade de acesso, editados separadamente. Instructor referencia User para nome. confirmed_at/waitlisted_at/cancelled_at e histórico mantêm estado atual e trilha de eventos; serviços devem preservar coerência, sem alegar que status → uma data constante. Certificate.workload_hours conserva carga calculada na emissão: snapshot justificado, não contador livre. O PDF não armazena snapshot completo de nomes/títulos e os consulta dos cadastros. created/updated são metadados, não dados duplicados do domínio.
 
-## Normalização
+**Valores não persistidos:** vagas disponíveis/ocupadas, posição da fila, idade, percentual de presença e indicadores. Operação conta CONFIRMED para vaga; painel histórico conta também APPROVED/NOT_COMPLETED. Frequência individual exclui encontros futuros/cancelados; reporting agrega encontros marcados COMPLETED (sem filtro temporal adicional), diferença explícita do código, sem inventar um filtro universal.
 
-O modelo busca a terceira forma normal:
+## Estados e garantia de regras
 
-- dados de usuário, participante e instrutor não são repetidos nas inscrições;
-- os dados da oficina não são duplicados em cada encontro;
-- vínculos muitos-para-muitos possuem tabelas associativas;
-- frequência, projeto e avaliação dependem da inscrição;
-- valores derivados, como percentual de frequência e vagas disponíveis, devem ser calculados, evitando fontes duplicadas de verdade.
+Oficina: DRAFT → PUBLISHED → ARCHIVED. Turma: PLANNED → OPEN → IN_PROGRESS → COMPLETED, com cancelamento antes de concluída. Inscrição: criação PENDING ou WAITLISTED; PENDING → CONFIRMED/REJECTED/CANCELLED; WAITLISTED → CONFIRMED/CANCELLED; CONFIRMED → CANCELLED/APPROVED/NOT_COMPLETED. Serviços controlam transições; defaults/choices não são máquina de estados SQL.
 
-## Índices planejados
-
-- `user.email` único;
-- `participant.cpf` único quando não nulo;
-- `enrollment(participant_id, class_group_id)` único;
-- `attendance(enrollment_id, meeting_id)` único;
-- índices em situações e datas usadas em filtros;
-- índice em `class_group(workshop_id, status, start_date)`;
-- índice em `enrollment(class_group_id, status, created_at)` para ocupação e fila.
+Unicidade/CHECK/FKs/índices e limites dos validators estão no [banco físico](banco-fisico.md). A revisão não presume que o planejamento do Integrador I estivesse disponível.

@@ -82,3 +82,15 @@ Mudanças que afetem comportamento devem atualizar, quando aplicável:
 4. modelo de dados ou diagrama;
 5. caso de teste;
 6. manual do usuário.
+
+## Auditoria acadêmica e estado atual
+
+- [Índice de entrega para o tutor](09-entrega/README.md) e [matriz de conformidade](09-entrega/matriz-conformidade.md).
+- [Rastreabilidade implementada](02-requisitos/rastreabilidade-implementada.md).
+- [Modelo lógico](03-modelagem/modelo-logico.md), [banco físico](03-modelagem/banco-fisico.md) e inventário reproduzível.
+- [Consolidação de testes/correções](06-testes/consolidacao-verificacao.md).
+- [Interface e validações](08-manual/interface-e-validacoes.md).
+- [Modelo PDF consolidado das cinco opiniões](07-avaliacoes/modelo-pdf-consolidado.md).
+- [Relatório atual](09-entrega/relatorio-final.md) e [roteiro único 5:00](09-entrega/roteiro-video.md).
+
+As cinco pessoas e o vídeo ainda são pendentes; contas e simulações não equivalem a resultados humanos.

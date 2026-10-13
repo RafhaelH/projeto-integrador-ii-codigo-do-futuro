@@ -1,0 +1,18 @@
+flowchart TB
+    Inicio([Solicitar]) --> Permissao{ADMIN ou titular?}
+    Permissao -- Não --> Negado[Acesso negado]
+    Permissao -- Sim --> Lock[Bloquear turma em transação]
+    Lock --> Aberta{OPEN e dentro do prazo?}
+    Aberta -- Não --> Erro[ValidationError e rollback]
+    Aberta -- Sim --> Elegivel{Ativo, 14-21 no início e responsável quando menor?}
+    Elegivel -- Não --> Erro
+    Elegivel -- Sim --> Duplicada{Já tem inscrição?}
+    Duplicada -- Sim --> Erro
+    Duplicada -- Não --> Lotada{CONFIRMED >= capacidade?}
+    Lotada -- Não --> Pendente[PENDING]
+    Lotada -- Sim --> Fila{Espera habilitada?}
+    Fila -- Não --> Pendente
+    Fila -- Sim --> Espera[WAITLISTED e timestamp]
+    Pendente --> Historico[Gravar inscrição e histórico]
+    Espera --> Historico
+    Historico --> Commit[Commit e mensagem de situação]

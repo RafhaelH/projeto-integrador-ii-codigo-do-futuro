@@ -196,3 +196,7 @@ erro útil com HTTP 200, preservando os registros anteriores. Edição do própr
 ## Condição de aceite do MVP
 
 O MVP poderá ser apresentado aos avaliadores quando todos os requisitos **Must** tiverem ao menos um teste aprovado, nenhum defeito crítico estiver aberto e os fluxos UC-001, UC-006, UC-008 e UC-010 puderem ser executados de ponta a ponta.
+
+## Rastreabilidade atual e condição acadêmica
+
+A [matriz implementada](rastreabilidade-implementada.md) complementa a matriz inicial com arquivos/testes/evidências dos 40 RF e situação dos RNF. Os fluxos técnicos críticos estão testados, mas metas RNF de carga, navegadores e acessibilidade carecem de prova. Isso permite avaliação orientada da candidata com limites informados; não autoriza declarar todos Must definitivamente aceitos nem cinco opiniões já recolhidas.

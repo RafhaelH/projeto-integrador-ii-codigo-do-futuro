@@ -27,3 +27,5 @@ Os administradores têm alcance funcional global, conforme o produto; sua separa
 - [Relatório técnico da preparação](../06-testes/preparacao-20261013/relatorio.md)
 
 Tempo sugerido: 25–35 minutos por pessoa. Atividades em celular e teclado são observações de uso, não uma auditoria completa de acessibilidade. As capturas e verificações automáticas não substituem as cinco avaliações.
+
+Exigência da disciplina: cinco **colegas de curso ou profissionais da área reais**, não cinco logins. [Modelo de PDF consolidado](modelo-pdf-consolidado.md) / [PDF em branco](modelo-consolidado.pdf), ainda aguardando opiniões. PY-2026-A05-I encerra 16/10/2026 18h São Paulo; revisar a tarefa se posterior, sem renovação nesta auditoria.

@@ -1,0 +1,40 @@
+{
+  "audit_date": "2026-10-13",
+  "develop": "644e7a657c1aeec80b7df530856fd354e5a02454",
+  "main": "5730e37c235f3f6877c8d93e19e69742637c49e0",
+  "published_code": "a351c5aeb6a9bf104693818a75a0acc6c82e49ad",
+  "source_files_matched": 122,
+  "src_equals_develop": true,
+  "app": {
+    "name": "/codigo-do-futuro-app-1",
+    "id": "8dcdc9ddc1f8b386c132aa2c724718636238cd0d756dcc24cf811ae7336b13f5",
+    "image": "sha256:dd9bc63e87cfe733925036dad223bd73b89891edfacc2a6bcb10d19500edc42c",
+    "started": "2026-10-13T17:42:26.548338304Z",
+    "restarts": 0,
+    "health": "healthy",
+    "ports": {
+      "8000/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "8031"
+        }
+      ]
+    }
+  },
+  "container_mutations": 0,
+  "historical_files_baseline": 158,
+  "published_database_accesses": 0,
+  "initial_worktree_clean": true,
+  "applicable_agents_files": [],
+  "github_develop_and_main_verified": true,
+  "merged_prs": [
+    11,
+    12
+  ],
+  "develop_ci": {
+    "run_id": 38442586075,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro/actions/runs/38442586075"
+  }
+}

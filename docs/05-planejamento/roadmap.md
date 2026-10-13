@@ -15,8 +15,7 @@ O roadmap é orientado por dependências, não por datas fixas. As datas do cron
 | 8. Entrega | manual, PDF de evidências, versão estável e vídeo | checklist acadêmico integralmente atendido |
 
 As fases 0 a 6 possuem implementação versionada. Os painéis gerenciais, filtros, relatórios
-CSV e a carga fictícia determinística encerram a fase de gestão. A fase 7 começa pelos testes
-orientados com cinco avaliadores e pelo registro das melhorias identificadas.
+CSV e a carga fictícia determinística encerram a fase de gestão. A fase 7 já possui validação técnica HTTP e correções; os testes com cinco avaliadores reais e seu feedback permanecem pendentes.
 
 ## Marcos
 
@@ -47,3 +46,9 @@ Cada fase deve terminar com:
 3. evidências mínimas;
 4. documentação atualizada;
 5. commit ou pull request identificável.
+
+## Estado verificado em 13/10/2026
+
+Fases 0–6 implementadas; publicação e verificação técnica da fase 7 concluídas no escopo dos relatórios existentes. Manual ilustrado, 38 imagens e formulários/PDFs modelo da fase 8 preparados. A fase 7 não está concluída: cinco opiniões ainda ausentes. A fase 8 não está concluída: faltam consolidação real, decisões humanas, vídeo narrado, conferência do modelo AVA e submissão.
+
+O planejamento original I não está identificado neste Git. A evolução comprovada dos commits II está no [escopo](../01-contexto/escopo.md#evolução-comprovada-e-limitação-histórica). Prazos acadêmicos oficiais ainda não foram fornecidos; não inventar cronograma. A05-I tem prazo técnico 16/10/2026 18h São Paulo, devendo ser revisado em sessão posterior. Seguir o [checklist final](../09-entrega/checklist-final.md), sem promoção automática de main.

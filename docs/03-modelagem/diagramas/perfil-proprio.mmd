@@ -1,0 +1,23 @@
+sequenceDiagram
+    actor U as Usuário de qualquer papel
+    participant V as OwnProfileView
+    participant F as OwnProfileForm
+    participant DB as PostgreSQL
+    U->>V: GET /conta/perfil/
+    V->>V: LoginRequired, alvo request.user
+    V-->>U: Nome/e-mail, papel informativo
+    U->>V: POST nome/e-mail + CSRF
+    V->>F: validar obrigatórios/formato/unicidade
+    alt Entrada inválida
+        F-->>V: erros associados aos campos
+        V-->>U: HTTP 200, sem alterações
+    else Entrada válida
+        V->>DB: BEGIN, UPDATE apenas full_name/email/updated_at
+        alt Violação de UNIQUE concorrente
+            DB-->>V: IntegrityError específica, ROLLBACK
+            V-->>U: HTTP 200, e-mail já em uso
+        else Salvo
+            V->>DB: COMMIT
+            V-->>U: Redirect + Seu perfil foi atualizado
+        end
+    end

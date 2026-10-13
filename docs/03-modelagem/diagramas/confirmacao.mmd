@@ -1,0 +1,21 @@
+sequenceDiagram
+    actor A as Administrador
+    participant V as EnrollmentConfirmView
+    participant S as confirm_enrollment
+    participant DB as PostgreSQL
+    A->>V: POST com CSRF e inscrição
+    V->>V: Autenticação e papel ADMIN
+    V->>S: inscrição, actor, reason
+    S->>DB: BEGIN, bloquear turma e inscrição
+    DB-->>S: registros e ocupação CONFIRMED
+    S->>S: Revalidar elegibilidade, vaga e ordem
+    alt Válido
+        S->>DB: UPDATE CONFIRMED, INSERT histórico
+        S->>DB: COMMIT
+        S-->>V: inscrição confirmada
+        V-->>A: Redirect + mensagem de sucesso
+    else Sem vaga, inelegível ou fora de ordem sem motivo
+        S->>DB: ROLLBACK
+        S-->>V: ValidationError
+        V-->>A: Mensagem, dados preservados
+    end

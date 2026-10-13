@@ -51,7 +51,7 @@ DATABASE_URL='sqlite:////tmp/codigo-futuro-production-check.sqlite3' \
 uv run python src/manage.py check --deploy
 ```
 
-## Evidência definitiva
+## Evidência de correções — histórico da candidata
 
 ### Correções da validação publicada — 13/10/2026
 
@@ -71,3 +71,7 @@ Após a CI da branch e depois das correções dos cinco avaliadores, substituir 
 da execução da tag final e registrar contagem, cobertura, SHA, migração em banco vazio, build
 Docker, smoke test público e teste de restauração. A evidência final não pode apontar somente para
 uma versão anterior.
+
+## Candidata preparada e consolidação atual
+
+O histórico acima permanece como resultado de suas respectivas versões. A351c5a/develop 644e7a6 possui **235 testes aprovados, zero skip e 89,84%** em PostgreSQL isolado, conforme [log](preparacao-20261013/testes-automatizados.txt), [resumo](preparacao-20261013/verificacoes.json) e [CI develop](https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro/actions/runs/38442586075). A [consolidação](consolidacao-verificacao.md) distingue automatizados, HTTP, inspeção, simulações e avaliações humanas pendentes, sem apagar resultados anteriores.

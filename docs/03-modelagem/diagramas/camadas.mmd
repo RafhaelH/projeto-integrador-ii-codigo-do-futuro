@@ -1,0 +1,13 @@
+flowchart TB
+    Browser[Navegador HTML e CSS] --> Router[URLs e middleware Django]
+    Router --> View[Views e mixins de autorização]
+    View --> Form[Forms]
+    Form --> View
+    View --> Service[Services: comandos e transações]
+    View --> Selector[Selectors e consultas simples]
+    Service --> Model[Models e ORM]
+    Selector --> Model
+    Model --> DB[(PostgreSQL)]
+    View --> Template[Templates Django]
+    Template --> Browser
+    Router --> Console[Recuperação: backend console]

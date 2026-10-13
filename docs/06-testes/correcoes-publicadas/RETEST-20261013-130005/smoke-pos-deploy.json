@@ -1,0 +1,25 @@
+{
+  "/healthz/": {
+    "status": 200,
+    "tls_verified": true,
+    "bytes": 47,
+    "json": {
+      "status": "ok",
+      "service": "codigo-do-futuro"
+    }
+  },
+  "/readyz/": {
+    "status": 200,
+    "tls_verified": true,
+    "bytes": 50,
+    "json": {
+      "status": "ready",
+      "service": "codigo-do-futuro"
+    }
+  },
+  "/entrar/": {
+    "status": 200,
+    "tls_verified": true,
+    "bytes": 2368
+  }
+}

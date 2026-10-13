@@ -1,0 +1,25 @@
+{
+  "changed_files": [],
+  "unchanged": true,
+  "verified_files": [
+    "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro/deploy/production.env",
+    "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro/compose.production.yaml",
+    "/etc/letsencrypt/live/projeto-integrador.tesseratointegra.com.br/fullchain.pem",
+    "/etc/nginx/sites-enabled/anpa",
+    "/etc/nginx/sites-enabled/bancodetalentos",
+    "/etc/nginx/sites-enabled/blingdash",
+    "/etc/nginx/sites-enabled/codigo-do-futuro",
+    "/etc/nginx/sites-enabled/commercehub",
+    "/etc/nginx/sites-enabled/default",
+    "/etc/nginx/sites-enabled/giovannamilan",
+    "/etc/nginx/sites-enabled/nexora",
+    "/etc/nginx/sites-enabled/oficina",
+    "/etc/nginx/sites-enabled/ohana",
+    "/etc/nginx/sites-enabled/ohanaloja",
+    "/etc/nginx/sites-enabled/rodomalia",
+    "/etc/nginx/sites-enabled/sapatilhaecia",
+    "/etc/nginx/sites-enabled/soudoutor",
+    "/etc/nginx/sites-enabled/systemtransfer",
+    "/etc/nginx/sites-enabled/tesseratointegra"
+  ]
+}

@@ -3,7 +3,54 @@ from django.db.models import Q
 
 from apps.people.models import Institution, Instructor
 
-from .models import ClassGroup, ClassInstructor, Meeting, Workshop, WorkshopStatus
+from .models import (
+    ClassGroup,
+    ClassGroupStatus,
+    ClassInstructor,
+    Meeting,
+    MeetingStatus,
+    Workshop,
+    WorkshopStatus,
+)
+
+MEETING_DUPLICATE_MESSAGE = "Esta turma já possui um encontro com esse início."
+
+
+class ProtectedStatusAdminForm(forms.ModelForm):
+    """Readonly status also rejects forged POSTs before any main/inline save."""
+
+    def clean(self):
+        cleaned = super().clean()
+        status_key = self.add_prefix("status")
+        if status_key in self.data and self.data[status_key] != self.instance.status:
+            raise forms.ValidationError(
+                "A situação não pode ser alterada diretamente pelo admin. "
+                "Utilize o fluxo da aplicação para transições e processamento acadêmico."
+            )
+        return cleaned
+
+
+class MeetingAdminForm(ProtectedStatusAdminForm):
+    def clean(self):
+        cleaned = super().clean()
+        class_group = cleaned.get("class_group")
+        if (
+            self.instance._state.adding
+            and class_group
+            and class_group.status in {ClassGroupStatus.COMPLETED, ClassGroupStatus.CANCELLED}
+        ):
+            raise forms.ValidationError("A agenda de uma turma encerrada não pode ser ampliada.")
+        if not self.instance._state.adding and self.changed_data:
+            current = Meeting.objects.select_related("class_group").get(pk=self.instance.pk)
+            if current.status != MeetingStatus.PLANNED or current.class_group.status in {
+                ClassGroupStatus.COMPLETED,
+                ClassGroupStatus.CANCELLED,
+            }:
+                raise forms.ValidationError(
+                    "Encontros processados ou de turmas encerradas não podem ser editados. "
+                    "Corrija a frequência pelo registro de chamada da aplicação."
+                )
+        return cleaned
 
 
 class WorkshopForm(forms.ModelForm):
@@ -89,3 +136,14 @@ class MeetingForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         if class_group is not None:
             self.instance.class_group = class_group
+
+    def clean(self):
+        cleaned = super().clean()
+        starts_at = cleaned.get("starts_at")
+        if starts_at and self.instance.class_group_id:
+            existing = Meeting.objects.filter(
+                class_group_id=self.instance.class_group_id, starts_at=starts_at
+            ).exclude(pk=self.instance.pk)
+            if existing.exists():
+                self.add_error("starts_at", MEETING_DUPLICATE_MESSAGE)
+        return cleaned

@@ -31,6 +31,24 @@ servidor e as contas de avaliação usam credenciais entregues pelo responsável
 
 ## 3. Administrador
 
+### Meu perfil (todos os usuários)
+
+No cabeçalho, abra **Meu perfil**, confira o nome completo e o e-mail e selecione
+**Salvar perfil**. Use o novo e-mail no próximo acesso e na recuperação de senha. O e-mail
+deve ser válido e não estar em uso; o nome é obrigatório. O perfil de acesso é apenas
+informativo nessa tela. Dados acadêmicos e certificados já emitidos mantêm seus registros.
+
+### Operações no Django admin
+
+Situações de oficinas, turmas e encontros são apenas consultadas no admin. Siga o link
+apresentado no registro para publicar, abrir inscrições, iniciar, cancelar ou processar a
+conclusão na aplicação. Inscrições, projetos, avaliações e certificados são consultados no
+admin; suas alterações usam os fluxos acadêmicos deste manual. Um encontro da mesma turma
+não pode repetir o início de outro; o formulário informa a duplicidade sem gravar.
+
+Contas com histórico não são excluídas pela interface. O último administrador ativo não
+pode perder ativação, papel administrativo ou acesso administrativo.
+
 ### 3.1 Pessoas e instituições
 
 1. abra **Pessoas**;

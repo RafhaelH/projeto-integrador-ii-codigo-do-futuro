@@ -1,0 +1,11 @@
+{
+  "files": 33,
+  "changed_files": [],
+  "historical_failed_cases": [
+    "HTTP-101",
+    "HTTP-260",
+    "HTTP-297",
+    "HTTP-320"
+  ],
+  "historical_failures_not_reclassified": true
+}

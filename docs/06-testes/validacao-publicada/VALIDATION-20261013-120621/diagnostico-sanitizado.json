@@ -1,0 +1,10 @@
+{
+  "exception_classes": [
+    "IntegrityError",
+    "UniqueViolation"
+  ],
+  "constraint_names": [
+    "workshops_meeting_start_unique"
+  ],
+  "raw_logs_preserved": false
+}

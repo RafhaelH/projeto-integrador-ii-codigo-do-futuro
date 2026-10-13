@@ -1,0 +1,9 @@
+{
+  "type": "NameError",
+  "variable": "CREDS",
+  "application_failure": false,
+  "after_case": "HTTP-124",
+  "writes_at_failed_step": false,
+  "action": "Initialize historical helper credentials; resume before exclusive last-seat confirmations",
+  "first_pass_preserved": true
+}

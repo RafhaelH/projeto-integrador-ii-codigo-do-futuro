@@ -1,0 +1,8 @@
+{
+  "container": "codigo-do-futuro-fix-test-db",
+  "container_id": "48f51854d48e6a48a0268ddb5202693a23a3012672f19137706bd857c372446e",
+  "owned_internal_network": "codigo-do-futuro-fix-tests",
+  "removed_only_this_temporary_container_and_network": true,
+  "volumes_removed": false,
+  "production_untouched": true
+}

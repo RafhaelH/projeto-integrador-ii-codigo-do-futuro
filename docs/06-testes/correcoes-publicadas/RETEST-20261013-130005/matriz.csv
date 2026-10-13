@@ -1,0 +1,280 @@
+id,functionality,group,method,endpoint,profile,status,classification,tipo
+HTTP-001,Health por HTTPS,Disponibilidade,GET,/healthz/,ANONYMOUS,200,APROVADO,VERIFICACAO
+HTTP-002,Ready com banco,Disponibilidade,GET,/readyz/,ANONYMOUS,200,APROVADO,VERIFICACAO
+HTTP-003,Login público HTTPS,Disponibilidade,GET,/entrar/,ANONYMOUS,200,APROVADO,VERIFICACAO
+HTTP-004,Estático do login,Disponibilidade,GET,/static/css/app.a9c0df32f22a.css,ANONYMOUS,200,APROVADO,VERIFICACAO
+HTTP-005,HTTP redireciona para HTTPS,Disponibilidade,GET,http://projeto-integrador.tesseratointegra.com.br/entrar/,ANONYMOUS,301,APROVADO,VERIFICACAO
+HTTP-006,Anônimo em página protegida,Autorização,GET,/,ANONYMOUS,302,APROVADO,VERIFICACAO
+HTTP-007,Anônimo em página protegida,Autorização,GET,/pessoas/,ANONYMOUS,302,APROVADO,VERIFICACAO
+HTTP-008,Anônimo em página protegida,Autorização,GET,/oficinas/,ANONYMOUS,302,APROVADO,VERIFICACAO
+HTTP-009,Anônimo em página protegida,Autorização,GET,/inscricoes/,ANONYMOUS,302,APROVADO,VERIFICACAO
+HTTP-010,Anônimo em página protegida,Autorização,GET,/acompanhamento/frequencia/,ANONYMOUS,302,APROVADO,VERIFICACAO
+HTTP-011,Anônimo em página protegida,Autorização,GET,/acompanhamento/certificados/,ANONYMOUS,302,APROVADO,VERIFICACAO
+HTTP-012,Anônimo em página protegida,Autorização,GET,/painel/,ANONYMOUS,302,APROVADO,VERIFICACAO
+HTTP-013,Login incorreto,Autenticação,POST,/entrar/,ANONYMOUS,200,APROVADO,VERIFICACAO
+HTTP-014,Login correto ADMIN,Autenticação,POST,/entrar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-015,Provisionar conta i1,Preparação HTTP,POST,/admin/accounts/user/add/,ADMIN,302,APROVADO,PREPARACAO
+HTTP-016,Provisionar conta i2,Preparação HTTP,POST,/admin/accounts/user/add/,ADMIN,302,APROVADO,PREPARACAO
+HTTP-017,Provisionar conta p1,Preparação HTTP,POST,/admin/accounts/user/add/,ADMIN,302,APROVADO,PREPARACAO
+HTTP-018,Provisionar conta p2,Preparação HTTP,POST,/admin/accounts/user/add/,ADMIN,302,APROVADO,PREPARACAO
+HTTP-019,Provisionar conta p3,Preparação HTTP,POST,/admin/accounts/user/add/,ADMIN,302,APROVADO,PREPARACAO
+HTTP-020,Provisionar conta minor,Preparação HTTP,POST,/admin/accounts/user/add/,ADMIN,302,APROVADO,PREPARACAO
+HTTP-021,Login correto INSTRUCTOR_1,Autenticação,POST,/entrar/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-022,Login correto INSTRUCTOR_2,Autenticação,POST,/entrar/,INSTRUCTOR_2,302,APROVADO,VERIFICACAO
+HTTP-023,Login correto PARTICIPANT_1,Autenticação,POST,/entrar/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-024,Login correto PARTICIPANT_2,Autenticação,POST,/entrar/,PARTICIPANT_2,302,APROVADO,VERIFICACAO
+HTTP-025,Login correto PARTICIPANT_3,Autenticação,POST,/entrar/,PARTICIPANT_3,302,APROVADO,VERIFICACAO
+HTTP-026,Login correto PARTICIPANT_MINOR,Autenticação,POST,/entrar/,PARTICIPANT_MINOR,302,APROVADO,VERIFICACAO
+HTTP-027,Flags cookies ADMIN,Autenticação,GET,/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-028,Flags cookies INSTRUCTOR_1,Autenticação,GET,/,INSTRUCTOR_1,200,APROVADO,VERIFICACAO
+HTTP-029,Flags cookies PARTICIPANT_1,Autenticação,GET,/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-030,Perfil insuficiente i1,Autorização,GET,/pessoas/,INSTRUCTOR_1,403,APROVADO,VERIFICACAO
+HTTP-031,Perfil insuficiente i1,Autorização,GET,/pessoas/participantes/,INSTRUCTOR_1,403,APROVADO,VERIFICACAO
+HTTP-032,Perfil insuficiente i1,Autorização,GET,/oficinas/nova/,INSTRUCTOR_1,403,APROVADO,VERIFICACAO
+HTTP-033,Perfil insuficiente i1,Autorização,GET,/oficinas/turmas/nova/,INSTRUCTOR_1,403,APROVADO,VERIFICACAO
+HTTP-034,Perfil insuficiente i1,Autorização,GET,/admin/accounts/user/add/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-035,Perfil insuficiente p1,Autorização,GET,/pessoas/,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-036,Perfil insuficiente p1,Autorização,GET,/pessoas/participantes/,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-037,Perfil insuficiente p1,Autorização,GET,/oficinas/nova/,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-038,Perfil insuficiente p1,Autorização,GET,/oficinas/turmas/nova/,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-039,Perfil insuficiente p1,Autorização,GET,/admin/accounts/user/add/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-040,POST sem CSRF,Autorização,POST,/pessoas/participantes/novo/,ADMIN,403,APROVADO,VERIFICACAO
+HTTP-041,POST CSRF inválido,Autorização,POST,/pessoas/participantes/novo/,ADMIN,403,APROVADO,VERIFICACAO
+HTTP-042,Método DELETE inadequado,Autorização,DELETE,/pessoas/participantes/novo/,ADMIN,403,APROVADO,VERIFICACAO
+HTTP-043,Identificador inexistente,Autorização,GET,/pessoas/participantes/7f690bb5-7fd8-4172-932a-228132ac1a77/,ADMIN,404,APROVADO,VERIFICACAO
+HTTP-044,Participante campos obrigatórios,Pessoas,POST,/pessoas/participantes/novo/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-045,Formatos de participante inválidos,Pessoas,POST,/pessoas/participantes/novo/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-046,Criar participante p1,Pessoas,POST,/pessoas/participantes/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-047,Criar participante p2,Pessoas,POST,/pessoas/participantes/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-048,Criar participante p3,Pessoas,POST,/pessoas/participantes/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-049,Criar participante minor,Pessoas,POST,/pessoas/participantes/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-050,Pesquisar participante e CPF mascarado,Pessoas,GET,/pessoas/participantes/?q=RETEST-20261013-130005,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-051,Consultar participante,Pessoas,GET,/pessoas/participantes/b01c7288-5cbd-44f1-8553-5f5adf46950f/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-052,Editar participante,Pessoas,POST,/pessoas/participantes/b01c7288-5cbd-44f1-8553-5f5adf46950f/editar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-053,CPF duplicado,Pessoas,POST,/pessoas/participantes/novo/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-054,Responsável telefone inválido,Pessoas,POST,/pessoas/responsaveis/novo/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-055,Criar responsável fictício,Pessoas,POST,/pessoas/responsaveis/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-056,Pesquisar responsável,Pessoas,GET,/pessoas/responsaveis/?q=RETEST-20261013-130005,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-057,Editar responsável,Pessoas,POST,/pessoas/responsaveis/d2b371f5-54f4-421a-a54a-e87b632fe77d/editar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-058,Criar perfil instrutor i1,Pessoas,POST,/pessoas/instrutores/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-059,Criar perfil instrutor i2,Pessoas,POST,/pessoas/instrutores/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-060,Pesquisar instrutor,Pessoas,GET,/pessoas/instrutores/?q=RETEST-20261013-130005,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-061,Criar instituição,Pessoas,POST,/pessoas/instituicoes/nova/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-062,Pesquisar instituição,Pessoas,GET,/pessoas/instituicoes/?q=RETEST-20261013-130005,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-063,Editar instituição,Pessoas,POST,/pessoas/instituicoes/e25b7026-fa27-43de-b6c9-e9210268ecc2/editar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-064,Dados pessoais protegidos p1,Autorização,GET,/pessoas/participantes/e09f0869-b844-4ec5-9254-b069795a88d2/,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-065,Dados pessoais protegidos i1,Autorização,GET,/pessoas/participantes/e09f0869-b844-4ec5-9254-b069795a88d2/,INSTRUCTOR_1,403,APROVADO,VERIFICACAO
+HTTP-066,Criar oficina rascunho,Oficinas,POST,/oficinas/nova/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-067,Oficina slug duplicado,Oficinas,POST,/oficinas/nova/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-068,Editar oficina,Oficinas,POST,/oficinas/c3672b51-e42c-413d-8c83-c8a504fb72fb/editar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-069,Publicar oficina,Oficinas,POST,/oficinas/c3672b51-e42c-413d-8c83-c8a504fb72fb/situacao/published/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-070,Pesquisar oficina,Oficinas,GET,/oficinas/?q=RETEST-20261013-130005,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-071,Turma datas e capacidade inválidas,Turmas,POST,/oficinas/turmas/nova/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-072,Criar turma queue,Turmas,POST,/oficinas/turmas/nova/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-073,Abrir sem instrutor bloqueado,Turmas,POST,/oficinas/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/situacao/open/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-074,Editar turma planejada,Turmas,POST,/oficinas/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/editar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-075,Vincular instrutor queue,Turmas,POST,/oficinas/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/instrutores/vincular/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-076,Abrir inscrições queue,Turmas,POST,/oficinas/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/situacao/open/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-077,Criar turma race,Turmas,POST,/oficinas/turmas/nova/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-078,Vincular instrutor race,Turmas,POST,/oficinas/turmas/50914295-b699-4700-8533-11f661e12d30/instrutores/vincular/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-079,Abrir inscrições race,Turmas,POST,/oficinas/turmas/50914295-b699-4700-8533-11f661e12d30/situacao/open/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-080,Criar turma academic,Turmas,POST,/oficinas/turmas/nova/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-081,Vincular instrutor academic,Turmas,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/instrutores/vincular/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-082,Abrir inscrições academic,Turmas,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/situacao/open/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-083,Criar turma other,Turmas,POST,/oficinas/turmas/nova/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-084,Vincular instrutor other,Turmas,POST,/oficinas/turmas/af2f1899-5fd2-42a0-8de5-aab541d6b8a3/instrutores/vincular/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-085,Abrir inscrições other,Turmas,POST,/oficinas/turmas/af2f1899-5fd2-42a0-8de5-aab541d6b8a3/situacao/open/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-086,Iniciar sem encontros bloqueado,Turmas,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/situacao/in_progress/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-087,Encontro fora período e fim inválido,Encontros,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/encontros/novo/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-088,Criar encontro 1,Encontros,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/encontros/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-089,Criar encontro 2,Encontros,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/encontros/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-090,Criar encontro 3,Encontros,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/encontros/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-091,Criar encontro 4,Encontros,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/encontros/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-092,Encontro início duplicado,Encontros,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/encontros/novo/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-093,Editar encontro planejado,Encontros,POST,/oficinas/encontros/8002294d-0519-4034-bfe6-efba4ce9f68d/editar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-094,Criar encontro futuro,Encontros,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/encontros/novo/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-095,Instrutor lista somente próprias turmas i1,Autorização,GET,/oficinas/turmas/?q=RETEST-20261013-130005,INSTRUCTOR_1,200,APROVADO,VERIFICACAO
+HTTP-096,Instrutor turma alheia i1,Autorização,GET,/oficinas/turmas/af2f1899-5fd2-42a0-8de5-aab541d6b8a3/,INSTRUCTOR_1,404,APROVADO,VERIFICACAO
+HTTP-097,Instrutor lista somente próprias turmas i2,Autorização,GET,/oficinas/turmas/?q=RETEST-20261013-130005,INSTRUCTOR_2,200,APROVADO,VERIFICACAO
+HTTP-098,Instrutor turma alheia i2,Autorização,GET,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/,INSTRUCTOR_2,404,APROVADO,VERIFICACAO
+HTTP-099,Editar turma aberta bloqueado,Turmas,GET,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/editar/,ADMIN,403,APROVADO,VERIFICACAO
+HTTP-100,Vincular instrutor após abertura bloqueado,Turmas,GET,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/instrutores/vincular/,ADMIN,403,APROVADO,VERIFICACAO
+HTTP-101,Menor sem responsável bloqueado,Inscrições,POST,/inscricoes/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/solicitar/,PARTICIPANT_MINOR,302,APROVADO,VERIFICACAO
+HTTP-102,Vincular responsável ao menor,Pessoas,POST,/pessoas/participantes/9247dbb9-b8ac-48ac-8dfe-ab747a4063e3/responsaveis/vincular/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-103,Responsável duplicado bloqueado,Pessoas,POST,/pessoas/participantes/9247dbb9-b8ac-48ac-8dfe-ab747a4063e3/responsaveis/vincular/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-104,Solicitar inscrição p1 queue,Inscrições,POST,/inscricoes/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/solicitar/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-105,Solicitar inscrição minor queue,Inscrições,POST,/inscricoes/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/solicitar/,PARTICIPANT_MINOR,302,APROVADO,VERIFICACAO
+HTTP-106,Inscrição duplicada bloqueada,Inscrições,POST,/inscricoes/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/solicitar/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-107,Contadores sem ocupar vaga pendente,Vagas,GET,/inscricoes/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/fila/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-108,Confirmar inscrição e ocupar vaga,Vagas,POST,/inscricoes/83fa097f-54ef-4dc5-a47c-ded4aa4e65cb/confirmar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-109,Contadores turma lotada,Vagas,GET,/inscricoes/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/fila/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-110,Solicitar inscrição p2 queue,Inscrições,POST,/inscricoes/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/solicitar/,PARTICIPANT_2,302,APROVADO,VERIFICACAO
+HTTP-111,Solicitar inscrição p3 queue,Inscrições,POST,/inscricoes/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/solicitar/,PARTICIPANT_3,302,APROVADO,VERIFICACAO
+HTTP-112,Lista espera ordem e posição,Vagas,GET,/inscricoes/turmas/f7323a58-76e8-41d8-a5ce-c7bfe876857d/fila/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-113,Participante vê própria posição sem terceiros,Autorização,GET,/inscricoes/?q=RETEST-20261013-130005,PARTICIPANT_2,200,APROVADO,VERIFICACAO
+HTTP-114,Confirmar sem vaga bloqueado,Vagas,POST,/inscricoes/85068db3-53b2-429a-82fd-d6f09031470e/confirmar/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-115,Confirmar perfil insuficiente i1,Autorização,POST,/inscricoes/85068db3-53b2-429a-82fd-d6f09031470e/confirmar/,INSTRUCTOR_1,403,APROVADO,VERIFICACAO
+HTTP-116,Confirmar perfil insuficiente p2,Autorização,POST,/inscricoes/85068db3-53b2-429a-82fd-d6f09031470e/confirmar/,PARTICIPANT_2,403,APROVADO,VERIFICACAO
+HTTP-117,Cancelar inscrição alheia bloqueado,Autorização,POST,/inscricoes/83fa097f-54ef-4dc5-a47c-ded4aa4e65cb/cancelar/,PARTICIPANT_2,403,APROVADO,VERIFICACAO
+HTTP-118,Cancelar própria e promover primeiro da fila,Vagas,POST,/inscricoes/83fa097f-54ef-4dc5-a47c-ded4aa4e65cb/cancelar/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-119,Rejeitar exige motivo,Inscrições,POST,/inscricoes/1ee83e94-66e7-4cec-a665-5a77dcd58088/rejeitar/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-120,Rejeitar inscrição com histórico,Inscrições,POST,/inscricoes/1ee83e94-66e7-4cec-a665-5a77dcd58088/rejeitar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-121,Cancelamento administrativo exige motivo,Inscrições,POST,/inscricoes/85068db3-53b2-429a-82fd-d6f09031470e/cancelar/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-122,Cancelar confirmado por administrador,Vagas,POST,/inscricoes/85068db3-53b2-429a-82fd-d6f09031470e/cancelar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-123,Solicitar inscrição p1 race,Inscrições,POST,/inscricoes/turmas/50914295-b699-4700-8533-11f661e12d30/solicitar/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-124,Solicitar inscrição p2 race,Inscrições,POST,/inscricoes/turmas/50914295-b699-4700-8533-11f661e12d30/solicitar/,PARTICIPANT_2,302,APROVADO,VERIFICACAO
+HTTP-125,Login correto ADMIN,Autenticação,POST,/entrar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-126,Login correto INSTRUCTOR_1,Autenticação,POST,/entrar/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-127,Login correto INSTRUCTOR_2,Autenticação,POST,/entrar/,INSTRUCTOR_2,302,APROVADO,VERIFICACAO
+HTTP-128,Login correto PARTICIPANT_1,Autenticação,POST,/entrar/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-129,Login correto PARTICIPANT_2,Autenticação,POST,/entrar/,PARTICIPANT_2,302,APROVADO,VERIFICACAO
+HTTP-130,Login correto PARTICIPANT_3,Autenticação,POST,/entrar/,PARTICIPANT_3,302,APROVADO,VERIFICACAO
+HTTP-131,Login correto PARTICIPANT_MINOR,Autenticação,POST,/entrar/,PARTICIPANT_MINOR,302,APROVADO,VERIFICACAO
+HTTP-132,Concorrência última vaga (duas requisições),Vagas,POST x2,/inscricoes/<race-enrollment>/confirmar/,ADMIN,"[200, 302]",APROVADO,VERIFICACAO
+HTTP-133,Solicitar inscrição p1 academic,Inscrições,POST,/inscricoes/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/solicitar/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-134,Confirmar acadêmica p1,Inscrições,POST,/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/confirmar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-135,Solicitar inscrição p2 academic,Inscrições,POST,/inscricoes/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/solicitar/,PARTICIPANT_2,302,APROVADO,VERIFICACAO
+HTTP-136,Confirmar acadêmica p2,Inscrições,POST,/inscricoes/0c1481b9-bc5e-4840-91ba-86863ed4c4e5/confirmar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-137,Solicitar inscrição p3 academic,Inscrições,POST,/inscricoes/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/solicitar/,PARTICIPANT_3,302,APROVADO,VERIFICACAO
+HTTP-138,Confirmar acadêmica p3,Inscrições,POST,/inscricoes/20b620fa-5911-4201-9c99-6f7afd2efa01/confirmar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-139,Solicitar inscrição minor academic,Inscrições,POST,/inscricoes/nova/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-140,Confirmar acadêmica minor,Inscrições,POST,/inscricoes/e0d9fde8-4b22-4174-80a5-4ea1c514a5b3/confirmar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-141,Iniciar turma acadêmica,Turmas,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/situacao/in_progress/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-142,Conclusão com encontros pendentes bloqueada,Conclusão,POST,/acompanhamento/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/conclusao/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-143,Frequência turma sem autorização i2,Autorização,GET,/acompanhamento/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/frequencia/,INSTRUCTOR_2,404,APROVADO,VERIFICACAO
+HTTP-144,Frequência turma sem autorização p1,Autorização,GET,/acompanhamento/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/frequencia/,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-145,Chamada não autorizada i2,Autorização,POST,/acompanhamento/encontros/8002294d-0519-4034-bfe6-efba4ce9f68d/chamada/,INSTRUCTOR_2,403,APROVADO,VERIFICACAO
+HTTP-146,Chamada não autorizada p1,Autorização,POST,/acompanhamento/encontros/8002294d-0519-4034-bfe6-efba4ce9f68d/chamada/,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-147,Chamada encontro futuro bloqueada,Frequência,POST,/acompanhamento/encontros/e9c82716-5de9-4d3e-817f-7a13a2eb289b/chamada/,INSTRUCTOR_1,200,APROVADO,VERIFICACAO
+HTTP-148,Registrar presença/ausência encontro 1,Frequência,POST,/acompanhamento/encontros/8002294d-0519-4034-bfe6-efba4ce9f68d/chamada/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-149,Registrar presença/ausência encontro 2,Frequência,POST,/acompanhamento/encontros/8d55d834-5d7c-4045-ada9-0106f7b1eaa4/chamada/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-150,Registrar presença/ausência encontro 3,Frequência,POST,/acompanhamento/encontros/42d9d1b9-7545-471e-a1a1-070248d84736/chamada/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-151,Registrar presença/ausência encontro 4,Frequência,POST,/acompanhamento/encontros/8c7f99ef-6082-49de-9f49-b36a883d608d/chamada/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-152,Corrigir chamada sem duplicidade,Frequência,POST,/acompanhamento/encontros/8002294d-0519-4034-bfe6-efba4ce9f68d/chamada/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-153,Restabelecer chamada exclusiva de teste,Frequência,POST,/acompanhamento/encontros/8002294d-0519-4034-bfe6-efba4ce9f68d/chamada/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-154,Percentuais turma 75/50/100,Frequência,GET,/acompanhamento/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/frequencia/,INSTRUCTOR_1,200,APROVADO,VERIFICACAO
+HTTP-155,Participante somente própria frequência,Autorização,GET,/acompanhamento/frequencia/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-156,Cancelar encontro futuro,Encontros,POST,/oficinas/encontros/e9c82716-5de9-4d3e-817f-7a13a2eb289b/cancelar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-157,Chamada encontro cancelado bloqueada,Frequência,POST,/acompanhamento/encontros/e9c82716-5de9-4d3e-817f-7a13a2eb289b/chamada/,INSTRUCTOR_1,403,APROVADO,VERIFICACAO
+HTTP-158,Conclusão sem avaliações bloqueada,Conclusão,POST,/acompanhamento/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/conclusao/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-159,Projeto URL inválida,Projetos,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/projeto/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-160,Salvar projeto rascunho,Projetos,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/projeto/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-161,Entregar projeto p1,Projetos,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/projeto/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-162,Entregar projeto p2,Projetos,POST,/acompanhamento/inscricoes/0c1481b9-bc5e-4840-91ba-86863ed4c4e5/projeto/,PARTICIPANT_2,302,APROVADO,VERIFICACAO
+HTTP-163,Entregar projeto p3,Projetos,POST,/acompanhamento/inscricoes/20b620fa-5911-4201-9c99-6f7afd2efa01/projeto/,PARTICIPANT_3,302,APROVADO,VERIFICACAO
+HTTP-164,Projeto de terceiro bloqueado,Autorização,GET,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/projeto/,PARTICIPANT_2,404,APROVADO,VERIFICACAO
+HTTP-165,Projeto de terceiro POST bloqueado,Autorização,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/projeto/,PARTICIPANT_2,404,APROVADO,VERIFICACAO
+HTTP-166,Revisar projeto instrutor vinculado,Projetos,POST,/acompanhamento/projetos/89876066-2888-4f72-af17-f7c1978490e2/revisao/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-167,Revisão por instrutor alheio bloqueada,Autorização,POST,/acompanhamento/projetos/89876066-2888-4f72-af17-f7c1978490e2/revisao/,INSTRUCTOR_2,403,APROVADO,VERIFICACAO
+HTTP-168,"Nota 10,1 bloqueada",Avaliações,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/avaliacao/,INSTRUCTOR_1,200,APROVADO,VERIFICACAO
+HTTP-169,Avaliar sem publicar p1,Avaliações,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/avaliacao/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-170,Devolutiva não publicada oculta,Avaliações,GET,/acompanhamento/frequencia/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-171,Publicar avaliação p1,Avaliações,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/avaliacao/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-172,Avaliar sem publicar p2,Avaliações,POST,/acompanhamento/inscricoes/0c1481b9-bc5e-4840-91ba-86863ed4c4e5/avaliacao/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-173,Publicar avaliação p2,Avaliações,POST,/acompanhamento/inscricoes/0c1481b9-bc5e-4840-91ba-86863ed4c4e5/avaliacao/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-174,Avaliar sem publicar p3,Avaliações,POST,/acompanhamento/inscricoes/20b620fa-5911-4201-9c99-6f7afd2efa01/avaliacao/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-175,Publicar avaliação p3,Avaliações,POST,/acompanhamento/inscricoes/20b620fa-5911-4201-9c99-6f7afd2efa01/avaliacao/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-176,Avaliar sem publicar minor,Avaliações,POST,/acompanhamento/inscricoes/e0d9fde8-4b22-4174-80a5-4ea1c514a5b3/avaliacao/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-177,Publicar avaliação minor,Avaliações,POST,/acompanhamento/inscricoes/e0d9fde8-4b22-4174-80a5-4ea1c514a5b3/avaliacao/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-178,Devolutiva publicada visível,Avaliações,GET,/acompanhamento/frequencia/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-179,Avaliação perfil/vínculo inválido i2,Autorização,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/avaliacao/,INSTRUCTOR_2,403,APROVADO,VERIFICACAO
+HTTP-180,Avaliação perfil/vínculo inválido p1,Autorização,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/avaliacao/,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-181,Conclusão genérica não contorna critérios,Conclusão,POST,/oficinas/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/situacao/completed/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-182,Processar conclusão 1 aprovado / 3 não concluintes,Conclusão,POST,/acompanhamento/turmas/d1bbfb19-49bc-4bf6-82d4-5e5858e7bb84/conclusao/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-183,Alteração após conclusão bloqueada,Conclusão,GET,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/projeto/,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-184,Alteração após conclusão bloqueada,Conclusão,GET,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/avaliacao/,INSTRUCTOR_1,403,APROVADO,VERIFICACAO
+HTTP-185,Listar certificados,Certificados,GET,/acompanhamento/certificados/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-186,Certificado não concluinte bloqueado,Certificados,POST,/acompanhamento/inscricoes/0c1481b9-bc5e-4840-91ba-86863ed4c4e5/certificado/emitir/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-187,Emitir certificado elegível,Certificados,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/certificado/emitir/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-188,Consultar certificado próprio,Certificados,GET,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-189,Baixar PDF próprio e conferir conteúdo,Certificados,GET,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/baixar/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-190,Permissão certificado i1,Autorização,GET,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/,INSTRUCTOR_1,200,APROVADO,VERIFICACAO
+HTTP-191,Permissão download certificado i1,Autorização,GET,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/baixar/,INSTRUCTOR_1,200,APROVADO,VERIFICACAO
+HTTP-192,Permissão certificado i2,Autorização,GET,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/,INSTRUCTOR_2,404,APROVADO,VERIFICACAO
+HTTP-193,Permissão download certificado i2,Autorização,GET,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/baixar/,INSTRUCTOR_2,404,APROVADO,VERIFICACAO
+HTTP-194,Permissão certificado p2,Autorização,GET,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/,PARTICIPANT_2,404,APROVADO,VERIFICACAO
+HTTP-195,Permissão download certificado p2,Autorização,GET,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/baixar/,PARTICIPANT_2,404,APROVADO,VERIFICACAO
+HTTP-196,Emissão repetida idempotente,Certificados,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/certificado/emitir/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-197,Revogação exige motivo,Certificados,POST,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/revogar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-198,Revogar certificado desta execução,Certificados,POST,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/revogar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-199,PDF revogado bloqueado,Certificados,GET,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/baixar/,PARTICIPANT_1,404,APROVADO,VERIFICACAO
+HTTP-200,Certificado revogado oculto ao participante,Certificados,GET,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/,PARTICIPANT_1,404,APROVADO,VERIFICACAO
+HTTP-201,Histórico certificado revogado consultável ao admin,Certificados,GET,/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-202,Reemissão de revogado bloqueada,Certificados,POST,/acompanhamento/inscricoes/fdf655fa-3261-454d-9d15-265606a55931/certificado/emitir/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-203,Painel filtros e indicadores reconciliados,Painéis,GET,/painel/?workshop=c3672b51-e42c-413d-8c83-c8a504fb72fb&class_status=COMPLETED&period_start=2026-10-13&period_end=2026-10-13,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-204,Painel instrutor isolado i1,Painéis,GET,/painel/,INSTRUCTOR_1,200,APROVADO,VERIFICACAO
+HTTP-205,Painel instrutor isolado i2,Painéis,GET,/painel/,INSTRUCTOR_2,200,APROVADO,VERIFICACAO
+HTTP-206,Participante sem painel gerencial,Painéis,GET,/painel/,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-207,CSV inscricoes filtros/cabeçalhos/conteúdo,CSV,GET,/painel/relatorios/inscricoes.csv?workshop=c3672b51-e42c-413d-8c83-c8a504fb72fb&class_status=COMPLETED&period_start=2026-10-13&period_end=2026-10-13,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-208,CSV inscricoes acesso negado i1,Autorização,GET,/painel/relatorios/inscricoes.csv?workshop=c3672b51-e42c-413d-8c83-c8a504fb72fb&class_status=COMPLETED&period_start=2026-10-13&period_end=2026-10-13,INSTRUCTOR_1,403,APROVADO,VERIFICACAO
+HTTP-209,CSV inscricoes acesso negado p1,Autorização,GET,/painel/relatorios/inscricoes.csv?workshop=c3672b51-e42c-413d-8c83-c8a504fb72fb&class_status=COMPLETED&period_start=2026-10-13&period_end=2026-10-13,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-210,CSV frequencia filtros/cabeçalhos/conteúdo,CSV,GET,/painel/relatorios/frequencia.csv?workshop=c3672b51-e42c-413d-8c83-c8a504fb72fb&class_status=COMPLETED&period_start=2026-10-13&period_end=2026-10-13,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-211,CSV frequencia acesso negado i1,Autorização,GET,/painel/relatorios/frequencia.csv?workshop=c3672b51-e42c-413d-8c83-c8a504fb72fb&class_status=COMPLETED&period_start=2026-10-13&period_end=2026-10-13,INSTRUCTOR_1,403,APROVADO,VERIFICACAO
+HTTP-212,CSV frequencia acesso negado p1,Autorização,GET,/painel/relatorios/frequencia.csv?workshop=c3672b51-e42c-413d-8c83-c8a504fb72fb&class_status=COMPLETED&period_start=2026-10-13&period_end=2026-10-13,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-213,CSV conclusao filtros/cabeçalhos/conteúdo,CSV,GET,/painel/relatorios/conclusao.csv?workshop=c3672b51-e42c-413d-8c83-c8a504fb72fb&class_status=COMPLETED&period_start=2026-10-13&period_end=2026-10-13,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-214,CSV conclusao acesso negado i1,Autorização,GET,/painel/relatorios/conclusao.csv?workshop=c3672b51-e42c-413d-8c83-c8a504fb72fb&class_status=COMPLETED&period_start=2026-10-13&period_end=2026-10-13,INSTRUCTOR_1,403,APROVADO,VERIFICACAO
+HTTP-215,CSV conclusao acesso negado p1,Autorização,GET,/painel/relatorios/conclusao.csv?workshop=c3672b51-e42c-413d-8c83-c8a504fb72fb&class_status=COMPLETED&period_start=2026-10-13&period_end=2026-10-13,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-216,CSV filtro inválido,CSV,GET,/painel/relatorios/inscricoes.csv?period_start=2026-10-15&period_end=2026-10-01,ADMIN,400,APROVADO,VERIFICACAO
+HTTP-217,Relatório inexistente,CSV,GET,/painel/relatorios/desconhecido.csv,ADMIN,404,APROVADO,VERIFICACAO
+HTTP-218,Painel filtro inválido sem dados,Painéis,GET,/painel/?period_start=2026-10-15&period_end=2026-10-01,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-219,Recuperação e-mail inválido,Recuperação,POST,/senha/recuperar/,ANONYMOUS_PASSWORD_RESET,200,APROVADO,VERIFICACAO
+HTTP-220,Processar recuperação conta exclusiva,Recuperação,POST,/senha/recuperar/,ANONYMOUS_PASSWORD_RESET,302,APROVADO,VERIFICACAO
+HTTP-221,Página confirmação recuperação,Recuperação,GET,/senha/recuperar/enviado/,ANONYMOUS_PASSWORD_RESET,200,APROVADO,VERIFICACAO
+HTTP-222,E-mail de recuperação gerado no console,Recuperação,POST (evidência complementar de log sanitizada),/senha/recuperar/,ANONYMOUS,,APROVADO,VERIFICACAO
+HTTP-223,Logout por GET rejeitado,Autenticação,GET,/sair/,PARTICIPANT_3,405,APROVADO,VERIFICACAO
+HTTP-224,Logout por POST,Autenticação,POST,/sair/,PARTICIPANT_3,302,APROVADO,VERIFICACAO
+HTTP-225,Acesso após logout,Autenticação,GET,/,PARTICIPANT_3,302,APROVADO,VERIFICACAO
+HTTP-226,Preparar turma para guarda administrativa,Preparação HTTP,POST,/oficinas/turmas/nova/,ADMIN,302,APROVADO,PREPARACAO
+HTTP-227,Admin indica fluxo canônico e situação somente leitura,Admin acadêmico,GET,/admin/workshops/classgroup/0fcd4ffb-b0b8-4316-9d2c-e15a6a181197/change/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-228,DEF-003 conclusão direta bloqueada sem gravação parcial,Admin acadêmico,POST,/admin/workshops/classgroup/0fcd4ffb-b0b8-4316-9d2c-e15a6a181197/change/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-229,Admin permite editar outros campos legítimos,Admin acadêmico,POST,/admin/workshops/classgroup/0fcd4ffb-b0b8-4316-9d2c-e15a6a181197/change/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-230,Criar encontro legítimo para reteste,Preparação HTTP,POST,/oficinas/turmas/0fcd4ffb-b0b8-4316-9d2c-e15a6a181197/encontros/novo/,ADMIN,302,APROVADO,PREPARACAO
+HTTP-231,DEF-001 início duplicado preserva original,Encontros,POST,/oficinas/turmas/0fcd4ffb-b0b8-4316-9d2c-e15a6a181197/encontros/novo/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-232,Editar encontro com seu próprio início,Encontros,POST,/oficinas/encontros/5d5221aa-4c5f-4ec6-acd2-c978e4a7ba47/editar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-233,Admin inline não marca encontro realizado,Admin acadêmico,POST,/admin/workshops/classgroup/0fcd4ffb-b0b8-4316-9d2c-e15a6a181197/change/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-234,Admin de encontro não altera situação diretamente,Admin acadêmico,POST,/admin/workshops/meeting/5d5221aa-4c5f-4ec6-acd2-c978e4a7ba47/change/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-235,Admin acadêmico exige fluxo autorizado: enrollments/enrollment,Admin acadêmico,POST,/admin/enrollments/enrollment/fdf655fa-3261-454d-9d15-265606a55931/change/,ADMIN,403,APROVADO,VERIFICACAO
+HTTP-236,Admin acadêmico exige fluxo autorizado: learning/evaluation,Admin acadêmico,POST,/admin/learning/evaluation/40c39995-d527-457f-8104-a370e5b59adf/change/,ADMIN,403,APROVADO,VERIFICACAO
+HTTP-237,Admin acadêmico exige fluxo autorizado: learning/studentproject,Admin acadêmico,POST,/admin/learning/studentproject/89876066-2888-4f72-af17-f7c1978490e2/change/,ADMIN,403,APROVADO,VERIFICACAO
+HTTP-238,Perfil anônimo exige login,Perfil próprio,GET,/conta/perfil/,ANONYMOUS_PROFILE,302,APROVADO,VERIFICACAO
+HTTP-239,Perfil anônimo com CSRF exige login,Perfil próprio,POST,/conta/perfil/,ANONYMOUS_PROFILE,302,APROVADO,VERIFICACAO
+HTTP-240,POST de perfil anônimo exige login,Perfil próprio,POST,/conta/perfil/,ANONYMOUS_PROFILE,,SUPERADO_EXECUTOR,EXECUTOR_SUPERADO
+HTTP-241,Login correto ADMIN,Autenticação,POST,/entrar/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-242,Login correto INSTRUCTOR_1,Autenticação,POST,/entrar/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-243,Login correto INSTRUCTOR_2,Autenticação,POST,/entrar/,INSTRUCTOR_2,302,APROVADO,VERIFICACAO
+HTTP-244,Login correto PARTICIPANT_1,Autenticação,POST,/entrar/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-245,Login correto PARTICIPANT_2,Autenticação,POST,/entrar/,PARTICIPANT_2,302,APROVADO,VERIFICACAO
+HTTP-246,Login correto PARTICIPANT_3,Autenticação,POST,/entrar/,PARTICIPANT_3,302,APROVADO,VERIFICACAO
+HTTP-247,Login correto PARTICIPANT_MINOR,Autenticação,POST,/entrar/,PARTICIPANT_MINOR,302,APROVADO,VERIFICACAO
+HTTP-248,Perfil anônimo exige login,Perfil próprio,GET,/conta/perfil/,ANONYMOUS_PROFILE,302,APROVADO,VERIFICACAO
+HTTP-249,Perfil anônimo com CSRF exige login,Perfil próprio,POST,/conta/perfil/,ANONYMOUS_PROFILE,302,APROVADO,VERIFICACAO
+HTTP-250,POST de perfil anônimo sem CSRF bloqueado,Perfil próprio,POST,/conta/perfil/,ANONYMOUS_PROFILE,403,APROVADO,VERIFICACAO
+HTTP-251,Navegação para meu perfil admin,Perfil próprio,GET,/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-252,Consultar perfil próprio admin,Perfil próprio,GET,/conta/perfil/,ADMIN,200,APROVADO,VERIFICACAO
+HTTP-253,Atualizar perfil próprio admin,Perfil próprio,POST,/conta/perfil/,ADMIN,302,APROVADO,VERIFICACAO
+HTTP-254,Login com e-mail atualizado admin,Autenticação,POST,/entrar/,LOGIN_NEW_EMAIL_admin,302,APROVADO,VERIFICACAO
+HTTP-255,E-mail anterior não autentica admin,Autenticação,POST,/entrar/,OLD_EMAIL,200,APROVADO,VERIFICACAO
+HTTP-256,Navegação para meu perfil i1,Perfil próprio,GET,/,INSTRUCTOR_1,200,APROVADO,VERIFICACAO
+HTTP-257,Consultar perfil próprio i1,Perfil próprio,GET,/conta/perfil/,INSTRUCTOR_1,200,APROVADO,VERIFICACAO
+HTTP-258,Atualizar perfil próprio i1,Perfil próprio,POST,/conta/perfil/,INSTRUCTOR_1,302,APROVADO,VERIFICACAO
+HTTP-259,Login com e-mail atualizado i1,Autenticação,POST,/entrar/,LOGIN_NEW_EMAIL_i1,302,APROVADO,VERIFICACAO
+HTTP-260,E-mail anterior não autentica i1,Autenticação,POST,/entrar/,OLD_EMAIL,200,APROVADO,VERIFICACAO
+HTTP-261,Navegação para meu perfil p1,Perfil próprio,GET,/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-262,Consultar perfil próprio p1,Perfil próprio,GET,/conta/perfil/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-263,Atualizar perfil próprio p1,Perfil próprio,POST,/conta/perfil/,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-264,Login com e-mail atualizado p1,Autenticação,POST,/entrar/,LOGIN_NEW_EMAIL_p1,302,APROVADO,VERIFICACAO
+HTTP-265,E-mail anterior não autentica p1,Autenticação,POST,/entrar/,OLD_EMAIL,200,APROVADO,VERIFICACAO
+HTTP-266,Alvo de terceiro e privilégios forjados ignorados,Perfil próprio,POST,/conta/perfil/?user=5b156e8b-ceb1-4239-995b-a072a814d82d,PARTICIPANT_1,302,APROVADO,VERIFICACAO
+HTTP-267,Perfil não possui rota por usuário,Perfil próprio,GET,/conta/perfil/5b156e8b-ceb1-4239-995b-a072a814d82d/,PARTICIPANT_1,404,APROVADO,VERIFICACAO
+HTTP-268,Perfil: nome obrigatório,Perfil próprio,POST,/conta/perfil/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-269,Perfil: nome longo,Perfil próprio,POST,/conta/perfil/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-270,Perfil: e-mail obrigatório,Perfil próprio,POST,/conta/perfil/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-271,Perfil: e-mail inválido,Perfil próprio,POST,/conta/perfil/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-272,Perfil: unicidade sem diferença de caixa,Perfil próprio,POST,/conta/perfil/,PARTICIPANT_1,200,APROVADO,VERIFICACAO
+HTTP-273,Perfil sem CSRF bloqueado,Perfil próprio,POST,/conta/perfil/,PARTICIPANT_1,403,APROVADO,VERIFICACAO
+HTTP-274,Preparar redefinição de senha exclusiva,Preparação HTTP,POST,/senha/recuperar/,PASSWORD_RESET_COMPLETE,302,APROVADO,PREPARACAO
+HTTP-275,Token de redefinição válido,Autenticação,GET,/senha/redefinir/<uid>/<token>/,PASSWORD_RESET_COMPLETE,302,APROVADO,VERIFICACAO
+HTTP-276,Redefinir senha exclusiva,Autenticação,POST,/senha/redefinir/<uid>/<token>/,PASSWORD_RESET_COMPLETE,302,APROVADO,VERIFICACAO
+HTTP-277,Senha anterior rejeitada,Autenticação,POST,/entrar/,OLD_PASSWORD,200,APROVADO,VERIFICACAO
+HTTP-278,Login correto PARTICIPANT_3,Autenticação,POST,/entrar/,PARTICIPANT_3,302,APROVADO,VERIFICACAO
+HTTP-279,Token usado não pode ser reutilizado,Autenticação,GET,/senha/redefinir/<uid>/<token>/,USED_TOKEN,200,APROVADO,VERIFICACAO

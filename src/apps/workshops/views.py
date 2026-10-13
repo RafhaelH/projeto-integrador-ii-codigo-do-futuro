@@ -1,6 +1,8 @@
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.core.exceptions import PermissionDenied, ValidationError
+from django.db import IntegrityError, transaction
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse
 from django.views import View
@@ -9,7 +11,13 @@ from django.views.generic import CreateView, DetailView, ListView, UpdateView
 from apps.accounts.mixins import AdminRequiredMixin, RoleRequiredMixin
 from apps.accounts.models import UserRole
 
-from .forms import ClassGroupForm, ClassInstructorForm, MeetingForm, WorkshopForm
+from .forms import (
+    MEETING_DUPLICATE_MESSAGE,
+    ClassGroupForm,
+    ClassInstructorForm,
+    MeetingForm,
+    WorkshopForm,
+)
 from .models import (
     ClassGroup,
     ClassGroupStatus,
@@ -206,7 +214,27 @@ class ClassInstructorCreateView(AdminRequiredMixin, CreateView):
         )
 
 
-class MeetingCreateView(AdminRequiredMixin, SuccessMessageMixin, CreateView):
+class MeetingSaveMixin:
+    def form_valid(self, form):
+        try:
+            # Catch outside the savepoint: the connection is usable when rendering errors.
+            with transaction.atomic():
+                self.object = form.save()
+        except IntegrityError as error:
+            constraint = getattr(getattr(error.__cause__, "diag", None), "constraint_name", None)
+            sqlite_duplicate = str(error) == (
+                "UNIQUE constraint failed: workshops_meeting.class_group_id, "
+                "workshops_meeting.starts_at"
+            )
+            if constraint != "workshops_meeting_start_unique" and not sqlite_duplicate:
+                raise
+            form.add_error("starts_at", MEETING_DUPLICATE_MESSAGE)
+            return self.form_invalid(form)
+        messages.success(self.request, self.success_message)
+        return HttpResponseRedirect(self.get_success_url())
+
+
+class MeetingCreateView(AdminRequiredMixin, MeetingSaveMixin, CreateView):
     model = Meeting
     form_class = MeetingForm
     template_name = "workshops/entity_form.html"
@@ -239,7 +267,7 @@ class MeetingCreateView(AdminRequiredMixin, SuccessMessageMixin, CreateView):
         )
 
 
-class MeetingUpdateView(AdminRequiredMixin, SuccessMessageMixin, UpdateView):
+class MeetingUpdateView(AdminRequiredMixin, MeetingSaveMixin, UpdateView):
     model = Meeting
     form_class = MeetingForm
     template_name = "workshops/entity_form.html"

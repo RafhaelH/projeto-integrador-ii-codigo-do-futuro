@@ -1,0 +1,84 @@
+{"settings": "config.settings.test", "engine": "django.db.backends.postgresql", "database": "cdf_fix_test", "host": "172.24.0.2", "pytest_database": "test_cdf_fix_test", "separate_container": "codigo-do-futuro-fix-test-db", "no_published_port": true, "isolated": true}
+1 file reformatted, 147 files left unchanged
+All checks passed!
+148 files already formatted
+System check identified no issues (0 silenced).
+No changes detected
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0
+django: version: 5.2.17, settings: config.settings.test (from env)
+rootdir: /home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-7.1.0, django-4.14.0
+collected 225 items
+
+tests/accounts/test_admin.py .....                                       [  2%]
+tests/accounts/test_authentication.py ....                               [  4%]
+tests/accounts/test_profile.py .............                             [  9%]
+tests/accounts/test_user_model.py ....                                   [ 11%]
+tests/core/test_seed_demo.py .......                                     [ 14%]
+tests/core/test_views.py ...                                             [ 16%]
+tests/enrollments/test_models.py ....                                    [ 17%]
+tests/enrollments/test_services.py ................                      [ 24%]
+tests/enrollments/test_views.py ..........                               [ 29%]
+tests/learning/test_models.py .........                                  [ 33%]
+tests/learning/test_services.py .........................                [ 44%]
+tests/learning/test_views.py .....................                       [ 53%]
+tests/people/test_forms.py ..                                            [ 54%]
+tests/people/test_models.py .....                                        [ 56%]
+tests/people/test_services.py .......                                    [ 60%]
+tests/people/test_views.py .........                                     [ 64%]
+tests/reporting/test_forms.py ..                                         [ 64%]
+tests/reporting/test_selectors.py ...                                    [ 66%]
+tests/reporting/test_views.py ..........                                 [ 70%]
+tests/workshops/test_defect_regressions.py .............                 [ 76%]
+tests/workshops/test_forms.py ...                                        [ 77%]
+tests/workshops/test_models.py .....                                     [ 80%]
+tests/workshops/test_services.py ........                                [ 83%]
+tests/workshops/test_views.py .............                              [ 89%]
+tests/accounts/test_admin.py .                                           [ 89%]
+tests/accounts/test_profile.py .                                         [ 90%]
+tests/enrollments/test_services.py .                                     [ 90%]
+tests/workshops/test_defect_regressions.py ..                            [ 91%]
+tests/core/test_views.py ..                                              [ 92%]
+tests/people/test_validators.py .................                        [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+
+Name                                             Stmts   Miss Branch BrPart  Cover   Missing
+--------------------------------------------------------------------------------------------
+src/apps/accounts/admin.py                          24      0      2      1    96%   13->20
+src/apps/accounts/forms.py                          30      0      6      1    97%   33->51
+src/apps/accounts/managers.py                       27      4      8      4    77%   9, 30, 32, 34
+src/apps/accounts/models.py                         36      1      0      0    97%   50
+src/apps/accounts/views.py                          29      1      2      1    94%   37
+src/apps/core/admin.py                               8      1      0      0    88%   14
+src/apps/core/management/commands/seed_demo.py     153      1     36      1    99%   768
+src/apps/enrollments/forms.py                       28      1      4      2    91%   25->29, 55
+src/apps/enrollments/models.py                      59      3      6      2    92%   74->exit, 80, 105, 139
+src/apps/enrollments/services.py                   138     16     46     13    84%   45, 47, 61, 112, 132, 157, 171, 178, 192, 194, 205-206, 214, 220, 246, 248
+src/apps/enrollments/views.py                      171     37     20      7    76%   28, 43->45, 58, 64, 115-116, 123-124, 153-155, 163, 181, 216-218, 223, 241-251, 289-291, 294, 298, 316-326
+src/apps/learning/forms.py                          41      2      6      2    87%   54-55, 82->exit
+src/apps/learning/models.py                         98      7     18      4    91%   65->exit, 103, 108, 145, 207, 209, 214, 217
+src/apps/learning/selectors.py                      12      1      6      1    89%   26
+src/apps/learning/services.py                      204     13     70     11    90%   60, 62, 197-198, 250-251, 276, 279, 287, 300, 385, 404, 408
+src/apps/learning/views.py                         210     48     34      9    73%   83, 89, 91, 181, 191, 206-209, 214, 226-242, 245, 248-258, 264, 280, 291, 308-310, 315, 332-333, 348-359, 368, 406-408, 420-421, 428-429
+src/apps/people/forms.py                            80      3     14      6    90%   36, 45->47, 51->53, 85, 99, 125->127
+src/apps/people/models.py                          114      7      8      2    93%   62, 68, 96, 99, 146, 171, 210
+src/apps/people/views.py                           137     21      2      1    84%   33, 43, 61, 75, 78, 106, 120-122, 133, 148, 162-164, 175, 190, 204-206, 217, 232
+src/apps/reporting/csv_exports.py                   73      5     18      5    89%   14, 23, 31, 33, 35
+src/apps/reporting/selectors.py                     69      4     14      4    90%   65, 74, 78, 80
+src/apps/reporting/views.py                         46      4     16      4    87%   40, 42, 70, 73
+src/apps/workshops/admin.py                         62      4      6      1    90%   38-40, 86
+src/apps/workshops/forms.py                         72      4     20      6    89%   53, 96->104, 101, 121-122, 143->149
+src/apps/workshops/models.py                       114      3     20      3    96%   121, 122->128, 125, 161
+src/apps/workshops/services.py                      46      4     22      4    88%   39, 50, 72, 74
+src/apps/workshops/views.py                        188     20     12      1    88%   39-41, 58, 69, 79, 82, 94-95, 148, 160-162, 165, 168, 183, 210, 282, 299-300
+--------------------------------------------------------------------------------------------
+TOTAL                                             2590    215    450     96    89%
+
+34 files skipped due to complete coverage.
+Required test coverage of 80% reached. Total coverage: 89.11%
+============================= 225 passed in 18.60s =============================

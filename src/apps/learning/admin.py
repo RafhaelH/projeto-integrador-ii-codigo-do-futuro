@@ -1,5 +1,7 @@
 from django.contrib import admin
 
+from apps.core.admin import DomainRecordAdmin
+
 from .models import Attendance, Certificate, Evaluation, StudentProject
 
 
@@ -26,7 +28,7 @@ class AttendanceAdmin(admin.ModelAdmin):
 
 
 @admin.register(StudentProject)
-class StudentProjectAdmin(admin.ModelAdmin):
+class StudentProjectAdmin(DomainRecordAdmin):
     list_display = ("title", "enrollment", "is_delivered", "delivered_at", "updated_at")
     list_filter = ("is_delivered", "enrollment__class_group")
     search_fields = ("title", "enrollment__participant__full_name")
@@ -37,7 +39,7 @@ class StudentProjectAdmin(admin.ModelAdmin):
 
 
 @admin.register(Evaluation)
-class EvaluationAdmin(admin.ModelAdmin):
+class EvaluationAdmin(DomainRecordAdmin):
     list_display = ("enrollment", "final_score", "evaluated_by", "published_at", "updated_at")
     list_filter = ("enrollment__class_group", "published_at")
     search_fields = ("enrollment__participant__full_name",)

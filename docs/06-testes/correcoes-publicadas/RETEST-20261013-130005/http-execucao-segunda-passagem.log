@@ -1,0 +1,126 @@
+HTTP-125 APROVADO Login correto ADMIN
+HTTP-126 APROVADO Login correto INSTRUCTOR_1
+HTTP-127 APROVADO Login correto INSTRUCTOR_2
+HTTP-128 APROVADO Login correto PARTICIPANT_1
+HTTP-129 APROVADO Login correto PARTICIPANT_2
+HTTP-130 APROVADO Login correto PARTICIPANT_3
+HTTP-131 APROVADO Login correto PARTICIPANT_MINOR
+HTTP-132 APROVADO Concorrência última vaga (duas requisições)
+HTTP-133 APROVADO Solicitar inscrição p1 academic
+HTTP-134 APROVADO Confirmar acadêmica p1
+HTTP-135 APROVADO Solicitar inscrição p2 academic
+HTTP-136 APROVADO Confirmar acadêmica p2
+HTTP-137 APROVADO Solicitar inscrição p3 academic
+HTTP-138 APROVADO Confirmar acadêmica p3
+HTTP-139 APROVADO Solicitar inscrição minor academic
+HTTP-140 APROVADO Confirmar acadêmica minor
+HTTP-141 APROVADO Iniciar turma acadêmica
+HTTP-142 APROVADO Conclusão com encontros pendentes bloqueada
+HTTP-143 APROVADO Frequência turma sem autorização i2
+HTTP-144 APROVADO Frequência turma sem autorização p1
+HTTP-145 APROVADO Chamada não autorizada i2
+HTTP-146 APROVADO Chamada não autorizada p1
+HTTP-147 APROVADO Chamada encontro futuro bloqueada
+HTTP-148 APROVADO Registrar presença/ausência encontro 1
+HTTP-149 APROVADO Registrar presença/ausência encontro 2
+HTTP-150 APROVADO Registrar presença/ausência encontro 3
+HTTP-151 APROVADO Registrar presença/ausência encontro 4
+HTTP-152 APROVADO Corrigir chamada sem duplicidade
+HTTP-153 APROVADO Restabelecer chamada exclusiva de teste
+HTTP-154 APROVADO Percentuais turma 75/50/100
+HTTP-155 APROVADO Participante somente própria frequência
+HTTP-156 APROVADO Cancelar encontro futuro
+HTTP-157 APROVADO Chamada encontro cancelado bloqueada
+HTTP-158 APROVADO Conclusão sem avaliações bloqueada
+HTTP-159 APROVADO Projeto URL inválida
+HTTP-160 APROVADO Salvar projeto rascunho
+HTTP-161 APROVADO Entregar projeto p1
+HTTP-162 APROVADO Entregar projeto p2
+HTTP-163 APROVADO Entregar projeto p3
+HTTP-164 APROVADO Projeto de terceiro bloqueado
+HTTP-165 APROVADO Projeto de terceiro POST bloqueado
+HTTP-166 APROVADO Revisar projeto instrutor vinculado
+HTTP-167 APROVADO Revisão por instrutor alheio bloqueada
+HTTP-168 APROVADO Nota 10,1 bloqueada
+HTTP-169 APROVADO Avaliar sem publicar p1
+HTTP-170 APROVADO Devolutiva não publicada oculta
+HTTP-171 APROVADO Publicar avaliação p1
+HTTP-172 APROVADO Avaliar sem publicar p2
+HTTP-173 APROVADO Publicar avaliação p2
+HTTP-174 APROVADO Avaliar sem publicar p3
+HTTP-175 APROVADO Publicar avaliação p3
+HTTP-176 APROVADO Avaliar sem publicar minor
+HTTP-177 APROVADO Publicar avaliação minor
+HTTP-178 APROVADO Devolutiva publicada visível
+HTTP-179 APROVADO Avaliação perfil/vínculo inválido i2
+HTTP-180 APROVADO Avaliação perfil/vínculo inválido p1
+HTTP-181 APROVADO Conclusão genérica não contorna critérios
+HTTP-182 APROVADO Processar conclusão 1 aprovado / 3 não concluintes
+HTTP-183 APROVADO Alteração após conclusão bloqueada
+HTTP-184 APROVADO Alteração após conclusão bloqueada
+HTTP-185 APROVADO Listar certificados
+HTTP-186 APROVADO Certificado não concluinte bloqueado
+HTTP-187 APROVADO Emitir certificado elegível
+HTTP-188 APROVADO Consultar certificado próprio
+HTTP-189 APROVADO Baixar PDF próprio e conferir conteúdo
+HTTP-190 APROVADO Permissão certificado i1
+HTTP-191 APROVADO Permissão download certificado i1
+HTTP-192 APROVADO Permissão certificado i2
+HTTP-193 APROVADO Permissão download certificado i2
+HTTP-194 APROVADO Permissão certificado p2
+HTTP-195 APROVADO Permissão download certificado p2
+HTTP-196 APROVADO Emissão repetida idempotente
+HTTP-197 APROVADO Revogação exige motivo
+HTTP-198 APROVADO Revogar certificado desta execução
+HTTP-199 APROVADO PDF revogado bloqueado
+HTTP-200 APROVADO Certificado revogado oculto ao participante
+HTTP-201 APROVADO Histórico certificado revogado consultável ao admin
+HTTP-202 APROVADO Reemissão de revogado bloqueada
+HTTP-203 APROVADO Painel filtros e indicadores reconciliados
+HTTP-204 APROVADO Painel instrutor isolado i1
+HTTP-205 APROVADO Painel instrutor isolado i2
+HTTP-206 APROVADO Participante sem painel gerencial
+HTTP-207 APROVADO CSV inscricoes filtros/cabeçalhos/conteúdo
+HTTP-208 APROVADO CSV inscricoes acesso negado i1
+HTTP-209 APROVADO CSV inscricoes acesso negado p1
+HTTP-210 APROVADO CSV frequencia filtros/cabeçalhos/conteúdo
+HTTP-211 APROVADO CSV frequencia acesso negado i1
+HTTP-212 APROVADO CSV frequencia acesso negado p1
+HTTP-213 APROVADO CSV conclusao filtros/cabeçalhos/conteúdo
+HTTP-214 APROVADO CSV conclusao acesso negado i1
+HTTP-215 APROVADO CSV conclusao acesso negado p1
+HTTP-216 APROVADO CSV filtro inválido
+HTTP-217 APROVADO Relatório inexistente
+HTTP-218 APROVADO Painel filtro inválido sem dados
+HTTP-219 APROVADO Recuperação e-mail inválido
+HTTP-220 APROVADO Processar recuperação conta exclusiva
+HTTP-221 APROVADO Página confirmação recuperação
+HTTP-222 APROVADO E-mail de recuperação gerado no console
+HTTP-223 APROVADO Logout por GET rejeitado
+HTTP-224 APROVADO Logout por POST
+HTTP-225 APROVADO Acesso após logout
+HTTP-226 APROVADO Preparar turma para guarda administrativa
+HTTP-227 APROVADO Admin indica fluxo canônico e situação somente leitura
+HTTP-228 APROVADO DEF-003 conclusão direta bloqueada sem gravação parcial
+HTTP-229 APROVADO Admin permite editar outros campos legítimos
+HTTP-230 APROVADO Criar encontro legítimo para reteste
+HTTP-231 APROVADO DEF-001 início duplicado preserva original
+HTTP-232 APROVADO Editar encontro com seu próprio início
+HTTP-233 APROVADO Admin inline não marca encontro realizado
+HTTP-234 APROVADO Admin de encontro não altera situação diretamente
+HTTP-235 APROVADO Admin acadêmico exige fluxo autorizado: enrollments/enrollment
+HTTP-236 APROVADO Admin acadêmico exige fluxo autorizado: learning/evaluation
+HTTP-237 APROVADO Admin acadêmico exige fluxo autorizado: learning/studentproject
+HTTP-238 APROVADO Perfil anônimo exige login
+HTTP-239 APROVADO Perfil anônimo com CSRF exige login
+HTTP-240 BLOQUEADO POST de perfil anônimo exige login
+Traceback (most recent call last):
+  File "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro/docs/06-testes/correcoes-publicadas/RETEST-20261013-130005/retestar.py", line 695, in <module>
+    main()
+  File "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro/docs/06-testes/correcoes-publicadas/RETEST-20261013-130005/retestar.py", line 659, in main
+    profiles(credentials)
+  File "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro/docs/06-testes/correcoes-publicadas/RETEST-20261013-130005/retestar.py", line 60, in profiles
+    v.test(
+  File "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro/docs/06-testes/correcoes-publicadas/RETEST-20261013-130005/retestar.py", line 638, in test
+    raise RuntimeError("Reteste falhou: " + v.CASES[-1]["functionality"])
+RuntimeError: Reteste falhou: POST de perfil anônimo exige login

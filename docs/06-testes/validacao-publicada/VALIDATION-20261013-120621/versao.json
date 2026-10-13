@@ -1,0 +1,11 @@
+{
+  "run": "VALIDATION-20261013-120621",
+  "timezone": "America/Sao_Paulo",
+  "origin": "Requisições HTTPS originadas na própria VPS 31.97.167.150; não é validação independente de outra rede",
+  "base_url": "https://projeto-integrador.tesseratointegra.com.br",
+  "directory": "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro",
+  "git_branch": "develop",
+  "git_commit": "00665be5889ae639e9c1facec8be6c853f5895fa",
+  "git_initial_status": "clean (confirmado antes da criação dos relatórios)",
+  "app_image": "sha256:dc5d59ebc59598bc5f46fb4d976e12fdc4b28f1db0a33a2d87c51448ef03604f"
+}

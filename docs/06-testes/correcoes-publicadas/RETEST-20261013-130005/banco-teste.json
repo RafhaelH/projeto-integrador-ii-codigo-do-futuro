@@ -1,0 +1,10 @@
+{
+  "settings": "config.settings.test",
+  "engine": "django.db.backends.postgresql",
+  "database": "cdf_fix_test",
+  "host": "172.24.0.2",
+  "pytest_database": "test_cdf_fix_test",
+  "separate_container": "codigo-do-futuro-fix-test-db",
+  "no_published_port": true,
+  "isolated": true
+}

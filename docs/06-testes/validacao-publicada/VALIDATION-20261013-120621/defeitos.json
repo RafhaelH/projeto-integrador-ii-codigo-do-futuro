@@ -1,0 +1,49 @@
+[
+  {
+    "id": "DEF-001",
+    "severity": "MÉDIO",
+    "title": "Início duplicado de encontro retorna HTTP 500",
+    "cases": [
+      "HTTP-101",
+      "HTTP-297"
+    ],
+    "steps": [
+      "Administrador abre o cadastro de encontro numa turma exclusiva não encerrada.",
+      "Envia início e fim válidos, com início igual ao de um encontro existente."
+    ],
+    "expected": "HTTP 200 com erro de duplicidade no formulário; nenhuma gravação.",
+    "observed": "HTTP 500 em duas execuções; nenhuma gravação indevida. IntegrityError/UniqueViolation na constraint workshops_meeting_start_unique.",
+    "proposal": "Validar (class_group, starts_at) no MeetingForm considerando a instância editada e tratar IntegrityError de disputa como erro de formulário. Manter a constraint."
+  },
+  {
+    "id": "DEF-002",
+    "severity": "ALTO",
+    "title": "RF-006 sem fluxo para editar o próprio perfil",
+    "cases": [
+      "HTTP-260"
+    ],
+    "steps": [
+      "Participante autentica pela tela publicada.",
+      "Abre a página inicial e procura o ponto de entrada para consultar/editar seu perfil."
+    ],
+    "expected": "Fluxo autenticado para consulta e atualização dos campos próprios permitidos, conforme RF-006 (Must).",
+    "observed": "Página HTTP 200 sem opção de edição própria; inventário de URLs não contém endpoint correspondente. Nenhum caminho inexistente foi inventado ou testado.",
+    "proposal": "Implementar fluxo próprio por sessão com campos permitidos, objeto vinculado a request.user e proteção contra alteração de papel/permissões; testar os três perfis."
+  },
+  {
+    "id": "DEF-003",
+    "severity": "ALTO",
+    "title": "Django admin permite concluir turma fora do processamento acadêmico",
+    "cases": [
+      "HTTP-320"
+    ],
+    "steps": [
+      "Criar turma exclusiva PLANNED, sem instrutor, encontros, inscrições ou avaliações.",
+      "Abrir seu formulário real em /admin/workshops/classgroup/<id>/change/.",
+      "Enviar status=COMPLETED com os demais campos válidos e management forms das inlines."
+    ],
+    "expected": "Rejeição da alteração e manutenção do estado PLANNED, conforme RN-015/RN-038 e o fluxo de transições.",
+    "observed": "HTTP 302; status PLANNED → COMPLETED gravado sem critérios acadêmicos. Apenas a turma exclusiva deste teste foi afetada.",
+    "proposal": "Tornar status somente leitura no ModelAdmin e encaminhar transições ao serviço de domínio; evitar gravações diretas que contornem os critérios. Aplicar guardas equivalentes aos demais modelos acadêmicos expostos no admin."
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "endpoint": "/acompanhamento/certificados/ed3566b4-2c27-498d-9fab-57384997ec26/baixar/",
+  "bytes": 1622,
+  "sha256": "ecc57cc59588227eda2a5b7d6d6c34e0141ac2349a02314b953af94156338c0d",
+  "synthetic_only": true,
+  "verified": [
+    "signature",
+    "mime",
+    "name",
+    "workshop",
+    "class",
+    "workload",
+    "verification_code"
+  ]
+}

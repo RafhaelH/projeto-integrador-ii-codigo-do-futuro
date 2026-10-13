@@ -1,0 +1,17 @@
+{
+  "header": [
+    "Participante",
+    "Oficina",
+    "Turma",
+    "Situação",
+    "Data da inscrição",
+    "Motivo da situação"
+  ],
+  "data_rows": 4,
+  "sha256": "2e65842dfb03691691d513aa140f0fb537661f4eb864c47710b21eab78e2b927",
+  "filters": {
+    "workshop_id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+    "class_status": "COMPLETED"
+  },
+  "contains_protected_fields": false
+}

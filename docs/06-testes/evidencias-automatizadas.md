@@ -53,6 +53,20 @@ uv run python src/manage.py check --deploy
 
 ## Evidência definitiva
 
+### Correções da validação publicada — 13/10/2026
+
+Código corrigido no commit `cccfa6ee7fb13f0c428e8375dbed5b8a3a9e4fa1`, branch local
+`fix/validacao-publicada-20261013`: **225 testes aprovados em PostgreSQL 17**, sem skips,
+cobertura **89,11%**, lint/formatação/checks/migrations aprovados. A suíte usou banco e
+container exclusivos, com DATABASE_URL efetivo conferido. As 127 verificações automatizadas
+direcionadas precederam a suíte completa.
+
+Os resultados de deploy e HTTP e as limitações estão no
+[relatório de correções e retestes](correcoes-publicadas/RETEST-20261013-130005/relatorio.md).
+A [validação anterior](validacao-publicada/VALIDATION-20261013-120621/relatorio.md), incluindo
+suas quatro reprovações, permanece inalterada. A proteção do único administrador foi
+testada somente no banco descartável. Não houve mudança de schema.
+
 Após a CI da branch e depois das correções dos cinco avaliadores, substituir esta seção pelo link
 da execução da tag final e registrar contagem, cobertura, SHA, migração em banco vazio, build
 Docker, smoke test público e teste de restauração. A evidência final não pode apontar somente para

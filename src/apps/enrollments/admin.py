@@ -1,5 +1,7 @@
 from django.contrib import admin
 
+from apps.core.admin import DomainRecordAdmin
+
 from .models import Enrollment, EnrollmentStatusHistory
 
 
@@ -11,7 +13,7 @@ class EnrollmentStatusHistoryInline(admin.TabularInline):
 
 
 @admin.register(Enrollment)
-class EnrollmentAdmin(admin.ModelAdmin):
+class EnrollmentAdmin(DomainRecordAdmin):
     list_display = ("participant", "class_group", "status", "created_at")
     list_filter = ("status", "class_group")
     search_fields = ("participant__full_name", "class_group__code", "class_group__title")

@@ -1,0 +1,555 @@
+[
+  {
+    "pattern": "entrar/",
+    "name": "login",
+    "view": "LoginView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "sair/",
+    "name": "logout",
+    "view": "LogoutView",
+    "methods": [
+      "GET",
+      "POST"
+    ]
+  },
+  {
+    "pattern": "senha/recuperar/",
+    "name": "password_reset",
+    "view": "PasswordResetView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "senha/recuperar/enviado/",
+    "name": "password_reset_done",
+    "view": "PasswordResetDoneView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "senha/redefinir/<uidb64>/<token>/",
+    "name": "password_reset_confirm",
+    "view": "PasswordResetConfirmView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "senha/redefinir/concluido/",
+    "name": "password_reset_complete",
+    "view": "PasswordResetCompleteView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "pessoas/",
+    "name": "index",
+    "view": "PeopleIndexView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "pessoas/participantes/",
+    "name": "participant-list",
+    "view": "ParticipantListView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "pessoas/participantes/novo/",
+    "name": "participant-create",
+    "view": "ParticipantCreateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "pessoas/participantes/<uuid:pk>/",
+    "name": "participant-detail",
+    "view": "ParticipantDetailView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "pessoas/participantes/<uuid:pk>/editar/",
+    "name": "participant-update",
+    "view": "ParticipantUpdateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "pessoas/participantes/<uuid:participant_pk>/responsaveis/vincular/",
+    "name": "guardian-link-create",
+    "view": "GuardianLinkCreateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "pessoas/responsaveis/",
+    "name": "guardian-list",
+    "view": "GuardianListView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "pessoas/responsaveis/novo/",
+    "name": "guardian-create",
+    "view": "GuardianCreateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "pessoas/responsaveis/<uuid:pk>/editar/",
+    "name": "guardian-update",
+    "view": "GuardianUpdateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "pessoas/instrutores/",
+    "name": "instructor-list",
+    "view": "InstructorListView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "pessoas/instrutores/novo/",
+    "name": "instructor-create",
+    "view": "InstructorCreateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "pessoas/instrutores/<uuid:pk>/editar/",
+    "name": "instructor-update",
+    "view": "InstructorUpdateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "pessoas/instituicoes/",
+    "name": "institution-list",
+    "view": "InstitutionListView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "pessoas/instituicoes/nova/",
+    "name": "institution-create",
+    "view": "InstitutionCreateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "pessoas/instituicoes/<uuid:pk>/editar/",
+    "name": "institution-update",
+    "view": "InstitutionUpdateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "oficinas/",
+    "name": "workshop-list",
+    "view": "WorkshopListView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "oficinas/nova/",
+    "name": "workshop-create",
+    "view": "WorkshopCreateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "oficinas/<uuid:pk>/",
+    "name": "workshop-detail",
+    "view": "WorkshopDetailView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "oficinas/<uuid:pk>/editar/",
+    "name": "workshop-update",
+    "view": "WorkshopUpdateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "oficinas/<uuid:pk>/situacao/<str:target>/",
+    "name": "workshop-transition",
+    "view": "WorkshopTransitionView",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "pattern": "oficinas/turmas/",
+    "name": "class-list",
+    "view": "ClassGroupListView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "oficinas/turmas/nova/",
+    "name": "class-create",
+    "view": "ClassGroupCreateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "oficinas/turmas/<uuid:pk>/",
+    "name": "class-detail",
+    "view": "ClassGroupDetailView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "oficinas/turmas/<uuid:pk>/editar/",
+    "name": "class-update",
+    "view": "ClassGroupUpdateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "oficinas/turmas/<uuid:pk>/situacao/<str:target>/",
+    "name": "class-transition",
+    "view": "ClassGroupTransitionView",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "pattern": "oficinas/turmas/<uuid:class_pk>/instrutores/vincular/",
+    "name": "class-instructor-create",
+    "view": "ClassInstructorCreateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "oficinas/turmas/<uuid:class_pk>/encontros/novo/",
+    "name": "meeting-create",
+    "view": "MeetingCreateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "oficinas/encontros/<uuid:pk>/editar/",
+    "name": "meeting-update",
+    "view": "MeetingUpdateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "oficinas/encontros/<uuid:pk>/cancelar/",
+    "name": "meeting-cancel",
+    "view": "MeetingCancelView",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "pattern": "inscricoes/",
+    "name": "list",
+    "view": "EnrollmentListView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "inscricoes/turmas-disponiveis/",
+    "name": "available-classes",
+    "view": "AvailableClassListView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "inscricoes/nova/",
+    "name": "admin-create",
+    "view": "AdminEnrollmentCreateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "inscricoes/turmas/<uuid:class_pk>/nova/",
+    "name": "class-create",
+    "view": "AdminEnrollmentCreateView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "inscricoes/turmas/<uuid:class_pk>/solicitar/",
+    "name": "participant-create",
+    "view": "ParticipantEnrollmentCreateView",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "pattern": "inscricoes/turmas/<uuid:class_pk>/fila/",
+    "name": "class-queue",
+    "view": "ClassEnrollmentQueueView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "inscricoes/turmas/<uuid:class_pk>/promover/",
+    "name": "promote-waitlist",
+    "view": "PromoteWaitlistView",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "pattern": "inscricoes/<uuid:pk>/confirmar/",
+    "name": "confirm",
+    "view": "EnrollmentConfirmView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "inscricoes/<uuid:pk>/rejeitar/",
+    "name": "reject",
+    "view": "EnrollmentRejectView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "inscricoes/<uuid:pk>/cancelar/",
+    "name": "cancel",
+    "view": "EnrollmentCancelView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/certificados/",
+    "name": "certificate-list",
+    "view": "CertificateListView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/certificados/<uuid:pk>/",
+    "name": "certificate-detail",
+    "view": "CertificateDetailView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/certificados/<uuid:pk>/baixar/",
+    "name": "certificate-download",
+    "view": "CertificateDownloadView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/certificados/<uuid:pk>/revogar/",
+    "name": "certificate-revoke",
+    "view": "RevokeCertificateView",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/inscricoes/<uuid:enrollment_pk>/certificado/emitir/",
+    "name": "certificate-issue",
+    "view": "IssueCertificateView",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/frequencia/",
+    "name": "participant-frequency",
+    "view": "ParticipantFrequencyView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/turmas/<uuid:class_pk>/frequencia/",
+    "name": "class-attendance",
+    "view": "ClassAttendanceView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/encontros/<uuid:meeting_pk>/chamada/",
+    "name": "meeting-attendance",
+    "view": "MeetingAttendanceView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/inscricoes/<uuid:enrollment_pk>/projeto/",
+    "name": "participant-project",
+    "view": "ParticipantProjectView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/projetos/<uuid:pk>/revisao/",
+    "name": "project-review",
+    "view": "ProjectReviewView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/inscricoes/<uuid:enrollment_pk>/avaliacao/",
+    "name": "evaluation",
+    "view": "EvaluationView",
+    "methods": [
+      "GET",
+      "POST",
+      "PUT"
+    ]
+  },
+  {
+    "pattern": "acompanhamento/turmas/<uuid:class_pk>/conclusao/",
+    "name": "complete-class",
+    "view": "CompleteClassGroupView",
+    "methods": [
+      "POST"
+    ]
+  },
+  {
+    "pattern": "painel/",
+    "name": "dashboard",
+    "view": "DashboardView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "painel/relatorios/<str:report_kind>.csv",
+    "name": "export",
+    "view": "ExportReportView",
+    "methods": [
+      "GET"
+    ]
+  },
+  {
+    "pattern": "",
+    "name": "home",
+    "view": "home",
+    "methods": [
+      "function_view"
+    ]
+  },
+  {
+    "pattern": "healthz/",
+    "name": "health-check",
+    "view": "health_check",
+    "methods": [
+      "function_view"
+    ]
+  },
+  {
+    "pattern": "readyz/",
+    "name": "readiness-check",
+    "view": "readiness_check",
+    "methods": [
+      "function_view"
+    ]
+  }
+]

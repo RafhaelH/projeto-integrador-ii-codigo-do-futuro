@@ -18,6 +18,37 @@ Os critérios abaixo descrevem comportamentos observáveis. Os identificadores s
 
 ## Participantes e responsáveis
 
+### CA-006-01 — Consulta e edição próprias
+
+**Dado** usuário autenticado de qualquer um dos três perfis, **quando** abrir **Meu perfil**,
+**então** deve consultar e atualizar somente nome completo e e-mail de sua conta. A navegação
+deve apresentar o acesso e o e-mail atualizado deve funcionar no próximo login.
+
+### CA-006-02 — Identificação válida e única
+
+**Dado** nome ausente ou maior que 150 caracteres, e-mail ausente, inválido ou já utilizado
+(inclusive com diferença de caixa), **quando** salvar o perfil, **então** deve receber erro
+no formulário, sem alteração parcial. Duplicidade concorrente também deve ser controlada.
+
+### CA-006-03 — Conta determinada pela sessão
+
+**Dado** identificador de outra conta ou campos de papel, ativação, senha ou privilégios no
+pedido, **quando** submeter o perfil, **então** nenhum campo protegido ou dado de outra conta
+pode ser alterado. Acesso anônimo exige autenticação e a gravação exige CSRF válido.
+
+### CA-016-02 — Admin preserva processamento acadêmico
+
+**Dado** formulário de turma no Django admin, inclusive cadastro novo, **quando** houver
+tentativa direta de alterar situação, **então** a operação inteira deve ser rejeitada, sem
+alterações do registro principal ou das inlines. Outros campos válidos continuam editáveis.
+Conclusão utiliza o processamento acadêmico, mantendo RN-036 a RN-042.
+
+### CA-014-02 — Início único por turma
+
+**Dado** encontro com início já utilizado na mesma turma, **quando** cadastrar ou editar outro
+encontro, inclusive em disputa entre validação e gravação, **então** o formulário deve mostrar
+erro útil com HTTP 200, preservando os registros anteriores. Edição do próprio início é válida.
+
 ### CA-007-01 — Cadastro válido
 
 **Dado** um administrador e dados válidos, **quando** cadastrar um participante, **então** o sistema deve salvar o perfil e confirmar a operação.

@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-10-13T13:37:12.097492-03:00",
+  "run": "RETEST-20261013-130005",
+  "historical_run": "VALIDATION-20261013-120621",
+  "tls_verified": true,
+  "sequential_except_two_capacity_requests": true
+}

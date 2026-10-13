@@ -1,0 +1,20 @@
+{
+  "header": [
+    "Participante",
+    "Oficina",
+    "Turma",
+    "Período",
+    "Resultado",
+    "Nota final",
+    "Projeto entregue",
+    "Certificado ativo",
+    "Motivo"
+  ],
+  "data_rows": 4,
+  "sha256": "db9214e9544a4eb3ac98b2fe00d568aca7fc3a27443219e02ce6a36199d9d7c5",
+  "filters": {
+    "workshop_id": "ad8edf33-5007-4cac-82c0-ba1b363354ea",
+    "class_status": "COMPLETED"
+  },
+  "contains_protected_fields": false
+}

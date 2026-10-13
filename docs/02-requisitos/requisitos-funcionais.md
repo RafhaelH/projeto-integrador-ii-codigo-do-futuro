@@ -17,6 +17,19 @@
 | RF-005 | Must | O sistema deve restringir telas e ações conforme o perfil do usuário. |
 | RF-006 | Must | O usuário deve consultar e atualizar os dados permitidos do próprio perfil. |
 
+### Campos do perfil próprio no MVP (RF-006)
+
+Administrador, instrutor e participante consultam e editam **nome completo** e **e-mail da
+conta**, em **Meu perfil** (`/conta/perfil/`). O requisito original não enumerava campos; este
+escopo explicita os dados de identificação comuns aos três perfis. E-mail é obrigatório,
+válido, normalizado e único sem diferença de caixa (RN-001); nome é obrigatório e admite
+até 150 caracteres. A sessão determina a conta editada.
+
+Perfil de acesso, ativação, senha e permissões não são editáveis nesse fluxo. Senha usa a
+redefinição segura; dados cadastrais acadêmicos (CPF, nascimento, responsáveis e vínculos)
+continuam nos cadastros administrativos. Alterar nome da conta não reescreve o nome do
+cadastro acadêmico nem certificados existentes.
+
 ## Pessoas e instituições
 
 | ID | Prioridade | Requisito |

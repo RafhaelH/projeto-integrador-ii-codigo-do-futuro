@@ -6,10 +6,10 @@ Referência a351c5a, mesmo src de develop 644e7a6. A tabela liga os 40 RF à imp
 
 ## Requisitos funcionais
 
-| RF | Implementação (caminho/função) | Testes (sob tests) | Evidência/limite |
+| RF | Implementação (caminho/função) | Testes ou inspeção verificável | Evidência/limite |
 |---|---|---|---|
 | RF-001 | [config/urls.py: auth LoginView](../../src/config/urls.py) | [accounts/test_authentication.py](../../tests/accounts/test_authentication.py) | Login ativo/inativo; HTTP técnico |
-| RF-002 | [config/urls.py: LogoutView e base.html POST](../../src/config/urls.py) | [accounts/test_authentication.py](../../tests/accounts/test_authentication.py) | Logout; matriz HTTP |
+| RF-002 | [config/urls.py: LogoutView e base.html POST](../../src/config/urls.py) | [Matriz HTTP do reteste](../06-testes/correcoes-publicadas/RETEST-20261013-130005/matriz.csv) | R-02, HTTP-223/224/225: GET rejeitado, POST e acesso após logout; sem teste automatizado dedicado do endpoint |
 | RF-003 | [config/urls.py: PasswordReset/Confirm views](../../src/config/urls.py) | [accounts/test_authentication.py](../../tests/accounts/test_authentication.py) | Token/senha/console; SMTP externo não comprovado |
 | RF-004 | accounts/admin.py, forms.py: UserAdmin/UserChangeForm | [accounts/test_admin.py](../../tests/accounts/test_admin.py) | CRUD/admin HTTP histórico; proteção do último administrador |
 | RF-005 | [accounts/mixins.py: RoleRequiredMixin; escopo nas views](../../src/apps/accounts/mixins.py) | [people/test_views.py](../../tests/people/test_views.py) | Bloqueios por papel e vínculo nas três execuções HTTP |
@@ -20,9 +20,9 @@ Referência a351c5a, mesmo src de develop 644e7a6. A tabela liga os 40 RF à imp
 | RF-010 | [people/views.py: InstitutionCreate/Update; is_active](../../src/apps/people/views.py) | [people/test_views.py](../../tests/people/test_views.py) | Instituição/arquivamento; figura 08 |
 | RF-011 | [workshops/services.py: transition_workshop](../../src/apps/workshops/services.py) | [workshops/test_services.py](../../tests/workshops/test_services.py) | Ciclo DRAFT/PUBLISHED/ARCHIVED; figuras 09/10 |
 | RF-012 | [workshops/views.py: ClassGroupCreate/Update/Transition](../../src/apps/workshops/views.py) | [workshops/test_views.py](../../tests/workshops/test_views.py) | Datas/capacidade/cancelamento; figuras 11–14 |
-| RF-013 | [workshops/models.py: ClassInstructor; views de vínculo](../../src/apps/workshops/models.py) | [workshops/test_models.py](../../tests/workshops/test_models.py) | Unicidade/um principal; figura 12 |
+| RF-013 | [workshops/models.py: ClassInstructor; views de vínculo](../../src/apps/workshops/models.py) | [workshops/test_views.py: test_administrator_links_instructor](../../tests/workshops/test_views.py) | Vínculo por POST testado; unicidade/um principal conferidos no schema; figura 12 |
 | RF-014 | [workshops/views.py: MeetingSaveMixin; cancel_meeting](../../src/apps/workshops/views.py) | [workshops/test_defect_regressions.py](../../tests/workshops/test_defect_regressions.py) | R-08, duplicidade/race; agenda figura 13 |
-| RF-015 | [workshops/views.py: ClassGroupDetailView/escopo](../../src/apps/workshops/views.py) | [workshops/test_views.py](../../tests/workshops/test_views.py) | Agenda somente autorizada; figura 13 |
+| RF-015 | [workshops/views.py: ClassGroupDetailView/escopo](../../src/apps/workshops/views.py) | [workshops/test_views.py](../../tests/workshops/test_views.py) | Agenda ADMIN/INSTRUCTOR atribuídos; participante vê datas da oferta/jornada, sem agenda completa de encontros; figura 13 |
 | RF-016 | [workshops/services.py: transition_class_group](../../src/apps/workshops/services.py) | [workshops/test_defect_regressions.py](../../tests/workshops/test_defect_regressions.py) | Estado/admin forjado R-22 a R-24 |
 | RF-017 | [enrollments/services.py: create_enrollment](../../src/apps/enrollments/services.py) | [enrollments/test_services.py](../../tests/enrollments/test_services.py) | Elegibilidade/janela/titular; tarefa A05-3 |
 | RF-018 | [enrollments/views.py: AdminEnrollmentCreateView](../../src/apps/enrollments/views.py) | [enrollments/test_views.py](../../tests/enrollments/test_views.py) | Cadastro administrativo HTTP |
@@ -44,7 +44,7 @@ Referência a351c5a, mesmo src de develop 644e7a6. A tabela liga os 40 RF à imp
 | RF-034 | [reporting/selectors.py: class_groups_for_user](../../src/apps/reporting/selectors.py) | [reporting/test_selectors.py](../../tests/reporting/test_selectors.py) | Turmas atribuídas ao instrutor |
 | RF-035 | [reporting/forms.py + selectors.py: filter_class_groups](../../src/apps/reporting/forms.py) | [reporting/test_forms.py](../../tests/reporting/test_forms.py) | Oficina, status e período por início da turma |
 | RF-036 | reporting/csv_exports.py e views.py | [reporting/test_views.py](../../tests/reporting/test_views.py) | Três CSV UTF-8 BOM ;, somente ADMIN; sem contato/documentos |
-| RF-037 | core/models.py UUIDTimestampedModel; histórico/User | [learning/test_models.py](../../tests/learning/test_models.py) | created_at/updated_at e datas preservadas |
+| RF-037 | [core/models.py: UUIDTimestampedModel; histórico/User](../../src/apps/core/models.py) | [Inventário de campos e migrations](../03-modelagem/inventario-schema.json) | Inspeção de created_at/updated_at e datas; sem teste dedicado de todos os timestamps |
 | RF-038 | [learning/models.py: recorded_by/evaluated_by](../../src/apps/learning/models.py) | [learning/test_services.py](../../tests/learning/test_services.py) | Correção/autoria e publicação |
 | RF-039 | forms/views de todos os módulos; templates messages | [workshops/test_defect_regressions.py](../../tests/workshops/test_defect_regressions.py) | Entradas inválidas/mensagens; HTTP casos originais/reteste |
 | RF-040 | people/models.py is_active; workshop ARCHIVED; admin guards | [people/test_views.py](../../tests/people/test_views.py) | Desativação/arquivamento e conservação; DELETE acadêmico bloqueado |

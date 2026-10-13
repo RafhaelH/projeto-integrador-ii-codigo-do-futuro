@@ -116,7 +116,7 @@
     "private_files_outside_git": true
   },
   "links": {
-    "local_links_checked": 402,
+    "local_links_checked": 405,
     "anchors_checked": 14,
     "errors": []
   },
@@ -126,6 +126,7 @@
   "review": {
     "pdf_layout_visually_inspected": true,
     "no_results_fabricated": true,
-    "private_archives_not_published": true
+    "private_archives_not_published": true,
+    "permissions_matrix_compared_to_views": true
   }
 }

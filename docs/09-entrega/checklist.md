@@ -17,7 +17,7 @@
 - [x] Dicionário de dados inicial
 - [x] Arquitetura definida
 - [ ] Protótipos das telas
-- [ ] Revisão final dos diagramas após implementação
+- [x] Revisão final dos diagramas após implementação
 - [x] Projeto físico inicial gerado pelas migrações
 
 ## Situação 2 — Desenvolvimento
@@ -26,7 +26,7 @@
 - [x] Estratégia de branches e commits definida
 - [x] Fundação Django criada
 - [x] PostgreSQL configurado
-- [ ] Autenticação e autorização por perfil em todos os módulos
+- [x] Autenticação e autorização por perfil em todos os módulos
 - [x] Participantes, responsáveis, instrutores e instituições
 - [x] Oficinas, turmas e encontros
 - [x] Inscrições, vagas e lista de espera
@@ -35,10 +35,10 @@
 - [x] Avaliações e conclusão
 - [x] Certificados
 - [x] Painéis e relatórios
-- [ ] Interface responsiva em todos os módulos
-- [ ] Tratamento de erros
+- [x] Interface responsiva em todos os módulos
+- [x] Tratamento de erros
 - [x] Dados fictícios de demonstração
-- [ ] Testes automatizados de todos os requisitos Must
+- [x] Testes automatizados de todos os requisitos Must
 - [x] Integração contínua configurada
 - [ ] Ambiente publicado
 
@@ -57,19 +57,19 @@
 
 ## Documentação final
 
-- [ ] README de instalação e uso atualizado
-- [ ] Diagramas refletindo a aplicação final
-- [ ] Dicionário de dados refletindo as migrações finais
-- [ ] Evidências de testes automatizados
+- [x] README de instalação e uso atualizado
+- [x] Diagramas refletindo a aplicação final
+- [x] Dicionário de dados refletindo as migrações finais
+- [x] Evidências de testes automatizados
 - [ ] Evidências de testes manuais
 - [ ] Manual do usuário com screenshots
 - [ ] Relatório acadêmico final
-- [ ] Link público ou autorizado do GitHub
+- [x] Link público ou autorizado do GitHub
 - [ ] Link da aplicação publicada
 
 ## Vídeo
 
-- [ ] Roteiro final preparado
+- [x] Roteiro final preparado
 - [ ] Narração feita pelo autor
 - [ ] Problema, público e objetivo apresentados
 - [ ] Principais funcionalidades demonstradas

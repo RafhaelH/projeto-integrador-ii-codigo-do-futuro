@@ -46,6 +46,15 @@ jobs:
       - name: Install dependencies
         run: uv sync --frozen
 
+      - name: Validate production manifest
+        run: |
+          cp deploy/production.env.example deploy/production.env
+          chmod 600 deploy/production.env
+          docker compose --env-file deploy/production.env -f compose.production.yaml config --quiet
+
+      - name: Build production image
+        run: docker build --tag codigo-do-futuro:ci .
+
       - name: Lint
         run: uv run ruff check .
 
@@ -60,3 +69,22 @@ jobs:
 
       - name: Run tests
         run: uv run pytest
+
+      - name: Validate production startup
+        run: |
+          sed -i \
+            -e 's/SUBSTITUA_POR_UMA_CHAVE_ALEATORIA_LONGA/ci-django-key-1234567890-abcdefghijklmnopqrstuvwxyz-ABCDEFGHIJKLMNOPQRSTUVWXYZ/g' \
+            -e 's/SUBSTITUA_POR_UMA_SENHA_FORTE/ci-postgres-password/g' \
+            -e 's/SUBSTITUA_POR_UMA_SENHA_EXCLUSIVA_DE_AVALIACAO/ci-demo-password/g' \
+            deploy/production.env
+          ./deploy/deploy.sh deploy/production.env
+          docker compose --env-file deploy/production.env -f compose.production.yaml exec -T app \
+            python -c "import os, urllib.request; host=os.environ['DJANGO_ALLOWED_HOSTS'].split(',')[0].strip(); response=urllib.request.urlopen(urllib.request.Request('http://127.0.0.1:8000/entrar/', headers={'Host': host, 'X-Forwarded-Proto': 'https'}), timeout=5); assert response.status == 200"
+
+      - name: Production logs on failure
+        if: failure()
+        run: docker compose --env-file deploy/production.env -f compose.production.yaml logs --tail=100 app database
+
+      - name: Clean up production smoke test
+        if: always()
+        run: docker compose --env-file deploy/production.env -f compose.production.yaml down --volumes

@@ -114,3 +114,6 @@ Credenciais de demonstração não serão usadas em produção real e serão doc
 - cinco avaliações registradas;
 - regressão executada após as correções;
 - evidências organizadas para o relatório final.
+
+Os resultados reproduzíveis da release candidata são mantidos em
+[Evidências de verificação automatizada](evidencias-automatizadas.md).

@@ -34,6 +34,23 @@ flowchart TB
     Data --> DB
 ```
 
+## Implantação da versão publicada
+
+```mermaid
+flowchart TB
+    Browser[Navegador]
+    Nginx["Nginx + HTTPS"]
+    App["Django + Gunicorn"]
+    DB[(PostgreSQL 17)]
+
+    Browser -->|HTTPS| Nginx
+    Nginx -->|loopback| App
+    App -->|rede interna| DB
+```
+
+O PostgreSQL não publica porta no host. O container da aplicação executa com usuário sem
+privilégios e só é alcançável externamente pelo Nginx.
+
 ## Sequência: confirmação de inscrição
 
 ```mermaid

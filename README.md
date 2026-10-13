@@ -6,7 +6,7 @@ A plataforma Código do Futuro apoiará a organização de oficinas gratuitas de
 
 ## Situação do projeto
 
-A especificação, a fundação executável e os módulos operacionais do MVP estão concluídos. O sistema já permite autenticação, recuperação de senha, gestão de participantes, responsáveis, instrutores, instituições, oficinas, turmas, encontros, inscrições, vagas, lista de espera, frequência, projetos, avaliações e processamento objetivo do resultado, certificados em PDF, painéis por perfil e relatórios CSV protegidos, com testes automatizados e integração contínua.
+A especificação, a fundação executável e os módulos operacionais do MVP estão concluídos. O sistema já permite autenticação, recuperação de senha, gestão de participantes, responsáveis, instrutores, instituições, oficinas, turmas, encontros, inscrições, vagas, lista de espera, frequência, projetos, avaliações e processamento objetivo do resultado, certificados em PDF, painéis por perfil e relatórios CSV protegidos, com testes automatizados e integração contínua. A release candidata também possui empacotamento Docker, configuração de produção, health checks, backup e material para as cinco avaliações exigidas pela disciplina.
 
 ## Objetivo
 
@@ -73,6 +73,22 @@ A aplicação ficará disponível em `http://127.0.0.1:8000/` e a área administ
 
 O comando `seed_demo` é opcional e cria somente dados fictícios reservados para apresentação. Consulte [Dados de demonstração](docs/06-testes/dados-de-demonstracao.md) para ver credenciais, cenários e cuidados de execução.
 
+## Publicar na VPS
+
+A implantação acadêmica usa Docker Compose, PostgreSQL 17, Gunicorn e o Nginx da VPS com HTTPS.
+O fluxo resumido é:
+
+```bash
+cp deploy/production.env.example deploy/production.env
+chmod 600 deploy/production.env
+# Substitua todos os valores de exemplo antes de continuar.
+./deploy/check-env.sh deploy/production.env
+./deploy/deploy.sh deploy/production.env
+```
+
+Não versione `deploy/production.env`. DNS, Certbot, Nginx, carga demonstrativa, backup,
+restauração e atualização estão detalhados no [guia de implantação](docs/04-arquitetura/implantacao-vps.md).
+
 ## Verificações
 
 ```bash
@@ -81,6 +97,7 @@ uv run ruff format --check .
 uv run pytest
 DJANGO_SETTINGS_MODULE=config.settings.test uv run python src/manage.py check
 DJANGO_SETTINGS_MODULE=config.settings.test uv run python src/manage.py makemigrations --check --dry-run
+sh -n deploy/*.sh
 ```
 
 O limite mínimo inicial de cobertura é 80%. Regras críticas devem possuir cobertura direta independentemente da porcentagem global.
@@ -133,8 +150,12 @@ Documentos centrais:
 - [Casos de uso](docs/03-modelagem/casos-de-uso.md)
 - [Modelo de dados](docs/03-modelagem/modelo-de-dados.md)
 - [Arquitetura](docs/04-arquitetura/arquitetura.md)
+- [Implantação na VPS](docs/04-arquitetura/implantacao-vps.md)
 - [Backlog](docs/05-planejamento/backlog.md)
 - [Plano de testes](docs/06-testes/plano-de-testes.md)
+- [Pacote das cinco avaliações](docs/07-avaliacoes/pacote-de-avaliacao.md)
+- [Manual do usuário](docs/08-manual/README.md)
+- [Plano de fechamento](docs/09-entrega/plano-de-fechamento.md)
 - [Checklist acadêmico](docs/09-entrega/checklist.md)
 
 ## Estratégia de branches
@@ -154,3 +175,5 @@ O sistema evolui o projeto de extensão **Código do Futuro: Oficina de Programa
 ## Autor
 
 Rafhael Henrique — Engenharia de Software.
+
+Repositório: <https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro>

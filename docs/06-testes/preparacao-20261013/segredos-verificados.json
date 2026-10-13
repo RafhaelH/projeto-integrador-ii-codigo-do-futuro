@@ -1,0 +1,8 @@
+{
+  "files_checked": 390,
+  "actual_credentials_secrets_password_hashes_and_session_keys_checked": true,
+  "pdf_text_checked": true,
+  "secrets_found": false,
+  "restricted_archives_checksums_verified": true,
+  "private_files_outside_git": true
+}

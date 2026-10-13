@@ -1,0 +1,1193 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Código do Futuro — cinco avaliações humanas</title><style>@page {size:A4;margin:14mm} body{font:11pt Arial,sans-serif;color:#142d40;line-height:1.35} h1{font-size:22pt} h2{font-size:16pt;margin-top:20px} h3{font-size:13pt} table{border-collapse:collapse;width:100%;font-size:9pt}th,td{border:1px solid #aaa;padding:6px;vertical-align:top}th{background:#edf3f6} img{max-width:100%;max-height:220mm;object-fit:contain} a{color:#155576}pre,code{white-space:pre-wrap;overflow-wrap:anywhere;font-size:9pt}.sheet{break-before:page}.blank{min-height:18mm} tr{break-inside:avoid}h1,h2,h3{break-after:avoid}</style></head><body><section><h1>Pacote das cinco avaliações humanas</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. As pessoas ainda serão escolhidas; A01–A05 são identificadores de acesso, não nomes de avaliadores. Não há respostas, notas, assinaturas ou resultados preenchidos.</p>
+<p>Aplicação: https://projeto-integrador.tesseratointegra.com.br. Código publicado: <code>a351c5a</code>; dados preparados com referência <strong>13/10/2026</strong>, fuso America/Sao_Paulo. Todos os nomes e registros de apresentação são fictícios; e-mails novos usam example.com. Nenhuma mensagem foi enviada. O telefone obrigatório dos responsáveis usa <code>00000000000</code>, com DDD 00 deliberadamente não discável. CPF, CNPJ e telefones opcionais permanecem vazios.</p>
+<table>
+<thead>
+<tr>
+<th>Identificação</th>
+<th>Perfil</th>
+<th>Conta de acesso</th>
+<th>Turma de trabalho</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01</td>
+<td>Administrador funcional</td>
+<td>a01@example.com</td>
+<td>PY-2026-A01</td>
+</tr>
+<tr>
+<td>A02</td>
+<td>Administrador funcional</td>
+<td>a02@example.com</td>
+<td>PY-2026-A02</td>
+</tr>
+<tr>
+<td>A03</td>
+<td>Instrutor</td>
+<td>a03@example.com</td>
+<td>PY-2026-A03</td>
+</tr>
+<tr>
+<td>A04</td>
+<td>Instrutor</td>
+<td>a04@example.com</td>
+<td>PY-2026-A04</td>
+</tr>
+<tr>
+<td>A05</td>
+<td>Participante</td>
+<td>a05@example.com</td>
+<td>PY-2026-A05, A05-F e A05-I</td>
+</tr>
+</tbody>
+</table>
+<p>As cinco contas não têm <code>is_staff</code>, superusuário, grupos ou permissões extras de Django admin. Cada senha é aleatória e distinta. Senhas ficam somente em <code>/root/codigo-do-futuro-presentation/20261013/credentials.json</code>, modo 600, fora do Git, com diretório 700. O responsável consulta esse arquivo localmente e entrega <strong>apenas</strong> a credencial da pessoa em canal privado. Não cole seu conteúdo em terminal gravado, issue, chat, Git ou relatório público. A senha do administrador operacional foi preservada.</p>
+<p>Os administradores têm alcance funcional global, conforme o produto; sua separação é por dados e roteiro, não por um novo sistema de tenants. A01/A02 só alteram o próprio participante, turma, avaliação e certificado. Instrutores têm autorização aplicada no servidor às suas turmas; A05 acessa seus próprios registros. Acompanhamento do mediador evita operações administrativas fora do roteiro. As sessões podem ocorrer sequencialmente; nunca use os acessos de captura como contas de avaliação.</p>
+<ul>
+<li><a href="instrucoes-responsavel.md">Instruções do responsável</a></li>
+<li><a href="roteiros/README.md">Roteiros A01–A05</a></li>
+<li><a href="formulario-de-avaliacao.md">Formulário individual</a></li>
+<li><a href="consolidacao.md">Consolidação</a></li>
+<li><a href="registro-de-melhorias.md">Problemas e decisões</a></li>
+<li><a href="checklist-execucao.md">Checklist</a></li>
+<li><a href="pacote-imprimivel.html">Pacote HTML imprimível</a> e <a href="pacote-imprimivel.pdf">PDF</a></li>
+<li><a href="resultados/README.md">Resultados individuais ainda em branco</a></li>
+<li><a href="../06-testes/preparacao-20261013/relatorio.md">Relatório técnico da preparação</a></li>
+</ul>
+<p>Tempo sugerido: 25–35 minutos por pessoa. Atividades em celular e teclado são observações de uso, não uma auditoria completa de acessibilidade. As capturas e verificações automáticas não substituem as cinco avaliações.</p></section><section class="sheet"><h1>Instruções para o responsável</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>.</p>
+<p>Antes: selecione cinco pessoas reais e explique o uso acadêmico das respostas; registre identificação autorizada em armazenamento privado. Entregue uma conta por pessoa, sem compartilhar o arquivo geral de credenciais. Registre data, dispositivo, navegador, URL e versão efetivamente em uso. Faça novo backup do projeto antes das sessões. Confira o checklist e a disponibilidade da turma exclusiva.</p>
+<p>A referência da carga é 13/10/2026. PY-2026-A05-I aceita inscrições até <strong>16/10/2026 às 18h</strong>, inicia em 20/10/2026; Robótica abre até <strong>03/11/2026 às 18h</strong>, inicia em 10/11/2026. Se a avaliação ocorrer depois desses prazos, pare apenas a tarefa de inscrição e prepare uma nova oferta exclusiva mediante revisão/backup; registre a alteração. Não mude datas ou estados dos cenários de captura nem rode seed_demo para renovar a carga.</p>
+<p>As turmas A01/A02 possuem frequência 100%, projeto entregue e nota publicada 8,0, prontas para conclusão administrativa. A03/A04 têm encontro passado planejado, projeto entregue e avaliação pendente, para registrar chamada/revisão/nota. A05 tem rascunho em andamento, oferta aberta independente e uma turma concluída com certificado de 2h. A turma concluída de apresentação PY-2026-01 continua com Ana aprovada e Bruno não concluinte por frequência de 50%, ambos com projetos e notas, certificado de Ana ativo de 8h.</p>
+<p>Durante: leia o objetivo de cada tarefa, permita a tentativa sem ensinar o caminho, registre sucesso/dificuldade/ajuda e não esconda falhas. Ajuda pode ser dada depois da primeira tentativa, anotando-a. Não atribua a tarefa a outra pessoa para produzir uma resposta fictícia. Não peça CPF ou contato real. Em nomes/e-mails editáveis, use dados fictícios e example.com; o e-mail de acesso deve ser mantido para não confundir entrega de credenciais.</p>
+<p>A01/A02 têm permissão administrativa global; acompanhe a execução e confirme o código da turma antes de cada ação. Nunca cancelar/alterar Robótica, Web, Python de apresentação nem registros de outro avaliador. Repetir prepare_presentation preserva as tarefas realizadas; não é uma função de reset. Uma segunda rodada deve receber novos dados exclusivos e um novo formulário, após backup.</p>
+<p>Evidências: use <code>A01-tarefa-03.png</code> etc., sem senha, cookie, token ou identidade real. A coleta de opiniões deve ser autorizada; gravação é opcional e precisa de ciência específica. Não fotografe o arquivo restrito. Guarde anexos com dados reais em área privada, publicando só evidência autorizada e sanitizada.</p>
+<p>Depois: mantenha formulário original; consolide achados sem inventar respostas ausentes. Classifique severidade e decisão, justifique adiamentos/rejeições, relacione correção e reteste. Preencha os resultados apenas após as sessões reais. Não promova main automaticamente; o vídeo definitivo e o manual final precisam corresponder à versão aprovada.</p>
+<p>Credenciais de captura: <code>captura-admin</code>, <code>captura-instrutor</code>, <code>captura-participante</code>, <code>captura-projeto</code> no mesmo arquivo restrito. São independentes dos acessos A01–A05. Os aliases <code>aluno-A01</code> a <code>aluno-A04</code> são contas fictícias de apoio da carga, não avaliadores adicionais.</p></section><section class="sheet"><h1>A01 — Administrador</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Acesso <code>a01@example.com</code>; pessoa real ainda não identificada. Aplicação: https://projeto-integrador.tesseratointegra.com.br. Não registrar dados pessoais reais. Não gravar senhas.</p>
+<p>Espaço exclusivo: <strong>PY-2026-A01</strong>. <a href="https://projeto-integrador.tesseratointegra.com.br/oficinas/turmas/d3b9a266-f4ed-5349-84b9-c2a7b0ad566b/">Abrir turma</a>. Use os menus como caminho principal; link direto é apoio do mediador quando necessário e essa ajuda deve ser anotada. Não altere turmas ou pessoas de outros roteiros nem PY-2026-01, WEB-2026-01 e ROB-2026-01.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Objetivo</th>
+<th>Ponto de partida</th>
+<th>Resultado esperado</th>
+<th>Evidência a registrar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Entrar e reconhecer o perfil</td>
+<td>Tela Entrar; credencial entregue privadamente</td>
+<td>Início correto; menus compatíveis com o perfil</td>
+<td>Perfil e menus percebidos; nunca a senha</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Consultar Meu perfil por teclado</td>
+<td>Início → Meu perfil; usar Tab e Enter</td>
+<td>Nome/e-mail legíveis; foco observado; campo de perfil informativo</td>
+<td>Clareza, ordem do foco e eventual ajuda</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Consultar e editar só o participante da sessão</td>
+<td>Pessoas → Participantes → buscar Gabriela Nunes; <a href="https://projeto-integrador.tesseratointegra.com.br/pessoas/participantes/cff07c3e-de48-5d07-a224-9ce17608788a/">abrir participante</a></td>
+<td>Nome fictício preservado; mudar autorização de imagem e salvar, sem alterar CPF/idade/vínculos</td>
+<td>Mensagem de sucesso; capacidade de localizar o próprio registro</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Interpretar vagas e fila sem alterar captura</td>
+<td>Turmas → ROB-2026-01 → Ver inscrições</td>
+<td>2 vagas, 2 confirmados, Elisa na fila; pendentes não ocupam vaga</td>
+<td>Explicação dada pelo avaliador; dúvida se houver</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Inspecionar registros e revisar nota própria</td>
+<td>Turmas → PY-2026-A01 → Acompanhamento</td>
+<td>Frequência 100%, Mapa de estudos entregue; editar somente feedback da própria avaliação; nota 8,0</td>
+<td>Clareza das mensagens e critério de conclusão</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Concluir e emitir certificado só da sessão</td>
+<td>Acompanhamento de PY-2026-A01 → Processar conclusão</td>
+<td>1 aprovação; emitir uma vez; certificado de 2h; botão/repetição não duplica</td>
+<td>Situação resultante e PDF próprio, sem outros participantes</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Consultar indicadores e exportar</td>
+<td>Painel → filtros; exportação Conclusão CSV</td>
+<td>Universo explícito; CSV UTF-8 separado por ; sem CPF/telefone/e-mail</td>
+<td>Filtros usados e consistência compreendida, sem editar números</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Explorar início/perfil em celular e sair</td>
+<td>Viewport do aparelho; Início → Meu perfil → Sair</td>
+<td>Conteúdo utilizável; logout retorna ao login</td>
+<td>Dispositivo, dificuldade de leitura/toque e conclusão</td>
+</tr>
+</tbody>
+</table>
+<p>Após as tarefas, responda à ficha individual. Resultados técnicos esperados são hipóteses para observar, não respostas já atribuídas ao avaliador. Anote também falhas e tarefas não realizadas.</p></section><section class="sheet"><h1>A01 — ficha individual</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Todos os campos de resposta estão em branco.</p>
+<p>Identificação de acesso: A01  Perfil: administrador</p>
+<p>Identificação autorizada da pessoa (guardar privadamente): <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Data/hora: <strong><em>_</em></strong><strong><em>  Dispositivo: </em></strong><strong><em>_</em></strong>  Navegador: <strong><em>_</em></strong>___</p>
+<p>URL/versão publicada: <strong><em>_</em></strong><strong><em>  Experiência prévia com aplicações web: </em></strong><strong><em>_</em></strong></p>
+<p>Para cada tarefa, marque concluída, concluída com ajuda, parcial, não concluída ou não executada. Se não executar, registre o motivo. Dificuldade pode ser baixa, média ou alta. Anote ajuda e o tempo aproximado sem transformar demora em falha automaticamente.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Conclusão</th>
+<th>Dificuldade</th>
+<th>Ajuda necessária</th>
+<th>Tempo aprox.</th>
+<th>Evidência/observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8, quando houver</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Escala: <strong>1 = muito ruim / muito insatisfeito; 2 = ruim / insatisfeito; 3 = regular / neutro; 4 = bom / satisfeito; 5 = muito bom / muito satisfeito</strong>. Deixe sem nota o aspecto que não puder avaliar e explique o motivo.</p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Nota 1–5</th>
+<th>Comentário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clareza das telas e textos</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clareza das mensagens de erro/sucesso</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Facilidade de navegação</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Organização visual</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Confiança nas informações</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Satisfação geral</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>O que testou e funcionou? <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<p>O que testou e não funcionou? Caminho, resultado obtido e esperado: <strong><em>_</em></strong>____</p>
+<p>O que não conseguiu testar e por quê? <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p>Problemas ou bugs encontrados (ligar à tarefa/evidência): <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Sugestões de melhoria: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p>Comentários livres, incluindo celular/teclado quando utilizados: <strong><em>_</em></strong>_____</p>
+<p>Ciência do uso acadêmico das respostas: [ ] Sim [ ] Não. Registro: <strong><em>_</em></strong>____</p>
+<p>Autorização específica de anexos/gravação, se houver: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<p>Não publicar identidade real ou imagem pessoal sem autorização. Senhas, cookies e tokens nunca compõem as evidências. As observações por teclado/celular não são auditoria completa de acessibilidade.</p></section><section class="sheet"><h1>A02 — Administrador</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Acesso <code>a02@example.com</code>; pessoa real ainda não identificada. Aplicação: https://projeto-integrador.tesseratointegra.com.br. Não registrar dados pessoais reais. Não gravar senhas.</p>
+<p>Espaço exclusivo: <strong>PY-2026-A02</strong>. <a href="https://projeto-integrador.tesseratointegra.com.br/oficinas/turmas/9183a1d0-215c-5c48-a81d-881b1b503c4e/">Abrir turma</a>. Use os menus como caminho principal; link direto é apoio do mediador quando necessário e essa ajuda deve ser anotada. Não altere turmas ou pessoas de outros roteiros nem PY-2026-01, WEB-2026-01 e ROB-2026-01.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Objetivo</th>
+<th>Ponto de partida</th>
+<th>Resultado esperado</th>
+<th>Evidência a registrar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Entrar e reconhecer o perfil</td>
+<td>Tela Entrar; credencial entregue privadamente</td>
+<td>Início correto; menus compatíveis com o perfil</td>
+<td>Perfil e menus percebidos; nunca a senha</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Consultar Meu perfil por teclado</td>
+<td>Início → Meu perfil; usar Tab e Enter</td>
+<td>Nome/e-mail legíveis; foco observado; campo de perfil informativo</td>
+<td>Clareza, ordem do foco e eventual ajuda</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Consultar e editar só o participante da sessão</td>
+<td>Pessoas → Participantes → buscar Hugo Ferreira; <a href="https://projeto-integrador.tesseratointegra.com.br/pessoas/participantes/026e1747-6fde-5217-bb74-0a199ea6d08e/">abrir participante</a></td>
+<td>Nome fictício preservado; mudar autorização de imagem e salvar, sem alterar CPF/idade/vínculos</td>
+<td>Mensagem de sucesso; capacidade de localizar o próprio registro</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Interpretar vagas e fila sem alterar captura</td>
+<td>Turmas → ROB-2026-01 → Ver inscrições</td>
+<td>2 vagas, 2 confirmados, Elisa na fila; pendentes não ocupam vaga</td>
+<td>Explicação dada pelo avaliador; dúvida se houver</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Inspecionar registros e revisar nota própria</td>
+<td>Turmas → PY-2026-A02 → Acompanhamento</td>
+<td>Frequência 100%, Mapa de estudos entregue; editar somente feedback da própria avaliação; nota 8,0</td>
+<td>Clareza das mensagens e critério de conclusão</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Concluir e emitir certificado só da sessão</td>
+<td>Acompanhamento de PY-2026-A02 → Processar conclusão</td>
+<td>1 aprovação; emitir uma vez; certificado de 2h; botão/repetição não duplica</td>
+<td>Situação resultante e PDF próprio, sem outros participantes</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Consultar indicadores e exportar</td>
+<td>Painel → filtros; exportação Conclusão CSV</td>
+<td>Universo explícito; CSV UTF-8 separado por ; sem CPF/telefone/e-mail</td>
+<td>Filtros usados e consistência compreendida, sem editar números</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Explorar início/perfil em celular e sair</td>
+<td>Viewport do aparelho; Início → Meu perfil → Sair</td>
+<td>Conteúdo utilizável; logout retorna ao login</td>
+<td>Dispositivo, dificuldade de leitura/toque e conclusão</td>
+</tr>
+</tbody>
+</table>
+<p>Após as tarefas, responda à ficha individual. Resultados técnicos esperados são hipóteses para observar, não respostas já atribuídas ao avaliador. Anote também falhas e tarefas não realizadas.</p></section><section class="sheet"><h1>A02 — ficha individual</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Todos os campos de resposta estão em branco.</p>
+<p>Identificação de acesso: A02  Perfil: administrador</p>
+<p>Identificação autorizada da pessoa (guardar privadamente): <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Data/hora: <strong><em>_</em></strong><strong><em>  Dispositivo: </em></strong><strong><em>_</em></strong>  Navegador: <strong><em>_</em></strong>___</p>
+<p>URL/versão publicada: <strong><em>_</em></strong><strong><em>  Experiência prévia com aplicações web: </em></strong><strong><em>_</em></strong></p>
+<p>Para cada tarefa, marque concluída, concluída com ajuda, parcial, não concluída ou não executada. Se não executar, registre o motivo. Dificuldade pode ser baixa, média ou alta. Anote ajuda e o tempo aproximado sem transformar demora em falha automaticamente.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Conclusão</th>
+<th>Dificuldade</th>
+<th>Ajuda necessária</th>
+<th>Tempo aprox.</th>
+<th>Evidência/observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8, quando houver</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Escala: <strong>1 = muito ruim / muito insatisfeito; 2 = ruim / insatisfeito; 3 = regular / neutro; 4 = bom / satisfeito; 5 = muito bom / muito satisfeito</strong>. Deixe sem nota o aspecto que não puder avaliar e explique o motivo.</p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Nota 1–5</th>
+<th>Comentário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clareza das telas e textos</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clareza das mensagens de erro/sucesso</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Facilidade de navegação</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Organização visual</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Confiança nas informações</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Satisfação geral</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>O que testou e funcionou? <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<p>O que testou e não funcionou? Caminho, resultado obtido e esperado: <strong><em>_</em></strong>____</p>
+<p>O que não conseguiu testar e por quê? <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p>Problemas ou bugs encontrados (ligar à tarefa/evidência): <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Sugestões de melhoria: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p>Comentários livres, incluindo celular/teclado quando utilizados: <strong><em>_</em></strong>_____</p>
+<p>Ciência do uso acadêmico das respostas: [ ] Sim [ ] Não. Registro: <strong><em>_</em></strong>____</p>
+<p>Autorização específica de anexos/gravação, se houver: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<p>Não publicar identidade real ou imagem pessoal sem autorização. Senhas, cookies e tokens nunca compõem as evidências. As observações por teclado/celular não são auditoria completa de acessibilidade.</p></section><section class="sheet"><h1>A03 — Instrutor</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Acesso <code>a03@example.com</code>; pessoa real ainda não identificada. Aplicação: https://projeto-integrador.tesseratointegra.com.br. Não registrar dados pessoais reais. Não gravar senhas.</p>
+<p>Espaço exclusivo: <strong>PY-2026-A03</strong>. <a href="https://projeto-integrador.tesseratointegra.com.br/oficinas/turmas/fa3d38f4-1526-50a3-bede-bdbb29d6081a/">Abrir turma</a>. Use os menus como caminho principal; link direto é apoio do mediador quando necessário e essa ajuda deve ser anotada. Não altere turmas ou pessoas de outros roteiros nem PY-2026-01, WEB-2026-01 e ROB-2026-01.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Objetivo</th>
+<th>Ponto de partida</th>
+<th>Resultado esperado</th>
+<th>Evidência a registrar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Entrar e reconhecer o perfil</td>
+<td>Tela Entrar; credencial entregue privadamente</td>
+<td>Início correto; menus compatíveis com o perfil</td>
+<td>Perfil e menus percebidos; nunca a senha</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Consultar Meu perfil por teclado</td>
+<td>Início → Meu perfil; usar Tab e Enter</td>
+<td>Nome/e-mail legíveis; foco observado; campo de perfil informativo</td>
+<td>Clareza, ordem do foco e eventual ajuda</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Localizar a turma e cronograma</td>
+<td>Minhas turmas → PY-2026-A03</td>
+<td>Somente turma vinculada; participante próprio e encontro Lógica e desafios</td>
+<td>O que encontrou e facilidade da navegação</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Registrar a chamada só da sessão</td>
+<td>PY-2026-A03 → Acompanhamento → Registrar chamada</td>
+<td>Marcar Presente para o participante da sessão; 1 presença, 100%; não duplicar chamada</td>
+<td>Sucesso, mensagens e ajuda necessária</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Revisar projeto próprio da turma</td>
+<td>PY-2026-A03 → Acompanhamento → Revisar projeto</td>
+<td>Registrar feedback fictício no Mapa de estudos; revisão salva</td>
+<td>Clareza do formulário e da confirmação</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Cadastrar e publicar avaliação acadêmica fictícia</td>
+<td>PY-2026-A03 → Acompanhamento → Avaliar</td>
+<td>Nota 8,0, feedback fictício e Publicar; valor e estado publicados corretos</td>
+<td>Mensagem e entendimento dos campos; não é nota do avaliador humano</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Observar limites do perfil</td>
+<td>Painel; depois tentativa de Pessoas pelo endereço /pessoas/</td>
+<td>Painel restrito à turma; Pessoas negado; sem concluir turma ou emitir certificado</td>
+<td>Acesso observado e compreensão da restrição</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Usar chamada no celular e sair</td>
+<td>Minhas turmas → PY-2026-A03 → Chamada</td>
+<td>Ler o formulário no celular sem nova alteração; sair</td>
+<td>Dispositivo, legibilidade, dificuldade e ajuda</td>
+</tr>
+</tbody>
+</table>
+<p>Após as tarefas, responda à ficha individual. Resultados técnicos esperados são hipóteses para observar, não respostas já atribuídas ao avaliador. Anote também falhas e tarefas não realizadas.</p></section><section class="sheet"><h1>A03 — ficha individual</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Todos os campos de resposta estão em branco.</p>
+<p>Identificação de acesso: A03  Perfil: instrutor</p>
+<p>Identificação autorizada da pessoa (guardar privadamente): <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Data/hora: <strong><em>_</em></strong><strong><em>  Dispositivo: </em></strong><strong><em>_</em></strong>  Navegador: <strong><em>_</em></strong>___</p>
+<p>URL/versão publicada: <strong><em>_</em></strong><strong><em>  Experiência prévia com aplicações web: </em></strong><strong><em>_</em></strong></p>
+<p>Para cada tarefa, marque concluída, concluída com ajuda, parcial, não concluída ou não executada. Se não executar, registre o motivo. Dificuldade pode ser baixa, média ou alta. Anote ajuda e o tempo aproximado sem transformar demora em falha automaticamente.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Conclusão</th>
+<th>Dificuldade</th>
+<th>Ajuda necessária</th>
+<th>Tempo aprox.</th>
+<th>Evidência/observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8, quando houver</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Escala: <strong>1 = muito ruim / muito insatisfeito; 2 = ruim / insatisfeito; 3 = regular / neutro; 4 = bom / satisfeito; 5 = muito bom / muito satisfeito</strong>. Deixe sem nota o aspecto que não puder avaliar e explique o motivo.</p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Nota 1–5</th>
+<th>Comentário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clareza das telas e textos</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clareza das mensagens de erro/sucesso</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Facilidade de navegação</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Organização visual</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Confiança nas informações</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Satisfação geral</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>O que testou e funcionou? <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<p>O que testou e não funcionou? Caminho, resultado obtido e esperado: <strong><em>_</em></strong>____</p>
+<p>O que não conseguiu testar e por quê? <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p>Problemas ou bugs encontrados (ligar à tarefa/evidência): <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Sugestões de melhoria: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p>Comentários livres, incluindo celular/teclado quando utilizados: <strong><em>_</em></strong>_____</p>
+<p>Ciência do uso acadêmico das respostas: [ ] Sim [ ] Não. Registro: <strong><em>_</em></strong>____</p>
+<p>Autorização específica de anexos/gravação, se houver: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<p>Não publicar identidade real ou imagem pessoal sem autorização. Senhas, cookies e tokens nunca compõem as evidências. As observações por teclado/celular não são auditoria completa de acessibilidade.</p></section><section class="sheet"><h1>A04 — Instrutor</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Acesso <code>a04@example.com</code>; pessoa real ainda não identificada. Aplicação: https://projeto-integrador.tesseratointegra.com.br. Não registrar dados pessoais reais. Não gravar senhas.</p>
+<p>Espaço exclusivo: <strong>PY-2026-A04</strong>. <a href="https://projeto-integrador.tesseratointegra.com.br/oficinas/turmas/d2515a06-3004-5823-a1cb-610ffe9c444a/">Abrir turma</a>. Use os menus como caminho principal; link direto é apoio do mediador quando necessário e essa ajuda deve ser anotada. Não altere turmas ou pessoas de outros roteiros nem PY-2026-01, WEB-2026-01 e ROB-2026-01.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Objetivo</th>
+<th>Ponto de partida</th>
+<th>Resultado esperado</th>
+<th>Evidência a registrar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Entrar e reconhecer o perfil</td>
+<td>Tela Entrar; credencial entregue privadamente</td>
+<td>Início correto; menus compatíveis com o perfil</td>
+<td>Perfil e menus percebidos; nunca a senha</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Consultar Meu perfil por teclado</td>
+<td>Início → Meu perfil; usar Tab e Enter</td>
+<td>Nome/e-mail legíveis; foco observado; campo de perfil informativo</td>
+<td>Clareza, ordem do foco e eventual ajuda</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Localizar a turma e cronograma</td>
+<td>Minhas turmas → PY-2026-A04</td>
+<td>Somente turma vinculada; participante próprio e encontro Lógica e desafios</td>
+<td>O que encontrou e facilidade da navegação</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Registrar a chamada só da sessão</td>
+<td>PY-2026-A04 → Acompanhamento → Registrar chamada</td>
+<td>Marcar Presente para o participante da sessão; 1 presença, 100%; não duplicar chamada</td>
+<td>Sucesso, mensagens e ajuda necessária</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Revisar projeto próprio da turma</td>
+<td>PY-2026-A04 → Acompanhamento → Revisar projeto</td>
+<td>Registrar feedback fictício no Mapa de estudos; revisão salva</td>
+<td>Clareza do formulário e da confirmação</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Cadastrar e publicar avaliação acadêmica fictícia</td>
+<td>PY-2026-A04 → Acompanhamento → Avaliar</td>
+<td>Nota 8,0, feedback fictício e Publicar; valor e estado publicados corretos</td>
+<td>Mensagem e entendimento dos campos; não é nota do avaliador humano</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Observar limites do perfil</td>
+<td>Painel; depois tentativa de Pessoas pelo endereço /pessoas/</td>
+<td>Painel restrito à turma; Pessoas negado; sem concluir turma ou emitir certificado</td>
+<td>Acesso observado e compreensão da restrição</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Usar chamada no celular e sair</td>
+<td>Minhas turmas → PY-2026-A04 → Chamada</td>
+<td>Ler o formulário no celular sem nova alteração; sair</td>
+<td>Dispositivo, legibilidade, dificuldade e ajuda</td>
+</tr>
+</tbody>
+</table>
+<p>Após as tarefas, responda à ficha individual. Resultados técnicos esperados são hipóteses para observar, não respostas já atribuídas ao avaliador. Anote também falhas e tarefas não realizadas.</p></section><section class="sheet"><h1>A04 — ficha individual</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Todos os campos de resposta estão em branco.</p>
+<p>Identificação de acesso: A04  Perfil: instrutor</p>
+<p>Identificação autorizada da pessoa (guardar privadamente): <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Data/hora: <strong><em>_</em></strong><strong><em>  Dispositivo: </em></strong><strong><em>_</em></strong>  Navegador: <strong><em>_</em></strong>___</p>
+<p>URL/versão publicada: <strong><em>_</em></strong><strong><em>  Experiência prévia com aplicações web: </em></strong><strong><em>_</em></strong></p>
+<p>Para cada tarefa, marque concluída, concluída com ajuda, parcial, não concluída ou não executada. Se não executar, registre o motivo. Dificuldade pode ser baixa, média ou alta. Anote ajuda e o tempo aproximado sem transformar demora em falha automaticamente.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Conclusão</th>
+<th>Dificuldade</th>
+<th>Ajuda necessária</th>
+<th>Tempo aprox.</th>
+<th>Evidência/observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8, quando houver</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Escala: <strong>1 = muito ruim / muito insatisfeito; 2 = ruim / insatisfeito; 3 = regular / neutro; 4 = bom / satisfeito; 5 = muito bom / muito satisfeito</strong>. Deixe sem nota o aspecto que não puder avaliar e explique o motivo.</p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Nota 1–5</th>
+<th>Comentário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clareza das telas e textos</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clareza das mensagens de erro/sucesso</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Facilidade de navegação</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Organização visual</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Confiança nas informações</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Satisfação geral</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>O que testou e funcionou? <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<p>O que testou e não funcionou? Caminho, resultado obtido e esperado: <strong><em>_</em></strong>____</p>
+<p>O que não conseguiu testar e por quê? <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p>Problemas ou bugs encontrados (ligar à tarefa/evidência): <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Sugestões de melhoria: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p>Comentários livres, incluindo celular/teclado quando utilizados: <strong><em>_</em></strong>_____</p>
+<p>Ciência do uso acadêmico das respostas: [ ] Sim [ ] Não. Registro: <strong><em>_</em></strong>____</p>
+<p>Autorização específica de anexos/gravação, se houver: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<p>Não publicar identidade real ou imagem pessoal sem autorização. Senhas, cookies e tokens nunca compõem as evidências. As observações por teclado/celular não são auditoria completa de acessibilidade.</p></section><section class="sheet"><h1>A05 — Participante</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Acesso <code>a05@example.com</code>; pessoa real ainda não identificada. Aplicação: https://projeto-integrador.tesseratointegra.com.br. Não registrar dados pessoais reais. Não gravar senhas.</p>
+<p>Espaço exclusivo: <strong>PY-2026-A05</strong>. <a href="https://projeto-integrador.tesseratointegra.com.br/oficinas/turmas/f3a07396-09de-5147-bab6-d4d57064f6b8/">Abrir turma</a>. Use os menus como caminho principal; link direto é apoio do mediador quando necessário e essa ajuda deve ser anotada. Não altere turmas ou pessoas de outros roteiros nem PY-2026-01, WEB-2026-01 e ROB-2026-01.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Objetivo</th>
+<th>Ponto de partida</th>
+<th>Resultado esperado</th>
+<th>Evidência a registrar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Entrar e reconhecer o perfil</td>
+<td>Tela Entrar; credencial entregue privadamente</td>
+<td>Início correto; menus compatíveis com o perfil</td>
+<td>Perfil e menus percebidos; nunca a senha</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Consultar Meu perfil por teclado</td>
+<td>Início → Meu perfil; usar Tab e Enter</td>
+<td>Nome/e-mail legíveis; foco observado; campo de perfil informativo</td>
+<td>Clareza, ordem do foco e eventual ajuda</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Solicitar inscrição na oferta exclusiva</td>
+<td>Turmas disponíveis → PY-2026-A05-I → Solicitar inscrição</td>
+<td>Uma solicitação pendente; nenhuma confirmação automática; preservar Robótica de captura</td>
+<td>Situação em Minhas inscrições e clareza do retorno</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Interpretar jornada própria</td>
+<td>Minha jornada → PY-2026-A05</td>
+<td>1 presença/1 encontro; 100%; Mapa de estudos em rascunho; sem dados alheios</td>
+<td>Explicação dos indicadores e dúvidas</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Atualizar e entregar projeto só da sessão</td>
+<td>Minha jornada → PY-2026-A05 → Atualizar projeto</td>
+<td>Descrição fictícia atualizada; marcar entregue; devolutiva ainda pendente</td>
+<td>Mensagens, clareza do estado e eventual ajuda</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Consultar resultado e certificado próprios</td>
+<td>Meus certificados → PY-2026-A05-F → Baixar PDF</td>
+<td>Aprovação em turma própria concluída; certificado ativo de 2h e PDF abre</td>
+<td>Legibilidade e sucesso do download, sem credenciais</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Usar oferta/jornada em celular e sair</td>
+<td>Celular → Turmas disponíveis / Minha jornada → Sair</td>
+<td>Dados próprios legíveis, navegação e logout acessíveis</td>
+<td>Aparelho, dificuldades de toque/leitura e opinião</td>
+</tr>
+</tbody>
+</table>
+<p>Após as tarefas, responda à ficha individual. Resultados técnicos esperados são hipóteses para observar, não respostas já atribuídas ao avaliador. Anote também falhas e tarefas não realizadas.</p></section><section class="sheet"><h1>A05 — ficha individual</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Todos os campos de resposta estão em branco.</p>
+<p>Identificação de acesso: A05  Perfil: participante</p>
+<p>Identificação autorizada da pessoa (guardar privadamente): <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Data/hora: <strong><em>_</em></strong><strong><em>  Dispositivo: </em></strong><strong><em>_</em></strong>  Navegador: <strong><em>_</em></strong>___</p>
+<p>URL/versão publicada: <strong><em>_</em></strong><strong><em>  Experiência prévia com aplicações web: </em></strong><strong><em>_</em></strong></p>
+<p>Para cada tarefa, marque concluída, concluída com ajuda, parcial, não concluída ou não executada. Se não executar, registre o motivo. Dificuldade pode ser baixa, média ou alta. Anote ajuda e o tempo aproximado sem transformar demora em falha automaticamente.</p>
+<table>
+<thead>
+<tr>
+<th>Tarefa</th>
+<th>Conclusão</th>
+<th>Dificuldade</th>
+<th>Ajuda necessária</th>
+<th>Tempo aprox.</th>
+<th>Evidência/observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8, quando houver</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Escala: <strong>1 = muito ruim / muito insatisfeito; 2 = ruim / insatisfeito; 3 = regular / neutro; 4 = bom / satisfeito; 5 = muito bom / muito satisfeito</strong>. Deixe sem nota o aspecto que não puder avaliar e explique o motivo.</p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Nota 1–5</th>
+<th>Comentário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clareza das telas e textos</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Clareza das mensagens de erro/sucesso</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Facilidade de navegação</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Organização visual</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Confiança nas informações</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Satisfação geral</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>O que testou e funcionou? <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<p>O que testou e não funcionou? Caminho, resultado obtido e esperado: <strong><em>_</em></strong>____</p>
+<p>O que não conseguiu testar e por quê? <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p>Problemas ou bugs encontrados (ligar à tarefa/evidência): <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Sugestões de melhoria: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>___</p>
+<p>Comentários livres, incluindo celular/teclado quando utilizados: <strong><em>_</em></strong>_____</p>
+<p>Ciência do uso acadêmico das respostas: [ ] Sim [ ] Não. Registro: <strong><em>_</em></strong>____</p>
+<p>Autorização específica de anexos/gravação, se houver: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<p>Não publicar identidade real ou imagem pessoal sem autorização. Senhas, cookies e tokens nunca compõem as evidências. As observações por teclado/celular não são auditoria completa de acessibilidade.</p></section><section class="sheet"><h1>Modelo de consolidação</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Todas as respostas, quantidades e notas permanecem em branco até as sessões reais.</p>
+<table>
+<thead>
+<tr>
+<th>Sessão</th>
+<th>Perfil</th>
+<th>Data/dispositivo</th>
+<th>Tarefas concluídas/total executado</th>
+<th>Ajuda</th>
+<th>Clareza</th>
+<th>Navegação</th>
+<th>Satisfação</th>
+<th>Achados/evidências</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01</td>
+<td>Administrador</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A02</td>
+<td>Administrador</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A03</td>
+<td>Instrutor</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A04</td>
+<td>Instrutor</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A05</td>
+<td>Participante</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Relacione cada problema ao formulário original e à tarefa. Não compare médias de tarefas diferentes sem explicar perfil, denominador e itens não executados. Deixe métricas ausentes em branco, nunca como zero. Não transforme notas acadêmicas dos participantes fictícios em notas de satisfação humana.</p>
+<p>Pontos comuns: <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Diferenças entre perfis: <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Limitações e tarefas não executadas: <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Decisões de melhoria, prioridade, justificativa e reteste: <strong><em>_</em></strong><strong><em>_</em></strong>______</p>
+<p>Conclusão humana, depois das cinco sessões: <strong><em>_</em></strong><strong><em>_</em></strong>______</p></section><section class="sheet"><h1>Checklist de execução</h1>
+<p>Estado: <strong>aguardando avaliação humana</strong>. Os itens abaixo estão desmarcados para execução pelo responsável.</p>
+<ul>
+<li>[ ] Escolher cinco pessoas reais; obter ciência para uso acadêmico e autorização de gravação se aplicável.</li>
+<li>[ ] Registrar versão publicada, data, URL e dispositivo em cada ficha.</li>
+<li>[ ] Fazer backup do banco exclusivo deste projeto antes das sessões.</li>
+<li>[ ] Conferir contas e credenciais restritas, entregando somente o acesso individual.</li>
+<li>[ ] Conferir prazos de inscrição e estado de cada turma exclusiva.</li>
+<li>[ ] Confirmar que A01/A02 atuarão apenas nos registros próprios do roteiro.</li>
+<li>[ ] Preservar cenários de captura e dados dos demais avaliadores.</li>
+<li>[ ] Disponibilizar PDF/HTML imprimível e roteiro correto.</li>
+<li>[ ] Registrar tentativa inicial, dificuldade, ajuda, falhas e não execução por tarefa.</li>
+<li>[ ] Observar celular/teclado quando apropriado, sem declarar auditoria completa de acessibilidade.</li>
+<li>[ ] Recolher opiniões reais e deixar respostas ausentes em branco.</li>
+<li>[ ] Sanitizar evidências; guardar identidade real privadamente.</li>
+<li>[ ] Consolidar achados com denominadores, perfil e limitações.</li>
+<li>[ ] Registrar decisões, correções e retestes antes da versão definitiva.</li>
+<li>[ ] Reconfirmar versão do manual/vídeo; sem promoção automática para main.</li>
+</ul></section></body></html>

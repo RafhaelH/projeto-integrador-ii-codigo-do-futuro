@@ -1,8 +1,9 @@
 # Manual do usuário — Código do Futuro
 
 Este manual descreve a release candidata do Projeto Integrador Transdisciplinar em Engenharia de
-Software II. As imagens definitivas serão capturadas na versão publicada e inseridas conforme o
-[plano de capturas](plano-de-capturas.md), evitando divergência entre manual, vídeo e sistema.
+Software II. Esta edição apresenta a candidata publicada `a351c5a`, preparada em 13/10/2026. As capturas reais estão no [plano e registro](plano-de-capturas.md), com fonte, legenda e hash. Todos os dados apresentados são fictícios. A versão definitiva continua dependente das cinco avaliações humanas.
+
+Use o [manual HTML imprimível](manual-imprimivel.html), o [PDF](manual-imprimivel.pdf) e o [roteiro do vídeo](roteiro-video.md). Os PDFs e imagens não contêm credenciais.
 
 ## 1. Acesso
 
@@ -16,9 +17,7 @@ filtrados no servidor conforme o perfil e, no caso de instrutores, conforme o v�
 
 ### Recuperar senha
 
-Na tela de entrada, selecione **Esqueci minha senha**, informe o e-mail e siga as instruções
-recebidas. No ambiente acadêmico com e-mail de console, a recuperação é demonstrada pelo log do
-servidor e as contas de avaliação usam credenciais entregues pelo responsável.
+A tela **Esqueci minha senha** inicia a recuperação. Este ambiente acadêmico usa backend de console; não entrega mensagens em caixas de e-mail. Para as avaliações, receba a credencial privadamente do responsável. Não exponha logs com links/tokens em gravações ou capturas.
 
 ## 2. Navegação comum
 
@@ -217,3 +216,71 @@ inclua senha, cookie ou dados pessoais na evidência.
 
 O PDF final do manual deve registrar domínio, tag/SHA, data de captura e autor. Esses campos serão
 preenchidos depois das cinco avaliações, quando a versão definitiva for promovida para `main`.
+
+
+
+## 9. Cenários preparados e ilustrações
+
+Referência: 13/10/2026. Os registros originais são reutilizados por ID. PY-2026-01 está concluída (Ana aprovada, Bruno não concluinte por 50% de frequência; certificado ativo de Ana, 8h). WEB-2026-01 está em andamento (Carla 100%, Diego 50% em dois encontros; projeto entregue e rascunho; nota de Carla não publicada). ROB-2026-01 tem 2 vagas preenchidas e uma pessoa em espera; PY-2026-02 permanece planejada.
+
+As sete turmas A01–A05 são espaços de avaliação separados; não usar esses acessos para captura. A conta operacional foi preservada integralmente e não é usada neste manual.
+
+
+### Figura 1 — Login vazio servido por HTTPS.
+
+![Figura 1](capturas/fig-01-login.png)
+
+
+### Figura 3 — Meu perfil com nome e e-mail fictícios.
+
+![Figura 3](capturas/fig-03-meu-perfil.png)
+
+
+### Figura 5 — Ana, menor de idade, com responsável ativo vinculado.
+
+![Figura 5](capturas/fig-05-menor-responsavel.png)
+
+
+### Figura 13 — Web em andamento: encontros realizados e futuros coerentes.
+
+![Figura 13](capturas/fig-13-turma-cronograma.png)
+
+
+### Figura 15 — Capacidade 2; confirmadas 2; disponíveis 0; uma pendente e uma em espera.
+
+![Figura 15](capturas/fig-15-vagas-fila.png)
+
+
+### Figura 16 — Carla com 100% e Diego com 50% nos dois encontros realizados.
+
+![Figura 16](capturas/fig-16-frequencia.png)
+
+
+### Figura 19 — Ana aprovada; Bruno não concluinte por frequência 50%; critérios explicitados.
+
+![Figura 19](capturas/fig-19-conclusao.png)
+
+
+### Figura 20 — Certificado ativo de Ana: quatro encontros de 2h, total 8h.
+
+![Figura 20](capturas/fig-20-certificado.png)
+
+
+### Figura 27 — Universo: Python iniciado em abril; 1 turma, 2 participantes, 75% de frequência média e 50% de aprovação.
+
+![Figura 27](capturas/fig-27-painel-filtrado.png)
+
+
+### Figura 28 — CSV realmente exportado, renderizado em visualizador HTML local; não é tela da aplicação nem Excel.
+
+![Figura 28](capturas/fig-28-csv-exportado.png)
+
+
+### Figura 29 — Página do PDF real de Ana, renderizada por PyMuPDF; 8h e código histórico preservados. Não é screenshot da interface.
+
+![Figura 29](capturas/fig-29-certificado-pdf.png)
+
+
+### Figura 36 — Jornada própria de Carla no celular.
+
+![Figura 36](capturas/fig-36-mobile-jornada.png)

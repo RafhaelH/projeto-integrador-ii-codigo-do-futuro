@@ -1,15 +1,3 @@
-# Resultados das avaliações
+# Resultados das cinco sessões
 
-Os cinco arquivos numerados são modelos a preencher com pessoas reais após a publicação. Não
-registre senhas, cookies, CPF, telefone, endereço ou e-mail pessoal desnecessário. Imagens devem
-ser autorizadas e anonimizadas.
-
-Antes de gerar o PDF final:
-
-- substituir todos os marcadores `PENDENTE`;
-- conferir nome/identificação autorizada e data;
-- registrar versão e perfil realmente testados;
-- incluir o que funcionou, falhou e não foi testado;
-- referenciar screenshots pelo caminho relativo;
-- obter a ciência de uso acadêmico;
-- consolidar os achados no registro de melhorias.
+**Aguardando avaliação humana**. Nenhuma sessão humana foi realizada por esta preparação. Os cinco arquivos individuais estão em branco; A01/A02 são administradores, A03/A04 instrutores e A05 participante. Não preencher respostas, notas ou assinaturas com resultados automáticos. Identidade real e anexos sensíveis devem ficar em armazenamento privado autorizado.

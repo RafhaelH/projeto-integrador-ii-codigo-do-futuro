@@ -1,116 +1,29 @@
-# Pacote para as cinco avaliações
+# Pacote das cinco avaliações humanas
 
-Este pacote deve ser usado somente depois que a release candidata estiver publicada. Cada sessão
-precisa registrar a versão testada, as tarefas realizadas, os problemas observados e a opinião do
-avaliador sem esconder resultados negativos.
+Estado: **aguardando avaliação humana**. As pessoas ainda serão escolhidas; A01–A05 são identificadores de acesso, não nomes de avaliadores. Não há respostas, notas, assinaturas ou resultados preenchidos.
 
-## Candidata corrigida para as sessões
+Aplicação: https://projeto-integrador.tesseratointegra.com.br. Código publicado: `a351c5a`; dados preparados com referência **13/10/2026**, fuso America/Sao_Paulo. Todos os nomes e registros de apresentação são fictícios; e-mails novos usam example.com. Nenhuma mensagem foi enviada. O telefone obrigatório dos responsáveis usa `00000000000`, com DDD 00 deliberadamente não discável. CPF, CNPJ e telefones opcionais permanecem vazios.
 
-Domínio: https://projeto-integrador.tesseratointegra.com.br. Commit do código corrigido:
-`cccfa6ee7fb13f0c428e8375dbed5b8a3a9e4fa1`, branch local
-`fix/validacao-publicada-20261013`. Confira o resultado e as limitações no
-[relatório de correções e retestes](../06-testes/correcoes-publicadas/RETEST-20261013-130005/relatorio.md).
-A versão definitiva da disciplina continua dependente das cinco avaliações humanas.
-
-Inclua em cada sessão a consulta de **Meu perfil**; para edição, utilize uma conta fictícia
-exclusiva da sessão, preservando as contas e cenários DEMO. Verifique clareza de nome/e-mail,
-mensagens de validação e acesso pela navegação. Usabilidade, responsividade e acessibilidade
-precisam ser avaliadas por pessoas; a validação HTTP não comprova esses aspectos nem entrega SMTP.
-
-## Distribuição recomendada
-
-| Avaliação | Perspectiva | Conta sugerida | Foco |
+| Identificação | Perfil | Conta de acesso | Turma de trabalho |
 |---|---|---|---|
-| 01 | Participante | `ana.oliveira@demo.codigodofuturo.local` | inscrição, jornada e certificado |
-| 02 | Participante | `carla.mendes@demo.codigodofuturo.local` | inscrição, frequência e projeto |
-| 03 | Instrutor | `larissa.instrutora@demo.codigodofuturo.local` | turma, chamada, revisão e resultado |
-| 04 | Instrutor | `rafael.instrutor@demo.codigodofuturo.local` | isolamento, cronograma e avaliação |
-| 05 | Administrador | `admin@demo.codigodofuturo.local` | cadastros, vagas, indicadores e CSV |
+| A01 | Administrador funcional | a01@example.com | PY-2026-A01 |
+| A02 | Administrador funcional | a02@example.com | PY-2026-A02 |
+| A03 | Instrutor | a03@example.com | PY-2026-A03 |
+| A04 | Instrutor | a04@example.com | PY-2026-A04 |
+| A05 | Participante | a05@example.com | PY-2026-A05, A05-F e A05-I |
 
-A senha da homologação deve ser enviada separadamente e não pode aparecer no Git, nas capturas ou
-no PDF final.
+As cinco contas não têm `is_staff`, superusuário, grupos ou permissões extras de Django admin. Cada senha é aleatória e distinta. Senhas ficam somente em `/root/codigo-do-futuro-presentation/20261013/credentials.json`, modo 600, fora do Git, com diretório 700. O responsável consulta esse arquivo localmente e entrega **apenas** a credencial da pessoa em canal privado. Não cole seu conteúdo em terminal gravado, issue, chat, Git ou relatório público. A senha do administrador operacional foi preservada.
 
-## Antes da primeira sessão
+Os administradores têm alcance funcional global, conforme o produto; sua separação é por dados e roteiro, não por um novo sistema de tenants. A01/A02 só alteram o próprio participante, turma, avaliação e certificado. Instrutores têm autorização aplicada no servidor às suas turmas; A05 acessa seus próprios registros. Acompanhamento do mediador evita operações administrativas fora do roteiro. As sessões podem ocorrer sequencialmente; nunca use os acessos de captura como contas de avaliação.
 
-- [ ] Registrar URL, SHA/tag e data da release candidata.
-- [ ] Executar o smoke test público.
-- [ ] Criar um backup da base demonstrativa.
-- [ ] Confirmar as cinco pessoas e obter ciência para uso acadêmico das respostas.
-- [ ] Testar as cinco contas sugeridas.
-- [ ] Abrir os formulários de `resultados/` e substituir todos os campos pendentes.
-- [ ] Preparar captura de tela sem cookies, senhas ou dados pessoais reais.
+- [Instruções do responsável](instrucoes-responsavel.md)
+- [Roteiros A01–A05](roteiros/README.md)
+- [Formulário individual](formulario-de-avaliacao.md)
+- [Consolidação](consolidacao.md)
+- [Problemas e decisões](registro-de-melhorias.md)
+- [Checklist](checklist-execucao.md)
+- [Pacote HTML imprimível](pacote-imprimivel.html) e [PDF](pacote-imprimivel.pdf)
+- [Resultados individuais ainda em branco](resultados/README.md)
+- [Relatório técnico da preparação](../06-testes/preparacao-20261013/relatorio.md)
 
-## Condução de cada sessão
-
-1. informar objetivo, duração aproximada de 20 a 30 minutos e perfil simulado;
-2. pedir que a pessoa verbalize dúvidas, sem ensinar o caminho inicialmente;
-3. anotar sucesso, ajuda necessária, tempo aproximado e erro por tarefa;
-4. registrar screenshot somente quando útil e com autorização;
-5. aplicar as perguntas obrigatórias da universidade;
-6. obter notas de 1 a 5 e comentário final;
-7. salvar o resultado no arquivo numerado correspondente.
-
-## Roteiro do participante
-
-1. entrar e localizar uma turma disponível;
-2. consultar a oficina e solicitar inscrição quando o cenário permitir;
-3. abrir **Minhas inscrições**;
-4. abrir **Minha jornada** e interpretar frequência, projeto e resultado;
-5. cadastrar ou atualizar um projeto no cenário permitido;
-6. localizar um certificado disponível e baixar o PDF;
-7. sair da aplicação.
-
-## Roteiro do instrutor
-
-1. entrar e identificar as turmas vinculadas;
-2. confirmar que outra turma não vinculada não aparece;
-3. abrir cronograma e participantes de uma turma;
-4. registrar ou corrigir uma chamada;
-5. revisar um projeto;
-6. cadastrar ou editar uma avaliação;
-7. consultar o painel restrito e sair.
-
-## Roteiro do administrador
-
-1. cadastrar ou editar participante e responsável fictícios;
-2. consultar oficinas, criar turma e cadastrar encontro;
-3. vincular instrutor;
-4. analisar inscrição e verificar capacidade/lista de espera;
-5. acompanhar frequência, projeto e avaliação;
-6. consultar indicadores com filtro;
-7. exportar um CSV e confirmar ausência de CPF, telefone e e-mail;
-8. consultar certificados e sair.
-
-## Perguntas mínimas obrigatórias
-
-- Nome de quem testou.
-- Data do teste.
-- O que foi testado e funcionou.
-- O que foi testado e não funcionou, incluindo resultado esperado.
-- O que não foi testado e por quê.
-- Bugs encontrados.
-- Sugestões de melhoria.
-
-## Nomes das evidências
-
-Use nomes previsíveis e sem dados sensíveis:
-
-```text
-docs/07-avaliacoes/evidencias/
-├── av01-participante-problema-01.png
-├── av02-participante-fluxo-ok-01.png
-├── av03-instrutor-problema-01.png
-├── av04-instrutor-fluxo-ok-01.png
-└── av05-admin-problema-01.png
-```
-
-## Depois das cinco sessões
-
-1. transferir cada achado para `registro-de-melhorias.md`;
-2. classificar tipo e severidade;
-3. decidir entre implementar agora, implementar depois, não aceitar ou marcar duplicidade;
-4. justificar tudo o que não for implementado;
-5. corrigir em branch própria e relacionar PR/commit;
-6. executar regressão dos fluxos afetados e toda a suíte;
-7. obter confirmação do reteste quando necessária;
-8. gerar o PDF consolidado com as cinco opiniões e as decisões.
+Tempo sugerido: 25–35 minutos por pessoa. Atividades em celular e teclado são observações de uso, não uma auditoria completa de acessibilidade. As capturas e verificações automáticas não substituem as cinco avaliações.

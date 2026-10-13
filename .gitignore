@@ -26,6 +26,12 @@ staticfiles/
 .env.*
 !.env.example
 deploy/production.env
+credentials.json
+*-credentials.json
+cookies*.json
+*.dump
+*.dump.sha256
+presentation-private/
 
 # Runtime and backups
 backups/

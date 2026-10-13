@@ -1,0 +1,40 @@
+{
+  "original_records_retained_by_id": 95,
+  "operational_admin_all_fields_exactly_preserved": true,
+  "unknown_business_records": 0,
+  "ambiguous_cleanup": [],
+  "historical_evidence": [
+    {
+      "path": "docs/06-testes/validacao-publicada/VALIDATION-20261013-120621",
+      "files": 33,
+      "all_original_bytes_preserved": true
+    },
+    {
+      "path": "docs/06-testes/correcoes-publicadas/RETEST-20261013-130005",
+      "files": 52,
+      "all_original_bytes_preserved": true
+    }
+  ],
+  "other_containers_checked": 65,
+  "other_containers_unchanged": true,
+  "database_container_unchanged": true,
+  "current_counts": {
+    "accounts.User": 19,
+    "people.Participant": 11,
+    "people.Guardian": 3,
+    "people.Instructor": 4,
+    "people.Institution": 1,
+    "people.ParticipantGuardian": 3,
+    "workshops.Workshop": 3,
+    "workshops.ClassGroup": 11,
+    "workshops.ClassInstructor": 12,
+    "workshops.Meeting": 17,
+    "enrollments.Enrollment": 15,
+    "enrollments.EnrollmentStatusHistory": 33,
+    "learning.Attendance": 16,
+    "learning.StudentProject": 10,
+    "learning.Evaluation": 6,
+    "learning.Certificate": 2,
+    "admin.LogEntry": 0
+  }
+}

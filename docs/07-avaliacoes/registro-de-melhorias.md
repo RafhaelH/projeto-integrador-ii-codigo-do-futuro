@@ -4,7 +4,7 @@ Este documento será preenchido após as avaliações. Não remover itens rejeit
 
 | ID | Origem | Descrição | Tipo | Severidade | Decisão | Justificativa | Alteração/PR | Reteste |
 |---|---|---|---|---|---|---|---|---|
-| AV-001 | Avaliador 1 | Exemplo a substituir | Usabilidade | Média | Pendente | — | — | — |
+| | | | | | | | | |
 
 ## Tipos
 
@@ -27,8 +27,18 @@ Este documento será preenchido após as avaliações. Não remover itens rejeit
 
 | Indicador | Quantidade |
 |---|---:|
-| Achados recebidos | 0 |
-| Implementados | 0 |
-| Planejados para depois | 0 |
-| Não aceitos | 0 |
-| Defeitos críticos/altos abertos | 0 |
+| Achados recebidos |  |
+| Implementados |  |
+| Planejados para depois |  |
+| Não aceitos |  |
+| Defeitos críticos/altos abertos |  |
+
+## Registro das sessões A01–A05
+
+Estado: **aguardando avaliação humana**. Não há problemas humanos ou decisões preenchidos pela preparação técnica.
+
+| ID | Sessão/tarefa | Problema e resultado esperado | Evidência | Severidade | Decisão | Justificativa | Responsável/prazo | Correção/PR | Reteste |
+|---|---|---|---|---|---|---|---|---|---|
+| | | | | | | | | | |
+
+Classificação: defeito, usabilidade, ideia ou fora do escopo. Decisão: corrigir agora, depois, não aceitar ou duplicado. Toda decisão precisa de justificativa; manter também resultados negativos e vínculo à ficha original.

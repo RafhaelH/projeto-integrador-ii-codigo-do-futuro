@@ -1,0 +1,135 @@
+HTTP-001 APROVADO Health por HTTPS
+HTTP-002 APROVADO Ready com banco
+HTTP-003 APROVADO Login público HTTPS
+HTTP-004 APROVADO Estático do login
+HTTP-005 APROVADO HTTP redireciona para HTTPS
+HTTP-006 APROVADO Anônimo em página protegida
+HTTP-007 APROVADO Anônimo em página protegida
+HTTP-008 APROVADO Anônimo em página protegida
+HTTP-009 APROVADO Anônimo em página protegida
+HTTP-010 APROVADO Anônimo em página protegida
+HTTP-011 APROVADO Anônimo em página protegida
+HTTP-012 APROVADO Anônimo em página protegida
+HTTP-013 APROVADO Login incorreto
+HTTP-014 APROVADO Login correto ADMIN
+HTTP-015 APROVADO Provisionar conta i1
+HTTP-016 APROVADO Provisionar conta i2
+HTTP-017 APROVADO Provisionar conta p1
+HTTP-018 APROVADO Provisionar conta p2
+HTTP-019 APROVADO Provisionar conta p3
+HTTP-020 APROVADO Provisionar conta minor
+HTTP-021 APROVADO Login correto INSTRUCTOR_1
+HTTP-022 APROVADO Login correto INSTRUCTOR_2
+HTTP-023 APROVADO Login correto PARTICIPANT_1
+HTTP-024 APROVADO Login correto PARTICIPANT_2
+HTTP-025 APROVADO Login correto PARTICIPANT_3
+HTTP-026 APROVADO Login correto PARTICIPANT_MINOR
+HTTP-027 APROVADO Flags cookies ADMIN
+HTTP-028 APROVADO Flags cookies INSTRUCTOR_1
+HTTP-029 APROVADO Flags cookies PARTICIPANT_1
+HTTP-030 APROVADO Perfil insuficiente i1
+HTTP-031 APROVADO Perfil insuficiente i1
+HTTP-032 APROVADO Perfil insuficiente i1
+HTTP-033 APROVADO Perfil insuficiente i1
+HTTP-034 APROVADO Perfil insuficiente i1
+HTTP-035 APROVADO Perfil insuficiente p1
+HTTP-036 APROVADO Perfil insuficiente p1
+HTTP-037 APROVADO Perfil insuficiente p1
+HTTP-038 APROVADO Perfil insuficiente p1
+HTTP-039 APROVADO Perfil insuficiente p1
+HTTP-040 APROVADO POST sem CSRF
+HTTP-041 APROVADO POST CSRF inválido
+HTTP-042 APROVADO Método DELETE inadequado
+HTTP-043 APROVADO Identificador inexistente
+HTTP-044 APROVADO Participante campos obrigatórios
+HTTP-045 APROVADO Formatos de participante inválidos
+HTTP-046 APROVADO Criar participante p1
+HTTP-047 APROVADO Criar participante p2
+HTTP-048 APROVADO Criar participante p3
+HTTP-049 APROVADO Criar participante minor
+HTTP-050 APROVADO Pesquisar participante e CPF mascarado
+HTTP-051 APROVADO Consultar participante
+HTTP-052 APROVADO Editar participante
+HTTP-053 APROVADO CPF duplicado
+HTTP-054 APROVADO Responsável telefone inválido
+HTTP-055 APROVADO Criar responsável fictício
+HTTP-056 APROVADO Pesquisar responsável
+HTTP-057 APROVADO Editar responsável
+HTTP-058 APROVADO Criar perfil instrutor i1
+HTTP-059 APROVADO Criar perfil instrutor i2
+HTTP-060 APROVADO Pesquisar instrutor
+HTTP-061 APROVADO Criar instituição
+HTTP-062 APROVADO Pesquisar instituição
+HTTP-063 APROVADO Editar instituição
+HTTP-064 APROVADO Dados pessoais protegidos p1
+HTTP-065 APROVADO Dados pessoais protegidos i1
+HTTP-066 APROVADO Criar oficina rascunho
+HTTP-067 APROVADO Oficina slug duplicado
+HTTP-068 APROVADO Editar oficina
+HTTP-069 APROVADO Publicar oficina
+HTTP-070 APROVADO Pesquisar oficina
+HTTP-071 APROVADO Turma datas e capacidade inválidas
+HTTP-072 APROVADO Criar turma queue
+HTTP-073 APROVADO Abrir sem instrutor bloqueado
+HTTP-074 APROVADO Editar turma planejada
+HTTP-075 APROVADO Vincular instrutor queue
+HTTP-076 APROVADO Abrir inscrições queue
+HTTP-077 APROVADO Criar turma race
+HTTP-078 APROVADO Vincular instrutor race
+HTTP-079 APROVADO Abrir inscrições race
+HTTP-080 APROVADO Criar turma academic
+HTTP-081 APROVADO Vincular instrutor academic
+HTTP-082 APROVADO Abrir inscrições academic
+HTTP-083 APROVADO Criar turma other
+HTTP-084 APROVADO Vincular instrutor other
+HTTP-085 APROVADO Abrir inscrições other
+HTTP-086 APROVADO Iniciar sem encontros bloqueado
+HTTP-087 APROVADO Encontro fora período e fim inválido
+HTTP-088 APROVADO Criar encontro 1
+HTTP-089 APROVADO Criar encontro 2
+HTTP-090 APROVADO Criar encontro 3
+HTTP-091 APROVADO Criar encontro 4
+HTTP-092 APROVADO Encontro início duplicado
+HTTP-093 APROVADO Editar encontro planejado
+HTTP-094 APROVADO Criar encontro futuro
+HTTP-095 APROVADO Instrutor lista somente próprias turmas i1
+HTTP-096 APROVADO Instrutor turma alheia i1
+HTTP-097 APROVADO Instrutor lista somente próprias turmas i2
+HTTP-098 APROVADO Instrutor turma alheia i2
+HTTP-099 APROVADO Editar turma aberta bloqueado
+HTTP-100 APROVADO Vincular instrutor após abertura bloqueado
+HTTP-101 APROVADO Menor sem responsável bloqueado
+HTTP-102 APROVADO Vincular responsável ao menor
+HTTP-103 APROVADO Responsável duplicado bloqueado
+HTTP-104 APROVADO Solicitar inscrição p1 queue
+HTTP-105 APROVADO Solicitar inscrição minor queue
+HTTP-106 APROVADO Inscrição duplicada bloqueada
+HTTP-107 APROVADO Contadores sem ocupar vaga pendente
+HTTP-108 APROVADO Confirmar inscrição e ocupar vaga
+HTTP-109 APROVADO Contadores turma lotada
+HTTP-110 APROVADO Solicitar inscrição p2 queue
+HTTP-111 APROVADO Solicitar inscrição p3 queue
+HTTP-112 APROVADO Lista espera ordem e posição
+HTTP-113 APROVADO Participante vê própria posição sem terceiros
+HTTP-114 APROVADO Confirmar sem vaga bloqueado
+HTTP-115 APROVADO Confirmar perfil insuficiente i1
+HTTP-116 APROVADO Confirmar perfil insuficiente p2
+HTTP-117 APROVADO Cancelar inscrição alheia bloqueado
+HTTP-118 APROVADO Cancelar própria e promover primeiro da fila
+HTTP-119 APROVADO Rejeitar exige motivo
+HTTP-120 APROVADO Rejeitar inscrição com histórico
+HTTP-121 APROVADO Cancelamento administrativo exige motivo
+HTTP-122 APROVADO Cancelar confirmado por administrador
+HTTP-123 APROVADO Solicitar inscrição p1 race
+HTTP-124 APROVADO Solicitar inscrição p2 race
+Traceback (most recent call last):
+  File "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro/docs/06-testes/correcoes-publicadas/RETEST-20261013-130005/retestar.py", line 559, in <module>
+    main()
+  File "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro/docs/06-testes/correcoes-publicadas/RETEST-20261013-130005/retestar.py", line 521, in main
+    v.main()
+  File "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro/docs/06-testes/validacao-publicada/VALIDATION-20261013-120621/validar.py", line 244, in main
+    enrollments(admin)
+  File "/home/ubuntu/projetos/projeto-integrador-ii-codigo-do-futuro/docs/06-testes/validacao-publicada/VALIDATION-20261013-120621/validar.py", line 378, in enrollments
+    c=Session('ADMIN_CONCURRENCY');c.post('/entrar/',{'username':CREDS['admin']['email'],'password':CREDS['admin']['password']});page=c.request(f'/inscricoes/{eid}/confirmar/');token=next(f['fields']['csrfmiddlewaretoken'] for f in Forms(page['text']).forms if 'reason' in f['names']);race_clients.append(c);payloads.append({'reason':'','csrfmiddlewaretoken':token})
+                                                                 ^^^^^
+NameError: name 'CREDS' is not defined

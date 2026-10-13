@@ -1,0 +1,39 @@
+HTTP-241 APROVADO Login correto ADMIN
+HTTP-242 APROVADO Login correto INSTRUCTOR_1
+HTTP-243 APROVADO Login correto INSTRUCTOR_2
+HTTP-244 APROVADO Login correto PARTICIPANT_1
+HTTP-245 APROVADO Login correto PARTICIPANT_2
+HTTP-246 APROVADO Login correto PARTICIPANT_3
+HTTP-247 APROVADO Login correto PARTICIPANT_MINOR
+HTTP-248 APROVADO Perfil anônimo exige login
+HTTP-249 APROVADO Perfil anônimo com CSRF exige login
+HTTP-250 APROVADO POST de perfil anônimo sem CSRF bloqueado
+HTTP-251 APROVADO Navegação para meu perfil admin
+HTTP-252 APROVADO Consultar perfil próprio admin
+HTTP-253 APROVADO Atualizar perfil próprio admin
+HTTP-254 APROVADO Login com e-mail atualizado admin
+HTTP-255 APROVADO E-mail anterior não autentica admin
+HTTP-256 APROVADO Navegação para meu perfil i1
+HTTP-257 APROVADO Consultar perfil próprio i1
+HTTP-258 APROVADO Atualizar perfil próprio i1
+HTTP-259 APROVADO Login com e-mail atualizado i1
+HTTP-260 APROVADO E-mail anterior não autentica i1
+HTTP-261 APROVADO Navegação para meu perfil p1
+HTTP-262 APROVADO Consultar perfil próprio p1
+HTTP-263 APROVADO Atualizar perfil próprio p1
+HTTP-264 APROVADO Login com e-mail atualizado p1
+HTTP-265 APROVADO E-mail anterior não autentica p1
+HTTP-266 APROVADO Alvo de terceiro e privilégios forjados ignorados
+HTTP-267 APROVADO Perfil não possui rota por usuário
+HTTP-268 APROVADO Perfil: nome obrigatório
+HTTP-269 APROVADO Perfil: nome longo
+HTTP-270 APROVADO Perfil: e-mail obrigatório
+HTTP-271 APROVADO Perfil: e-mail inválido
+HTTP-272 APROVADO Perfil: unicidade sem diferença de caixa
+HTTP-273 APROVADO Perfil sem CSRF bloqueado
+HTTP-274 APROVADO Preparar redefinição de senha exclusiva
+HTTP-275 APROVADO Token de redefinição válido
+HTTP-276 APROVADO Redefinir senha exclusiva
+HTTP-277 APROVADO Senha anterior rejeitada
+HTTP-278 APROVADO Login correto PARTICIPANT_3
+HTTP-279 APROVADO Token usado não pode ser reutilizado

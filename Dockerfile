@@ -22,6 +22,7 @@ FROM python:${PYTHON_VERSION}-slim AS runtime
 
 ENV DJANGO_SETTINGS_MODULE=config.settings.production \
     PATH="/app/.venv/bin:${PATH}" \
+    PYTHONPATH="/app/src" \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 

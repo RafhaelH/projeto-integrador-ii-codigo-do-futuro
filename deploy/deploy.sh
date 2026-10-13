@@ -16,13 +16,13 @@ compose config --quiet
 compose build --pull app
 compose up -d database
 compose up -d app
-compose exec -T app python src/manage.py check --deploy
 
 attempt=1
 while [ "$attempt" -le 30 ]; do
     if compose exec -T app python -c \
         "import os, urllib.request; host=os.environ['DJANGO_ALLOWED_HOSTS'].split(',')[0].strip(); urllib.request.urlopen(urllib.request.Request('http://127.0.0.1:8000/readyz/', headers={'Host': host, 'X-Forwarded-Proto': 'https'}), timeout=3).read()" \
         >/dev/null 2>&1; then
+        compose exec -T app python src/manage.py check --deploy
         echo "Aplicação pronta após $attempt tentativa(s)."
         compose ps
         exit 0

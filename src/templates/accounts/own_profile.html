@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Meu perfil | Código do Futuro{% endblock %}
+
+{% block content %}
+<section class="form-page">
+  <header class="page-heading">
+    <span class="eyebrow">Minha conta</span>
+    <h1>Meu perfil</h1>
+    <p>Atualize seu nome e o e-mail usado para entrar e recuperar a senha.</p>
+    <p>Perfil de acesso: {{ user.get_role_display }}.</p>
+  </header>
+  <form class="panel form-grid" method="post" novalidate>
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="form-alert form-span">{{ form.non_field_errors }}</div>{% endif %}
+    {% for field in form %}
+      <div class="form-field">
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% for error in field.errors %}<span class="field-error">{{ error }}</span>{% endfor %}
+      </div>
+    {% endfor %}
+    <div class="form-actions">
+      <a class="button button-secondary" href="{% url 'home' %}">Cancelar</a>
+      <button class="button button-primary" type="submit">Salvar perfil</button>
+    </div>
+  </form>
+</section>
+{% endblock %}

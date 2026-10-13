@@ -45,7 +45,11 @@ exclude_also = [
 [tool.ruff]
 target-version = "py312"
 line-length = 100
-extend-exclude = ["migrations"]
+extend-exclude = [
+  "migrations",
+  # Immutable evidence captured before fixes; preserve its original scripts verbatim.
+  "docs/06-testes/validacao-publicada/VALIDATION-20261013-120621",
+]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "DJ"]

@@ -117,7 +117,10 @@ class Presentation:
         )
         for group in original_classes:
             if group.code.startswith("ROB-"):
-                group.registration_opens_at = moment(self.reference - timedelta(days=14), 8)
+                group.registration_opens_at = min(
+                    group.registration_opens_at,
+                    moment(self.reference - timedelta(days=14), 8),
+                )
                 group.registration_closes_at = moment(self.reference + timedelta(days=21), 18)
                 group.start_date = self.reference + timedelta(days=28)
                 group.end_date = self.reference + timedelta(days=49)

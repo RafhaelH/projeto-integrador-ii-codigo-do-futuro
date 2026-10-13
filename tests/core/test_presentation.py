@@ -99,6 +99,12 @@ def test_presentation_canonical_completion_credentials_and_replay(fixture_manife
     assert Workshop.objects.count() == 3
     assert ClassGroup.objects.count() == 11
     assert Certificate.objects.count() == 2
+    robotics = ClassGroup.objects.get(code="ROB-2026-01")
+    for registration in robotics.enrollments.all():
+        for timestamp in [registration.confirmed_at, registration.waitlisted_at]:
+            if timestamp:
+                assert robotics.registration_opens_at <= timestamp
+                assert timestamp <= robotics.registration_closes_at
     credentials = json.loads(Path(fixture_manifest["credentials_file"]).read_text())
     assert len({v["password"] for v in credentials.values()}) == 13
     for alias in ["A01", "A02", "A03", "A04", "A05"]:

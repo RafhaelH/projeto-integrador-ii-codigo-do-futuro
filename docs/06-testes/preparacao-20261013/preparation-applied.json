@@ -1,0 +1,76 @@
+{
+  "prepared": true,
+  "reference_date": "2026-10-13",
+  "created_counts": {
+    "accounts.User": 10,
+    "people.Participant": 5,
+    "workshops.ClassGroup": 7,
+    "workshops.ClassInstructor": 7,
+    "workshops.Meeting": 7,
+    "enrollments.Enrollment": 6,
+    "learning.Attendance": 4,
+    "learning.StudentProject": 6,
+    "learning.Evaluation": 3,
+    "people.Instructor": 2,
+    "learning.Certificate": 1,
+    "enrollments.EnrollmentStatusHistory": 13
+  },
+  "workspaces": {
+    "A01": {
+      "class_id": "d3b9a266-f4ed-5349-84b9-c2a7b0ad566b",
+      "code": "PY-2026-A01",
+      "participant_id": "cff07c3e-de48-5d07-a224-9ce17608788a",
+      "meeting_id": "25d34dc8-45f7-50eb-99ec-30daf60b38ec",
+      "enrollment_id": "9f064cf7-3222-4c59-8852-2884e02c9cbf",
+      "project_id": "426d2af2-3a85-44cb-b76f-38d863ef84d0"
+    },
+    "A02": {
+      "class_id": "9183a1d0-215c-5c48-a81d-881b1b503c4e",
+      "code": "PY-2026-A02",
+      "participant_id": "026e1747-6fde-5217-bb74-0a199ea6d08e",
+      "meeting_id": "f94deeaa-3123-5683-8a21-9a5a3fa31b65",
+      "enrollment_id": "d2174735-ff8a-4153-86ba-6d8fb96c8bd4",
+      "project_id": "f6a8ba26-3975-4fcd-a9ee-f25a37848783"
+    },
+    "A03": {
+      "class_id": "fa3d38f4-1526-50a3-bede-bdbb29d6081a",
+      "code": "PY-2026-A03",
+      "participant_id": "46bd0f97-eeb7-5257-a75e-5e21eb62f773",
+      "meeting_id": "71cbca62-bc7e-5153-b160-622cc7ff99eb",
+      "enrollment_id": "814dae5f-e2f0-4f93-aef5-81155414acf4",
+      "project_id": "3dc68f46-365e-4053-b1b1-d75d92cd1445"
+    },
+    "A04": {
+      "class_id": "d2515a06-3004-5823-a1cb-610ffe9c444a",
+      "code": "PY-2026-A04",
+      "participant_id": "d3fc78d2-8f45-5197-95e3-4c19cafb55ac",
+      "meeting_id": "666fef43-6f9a-5778-80bf-c73b48f2bfaf",
+      "enrollment_id": "09583913-91d3-46de-b66e-a462637f7f65",
+      "project_id": "33b65829-a8a7-4421-9706-1a7fa62e15ac"
+    },
+    "A05": {
+      "class_id": "f3a07396-09de-5147-bab6-d4d57064f6b8",
+      "code": "PY-2026-A05",
+      "participant_id": "edcf3915-2b9d-5c8c-b7ed-7d77a41fb5dc",
+      "meeting_id": "a6ed88ec-cfad-5ebe-8afa-66462a17990b",
+      "enrollment_id": "941f4464-1cad-4a9c-a18c-71f110aa9e62",
+      "project_id": "3e90350a-8446-4bc5-8d83-e73ef7c976eb"
+    },
+    "A05-F": {
+      "class_id": "9f02e6ff-a628-584e-8772-2c33d7260caa",
+      "code": "PY-2026-A05-F",
+      "participant_id": "edcf3915-2b9d-5c8c-b7ed-7d77a41fb5dc",
+      "meeting_id": "9be504d7-866a-5c1f-81e9-a211bbd9d303",
+      "enrollment_id": "d5044353-95dc-4139-892d-e1471b49aec3",
+      "project_id": "d99924ea-5513-417c-89c0-cc55ec1af83e",
+      "certificate_id": "77b66ea8-b2d5-421a-a904-42c20c9d931a"
+    },
+    "A05-I": {
+      "class_id": "52fc7580-4d6b-5612-a97b-1c4d779a01fd",
+      "code": "PY-2026-A05-I",
+      "participant_id": "edcf3915-2b9d-5c8c-b7ed-7d77a41fb5dc",
+      "meeting_id": "eb40ad20-3f5c-5ded-b89e-c74c2cf1ba75"
+    }
+  },
+  "operational_admin_preserved": true
+}

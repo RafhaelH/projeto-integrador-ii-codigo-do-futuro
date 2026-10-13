@@ -1,0 +1,135 @@
+{
+  "global": {
+    "classes": 11,
+    "participants": 11,
+    "enrollments": 15,
+    "capacity": 53,
+    "occupied": 12,
+    "occupancy_percentage": "22.64",
+    "average_attendance": "87.50",
+    "delivered_projects": 8,
+    "approved": 2,
+    "not_completed": 1,
+    "completion_percentage": "66.67",
+    "class_statuses": [
+      {
+        "value": "COMPLETED",
+        "label": "Concluída",
+        "total": 2
+      },
+      {
+        "value": "IN_PROGRESS",
+        "label": "Em andamento",
+        "total": 6
+      },
+      {
+        "value": "OPEN",
+        "label": "Inscrições abertas",
+        "total": 2
+      },
+      {
+        "value": "PLANNED",
+        "label": "Planejada",
+        "total": 1
+      }
+    ],
+    "enrollment_statuses": [
+      {
+        "value": "APPROVED",
+        "label": "Aprovada",
+        "total": 2
+      },
+      {
+        "value": "CANCELLED",
+        "label": "Cancelada",
+        "total": 1
+      },
+      {
+        "value": "CONFIRMED",
+        "label": "Confirmada",
+        "total": 9
+      },
+      {
+        "value": "NOT_COMPLETED",
+        "label": "Não concluída",
+        "total": 1
+      },
+      {
+        "value": "PENDING",
+        "label": "Pendente",
+        "total": 1
+      },
+      {
+        "value": "WAITLISTED",
+        "label": "Lista de espera",
+        "total": 1
+      }
+    ]
+  },
+  "python_april": {
+    "classes": 1,
+    "participants": 2,
+    "enrollments": 2,
+    "capacity": 12,
+    "occupied": 2,
+    "occupancy_percentage": "16.67",
+    "average_attendance": "75.00",
+    "delivered_projects": 2,
+    "approved": 1,
+    "not_completed": 1,
+    "completion_percentage": "50.00",
+    "class_statuses": [
+      {
+        "value": "COMPLETED",
+        "label": "Concluída",
+        "total": 1
+      }
+    ],
+    "enrollment_statuses": [
+      {
+        "value": "APPROVED",
+        "label": "Aprovada",
+        "total": 1
+      },
+      {
+        "value": "NOT_COMPLETED",
+        "label": "Não concluída",
+        "total": 1
+      }
+    ]
+  },
+  "academic_checks": [
+    {
+      "id": "77b66ea8-b2d5-421a-a904-42c20c9d931a",
+      "active": true,
+      "stored_hours": "2.00",
+      "computed_hours": "2.00",
+      "matched": true
+    },
+    {
+      "id": "7b12afd3-f75b-4815-b3df-61eaca1b2935",
+      "active": true,
+      "stored_hours": "8.00",
+      "computed_hours": "8.00",
+      "matched": true
+    },
+    {
+      "participant": "Bruno Santos",
+      "frequency": "50.00",
+      "score": "7.0",
+      "project_delivered": true,
+      "status": "NOT_COMPLETED",
+      "expected": "NOT_COMPLETED",
+      "matched": true
+    },
+    {
+      "participant": "Ana Oliveira",
+      "frequency": "100.00",
+      "score": "9.2",
+      "project_delivered": true,
+      "status": "APPROVED",
+      "expected": "APPROVED",
+      "matched": true
+    }
+  ]
+}

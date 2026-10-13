@@ -1,0 +1,242 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Código do Futuro — manual da candidata preparada</title><style>@page {size:A4;margin:14mm} body{font:11pt Arial,sans-serif;color:#142d40;line-height:1.35} h1{font-size:22pt} h2{font-size:16pt;margin-top:20px} h3{font-size:13pt} table{border-collapse:collapse;width:100%;font-size:9pt}th,td{border:1px solid #aaa;padding:6px;vertical-align:top}th{background:#edf3f6} img{max-width:100%;max-height:220mm;object-fit:contain} a{color:#155576}pre,code{white-space:pre-wrap;overflow-wrap:anywhere;font-size:9pt}.sheet{break-before:page}.blank{min-height:18mm} tr{break-inside:avoid}h1,h2,h3{break-after:avoid}</style></head><body><section><h1>Manual do usuário — Código do Futuro</h1>
+<p>Este manual descreve a release candidata do Projeto Integrador Transdisciplinar em Engenharia de
+Software II. Esta edição apresenta a candidata publicada <code>a351c5a</code>, preparada em 13/10/2026. As capturas reais estão no <a href="plano-de-capturas.md">plano e registro</a>, com fonte, legenda e hash. Todos os dados apresentados são fictícios. A versão definitiva continua dependente das cinco avaliações humanas.</p>
+<p>Use o <a href="manual-imprimivel.html">manual HTML imprimível</a>, o <a href="manual-imprimivel.pdf">PDF</a> e o <a href="roteiro-video.md">roteiro do vídeo</a>. Os PDFs e imagens não contêm credenciais.</p>
+<h2>1. Acesso</h2>
+<ol>
+<li>abra o endereço HTTPS fornecido pelo responsável;</li>
+<li>informe e-mail e senha na tela <strong>Acesse sua conta</strong>;</li>
+<li>selecione <strong>Entrar</strong>;</li>
+<li>ao terminar, use <strong>Sair</strong> no cabeçalho.</li>
+</ol>
+<p>Cada conta possui um perfil: administrador, instrutor ou participante. Menus e registros são
+filtrados no servidor conforme o perfil e, no caso de instrutores, conforme o vínculo com a turma.</p>
+<h3>Recuperar senha</h3>
+<p>A tela <strong>Esqueci minha senha</strong> inicia a recuperação. Este ambiente acadêmico usa backend de console; não entrega mensagens em caixas de e-mail. Para as avaliações, receba a credencial privadamente do responsável. Não exponha logs com links/tokens em gravações ou capturas.</p>
+<h2>2. Navegação comum</h2>
+<ul>
+<li>o logotipo retorna à página inicial;</li>
+<li>o menu superior mostra somente áreas autorizadas;</li>
+<li>mensagens verdes confirmam operações e mensagens de erro explicam correções;</li>
+<li><strong>Voltar</strong> ou <strong>Cancelar</strong> abandona o formulário sem concluir a operação;</li>
+<li>tabelas e cartões se reorganizam em telas menores;</li>
+<li>o link <strong>Ir para o conteúdo</strong> permite pular a navegação pelo teclado.</li>
+</ul>
+<h2>3. Administrador</h2>
+<h3>Meu perfil (todos os usuários)</h3>
+<p>No cabeçalho, abra <strong>Meu perfil</strong>, confira o nome completo e o e-mail e selecione
+<strong>Salvar perfil</strong>. Use o novo e-mail no próximo acesso e na recuperação de senha. O e-mail
+deve ser válido e não estar em uso; o nome é obrigatório. O perfil de acesso é apenas
+informativo nessa tela. Dados acadêmicos e certificados já emitidos mantêm seus registros.</p>
+<h3>Operações no Django admin</h3>
+<p>Situações de oficinas, turmas e encontros são apenas consultadas no admin. Siga o link
+apresentado no registro para publicar, abrir inscrições, iniciar, cancelar ou processar a
+conclusão na aplicação. Inscrições, projetos, avaliações e certificados são consultados no
+admin; suas alterações usam os fluxos acadêmicos deste manual. Um encontro da mesma turma
+não pode repetir o início de outro; o formulário informa a duplicidade sem gravar.</p>
+<p>Contas com histórico não são excluídas pela interface. O último administrador ativo não
+pode perder ativação, papel administrativo ou acesso administrativo.</p>
+<h3>3.1 Pessoas e instituições</h3>
+<ol>
+<li>abra <strong>Pessoas</strong>;</li>
+<li>escolha Participantes, Responsáveis, Instrutores ou Instituições;</li>
+<li>use <strong>Novo/Nova</strong> para cadastrar;</li>
+<li>preencha os campos obrigatórios e salve;</li>
+<li>use a busca ou abra o registro para consultar e editar.</li>
+</ol>
+<p>Para participantes menores, cadastre um responsável ativo e use <strong>Vincular</strong> na página do
+participante. A elegibilidade da inscrição considera idade e vínculo com responsável.</p>
+<h3>3.2 Oficinas</h3>
+<ol>
+<li>abra <strong>Turmas</strong> e acesse a área de oficinas;</li>
+<li>crie uma oficina em rascunho com título, resumo, objetivo, conteúdo e carga estimada;</li>
+<li>revise os dados;</li>
+<li>publique para permitir seu uso nas ofertas;</li>
+<li>arquive somente quando não desejar novas turmas, preservando o histórico.</li>
+</ol>
+<h3>3.3 Turmas, instrutores e encontros</h3>
+<ol>
+<li>crie a turma a partir de uma oficina publicada;</li>
+<li>informe código único, período de inscrição, período letivo, local e capacidade;</li>
+<li>vincule ao menos um instrutor ativo e defina somente um principal;</li>
+<li>cadastre encontros dentro do período da turma;</li>
+<li>abra as inscrições quando as pré-condições estiverem atendidas;</li>
+<li>inicie a turma somente após existir cronograma;</li>
+<li>use cancelamento para preservar o histórico; não exclua registros acadêmicos.</li>
+</ol>
+<h3>3.4 Inscrições e vagas</h3>
+<ol>
+<li>abra <strong>Inscrições</strong>;</li>
+<li>filtre ou localize a solicitação;</li>
+<li>confirme quando houver elegibilidade e vaga;</li>
+<li>rejeite com justificativa quando uma regra não for atendida;</li>
+<li>consulte a fila pela página da turma;</li>
+<li>ao surgir uma vaga, promova a primeira pessoa elegível da fila.</li>
+</ol>
+<p>Somente inscrições confirmadas ocupam capacidade. O sistema bloqueia duplicidade e protege a
+última vaga contra confirmações simultâneas.</p>
+<h3>3.5 Jornada acadêmica</h3>
+<p>Na página da turma, abra o acompanhamento para conferir encontros, frequência, projetos,
+avaliações e situação. A conclusão só pode ser processada quando os registros obrigatórios
+estiverem prontos. A aprovação exige simultaneamente:</p>
+<ul>
+<li>frequência mínima de 75%;</li>
+<li>nota final mínima 6,0;</li>
+<li>projeto entregue.</li>
+</ul>
+<h3>3.6 Certificados</h3>
+<ol>
+<li>abra <strong>Certificados</strong>;</li>
+<li>localize uma inscrição aprovada aguardando emissão;</li>
+<li>selecione <strong>Emitir certificado</strong>;</li>
+<li>consulte o documento e baixe o PDF;</li>
+<li>em caso necessário, revogue com justificativa.</li>
+</ol>
+<p>Uma emissão repetida retorna o mesmo registro. A revogação não apaga o histórico e impede novo
+download enquanto o certificado estiver inativo.</p>
+<h3>3.7 Painel e relatórios</h3>
+<ol>
+<li>abra <strong>Painel</strong>;</li>
+<li>escolha período, oficina ou situação da turma;</li>
+<li>selecione <strong>Aplicar filtros</strong>;</li>
+<li>interprete participantes, inscrições, ocupação, frequência, projetos e aprovação;</li>
+<li>exporte inscrições, frequência ou conclusão em CSV.</li>
+</ol>
+<p>Os CSVs administrativos usam UTF-8 e <code>;</code>, abrem no Excel em português e não incluem CPF,
+telefone ou e-mail.</p>
+<h2>4. Instrutor</h2>
+<h3>4.1 Consultar turmas</h3>
+<p>Abra <strong>Minhas turmas</strong>. Somente turmas com vínculo ativo são exibidas. Se uma turma esperada não
+aparecer, solicite ao administrador que confira o vínculo.</p>
+<h3>4.2 Registrar frequência</h3>
+<ol>
+<li>abra a turma e selecione <strong>Acompanhamento</strong>;</li>
+<li>no encontro já ocorrido, escolha <strong>Registrar chamada</strong>;</li>
+<li>marque presente, ausente ou falta justificada para cada inscrição confirmada;</li>
+<li>adicione observação quando necessário;</li>
+<li>salve a chamada.</li>
+</ol>
+<p>Uma nova submissão corrige os mesmos registros, sem duplicá-los, e atualiza autoria e horário.
+Encontros futuros ou cancelados não aceitam chamada.</p>
+<h3>4.3 Revisar projeto e avaliar</h3>
+<ol>
+<li>no acompanhamento da turma, localize o participante;</li>
+<li>abra <strong>Revisar projeto</strong> e registre a devolutiva;</li>
+<li>abra <strong>Avaliar</strong>;</li>
+<li>informe nota de 0,0 a 10,0 e feedback;</li>
+<li>publique o resultado quando estiver pronto para o participante.</li>
+</ol>
+<p>O instrutor não conclui turma, emite/revoga certificados nem acessa turmas sem vínculo.</p>
+<h3>4.4 Painel do instrutor</h3>
+<p>O <strong>Painel</strong> mostra apenas as turmas vinculadas. Exportações CSV consolidadas permanecem restritas
+ao administrador.</p>
+<h2>5. Participante</h2>
+<h3>5.1 Solicitar inscrição</h3>
+<ol>
+<li>abra <strong>Turmas disponíveis</strong>;</li>
+<li>consulte as informações da oferta;</li>
+<li>selecione <strong>Solicitar inscrição</strong>;</li>
+<li>confirme a solicitação;</li>
+<li>acompanhe a situação em <strong>Minhas inscrições</strong>.</li>
+</ol>
+<p>Com vaga, a solicitação fica pendente de análise administrativa. Em turma lotada com fila ativa,
+ela entra em espera. Não é possível solicitar duas inscrições para a mesma turma.</p>
+<h3>5.2 Acompanhar a jornada</h3>
+<p>Abra <strong>Minha jornada</strong> para ver encontros realizados, presenças, percentual, projeto, avaliação
+publicada e certificado. Falta justificada continua não sendo presença no cálculo acadêmico.</p>
+<h3>5.3 Registrar projeto</h3>
+<p>Em uma turma em andamento com inscrição confirmada:</p>
+<ol>
+<li>abra <strong>Minha jornada</strong>;</li>
+<li>selecione <strong>Registrar projeto</strong> ou <strong>Atualizar projeto</strong>;</li>
+<li>informe título, descrição e links disponíveis;</li>
+<li>mantenha como rascunho ou marque como entregue;</li>
+<li>salve e consulte posteriormente a devolutiva do instrutor.</li>
+</ol>
+<h3>5.4 Avaliação e certificado</h3>
+<p>O resultado aparece somente depois de publicado. Quando aprovado e com certificado emitido,
+abra <strong>Meus certificados</strong>, consulte o documento e selecione <strong>Baixar PDF</strong>.</p>
+<h2>6. Problemas comuns</h2>
+<table>
+<thead>
+<tr>
+<th>Situação</th>
+<th>Ação recomendada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Credenciais recusadas</td>
+<td>conferir e-mail, senha e se a conta está ativa</td>
+</tr>
+<tr>
+<td>Acesso negado</td>
+<td>confirmar perfil e vínculo com a turma</td>
+</tr>
+<tr>
+<td>Turma não aparece</td>
+<td>conferir situação, datas e vínculo</td>
+</tr>
+<tr>
+<td>Inscrição bloqueada</td>
+<td>verificar idade, responsável, prazo e duplicidade</td>
+</tr>
+<tr>
+<td>Chamada indisponível</td>
+<td>confirmar se o encontro ocorreu e não foi cancelado</td>
+</tr>
+<tr>
+<td>Conclusão bloqueada</td>
+<td>completar encontros, projetos e avaliações pendentes</td>
+</tr>
+<tr>
+<td>Certificado indisponível</td>
+<td>confirmar aprovação, emissão e ausência de revogação</td>
+</tr>
+<tr>
+<td>CSV com colunas incorretas</td>
+<td>importar usando UTF-8 e separador <code>;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Se houver erro inesperado, registre perfil, caminho, horário, resultado obtido e esperado. Não
+inclua senha, cookie ou dados pessoais na evidência.</p>
+<h2>7. Privacidade e segurança</h2>
+<ul>
+<li>não compartilhe a conta;</li>
+<li>não registre dados reais na homologação acadêmica;</li>
+<li>encerre a sessão ao usar computador compartilhado;</li>
+<li>não exponha credenciais em screenshots;</li>
+<li>use somente HTTPS no ambiente publicado;</li>
+<li>encaminhe vulnerabilidades diretamente ao responsável, sem issue pública.</li>
+</ul>
+<h2>8. Identificação da versão</h2>
+<p>O PDF final do manual deve registrar domínio, tag/SHA, data de captura e autor. Esses campos serão
+preenchidos depois das cinco avaliações, quando a versão definitiva for promovida para <code>main</code>.</p>
+<h2>9. Cenários preparados e ilustrações</h2>
+<p>Referência: 13/10/2026. Os registros originais são reutilizados por ID. PY-2026-01 está concluída (Ana aprovada, Bruno não concluinte por 50% de frequência; certificado ativo de Ana, 8h). WEB-2026-01 está em andamento (Carla 100%, Diego 50% em dois encontros; projeto entregue e rascunho; nota de Carla não publicada). ROB-2026-01 tem 2 vagas preenchidas e uma pessoa em espera; PY-2026-02 permanece planejada.</p>
+<p>As sete turmas A01–A05 são espaços de avaliação separados; não usar esses acessos para captura. A conta operacional foi preservada integralmente e não é usada neste manual.</p>
+<h3>Figura 1 — Login vazio servido por HTTPS.</h3>
+<p><img alt="Figura 1" src="capturas/fig-01-login.png" /></p>
+<h3>Figura 3 — Meu perfil com nome e e-mail fictícios.</h3>
+<p><img alt="Figura 3" src="capturas/fig-03-meu-perfil.png" /></p>
+<h3>Figura 5 — Ana, menor de idade, com responsável ativo vinculado.</h3>
+<p><img alt="Figura 5" src="capturas/fig-05-menor-responsavel.png" /></p>
+<h3>Figura 13 — Web em andamento: encontros realizados e futuros coerentes.</h3>
+<p><img alt="Figura 13" src="capturas/fig-13-turma-cronograma.png" /></p>
+<h3>Figura 15 — Capacidade 2; confirmadas 2; disponíveis 0; uma pendente e uma em espera.</h3>
+<p><img alt="Figura 15" src="capturas/fig-15-vagas-fila.png" /></p>
+<h3>Figura 16 — Carla com 100% e Diego com 50% nos dois encontros realizados.</h3>
+<p><img alt="Figura 16" src="capturas/fig-16-frequencia.png" /></p>
+<h3>Figura 19 — Ana aprovada; Bruno não concluinte por frequência 50%; critérios explicitados.</h3>
+<p><img alt="Figura 19" src="capturas/fig-19-conclusao.png" /></p>
+<h3>Figura 20 — Certificado ativo de Ana: quatro encontros de 2h, total 8h.</h3>
+<p><img alt="Figura 20" src="capturas/fig-20-certificado.png" /></p>
+<h3>Figura 27 — Universo: Python iniciado em abril; 1 turma, 2 participantes, 75% de frequência média e 50% de aprovação.</h3>
+<p><img alt="Figura 27" src="capturas/fig-27-painel-filtrado.png" /></p>
+<h3>Figura 28 — CSV realmente exportado, renderizado em visualizador HTML local; não é tela da aplicação nem Excel.</h3>
+<p><img alt="Figura 28" src="capturas/fig-28-csv-exportado.png" /></p>
+<h3>Figura 29 — Página do PDF real de Ana, renderizada por PyMuPDF; 8h e código histórico preservados. Não é screenshot da interface.</h3>
+<p><img alt="Figura 29" src="capturas/fig-29-certificado-pdf.png" /></p>
+<h3>Figura 36 — Jornada própria de Carla no celular.</h3>
+<p><img alt="Figura 36" src="capturas/fig-36-mobile-jornada.png" /></p></section></body></html>

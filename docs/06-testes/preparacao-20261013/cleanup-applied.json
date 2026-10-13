@@ -1,0 +1,52 @@
+{
+  "database": "codigo_futuro",
+  "manifests": [
+    {
+      "path": "/root/codigo-do-futuro-presentation/20261013/technical-ids.json",
+      "sha256": "f45f115ec85f94ce54987f857840a609e643188cccc26cbe699b9d9f97bc3469"
+    }
+  ],
+  "counts": {
+    "learning.Certificate": 2,
+    "learning.Attendance": 32,
+    "learning.Evaluation": 8,
+    "learning.StudentProject": 6,
+    "enrollments.EnrollmentStatusHistory": 61,
+    "enrollments.Enrollment": 26,
+    "workshops.Meeting": 14,
+    "workshops.ClassInstructor": 12,
+    "people.ParticipantGuardian": 2,
+    "workshops.ClassGroup": 14,
+    "workshops.Workshop": 2,
+    "people.Participant": 8,
+    "people.Guardian": 2,
+    "people.Instructor": 4,
+    "people.Institution": 2,
+    "admin.LogEntry": 16,
+    "accounts.User": 14
+  },
+  "technical_sessions": 56,
+  "preserved_ambiguous": [],
+  "apply_requested": true,
+  "applied": true,
+  "deleted": {
+    "learning.Certificate": 2,
+    "learning.Attendance": 32,
+    "learning.Evaluation": 8,
+    "learning.StudentProject": 6,
+    "enrollments.EnrollmentStatusHistory": 61,
+    "enrollments.Enrollment": 26,
+    "workshops.Meeting": 14,
+    "workshops.ClassInstructor": 12,
+    "people.ParticipantGuardian": 2,
+    "workshops.ClassGroup": 14,
+    "workshops.Workshop": 2,
+    "people.Participant": 8,
+    "people.Guardian": 2,
+    "people.Instructor": 4,
+    "people.Institution": 2,
+    "admin.LogEntry": 16,
+    "accounts.User": 14
+  },
+  "archive_sha256": "18030a41975e30518a4ca8bbd9c394567fe474cda036cc96b55dd03162fd3284"
+}

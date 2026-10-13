@@ -1,0 +1,104 @@
+{
+  "accounts.User": {
+    "total": 23,
+    "technical_proven": 14,
+    "original_demo_proven": 9,
+    "unknown": 0
+  },
+  "people.Participant": {
+    "total": 14,
+    "technical_proven": 8,
+    "original_demo_proven": 6,
+    "unknown": 0
+  },
+  "people.Guardian": {
+    "total": 5,
+    "technical_proven": 2,
+    "original_demo_proven": 3,
+    "unknown": 0
+  },
+  "people.Instructor": {
+    "total": 6,
+    "technical_proven": 4,
+    "original_demo_proven": 2,
+    "unknown": 0
+  },
+  "people.Institution": {
+    "total": 3,
+    "technical_proven": 2,
+    "original_demo_proven": 1,
+    "unknown": 0
+  },
+  "people.ParticipantGuardian": {
+    "total": 5,
+    "technical_proven": 2,
+    "original_demo_proven": 3,
+    "unknown": 0
+  },
+  "workshops.Workshop": {
+    "total": 5,
+    "technical_proven": 2,
+    "original_demo_proven": 3,
+    "unknown": 0
+  },
+  "workshops.ClassGroup": {
+    "total": 18,
+    "technical_proven": 14,
+    "original_demo_proven": 4,
+    "unknown": 0
+  },
+  "workshops.ClassInstructor": {
+    "total": 17,
+    "technical_proven": 12,
+    "original_demo_proven": 5,
+    "unknown": 0
+  },
+  "workshops.Meeting": {
+    "total": 24,
+    "technical_proven": 14,
+    "original_demo_proven": 10,
+    "unknown": 0
+  },
+  "enrollments.Enrollment": {
+    "total": 35,
+    "technical_proven": 26,
+    "original_demo_proven": 9,
+    "unknown": 0
+  },
+  "enrollments.EnrollmentStatusHistory": {
+    "total": 81,
+    "technical_proven": 61,
+    "original_demo_proven": 20,
+    "unknown": 0
+  },
+  "learning.Attendance": {
+    "total": 44,
+    "technical_proven": 32,
+    "original_demo_proven": 12,
+    "unknown": 0
+  },
+  "learning.StudentProject": {
+    "total": 10,
+    "technical_proven": 6,
+    "original_demo_proven": 4,
+    "unknown": 0
+  },
+  "learning.Evaluation": {
+    "total": 11,
+    "technical_proven": 8,
+    "original_demo_proven": 3,
+    "unknown": 0
+  },
+  "learning.Certificate": {
+    "total": 3,
+    "technical_proven": 2,
+    "original_demo_proven": 1,
+    "unknown": 0
+  },
+  "admin.LogEntry": {
+    "total": 16,
+    "technical_proven": 16,
+    "original_demo_proven": 0,
+    "unknown": 0
+  }
+}

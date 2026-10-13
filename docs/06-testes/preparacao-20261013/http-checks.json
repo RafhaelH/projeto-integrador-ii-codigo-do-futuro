@@ -1,0 +1,344 @@
+[
+  {
+    "name": "Login técnico admin",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Login técnico i1",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Login técnico i2",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Login técnico p1",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Login técnico p2",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Login de acesso A01",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Início A01",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Meu perfil A01",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Django admin sem privilégio A01",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Login de acesso A02",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Início A02",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Meu perfil A02",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Django admin sem privilégio A02",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Login de acesso A03",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Início A03",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Meu perfil A03",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Django admin sem privilégio A03",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Turma vinculada A03",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Outra turma inacessível A03",
+    "expected_status": 404,
+    "status": 404,
+    "passed": true
+  },
+  {
+    "name": "Login de acesso A04",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Início A04",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Meu perfil A04",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Django admin sem privilégio A04",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Turma vinculada A04",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Outra turma inacessível A04",
+    "expected_status": 404,
+    "status": 404,
+    "passed": true
+  },
+  {
+    "name": "Login de acesso A05",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Início A05",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Meu perfil A05",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Django admin sem privilégio A05",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Perfil editável",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Unicidade de e-mail do perfil",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "CSRF obrigatório no perfil",
+    "expected_status": 403,
+    "status": 403,
+    "passed": true
+  },
+  {
+    "name": "Situação acadêmica somente leitura no admin",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Conclusão forjada no admin bloqueada",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Encontro duplicado mostra erro de formulário",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Inscrição criada",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Confirmação ocupa vaga",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Turma cheia entra em espera",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Fila consultável",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Participante sem confirmação administrativa",
+    "expected_status": 403,
+    "status": 403,
+    "passed": true
+  },
+  {
+    "name": "Instrutor não vinculado sem acesso",
+    "expected_status": 404,
+    "status": 404,
+    "passed": true
+  },
+  {
+    "name": "Chamada por instrutor vinculado",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Projeto próprio entregue",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Revisão do instrutor",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Avaliação publicada",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Conclusão canônica",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Certificado emitido",
+    "expected_status": 302,
+    "status": 302,
+    "passed": true
+  },
+  {
+    "name": "Certificado próprio",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Download PDF próprio",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Certificado de terceiro bloqueado",
+    "expected_status": 404,
+    "status": 404,
+    "passed": true
+  },
+  {
+    "name": "Painel filtrado",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "CSV real inscricoes",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "CSV real frequencia",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "CSV real conclusao",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "CSV negado ao participante",
+    "expected_status": 403,
+    "status": 403,
+    "passed": true
+  },
+  {
+    "name": "Health real",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  },
+  {
+    "name": "Ready real",
+    "expected_status": 200,
+    "status": 200,
+    "passed": true
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "commit": "a351c5a",
+  "postgresql_isolated": true,
+  "tests_passed": 235,
+  "skipped": 0,
+  "coverage_percent": 89.84,
+  "lint_passed": true,
+  "format_passed": true,
+  "django_check_deploy_passed": true,
+  "missing_migrations": false,
+  "http_checks": 57,
+  "http_requests": 81,
+  "all_http_checks_passed": true,
+  "tls_session_csrf": true,
+  "three_defect_regressions_passed": true,
+  "global_tool_installations": false
+}

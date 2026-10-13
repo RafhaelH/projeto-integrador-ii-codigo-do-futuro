@@ -1,0 +1,84 @@
+[
+  {
+    "model": "learning.certificate",
+    "id": "ab4727da-79c9-4804-9c03-a159f02e370b",
+    "effects": {
+      "is_active": true,
+      "workload_hours": "2.00",
+      "enrollment": "e7b97993-6c8d-487e-9a97-00ad1ad66562"
+    }
+  },
+  {
+    "model": "learning.attendance",
+    "id": "ca7c6ef4-c487-4db7-a332-1b2c2143dc72",
+    "effects": {
+      "status": "PRESENT",
+      "meeting": "54697b2b-ce53-4706-87fe-41a7cf92443b",
+      "enrollment": "e7b97993-6c8d-487e-9a97-00ad1ad66562"
+    }
+  },
+  {
+    "model": "learning.evaluation",
+    "id": "0f809d02-ac59-42ef-b3c4-5c3ed0986089",
+    "effects": {
+      "final_score": "8.0",
+      "enrollment": "e7b97993-6c8d-487e-9a97-00ad1ad66562"
+    }
+  },
+  {
+    "model": "learning.studentproject",
+    "id": "25f4f7d0-10f0-4bc7-ae7a-ea8fc985ec4d",
+    "effects": {
+      "is_delivered": true,
+      "enrollment": "e7b97993-6c8d-487e-9a97-00ad1ad66562"
+    }
+  },
+  {
+    "model": "enrollments.enrollment",
+    "id": "79fedf9b-e7c5-4560-9226-56570f59b3cd",
+    "effects": {
+      "status": "WAITLISTED",
+      "class_group": "c877b561-149a-4b72-81f5-c23def4cc51e"
+    }
+  },
+  {
+    "model": "enrollments.enrollment",
+    "id": "a4b6c733-fb7a-429f-b47e-5ba5051e60dd",
+    "effects": {
+      "status": "CONFIRMED",
+      "class_group": "c877b561-149a-4b72-81f5-c23def4cc51e"
+    }
+  },
+  {
+    "model": "enrollments.enrollment",
+    "id": "e7b97993-6c8d-487e-9a97-00ad1ad66562",
+    "effects": {
+      "status": "APPROVED",
+      "class_group": "31c702d3-85f7-471c-8cc7-119e42e9bfe4"
+    }
+  },
+  {
+    "model": "workshops.classgroup",
+    "id": "58f16c29-7675-4b35-affb-cb9e2a51b7d4",
+    "effects": {
+      "code": "CONF-26-GUARD",
+      "status": "PLANNED"
+    }
+  },
+  {
+    "model": "workshops.classgroup",
+    "id": "c877b561-149a-4b72-81f5-c23def4cc51e",
+    "effects": {
+      "code": "CONF-26-QUEUE",
+      "status": "OPEN"
+    }
+  },
+  {
+    "model": "workshops.classgroup",
+    "id": "31c702d3-85f7-471c-8cc7-119e42e9bfe4",
+    "effects": {
+      "code": "CONF-26-ACADEMIC",
+      "status": "COMPLETED"
+    }
+  }
+]

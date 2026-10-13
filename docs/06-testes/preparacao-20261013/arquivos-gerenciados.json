@@ -1,0 +1,231 @@
+{
+  "namespace": "09c00c39-86c2-45cd-a880-bfb181f8c675",
+  "reference_date": "2026-10-13",
+  "stable_original_ids": {
+    "accounts.User": [
+      "0d6d0370-348b-41be-8ba7-b478be9ac87e",
+      "328f01bb-9f95-40f5-b2dc-83641400edb3",
+      "33af75b4-673d-4008-a4f0-9bd7aa0ce389",
+      "42393e1c-a1af-4449-acee-a3f3f0a3467e",
+      "442501f9-7d09-44ce-a941-253d5ddd24eb",
+      "708d3a4c-acdc-4f6c-8dd3-7b1073e77a15",
+      "95e325c6-9cb4-44f1-ba12-b086f7487fd5",
+      "beb30d25-1fdb-4892-ac73-08b6178d7787",
+      "d2177b8e-97fb-48ae-8657-380247eff617"
+    ],
+    "people.Participant": [
+      "08073999-8e36-4239-aec1-55fcfedba167",
+      "520d1b34-6ea0-466e-91b9-cf89acf17732",
+      "91950edc-023e-41b6-b69f-3350da137cf6",
+      "91cb289a-0978-466a-9d1f-b09f381ead81",
+      "ccd9f0dc-a671-4088-ac4e-eba66f56a0f5",
+      "fff32be5-bc4e-4bfa-bbb0-5cf4d6efc34e"
+    ],
+    "people.Guardian": [
+      "7996b354-e6fa-42c8-a72e-357108b19bf0",
+      "7fa7b380-a661-4db0-b1d9-e75480799bb2",
+      "96a5765e-b37a-442d-bd00-376977caea41"
+    ],
+    "people.Instructor": [
+      "a14ea254-6b63-474d-a5e4-289c57fd6b49",
+      "ad9cd35c-fa0b-4814-a08b-b609272b0ec9"
+    ],
+    "people.Institution": [
+      "8f793ccf-8014-4e4f-9444-54ff3bb9b7af"
+    ],
+    "people.ParticipantGuardian": [
+      "2bd1c7b7-21e0-4692-917f-67f371fcc82d",
+      "a0c490c4-1173-4c44-a442-c80634e2ab9a",
+      "e03d1e5d-a0dc-4d4e-bad4-60f8c6b51040"
+    ],
+    "workshops.Workshop": [
+      "80aba861-8563-46aa-86c9-98c671d1e561",
+      "897a4039-fe54-49a3-b1e1-209a5e1d6378",
+      "df25ebc9-f0f4-4651-a5ff-8833e4f72fb7"
+    ],
+    "workshops.ClassGroup": [
+      "0e5fb336-9b6a-420f-8889-43e158237c6c",
+      "3c505321-dbbd-4ba1-b342-0e63dcecef2b",
+      "a44b6a8a-d9e5-4227-905b-c8aca0d9508c",
+      "f34c4a46-da23-42d9-871a-949ef728aea0"
+    ],
+    "workshops.ClassInstructor": [
+      "653be26e-68cb-4399-aac5-1c52cb5e23cf",
+      "7f6e2036-8659-4544-81ac-a9618c6053b3",
+      "a58e9177-6370-4169-89b3-92b55ea3006e",
+      "e3e33714-6d3b-4b59-b091-6925f37e1e16",
+      "fffb7ee9-5137-4cf9-ac0a-14b86b1f9661"
+    ],
+    "workshops.Meeting": [
+      "1af1d3dc-9b05-453f-97b8-21213dcc0e66",
+      "1e7cd015-5cce-46cc-9b87-75cb88323518",
+      "2dfdf4d0-dce6-4390-9d5b-d027a81d8046",
+      "3dc4d9e4-d23e-49f2-b735-58c01e6f0b8f",
+      "727676c4-0d3c-4822-bbdc-2d3ef6a0e477",
+      "7a049ade-be1d-4ac2-ac9e-f49c3ea62bd8",
+      "84672862-7fa9-43d5-8bee-dc44dbf2e08a",
+      "c418b835-b139-4e58-8f8d-bfeeeac7b282",
+      "d0d126a8-5bba-4512-8ced-31b987f27687",
+      "f038726e-e209-41fe-a062-4ded762099fe"
+    ],
+    "enrollments.Enrollment": [
+      "0f9d6bc8-4c53-49b8-8f1d-fa9660a87195",
+      "33870a76-a5bc-47c5-ba00-ad987d36620f",
+      "37495e61-47ce-4977-a187-0c97d5883909",
+      "58730ee0-ba3d-4119-9f23-256f5c70674c",
+      "7460103a-0445-4064-b2ec-5b91f89c092e",
+      "984d2763-0aad-4a2a-bd48-467eb0f2bf39",
+      "b2c465fd-f1f4-4697-995d-6fccc53d58ce",
+      "c5b6c764-b432-4b87-8600-8f2e6c68c8e2",
+      "ea0ff084-d513-4dc9-a18e-40a524a6d1c6"
+    ],
+    "enrollments.EnrollmentStatusHistory": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+    ],
+    "learning.Attendance": [
+      "0a69c377-a70a-41a6-8c49-c1469a5bc0f1",
+      "0f388cfa-7392-4948-8a28-2f0d463ec012",
+      "5e3fec85-3f77-4af1-9fdf-c0b7e4caae87",
+      "674b3869-c435-41d6-9619-f0980ba7374f",
+      "8649ab82-393b-46cf-b3e3-6ee77e95cbe3",
+      "9ac63ae2-428d-49f8-9f0e-87e04c5ecf7c",
+      "9ff0765f-d74b-44b1-bfef-b21aca592e0f",
+      "a7a51e90-1d3f-4ed6-95e0-5fb4dc9eb78a",
+      "b87e629a-c113-480f-b411-b696e850d21b",
+      "b9ee4143-7d89-45fa-aa6a-6705c0497495",
+      "bcd463b7-43ff-410d-9edb-39959abbb209",
+      "fd8258f0-6c7a-4a3a-a705-84a8bc275e31"
+    ],
+    "learning.StudentProject": [
+      "02cd2498-ae6f-4075-8ce8-de3877d6c687",
+      "183b5a39-ebc2-48b6-8e26-4b4877db0933",
+      "30e87b46-344f-40f1-b841-877611e1c685",
+      "e2446ace-1857-4390-a5d7-24ee7614bb5d"
+    ],
+    "learning.Evaluation": [
+      "15566be5-e71e-42ec-b5cc-6d47bfd1cb45",
+      "5af5768a-f6d0-402f-b2c5-a9cba9e424c9",
+      "b5e9756a-420c-4fed-9b4b-af860c7b9683"
+    ],
+    "learning.Certificate": [
+      "7b12afd3-f75b-4815-b3df-61eaca1b2935"
+    ],
+    "admin.LogEntry": []
+  },
+  "stable_created_ids": {
+    "accounts.User": [
+      "731c167e-8ce7-5ef2-9be1-612a23cf070d",
+      "789dc08c-894c-58a3-99f7-4bb8cd19e71c",
+      "ee41f4d1-8b0f-5384-9f36-6e4c07458796",
+      "78140e1b-7ab3-50a5-8292-13c5a95efb39",
+      "4e8634bb-29ed-53c9-bc82-69958d03753f",
+      "6f8d4a08-acd5-535f-8f41-73a9ef068d18",
+      "c58c610a-a735-5104-a6a9-2d3517d7df1c",
+      "12243223-fb73-5639-a5c1-3397b6f7bc3e",
+      "aebe7e30-ffb3-5c2b-9596-d99f00398c0b",
+      "68116f8c-50b5-58ac-8f17-3b184701ace3"
+    ],
+    "people.Participant": [
+      "cff07c3e-de48-5d07-a224-9ce17608788a",
+      "026e1747-6fde-5217-bb74-0a199ea6d08e",
+      "46bd0f97-eeb7-5257-a75e-5e21eb62f773",
+      "d3fc78d2-8f45-5197-95e3-4c19cafb55ac",
+      "edcf3915-2b9d-5c8c-b7ed-7d77a41fb5dc"
+    ],
+    "workshops.ClassGroup": [
+      "d3b9a266-f4ed-5349-84b9-c2a7b0ad566b",
+      "9183a1d0-215c-5c48-a81d-881b1b503c4e",
+      "fa3d38f4-1526-50a3-bede-bdbb29d6081a",
+      "d2515a06-3004-5823-a1cb-610ffe9c444a",
+      "f3a07396-09de-5147-bab6-d4d57064f6b8",
+      "9f02e6ff-a628-584e-8772-2c33d7260caa",
+      "52fc7580-4d6b-5612-a97b-1c4d779a01fd"
+    ],
+    "workshops.ClassInstructor": [
+      "f57eb75b-dc56-57bd-a84d-2c1f15956f74",
+      "962b7c42-fae2-57b8-9170-12fe3d06d014",
+      "425fd7dd-725e-5ac5-8602-e063a0dbbbdd",
+      "e2069fa2-417b-5cd2-8c93-65ba07e51fb2",
+      "c9a3dcbf-8477-53d9-8bb8-258c8805159f",
+      "f341d84c-ca33-5705-9bcb-b60f75a26677",
+      "0bd466a8-7d0d-5b78-93d2-14bcb91a6404"
+    ],
+    "workshops.Meeting": [
+      "25d34dc8-45f7-50eb-99ec-30daf60b38ec",
+      "f94deeaa-3123-5683-8a21-9a5a3fa31b65",
+      "71cbca62-bc7e-5153-b160-622cc7ff99eb",
+      "666fef43-6f9a-5778-80bf-c73b48f2bfaf",
+      "a6ed88ec-cfad-5ebe-8afa-66462a17990b",
+      "9be504d7-866a-5c1f-81e9-a211bbd9d303",
+      "eb40ad20-3f5c-5ded-b89e-c74c2cf1ba75"
+    ],
+    "enrollments.Enrollment": [
+      "9f064cf7-3222-4c59-8852-2884e02c9cbf",
+      "d2174735-ff8a-4153-86ba-6d8fb96c8bd4",
+      "814dae5f-e2f0-4f93-aef5-81155414acf4",
+      "09583913-91d3-46de-b66e-a462637f7f65",
+      "941f4464-1cad-4a9c-a18c-71f110aa9e62",
+      "d5044353-95dc-4139-892d-e1471b49aec3"
+    ],
+    "learning.Attendance": [
+      "b9133f8c-6c4e-43bf-a7ed-94744e846f1b",
+      "818e2e4b-239f-489d-9322-cedeae9f5c20",
+      "0e3aff8e-0866-453a-8d0c-fcab9a6c388f",
+      "1e5d1097-af44-4523-ba6b-273c5038c59f"
+    ],
+    "learning.StudentProject": [
+      "426d2af2-3a85-44cb-b76f-38d863ef84d0",
+      "f6a8ba26-3975-4fcd-a9ee-f25a37848783",
+      "3dc68f46-365e-4053-b1b1-d75d92cd1445",
+      "33b65829-a8a7-4421-9706-1a7fa62e15ac",
+      "3e90350a-8446-4bc5-8d83-e73ef7c976eb",
+      "d99924ea-5513-417c-89c0-cc55ec1af83e"
+    ],
+    "learning.Evaluation": [
+      "0810cec6-6206-485e-a787-5710faee0163",
+      "e8fc1828-7ad5-4dd4-909e-7b7042392b83",
+      "6b65f8aa-8130-47a6-a22b-b38da2e61359"
+    ],
+    "people.Instructor": [
+      "c391e437-e0d1-563b-b671-b4fd9db87080",
+      "ef489d30-2a3d-59df-9547-e9deaef535a4"
+    ],
+    "learning.Certificate": [
+      "77b66ea8-b2d5-421a-a904-42c20c9d931a"
+    ],
+    "enrollments.EnrollmentStatusHistory": [
+      "82",
+      "83",
+      "84",
+      "85",
+      "86",
+      "87",
+      "88",
+      "89",
+      "90",
+      "91",
+      "92",
+      "93",
+      "94"
+    ]
+  }
+}

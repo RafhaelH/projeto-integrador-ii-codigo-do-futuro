@@ -1,0 +1,860 @@
+{
+  "commit": "a351c5a",
+  "reference_date": "2026-10-13",
+  "captures": [
+    {
+      "id": 1,
+      "alias": "anonymous",
+      "profile": "Público",
+      "file": "fig-01-login.png",
+      "path": "/entrar/",
+      "caption": "Login vazio servido por HTTPS.",
+      "navigation": "Abrir URL → Entrar",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "a95e879f8315623f3f36b58f4bc9707d107da6b82c90b37b34877ada9d736d84",
+      "captured_at": "2026-10-13T17:43:58.289183+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 2,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-02-inicio.png",
+      "path": "/",
+      "caption": "Início e módulos do administrador funcional.",
+      "navigation": "Entrar → Início",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "29162844402a4ca066bd0ac025c35a72e0260384c8c63b787c414b146116507f",
+      "captured_at": "2026-10-13T17:43:59.260861+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1231
+      }
+    },
+    {
+      "id": 3,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-03-meu-perfil.png",
+      "path": "/conta/perfil/",
+      "caption": "Meu perfil com nome e e-mail fictícios.",
+      "navigation": "Início → Meu perfil",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "a21c9e7d04284f878a2640b573570f95908b458251b51805729dfc6828d7d45a",
+      "captured_at": "2026-10-13T17:44:00.455587+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 4,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-04-participantes.png",
+      "path": "/pessoas/participantes/?q=Ana",
+      "caption": "Busca de participante fictícia pelo nome Ana.",
+      "navigation": "Pessoas → Participantes → buscar Ana",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "744ca2ead34252e2764f7b758a261e53c3155f427bc26f295f32ed360fc82e69",
+      "captured_at": "2026-10-13T17:44:01.713948+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 5,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-05-menor-responsavel.png",
+      "path": "/pessoas/participantes/520d1b34-6ea0-466e-91b9-cf89acf17732/",
+      "caption": "Ana, menor de idade, com responsável ativo vinculado.",
+      "navigation": "Pessoas → Participantes → Ana Oliveira",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "6ef1398c9cc4efffe14d1ee6cf5a51c875850e5a28489e423ac56cde5b783e92",
+      "captured_at": "2026-10-13T17:44:03.335588+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 6,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-06-responsaveis.png",
+      "path": "/pessoas/responsaveis/",
+      "caption": "Responsáveis fictícios; DDD 00 não discável.",
+      "navigation": "Pessoas → Responsáveis",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "1c914331478b44e13844984c30ebc3597071c448a77f128431f01cf0af21158a",
+      "captured_at": "2026-10-13T17:44:04.355089+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 7,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-07-instrutores.png",
+      "path": "/pessoas/instrutores/?q=Rafael",
+      "caption": "Busca de Rafael Lima, instrutor da apresentação.",
+      "navigation": "Pessoas → Instrutores → buscar Rafael",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "7fbb41ac709a9b392d605b68a0e64b73855ed8107796d1fb818e2494746eaf40",
+      "captured_at": "2026-10-13T17:44:05.457121+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 8,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-08-instituicoes.png",
+      "path": "/pessoas/instituicoes/",
+      "caption": "Centro Comunitário Código Aberto, instituição fictícia.",
+      "navigation": "Pessoas → Instituições",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "a37996caaf456517ef7a8ede690661209b54b2dba384fc7d44677dca0555dca6",
+      "captured_at": "2026-10-13T17:44:06.272109+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 9,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-09-oficinas.png",
+      "path": "/oficinas/",
+      "caption": "Três oficinas publicadas reutilizadas da demonstração.",
+      "navigation": "Turmas → Oficinas",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "498e7ef8d6c4e8a493b84e54ce9a9815d9e1c3340297b315ec0c11236ef678d9",
+      "captured_at": "2026-10-13T17:44:07.064196+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 10,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-10-oficina-python.png",
+      "path": "/oficinas/80aba861-8563-46aa-86c9-98c671d1e561/",
+      "caption": "Objetivo, conteúdo e carga estimada de Programação com Python.",
+      "navigation": "Oficinas → Programação com Python",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "6fcd6e0261aa42b2373b0e51c6ecf362c11ddbae2dd401e88e097f4d50e92a51",
+      "captured_at": "2026-10-13T17:44:07.962338+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1153
+      }
+    },
+    {
+      "id": 11,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-11-turmas.png",
+      "path": "/oficinas/turmas/?q=2026-01",
+      "caption": "Busca das três turmas estáveis de Python, Web e Robótica.",
+      "navigation": "Turmas → buscar 2026-01",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "6445a07e5b8f1dcf12a65bb281c08371960f480b320f8fafec604e506b1005e7",
+      "captured_at": "2026-10-13T17:44:08.858600+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 12,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-12-turma-planejada.png",
+      "path": "/oficinas/turmas/a44b6a8a-d9e5-4227-905b-c8aca0d9508c/",
+      "caption": "Turma planejada, instrutor e datas da próxima oferta.",
+      "navigation": "Turmas → PY-2026-02",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "8da37ffe0ea06edc72ba77232d1b6ed4ba0aba6b85a2db8ec7352e18f67ea9d2",
+      "captured_at": "2026-10-13T17:44:09.814232+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1031
+      }
+    },
+    {
+      "id": 13,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-13-turma-cronograma.png",
+      "path": "/oficinas/turmas/f34c4a46-da23-42d9-871a-949ef728aea0/",
+      "caption": "Web em andamento: encontros realizados e futuros coerentes.",
+      "navigation": "Turmas → WEB-2026-01",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "a4ef7f8b548294ffd2a507dd001281ee090b5b4917d720fc40d61d52b8dad4fb",
+      "captured_at": "2026-10-13T17:44:10.695521+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1230
+      }
+    },
+    {
+      "id": 14,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-14-turma-aberta.png",
+      "path": "/oficinas/turmas/3c505321-dbbd-4ba1-b342-0e63dcecef2b/",
+      "caption": "Robótica com inscrições abertas e cronograma futuro.",
+      "navigation": "Turmas → ROB-2026-01",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "711f9639e7331674976762c7fbf7e3e7e74d18c76b7fad8864617b0c3f998e25",
+      "captured_at": "2026-10-13T17:44:11.563268+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1097
+      }
+    },
+    {
+      "id": 15,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-15-vagas-fila.png",
+      "path": "/inscricoes/turmas/3c505321-dbbd-4ba1-b342-0e63dcecef2b/fila/",
+      "caption": "Capacidade 2; confirmadas 2; disponíveis 0; uma pendente e uma em espera.",
+      "navigation": "ROB-2026-01 → Ver inscrições",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "90cb04ff613f4a99bfb2562175b91e55f8596f279ccb91083b5c9071387d7c99",
+      "captured_at": "2026-10-13T17:44:12.390056+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 16,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-16-frequencia.png",
+      "path": "/acompanhamento/turmas/f34c4a46-da23-42d9-871a-949ef728aea0/frequencia/",
+      "caption": "Carla com 100% e Diego com 50% nos dois encontros realizados.",
+      "navigation": "WEB-2026-01 → Acompanhamento",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "6a6c504130a63de4970e7ab755a7871052f3f74b89817f58a5fa4a04f54b790c",
+      "captured_at": "2026-10-13T17:44:13.474447+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1131
+      }
+    },
+    {
+      "id": 17,
+      "alias": "captura-instrutor",
+      "profile": "Instrutor",
+      "file": "fig-17-projeto-revisao.png",
+      "path": "/acompanhamento/projetos/30e87b46-344f-40f1-b841-877611e1c685/revisao/",
+      "caption": "Projeto entregue de Carla e revisão do instrutor, consultados sem salvar.",
+      "navigation": "Minhas turmas → Web → Acompanhamento → Revisar projeto",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "ab23c14ef488d14c5eaeebda9361fdd40e9fdacee03583884fbcf07e346f637d",
+      "captured_at": "2026-10-13T17:44:14.403848+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 18,
+      "alias": "captura-instrutor",
+      "profile": "Instrutor",
+      "file": "fig-18-avaliacao.png",
+      "path": "/acompanhamento/inscricoes/58730ee0-ba3d-4119-9f23-256f5c70674c/avaliacao/",
+      "caption": "Avaliação acadêmica 8,5 ainda não publicada; formulário sem submissão.",
+      "navigation": "Web → Acompanhamento → Editar avaliação",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "74cac3fdbb27cc4cac0fef3dc2fd82e86db83fd6729e2782d57c589615adf5c2",
+      "captured_at": "2026-10-13T17:44:15.203966+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 19,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-19-conclusao.png",
+      "path": "/acompanhamento/turmas/0e5fb336-9b6a-420f-8889-43e158237c6c/frequencia/",
+      "caption": "Ana aprovada; Bruno não concluinte por frequência 50%; critérios explicitados.",
+      "navigation": "PY-2026-01 → Acompanhamento",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "4670a3da238b71aca993655ae72977d57d233e43b2c710873610c928ad467661",
+      "captured_at": "2026-10-13T17:44:16.127393+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1150
+      }
+    },
+    {
+      "id": 20,
+      "alias": "captura-participante",
+      "profile": "Participante",
+      "file": "fig-20-certificado.png",
+      "path": "/acompanhamento/certificados/7b12afd3-f75b-4815-b3df-61eaca1b2935/",
+      "caption": "Certificado ativo de Ana: quatro encontros de 2h, total 8h.",
+      "navigation": "Meus certificados → certificado de Ana",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "4c7305922d118f1b0a804efa4e5d0c907376ce31a0d9beb1c70b134bd9bafdb4",
+      "captured_at": "2026-10-13T17:44:17.091659+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1063
+      }
+    },
+    {
+      "id": 21,
+      "alias": "captura-instrutor",
+      "profile": "Instrutor",
+      "file": "fig-21-minhas-turmas.png",
+      "path": "/oficinas/turmas/?q=WEB-2026-01",
+      "caption": "Turma Web vinculada a Rafael; filtro de busca aplicado.",
+      "navigation": "Minhas turmas → buscar WEB-2026-01",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "fb4317da6580e23d5f5d1a83a1d8b4ae9138b79a7d3364e4c469ffb073b121a5",
+      "captured_at": "2026-10-13T17:44:17.858858+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 22,
+      "alias": "captura-instrutor",
+      "profile": "Instrutor",
+      "file": "fig-22-acompanhamento.png",
+      "path": "/acompanhamento/turmas/f34c4a46-da23-42d9-871a-949ef728aea0/frequencia/",
+      "caption": "Acompanhamento restrito ao instrutor vinculado.",
+      "navigation": "Minhas turmas → Web → Acompanhamento",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "bceb385b6deeacd74dd35f1324be69ee53736307a239ec3d1ecde0cadc9cee9e",
+      "captured_at": "2026-10-13T17:44:18.914725+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1131
+      }
+    },
+    {
+      "id": 23,
+      "alias": "captura-projeto",
+      "profile": "Participante",
+      "file": "fig-23-ofertas.png",
+      "path": "/inscricoes/turmas-disponiveis/?q=Robótica",
+      "caption": "Ofertas abertas vistas por Carla: oferta independente de avaliação e Robótica. Consulta sem solicitar inscrição.",
+      "navigation": "Turmas disponíveis → localizar ROB-2026-01",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "fac47b342fb991df859c2809bbde8948c0d688fbc79d0a08e3f7ce53ff288737",
+      "captured_at": "2026-10-13T17:44:19.839285+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 24,
+      "alias": "captura-participante",
+      "profile": "Participante",
+      "file": "fig-24-jornada-concluida.png",
+      "path": "/acompanhamento/frequencia/",
+      "caption": "Jornada própria de Ana e resultado da turma concluída.",
+      "navigation": "Minha jornada",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "0584fd04618673d69141f82735bc6d88386b2d1e1849db556061cb72618974a0",
+      "captured_at": "2026-10-13T17:44:20.636204+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 25,
+      "alias": "captura-projeto",
+      "profile": "Participante",
+      "file": "fig-25-jornada-andamento.png",
+      "path": "/acompanhamento/frequencia/",
+      "caption": "Jornada de Carla em Web; resultado não publicado fica oculto.",
+      "navigation": "Minha jornada",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "06140bc81513aa4740ba9cf865ffbb9a3c7787ee4d2ef37aabf60c7cdad86e68",
+      "captured_at": "2026-10-13T17:44:21.426220+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "id": 26,
+      "alias": "captura-projeto",
+      "profile": "Participante",
+      "file": "fig-26-projeto-proprio.png",
+      "path": "/acompanhamento/inscricoes/58730ee0-ba3d-4119-9f23-256f5c70674c/projeto/",
+      "caption": "Projeto próprio entregue de Carla, consultado sem alterar dados.",
+      "navigation": "Minha jornada → Atualizar projeto",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "c150866499a9c4584c440d601d0964cf0ef1c6191bf6e6c6b758b09877d7ca29",
+      "captured_at": "2026-10-13T17:44:22.222230+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1040
+      }
+    },
+    {
+      "id": 27,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-27-painel-filtrado.png",
+      "path": "/painel/?workshop=80aba861-8563-46aa-86c9-98c671d1e561&period_start=2026-04-01&period_end=2026-04-30",
+      "caption": "Universo: Python iniciado em abril; 1 turma, 2 participantes, 75% de frequência média e 50% de aprovação.",
+      "navigation": "Painel → oficina Python → abril/2026 → Aplicar filtros",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "a13567d9a4fee9e6daf4c9fc836fc1fe2cbac3522ba30fcb67f5af32edb880dd",
+      "captured_at": "2026-10-13T17:44:23.128525+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "height": 1387
+      }
+    },
+    {
+      "id": 28,
+      "profile": "Administrador",
+      "file": "fig-28-csv-exportado.png",
+      "path": "/painel/relatorios/conclusao.csv?workshop=80aba861-8563-46aa-86c9-98c671d1e561&period_start=2026-04-01&period_end=2026-04-30",
+      "navigation": "Painel filtrado → Conclusão CSV → visualizador local",
+      "caption": "CSV realmente exportado, renderizado em visualizador HTML local; não é tela da aplicação nem Excel.",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "source": "local CSV viewer of actual HTTP download",
+      "sha256": "652a2993f361f5e677e799079c1e2a712672044f3d1751c263f6a4830cbfa4f5"
+    },
+    {
+      "id": 29,
+      "profile": "Participante",
+      "file": "fig-29-certificado-pdf.png",
+      "path": "/acompanhamento/certificados/7b12afd3-f75b-4815-b3df-61eaca1b2935/baixar/",
+      "navigation": "Meus certificados → Baixar PDF → visualizar arquivo real",
+      "caption": "Página do PDF real de Ana, renderizada por PyMuPDF; 8h e código histórico preservados. Não é screenshot da interface.",
+      "viewport": "Documento PDF",
+      "source": "actual downloaded PDF rendered without editing",
+      "sha256": "87662f62b6efc6b9d49d5451a49f72335d97e1d0c6d487685740488bb5eedf46"
+    },
+    {
+      "id": 30,
+      "alias": "anonymous",
+      "profile": "Público",
+      "file": "fig-30-mobile-login.png",
+      "path": "/entrar/",
+      "caption": "Login em 390×844.",
+      "navigation": "Abrir URL",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "52a7f830aa1b9be6d55060ebb034f38cb39c6a3b7869404f22560a197dfd0b2d",
+      "captured_at": "2026-10-13T17:44:23.906560+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "height": 931
+      }
+    },
+    {
+      "id": 31,
+      "alias": "captura-admin",
+      "profile": "Administrador",
+      "file": "fig-31-mobile-inicio.png",
+      "path": "/",
+      "caption": "Início administrativo em viewport móvel.",
+      "navigation": "Início",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "8f37ac01753318e7b7fe7bba77b34f8d4058a1a436596afcf35904b3291c69d4",
+      "captured_at": "2026-10-13T17:44:24.728401+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "height": 1876
+      }
+    },
+    {
+      "id": 32,
+      "alias": "captura-projeto",
+      "profile": "Participante",
+      "file": "fig-32-mobile-perfil.png",
+      "path": "/conta/perfil/",
+      "caption": "Meu perfil da participante em viewport móvel.",
+      "navigation": "Meu perfil",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "5c2330b98becc8faff8ce2514fd7573df38b51e7a2fe8d1bf73b776307bda0a1",
+      "captured_at": "2026-10-13T17:44:25.429174+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "height": 1060
+      }
+    },
+    {
+      "id": 33,
+      "alias": "captura-instrutor",
+      "profile": "Instrutor",
+      "file": "fig-33-mobile-turmas-colunas-direita.png",
+      "path": "/oficinas/turmas/?q=WEB-2026-01",
+      "caption": "Minhas turmas filtradas no celular. Colunas à direita da tabela, obtidas por rolagem real.",
+      "navigation": "Minhas turmas → buscar Web",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "f4d1d30ce3fc699feaa25d9d01faf305fb23e56e0812e59b7b8520543493b69e",
+      "captured_at": "2026-10-13T17:44:26.131999+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "height": 1008
+      },
+      "horizontal_scroll": true
+    },
+    {
+      "id": 33,
+      "alias": "captura-instrutor",
+      "profile": "Instrutor",
+      "file": "fig-33-mobile-turmas.png",
+      "path": "/oficinas/turmas/?q=WEB-2026-01",
+      "caption": "Minhas turmas filtradas no celular.",
+      "navigation": "Minhas turmas → buscar Web",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "e803ba1564fcd6592ebff158e4909bbb7c56fad3cde2d74b4406860ea07036c1",
+      "captured_at": "2026-10-13T17:44:26.131999+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "height": 1008
+      }
+    },
+    {
+      "id": 34,
+      "alias": "captura-instrutor",
+      "profile": "Instrutor",
+      "file": "fig-34-mobile-chamada.png",
+      "path": "/acompanhamento/encontros/727676c4-0d3c-4822-bbdc-2d3ef6a0e477/chamada/",
+      "caption": "Chamada existente no celular, sem salvar alterações.",
+      "navigation": "Web → Acompanhamento → Corrigir chamada",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "4a4005cae58acc9ed32234e0e776149af54a1504f809d6985741de007b230dfd",
+      "captured_at": "2026-10-13T17:44:27.017574+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "height": 1180
+      }
+    },
+    {
+      "id": 35,
+      "alias": "captura-projeto",
+      "profile": "Participante",
+      "file": "fig-35-mobile-ofertas.png",
+      "path": "/inscricoes/turmas-disponiveis/?q=Robótica",
+      "caption": "Ofertas abertas vistas por Carla: oferta independente de avaliação e Robótica. Consulta sem solicitar inscrição.",
+      "navigation": "Turmas disponíveis → localizar ROB-2026-01",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "2069da362003773133a987b9fa6fcb88eec4b04571ccb8eff19b83f6ce3cd571",
+      "captured_at": "2026-10-13T17:44:27.868137+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "height": 1427
+      }
+    },
+    {
+      "id": 36,
+      "alias": "captura-projeto",
+      "profile": "Participante",
+      "file": "fig-36-mobile-jornada.png",
+      "path": "/acompanhamento/frequencia/",
+      "caption": "Jornada própria de Carla no celular.",
+      "navigation": "Minha jornada",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "afd7dd8ba1be2b00aeec7d751070d52c4bc05d373bb8d78eb3a606a7f31a1c43",
+      "captured_at": "2026-10-13T17:44:28.633100+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "height": 1065
+      }
+    },
+    {
+      "id": 37,
+      "alias": "captura-participante",
+      "profile": "Participante",
+      "file": "fig-37-mobile-certificado.png",
+      "path": "/acompanhamento/certificados/7b12afd3-f75b-4815-b3df-61eaca1b2935/",
+      "caption": "Certificado ativo de Ana no celular.",
+      "navigation": "Meus certificados → certificado",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "full_page": true,
+      "sha256": "e6bfd740f83f791820e1d0b5b0fb42bffef9cedf9c5fe3b325b9243b0d69af8c",
+      "captured_at": "2026-10-13T17:44:29.405713+00:00",
+      "source": "browser-rendered HTTPS application",
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "height": 1297
+      }
+    }
+  ]
+}

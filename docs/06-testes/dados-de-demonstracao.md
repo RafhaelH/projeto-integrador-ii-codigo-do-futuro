@@ -1,5 +1,11 @@
 # Dados de demonstração
 
+## Ambiente publicado preparado em 13/10/2026
+
+A VPS usa agora **prepare_presentation**, com origem e IDs comprovados, nomes naturais, contas individuais aleatórias e espaços A01–A05. Consulte o [relatório e operação](preparacao-20261013/relatorio.md) e o [pacote de avaliação](../07-avaliacoes/pacote-de-avaliacao.md). A senha operacional foi preservada; nenhuma senha do ambiente publicado está neste documento. O comando antigo seed_demo fica bloqueado quando identifica a apresentação preparada, para evitar recriar os e-mails e nomes antigos.
+
+As seções abaixo descrevem somente a carga antiga para desenvolvimento descartável, antes da preparação. Não as execute para renovar o ambiente publicado.
+
 ## Objetivo
 
 A carga determinística prepara uma base exclusivamente fictícia para apresentação, testes
@@ -21,10 +27,10 @@ começam com `[DEMO]` e os códigos das turmas começam com `DEMO-`.
 
 | Perfil | E-mail | Senha local |
 |---|---|---|
-| Administrador | `admin@demo.codigodofuturo.local` | `Demo@Codigo2026` |
-| Instrutora | `larissa.instrutora@demo.codigodofuturo.local` | `Demo@Codigo2026` |
-| Instrutor | `rafael.instrutor@demo.codigodofuturo.local` | `Demo@Codigo2026` |
-| Participante | `ana.oliveira@demo.codigodofuturo.local` | `Demo@Codigo2026` |
+| Administrador | `admin@demo.codigodofuturo.local` | senha local do seed, apenas desenvolvimento |
+| Instrutora | `larissa.instrutora@demo.codigodofuturo.local` | senha local do seed, apenas desenvolvimento |
+| Instrutor | `rafael.instrutor@demo.codigodofuturo.local` | senha local do seed, apenas desenvolvimento |
+| Participante | `ana.oliveira@demo.codigodofuturo.local` | senha local do seed, apenas desenvolvimento |
 
 Os outros participantes usam o mesmo domínio e a mesma senha local. Nunca reutilize essa
 senha fora de um ambiente descartável de desenvolvimento ou homologação.

@@ -1,58 +1,53 @@
-# Formulário de avaliação
+# Formulário individual de avaliação humana
 
-## Identificação
+Estado: **aguardando avaliação humana**. Todos os campos de resposta estão em branco.
 
-- Nome ou identificação autorizada:
-- Data do teste:
-- Perfil testado: administrador / instrutor / participante
-- Dispositivo:
-- Navegador:
-- Versão do sistema:
+Identificação de acesso A01–A05: __________  Perfil: __________
 
-## Experiência prévia
+Identificação autorizada da pessoa (guardar privadamente): ____________________
 
-1. Você já utilizou sistemas de cursos, oficinas ou gestão escolar?
-2. Como você classifica sua familiaridade com aplicações web? Baixa / média / alta
+Data/hora: __________  Dispositivo: __________  Navegador: __________
 
-## Execução
+URL/versão publicada: __________  Experiência prévia com aplicações web: __________
 
-Para cada tarefa, registrar:
+Para cada tarefa, marque concluída, concluída com ajuda, parcial, não concluída ou não executada. Se não executar, registre o motivo. Dificuldade pode ser baixa, média ou alta. Anote ajuda e o tempo aproximado sem transformar demora em falha automaticamente.
 
-| Tarefa | Funcionou? | Precisou de ajuda? | Dificuldade ou observação |
-|---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| Tarefa | Conclusão | Dificuldade | Ajuda necessária | Tempo aprox. | Evidência/observação |
+|---|---|---|---|---|---|
+| 1 | | | | | |
+| 2 | | | | | |
+| 3 | | | | | |
+| 4 | | | | | |
+| 5 | | | | | |
+| 6 | | | | | |
+| 7 | | | | | |
+| 8, quando houver | | | | | |
 
-## Perguntas obrigatórias da atividade
+Escala: **1 = muito ruim / muito insatisfeito; 2 = ruim / insatisfeito; 3 = regular / neutro; 4 = bom / satisfeito; 5 = muito bom / muito satisfeito**. Deixe sem nota o aspecto que não puder avaliar e explique o motivo.
 
-1. **O que você testou e funcionou corretamente?**
-2. **O que você testou e não funcionou?** Descreva o resultado obtido e o esperado.
-3. **Houve alguma funcionalidade que você não conseguiu testar?** Qual e por quê?
-4. **Encontrou algum bug?** Informe o caminho e, se possível, anexe imagem.
-5. **Que melhoria ou funcionalidade você sugere?**
+| Aspecto | Nota 1–5 | Comentário |
+|---|---|---|
+| Clareza das telas e textos | | |
+| Clareza das mensagens de erro/sucesso | | |
+| Facilidade de navegação | | |
+| Organização visual | | |
+| Confiança nas informações | | |
+| Satisfação geral | | |
 
-## Avaliação de 1 a 5
+O que testou e funcionou? __________________________________________________
 
-| Aspecto | Nota |
-|---|---:|
-| Facilidade de navegação |  |
-| Clareza dos textos e botões |  |
-| Organização visual |  |
-| Clareza das mensagens de erro e sucesso |  |
-| Confiança nas informações apresentadas |  |
-| Utilidade da solução |  |
-| Satisfação geral |  |
+O que testou e não funcionou? Caminho, resultado obtido e esperado: ___________
 
-## Comentário final
+O que não conseguiu testar e por quê? ______________________________________
 
-O que mais ajudaria a tornar a plataforma melhor?
+Problemas ou bugs encontrados (ligar à tarefa/evidência): ____________________
 
-## Uso acadêmico
+Sugestões de melhoria: ____________________________________________________
 
-- [ ] Estou ciente de que minhas respostas poderão ser consolidadas no relatório acadêmico do projeto.
-- [ ] Autorizo o uso das imagens que anexei exclusivamente como evidência deste trabalho, com dados sensíveis anonimizados.
+Comentários livres, incluindo celular/teclado quando utilizados: ____________
 
-> Este texto é um modelo. A versão final poderá ser transferida para Google Forms ou Microsoft Forms sem alterar as perguntas obrigatórias.
+Ciência do uso acadêmico das respostas: [ ] Sim [ ] Não. Registro: ___________
+
+Autorização específica de anexos/gravação, se houver: ______________________
+
+Não publicar identidade real ou imagem pessoal sem autorização. Senhas, cookies e tokens nunca compõem as evidências. As observações por teclado/celular não são auditoria completa de acessibilidade.

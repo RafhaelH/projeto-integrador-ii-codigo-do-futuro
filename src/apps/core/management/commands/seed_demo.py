@@ -742,6 +742,12 @@ class Command(BaseCommand):
 
     @transaction.atomic
     def handle(self, *args, **options) -> None:
+        from apps.core.management.commands.prepare_presentation import stable_id
+
+        if User.objects.filter(pk=stable_id("user:captura-admin")).exists():
+            raise CommandError(
+                "Apresentação já preparada. Use prepare_presentation para preservar IDs e sessões."
+            )
         allow_production = options["allow_production"]
         configured_password = os.getenv(DEMO_PASSWORD_ENV)
 

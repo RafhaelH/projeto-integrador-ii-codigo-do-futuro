@@ -1,33 +1,54 @@
-# Plano de capturas do manual
+# Plano e registro das capturas reais
 
-As imagens devem ser produzidas após as correções das cinco avaliações, usando a mesma tag do
-vídeo. Capture somente a área necessária, em desktop e, nos fluxos indicados, também em celular.
+Capturado em 13/10/2026 com código publicado **a351c5a**, Chromium/Playwright, TLS validado e contas estáveis de captura, diferentes de A01–A05. As telas da aplicação são PNG de páginas realmente renderizadas, com página completa e sem edição de números/estados. O certificado PDF foi realmente baixado; sua página foi renderizada sem alteração. O CSV foi realmente exportado e renderizado num visualizador local, explicitamente identificado; não se apresenta como tela do sistema ou Excel.
 
-| ID | Perfil | Tela/estado | Formato |
-|---|---|---|---|
-| FIG-01 | Público | Login HTTPS | desktop e celular |
-| FIG-02 | Administrador | Página inicial e menu | desktop |
-| FIG-03 | Administrador | Pessoas e instituições | desktop |
-| FIG-04 | Administrador | Detalhe de participante e responsável | desktop |
-| FIG-05 | Administrador | Oficina publicada | desktop |
-| FIG-06 | Administrador | Turma com instrutores e encontros | desktop |
-| FIG-07 | Administrador | Inscrições e fila de espera | desktop |
-| FIG-08 | Instrutor | Minhas turmas | desktop e celular |
-| FIG-09 | Instrutor | Chamada por encontro | desktop e celular |
-| FIG-10 | Instrutor | Projeto e avaliação | desktop |
-| FIG-11 | Participante | Turmas disponíveis | celular |
-| FIG-12 | Participante | Minha jornada | desktop e celular |
-| FIG-13 | Participante | Projeto | celular |
-| FIG-14 | Participante | Certificado e PDF | desktop |
-| FIG-15 | Administrador | Painel filtrado | desktop |
-| FIG-16 | Administrador | CSV aberto no Excel | desktop |
+São **38 PNG**: 36 capturas da aplicação (35 telas e uma captura adicional das colunas à direita em mobile), um visualizador do CSV real e uma página do PDF real. Desktop 1440×1000; mobile 390×844; capturas full-page podem ser mais altas. A rolagem horizontal da tabela é registrada em imagem adicional, não em alteração do layout. Nenhum documento apresentou overflow horizontal global nos viewports verificados.
 
-## Padrão
+As pessoas, contatos e atividades são fictícios. O login aparece vazio; autenticação ocorreu antes das capturas. Senhas/cookies/tokens não foram gravados. Formulários de chamada/projeto/avaliação foram somente consultados. Disponíveis são ofertas globais: a turma independente A05-I também aparece; não inscreva contas de captura nela. A lista não possui busca, ainda que o endereço histórico da captura contenha q.
 
-- resolução legível, preferencialmente PNG;
-- dados exclusivamente fictícios;
-- nenhuma senha, cookie, token, IP privado ou barra de favoritos pessoal;
-- legenda `Figura N — descrição objetiva`;
-- nome `fig-NN-descricao-curta.png`;
-- registrar tag/SHA e data da captura;
-- revisar contraste e corte antes de gerar o PDF.
+Hashes SHA-256, horário, rota e fonte estão em [manifest.json](capturas/manifest.json). O código histórico do certificado original foi preservado; nomes e títulos apresentados foram naturalizados. As imagens são da candidata preparada, não comprovam avaliações humanas nem aprovação definitiva.
+
+| Figura/arquivo | Perfil | Navegação e caminho | Cenário e legenda | Viewport |
+|---|---|---|---|---|
+| [fig-01-login.png](capturas/fig-01-login.png) | Público | Abrir URL → Entrar · `/entrar/` | Login vazio servido por HTTPS. | 1440×1000 |
+| [fig-02-inicio.png](capturas/fig-02-inicio.png) | Administrador | Entrar → Início · `/` | Início e módulos do administrador funcional. | 1440×1000 |
+| [fig-03-meu-perfil.png](capturas/fig-03-meu-perfil.png) | Administrador | Início → Meu perfil · `/conta/perfil/` | Meu perfil com nome e e-mail fictícios. | 1440×1000 |
+| [fig-04-participantes.png](capturas/fig-04-participantes.png) | Administrador | Pessoas → Participantes → buscar Ana · `/pessoas/participantes/?q=Ana` | Busca de participante fictícia pelo nome Ana. | 1440×1000 |
+| [fig-05-menor-responsavel.png](capturas/fig-05-menor-responsavel.png) | Administrador | Pessoas → Participantes → Ana Oliveira · `/pessoas/participantes/520d1b34-6ea0-466e-91b9-cf89acf17732/` | Ana, menor de idade, com responsável ativo vinculado. | 1440×1000 |
+| [fig-06-responsaveis.png](capturas/fig-06-responsaveis.png) | Administrador | Pessoas → Responsáveis · `/pessoas/responsaveis/` | Responsáveis fictícios; DDD 00 não discável. | 1440×1000 |
+| [fig-07-instrutores.png](capturas/fig-07-instrutores.png) | Administrador | Pessoas → Instrutores → buscar Rafael · `/pessoas/instrutores/?q=Rafael` | Busca de Rafael Lima, instrutor da apresentação. | 1440×1000 |
+| [fig-08-instituicoes.png](capturas/fig-08-instituicoes.png) | Administrador | Pessoas → Instituições · `/pessoas/instituicoes/` | Centro Comunitário Código Aberto, instituição fictícia. | 1440×1000 |
+| [fig-09-oficinas.png](capturas/fig-09-oficinas.png) | Administrador | Turmas → Oficinas · `/oficinas/` | Três oficinas publicadas reutilizadas da demonstração. | 1440×1000 |
+| [fig-10-oficina-python.png](capturas/fig-10-oficina-python.png) | Administrador | Oficinas → Programação com Python · `/oficinas/80aba861-8563-46aa-86c9-98c671d1e561/` | Objetivo, conteúdo e carga estimada de Programação com Python. | 1440×1000 |
+| [fig-11-turmas.png](capturas/fig-11-turmas.png) | Administrador | Turmas → buscar 2026-01 · `/oficinas/turmas/?q=2026-01` | Busca das três turmas estáveis de Python, Web e Robótica. | 1440×1000 |
+| [fig-12-turma-planejada.png](capturas/fig-12-turma-planejada.png) | Administrador | Turmas → PY-2026-02 · `/oficinas/turmas/a44b6a8a-d9e5-4227-905b-c8aca0d9508c/` | Turma planejada, instrutor e datas da próxima oferta. | 1440×1000 |
+| [fig-13-turma-cronograma.png](capturas/fig-13-turma-cronograma.png) | Administrador | Turmas → WEB-2026-01 · `/oficinas/turmas/f34c4a46-da23-42d9-871a-949ef728aea0/` | Web em andamento: encontros realizados e futuros coerentes. | 1440×1000 |
+| [fig-14-turma-aberta.png](capturas/fig-14-turma-aberta.png) | Administrador | Turmas → ROB-2026-01 · `/oficinas/turmas/3c505321-dbbd-4ba1-b342-0e63dcecef2b/` | Robótica com inscrições abertas e cronograma futuro. | 1440×1000 |
+| [fig-15-vagas-fila.png](capturas/fig-15-vagas-fila.png) | Administrador | ROB-2026-01 → Ver inscrições · `/inscricoes/turmas/3c505321-dbbd-4ba1-b342-0e63dcecef2b/fila/` | Capacidade 2; confirmadas 2; disponíveis 0; uma pendente e uma em espera. | 1440×1000 |
+| [fig-16-frequencia.png](capturas/fig-16-frequencia.png) | Administrador | WEB-2026-01 → Acompanhamento · `/acompanhamento/turmas/f34c4a46-da23-42d9-871a-949ef728aea0/frequencia/` | Carla com 100% e Diego com 50% nos dois encontros realizados. | 1440×1000 |
+| [fig-17-projeto-revisao.png](capturas/fig-17-projeto-revisao.png) | Instrutor | Minhas turmas → Web → Acompanhamento → Revisar projeto · `/acompanhamento/projetos/30e87b46-344f-40f1-b841-877611e1c685/revisao/` | Projeto entregue de Carla e revisão do instrutor, consultados sem salvar. | 1440×1000 |
+| [fig-18-avaliacao.png](capturas/fig-18-avaliacao.png) | Instrutor | Web → Acompanhamento → Editar avaliação · `/acompanhamento/inscricoes/58730ee0-ba3d-4119-9f23-256f5c70674c/avaliacao/` | Avaliação acadêmica 8,5 ainda não publicada; formulário sem submissão. | 1440×1000 |
+| [fig-19-conclusao.png](capturas/fig-19-conclusao.png) | Administrador | PY-2026-01 → Acompanhamento · `/acompanhamento/turmas/0e5fb336-9b6a-420f-8889-43e158237c6c/frequencia/` | Ana aprovada; Bruno não concluinte por frequência 50%; critérios explicitados. | 1440×1000 |
+| [fig-20-certificado.png](capturas/fig-20-certificado.png) | Participante | Meus certificados → certificado de Ana · `/acompanhamento/certificados/7b12afd3-f75b-4815-b3df-61eaca1b2935/` | Certificado ativo de Ana: quatro encontros de 2h, total 8h. | 1440×1000 |
+| [fig-21-minhas-turmas.png](capturas/fig-21-minhas-turmas.png) | Instrutor | Minhas turmas → buscar WEB-2026-01 · `/oficinas/turmas/?q=WEB-2026-01` | Turma Web vinculada a Rafael; filtro de busca aplicado. | 1440×1000 |
+| [fig-22-acompanhamento.png](capturas/fig-22-acompanhamento.png) | Instrutor | Minhas turmas → Web → Acompanhamento · `/acompanhamento/turmas/f34c4a46-da23-42d9-871a-949ef728aea0/frequencia/` | Acompanhamento restrito ao instrutor vinculado. | 1440×1000 |
+| [fig-23-ofertas.png](capturas/fig-23-ofertas.png) | Participante | Turmas disponíveis → localizar ROB-2026-01 · `/inscricoes/turmas-disponiveis/?q=Robótica` | Ofertas abertas vistas por Carla: oferta independente de avaliação e Robótica. Consulta sem solicitar inscrição. | 1440×1000 |
+| [fig-24-jornada-concluida.png](capturas/fig-24-jornada-concluida.png) | Participante | Minha jornada · `/acompanhamento/frequencia/` | Jornada própria de Ana e resultado da turma concluída. | 1440×1000 |
+| [fig-25-jornada-andamento.png](capturas/fig-25-jornada-andamento.png) | Participante | Minha jornada · `/acompanhamento/frequencia/` | Jornada de Carla em Web; resultado não publicado fica oculto. | 1440×1000 |
+| [fig-26-projeto-proprio.png](capturas/fig-26-projeto-proprio.png) | Participante | Minha jornada → Atualizar projeto · `/acompanhamento/inscricoes/58730ee0-ba3d-4119-9f23-256f5c70674c/projeto/` | Projeto próprio entregue de Carla, consultado sem alterar dados. | 1440×1000 |
+| [fig-27-painel-filtrado.png](capturas/fig-27-painel-filtrado.png) | Administrador | Painel → oficina Python → abril/2026 → Aplicar filtros · `/painel/?workshop=80aba861-8563-46aa-86c9-98c671d1e561&period_start=2026-04-01&period_end=2026-04-30` | Universo: Python iniciado em abril; 1 turma, 2 participantes, 75% de frequência média e 50% de aprovação. | 1440×1000 |
+| [fig-28-csv-exportado.png](capturas/fig-28-csv-exportado.png) | Administrador | Painel filtrado → Conclusão CSV → visualizador local · `/painel/relatorios/conclusao.csv?workshop=80aba861-8563-46aa-86c9-98c671d1e561&period_start=2026-04-01&period_end=2026-04-30` | CSV realmente exportado, renderizado em visualizador HTML local; não é tela da aplicação nem Excel. | 1440×1000 |
+| [fig-29-certificado-pdf.png](capturas/fig-29-certificado-pdf.png) | Participante | Meus certificados → Baixar PDF → visualizar arquivo real · `/acompanhamento/certificados/7b12afd3-f75b-4815-b3df-61eaca1b2935/baixar/` | Página do PDF real de Ana, renderizada por PyMuPDF; 8h e código histórico preservados. Não é screenshot da interface. | Documento PDF |
+| [fig-30-mobile-login.png](capturas/fig-30-mobile-login.png) | Público | Abrir URL · `/entrar/` | Login em 390×844. | 390×844 |
+| [fig-31-mobile-inicio.png](capturas/fig-31-mobile-inicio.png) | Administrador | Início · `/` | Início administrativo em viewport móvel. | 390×844 |
+| [fig-32-mobile-perfil.png](capturas/fig-32-mobile-perfil.png) | Participante | Meu perfil · `/conta/perfil/` | Meu perfil da participante em viewport móvel. | 390×844 |
+| [fig-33-mobile-turmas-colunas-direita.png](capturas/fig-33-mobile-turmas-colunas-direita.png) | Instrutor | Minhas turmas → buscar Web · `/oficinas/turmas/?q=WEB-2026-01` | Minhas turmas filtradas no celular. Colunas à direita da tabela, obtidas por rolagem real. | 390×844 |
+| [fig-33-mobile-turmas.png](capturas/fig-33-mobile-turmas.png) | Instrutor | Minhas turmas → buscar Web · `/oficinas/turmas/?q=WEB-2026-01` | Minhas turmas filtradas no celular. | 390×844 |
+| [fig-34-mobile-chamada.png](capturas/fig-34-mobile-chamada.png) | Instrutor | Web → Acompanhamento → Corrigir chamada · `/acompanhamento/encontros/727676c4-0d3c-4822-bbdc-2d3ef6a0e477/chamada/` | Chamada existente no celular, sem salvar alterações. | 390×844 |
+| [fig-35-mobile-ofertas.png](capturas/fig-35-mobile-ofertas.png) | Participante | Turmas disponíveis → localizar ROB-2026-01 · `/inscricoes/turmas-disponiveis/?q=Robótica` | Ofertas abertas vistas por Carla: oferta independente de avaliação e Robótica. Consulta sem solicitar inscrição. | 390×844 |
+| [fig-36-mobile-jornada.png](capturas/fig-36-mobile-jornada.png) | Participante | Minha jornada · `/acompanhamento/frequencia/` | Jornada própria de Carla no celular. | 390×844 |
+| [fig-37-mobile-certificado.png](capturas/fig-37-mobile-certificado.png) | Participante | Meus certificados → certificado · `/acompanhamento/certificados/7b12afd3-f75b-4815-b3df-61eaca1b2935/` | Certificado ativo de Ana no celular. | 390×844 |
+
+## Captura manual opcional
+
+Não há captura obrigatória deste plano pendente. Se o relatório exigir Excel específico ou um aparelho físico, abrir os CSV UTF-8 com separador ; e repetir a cena sem modificar valores. As imagens mobile são de viewport em navegador, não prova de testes por pessoas em aparelhos reais. Gravação do vídeo acadêmico e observação humana de teclado/celular continuam posteriores.

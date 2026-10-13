@@ -1,92 +1,43 @@
-# Relatório final — base de consolidação
+# Relatório final — candidata e pendências acadêmicas
 
-> Este documento está estruturado antes da publicação. Campos marcados como **PENDENTE** dependem
-> da VPS, das cinco avaliações ou da tag final e não devem ser preenchidos com dados simulados.
+## 1. Identificação e conclusão atual
 
-## 1. Identificação
+Código do Futuro — Projeto Integrador Transdisciplinar em Engenharia de Software II. Autor registrado no projeto: Rafhael Henrique, Engenharia de Software. Auditoria: 13/10/2026. [Repositório](https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro); aplicação https://projeto-integrador.tesseratointegra.com.br.
 
-- Projeto: **Código do Futuro**
-- Disciplina: **Projeto Integrador Transdisciplinar em Engenharia de Software II**
-- Autor: **Rafhael Henrique**
-- Curso: **Engenharia de Software**
-- Repositório: <https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro>
-- URL publicada: **PENDENTE**
-- Tag/SHA final: **PENDENTE**
-- Data de conclusão: **PENDENTE**
+Base documental develop: 644e7a657c1aeec80b7df530856fd354e5a02454. Código publicado: a351c5aeb6a9bf104693818a75a0acc6c82e49ad, mesmo src da base; 122 hashes reconfirmados nesta auditoria. [Estado](estado-verificado.json). Main permanece 5730e37. Não há tag/versão acadêmica final nem data de conclusão integral registrada.
 
-## 2. Problema e justificativa
+**O MVP possui implementação e evidências técnicas; a entrega acadêmica não está integralmente concluída.** Faltam cinco opiniões de pessoas elegíveis, PDF preenchido, decisões sobre feedback e vídeo narrado; há lacunas de origem I/modelo AVA. A [matriz](matriz-conformidade.md) fundamenta cada situação.
 
-A realização de oficinas gratuitas de programação envolve cadastros, turmas, vagas, encontros,
-frequência, projetos, avaliações e certificados. Quando esses dados ficam dispersos em planilhas
-e mensagens, torna-se difícil garantir consistência, rastreabilidade e acompanhamento individual.
-O Código do Futuro centraliza essa jornada para jovens de 14 a 21 anos, instrutores e equipe
-administrativa.
+## 2. Problema, objetivo e escopo
 
-## 3. Objetivo
+Oficinas gratuitas precisam organizar pessoas, responsáveis, vagas, encontros, presença e resultados. Planilhas/mensagens dispersas prejudicam integridade e rastreabilidade. A solução web acompanha jovens de 14–21 anos da inscrição à conclusão, com três papéis. O [escopo](../01-contexto/escopo.md) distingue funcionalidades implementadas e fora do MVP; a evolução comprovada vem do Git do Integrador II, sem inventar revisão histórica do Integrador I.
 
-Construir uma aplicação web capaz de organizar a oferta das oficinas e acompanhar o participante
-da inscrição à conclusão, aplicando regras explícitas de elegibilidade, capacidade, frequência,
-avaliação, autorização e emissão de certificado.
+Entregues: acesso/perfil próprio, pessoas/instituições, ofertas/turmas/encontros, inscrições/fila/transações, frequência/projeto/avaliação/conclusão objetiva, certificado PDF/revogação, painéis e CSV. Recuperação usa console na publicação e não comprova entrega de e-mail externo.
 
-## 4. Solução entregue
+## 3. Projeto e implementação
 
-A aplicação inclui autenticação por perfil; pessoas e instituições; oficinas, turmas e encontros;
-inscrições e lista de espera; frequência; projetos; avaliação e conclusão; certificados em PDF;
-painéis e relatórios CSV; além de uma carga determinística com dados fictícios.
+[Arquitetura](../04-arquitetura/arquitetura.md) documenta camadas e MTV/MVC. Python 3.12, Django 5.2, PostgreSQL 17, templates HTML/CSS; dependências uv.lock; CI Pytest/Ruff/GitHub Actions; publicação Gunicorn/Docker/Nginx/HTTPS. [UML/DER](../03-modelagem/diagramas.md), [conceitual e normalização](../03-modelagem/modelo-de-dados.md), [modelo lógico](../03-modelagem/modelo-logico.md), [banco físico](../03-modelagem/banco-fisico.md) e [dicionário](../03-modelagem/dicionario-de-dados.md) refletem 16 models persistentes e 7 migrations próprias. SQL de referência é gerado offline, não um dump da VPS.
 
-## 5. Arquitetura e tecnologias
+## 4. Verificação e correções comprovadas
 
-O sistema adota monólito modular renderizado no servidor, usando Python 3.12, Django 5.2 LTS,
-PostgreSQL 17, HTML, CSS, JavaScript, Pytest, Ruff, uv e GitHub Actions. A publicação usa Docker,
-Gunicorn, Nginx e HTTPS. As regras transacionais permanecem em serviços de domínio, e consultas
-gerenciais de leitura ficam no módulo `reporting`.
+[Consolidação](../06-testes/consolidacao-verificacao.md): 235 testes aprovados em PostgreSQL isolado, zero skip, cobertura 89,84%; CI develop 644e7a6 aprovada. Reteste anterior: 25 cenários HTTP consolidados, 278 verificações/465 requisições; preparação atual: 57 verificações/81 requisições aprovadas. Requisições e repetições não são cenários distintos. Os relatórios históricos conservam as reprovações originais.
 
-## 6. Verificação técnica
+Três defeitos corrigidos em cccfa6e/PR #11 e retestados: encontro duplicado 500 → formulário 200 útil; RF-006 ausente → perfil próprio com whitelist/CSRF/unique; conclusão direta no admin → bloqueio e processamento acadêmico canônico. PR #12 prepara cenários e materiais, integrado em 644e7a6. O manual reúne 38 imagens reais/fontes identificadas; inspeção visual limitada não é aceite humano nem aprovação WCAG.
 
-- Suíte local final: **PENDENTE**
-- Cobertura final: **PENDENTE**
-- Execução CI/PostgreSQL final: **PENDENTE**
-- Migrações em banco vazio: **PENDENTE**
-- `check --deploy`: **PENDENTE**
-- Smoke test público: **PENDENTE**
-- Backup e restauração testados: **PENDENTE**
+Esta auditoria realiza checks/documentação fora do banco publicado, confere fontes/links/renderizações/segredos e abre PR documental. Nenhuma alteração de banco, conta, cenário, container ou Nginx foi necessária. [Verificações documentais](verificacoes-documentais.json).
 
-As evidências devem apontar para o documento de testes e para a execução da tag final.
+## 5. Cinco avaliações e decisões
 
-## 7. Validação com cinco pessoas
+**aguardando avaliação humana**. Selecionar cinco colegas de curso ou profissionais da área; A01–A05 são contas, não pessoas. Distribuição atual: A01/A02 ADMIN, A03/A04 INSTRUCTOR, A05 PARTICIPANT. Fichas permanecem em branco, incluindo nome/data/funcionou/falhou/correção/não testado/motivo. [Pacote](../07-avaliacoes/pacote-de-avaliacao.md), [modelo consolidado](../07-avaliacoes/modelo-pdf-consolidado.md) e [registro de decisões](../07-avaliacoes/registro-de-melhorias.md).
 
-| Avaliação | Perfil | Data | Versão | Resultado geral |
-|---|---|---|---|---|
-| 01 | Participante | PENDENTE | PENDENTE | PENDENTE |
-| 02 | Participante | PENDENTE | PENDENTE | PENDENTE |
-| 03 | Instrutor | PENDENTE | PENDENTE | PENDENTE |
-| 04 | Instrutor | PENDENTE | PENDENTE | PENDENTE |
-| 05 | Administrador | PENDENTE | PENDENTE | PENDENTE |
+A oferta PY-2026-A05-I encerra 16/10/2026 às 18h America/Sao_Paulo. Para sessão posterior, revisar a tarefa e planejar oferta exclusiva futura após autorização/revisão/backup em trabalho operacional separado; nesta auditoria não renovar datas. Se não puder testar, registrar motivo verdadeiro, sem preencher sucesso fictício.
 
-Descrever método, tarefas, taxa de conclusão, notas, problemas e limitações sem omitir falhas.
+## 6. Limitações e pendências
 
-## 8. Melhorias e decisões
+Não há prova identificada do planejamento/protótipo original I nem o modelo específico de entrega AVA. O estudante deve obtê-los/conferir com tutor. SMTP externo, testes de carga/escala, compatibilidade nos navegadores exigidos e auditoria completa de acessibilidade não estão aprovados; [rastreabilidade RNF](../02-requisitos/rastreabilidade-implementada.md) explicita limites. Não há resultados de usabilidade humana nem sugestões humanas aceitas/recusadas nesta data.
 
-Resumir o `registro-de-melhorias.md`, relacionando cada achado com decisão, justificativa,
-PR/commit e reteste. Separar correções implementadas, melhorias futuras, recusas justificadas e
-duplicidades.
+Vídeo: roteiro exatamente 5:00 resolve os dois limites do PDF; narração deve ser do estudante. Gravação/arquivo/link permanecem pendentes. Exibir funcionamento, testes e mudanças efetivamente adotadas; citar a ausência de resultados enquanto faltarem sessões.
 
-## 9. Resultado e limitações
+## 7. Fechamento necessário
 
-Comparar os critérios de aceite com a versão final, informar itens fora do MVP e registrar riscos
-remanescentes. Nenhum erro crítico ou alto pode permanecer aberto na entrega.
-
-## 10. Conclusão
-
-Consolidar como o projeto percorreu planejamento, desenvolvimento, verificação automatizada,
-validação por pares e melhoria contínua. Registrar a versão exata que corresponde ao código,
-manual, PDF e vídeo.
-
-## 11. Anexos
-
-- manual do usuário com screenshots;
-- PDF das cinco avaliações;
-- registro consolidado de melhorias;
-- evidências de testes e CI;
-- diagramas e dicionário de dados;
-- link do vídeo narrado.
+Seguir a [sequência exata do checklist](checklist-final.md#sequência-exata-para-concluir): obter documentos/AVA; selecionar pessoas; conferir prazos/cenários; realizar cinco sessões; consolidar/decidir; corrigir e retestar o pertinente; gerar PDF real, atualizar manual/versões se necessário; gravar/exportar 300s; conferir modelo/links/anexos e submeter ao tutor. Merge desta PR e eventual promoção/release são decisões posteriores, não executadas aqui. Atualizar matriz e relatório somente com evidências reais.

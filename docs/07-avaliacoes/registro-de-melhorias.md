@@ -1,10 +1,6 @@
 # Registro de problemas e melhorias
 
-Este documento será preenchido após as avaliações. Não remover itens rejeitados; a justificativa faz parte da evidência acadêmica.
-
-| ID | Origem | Descrição | Tipo | Severidade | Decisão | Justificativa | Alteração/PR | Reteste |
-|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | |
+Estado: **aguardando avaliação humana**. Este registro será preenchido após as sessões reais. Não remover itens rejeitados; a justificativa faz parte da evidência acadêmica. A tabela única abaixo reúne achados, decisões e retestes.
 
 ## Tipos
 
@@ -42,3 +38,7 @@ Estado: **aguardando avaliação humana**. Não há problemas humanos ou decisõ
 | | | | | | | | | | |
 
 Classificação: defeito, usabilidade, ideia ou fora do escopo. Decisão: corrigir agora, depois, não aceitar ou duplicado. Toda decisão precisa de justificativa; manter também resultados negativos e vínculo à ficha original.
+
+## Distinção das correções técnicas
+
+DEF-001/002/003 e cronologia da carga foram descobertas técnicas, documentadas na [consolidação dos testes](../06-testes/consolidacao-verificacao.md#três-defeitos-e-retestes). Não são feedback de colegas e não preencherão a tabela humana. Para cada sugestão real, ligar sessão/tarefa/evidência, decisão (aceitar, adiar, recusar, duplicada), justificativa, responsável, PR/commit e resultado/data/versão do reteste. Se não houver alteração pertinente, justificar; não implementar funcionalidade apenas para aparentar melhoria.

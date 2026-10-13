@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-13",
+  "scope": "auditoria/documentação; sem deploy/merge/promoção",
+  "source_base_develop": "644e7a657c1aeec80b7df530856fd354e5a02454",
+  "published_code": "a351c5aeb6a9bf104693818a75a0acc6c82e49ad",
+  "pdf_reference": {
+    "pages": 41,
+    "sha256": "4e9f152da87b21bca0af824d4891b97af851565a81c06518038f740e35f6ef12",
+    "read_completely": true,
+    "ava_delivery_model_found": false,
+    "integrator_I_artifact_identified": false
+  },
+  "checks": {
+    "ruff_check": true,
+    "ruff_format": true,
+    "django_check": "config.settings.test; SQLite :memory:; no issues",
+    "makemigrations_check": "SQLite :memory:; no changes detected",
+    "schema_generation": "sem conexão; 16 models próprios, 7 migrations, 107 SQLs de referência",
+    "schema_generation_reproducible": true,
+    "video_timeline_seconds": 300,
+    "video_recorded": false,
+    "human_evaluations_executed_by_audit": 0,
+    "five_forms_blank": true,
+    "offline_routes_verified": [
+      "/conta/perfil/",
+      "/acompanhamento/frequencia/",
+      "/inscricoes/turmas-disponiveis/"
+    ],
+    "pytest_on_published_database": false,
+    "functional_http_executed_in_audit": false
+  },
+  "diagrams": {
+    "renderer": "mermaid-cli 12.0.0 local; Chromium",
+    "count": 9,
+    "syntax_rendered": true,
+    "previews_rendered": true,
+    "files": [
+      {
+        "source": "docs/03-modelagem/diagramas/atividade-inscricao.mmd",
+        "svg": "docs/03-modelagem/diagramas/atividade-inscricao.svg",
+        "sha256": "a6e3826f0c417763cf97608314077d866c7fab0bdddbd2c64e93b907600c6a69"
+      },
+      {
+        "source": "docs/03-modelagem/diagramas/camadas.mmd",
+        "svg": "docs/03-modelagem/diagramas/camadas.svg",
+        "sha256": "254b122072a911cb86ea33a49209d81c8b33a011cc9ccf716af03a6927ae1d21"
+      },
+      {
+        "source": "docs/03-modelagem/diagramas/classes-jornada.mmd",
+        "svg": "docs/03-modelagem/diagramas/classes-jornada.svg",
+        "sha256": "9738ed0fca62d4496c575d52beca802d075657388835eb95db4632eaab6038de"
+      },
+      {
+        "source": "docs/03-modelagem/diagramas/classes-pessoas.mmd",
+        "svg": "docs/03-modelagem/diagramas/classes-pessoas.svg",
+        "sha256": "114766a886d4c558c2b6951dee40e7cfa261bea3d06745a255c909f4daa0e288"
+      },
+      {
+        "source": "docs/03-modelagem/diagramas/conceitual-jornada.mmd",
+        "svg": "docs/03-modelagem/diagramas/conceitual-jornada.svg",
+        "sha256": "b175d0253e1521837af3e0c40aa74a6b8d241a40a82840a7346cf3461c1b7c71"
+      },
+      {
+        "source": "docs/03-modelagem/diagramas/conceitual-pessoas.mmd",
+        "svg": "docs/03-modelagem/diagramas/conceitual-pessoas.svg",
+        "sha256": "2a3a6dcd3002d2f1c6bb18b8b6f3a96c2263c7538a2f84963a04eccddd515313"
+      },
+      {
+        "source": "docs/03-modelagem/diagramas/conclusao-certificado.mmd",
+        "svg": "docs/03-modelagem/diagramas/conclusao-certificado.svg",
+        "sha256": "406c44652b2edc7a44dd23978288adcf6e5b4a229a74c831b5ee1f9d0243df6c"
+      },
+      {
+        "source": "docs/03-modelagem/diagramas/confirmacao.mmd",
+        "svg": "docs/03-modelagem/diagramas/confirmacao.svg",
+        "sha256": "e53246a06ce314dbba3bd1dffdeeb7de2baccd544d7140f4bcd11fe2d19df5d0"
+      },
+      {
+        "source": "docs/03-modelagem/diagramas/perfil-proprio.mmd",
+        "svg": "docs/03-modelagem/diagramas/perfil-proprio.svg",
+        "sha256": "0417a59a9e15d810517727e8764abb5d03fc276de6eb4e9ef975db65886279ba"
+      }
+    ]
+  },
+  "pdf_layout": [
+    {
+      "file": "docs/07-avaliacoes/modelo-consolidado.pdf",
+      "pages": 8,
+      "sha256": "e2f451c154fa9bfdaf072ced847615f29aeb139037350abfe10b1b479d5f6c81",
+      "html_overflow": false,
+      "text_outside_pages": false,
+      "rendered_all_pages": true
+    },
+    {
+      "file": "docs/07-avaliacoes/pacote-imprimivel.pdf",
+      "pages": 15,
+      "sha256": "f83948c169a0a4bb3eddc6f417e1e995096c180fe4468436290357a3aa23ea31",
+      "html_overflow": false,
+      "text_outside_pages": false,
+      "rendered_all_pages": true
+    }
+  ],
+  "preservation": {
+    "historical_files_unchanged": 158,
+    "captures_verified": 38,
+    "containers_unchanged": 67,
+    "production_config_unchanged": true,
+    "application_code_tests_deploy_unchanged": true
+  },
+  "secrets_review": {
+    "files_checked": 427,
+    "actual_credentials_secrets_password_hashes_and_session_keys_checked": true,
+    "pdf_text_checked": true,
+    "secrets_found": false,
+    "restricted_archives_checksums_verified": true,
+    "private_files_outside_git": true
+  },
+  "links": {
+    "local_links_checked": 402,
+    "anchors_checked": 14,
+    "errors": []
+  },
+  "historical_test_results": {
+    "pytest_235_and_coverage_89_84": "evidência existente a351c5a + CI develop, não uma nova execução local nesta auditoria"
+  },
+  "review": {
+    "pdf_layout_visually_inspected": true,
+    "no_results_fabricated": true,
+    "private_archives_not_published": true
+  }
+}

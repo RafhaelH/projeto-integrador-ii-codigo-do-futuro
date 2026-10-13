@@ -7,7 +7,7 @@
 | Administrador | Mantém a operação, configura ofertas e acompanha resultados. |
 | Instrutor | Conduz as turmas às quais está atribuído. |
 | Participante | Solicita e acompanha sua participação nas oficinas. |
-| Serviço de e-mail | Entrega mensagens de recuperação de senha e, futuramente, avisos. |
+| Serviço de e-mail | Backend de recuperação; na candidata usa console, entrega SMTP externa não demonstrada. |
 
 ## Catálogo
 
@@ -45,7 +45,7 @@
 
 - A1: se não houver vaga e a lista estiver habilitada, a inscrição entra na lista de espera;
 - A2: se os dados forem inválidos, nenhuma inscrição é criada e as pendências são informadas;
-- A3: se já existir inscrição, o registro existente é apresentado.
+- A3: se já existir inscrição, a duplicidade é rejeitada com mensagem, sem novo registro.
 
 **Pós-condição:** existe uma única inscrição do participante para a turma, em situação coerente com a capacidade.
 
@@ -64,7 +64,7 @@
 5. O administrador confirma a inscrição.
 6. O sistema ocupa a vaga e registra autoria e data.
 
-**Alternativas:** sem vaga, mantém ou move para espera; inelegibilidade, rejeita com motivo; promoção fora da ordem exige justificativa.
+**Alternativas:** confirmação sem vaga ou inelegível é bloqueada e preserva a situação; rejeição é decisão própria de pendente, com motivo; promoção fora da ordem exige justificativa.
 
 ## UC-008 — Registrar frequência
 
@@ -150,7 +150,7 @@ certificado revogado permanece auditável para o administrador e não pode ser b
 4. O sistema apresenta totais, ocupação, frequência média, conclusão e projetos entregues.
 5. O administrador pode abrir a listagem de origem e exportar dados permitidos.
 
-## Diagrama de casos de uso simplificado
+## Mapa de atores e casos de uso (fluxograma simplificado)
 
 ```mermaid
 flowchart TB
@@ -170,3 +170,9 @@ flowchart TB
     Participante --> Aprendizagem
     Participante --> Resultados
 ```
+
+## Revisão conforme implementação
+
+UC-002 usa Django admin com staff/permissões para gerir outras contas; ADMIN funcional não concede automaticamente acesso a /admin/. Perfil próprio RF-006 usa /conta/perfil/ nos três papéis. UC-010 permite registrar avaliação ao instrutor atribuído/ADMIN, mas somente ADMIN processa conclusão. UC-011 emissão/revogação são ADMIN; consulta/PDF por titular/admin/instrutor vinculado, sujeito ao estado ativo. UC-012 CSV é ADMIN; instrutor vê apenas seu painel.
+
+O mapa acima é fluxograma de atores, não notação formal UML de casos de uso. UML de classes/sequências e atividade identificada estão em [diagramas revisados](diagramas.md). Relação com requisitos/testes: [rastreabilidade](../02-requisitos/rastreabilidade-implementada.md).

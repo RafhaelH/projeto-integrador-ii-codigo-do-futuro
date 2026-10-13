@@ -1,267 +1,412 @@
-# Dicionário de dados
+# Dicionário de dados implementado
+
+Gerado por [gerar-inventario.py](gerar-inventario.py), com o Django fixado em `uv.lock`. A fonte é o código, sem consulta ou escrita no banco publicado. Veja [inventário completo](inventario-schema.json) e [banco físico](banco-fisico.md).
 
 ## Convenções
 
-- Identificadores principais: UUID.
-- Datas e horários: armazenados com fuso; apresentação em `America/Sao_Paulo`.
-- Textos curtos: `varchar`; textos longos: `text`.
-- Entidades principais possuem `created_at` e `updated_at`.
-- `RESTRICT` impede remoção de uma referência com histórico; `CASCADE` remove apenas registros estritamente dependentes antes de existir histórico acadêmico.
+`NULL` é nulabilidade SQL; `blank` permite ausência na validação de formulário. Texto com blank=sim e NULL=não usa string vazia. PK e UNIQUE são restrições SQL; choices e validadores são regras Python, salvo CHECK explícito. Defaults, UUIDs e datas automáticas são preenchidos pelo Python, não defaults SQL permanentes. PROTECT/CASCADE indicam a política do coletor Django, não cláusulas ON DELETE equivalentes no PostgreSQL.
 
-## user
+Há 16 modelos próprios persistentes; core possui base abstrata e reporting não possui tabelas. As tabelas do framework e as associações de autorização também estão listadas. `django_migrations` é mantida pelo executor de migrations (id bigint, app varchar(255), name varchar(255), applied timestamptz, todos NOT NULL; id PK), não por um modelo instalado.
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| email | varchar(254) | Sim | único; identificador de acesso normalizado |
-| password | varchar(128) | Sim | hash gerenciado pelo Django |
-| full_name | varchar(150) | Sim | nome de exibição |
-| role | varchar(20) | Sim | `ADMIN`, `INSTRUCTOR` ou `PARTICIPANT` |
-| is_active | boolean | Sim | padrão verdadeiro |
-| is_staff | boolean | Sim | controle administrativo técnico |
-| last_login | datetime | Não | último acesso bem-sucedido |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+## accounts_user
 
-## participant
+Modelo: `accounts.User`. Domínio do projeto.
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| user_id | uuid | Não | FK única para `user`; permite cadastro sem acesso inicial |
-| full_name | varchar(150) | Sim | nome civil/social usado na operação |
-| birth_date | date | Sim | base da elegibilidade |
-| cpf | varchar(11) | Não | único quando informado; armazenado sem máscara |
-| contact_email | varchar(254) | Não | contato quando ainda não há usuário |
-| phone | varchar(20) | Não | telefone do participante |
-| is_active | boolean | Sim | padrão verdadeiro |
-| privacy_consent_at | datetime | Não | registro do aceite aplicável |
-| image_authorization | boolean | Sim | padrão falso |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `password` (password) | varchar(128) | não | não | — | MaxLengthValidator(128) |
+| `last_login` (last_login) | timestamp with time zone | sim | sim | — | — |
+| `is_superuser` (is_superuser) | boolean | não | não | — | default Python: False |
+| `is_staff` (is_staff) | boolean | não | não | — | default Python: False |
+| `is_active` (is_active) | boolean | não | não | — | default Python: True |
+| `date_joined` (date_joined) | timestamp with time zone | não | não | — | default Python: django.utils.timezone.now |
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `email` (email) | varchar(254) | não | não | UNIQUE | EmailValidator(); MaxLengthValidator(254) |
+| `full_name` (full_name) | varchar(150) | não | não | — | MaxLengthValidator(150) |
+| `role` (role) | varchar(20) | não | não | — | MaxLengthValidator(20); choices: ADMIN, INSTRUCTOR, PARTICIPANT; default Python: PARTICIPANT |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
 
-## guardian
+Restrições explícitas do modelo:
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| full_name | varchar(150) | Sim | nome do responsável |
-| phone | varchar(20) | Sim | contato principal |
-| email | varchar(254) | Não | contato alternativo |
-| is_active | boolean | Sim | padrão verdadeiro |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+- `<UniqueConstraint: expressions=(Lower(F(email)),) name='accounts_user_email_ci_unique'>`
 
-## participant_guardian
+Associação `groups`: tabela `accounts_user_groups`; id: bigint, NOT NULL, PK identity; user_id: uuid, NOT NULL, FK → accounts_user.id, INDEX, ORM CASCADE; group_id: integer, NOT NULL, FK → auth_group.id, INDEX, ORM CASCADE. PK id; FKs com índice; UNIQUE (('user', 'group'),).
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| participant_id | uuid | Sim | FK para `participant` |
-| guardian_id | uuid | Sim | FK para `guardian` |
-| relationship | varchar(30) | Sim | mãe, pai, tutor ou outro |
-| is_primary | boolean | Sim | responsável principal |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+Associação `user_permissions`: tabela `accounts_user_user_permissions`; id: bigint, NOT NULL, PK identity; user_id: uuid, NOT NULL, FK → accounts_user.id, INDEX, ORM CASCADE; permission_id: integer, NOT NULL, FK → auth_permission.id, INDEX, ORM CASCADE. PK id; FKs com índice; UNIQUE (('user', 'permission'),).
 
-Restrições únicas:
+## auth_group
 
-- `(participant_id, guardian_id)`;
-- apenas um vínculo com `is_primary = true` por participante.
+Modelo: `auth.Group`. Infraestrutura Django.
 
-## instructor
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | integer | não | sim | PK | MinValueValidator(-2147483648); MaxValueValidator(2147483647); identity SQL |
+| `name` (name) | varchar(150) | não | não | UNIQUE | MaxLengthValidator(150) |
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| user_id | uuid | Sim | FK única para `user` com papel instrutor |
-| biography | text | Não | apresentação curta |
-| specialties | varchar(255) | Não | especialidades para o MVP |
-| is_active | boolean | Sim | padrão verdadeiro |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+Associação `permissions`: tabela `auth_group_permissions`; id: bigint, NOT NULL, PK identity; group_id: integer, NOT NULL, FK → auth_group.id, INDEX, ORM CASCADE; permission_id: integer, NOT NULL, FK → auth_permission.id, INDEX, ORM CASCADE. PK id; FKs com índice; UNIQUE (('group', 'permission'),).
 
-## institution
+## auth_permission
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| name | varchar(150) | Sim | nome da instituição |
-| document | varchar(14) | Não | CNPJ sem máscara e único quando informado |
-| contact_name | varchar(150) | Não | pessoa de contato |
-| contact_email | varchar(254) | Não | e-mail institucional |
-| contact_phone | varchar(20) | Não | telefone institucional |
-| address | varchar(255) | Não | endereço de referência |
-| is_active | boolean | Sim | padrão verdadeiro |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+Modelo: `auth.Permission`. Infraestrutura Django.
 
-## workshop
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | integer | não | sim | PK | MinValueValidator(-2147483648); MaxValueValidator(2147483647); identity SQL |
+| `name` (name) | varchar(255) | não | não | — | MaxLengthValidator(255) |
+| `content_type_id` (content_type) | integer | não | não | INDEX; FK → django_content_type.id; ORM CASCADE | — |
+| `codename` (codename) | varchar(100) | não | não | — | MaxLengthValidator(100) |
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| title | varchar(150) | Sim | nome da oficina |
-| slug | varchar(170) | Sim | único; usado em URL amigável |
-| summary | varchar(300) | Sim | resumo público |
-| objective | text | Sim | objetivo pedagógico |
-| syllabus | text | Sim | conteúdo previsto |
-| estimated_hours | decimal(5,2) | Sim | maior que zero |
-| status | varchar(20) | Sim | `DRAFT`, `PUBLISHED`, `ARCHIVED` |
-| created_by_id | uuid | Sim | FK para `user` administrador |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+Unicidade composta SQL: `[('content_type', 'codename')]`.
 
-## class_group
+## django_admin_log
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| workshop_id | uuid | Sim | FK `RESTRICT` para `workshop` |
-| institution_id | uuid | Não | FK `RESTRICT` para `institution` |
-| code | varchar(30) | Sim | código único da turma |
-| title | varchar(150) | Sim | identificação da edição |
-| location | varchar(255) | Sim | local presencial |
-| capacity | positive_integer | Sim | maior que zero |
-| waitlist_enabled | boolean | Sim | padrão verdadeiro |
-| registration_opens_at | datetime | Sim | início das inscrições |
-| registration_closes_at | datetime | Sim | fim das inscrições |
-| start_date | date | Sim | início das atividades |
-| end_date | date | Sim | fim das atividades |
-| status | varchar(30) | Sim | `PLANNED`, `OPEN`, `IN_PROGRESS`, `COMPLETED`, `CANCELLED` |
-| created_by_id | uuid | Sim | FK para `user` administrador |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+Modelo: `admin.LogEntry`. Infraestrutura Django.
 
-## class_instructor
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | integer | não | sim | PK | MinValueValidator(-2147483648); MaxValueValidator(2147483647); identity SQL |
+| `action_time` (action_time) | timestamp with time zone | não | não | — | default Python: django.utils.timezone.now |
+| `object_id` (object_id) | text | sim | sim | — | — |
+| `object_repr` (object_repr) | varchar(200) | não | não | — | MaxLengthValidator(200) |
+| `action_flag` (action_flag) | smallint | não | não | — | MinValueValidator(0); MaxValueValidator(32767); choices: 1, 2, 3 |
+| `change_message` (change_message) | text | não | sim | — | — |
+| `content_type_id` (content_type) | integer | sim | sim | INDEX; FK → django_content_type.id; ORM SET_NULL | — |
+| `user_id` (user) | uuid | não | não | INDEX; FK → accounts_user.id; ORM CASCADE | — |
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| class_group_id | uuid | Sim | FK para `class_group` |
-| instructor_id | uuid | Sim | FK para `instructor` |
-| is_lead | boolean | Sim | indica instrutor principal |
-| assigned_at | datetime | Sim | data da atribuição |
+## django_content_type
 
-Restrição única: `(class_group_id, instructor_id)`.
+Modelo: `contenttypes.ContentType`. Infraestrutura Django.
 
-Também existe no máximo um instrutor principal por turma.
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | integer | não | sim | PK | MinValueValidator(-2147483648); MaxValueValidator(2147483647); identity SQL |
+| `app_label` (app_label) | varchar(100) | não | não | — | MaxLengthValidator(100) |
+| `model` (model) | varchar(100) | não | não | — | MaxLengthValidator(100) |
 
-## meeting
+Unicidade composta SQL: `[('app_label', 'model')]`.
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| class_group_id | uuid | Sim | FK para `class_group` |
-| title | varchar(150) | Sim | tema do encontro |
-| description | text | Não | conteúdo e observações |
-| starts_at | datetime | Sim | início |
-| ends_at | datetime | Sim | fim posterior ao início |
-| status | varchar(20) | Sim | `PLANNED`, `COMPLETED`, `CANCELLED` |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+## django_session
 
-Restrição única: `(class_group_id, starts_at)`.
+Modelo: `sessions.Session`. Infraestrutura Django.
 
-## enrollment
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `session_key` (session_key) | varchar(40) | não | não | PK | MaxLengthValidator(40) |
+| `session_data` (session_data) | text | não | não | — | — |
+| `expire_date` (expire_date) | timestamp with time zone | não | não | INDEX | — |
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| participant_id | uuid | Sim | FK `RESTRICT` para `participant` |
-| class_group_id | uuid | Sim | FK `RESTRICT` para `class_group` |
-| status | varchar(30) | Sim | `PENDING`, `CONFIRMED`, `WAITLISTED`, `REJECTED`, `CANCELLED`, `APPROVED`, `NOT_COMPLETED` |
-| status_reason | text | Não | obrigatório em rejeição, exceção ou cancelamento administrativo |
-| waitlisted_at | datetime | Não | base para ordenar a fila |
-| confirmed_at | datetime | Não | momento da confirmação |
-| cancelled_at | datetime | Não | momento do cancelamento |
-| created_by_id | uuid | Sim | FK para `user` que iniciou o registro |
-| created_at | datetime | Sim | criação e desempate da solicitação |
-| updated_at | datetime | Sim | última alteração |
+## enrollments_enrollment
 
-Restrição única: `(participant_id, class_group_id)`.
+Modelo: `enrollments.Enrollment`. Domínio do projeto.
 
-## enrollment_status_history
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `status` (status) | varchar(30) | não | não | — | MaxLengthValidator(30); choices: PENDING, CONFIRMED, WAITLISTED, REJECTED, CANCELLED, APPROVED, NOT_COMPLETED; default Python: PENDING |
+| `status_reason` (status_reason) | text | não | sim | — | — |
+| `waitlisted_at` (waitlisted_at) | timestamp with time zone | sim | sim | — | — |
+| `confirmed_at` (confirmed_at) | timestamp with time zone | sim | sim | — | — |
+| `cancelled_at` (cancelled_at) | timestamp with time zone | sim | sim | — | — |
+| `class_group_id` (class_group) | uuid | não | não | INDEX; FK → workshops_classgroup.id; ORM PROTECT | — |
+| `created_by_id` (created_by) | uuid | não | não | INDEX; FK → accounts_user.id; ORM PROTECT | — |
+| `participant_id` (participant) | uuid | não | não | INDEX; FK → people_participant.id; ORM PROTECT | — |
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | bigint | Sim | PK |
-| enrollment_id | uuid | Sim | FK para `enrollment` |
-| from_status | varchar(30) | Não | situação anterior; nulo na criação |
-| to_status | varchar(30) | Sim | nova situação da inscrição |
-| reason | text | Não | justificativa registrada na transição |
-| changed_by_id | uuid | Sim | FK para o usuário responsável |
-| created_at | datetime | Sim | instante imutável da alteração |
+Restrições explícitas do modelo:
 
-O histórico é criado pelos serviços de domínio e não pode ser incluído, alterado ou excluído
-pelas telas administrativas.
+- `<UniqueConstraint: fields=('participant', 'class_group') name='enrollments_participant_class_unique'>`
 
-## attendance
+Índices explícitos:
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| enrollment_id | uuid | Sim | FK para `enrollment` |
-| meeting_id | uuid | Sim | FK para `meeting` da mesma turma |
-| status | varchar(20) | Sim | `PRESENT`, `ABSENT`, `JUSTIFIED` |
-| note | varchar(255) | Não | justificativa ou observação |
-| recorded_by_id | uuid | Sim | FK para `user` autorizado |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+- `<Index: fields=['class_group', 'status', 'created_at'] name='enrollments_class_status_idx'>`
+- `<Index: fields=['class_group', 'status', 'waitlisted_at'] name='enrollments_waitlist_idx'>`
 
-Restrição única: `(enrollment_id, meeting_id)`.
+## enrollments_enrollmentstatushistory
 
-## student_project
+Modelo: `enrollments.EnrollmentStatusHistory`. Domínio do projeto.
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| enrollment_id | uuid | Sim | FK única para `enrollment` |
-| title | varchar(150) | Sim | nome do projeto |
-| description | text | Sim | problema e solução |
-| repository_url | url | Não | repositório público ou autorizado |
-| demonstration_url | url | Não | página ou demonstração |
-| is_delivered | boolean | Sim | padrão falso |
-| delivered_at | datetime | Não | preenchido quando entregue |
-| review_notes | text | Não | devolutiva do instrutor |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | bigint | não | sim | PK | MinValueValidator(-9223372036854775808); MaxValueValidator(9223372036854775807); identity SQL |
+| `from_status` (from_status) | varchar(30) | sim | sim | — | MaxLengthValidator(30); choices: PENDING, CONFIRMED, WAITLISTED, REJECTED, CANCELLED, APPROVED, NOT_COMPLETED |
+| `to_status` (to_status) | varchar(30) | não | não | — | MaxLengthValidator(30); choices: PENDING, CONFIRMED, WAITLISTED, REJECTED, CANCELLED, APPROVED, NOT_COMPLETED |
+| `reason` (reason) | text | não | sim | — | — |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `changed_by_id` (changed_by) | uuid | não | não | INDEX; FK → accounts_user.id; ORM PROTECT | — |
+| `enrollment_id` (enrollment) | uuid | não | não | INDEX; FK → enrollments_enrollment.id; ORM CASCADE | — |
 
-## evaluation
+## learning_attendance
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| enrollment_id | uuid | Sim | FK única para `enrollment` |
-| final_score | decimal(3,1) | Sim | entre 0,0 e 10,0 |
-| feedback | text | Sim | devolutiva individual |
-| evaluated_by_id | uuid | Sim | FK para `user` autorizado |
-| published_at | datetime | Não | liberação para o participante |
-| created_at | datetime | Sim | criação |
-| updated_at | datetime | Sim | última alteração |
+Modelo: `learning.Attendance`. Domínio do projeto.
 
-## certificate
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `status` (status) | varchar(20) | não | não | — | MaxLengthValidator(20); choices: PRESENT, ABSENT, JUSTIFIED |
+| `note` (note) | varchar(255) | não | sim | — | MaxLengthValidator(255) |
+| `enrollment_id` (enrollment) | uuid | não | não | INDEX; FK → enrollments_enrollment.id; ORM PROTECT | — |
+| `meeting_id` (meeting) | uuid | não | não | INDEX; FK → workshops_meeting.id; ORM PROTECT | — |
+| `recorded_by_id` (recorded_by) | uuid | não | não | INDEX; FK → accounts_user.id; ORM PROTECT | — |
 
-| Campo | Tipo | Obrigatório | Restrições/descrição |
-|---|---|---:|---|
-| id | uuid | Sim | PK |
-| enrollment_id | uuid | Sim | FK única para `enrollment` aprovada |
-| verification_code | varchar(40) | Sim | único e não sequencial |
-| issued_at | datetime | Sim | emissão |
-| workload_hours | decimal(5,2) | Sim | carga calculada na emissão |
-| is_active | boolean | Sim | permite revogação sem exclusão |
-| revoked_at | datetime | Não | data da revogação |
-| revocation_reason | text | Não | motivo obrigatório quando revogado |
-| created_at | datetime | Sim | criação do registro |
-| updated_at | datetime | Sim | última alteração |
+Restrições explícitas do modelo:
 
-## Campos derivados não persistidos
+- `<UniqueConstraint: fields=('enrollment', 'meeting') name='learning_attendance_enrollment_meeting_unique'>`
 
-| Informação | Origem do cálculo |
-|---|---|
-| vagas ocupadas | inscrições confirmadas da turma |
-| vagas disponíveis | capacidade menos vagas ocupadas |
-| posição na espera | ordem por `waitlisted_at`, respeitando elegibilidade |
-| frequência percentual | presenças divididas por encontros realizados |
-| carga horária realizada | soma da duração dos encontros concluídos |
-| elegibilidade para certificado | situação aprovada da inscrição |
+Índices explícitos:
+
+- `<Index: fields=['enrollment', 'status'] name='learning_att_enrollment_idx'>`
+- `<Index: fields=['meeting', 'status'] name='learning_att_meeting_idx'>`
+
+## learning_certificate
+
+Modelo: `learning.Certificate`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `verification_code` (verification_code) | varchar(40) | não | não | UNIQUE | MaxLengthValidator(40); default Python: apps.learning.models.generate_certificate_code |
+| `issued_at` (issued_at) | timestamp with time zone | não | não | — | default Python: django.utils.timezone.now |
+| `workload_hours` (workload_hours) | numeric(5, 2) | não | não | — | MinValueValidator(0); DecimalValidator() |
+| `is_active` (is_active) | boolean | não | não | — | default Python: True |
+| `revoked_at` (revoked_at) | timestamp with time zone | sim | sim | — | — |
+| `revocation_reason` (revocation_reason) | text | não | sim | — | — |
+| `enrollment_id` (enrollment) | uuid | não | não | UNIQUE; FK → enrollments_enrollment.id; ORM PROTECT | — |
+
+Restrições explícitas do modelo:
+
+- `<CheckConstraint: condition=(OR: (AND: ('is_active', True), ('revocation_reason', ''), ('revoked_at__isnull', True)), (AND: ('is_active', False), ('revoked_at__isnull', False), (NOT (AND: ('revocation_reason', ''))))) name='learning_certificate_revocation_state'>`
+
+## learning_evaluation
+
+Modelo: `learning.Evaluation`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `final_score` (final_score) | numeric(3, 1) | não | não | — | MinValueValidator(0); MaxValueValidator(10); DecimalValidator() |
+| `feedback` (feedback) | text | não | não | — | — |
+| `published_at` (published_at) | timestamp with time zone | sim | sim | — | — |
+| `enrollment_id` (enrollment) | uuid | não | não | UNIQUE; FK → enrollments_enrollment.id; ORM PROTECT | — |
+| `evaluated_by_id` (evaluated_by) | uuid | não | não | INDEX; FK → accounts_user.id; ORM PROTECT | — |
+
+Restrições explícitas do modelo:
+
+- `<CheckConstraint: condition=(AND: ('final_score__gte', 0), ('final_score__lte', 10)) name='learning_evaluation_score_range'>`
+
+## learning_studentproject
+
+Modelo: `learning.StudentProject`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `title` (title) | varchar(150) | não | não | — | MaxLengthValidator(150) |
+| `description` (description) | text | não | não | — | — |
+| `repository_url` (repository_url) | varchar(200) | não | sim | — | URLValidator(); MaxLengthValidator(200) |
+| `demonstration_url` (demonstration_url) | varchar(200) | não | sim | — | URLValidator(); MaxLengthValidator(200) |
+| `is_delivered` (is_delivered) | boolean | não | não | — | default Python: False |
+| `delivered_at` (delivered_at) | timestamp with time zone | sim | sim | — | — |
+| `review_notes` (review_notes) | text | não | sim | — | — |
+| `enrollment_id` (enrollment) | uuid | não | não | UNIQUE; FK → enrollments_enrollment.id; ORM PROTECT | — |
+
+## people_guardian
+
+Modelo: `people.Guardian`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `full_name` (full_name) | varchar(150) | não | não | — | MaxLengthValidator(150) |
+| `phone` (phone) | varchar(11) | não | não | — | validate_phone; MaxLengthValidator(11) |
+| `email` (email) | varchar(254) | não | sim | — | EmailValidator(); MaxLengthValidator(254) |
+| `is_active` (is_active) | boolean | não | não | — | default Python: True |
+
+## people_institution
+
+Modelo: `people.Institution`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `name` (name) | varchar(150) | não | não | — | MaxLengthValidator(150) |
+| `document` (document) | varchar(14) | sim | sim | UNIQUE | validate_cnpj; MaxLengthValidator(14) |
+| `contact_name` (contact_name) | varchar(150) | não | sim | — | MaxLengthValidator(150) |
+| `contact_email` (contact_email) | varchar(254) | não | sim | — | EmailValidator(); MaxLengthValidator(254) |
+| `contact_phone` (contact_phone) | varchar(11) | não | sim | — | validate_phone; MaxLengthValidator(11) |
+| `address` (address) | varchar(255) | não | sim | — | MaxLengthValidator(255) |
+| `is_active` (is_active) | boolean | não | não | — | default Python: True |
+
+## people_instructor
+
+Modelo: `people.Instructor`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `biography` (biography) | text | não | sim | — | — |
+| `specialties` (specialties) | varchar(255) | não | sim | — | MaxLengthValidator(255) |
+| `is_active` (is_active) | boolean | não | não | — | default Python: True |
+| `user_id` (user) | uuid | não | não | UNIQUE; FK → accounts_user.id; ORM PROTECT | — |
+
+## people_participant
+
+Modelo: `people.Participant`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `full_name` (full_name) | varchar(150) | não | não | — | MaxLengthValidator(150) |
+| `birth_date` (birth_date) | date | não | não | — | — |
+| `cpf` (cpf) | varchar(11) | sim | sim | UNIQUE | validate_cpf; MaxLengthValidator(11) |
+| `contact_email` (contact_email) | varchar(254) | não | sim | — | EmailValidator(); MaxLengthValidator(254) |
+| `phone` (phone) | varchar(11) | não | sim | — | validate_phone; MaxLengthValidator(11) |
+| `is_active` (is_active) | boolean | não | não | — | default Python: True |
+| `privacy_consent_at` (privacy_consent_at) | timestamp with time zone | sim | sim | — | — |
+| `image_authorization` (image_authorization) | boolean | não | não | — | default Python: False |
+| `user_id` (user) | uuid | sim | sim | UNIQUE; FK → accounts_user.id; ORM PROTECT | — |
+
+## people_participantguardian
+
+Modelo: `people.ParticipantGuardian`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `relationship` (relationship) | varchar(30) | não | não | — | MaxLengthValidator(30); choices: MOTHER, FATHER, LEGAL_GUARDIAN, OTHER |
+| `is_primary` (is_primary) | boolean | não | não | — | default Python: False |
+| `guardian_id` (guardian) | uuid | não | não | INDEX; FK → people_guardian.id; ORM PROTECT | — |
+| `participant_id` (participant) | uuid | não | não | INDEX; FK → people_participant.id; ORM CASCADE | — |
+
+Restrições explícitas do modelo:
+
+- `<UniqueConstraint: fields=('participant', 'guardian') name='people_participant_guardian_unique'>`
+- `<UniqueConstraint: fields=('participant',) name='people_participant_primary_guardian_unique' condition=(AND: ('is_primary', True))>`
+
+## workshops_classgroup
+
+Modelo: `workshops.ClassGroup`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `code` (code) | varchar(30) | não | não | UNIQUE | MaxLengthValidator(30) |
+| `title` (title) | varchar(150) | não | não | — | MaxLengthValidator(150) |
+| `location` (location) | varchar(255) | não | não | — | MaxLengthValidator(255) |
+| `capacity` (capacity) | integer | não | não | — | MinValueValidator(1); MaxValueValidator(2147483647) |
+| `waitlist_enabled` (waitlist_enabled) | boolean | não | não | — | default Python: True |
+| `registration_opens_at` (registration_opens_at) | timestamp with time zone | não | não | — | — |
+| `registration_closes_at` (registration_closes_at) | timestamp with time zone | não | não | — | — |
+| `start_date` (start_date) | date | não | não | — | — |
+| `end_date` (end_date) | date | não | não | — | — |
+| `status` (status) | varchar(30) | não | não | — | MaxLengthValidator(30); choices: PLANNED, OPEN, IN_PROGRESS, COMPLETED, CANCELLED; default Python: PLANNED |
+| `created_by_id` (created_by) | uuid | não | não | INDEX; FK → accounts_user.id; ORM PROTECT | — |
+| `institution_id` (institution) | uuid | sim | sim | INDEX; FK → people_institution.id; ORM PROTECT | — |
+| `workshop_id` (workshop) | uuid | não | não | INDEX; FK → workshops_workshop.id; ORM PROTECT | — |
+
+Restrições explícitas do modelo:
+
+- `<CheckConstraint: condition=(AND: ('capacity__gt', 0)) name='workshops_capacity_gt_zero'>`
+
+Índices explícitos:
+
+- `<Index: fields=['workshop', 'status', 'start_date'] name='workshops_class_search_idx'>`
+
+## workshops_classinstructor
+
+Modelo: `workshops.ClassInstructor`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `is_lead` (is_lead) | boolean | não | não | — | default Python: False |
+| `assigned_at` (assigned_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `class_group_id` (class_group) | uuid | não | não | INDEX; FK → workshops_classgroup.id; ORM CASCADE | — |
+| `instructor_id` (instructor) | uuid | não | não | INDEX; FK → people_instructor.id; ORM PROTECT | — |
+
+Restrições explícitas do modelo:
+
+- `<UniqueConstraint: fields=('class_group', 'instructor') name='workshops_class_instructor_unique'>`
+- `<UniqueConstraint: fields=('class_group',) name='workshops_class_lead_unique' condition=(AND: ('is_lead', True))>`
+
+## workshops_meeting
+
+Modelo: `workshops.Meeting`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `title` (title) | varchar(150) | não | não | — | MaxLengthValidator(150) |
+| `description` (description) | text | não | sim | — | — |
+| `starts_at` (starts_at) | timestamp with time zone | não | não | — | — |
+| `ends_at` (ends_at) | timestamp with time zone | não | não | — | — |
+| `status` (status) | varchar(20) | não | não | — | MaxLengthValidator(20); choices: PLANNED, COMPLETED, CANCELLED; default Python: PLANNED |
+| `class_group_id` (class_group) | uuid | não | não | INDEX; FK → workshops_classgroup.id; ORM CASCADE | — |
+
+Restrições explícitas do modelo:
+
+- `<UniqueConstraint: fields=('class_group', 'starts_at') name='workshops_meeting_start_unique'>`
+- `<CheckConstraint: condition=(AND: ('ends_at__gt', F(starts_at))) name='workshops_meeting_end_after_start'>`
+
+Índices explícitos:
+
+- `<Index: fields=['class_group', 'status', 'starts_at'] name='workshops_meeting_schedule_idx'>`
+
+## workshops_workshop
+
+Modelo: `workshops.Workshop`. Domínio do projeto.
+
+| Coluna (campo) | Tipo PostgreSQL | NULL | blank | Chaves/índice | Regras e preenchimento |
+|---|---|---|---|---|---|
+| `id` (id) | uuid | não | não | PK | default Python: uuid.uuid4 |
+| `created_at` (created_at) | timestamp with time zone | não | sim | — | auto_now_add |
+| `updated_at` (updated_at) | timestamp with time zone | não | sim | — | auto_now |
+| `title` (title) | varchar(150) | não | não | — | MaxLengthValidator(150) |
+| `slug` (slug) | varchar(170) | não | não | UNIQUE | RegexValidator(); MaxLengthValidator(170) |
+| `summary` (summary) | varchar(300) | não | não | — | MaxLengthValidator(300) |
+| `objective` (objective) | text | não | não | — | — |
+| `syllabus` (syllabus) | text | não | não | — | — |
+| `estimated_hours` (estimated_hours) | numeric(5, 2) | não | não | — | MinValueValidator(0.01); DecimalValidator() |
+| `status` (status) | varchar(20) | não | não | — | MaxLengthValidator(20); choices: DRAFT, PUBLISHED, ARCHIVED; default Python: DRAFT |
+| `created_by_id` (created_by) | uuid | não | não | INDEX; FK → accounts_user.id; ORM PROTECT | — |
+
+Índices explícitos:
+
+- `<Index: fields=['status'] name='workshops_workshop_status_idx'>`
+
+## Regras entre entidades e valores derivados
+
+- Idade 14–21 no início e responsável ativo para menor na inscrição: people/enrollments services; não são CHECK SQL.
+- Uma turma pode ter zero instrutores enquanto planejada; abrir/iniciar exige instrutor ativo e iniciar exige encontro planejado.
+- Frequência liga inscrição e encontro da mesma turma: Attendance.clean e seleção do serviço. A FK isolada não verifica essa igualdade.
+- Vagas operacionais contam CONFIRMED; painel histórico conta CONFIRMED/APPROVED/NOT_COMPLETED. Fila usa waitlisted_at, created_at e PK como desempate.
+- Frequência usa PRESENT / encontros COMPLETED já terminados; JUSTIFIED não conta presença. Percentual é calculado, não coluna.
+- Aprovação exige frequência ≥75%, nota ≥6 e projeto entregue; conclusão exige todos os encontros não cancelados processados e avaliações registradas.
+- Certificate.enrollment_id é UNIQUE para todo o histórico: há no máximo um certificado por inscrição, mesmo revogado; o MVP não reemite revogado. workload_hours é snapshot na emissão; PDF usa nomes/dados relacionados na consulta, sem snapshot integral do cadastro.
+- Histórico da inscrição é imutável pelos fluxos/admin; frequência/avaliação conservam última autoria/data, sem log de todas as versões.
+- CPF/CNPJ opcionais são normalizados para NULL quando vazios e validados em Python; hashes de senha e sessões nunca são evidência pública.

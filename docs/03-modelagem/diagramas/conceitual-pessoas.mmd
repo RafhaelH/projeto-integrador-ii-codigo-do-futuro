@@ -1,0 +1,8 @@
+erDiagram
+    USER o|--o| PARTICIPANT : identifica
+    USER ||--o| INSTRUCTOR : identifica
+    PARTICIPANT ||--o{ PARTICIPANT_GUARDIAN : vincula
+    GUARDIAN ||--o{ PARTICIPANT_GUARDIAN : responde
+    INSTRUCTOR ||--o{ CLASS_INSTRUCTOR : ministra
+    CLASS_GROUP ||--o{ CLASS_INSTRUCTOR : atribui
+    INSTITUTION o|--o{ CLASS_GROUP : acolhe

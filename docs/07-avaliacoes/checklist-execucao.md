@@ -2,7 +2,7 @@
 
 Estado: **aguardando avaliação humana**. Os itens abaixo estão desmarcados para execução pelo responsável.
 
-- [ ] Escolher cinco pessoas reais; obter ciência para uso acadêmico e autorização de gravação se aplicável.
+- [ ] Escolher cinco colegas de curso ou profissionais da área distintos; registrar nome e condição; obter ciência para uso acadêmico e autorização de gravação se aplicável.
 - [ ] Registrar versão publicada, data, URL e dispositivo em cada ficha.
 - [ ] Fazer backup do banco exclusivo deste projeto antes das sessões.
 - [ ] Conferir contas e credenciais restritas, entregando somente o acesso individual.

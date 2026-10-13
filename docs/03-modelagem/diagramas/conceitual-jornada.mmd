@@ -1,0 +1,11 @@
+erDiagram
+    WORKSHOP ||--o{ CLASS_GROUP : origina
+    CLASS_GROUP ||--o{ MEETING : contem
+    PARTICIPANT ||--o{ ENROLLMENT : solicita
+    CLASS_GROUP ||--o{ ENROLLMENT : recebe
+    ENROLLMENT ||--o{ ENROLLMENT_STATUS_HISTORY : registra
+    ENROLLMENT ||--o{ ATTENDANCE : apura
+    MEETING ||--o{ ATTENDANCE : recebe
+    ENROLLMENT ||--o| STUDENT_PROJECT : entrega
+    ENROLLMENT ||--o| EVALUATION : recebe
+    ENROLLMENT ||--o| CERTIFICATE : identifica

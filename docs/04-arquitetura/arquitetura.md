@@ -1,153 +1,47 @@
-# Arquitetura da solução
+# Arquitetura implementada
 
-## Estilo escolhido
+## Estilo e versão
 
-A solução será um **monólito modular Django**, renderizado no servidor, com PostgreSQL. A separação interna seguirá módulos de negócio e camadas leves de apresentação, aplicação/domínio e persistência.
+Monólito modular Django 5.2, Python 3.12, templates renderizados no servidor e PostgreSQL 17. Código `a351c5a`, cujo src é igual a develop `644e7a6`. A [ADR 0001](adr/0001-monolito-modular-django.md) conserva a decisão registrada; esta descrição usa os arquivos atuais.
 
-Essa abordagem atende ao conceito MVC/MTV solicitado pela disciplina, reduz a complexidade operacional e permite testar as regras de negócio isoladamente.
+## Camadas e relação MTV/MVC
 
-## Visão de execução
+| Responsabilidade | Arquivos reais | Relação arquitetural |
+|---|---|---|
+| Roteamento/controle | config/urls.py, apps/*/urls.py, middleware | Framework encaminha à view, aplica sessão/CSRF |
+| Seleção de dados/coordenação | apps/*/views.py, accounts/mixins.py | View no Django; também coordena entrada, forms e serviços |
+| Apresentação | src/templates/**/*.html, src/static/css/app.css | Template no MTV; apresentação equivalente à view em MVC |
+| Entrada | apps/*/forms.py | Formatos, obrigatórios, whitelist e mensagens; não substitui autorização |
+| Aplicação/domínio | people, workshops, enrollments, learning/services.py | Elegibilidade, transições, vagas, chamada, entrega, avaliação, conclusão, certificado |
+| Consultas | learning/selectors.py, reporting/selectors.py e querysets nas views simples | Leituras por papel/vínculo, agregações/filtros |
+| Persistência/invariantes | apps/*/models.py e migrations | Model MTV/MVC: entidades, validação local, ORM, constraints/índices |
 
-```mermaid
-flowchart TB
-    Client["Navegador responsivo"]
-    App["Aplicação Django"]
-    DB[(PostgreSQL)]
-    Mail["Serviço SMTP"]
-    Storage["Arquivos estáticos e mídia"]
+A equivalência é de responsabilidades. A [FAQ oficial Django 5.2](https://docs.djangoproject.com/en/5.2/faq/general/#django-appears-to-be-a-mvc-framework-but-you-call-the-controller-the-view-and-the-view-the-template-how-come-you-don-t-use-the-standard-names) explica view como seleção de dados, template como apresentação e framework/roteamento como controle. Nesta aplicação, views também coordenam forms e serviços. Não há correspondência exata entre nomes de classes, microserviços ou API/SPA separada. Os fluxos atuais usam forms HTML e CSS; não há JavaScript próprio implementado nem necessidade de adicioná-lo para atender ao enunciado.
 
-    Client -->|HTTPS| App
-    App --> DB
-    App --> Mail
-    App --> Storage
-```
+## Módulos e dependências
 
-## Módulos planejados
-
-| Módulo Django | Responsabilidade |
+| Módulo | Responsabilidade implementada |
 |---|---|
-| `core` | classes base, utilitários comuns e página inicial |
-| `accounts` | usuário customizado, autenticação e autorização |
-| `people` | participantes, responsáveis, instrutores e instituições |
-| `workshops` | oficinas, turmas, instrutores da turma e encontros |
-| `enrollments` | inscrição, vagas, fila de espera e transições |
-| `learning` | frequência, projetos, avaliação, conclusão e certificados |
-| `reporting` | indicadores por escopo, filtros comuns e exportações CSV somente leitura |
+| accounts | User por e-mail, papéis, mixins, perfil próprio/admin; auth views Django para login/logout/redefinição |
+| core | Base abstrata UUID/timestamps, início/saúde/prontidão e comandos de carga/arquivo restritos à operação |
+| people | Participant, Guardian, ParticipantGuardian, Instructor, Institution; elegibilidade e documentos |
+| workshops | Workshop, ClassGroup, ClassInstructor, Meeting; publicação, agenda, atribuições/estados |
+| enrollments | Enrollment/histórico; solicitação, confirmação, espera, promoção, rejeição/cancelamento |
+| learning | Attendance, StudentProject, Evaluation, Certificate; chamada/entrega/revisão/conclusão/PDF/revogação |
+| reporting | Indicadores e três CSVs somente leitura; sem models/migrations próprios |
 
-## Estrutura executável planejada
+people usa accounts/core; workshops usa people/accounts; enrollments usa people/workshops; learning usa enrollments/workshops; reporting consulta esses domínios. UUIDTimestampedModel não cria tabela. Views simples consultam diretamente: não existe proibição absoluta de querysets na apresentação. Settings base/local/test/production, uv.lock e testes por domínio organizam configurações e bibliotecas.
 
-```text
-.
-├── .github/workflows/
-├── docs/
-├── src/
-│   ├── manage.py
-│   ├── config/
-│   │   ├── settings/
-│   │   │   ├── base.py
-│   │   │   ├── local.py
-│   │   │   ├── production.py
-│   │   │   └── test.py
-│   │   ├── urls.py
-│   │   ├── asgi.py
-│   │   └── wsgi.py
-│   ├── apps/
-│   │   ├── core/
-│   │   ├── accounts/
-│   │   ├── people/
-│   │   ├── workshops/
-│   │   ├── enrollments/
-│   │   ├── learning/
-│   │   └── reporting/
-│   ├── templates/
-│   └── static/
-├── tests/
-├── pyproject.toml
-└── README.md
-```
+## Transações, autorização e conservação
 
-Essa árvore será criada na etapa de bootstrap, junto às dependências e aos primeiros testes. Não haverá arquivos Python vazios apenas para simular progresso.
+create/confirm/cancel/promote_enrollment bloqueiam turma/registros em transaction.atomic e recalculam ocupação. A unicidade participante/turma impede duplicidade. complete_class_group valida encontros não cancelados e avaliações, grava resultados/histórico e então transiciona. O Django admin usa readonly, rejeita POST forjado e encaminha aos serviços canônicos.
 
-## Responsabilidades por camada
+Papel/vínculo são conferidos no servidor; instrutor precisa de atribuição e participante acessa objetos próprios. ADMIN é papel funcional global; is_staff/superuser são privilégios distintos de /admin/. A01/A02 não os possuem. Perfil próprio usa request.user e whitelist nome/e-mail, sem editar dados acadêmicos ou privilégios.
 
-### Apresentação
+CSRF, escape, ORM, senha/sessões Django e HTTPS compõem os controles; não equivalem a auditoria externa de segurança. Histórico conserva transições da inscrição; frequência/avaliação mantêm última autoria/data, sem log integral de versões. Certificados são revogados pela interface.
 
-- views recebem a requisição e coordenam a resposta;
-- forms validam formato e dados de entrada;
-- templates apresentam conteúdo sem concentrar regra de negócio;
-- autorização é aplicada no servidor antes da execução da ação.
+## Execução publicada
 
-### Aplicação e domínio
+Navegador → HTTPS/Nginx → loopback 127.0.0.1:8031 → Gunicorn/Django → PostgreSQL em rede interna sem porta publicada. WhiteNoise serve estáticos e volumes conservam banco/mídia. Backend de e-mail é **console**; não está demonstrada entrega SMTP externa. O [guia VPS](implantacao-vps.md) descreve operação/backup/restauração; nenhuma implantação ocorreu nesta auditoria.
 
-- `services.py` executa comandos que alteram estado;
-- transições de oficina, turma e inscrição ficam centralizadas;
-- cálculo de frequência e conclusão possui funções determinísticas;
-- regras com concorrência usam transações explícitas.
-
-### Consulta e persistência
-
-- models representam entidades e invariantes locais;
-- `selectors.py` concentra consultas de leitura não triviais;
-- constraints protegem unicidade e integridade no banco;
-- views não montam consultas complexas diretamente.
-
-## Fluxo de dependências
-
-```mermaid
-flowchart LR
-    Templates[Templates] --> Views[Views e Forms]
-    Views --> Services[Services]
-    Views --> Selectors[Selectors]
-    Services --> Models[Models]
-    Selectors --> Models
-```
-
-Módulos de domínio não dependem de templates. `reporting` pode consultar dados dos demais módulos, mas não deve alterar seus estados.
-
-## Concorrência de vagas
-
-A confirmação de inscrição será executada em `transaction.atomic()`. A turma será carregada com bloqueio de linha, a ocupação será recalculada e somente então a inscrição poderá ser confirmada. Essa decisão implementa RN-022 e RNF-018, evitando excesso de vagas em requisições simultâneas.
-
-## Segurança
-
-- modelo de usuário customizado definido antes da primeira migração;
-- senhas e sessões gerenciadas pelo Django;
-- CSRF habilitado em formulários;
-- consultas via ORM e escape padrão nos templates;
-- cookies seguros e HTTPS no ambiente publicado;
-- segredos em variáveis de ambiente;
-- checagem de papel e vínculo em cada operação;
-- respostas de erro sem detalhes internos;
-- dados de demonstração fictícios.
-
-## Estratégia de configurações
-
-- `base`: configuração compartilhada;
-- `local`: desenvolvimento, debug e serviços locais;
-- `test`: execução rápida e determinística;
-- `production`: debug desativado e controles de segurança.
-
-## Observabilidade mínima
-
-- logs estruturados de erro e operações sensíveis;
-- identificador temporal e autoria em frequência e avaliação;
-- página de saúde para implantação;
-- erros de aplicação registrados no servidor, sem dados sensíveis.
-
-## Qualidade e integração contínua
-
-Em cada pull request serão executados:
-
-1. formatação e lint;
-2. verificação das migrações;
-3. testes automatizados;
-4. relatório de cobertura;
-5. verificações de segurança/configuração do framework.
-
-## Estratégia de implantação
-
-A aplicação é empacotada de forma reproduzível em uma imagem Docker. A publicação acadêmica
-usa Gunicorn e PostgreSQL 17 em uma rede Docker interna, com o Nginx da VPS terminando HTTPS e
-encaminhando somente para uma porta vinculada ao loopback. Segredos ficam fora do Git, dados e
-mídias usam volumes persistentes, e os procedimentos de backup, restauração, atualização e smoke
-test estão descritos no [guia de implantação](implantacao-vps.md).
+[Diagramas](../03-modelagem/diagramas.md) mostram camadas/fluxos reais e [banco físico](../03-modelagem/banco-fisico.md) separa garantias SQL de regras dos serviços. CI usa PostgreSQL isolado para lint, migrations, testes e smoke do empacotamento.

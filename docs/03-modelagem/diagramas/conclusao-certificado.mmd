@@ -1,0 +1,38 @@
+sequenceDiagram
+    actor A as Administrador
+    participant V as CompleteClassGroupView
+    participant S as Serviços learning
+    participant E as IssueCertificateView
+    participant DB as PostgreSQL
+    A->>V: POST com CSRF
+    V->>S: complete_class_group(turma, actor)
+    S->>DB: BEGIN, bloquear turma, encontros e inscrições
+    S->>S: IN_PROGRESS, encontros processados/past, avaliações completas
+    alt Pré-condição falha
+        S->>DB: ROLLBACK
+        S-->>V: ValidationError
+    else Pré-condições válidas
+        loop Cada inscrição CONFIRMED
+            S->>S: frequência >=75, nota >=6, projeto entregue
+            S->>DB: APPROVED ou NOT_COMPLETED com motivos/histórico
+        end
+        S->>DB: Turma COMPLETED, COMMIT
+        S-->>V: resumo
+    end
+    A->>E: POST de emissão com CSRF
+    E->>S: issue_certificate(inscrição, actor)
+    S->>DB: BEGIN, bloquear inscrição, buscar certificado
+    alt Certificado ativo existente
+        DB-->>S: reutilizar (idempotência)
+        S->>DB: COMMIT
+        S-->>E: certificado existente
+    else Não existe
+        S->>S: somar horas de encontros COMPLETED
+        S->>DB: inserir código único, carga e emissão
+        S->>DB: COMMIT
+        S-->>E: novo certificado
+    else Certificado revogado ou inscrição não aprovada
+        S->>DB: ROLLBACK
+        S-->>E: ValidationError, nenhuma emissão
+    end
+    E-->>A: Mensagem conforme resultado

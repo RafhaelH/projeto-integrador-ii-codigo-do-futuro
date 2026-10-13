@@ -1,0 +1,3141 @@
+{
+  "source": "estado final das migrations conferido com models; sem consulta ao banco",
+  "django": "5.2.17",
+  "models": [
+    {
+      "model": "accounts.User",
+      "table": "accounts_user",
+      "domain": true,
+      "fields": [
+        {
+          "field": "password",
+          "column": "password",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(128)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(128)"
+          ]
+        },
+        {
+          "field": "last_login",
+          "column": "last_login",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "is_superuser",
+          "column": "is_superuser",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "False"
+        },
+        {
+          "field": "is_staff",
+          "column": "is_staff",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "False"
+        },
+        {
+          "field": "is_active",
+          "column": "is_active",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "True"
+        },
+        {
+          "field": "date_joined",
+          "column": "date_joined",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "django.utils.timezone.now"
+        },
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "email",
+          "column": "email",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(254)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "EmailValidator()",
+            "MaxLengthValidator(254)"
+          ]
+        },
+        {
+          "field": "full_name",
+          "column": "full_name",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(150)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(150)"
+          ]
+        },
+        {
+          "field": "role",
+          "column": "role",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(20)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [
+            [
+              "ADMIN",
+              "Administrador"
+            ],
+            [
+              "INSTRUCTOR",
+              "Instrutor"
+            ],
+            [
+              "PARTICIPANT",
+              "Participante"
+            ]
+          ],
+          "validators": [
+            "MaxLengthValidator(20)"
+          ],
+          "python_default": "PARTICIPANT"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        }
+      ],
+      "constraints": [
+        "<UniqueConstraint: expressions=(Lower(F(email)),) name='accounts_user_email_ci_unique'>"
+      ],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": [
+        {
+          "field": "groups",
+          "table": "accounts_user_groups"
+        },
+        {
+          "field": "user_permissions",
+          "table": "accounts_user_user_permissions"
+        }
+      ]
+    },
+    {
+      "model": "auth.Group",
+      "table": "auth_group",
+      "domain": false,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "AutoField",
+          "postgresql_type": "integer",
+          "null": false,
+          "blank": true,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MinValueValidator(-2147483648)",
+            "MaxValueValidator(2147483647)"
+          ]
+        },
+        {
+          "field": "name",
+          "column": "name",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(150)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(150)"
+          ]
+        }
+      ],
+      "constraints": [],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": [
+        {
+          "field": "permissions",
+          "table": "auth_group_permissions"
+        }
+      ]
+    },
+    {
+      "model": "auth.Permission",
+      "table": "auth_permission",
+      "domain": false,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "AutoField",
+          "postgresql_type": "integer",
+          "null": false,
+          "blank": true,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MinValueValidator(-2147483648)",
+            "MaxValueValidator(2147483647)"
+          ]
+        },
+        {
+          "field": "name",
+          "column": "name",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(255)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(255)"
+          ]
+        },
+        {
+          "field": "content_type",
+          "column": "content_type_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "integer",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "django_content_type.id",
+          "on_delete_orm": "CASCADE"
+        },
+        {
+          "field": "codename",
+          "column": "codename",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(100)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(100)"
+          ]
+        }
+      ],
+      "constraints": [],
+      "indexes": [],
+      "unique_together": [
+        [
+          "content_type",
+          "codename"
+        ]
+      ],
+      "many_to_many": []
+    },
+    {
+      "model": "admin.LogEntry",
+      "table": "django_admin_log",
+      "domain": false,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "AutoField",
+          "postgresql_type": "integer",
+          "null": false,
+          "blank": true,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MinValueValidator(-2147483648)",
+            "MaxValueValidator(2147483647)"
+          ]
+        },
+        {
+          "field": "action_time",
+          "column": "action_time",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "django.utils.timezone.now"
+        },
+        {
+          "field": "object_id",
+          "column": "object_id",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "object_repr",
+          "column": "object_repr",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(200)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(200)"
+          ]
+        },
+        {
+          "field": "action_flag",
+          "column": "action_flag",
+          "django_type": "PositiveSmallIntegerField",
+          "postgresql_type": "smallint",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [
+            [
+              1,
+              "Addition"
+            ],
+            [
+              2,
+              "Change"
+            ],
+            [
+              3,
+              "Deletion"
+            ]
+          ],
+          "validators": [
+            "MinValueValidator(0)",
+            "MaxValueValidator(32767)"
+          ]
+        },
+        {
+          "field": "change_message",
+          "column": "change_message",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "content_type",
+          "column": "content_type_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "integer",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "django_content_type.id",
+          "on_delete_orm": "SET_NULL"
+        },
+        {
+          "field": "user",
+          "column": "user_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "accounts_user.id",
+          "on_delete_orm": "CASCADE"
+        }
+      ],
+      "constraints": [],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "contenttypes.ContentType",
+      "table": "django_content_type",
+      "domain": false,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "AutoField",
+          "postgresql_type": "integer",
+          "null": false,
+          "blank": true,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MinValueValidator(-2147483648)",
+            "MaxValueValidator(2147483647)"
+          ]
+        },
+        {
+          "field": "app_label",
+          "column": "app_label",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(100)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(100)"
+          ]
+        },
+        {
+          "field": "model",
+          "column": "model",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(100)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(100)"
+          ]
+        }
+      ],
+      "constraints": [],
+      "indexes": [],
+      "unique_together": [
+        [
+          "app_label",
+          "model"
+        ]
+      ],
+      "many_to_many": []
+    },
+    {
+      "model": "sessions.Session",
+      "table": "django_session",
+      "domain": false,
+      "fields": [
+        {
+          "field": "session_key",
+          "column": "session_key",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(40)",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(40)"
+          ]
+        },
+        {
+          "field": "session_data",
+          "column": "session_data",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "expire_date",
+          "column": "expire_date",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": []
+        }
+      ],
+      "constraints": [],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "enrollments.Enrollment",
+      "table": "enrollments_enrollment",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "status",
+          "column": "status",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(30)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [
+            [
+              "PENDING",
+              "Pendente"
+            ],
+            [
+              "CONFIRMED",
+              "Confirmada"
+            ],
+            [
+              "WAITLISTED",
+              "Lista de espera"
+            ],
+            [
+              "REJECTED",
+              "Rejeitada"
+            ],
+            [
+              "CANCELLED",
+              "Cancelada"
+            ],
+            [
+              "APPROVED",
+              "Aprovada"
+            ],
+            [
+              "NOT_COMPLETED",
+              "Não concluída"
+            ]
+          ],
+          "validators": [
+            "MaxLengthValidator(30)"
+          ],
+          "python_default": "PENDING"
+        },
+        {
+          "field": "status_reason",
+          "column": "status_reason",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "waitlisted_at",
+          "column": "waitlisted_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "confirmed_at",
+          "column": "confirmed_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "cancelled_at",
+          "column": "cancelled_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "class_group",
+          "column": "class_group_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "workshops_classgroup.id",
+          "on_delete_orm": "PROTECT"
+        },
+        {
+          "field": "created_by",
+          "column": "created_by_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "accounts_user.id",
+          "on_delete_orm": "PROTECT"
+        },
+        {
+          "field": "participant",
+          "column": "participant_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "people_participant.id",
+          "on_delete_orm": "PROTECT"
+        }
+      ],
+      "constraints": [
+        "<UniqueConstraint: fields=('participant', 'class_group') name='enrollments_participant_class_unique'>"
+      ],
+      "indexes": [
+        "<Index: fields=['class_group', 'status', 'created_at'] name='enrollments_class_status_idx'>",
+        "<Index: fields=['class_group', 'status', 'waitlisted_at'] name='enrollments_waitlist_idx'>"
+      ],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "enrollments.EnrollmentStatusHistory",
+      "table": "enrollments_enrollmentstatushistory",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "BigAutoField",
+          "postgresql_type": "bigint",
+          "null": false,
+          "blank": true,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MinValueValidator(-9223372036854775808)",
+            "MaxValueValidator(9223372036854775807)"
+          ]
+        },
+        {
+          "field": "from_status",
+          "column": "from_status",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(30)",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [
+            [
+              "PENDING",
+              "Pendente"
+            ],
+            [
+              "CONFIRMED",
+              "Confirmada"
+            ],
+            [
+              "WAITLISTED",
+              "Lista de espera"
+            ],
+            [
+              "REJECTED",
+              "Rejeitada"
+            ],
+            [
+              "CANCELLED",
+              "Cancelada"
+            ],
+            [
+              "APPROVED",
+              "Aprovada"
+            ],
+            [
+              "NOT_COMPLETED",
+              "Não concluída"
+            ]
+          ],
+          "validators": [
+            "MaxLengthValidator(30)"
+          ]
+        },
+        {
+          "field": "to_status",
+          "column": "to_status",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(30)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [
+            [
+              "PENDING",
+              "Pendente"
+            ],
+            [
+              "CONFIRMED",
+              "Confirmada"
+            ],
+            [
+              "WAITLISTED",
+              "Lista de espera"
+            ],
+            [
+              "REJECTED",
+              "Rejeitada"
+            ],
+            [
+              "CANCELLED",
+              "Cancelada"
+            ],
+            [
+              "APPROVED",
+              "Aprovada"
+            ],
+            [
+              "NOT_COMPLETED",
+              "Não concluída"
+            ]
+          ],
+          "validators": [
+            "MaxLengthValidator(30)"
+          ]
+        },
+        {
+          "field": "reason",
+          "column": "reason",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "changed_by",
+          "column": "changed_by_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "accounts_user.id",
+          "on_delete_orm": "PROTECT"
+        },
+        {
+          "field": "enrollment",
+          "column": "enrollment_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "enrollments_enrollment.id",
+          "on_delete_orm": "CASCADE"
+        }
+      ],
+      "constraints": [],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "learning.Attendance",
+      "table": "learning_attendance",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "status",
+          "column": "status",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(20)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [
+            [
+              "PRESENT",
+              "Presente"
+            ],
+            [
+              "ABSENT",
+              "Ausente"
+            ],
+            [
+              "JUSTIFIED",
+              "Falta justificada"
+            ]
+          ],
+          "validators": [
+            "MaxLengthValidator(20)"
+          ]
+        },
+        {
+          "field": "note",
+          "column": "note",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(255)",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(255)"
+          ]
+        },
+        {
+          "field": "enrollment",
+          "column": "enrollment_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "enrollments_enrollment.id",
+          "on_delete_orm": "PROTECT"
+        },
+        {
+          "field": "meeting",
+          "column": "meeting_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "workshops_meeting.id",
+          "on_delete_orm": "PROTECT"
+        },
+        {
+          "field": "recorded_by",
+          "column": "recorded_by_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "accounts_user.id",
+          "on_delete_orm": "PROTECT"
+        }
+      ],
+      "constraints": [
+        "<UniqueConstraint: fields=('enrollment', 'meeting') name='learning_attendance_enrollment_meeting_unique'>"
+      ],
+      "indexes": [
+        "<Index: fields=['enrollment', 'status'] name='learning_att_enrollment_idx'>",
+        "<Index: fields=['meeting', 'status'] name='learning_att_meeting_idx'>"
+      ],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "learning.Certificate",
+      "table": "learning_certificate",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "verification_code",
+          "column": "verification_code",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(40)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(40)"
+          ],
+          "python_default": "apps.learning.models.generate_certificate_code"
+        },
+        {
+          "field": "issued_at",
+          "column": "issued_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "django.utils.timezone.now"
+        },
+        {
+          "field": "workload_hours",
+          "column": "workload_hours",
+          "django_type": "DecimalField",
+          "postgresql_type": "numeric(5, 2)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MinValueValidator(0)",
+            "DecimalValidator()"
+          ]
+        },
+        {
+          "field": "is_active",
+          "column": "is_active",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "True"
+        },
+        {
+          "field": "revoked_at",
+          "column": "revoked_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "revocation_reason",
+          "column": "revocation_reason",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "enrollment",
+          "column": "enrollment_id",
+          "django_type": "OneToOneField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": true,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "enrollments_enrollment.id",
+          "on_delete_orm": "PROTECT"
+        }
+      ],
+      "constraints": [
+        "<CheckConstraint: condition=(OR: (AND: ('is_active', True), ('revocation_reason', ''), ('revoked_at__isnull', True)), (AND: ('is_active', False), ('revoked_at__isnull', False), (NOT (AND: ('revocation_reason', ''))))) name='learning_certificate_revocation_state'>"
+      ],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "learning.Evaluation",
+      "table": "learning_evaluation",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "final_score",
+          "column": "final_score",
+          "django_type": "DecimalField",
+          "postgresql_type": "numeric(3, 1)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MinValueValidator(0)",
+            "MaxValueValidator(10)",
+            "DecimalValidator()"
+          ]
+        },
+        {
+          "field": "feedback",
+          "column": "feedback",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "published_at",
+          "column": "published_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "enrollment",
+          "column": "enrollment_id",
+          "django_type": "OneToOneField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": true,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "enrollments_enrollment.id",
+          "on_delete_orm": "PROTECT"
+        },
+        {
+          "field": "evaluated_by",
+          "column": "evaluated_by_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "accounts_user.id",
+          "on_delete_orm": "PROTECT"
+        }
+      ],
+      "constraints": [
+        "<CheckConstraint: condition=(AND: ('final_score__gte', 0), ('final_score__lte', 10)) name='learning_evaluation_score_range'>"
+      ],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "learning.StudentProject",
+      "table": "learning_studentproject",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "title",
+          "column": "title",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(150)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(150)"
+          ]
+        },
+        {
+          "field": "description",
+          "column": "description",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "repository_url",
+          "column": "repository_url",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(200)",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "URLValidator()",
+            "MaxLengthValidator(200)"
+          ]
+        },
+        {
+          "field": "demonstration_url",
+          "column": "demonstration_url",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(200)",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "URLValidator()",
+            "MaxLengthValidator(200)"
+          ]
+        },
+        {
+          "field": "is_delivered",
+          "column": "is_delivered",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "False"
+        },
+        {
+          "field": "delivered_at",
+          "column": "delivered_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "review_notes",
+          "column": "review_notes",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "enrollment",
+          "column": "enrollment_id",
+          "django_type": "OneToOneField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": true,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "enrollments_enrollment.id",
+          "on_delete_orm": "PROTECT"
+        }
+      ],
+      "constraints": [],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "people.Guardian",
+      "table": "people_guardian",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "full_name",
+          "column": "full_name",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(150)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(150)"
+          ]
+        },
+        {
+          "field": "phone",
+          "column": "phone",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(11)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "validate_phone",
+            "MaxLengthValidator(11)"
+          ]
+        },
+        {
+          "field": "email",
+          "column": "email",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(254)",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "EmailValidator()",
+            "MaxLengthValidator(254)"
+          ]
+        },
+        {
+          "field": "is_active",
+          "column": "is_active",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "True"
+        }
+      ],
+      "constraints": [],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "people.Institution",
+      "table": "people_institution",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "name",
+          "column": "name",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(150)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(150)"
+          ]
+        },
+        {
+          "field": "document",
+          "column": "document",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(14)",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "validate_cnpj",
+            "MaxLengthValidator(14)"
+          ]
+        },
+        {
+          "field": "contact_name",
+          "column": "contact_name",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(150)",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(150)"
+          ]
+        },
+        {
+          "field": "contact_email",
+          "column": "contact_email",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(254)",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "EmailValidator()",
+            "MaxLengthValidator(254)"
+          ]
+        },
+        {
+          "field": "contact_phone",
+          "column": "contact_phone",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(11)",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "validate_phone",
+            "MaxLengthValidator(11)"
+          ]
+        },
+        {
+          "field": "address",
+          "column": "address",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(255)",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(255)"
+          ]
+        },
+        {
+          "field": "is_active",
+          "column": "is_active",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "True"
+        }
+      ],
+      "constraints": [],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "people.Instructor",
+      "table": "people_instructor",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "biography",
+          "column": "biography",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "specialties",
+          "column": "specialties",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(255)",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(255)"
+          ]
+        },
+        {
+          "field": "is_active",
+          "column": "is_active",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "True"
+        },
+        {
+          "field": "user",
+          "column": "user_id",
+          "django_type": "OneToOneField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": true,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "accounts_user.id",
+          "on_delete_orm": "PROTECT"
+        }
+      ],
+      "constraints": [],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "people.Participant",
+      "table": "people_participant",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "full_name",
+          "column": "full_name",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(150)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(150)"
+          ]
+        },
+        {
+          "field": "birth_date",
+          "column": "birth_date",
+          "django_type": "DateField",
+          "postgresql_type": "date",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "cpf",
+          "column": "cpf",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(11)",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "validate_cpf",
+            "MaxLengthValidator(11)"
+          ]
+        },
+        {
+          "field": "contact_email",
+          "column": "contact_email",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(254)",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "EmailValidator()",
+            "MaxLengthValidator(254)"
+          ]
+        },
+        {
+          "field": "phone",
+          "column": "phone",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(11)",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "validate_phone",
+            "MaxLengthValidator(11)"
+          ]
+        },
+        {
+          "field": "is_active",
+          "column": "is_active",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "True"
+        },
+        {
+          "field": "privacy_consent_at",
+          "column": "privacy_consent_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "image_authorization",
+          "column": "image_authorization",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "False"
+        },
+        {
+          "field": "user",
+          "column": "user_id",
+          "django_type": "OneToOneField",
+          "postgresql_type": "uuid",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": true,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "accounts_user.id",
+          "on_delete_orm": "PROTECT"
+        }
+      ],
+      "constraints": [],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "people.ParticipantGuardian",
+      "table": "people_participantguardian",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "relationship",
+          "column": "relationship",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(30)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [
+            [
+              "MOTHER",
+              "Mãe"
+            ],
+            [
+              "FATHER",
+              "Pai"
+            ],
+            [
+              "LEGAL_GUARDIAN",
+              "Tutor legal"
+            ],
+            [
+              "OTHER",
+              "Outro"
+            ]
+          ],
+          "validators": [
+            "MaxLengthValidator(30)"
+          ]
+        },
+        {
+          "field": "is_primary",
+          "column": "is_primary",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "False"
+        },
+        {
+          "field": "guardian",
+          "column": "guardian_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "people_guardian.id",
+          "on_delete_orm": "PROTECT"
+        },
+        {
+          "field": "participant",
+          "column": "participant_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "people_participant.id",
+          "on_delete_orm": "CASCADE"
+        }
+      ],
+      "constraints": [
+        "<UniqueConstraint: fields=('participant', 'guardian') name='people_participant_guardian_unique'>",
+        "<UniqueConstraint: fields=('participant',) name='people_participant_primary_guardian_unique' condition=(AND: ('is_primary', True))>"
+      ],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "workshops.ClassGroup",
+      "table": "workshops_classgroup",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "code",
+          "column": "code",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(30)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(30)"
+          ]
+        },
+        {
+          "field": "title",
+          "column": "title",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(150)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(150)"
+          ]
+        },
+        {
+          "field": "location",
+          "column": "location",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(255)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(255)"
+          ]
+        },
+        {
+          "field": "capacity",
+          "column": "capacity",
+          "django_type": "PositiveIntegerField",
+          "postgresql_type": "integer",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MinValueValidator(1)",
+            "MaxValueValidator(2147483647)"
+          ]
+        },
+        {
+          "field": "waitlist_enabled",
+          "column": "waitlist_enabled",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "True"
+        },
+        {
+          "field": "registration_opens_at",
+          "column": "registration_opens_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "registration_closes_at",
+          "column": "registration_closes_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "start_date",
+          "column": "start_date",
+          "django_type": "DateField",
+          "postgresql_type": "date",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "end_date",
+          "column": "end_date",
+          "django_type": "DateField",
+          "postgresql_type": "date",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "status",
+          "column": "status",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(30)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [
+            [
+              "PLANNED",
+              "Planejada"
+            ],
+            [
+              "OPEN",
+              "Inscrições abertas"
+            ],
+            [
+              "IN_PROGRESS",
+              "Em andamento"
+            ],
+            [
+              "COMPLETED",
+              "Concluída"
+            ],
+            [
+              "CANCELLED",
+              "Cancelada"
+            ]
+          ],
+          "validators": [
+            "MaxLengthValidator(30)"
+          ],
+          "python_default": "PLANNED"
+        },
+        {
+          "field": "created_by",
+          "column": "created_by_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "accounts_user.id",
+          "on_delete_orm": "PROTECT"
+        },
+        {
+          "field": "institution",
+          "column": "institution_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": true,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "people_institution.id",
+          "on_delete_orm": "PROTECT"
+        },
+        {
+          "field": "workshop",
+          "column": "workshop_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "workshops_workshop.id",
+          "on_delete_orm": "PROTECT"
+        }
+      ],
+      "constraints": [
+        "<CheckConstraint: condition=(AND: ('capacity__gt', 0)) name='workshops_capacity_gt_zero'>"
+      ],
+      "indexes": [
+        "<Index: fields=['workshop', 'status', 'start_date'] name='workshops_class_search_idx'>"
+      ],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "workshops.ClassInstructor",
+      "table": "workshops_classinstructor",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "is_lead",
+          "column": "is_lead",
+          "django_type": "BooleanField",
+          "postgresql_type": "boolean",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "False"
+        },
+        {
+          "field": "assigned_at",
+          "column": "assigned_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "class_group",
+          "column": "class_group_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "workshops_classgroup.id",
+          "on_delete_orm": "CASCADE"
+        },
+        {
+          "field": "instructor",
+          "column": "instructor_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "people_instructor.id",
+          "on_delete_orm": "PROTECT"
+        }
+      ],
+      "constraints": [
+        "<UniqueConstraint: fields=('class_group', 'instructor') name='workshops_class_instructor_unique'>",
+        "<UniqueConstraint: fields=('class_group',) name='workshops_class_lead_unique' condition=(AND: ('is_lead', True))>"
+      ],
+      "indexes": [],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "workshops.Meeting",
+      "table": "workshops_meeting",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "title",
+          "column": "title",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(150)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(150)"
+          ]
+        },
+        {
+          "field": "description",
+          "column": "description",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "starts_at",
+          "column": "starts_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "ends_at",
+          "column": "ends_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "status",
+          "column": "status",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(20)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [
+            [
+              "PLANNED",
+              "Planejado"
+            ],
+            [
+              "COMPLETED",
+              "Realizado"
+            ],
+            [
+              "CANCELLED",
+              "Cancelado"
+            ]
+          ],
+          "validators": [
+            "MaxLengthValidator(20)"
+          ],
+          "python_default": "PLANNED"
+        },
+        {
+          "field": "class_group",
+          "column": "class_group_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "workshops_classgroup.id",
+          "on_delete_orm": "CASCADE"
+        }
+      ],
+      "constraints": [
+        "<UniqueConstraint: fields=('class_group', 'starts_at') name='workshops_meeting_start_unique'>",
+        "<CheckConstraint: condition=(AND: ('ends_at__gt', F(starts_at))) name='workshops_meeting_end_after_start'>"
+      ],
+      "indexes": [
+        "<Index: fields=['class_group', 'status', 'starts_at'] name='workshops_meeting_schedule_idx'>"
+      ],
+      "unique_together": [],
+      "many_to_many": []
+    },
+    {
+      "model": "workshops.Workshop",
+      "table": "workshops_workshop",
+      "domain": true,
+      "fields": [
+        {
+          "field": "id",
+          "column": "id",
+          "django_type": "UUIDField",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": true,
+          "unique": true,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "python_default": "uuid.uuid4"
+        },
+        {
+          "field": "created_at",
+          "column": "created_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now_add"
+        },
+        {
+          "field": "updated_at",
+          "column": "updated_at",
+          "django_type": "DateTimeField",
+          "postgresql_type": "timestamp with time zone",
+          "null": false,
+          "blank": true,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [],
+          "automatic": "auto_now"
+        },
+        {
+          "field": "title",
+          "column": "title",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(150)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(150)"
+          ]
+        },
+        {
+          "field": "slug",
+          "column": "slug",
+          "django_type": "SlugField",
+          "postgresql_type": "varchar(170)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": true,
+          "db_index": true,
+          "choices": [],
+          "validators": [
+            "RegexValidator()",
+            "MaxLengthValidator(170)"
+          ]
+        },
+        {
+          "field": "summary",
+          "column": "summary",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(300)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MaxLengthValidator(300)"
+          ]
+        },
+        {
+          "field": "objective",
+          "column": "objective",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "syllabus",
+          "column": "syllabus",
+          "django_type": "TextField",
+          "postgresql_type": "text",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": []
+        },
+        {
+          "field": "estimated_hours",
+          "column": "estimated_hours",
+          "django_type": "DecimalField",
+          "postgresql_type": "numeric(5, 2)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [],
+          "validators": [
+            "MinValueValidator(0.01)",
+            "DecimalValidator()"
+          ]
+        },
+        {
+          "field": "status",
+          "column": "status",
+          "django_type": "CharField",
+          "postgresql_type": "varchar(20)",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": false,
+          "choices": [
+            [
+              "DRAFT",
+              "Rascunho"
+            ],
+            [
+              "PUBLISHED",
+              "Publicada"
+            ],
+            [
+              "ARCHIVED",
+              "Arquivada"
+            ]
+          ],
+          "validators": [
+            "MaxLengthValidator(20)"
+          ],
+          "python_default": "DRAFT"
+        },
+        {
+          "field": "created_by",
+          "column": "created_by_id",
+          "django_type": "ForeignKey",
+          "postgresql_type": "uuid",
+          "null": false,
+          "blank": false,
+          "primary_key": false,
+          "unique": false,
+          "db_index": true,
+          "choices": [],
+          "validators": [],
+          "references": "accounts_user.id",
+          "on_delete_orm": "PROTECT"
+        }
+      ],
+      "constraints": [],
+      "indexes": [
+        "<Index: fields=['status'] name='workshops_workshop_status_idx'>"
+      ],
+      "unique_together": [],
+      "many_to_many": []
+    }
+  ],
+  "project_migrations": [
+    {
+      "app": "accounts",
+      "name": "0001_initial",
+      "path": "src/apps/accounts/migrations/0001_initial.py",
+      "sha256": "dd741bcb6b14a750808e8865fb1704ea556d3625f34555c450afa33025638d52",
+      "dependencies": [
+        [
+          "auth",
+          "0012_alter_user_first_name_max_length"
+        ]
+      ],
+      "operations": [
+        "CreateModel"
+      ]
+    },
+    {
+      "app": "enrollments",
+      "name": "0001_initial",
+      "path": "src/apps/enrollments/migrations/0001_initial.py",
+      "sha256": "c6a0011f6dc75f144cda3687a1bb6a7c62fbe9112e8a384707324d24bf0dfcd8",
+      "dependencies": [
+        [
+          "people",
+          "0001_initial"
+        ],
+        [
+          "workshops",
+          "0001_initial"
+        ],
+        [
+          "accounts",
+          "__first__"
+        ]
+      ],
+      "operations": [
+        "CreateModel",
+        "CreateModel",
+        "AddIndex",
+        "AddIndex",
+        "AddConstraint"
+      ]
+    },
+    {
+      "app": "learning",
+      "name": "0001_initial",
+      "path": "src/apps/learning/migrations/0001_initial.py",
+      "sha256": "1ada635d955e67e5d25a9e94fcfd2ffd397726dbcc7e2f75390509b7855c8077",
+      "dependencies": [
+        [
+          "enrollments",
+          "0001_initial"
+        ],
+        [
+          "workshops",
+          "0001_initial"
+        ],
+        [
+          "accounts",
+          "__first__"
+        ]
+      ],
+      "operations": [
+        "CreateModel"
+      ]
+    },
+    {
+      "app": "learning",
+      "name": "0002_studentproject_evaluation",
+      "path": "src/apps/learning/migrations/0002_studentproject_evaluation.py",
+      "sha256": "ad65f5c12ac8d872098e84b06b90eaf45880e07100772a2b62585cec39735a12",
+      "dependencies": [
+        [
+          "enrollments",
+          "0001_initial"
+        ],
+        [
+          "learning",
+          "0001_initial"
+        ],
+        [
+          "accounts",
+          "__first__"
+        ]
+      ],
+      "operations": [
+        "CreateModel",
+        "CreateModel"
+      ]
+    },
+    {
+      "app": "learning",
+      "name": "0003_certificate",
+      "path": "src/apps/learning/migrations/0003_certificate.py",
+      "sha256": "609e776d6f54dcdac7b92a533deac729d3bd20ad2cc81ab54dfcb679204c9f14",
+      "dependencies": [
+        [
+          "enrollments",
+          "0001_initial"
+        ],
+        [
+          "learning",
+          "0002_studentproject_evaluation"
+        ]
+      ],
+      "operations": [
+        "CreateModel"
+      ]
+    },
+    {
+      "app": "people",
+      "name": "0001_initial",
+      "path": "src/apps/people/migrations/0001_initial.py",
+      "sha256": "5d2a1c7153fe87633e77b86aca28f98291cf28813aaf3a36446720f68f116646",
+      "dependencies": [
+        [
+          "accounts",
+          "__first__"
+        ]
+      ],
+      "operations": [
+        "CreateModel",
+        "CreateModel",
+        "CreateModel",
+        "CreateModel",
+        "CreateModel"
+      ]
+    },
+    {
+      "app": "workshops",
+      "name": "0001_initial",
+      "path": "src/apps/workshops/migrations/0001_initial.py",
+      "sha256": "0c8def9b398d6d4d5fec94e98d79aab8289014dbf96b3de3dde55a5aaf77aa67",
+      "dependencies": [
+        [
+          "people",
+          "0001_initial"
+        ],
+        [
+          "accounts",
+          "__first__"
+        ]
+      ],
+      "operations": [
+        "CreateModel",
+        "CreateModel",
+        "CreateModel",
+        "CreateModel",
+        "AddIndex",
+        "AddIndex",
+        "AddConstraint"
+      ]
+    }
+  ]
+}

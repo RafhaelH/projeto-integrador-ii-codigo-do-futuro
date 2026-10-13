@@ -21,3 +21,5 @@ Limitações e tarefas não executadas: ____________________
 Decisões de melhoria, prioridade, justificativa e reteste: ____________________
 
 Conclusão humana, depois das cinco sessões: ____________________
+
+A identificação real, data e condição de colega/profissional devem constar nos originais para o tutor. A tabela pública pode usar códigos conforme autorização, sem substituir o nome exigido no original. Depois de recolher as cinco fichas, usar o [modelo PDF consolidado](modelo-pdf-consolidado.md).

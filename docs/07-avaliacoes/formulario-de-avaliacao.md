@@ -4,7 +4,9 @@ Estado: **aguardando avaliação humana**. Todos os campos de resposta estão em
 
 Identificação de acesso A01–A05: __________  Perfil: __________
 
-Identificação autorizada da pessoa (guardar privadamente): ____________________
+Nome de quem testou (original identificado para o tutor; guardar privadamente): ____________________
+
+Condição: [ ] colega de curso [ ] profissional da área. Curso/atuação: ____________________
 
 Data/hora: __________  Dispositivo: __________  Navegador: __________
 
@@ -36,7 +38,7 @@ Escala: **1 = muito ruim / muito insatisfeito; 2 = ruim / insatisfeito; 3 = regu
 
 O que testou e funcionou? __________________________________________________
 
-O que testou e não funcionou? Caminho, resultado obtido e esperado: ___________
+O que testou e não funcionou? Funcionalidade, caminho, resultado obtido/esperado e correção sugerida: ___________
 
 O que não conseguiu testar e por quê? ______________________________________
 

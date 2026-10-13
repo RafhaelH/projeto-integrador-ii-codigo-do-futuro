@@ -1,0 +1,50 @@
+classDiagram
+    direction TB
+    class User {
+        UUID id
+        string email
+        string full_name
+        string role
+        bool is_active
+        save()
+        get_short_name()
+    }
+    class Participant {
+        UUID id
+        string full_name
+        date birth_date
+        string cpf
+        bool is_active
+        clean()
+        save()
+    }
+    class Guardian {
+        UUID id
+        string full_name
+        string phone
+        bool is_active
+        save()
+    }
+    class ParticipantGuardian {
+        UUID id
+        string relationship
+        bool is_primary
+    }
+    class Instructor {
+        UUID id
+        string biography
+        string specialties
+        bool is_active
+        clean()
+    }
+    class Institution {
+        UUID id
+        string name
+        string document
+        bool is_active
+        save()
+    }
+    User "0..1" -- "0..1" Participant : user
+    User "1" -- "0..1" Instructor : user
+    Participant "1" -- "0..*" ParticipantGuardian
+    Guardian "1" -- "0..*" ParticipantGuardian

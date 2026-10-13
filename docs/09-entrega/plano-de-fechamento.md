@@ -1,70 +1,7 @@
-# Plano de fechamento da entrega
+# Plano de fechamento
 
-O produto está na transição entre a fase 6 (release candidata) e a fase 7 (validação). O
-fechamento é dividido em gates para garantir que código, evidências, manual, PDF e vídeo
-representem a mesma versão.
+Base develop 644e7a6, aplicação a351c5a e materiais preparados em 13/10/2026. Publicação e correções técnicas já possuem evidências; a conclusão acadêmica depende de documentos I/AVA, cinco pessoas reais, decisões/PDF e vídeo narrado.
 
-## Gate A — Preparação antes da VPS
+A sequência operacional e as condições de fechamento estão no [checklist final](checklist-final.md#sequência-exata-para-concluir), para evitar planos contraditórios. Os papéis atuais são dois administradores, dois instrutores e um participante, atribuídos a cinco avaliadores elegíveis distintos. A oferta A05-I encerra 16/10/2026 às 18h de São Paulo.
 
-- [x] MVP funcional implementado.
-- [x] Carga determinística criada.
-- [x] Infraestrutura Docker de produção preparada.
-- [x] Configuração Nginx e HTTPS documentada.
-- [x] Health check e readiness check disponíveis.
-- [x] Backup e restauração documentados e automatizados.
-- [x] Manual textual concluído.
-- [x] Plano de screenshots definido.
-- [x] Pacote e cinco formulários de avaliação preparados.
-- [x] Relatório acadêmico estruturado.
-- [x] Roteiro de vídeo cronometrado.
-- [ ] Branch aprovada na CI e integrada à `develop`.
-
-## Gate B — Publicação da release candidata
-
-- [ ] DNS apontando para a VPS.
-- [ ] `deploy/production.env` criado somente no servidor.
-- [ ] Aplicação e PostgreSQL saudáveis.
-- [ ] HTTPS válido e renovação testada.
-- [ ] Carga demo executada na homologação isolada.
-- [ ] Smoke test externo aprovado.
-- [ ] Backup inicial criado e copiado para fora da VPS.
-- [ ] URL e SHA registrados.
-
-## Gate C — Cinco avaliações
-
-- [ ] Cinco pessoas confirmadas.
-- [ ] Duas avaliações na perspectiva de participante.
-- [ ] Duas avaliações na perspectiva de instrutor.
-- [ ] Uma avaliação na perspectiva administrativa.
-- [ ] Nome/identificação, data, versão e ambiente registrados.
-- [ ] Funcionalidades aprovadas, reprovadas e não testadas registradas.
-- [ ] Screenshots autorizadas e anonimizadas organizadas.
-- [ ] Achados consolidados e classificados.
-
-## Gate D — Correções e regressão
-
-- [ ] Decisão e justificativa para cada achado.
-- [ ] Defeitos críticos e altos corrigidos.
-- [ ] Melhorias aceitas implementadas.
-- [ ] Sugestões adiadas ou recusadas justificadas.
-- [ ] Fluxos afetados retestados.
-- [ ] Suíte completa e CI aprovadas.
-- [ ] Nenhuma migração pendente.
-- [ ] Checklist acadêmico atualizado.
-
-## Gate E — Entrega final
-
-- [ ] Screenshots da tag final inseridas no manual.
-- [ ] PDF com as cinco opiniões e decisões gerado.
-- [ ] Relatório acadêmico final revisado.
-- [ ] `develop` integrada à `main`.
-- [ ] Tag `v1.0.0` e release publicadas.
-- [ ] VPS executando exatamente a tag final.
-- [ ] Vídeo narrado gravado com a mesma versão.
-- [ ] Duração do vídeo conferida em cinco minutos.
-- [ ] Links de repositório, aplicação, PDF e vídeo testados.
-
-## Regra de promoção
-
-Não promover para `main` nem criar a tag final enquanto houver avaliação pendente, defeito crítico
-ou alto aberto, evidência sem anonimização ou divergência entre aplicação e documentação.
+Não promover main nem anunciar entrega integral antes de recolher opiniões/decisões, tratar defeitos pertinentes, verificar materiais e gravar o vídeo. Nenhuma promoção, tag, merge ou implantação está autorizada neste trabalho documental; eventual release exige decisão posterior do responsável. A cópia externa do backup não foi comprovada pela auditoria e não se presume realizada.

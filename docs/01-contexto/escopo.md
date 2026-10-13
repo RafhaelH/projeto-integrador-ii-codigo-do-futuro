@@ -81,3 +81,23 @@ Uma nova funcionalidade só entra no MVP quando:
 2. não compromete a conclusão dos itens Must;
 3. possui requisito, regra e critério de aceite documentados;
 4. pode ser testada antes da avaliação com os cinco usuários.
+
+## Escopo final verificado em 13/10/2026
+
+O MVP descrito foi implementado na candidata a351c5a/develop 644e7a6, com consultas e comandos nos sete módulos. Perfis próprios editam somente nome/e-mail. Certificado é consultado por código em documento autenticado, sem verificação pública externa; revogação não permite reemissão. Responsáveis não recebem login. Recuperação existe, mas a publicação usa console e não entrega SMTP externo. A lista de ofertas não possui busca textual; filtros do painel usam oficina/status e período de início da turma.
+
+Os campos derivados não são editados para a apresentação: serviços calculam frequência/conclusão, e as capturas registram os valores reais dos dados fictícios. A [rastreabilidade](../02-requisitos/rastreabilidade-implementada.md) explicita lacunas RNF e não afirma que todas as metas de qualidade já foram comprovadas.
+
+## Evolução comprovada e limitação histórica
+
+| Marco Git | Evolução documentável |
+|---|---|
+| 5730e37 (11/09/2026) | Fundação documental de Integrador II: visão, escopo, requisitos, modelagem e planejamento |
+| d081693 a 0ff0bba | Fundação executável, pessoas, ofertas e inscrições |
+| cba6b91 a b4e1408 (14/09/2026) | Frequência, projetos/avaliação/conclusão, certificados e reporting |
+| d883272 / 00665be | Carga fictícia e candidata de produção |
+| cccfa6e / PR #11 / 8924a6d | Perfil próprio RF-006, erro de encontro duplicado e guardas acadêmicas no admin; retestes |
+| 3be6200 / a351c5a / PR #12 / 644e7a6 | Dados comprovadamente fictícios, espaços humanos, manual/capturas/PDFs, cronologia e 235 testes |
+| Revisão documental atual | Modelo implementado, conformidade do PDF e pendências humanas/AVA; sem nova funcionalidade/deploy |
+
+Esses marcos vêm do histórico versionado, não de reuniões ou depoimentos. Não foi encontrado o planejamento/protótipo original do Integrador I; a origem extensionista descrita na visão é contexto declarado, não prova de revisão acadêmica I. O estudante deve anexar o original e explicitar alterações, ou explicar essa limitação ao tutor.

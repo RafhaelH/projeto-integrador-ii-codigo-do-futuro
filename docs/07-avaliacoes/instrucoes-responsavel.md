@@ -19,3 +19,10 @@ Depois: mantenha formulário original; consolide achados sem inventar respostas 
 Credenciais de captura: `captura-admin`, `captura-instrutor`, `captura-participante`, `captura-projeto` no mesmo arquivo restrito. São independentes dos acessos A01–A05. Os aliases `aluno-A01` a `aluno-A04` são contas fictícias de apoio da carga, não avaliadores adicionais.
 
 As contas A01–A05 são papéis fictícios; não são os cinco avaliadores. Guarde nome/condição reais no original destinado ao tutor. O [modelo consolidado](modelo-pdf-consolidado.md) organiza o PDF futuro sem preencher opiniões.
+
+
+## Atualização em 19/10/2026
+
+A oferta histórica A05-I encerrou; use a [tarefa A05 atualizada](roteiros/A05.md). A alternativa SIM foi consumida pelo agente, não por uma pessoa. Antes de nova inscrição humana, preparar outra oferta exclusiva gerenciada após backup; ou avaliar apenas consulta da situação pendente, anotando o que não foi testado. Os demais espaços humanos e os cenários de captura foram preservados.
+
+DEF-004 impede salvar uma edição simples sem redigitar datas na publicação atual. Não esconda essa falha do avaliador; revisão/implantação/reteste da correção local são pendências operacionais. As [simulações](relatorio-simulacoes.md) ficam separadas das cinco opiniões.

@@ -1,43 +1,33 @@
-# Relatório final — candidata e pendências acadêmicas
+# Relatório de entrega — estado verificável em 19/10/2026
 
-## 1. Identificação e conclusão atual
+## Conclusão atual
 
-Código do Futuro — Projeto Integrador Transdisciplinar em Engenharia de Software II. Autor registrado no projeto: Rafhael Henrique, Engenharia de Software. Auditoria: 13/10/2026. [Repositório](https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro); aplicação https://projeto-integrador.tesseratointegra.com.br.
+Código do Futuro, Projeto Integrador Transdisciplinar em Engenharia de Software II. Identificação completa/RGM do estudante constam apenas da cópia privada destinada ao tutor. Aplicação https://projeto-integrador.tesseratointegra.com.br; código já publicado no GitHub em develop. PR #13 integrada em 58db4fc; código da aplicação a351c5a conferido por 122 hashes. Main preservada em 5730e37.
 
-Base documental develop: 644e7a657c1aeec80b7df530856fd354e5a02454. Código publicado: a351c5aeb6a9bf104693818a75a0acc6c82e49ad, mesmo src da base; 122 hashes reconfirmados nesta auditoria. [Estado](estado-verificado.json). Main permanece 5730e37. Não há tag/versão acadêmica final nem data de conclusão integral registrada.
+**O pacote não está integralmente conforme.** Há documentação e evidências técnicas, mas não cinco opiniões humanas disponíveis, vídeo publicado ou correção pública de DEF-004. Planejamento/protótipo I e modelo oficial AVA dependem dos documentos disponibilizados, sem reconstrução apresentada como original.
 
-**O MVP possui implementação e evidências técnicas; a entrega acadêmica não está integralmente concluída.** Faltam cinco opiniões de pessoas elegíveis, PDF preenchido, decisões sobre feedback e vídeo narrado; há lacunas de origem I/modelo AVA. A [matriz](matriz-conformidade.md) fundamenta cada situação.
+## Solução e materiais
 
-## 2. Problema, objetivo e escopo
+Aplicação web de oficinas para jovens de 14–21 anos, com administrador funcional, instrutor e participante. Python/Django, PostgreSQL, templates HTML/CSS, codificação tradicional; hospedagem na VPS existente com Docker/Gunicorn/Nginx/HTTPS e porta de app em loopback. Não se infere fornecedor comercial da VPS pelo domínio. Recuperação de senha usa console; SMTP externo não comprovado.
 
-Oficinas gratuitas precisam organizar pessoas, responsáveis, vagas, encontros, presença e resultados. Planilhas/mensagens dispersas prejudicam integridade e rastreabilidade. A solução web acompanha jovens de 14–21 anos da inscrição à conclusão, com três papéis. O [escopo](../01-contexto/escopo.md) distingue funcionalidades implementadas e fora do MVP; a evolução comprovada vem do Git do Integrador II, sem inventar revisão histórica do Integrador I.
+Escopo, 40 RF/RNF, camadas MTV/MVC, 16 models próprios e sete migrations, conceitual/lógico/normalização, banco físico e dicionário estão ligados no [índice](README.md). Manual com 38 imagens históricas identificadas permanece evidência da candidata; novas capturas técnicas têm data/método e saudação pessoal ocultada. [Roteiro operacional do vídeo](../08-manual/roteiro-video-final.md) tem oito blocos totalizando 300s, narração em primeira pessoa e alternativas; arquivo de vídeo não foi criado.
 
-Entregues: acesso/perfil próprio, pessoas/instituições, ofertas/turmas/encontros, inscrições/fila/transações, frequência/projeto/avaliação/conclusão objetiva, certificado PDF/revogação, painéis e CSV. Recuperação usa console na publicação e não comprova entrega de e-mail externo.
+## Evidências distintas
 
-## 3. Projeto e implementação
+- Automatizados históricos: 235 aprovados, zero skip, cobertura 89,84%, PostgreSQL isolado e CI develop 58db4fc. Não foram reexecutados no banco publicado.
+- HTTP histórico: reteste com 25 cenários, 278 verificações/465 requisições; preparação com 57 verificações/81 requisições. Relatórios originais preservados.
+- Simulações atuais do agente: 39 tarefas distintas, 37 aprovadas e duas reprovadas pelo mesmo DEF-004. Cinco reexecuções resolveram três falhas do executor e reproduziram o defeito. 150 respostas HTTP não são 150 cenários. Chromium, TLS, sessões independentes e CSRF; renderização desktop/viewport móvel, sem usabilidade/AA aprovadas.
+- Correção candidata: commit local d1a5523 em branch própria; 41 testes direcionados isolados e dez widgets nativos confirmados após correção, sem implantação/CI remota nova.
+- Avaliação humana: nenhuma ficha/relato verificável disponível nesta preparação. Conteúdo/nome/data do relato mencionado permanecem a confirmar; não inferir participação pelo uso das contas.
 
-[Arquitetura](../04-arquitetura/arquitetura.md) documenta camadas e MTV/MVC. Python 3.12, Django 5.2, PostgreSQL 17, templates HTML/CSS; dependências uv.lock; CI Pytest/Ruff/GitHub Actions; publicação Gunicorn/Docker/Nginx/HTTPS. [UML/DER](../03-modelagem/diagramas.md), [conceitual e normalização](../03-modelagem/modelo-de-dados.md), [modelo lógico](../03-modelagem/modelo-logico.md), [banco físico](../03-modelagem/banco-fisico.md) e [dicionário](../03-modelagem/dicionario-de-dados.md) refletem 16 models persistentes e 7 migrations próprias. SQL de referência é gerado offline, não um dump da VPS.
+Fontes: [simulações completas](../07-avaliacoes/relatorio-simulacoes.md), [consolidação humana separada](../07-avaliacoes/consolidacao.md), [laudo](laudo-qualidade.md) e [histórico](../06-testes/consolidacao-verificacao.md).
 
-## 4. Verificação e correções comprovadas
+## Defeitos, decisões e preservação
 
-[Consolidação](../06-testes/consolidacao-verificacao.md): 235 testes aprovados em PostgreSQL isolado, zero skip, cobertura 89,84%; CI develop 644e7a6 aprovada. Reteste anterior: 25 cenários HTTP consolidados, 278 verificações/465 requisições; preparação atual: 57 verificações/81 requisições aprovadas. Requisições e repetições não são cenários distintos. Os relatórios históricos conservam as reprovações originais.
+DEF-001/002/003 foram encontrados tecnicamente e corrigidos/retestados antes desta tarefa; não atribuídos aos colegas. DEF-004 foi descoberto agora em campos HTML5 com datas localizadas: correção local pronta, mas segue reproduzível no publicado. Oferta histórica A05-I encerrada é comportamento esperado. Alternativa SIM exclusiva foi criada e recebeu PENDING, sem alterar a histórica; para nova tarefa humana, consultar situação ou preparar outra oferta própria.
 
-Três defeitos corrigidos em cccfa6e/PR #11 e retestados: encontro duplicado 500 → formulário 200 útil; RF-006 ausente → perfil próprio com whitelist/CSRF/unique; conclusão direta no admin → bloqueio e processamento acadêmico canônico. PR #12 prepara cenários e materiais, integrado em 644e7a6. O manual reúne 38 imagens reais/fontes identificadas; inspeção visual limitada não é aceite humano nem aprovação WCAG.
+Backup verificado antes de alterações. 57 novos registros fictícios gerenciados, nenhum registro preexistente de negócio alterado/excluído; autenticação atualiza last_login das contas usadas. Nenhuma conta nova, senha redefinida ou privilégio extra. Main, infraestrutura, Nginx/certificados e outros serviços preservados, sem deploy.
 
-Esta auditoria realiza checks/documentação fora do banco publicado, confere fontes/links/renderizações/segredos e abre PR documental. Nenhuma alteração de banco, conta, cenário, container ou Nginx foi necessária. [Verificações documentais](verificacoes-documentais.json).
+## Pendências e sequência
 
-## 5. Cinco avaliações e decisões
-
-**aguardando avaliação humana**. Selecionar cinco colegas de curso ou profissionais da área; A01–A05 são contas, não pessoas. Distribuição atual: A01/A02 ADMIN, A03/A04 INSTRUCTOR, A05 PARTICIPANT. Fichas permanecem em branco, incluindo nome/data/funcionou/falhou/correção/não testado/motivo. [Pacote](../07-avaliacoes/pacote-de-avaliacao.md), [modelo consolidado](../07-avaliacoes/modelo-pdf-consolidado.md) e [registro de decisões](../07-avaliacoes/registro-de-melhorias.md).
-
-A oferta PY-2026-A05-I encerra 16/10/2026 às 18h America/Sao_Paulo. Para sessão posterior, revisar a tarefa e planejar oferta exclusiva futura após autorização/revisão/backup em trabalho operacional separado; nesta auditoria não renovar datas. Se não puder testar, registrar motivo verdadeiro, sem preencher sucesso fictício.
-
-## 6. Limitações e pendências
-
-Não há prova identificada do planejamento/protótipo original I nem o modelo específico de entrega AVA. O estudante deve obtê-los/conferir com tutor. SMTP externo, testes de carga/escala, compatibilidade nos navegadores exigidos e auditoria completa de acessibilidade não estão aprovados; [rastreabilidade RNF](../02-requisitos/rastreabilidade-implementada.md) explicita limites. Não há resultados de usabilidade humana nem sugestões humanas aceitas/recusadas nesta data.
-
-Vídeo: roteiro exatamente 5:00 resolve os dois limites do PDF; narração deve ser do estudante. Gravação/arquivo/link permanecem pendentes. Exibir funcionamento, testes e mudanças efetivamente adotadas; citar a ausência de resultados enquanto faltarem sessões.
-
-## 7. Fechamento necessário
-
-Seguir a [sequência exata do checklist](checklist-final.md#sequência-exata-para-concluir): obter documentos/AVA; selecionar pessoas; conferir prazos/cenários; realizar cinco sessões; consolidar/decidir; corrigir e retestar o pertinente; gerar PDF real, atualizar manual/versões se necessário; gravar/exportar 300s; conferir modelo/links/anexos e submeter ao tutor. Merge desta PR e eventual promoção/release são decisões posteriores, não executadas aqui. Atualizar matriz e relatório somente com evidências reais.
+Seguir o [checklist](checklist-final.md): obter/validar modelo oficial AVA e documentos I; incorporar somente relatos reais recebidos; tratar implantação/reteste de DEF-004 em operação autorizada separada; realizar cinco avaliações elegíveis; consolidar e decidir; gerar PDF de opiniões; atualizar versão/materiais; estudante gravar/exportar 300s, publicar e conferir acesso; preencher link no documento oficial e submeter no AVA com comprovante. Os DOCX/PDF de revisão não substituem requisitos que ainda faltam.

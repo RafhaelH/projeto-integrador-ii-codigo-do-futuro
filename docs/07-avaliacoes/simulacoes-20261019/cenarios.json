@@ -1,0 +1,148 @@
+{
+  "execution_author": "agente Codex; simulação técnica",
+  "fixture_date": "2026-10-19",
+  "fixture_dates_synthetic": true,
+  "fixture_method": "ORM e serviços canônicos em transação; relógio local simulado apenas no bootstrap de pré-condições fictícias, nunca na execução HTTPS",
+  "workspaces": {
+    "A01": {
+      "class_id": "db32dd98-6c10-5841-9817-ad25a36902f5",
+      "code": "SIM-20261019-A01",
+      "participant_id": "cf3eca4f-9ac6-504e-b207-27193ab3859b",
+      "participant_name": "Pessoa fictícia SIM-20261019 A01",
+      "meeting_id": "023cd423-9a90-57d4-8490-c964f561fcc8",
+      "bootstrap_initial_state": "IN_PROGRESS",
+      "enrollment_id": "99f56bb5-cab0-4830-ab68-0ea71ad58242",
+      "project_id": "78a77f6b-15ba-5371-9c2a-814b6a7615b7"
+    },
+    "A02": {
+      "class_id": "43bced83-1aeb-579e-bbeb-3e8e918cd80a",
+      "code": "SIM-20261019-A02",
+      "participant_id": "5a5bdf1f-0bcb-5f41-9652-e6abcf326b5a",
+      "participant_name": "Pessoa fictícia SIM-20261019 A02",
+      "meeting_id": "ca9def1f-a81c-5088-b0db-79ebb5778d47",
+      "bootstrap_initial_state": "IN_PROGRESS",
+      "enrollment_id": "440b1650-8e5f-4773-9253-62cb7184c963",
+      "project_id": "ef915dfc-8842-5995-a9b5-43e0b0926de5"
+    },
+    "A03": {
+      "class_id": "0d112155-dbb6-57bc-88eb-98c145ce994d",
+      "code": "SIM-20261019-A03",
+      "participant_id": "1fb3d62a-9676-5dbb-b4d6-b1abb29c8205",
+      "participant_name": "Pessoa fictícia SIM-20261019 A03",
+      "meeting_id": "3935cc07-f28b-5447-bbc5-fb02bed6a7ce",
+      "bootstrap_initial_state": "IN_PROGRESS",
+      "enrollment_id": "7955f20c-3c7b-47eb-a459-08e8a1415c3b",
+      "project_id": "11364bc2-2687-54b4-9a3a-4bba4c25cf3b"
+    },
+    "A04": {
+      "class_id": "7bb34582-8fef-59cb-b40e-29d18242b497",
+      "code": "SIM-20261019-A04",
+      "participant_id": "5b03c846-7ec2-526a-8a92-390bb3486871",
+      "participant_name": "Pessoa fictícia SIM-20261019 A04",
+      "meeting_id": "e3dd97e6-2b1c-5596-8b05-9aa31c238d06",
+      "bootstrap_initial_state": "IN_PROGRESS",
+      "enrollment_id": "4012b608-131f-4b67-b50c-f99de9e6e67e",
+      "project_id": "93ca042e-194d-512d-963c-7578619c4400"
+    },
+    "A05": {
+      "class_id": "cc547c4e-c1b7-55ff-9f36-0d6419e0c9d5",
+      "code": "SIM-20261019-A05",
+      "participant_id": "edcf3915-2b9d-5c8c-b7ed-7d77a41fb5dc",
+      "participant_name": "Marina Costa",
+      "meeting_id": "aae0ef3b-e205-5cf1-8f13-a9f18494da51",
+      "bootstrap_initial_state": "IN_PROGRESS",
+      "enrollment_id": "46422f35-f31f-4d2b-b326-a2e7199bc426",
+      "project_id": "a687fdb3-a917-4ff3-9a9f-c195ea87e13e"
+    },
+    "A05-I": {
+      "class_id": "01a0f9fc-414f-5a63-8d65-c12def3542d4",
+      "code": "SIM-20261019-A05-I",
+      "participant_id": "edcf3915-2b9d-5c8c-b7ed-7d77a41fb5dc",
+      "participant_name": "Marina Costa",
+      "meeting_id": "ee8c302b-6a92-51b8-887b-8ba61aa50f7a",
+      "bootstrap_initial_state": "OPEN"
+    }
+  },
+  "created": {
+    "people.Participant": [
+      "cf3eca4f-9ac6-504e-b207-27193ab3859b",
+      "5a5bdf1f-0bcb-5f41-9652-e6abcf326b5a",
+      "1fb3d62a-9676-5dbb-b4d6-b1abb29c8205",
+      "5b03c846-7ec2-526a-8a92-390bb3486871"
+    ],
+    "workshops.ClassGroup": [
+      "db32dd98-6c10-5841-9817-ad25a36902f5",
+      "43bced83-1aeb-579e-bbeb-3e8e918cd80a",
+      "0d112155-dbb6-57bc-88eb-98c145ce994d",
+      "7bb34582-8fef-59cb-b40e-29d18242b497",
+      "cc547c4e-c1b7-55ff-9f36-0d6419e0c9d5",
+      "01a0f9fc-414f-5a63-8d65-c12def3542d4"
+    ],
+    "workshops.ClassInstructor": [
+      "60d89c79-804d-5849-90b0-5fe373e52b23",
+      "008372cb-1cdd-520f-add2-c9aa08159aa0",
+      "590a114c-4647-54cc-a38f-cc8f25827fb2",
+      "aeacb344-8b4f-56af-bb7f-6488fac2d44a",
+      "eeaf90a9-1931-535e-aaf9-492ec9a7bc86",
+      "7bb6a03a-566a-5e9a-b37b-b906324f7307"
+    ],
+    "workshops.Meeting": [
+      "023cd423-9a90-57d4-8490-c964f561fcc8",
+      "ca9def1f-a81c-5088-b0db-79ebb5778d47",
+      "3935cc07-f28b-5447-bbc5-fb02bed6a7ce",
+      "e3dd97e6-2b1c-5596-8b05-9aa31c238d06",
+      "aae0ef3b-e205-5cf1-8f13-a9f18494da51",
+      "ee8c302b-6a92-51b8-887b-8ba61aa50f7a"
+    ],
+    "enrollments.Enrollment": [
+      "99f56bb5-cab0-4830-ab68-0ea71ad58242",
+      "440b1650-8e5f-4773-9253-62cb7184c963",
+      "7955f20c-3c7b-47eb-a459-08e8a1415c3b",
+      "4012b608-131f-4b67-b50c-f99de9e6e67e",
+      "46422f35-f31f-4d2b-b326-a2e7199bc426"
+    ],
+    "learning.Attendance": [
+      "31649f05-6be9-4f4d-a61a-3a6200d85601",
+      "1a9b1167-9ce8-4272-95d5-b56a8e6b6445",
+      "a87b9f87-2eb7-46c3-b8a7-b3643e120932"
+    ],
+    "learning.StudentProject": [
+      "78a77f6b-15ba-5371-9c2a-814b6a7615b7",
+      "ef915dfc-8842-5995-a9b5-43e0b0926de5",
+      "11364bc2-2687-54b4-9a3a-4bba4c25cf3b",
+      "93ca042e-194d-512d-963c-7578619c4400",
+      "a687fdb3-a917-4ff3-9a9f-c195ea87e13e"
+    ],
+    "learning.Evaluation": [
+      "bc40d05b-6ec5-4dd0-907b-d752ac143bc8",
+      "a6c04bcc-8294-4666-92bb-8a12c4cf6532"
+    ],
+    "enrollments.EnrollmentStatusHistory": [
+      "109",
+      "110",
+      "111",
+      "112",
+      "113",
+      "114",
+      "115",
+      "116",
+      "117",
+      "118"
+    ]
+  },
+  "existing_A05_certificate": {
+    "id": "77b66ea8-b2d5-421a-a904-42c20c9d931a",
+    "code": "PY-2026-A05-F",
+    "hours": "2.00"
+  },
+  "expired_offer": {
+    "class_id": "52fc7580-4d6b-5612-a97b-1c4d779a01fd",
+    "code": "PY-2026-A05-I",
+    "closes_at": "2026-10-16T18:00:00-03:00",
+    "expected_unavailable": true,
+    "existing_enrollment": false
+  },
+  "robotics": {
+    "class_id": "3c505321-dbbd-4ba1-b342-0e63dcecef2b"
+  }
+}

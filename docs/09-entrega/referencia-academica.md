@@ -26,3 +26,8 @@ Não foi identificado no repositório um artefato atribuível ao **Projeto Integ
 Não foi encontrado o **modelo específico da Atividade de Entrega do AVA** nos arquivos versionados ou PDFs locais do projeto. A p. 40 refere um download, mas a cópia não contém esse modelo nem link recuperável nessa página. Obtê-lo no AVA e conferir campos/formato/anexos antes de entregar. Este pacote não inventa esse formulário.
 
 Há inconsistência de duração: até cinco minutos (p. 36) e pelo menos cinco minutos (p. 38). A interseção é **exatamente 5:00, 300 segundos**. O roteiro inclui abertura e créditos nesse total; conferir o arquivo exportado. Não presumir tolerância autorizada pelo tutor.
+
+
+## Preparação de 19/10/2026
+
+PR #13 foi integrada em 58db4fc após autorização posterior; as restrições citadas acima descrevem a auditoria original. A tarefa atual permite simulações reais em dados exclusivos e commits locais, sem push/merge/deploy/promoção. Simulações do agente não satisfazem cinco colegas/profissionais. Modelo PIT_atividade (8).docx e relatos só podem ser incorporados quando efetivamente disponibilizados; se ausentes, ficha auxiliar não é apresentada como original AVA.

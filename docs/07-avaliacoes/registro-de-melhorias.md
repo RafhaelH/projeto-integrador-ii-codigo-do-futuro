@@ -42,3 +42,16 @@ Classificação: defeito, usabilidade, ideia ou fora do escopo. Decisão: corrig
 ## Distinção das correções técnicas
 
 DEF-001/002/003 e cronologia da carga foram descobertas técnicas, documentadas na [consolidação dos testes](../06-testes/consolidacao-verificacao.md#três-defeitos-e-retestes). Não são feedback de colegas e não preencherão a tabela humana. Para cada sugestão real, ligar sessão/tarefa/evidência, decisão (aceitar, adiar, recusar, duplicada), justificativa, responsável, PR/commit e resultado/data/versão do reteste. Se não houver alteração pertinente, justificar; não implementar funcionalidade apenas para aparentar melhoria.
+
+
+## Decisões técnicas de 19/10/2026 — separadas dos colegas
+
+| ID | Origem comprovada | Decisão | Justificativa / situação |
+|---|---|---|---|
+| DEF-004 | Simulação renderizada A01-T03/A02-T03; valores nativos de datas vazios | Corrigir | RF-007/039, preservação de valores no formulário. Candidato local d1a5523, 41 testes isolados; implantação/reteste público pendentes |
+| TEC-005 | Oferta A05-I fora de prazo | Manter por ser comportamento esperado | RN de janela de inscrição. Histórica preservada; alternativa SIM exclusiva utilizada, nova solicitação PENDING |
+| TEC-006 | Pedido de contraste AA, aparelhos reais, carga e vários navegadores | Melhoria futura / verificação pendente | Chromium/viewport não comprovam essas metas; requer ensaio próprio e avaliação humana |
+| TEC-007 | Usar cinco logins/simulações como cinco opiniões | Não aplicável | Enunciado exige pessoas distintas; sem fichas e sem autorização documentada do tutor, requisito continua pendente |
+| EXEC-001/002/003 | Seletores/redirects do executor | Corrigir executor | Dois caminhos de certificado e um seletor de descrição; retestados, sem mudança funcional para esses três casos |
+
+Detalhes, horários e evidências no [relatório das simulações](relatorio-simulacoes.md). Nenhum desses itens preenche a tabela reservada às sugestões humanas.

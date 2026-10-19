@@ -37,3 +37,8 @@ Backups/checksum/catálogo, restauração de cópia em banco descartável e remo
 ## O que permanece sem aprovação
 
 Cinco opiniões/PDF consolidado real, vídeo narrado e revisão após feedback. SMTP externo, ensaio de carga P95 com 50 usuários, relatório de 10 mil inscrições, compatibilidade nas versões exigidas de Chrome/Edge/Firefox, contraste AA e auditoria completa de teclado/acessibilidade não têm aprovação demonstrada. A [rastreabilidade](../02-requisitos/rastreabilidade-implementada.md) registra metas e lacunas sem transformá-las em resultados. Tempo de uma requisição sequencial não é medição de carga/usabilidade.
+
+
+## Atualização de 19/10/2026
+
+[Simulações técnicas atuais](../07-avaliacoes/relatorio-simulacoes.md): 39 tarefas únicas, 37 aprovadas e duas reprovadas pelo DEF-004. São execuções do agente, sem pessoas avaliadoras. Três falhas do executor corrigidas em cinco reexecuções estão preservadas. Candidato d1a5523 tem 41 testes direcionados e comparação nativa de widgets em ambiente isolado; não foi implantado nem tem nova CI remota. A suíte histórica 235/89,84% foi reconfirmada na CI de develop 58db4fc, sem reexecução na produção. Histórico acima permanece identificado por versão/data.

@@ -94,3 +94,8 @@ Mudanças que afetem comportamento devem atualizar, quando aplicável:
 - [Relatório atual](09-entrega/relatorio-final.md) e [roteiro único 5:00](09-entrega/roteiro-video.md).
 
 As cinco pessoas e o vídeo ainda são pendentes; contas e simulações não equivalem a resultados humanos.
+
+
+## Preparação de entrega em 19/10/2026
+
+A PR #13 foi integrada em develop 58db4fc. [Índice para o tutor](09-entrega/README.md), [simulações técnicas](07-avaliacoes/relatorio-simulacoes.md), [laudo](09-entrega/laudo-qualidade.md) e [roteiro definitivo do vídeo](08-manual/roteiro-video-final.md) registram o estado atual: 37/39 tarefas técnicas aprovadas, DEF-004 com correção local ainda não implantada, cinco avaliações humanas e vídeo pendentes. Simulações não equivalem a cinco pessoas. Novos commits desta tarefa permanecem locais.

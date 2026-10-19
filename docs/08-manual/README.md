@@ -284,3 +284,10 @@ As sete turmas A01–A05 são espaços de avaliação separados; não usar esses
 ### Figura 36 — Jornada própria de Carla no celular.
 
 ![Figura 36](capturas/fig-36-mobile-jornada.png)
+
+
+## Preparação de entrega em 19/10/2026
+
+As 38 capturas acima pertencem à preparação de 13/10 e não são novas opiniões humanas. O [roteiro definitivo](roteiro-video-final.md) usa consultas reais reconferidas e mantém a voz do estudante/edição final de 300s. Os novos registros SIM alteram indicadores globais; use o filtro Python/abril explicitado para a apresentação estável.
+
+Limite atual: DEF-004 deixa campos de data nativos vazios na edição; não anunciar edição simples aprovada até implantação/reteste do candidato local. A oferta humana A05-I antiga encerrou; consultar [A05 atualizado](../07-avaliacoes/roteiros/A05.md). Não misturar tarefas SIM já realizadas com tarefas atribuídas às pessoas.

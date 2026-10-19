@@ -29,3 +29,8 @@ Os administradores têm alcance funcional global, conforme o produto; sua separa
 Tempo sugerido: 25–35 minutos por pessoa. Atividades em celular e teclado são observações de uso, não uma auditoria completa de acessibilidade. As capturas e verificações automáticas não substituem as cinco avaliações.
 
 Exigência da disciplina: cinco **colegas de curso ou profissionais da área reais**, não cinco logins. [Modelo de PDF consolidado](modelo-pdf-consolidado.md) / [PDF em branco](modelo-consolidado.pdf), ainda aguardando opiniões. PY-2026-A05-I encerra 16/10/2026 18h São Paulo; revisar a tarefa se posterior, sem renovação nesta auditoria.
+
+
+## Atualização em 19/10/2026
+
+Nenhuma ficha humana foi preenchida nesta preparação. [Simulações técnicas do agente](relatorio-simulacoes.md) são separadas. A oferta antiga A05-I está encerrada; o [roteiro A05](roteiros/A05.md) agora orienta consulta da situação vigente e preparação de nova oferta apenas quando necessária. Não distribuir o prazo histórico como se ainda estivesse aberto. O [laudo](../09-entrega/laudo-qualidade.md) inclui DEF-004 ainda não implantado.

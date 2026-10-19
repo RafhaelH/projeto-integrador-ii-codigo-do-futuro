@@ -469,6 +469,7 @@ textarea {
 }
 
 .table-shell {
+  position: relative;
   overflow-x: auto;
   background: white;
   border: 1px solid var(--color-border);

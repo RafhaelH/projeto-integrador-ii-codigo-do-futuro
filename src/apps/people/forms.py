@@ -25,8 +25,10 @@ class ParticipantForm(forms.ModelForm):
             "is_active",
         )
         widgets = {
-            "birth_date": forms.DateInput(attrs={"type": "date"}),
-            "privacy_consent_at": forms.DateTimeInput(attrs={"type": "datetime-local"}),
+            "birth_date": forms.DateInput(format="%Y-%m-%d", attrs={"type": "date"}),
+            "privacy_consent_at": forms.DateTimeInput(
+                format="%Y-%m-%dT%H:%M", attrs={"type": "datetime-local"}
+            ),
         }
 
     def __init__(self, *args, **kwargs):

@@ -82,10 +82,14 @@ class ClassGroupForm(forms.ModelForm):
             "end_date",
         )
         widgets = {
-            "registration_opens_at": forms.DateTimeInput(attrs={"type": "datetime-local"}),
-            "registration_closes_at": forms.DateTimeInput(attrs={"type": "datetime-local"}),
-            "start_date": forms.DateInput(attrs={"type": "date"}),
-            "end_date": forms.DateInput(attrs={"type": "date"}),
+            "registration_opens_at": forms.DateTimeInput(
+                format="%Y-%m-%dT%H:%M", attrs={"type": "datetime-local"}
+            ),
+            "registration_closes_at": forms.DateTimeInput(
+                format="%Y-%m-%dT%H:%M", attrs={"type": "datetime-local"}
+            ),
+            "start_date": forms.DateInput(format="%Y-%m-%d", attrs={"type": "date"}),
+            "end_date": forms.DateInput(format="%Y-%m-%d", attrs={"type": "date"}),
             "capacity": forms.NumberInput(attrs={"min": 1}),
         }
 
@@ -128,8 +132,12 @@ class MeetingForm(forms.ModelForm):
         fields = ("title", "description", "starts_at", "ends_at")
         widgets = {
             "description": forms.Textarea(attrs={"rows": 4}),
-            "starts_at": forms.DateTimeInput(attrs={"type": "datetime-local"}),
-            "ends_at": forms.DateTimeInput(attrs={"type": "datetime-local"}),
+            "starts_at": forms.DateTimeInput(
+                format="%Y-%m-%dT%H:%M", attrs={"type": "datetime-local"}
+            ),
+            "ends_at": forms.DateTimeInput(
+                format="%Y-%m-%dT%H:%M", attrs={"type": "datetime-local"}
+            ),
         }
 
     def __init__(self, *args, class_group: ClassGroup | None = None, **kwargs):

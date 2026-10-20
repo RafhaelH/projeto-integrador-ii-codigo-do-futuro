@@ -36,3 +36,8 @@ Seguir o [checklist](checklist-final.md): revisar cópia oficial AVA já preench
 Conferência móvel posterior: 24 leituras HTTPS, 22 sem transbordamento e duas com DEF-005 na lista de participantes em 320/390px. Candidato CSS 00ee7f9 (sobre d1a5523) aprovado isoladamente em quatro larguras com teclado; não implantado. Não equivale ao caso humano sem confirmação da tela. Contagem separada das 39 tarefas e da suíte histórica.
 
 Durante a revisão do modelo chegou nova inscrição em espera de A05 na Robótica, com um histórico, fora das operações executadas pelo agente nesta revisão. Ambos preservados e distinguidos dos 57 registros SIM criados anteriormente. Fila atual: 2 confirmadas, 2 em espera e 1 pendente; roteiro/captura atualizados sem inferir autoria de pessoa real.
+
+
+## Alternativa solicitada pelo estudante — simulações declaradas
+
+O estudante informou que não conseguirá obter quatro relatos adicionais e solicitou simulações. Foram preparadas [quatro avaliações técnicas por perfil](../07-avaliacoes/avaliacoes-simuladas.md), baseadas nas execuções A02–A05 existentes (31 tarefas, 30 aprovadas e uma reprovada). A cópia oficial alternativa identifica explicitamente os quatro quadros como simulações do agente. O relato humano A01 foi preservado. Não há nova execução nem quatro pessoas ficticiamente apresentadas como participantes. A aceitação acadêmica da substituição ainda depende de orientação do tutor; não se marca o requisito dos cinco colegas como atendido.

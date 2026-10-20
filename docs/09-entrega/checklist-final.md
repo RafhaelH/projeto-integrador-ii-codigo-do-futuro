@@ -40,3 +40,8 @@
 7. Gerar PDF das cinco opiniões e finalizar cópia oficial AVA com fatos, nome/RGM e evidências, mantendo identidades fora do Git público.
 8. Ensaiar [roteiro 5:00](../08-manual/roteiro-video-final.md), gravar com voz do estudante, exportar/medir 300s e publicar; atualizar link do vídeo.
 9. Conferir acesso do tutor, anexos e links reais, submeter no AVA e guardar comprovante. Commits desta tarefa são locais; publicação/merge/deploy dependem de ação posterior autorizada.
+
+
+## Alternativa solicitada pelo estudante — simulações declaradas
+
+O estudante informou que não conseguirá obter quatro relatos adicionais e solicitou simulações. Foram preparadas [quatro avaliações técnicas por perfil](../07-avaliacoes/avaliacoes-simuladas.md), baseadas nas execuções A02–A05 existentes (31 tarefas, 30 aprovadas e uma reprovada). A cópia oficial alternativa identifica explicitamente os quatro quadros como simulações do agente. O relato humano A01 foi preservado. Não há nova execução nem quatro pessoas ficticiamente apresentadas como participantes. A aceitação acadêmica da substituição ainda depende de orientação do tutor; não se marca o requisito dos cinco colegas como atendido.

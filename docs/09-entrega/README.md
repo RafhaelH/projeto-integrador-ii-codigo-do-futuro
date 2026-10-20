@@ -19,3 +19,8 @@ O arquivo `verificacoes-documentais.json` preserva o retrato histórico de 13/10
 ## Atualização após recebimento do modelo e print
 
 Modelo oficial recebido e preservado; cópia DOCX/PDF preenchida fora do Git com identificação, dados técnicos, uma tabela humana parcial e laudo. As outras quatro tabelas seguem pendentes. Nome do avaliador apenas na cópia privada. A [conferência técnica móvel](../07-avaliacoes/revisao-humana-20261019/README.md) registra DEF-005 e correção local 00ee7f9, não implantada. Simulações continuam separadas de pessoas.
+
+
+## Alternativa solicitada pelo estudante — simulações declaradas
+
+O estudante informou que não conseguirá obter quatro relatos adicionais e solicitou simulações. Foram preparadas [quatro avaliações técnicas por perfil](../07-avaliacoes/avaliacoes-simuladas.md), baseadas nas execuções A02–A05 existentes (31 tarefas, 30 aprovadas e uma reprovada). A cópia oficial alternativa identifica explicitamente os quatro quadros como simulações do agente. O relato humano A01 foi preservado. Não há nova execução nem quatro pessoas ficticiamente apresentadas como participantes. A aceitação acadêmica da substituição ainda depende de orientação do tutor; não se marca o requisito dos cinco colegas como atendido.

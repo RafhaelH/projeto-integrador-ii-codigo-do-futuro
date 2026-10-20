@@ -37,3 +37,6 @@ Simulações do agente ficam em seção e [relatório próprios](relatorio-simul
 O avaliador informou que funcionaram: alterar nome e vê-lo no cabeçalho, registrar inscrição, cancelar inscrição, rejeitar período de encontro fora da turma, filtrar painel e consultar/baixar PDF. Documento/tela do PDF não especificados. Relatou “Responsividade mobile quebra”, sem tela, dimensões ou navegador. Não informou funcionalidades não testadas nem correção sugerida. O computador foi confirmado pelo estudante; não se presume teste em celular físico.
 
 A [conferência técnica posterior](revisao-humana-20261019/README.md) reproduziu um transbordamento na lista de participantes, mas não comprova identidade com o caso humano ainda sem tela. As cinco fichas de distribuição permanecem modelos em branco; a primeira tabela do modelo oficial privado contém o relato recebido, com as lacunas explícitas.
+
+
+O estudante optou por apresentar [quatro avaliações simuladas declaradas](avaliacoes-simuladas.md), em vez de novos relatos humanos indisponíveis. Elas permanecem separadas e não preenchem as métricas humanas acima. O arquivo oficial alternativo rotula claramente os quatro quadros. Aceitação acadêmica da substituição não comprovada.

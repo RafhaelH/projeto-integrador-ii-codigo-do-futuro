@@ -92,7 +92,7 @@
   "concurrent_new_business_records": {
     "enrollments.Enrollment": 1,
     "enrollments.EnrollmentStatusHistory": 1,
-    "note": "Nova inscrição em espera por A01 na Robótica durante esta revisão, fora das operações do agente; autoria humana não inferida, registros preservados."
+    "note": "Nova inscrição em espera por A05 na Robótica durante esta revisão, fora das operações do agente; autoria humana não inferida, registros preservados."
   },
   "current_robotics_queue": {
     "at": "2026-10-19T20:59:11.008075-03:00",

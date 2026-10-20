@@ -2,7 +2,7 @@
 
 ## Autoria, natureza e versão
 
-Execução SIM-20261019 pelo **agente Codex**, por solicitação do estudante. Não são cinco pessoas, opiniões, assinaturas nem satisfação humana. Nenhum relato humano verificável foi disponibilizado até esta preparação; não se infere sua existência ou autoria pelo uso de uma conta. A exigência de cinco colegas/profissionais e eventual autorização do tutor para substituição continuam pendentes.
+Execução SIM-20261019 pelo **agente Codex**, por solicitação do estudante. Não são cinco pessoas, opiniões, assinaturas nem satisfação humana. Durante a execução inicial nenhum relato humano havia sido disponibilizado. Posteriormente chegou HUM-001/A01 por print, com identificação confirmada pelo estudante; ver consolidação separada. Não se infere autoria pelo uso de uma conta. A exigência de cinco colegas/profissionais e eventual autorização do tutor para substituição continuam pendentes.
 
 Publicação a351c5a reconfirmada por 122 hashes; develop 58db4fc, PR #13 integrada. Main preservada. Navegador Chromium/Playwright, HTTPS real com TLS validado, cinco contextos independentes, login/logout e formulários HTML com CSRF. Não há API REST presumida. Viewports 1440×1000 e 390×844; não são aparelhos físicos nem aprovação de usabilidade/AA.
 
@@ -48,4 +48,6 @@ Falhas do executor: A01/A02-T06 procuravam link de certificado após emissão qu
 
 ## Avaliações humanas disponíveis
 
-Nenhuma ficha/relato humano verificável recebido neste conjunto de arquivos. O relato mencionado sem conteúdo permanece **conteúdo, nome e data a confirmar**, fora das tabelas de pessoas. As cinco [fichas originais](resultados/README.md) continuam aguardando avaliação humana. Somente incorporar um relato após ter conteúdo disponível, com lacunas essenciais explicitadas, sem completar por inferência.
+Após a simulação inicial, recebido **um relato humano HUM-001/A01** por print, data informada 13/10/2026, nome e computador confirmados pelo estudante. Conteúdo e lacunas estão na [consolidação humana](consolidacao.md) e na cópia privada do modelo oficial. Quatro relatos ainda faltam; condição de colega/profissional e demais lacunas do primeiro seguem a confirmar. As [fichas de distribuição](resultados/README.md) permanecem modelos em branco. Nenhuma simulação foi convertida em opinião humana.
+
+A [conferência móvel posterior](revisao-humana-20261019/README.md) tem contagem própria de 24 verificações (22 sem transbordamento e duas com DEF-005); não altera os resultados das 39 tarefas. Quatro verificações do candidato CSS passaram isoladamente, sem implantação ou aprovação de dispositivos reais.

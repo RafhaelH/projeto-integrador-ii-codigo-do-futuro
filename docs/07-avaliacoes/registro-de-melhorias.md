@@ -1,6 +1,6 @@
 # Registro de problemas e melhorias
 
-Estado: **aguardando avaliação humana**. Este registro será preenchido após as sessões reais. Não remover itens rejeitados; a justificativa faz parte da evidência acadêmica. A tabela única abaixo reúne achados, decisões e retestes.
+Estado: **um relato humano recebido; quatro pendentes**. Achado humano e conferência técnica posterior estão separados abaixo. Não remover itens rejeitados; a justificativa faz parte da evidência acadêmica. Nenhuma opinião ou nota é completada por inferência.
 
 ## Tipos
 
@@ -31,11 +31,11 @@ Estado: **aguardando avaliação humana**. Este registro será preenchido após 
 
 ## Registro das sessões A01–A05
 
-Estado: **aguardando avaliação humana**. Não há problemas humanos ou decisões preenchidos pela preparação técnica.
+Estado: **um relato humano recebido, quatro pendentes**. HUM-001 é um relato recebido do estudante; a conferência técnica posterior não substitui sua confirmação.
 
 | ID | Sessão/tarefa | Problema e resultado esperado | Evidência | Severidade | Decisão | Justificativa | Responsável/prazo | Correção/PR | Reteste |
 |---|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | | |
+| HUM-001 | A01; tela a confirmar | “Responsividade mobile quebra”; esperado uso sem corte/rolagem indevida | Print da conversa; original e nome restritos | a confirmar | Aceitar investigação/correção do problema reproduzido | Interface responsiva; confirmação do caso humano depende de tela/método/navegador | A confirmar; antes da rodada móvel definitiva | DEF-005 / candidato local 00ee7f9 | Publicação ainda sem correção; 4 verificações isoladas passaram |
 
 Classificação: defeito, usabilidade, ideia ou fora do escopo. Decisão: corrigir agora, depois, não aceitar ou duplicado. Toda decisão precisa de justificativa; manter também resultados negativos e vínculo à ficha original.
 
@@ -55,3 +55,8 @@ DEF-001/002/003 e cronologia da carga foram descobertas técnicas, documentadas 
 | EXEC-001/002/003 | Seletores/redirects do executor | Corrigir executor | Dois caminhos de certificado e um seletor de descrição; retestados, sem mudança funcional para esses três casos |
 
 Detalhes, horários e evidências no [relatório das simulações](relatorio-simulacoes.md). Nenhum desses itens preenche a tabela reservada às sugestões humanas.
+
+
+## DEF-005 — achado técnico relacionado ao tema de HUM-001
+
+Decisão: **corrigir**. Em 24 verificações de leitura por HTTPS, 22 não apresentaram transbordamento da página e duas reproduziram largura 435px em viewports 320/390 na lista de participantes. O rótulo acessível “Ações”, posicionado absolutamente, tinha o body como referência. Acrescentar `position: relative` apenas a `.table-shell` mantém esse rótulo contido, preservando a rolagem interna da tabela e sua acessibilidade. Candidato `00ee7f9`, sobre d1a5523, aprovado em quatro larguras com ações acessíveis por teclado; não implantado. A correspondência com a falha humana permanece a confirmar, sem atribuir essa tela à pessoa. [Método e evidências](revisao-humana-20261019/README.md).

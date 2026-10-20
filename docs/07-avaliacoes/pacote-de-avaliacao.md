@@ -33,4 +33,4 @@ Exigência da disciplina: cinco **colegas de curso ou profissionais da área rea
 
 ## Atualização em 19/10/2026
 
-Nenhuma ficha humana foi preenchida nesta preparação. [Simulações técnicas do agente](relatorio-simulacoes.md) são separadas. A oferta antiga A05-I está encerrada; o [roteiro A05](roteiros/A05.md) agora orienta consulta da situação vigente e preparação de nova oferta apenas quando necessária. Não distribuir o prazo histórico como se ainda estivesse aberto. O [laudo](../09-entrega/laudo-qualidade.md) inclui DEF-004 ainda não implantado.
+As fichas de distribuição continuam em branco. Um relato humano HUM-001 foi recebido por print e incorporado à cópia privada do modelo oficial, com quatro relatos e lacunas do primeiro pendentes. Ver [consolidação parcial](consolidacao.md). [Simulações técnicas do agente](relatorio-simulacoes.md) são separadas. A oferta antiga A05-I está encerrada; o [roteiro A05](roteiros/A05.md) orienta consulta da situação vigente e preparação de nova oferta apenas quando necessária. Não distribuir o prazo histórico como se ainda estivesse aberto. O [laudo](../09-entrega/laudo-qualidade.md) inclui DEF-004/005 ainda sem implantação.

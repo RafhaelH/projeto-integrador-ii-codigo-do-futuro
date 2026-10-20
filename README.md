@@ -186,3 +186,5 @@ Repositório: <https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futur
 ## Preparação de entrega em 19/10/2026
 
 PR #13 integrada em develop 58db4fc; aplicação permanece em a351c5a. O [índice atual](docs/09-entrega/README.md), o [laudo](docs/09-entrega/laudo-qualidade.md) e o [roteiro definitivo 5:00](docs/08-manual/roteiro-video-final.md) registram 37/39 tarefas técnicas aprovadas, um novo defeito de datas com correção somente local, cinco opiniões humanas e vídeo pendentes. As novas alterações desta tarefa não foram publicadas no GitHub nem implantadas.
+
+Atualização após recebimento do modelo e print: modelo oficial preenchido parcialmente fora do Git; um relato humano identificado privadamente, quatro pendentes e lacunas explícitas. DEF-005 móvel reproduzido tecnicamente, candidato local 00ee7f9 sobre d1a5523, sem implantação.

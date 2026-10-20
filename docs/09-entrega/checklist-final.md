@@ -15,10 +15,12 @@
 ## Ações ainda necessárias
 
 - [ ] Obter planejamento/protótipo originais I ou registrar ausência/inaplicabilidade com tutor; não inventar histórico.
-- [ ] Obter e preencher o modelo oficial PIT_atividade do AVA; ficha auxiliar de revisão não substitui esse arquivo.
-- [ ] Disponibilizar relato humano mencionado; conteúdo/nome/data a confirmar, sem completar por inferência.
+- [x] Receber e preencher parcialmente cópia do modelo oficial PIT_atividade do AVA, mantendo original e identificação fora do Git.
+- [ ] Completar quatro tabelas humanas, lacunas de HUM-001 e link do vídeo antes da submissão.
+- [x] Incorporar HUM-001/A01: conteúdo do print, nome e computador confirmados pelo estudante; data informada 13/10/2026.
+- [ ] Confirmar condição de colega/profissional, navegador, tela/método mobile, não testados e ciência/autorização do primeiro avaliador.
 - [ ] Selecionar cinco colegas de curso/profissionais distintos e coletar fichas identificadas/datadas com funcionou/falhou/correção sugerida/não testado e motivo.
-- [ ] Revisar/autorizar integração e implantação de DEF-004 em tarefa separada; retestar A01-T03/A02-T03 no publicado antes de aprová-las.
+- [ ] Revisar/autorizar integração e implantação de DEF-004/005 em tarefa separada; retestar datas e layout na publicação antes de aprová-los.
 - [ ] Conferir espaço humano A05: oferta histórica encerrada e alternativa SIM já solicitada; consultar situação ou preparar outra oferta exclusiva após backup.
 - [ ] Consolidar opiniões reais, decidir sugestões com justificativa, melhorar o pertinente e retestar.
 - [ ] Gerar PDF definitivo das cinco opiniões; preservar originais privados, sem transformar simulações em pessoas.
@@ -29,9 +31,9 @@
 
 ## Sequência exata para concluir
 
-1. Incorporar modelo oficial e documentos I disponíveis; conferir campos e registrar o que faltar.
+1. Revisar a cópia oficial já preenchida; obter documentos I disponíveis ou registrar ausência.
 2. Validar somente relatos humanos efetivamente recebidos; completar identificação/data por confirmação com a pessoa.
-3. Em tarefa operacional autorizada, integrar/implantar correção de datas e retestar; não usar a suíte no banco publicado.
+3. Em tarefa operacional autorizada, integrar/implantar correções de datas e layout móvel e retestar; não usar a suíte no banco publicado.
 4. Selecionar cinco pessoas elegíveis, conferir credenciais/cenários/prazos e fazer backup antes das sessões mutáveis.
 5. Executar sessões reais e recolher as cinco fichas/evidências originais individualmente; registrar ajuda e não testados.
 6. Consolidar achados, justificar decisões e tratar/retestar o pertinente; revisar matriz, laudo e materiais.

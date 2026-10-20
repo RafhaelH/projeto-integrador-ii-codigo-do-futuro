@@ -116,26 +116,24 @@
     }
   ],
   "document_checks": {
-    "relative_links_checked": 432,
+    "relative_links_checked": 446,
     "broken_relative_links": 0,
     "video_segments": 8,
     "video_target_seconds": 300,
     "actual_video_recorded": false,
-    "official_AVA_template_found": false,
+    "official_AVA_template_found": true,
     "student_identity_kept_outside_public_git": true,
     "public_preparation_pdfs": [
       {
         "file": "docs/07-avaliacoes/modelo-consolidado.pdf",
         "pages": 9,
-        "sha256": "a090fa18ee26e16ba9300afa27092b93accc7ffd7531c41c417cfe52c1fc8bca",
-        "text_within_page": true,
+        "sha256": "bb936cf3e39f1c93711e2b0c9fbc950f32585fbb060593598a7575b0f0838314",
         "visual_review": true
       },
       {
         "file": "docs/07-avaliacoes/pacote-imprimivel.pdf",
         "pages": 16,
-        "sha256": "5d6d8f04b52fd723a732c3f34c2f3bcd719f58574945720a9ef7609ffb2324d0",
-        "text_within_page": true,
+        "sha256": "37c9a2a2d554eb8879126c300e39f742183c331bc391bb208e45179d8f31e387",
         "visual_review": true
       }
     ]
@@ -146,5 +144,11 @@
     "dump_sha256": "8d8eafbbdbb47cd2d3cf7c3cb005762d05022c40dec0e722f379bb9e2760dc27",
     "catalog_entries_verified": 193,
     "dump_in_public_git": false
+  },
+  "human_report_received_after_run": {
+    "count": 1,
+    "other_reports_pending": 4,
+    "details": "../revisao-humana-20261019/evidencias.json",
+    "note": "human_evaluations_available=0 descreve a execução original antes do recebimento do print; não o estado atual."
   }
 }

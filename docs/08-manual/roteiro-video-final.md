@@ -51,9 +51,9 @@ Ação exata: Abrir oficina e a fila de Robótica somente para leitura. Não con
 
 Narração integral em primeira pessoa:
 
-> Eu separo oficina, que define a proposta pedagógica, de turma, que organiza uma edição e seus encontros. Em Robótica, eu consulto a fila: são duas vagas ocupadas por duas inscrições confirmadas, uma pessoa em espera e uma solicitação pendente. Pendências não ocupam vaga. Eu mantenho esse cenário intacto. Na simulação técnica, a antiga oferta de A zero cinco foi bloqueada por prazo, e a nova solicitação ocorreu apenas em uma oferta exclusiva.
+> Eu separo oficina, que define a proposta pedagógica, de turma, que organiza uma edição e seus encontros. Em Robótica, eu consulto a fila: são duas vagas ocupadas por duas inscrições confirmadas, duas pessoas em espera e uma solicitação pendente. Pendências não ocupam vaga. Eu mantenho esse cenário intacto. Na simulação técnica, a antiga oferta de A zero cinco foi bloqueada por prazo, e a nova solicitação ocorreu apenas em uma oferta exclusiva.
 
-Resultado a mostrar: Robótica: capacidade 2, confirmadas 2, espera 1, pendente 1; oferta histórica A05-I não renovada.
+Resultado a mostrar: Robótica: capacidade 2, confirmadas 2, espera 2, pendente 1; oferta histórica A05-I não renovada.
 
 Alternativa: Se a fila não abrir, eu mostro a captura real com código e legenda, sem substituir o estado por números inventados.
 
@@ -87,15 +87,15 @@ Alternativa: Se o download falhar, eu abro o PDF real já exportado e identifico
 
 ## 3:05–4:10 — Defeitos e resultados de validação
 
-Conta e navegação: sem conta; laudo de qualidade → relatório das simulações → evidências DEF-004 → commit local.
+Conta e navegação: sem conta; laudo → simulações → resumo humano sem identificação → evidências DEF-004/005 → commits locais.
 
-Ação exata: Exibir três defeitos históricos e seus retestes; matriz de 39 tarefas; captura da data vazia e comparação isolada corrigida.
+Ação exata: Exibir três defeitos históricos e seus retestes; matriz de 39 tarefas; resumo humano anonimizado; comparações isoladas de datas e layout, sem anunciar implantação.
 
 Narração integral em primeira pessoa:
 
-> Eu distingo as correções históricas das opiniões humanas. A validação técnica encontrou encontro duplicado retornando erro quinhentos, ausência de perfil próprio e conclusão indevida pelo admin. Esses três defeitos foram corrigidos e retestados. Agora, o agente executou trinta e nove tarefas técnicas: trinta e sete passaram e duas reproduziram o mesmo problema de datas nos formulários. Eu apresento o candidato corrigido em branch local, com quarenta e um testes direcionados aprovados e dez campos conferidos no navegador isolado. Essa correção ainda não foi implantada. As simulações não equivalem a cinco pessoas. Eu mantenho a implantação, o reteste público e as cinco opiniões reais como pendências, sem atribuir aos colegas defeitos descobertos tecnicamente.
+> Eu distingo as correções históricas das opiniões humanas. A validação técnica encontrou encontro duplicado com erro quinhentos, ausência de perfil próprio e conclusão indevida pelo admin. Esses três defeitos foram corrigidos e retestados. O agente executou trinta e nove tarefas: trinta e sete passaram e duas reproduziram o problema de datas. Recebi um relato humano, que confirmou seis itens e relatou quebra no layout móvel. Uma conferência separada reproduziu transbordamento na lista de participantes, ainda sem confirmar a mesma tela do relato. Datas têm quarenta e um testes direcionados aprovados; layout passou em quatro larguras isoladas. As correções locais ainda não foram implantadas. Eu aguardo reteste público, quatro relatos adicionais e esclarecimentos do primeiro.
 
-Resultado a mostrar: Laudo histórico, matriz 37/2 e DEF-004; candidato d1a5523 claramente rotulado NÃO IMPLANTADO.
+Resultado a mostrar: Histórico, matriz 37/2, um relato parcial; DEF-004 e DEF-005 com candidatos locais NÃO IMPLANTADOS.
 
 Alternativa: Se o GitHub não abrir, eu mostro o relatório e o commit local no editor, ocultando caminhos de credenciais; não anuncio CI remota da correção.
 
@@ -121,11 +121,11 @@ Ação exata: Mostrar materiais e lista de pendências; encerrar exatamente na m
 
 Narração integral em primeira pessoa:
 
-> Eu entrego código, manual, modelagem, laudo, evidências e a cópia de revisão para o tutor. Ainda preciso das cinco avaliações humanas, da consolidação definitiva e da publicação deste vídeo. Eu deixo essas pendências explícitas e confiro os links e o formulário oficial antes da submissão.
+> Eu entrego código, manual, modelagem, laudo, evidências e o modelo oficial preenchido parcialmente. Um relato humano foi incorporado; quatro e alguns esclarecimentos ainda faltam. Eu confiro a consolidação e o acesso do tutor. Depois de publicar este vídeo com cinco minutos, substituo o link pendente antes da submissão.
 
 Resultado a mostrar: Índice, DOCX/PDF de revisão e pendências; link do vídeo ainda PENDENTE na preparação.
 
-Alternativa: Se faltar o modelo oficial, eu identifico a ficha auxiliar como preparação e digo que a transposição para o AVA continua pendente.
+Alternativa: Se o DOCX oficial não abrir no navegador, eu mostro seu PDF privado já revisado, mantendo visíveis as pendências.
 
 ## Abas e caminhos reais conferidos
 
@@ -149,7 +149,7 @@ As oito telas principais foram abertas por HTTPS em 19/10/2026, somente leitura.
 
 ## Preparação da gravação
 
-- [ ] Confirmar SHA publicado; a351c5a permanece sem DEF-004 corrigido. Se mudar, atualizar laudo/contagens/falas antes de gravar.
+- [ ] Confirmar SHA publicado; a351c5a permanece sem DEF-004/005 corrigidos. Se mudar, atualizar laudo/contagens/falas antes de gravar.
 - [ ] Conferir identificação na capa privada; não colocar RGM no repositório público.
 - [ ] Deixar abas já autenticadas nos três contextos, PDFs/laudo/diagrama locais e evidências das correções abertos.
 - [ ] Fechar notificações, e-mail, mensageiros, gerenciador de senhas e abas pessoais; ocultar barra de favoritos e caminhos privados.
@@ -167,14 +167,20 @@ Eu sou o estudante responsável pelo Código do Futuro, desenvolvido no Projeto 
 
 No perfil de administrador, eu começo pelo painel filtrado para Python, com turmas iniciadas em abril. Esse filtro define o universo dos indicadores e evita misturar os registros novos de simulação com a apresentação. Eu encontro dois participantes, frequência média de setenta e cinco por cento e uma aprovação. Em Pessoas, consulto Ana e o vínculo com responsável ativo. Eu preservo esses cadastros e não altero dados pessoais durante a gravação.
 
-Eu separo oficina, que define a proposta pedagógica, de turma, que organiza uma edição e seus encontros. Em Robótica, eu consulto a fila: são duas vagas ocupadas por duas inscrições confirmadas, uma pessoa em espera e uma solicitação pendente. Pendências não ocupam vaga. Eu mantenho esse cenário intacto. Na simulação técnica, a antiga oferta de A zero cinco foi bloqueada por prazo, e a nova solicitação ocorreu apenas em uma oferta exclusiva.
+Eu separo oficina, que define a proposta pedagógica, de turma, que organiza uma edição e seus encontros. Em Robótica, eu consulto a fila: são duas vagas ocupadas por duas inscrições confirmadas, duas pessoas em espera e uma solicitação pendente. Pendências não ocupam vaga. Eu mantenho esse cenário intacto. Na simulação técnica, a antiga oferta de A zero cinco foi bloqueada por prazo, e a nova solicitação ocorreu apenas em uma oferta exclusiva.
 
 No perfil de instrutor, eu abro o acompanhamento de Web. Carla apresenta cem por cento de frequência, enquanto Diego tem cinquenta por cento nos encontros realizados. Eu mostro os estados de projeto e a avaliação ainda não publicada. No participante, eu consulto somente a própria jornada. Na simulação do agente, os instrutores registraram chamadas e notas em turmas novas, e o participante entregou um projeto exclusivo. Essas notas são acadêmicas e fictícias; não representam satisfação ou opinião de quem avaliou o software.
 
 Na turma de Python já concluída, eu comparo Ana aprovada com Bruno não concluinte por frequência de cinquenta por cento. A regra exige frequência mínima de setenta e cinco por cento, nota seis e projeto entregue. Eu abro o certificado ativo de Ana, com oito horas correspondentes a quatro encontros de duas horas, e mostro o PDF real, sem reprocessar a turma.
 
-Eu distingo as correções históricas das opiniões humanas. A validação técnica encontrou encontro duplicado retornando erro quinhentos, ausência de perfil próprio e conclusão indevida pelo admin. Esses três defeitos foram corrigidos e retestados. Agora, o agente executou trinta e nove tarefas técnicas: trinta e sete passaram e duas reproduziram o mesmo problema de datas nos formulários. Eu apresento o candidato corrigido em branch local, com quarenta e um testes direcionados aprovados e dez campos conferidos no navegador isolado. Essa correção ainda não foi implantada. As simulações não equivalem a cinco pessoas. Eu mantenho a implantação, o reteste público e as cinco opiniões reais como pendências, sem atribuir aos colegas defeitos descobertos tecnicamente.
+Eu distingo as correções históricas das opiniões humanas. A validação técnica encontrou encontro duplicado com erro quinhentos, ausência de perfil próprio e conclusão indevida pelo admin. Esses três defeitos foram corrigidos e retestados. O agente executou trinta e nove tarefas: trinta e sete passaram e duas reproduziram o problema de datas. Recebi um relato humano, que confirmou seis itens e relatou quebra no layout móvel. Uma conferência separada reproduziu transbordamento na lista de participantes, ainda sem confirmar a mesma tela do relato. Datas têm quarenta e um testes direcionados aprovados; layout passou em quatro larguras isoladas. As correções locais ainda não foram implantadas. Eu aguardo reteste público, quatro relatos adicionais e esclarecimentos do primeiro.
 
 Eu implementei uma aplicação web em Python e Django, com PostgreSQL e páginas HTML e CSS. Templates apresentam os dados; views coordenam a entrada; serviços concentram regras e transações; models e restrições preservam a integridade. Eu relaciono esse desenho ao MTV e ao MVC na documentação. A suíte histórica tem duzentos e trinta e cinco testes aprovados e cobertura de oitenta e nove vírgula oitenta e quatro por cento, em ambiente isolado.
 
-Eu entrego código, manual, modelagem, laudo, evidências e a cópia de revisão para o tutor. Ainda preciso das cinco avaliações humanas, da consolidação definitiva e da publicação deste vídeo. Eu deixo essas pendências explícitas e confiro os links e o formulário oficial antes da submissão.
+Eu entrego código, manual, modelagem, laudo, evidências e o modelo oficial preenchido parcialmente. Um relato humano foi incorporado; quatro e alguns esclarecimentos ainda faltam. Eu confiro a consolidação e o acesso do tutor. Depois de publicar este vídeo com cinco minutos, substituo o link pendente antes da submissão.
+
+
+Atualização factual após o print: um relato humano incorporado privadamente; quatro e lacunas do primeiro ainda faltam. Candidato de datas d1a5523 e candidato móvel 00ee7f9 estão locais, sem implantação. Na cena 3:05–4:10 mostrar ambas as evidências e o resumo humano sem nome/contato. Na conclusão usar o modelo oficial privado, com vídeo pendente. Reensaiar a fala; a exportação deve medir exatamente 300s.
+
+
+Conferência final da fila: nova inscrição em espera por A01 registrada durante esta revisão, fora das ações do agente; dados preservados sem inferir autoria humana. Estado atual da Robótica: 2 confirmadas, 2 em espera, 1 pendente. Usar captura atual `../07-avaliacoes/revisao-humana-20261019/robotica-fila-atual.png`; a captura anterior de uma espera continua no acervo histórico. Conferir novamente antes da gravação.

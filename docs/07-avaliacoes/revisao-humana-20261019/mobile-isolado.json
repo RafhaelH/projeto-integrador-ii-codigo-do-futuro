@@ -1,0 +1,66 @@
+[
+  {
+    "viewport": 320,
+    "original_document_width": 435,
+    "candidate_document_width": 320,
+    "status": "APROVADO",
+    "keyboard_and_table": {
+      "label": "Editar",
+      "focused": true,
+      "tableClient": 298,
+      "tableScroll": 488,
+      "scrollLeft": 190,
+      "actionVisible": true,
+      "accessibleActionsLabel": true
+    },
+    "method": "HTML capturado da publicação e CSS integral do candidato em Chromium isolado; não é reteste do publicado."
+  },
+  {
+    "viewport": 390,
+    "original_document_width": 435,
+    "candidate_document_width": 390,
+    "status": "APROVADO",
+    "keyboard_and_table": {
+      "label": "Editar",
+      "focused": true,
+      "tableClient": 368,
+      "tableScroll": 488,
+      "scrollLeft": 120,
+      "actionVisible": true,
+      "accessibleActionsLabel": true
+    },
+    "method": "HTML capturado da publicação e CSS integral do candidato em Chromium isolado; não é reteste do publicado."
+  },
+  {
+    "viewport": 768,
+    "original_document_width": 768,
+    "candidate_document_width": 768,
+    "status": "APROVADO",
+    "keyboard_and_table": {
+      "label": "Editar",
+      "focused": true,
+      "tableClient": 734,
+      "tableScroll": 734,
+      "scrollLeft": 0,
+      "actionVisible": true,
+      "accessibleActionsLabel": true
+    },
+    "method": "HTML capturado da publicação e CSS integral do candidato em Chromium isolado; não é reteste do publicado."
+  },
+  {
+    "viewport": 1440,
+    "original_document_width": 1440,
+    "candidate_document_width": 1440,
+    "status": "APROVADO",
+    "keyboard_and_table": {
+      "label": "Editar",
+      "focused": true,
+      "tableClient": 1178,
+      "tableScroll": 1178,
+      "scrollLeft": 0,
+      "actionVisible": true,
+      "accessibleActionsLabel": true
+    },
+    "method": "HTML capturado da publicação e CSS integral do candidato em Chromium isolado; não é reteste do publicado."
+  }
+]

@@ -1,6 +1,6 @@
 # Instruções para o responsável
 
-Estado: **aguardando avaliação humana**.
+Estado: **um relato humano recebido; quatro pendentes**. O relato parcial de A01 está na cópia oficial privada; não executar tarefas restantes em nome da pessoa. Confirmar elegibilidade e lacunas antes da consolidação definitiva.
 
 Antes: selecione cinco colegas de curso ou profissionais da área distintos e explique o uso acadêmico das respostas; registre identificação autorizada em armazenamento privado. Entregue uma conta por pessoa, sem compartilhar o arquivo geral de credenciais. Registre data, dispositivo, navegador, URL e versão efetivamente em uso. Faça novo backup do projeto antes das sessões. Confira o checklist e a disponibilidade da turma exclusiva.
 

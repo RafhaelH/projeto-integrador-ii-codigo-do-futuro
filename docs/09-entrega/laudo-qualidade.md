@@ -22,8 +22,14 @@ Em 19/10: [39 tarefas por perfil](../07-avaliacoes/relatorio-simulacoes.md), 37 
 
 Candidato local d1a5523: dez widgets ISO, dez regressões reproduzidas antes, 41 testes direcionados aprovados em SQLite isolado e conferência nativa de dez campos no Chromium. Não houve CI remota desta branch nem implantação; não atribuir a ela a cobertura histórica. Requer revisão/integração/implantação autorizadas posteriores e reteste no publicado.
 
+## Relato humano e DEF-005
+
+Recebido HUM-001/A01 por print, data informada 13/10/2026; nome e computador confirmados pelo estudante na cópia privada. Seis itens funcionaram; relatada quebra mobile sem tela/navegador/método. Quatro opiniões faltam e a condição de colega/profissional do primeiro deve ser confirmada. Nenhuma nota ou tarefa não informada foi inferida.
+
+Conferência técnica posterior, separada do relato: 24 leituras HTTPS em oito telas e três larguras, 22 sem transbordamento e duas com documento de 435px na lista de participantes a 320/390px. DEF-005: rótulo acessível absoluto escapava do contêiner. Candidato mínimo 00ee7f9 (sobre d1a5523): contêiner posicionado; quatro larguras e navegação por teclado aprovadas em HTML/CSS isolados. Não implantado; a correspondência com a tela do relato humano permanece a confirmar. [Evidências móveis](../07-avaliacoes/revisao-humana-20261019/README.md).
+
 ## Parecer e pendências
 
-O MVP tem implementação, testes e correções históricas demonstráveis. **Parecer condicionado, não aprovação integral:** DEF-004 permanece publicado; cinco avaliações humanas, PDF de opiniões, decisões humanas e vídeo ainda não foram comprovados. Modelo AVA e documentos originais I dependem dos arquivos efetivamente disponibilizados. SMTP externo, carga/escala, versões exigidas de navegadores e auditoria completa de acessibilidade não estão aprovados.
+O MVP tem implementação, testes e correções históricas demonstráveis. **Parecer condicionado, não aprovação integral:** DEF-004 e DEF-005 permanecem publicados; há um relato humano parcial, quatro faltantes e identificação de elegibilidade ainda a confirmar. PDF definitivo das cinco opiniões e vídeo ainda pendentes. Modelo oficial AVA recebido e preenchido parcialmente em cópia privada; documentos originais I continuam ausentes. SMTP externo, carga/escala, versões exigidas de navegadores e auditoria completa de acessibilidade não estão aprovados.
 
 Preservação: backup verificado antes das alterações, 57 registros fictícios novos rastreáveis e nenhum registro preexistente de negócio alterado/excluído. Autenticação modifica last_login das contas usadas. Produção não foi reimplantada. Reavaliar o parecer somente com evidências finais e versão identificada.

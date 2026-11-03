@@ -1,3 +1,9 @@
+# Consolidação atual — 03/11/2026
+
+Três relatos humanos disponíveis (HUM-001/002/003), com nomes/fontes fora do Git. Data de HUM-001 a confirmar: captura 13/10/2026 e informação complementar 03/11/2026, sem segunda sessão comprovada. [Consolidação atual, itens não testados e decisões](fechamento-20261103/README.md). As simulações técnicas continuam separadas. Campos ausentes não foram preenchidos.
+
+## Histórico documental preservado — antes do fechamento de novembro
+
 # Modelo de consolidação
 
 Estado: **consolidação parcial — um relato humano recebido; quatro avaliações pendentes**. Métricas, notas, tempos e tarefas não informados continuam em branco; relato resumido sem inferir execução do roteiro completo.

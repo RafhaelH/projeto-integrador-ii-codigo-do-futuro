@@ -60,3 +60,8 @@ Detalhes, horários e evidências no [relatório das simulações](relatorio-sim
 ## DEF-005 — achado técnico relacionado ao tema de HUM-001
 
 Decisão: **corrigir**. Em 24 verificações de leitura por HTTPS, 22 não apresentaram transbordamento da página e duas reproduziram largura 435px em viewports 320/390 na lista de participantes. O rótulo acessível “Ações”, posicionado absolutamente, tinha o body como referência. Acrescentar `position: relative` apenas a `.table-shell` mantém esse rótulo contido, preservando a rolagem interna da tabela e sua acessibilidade. Candidato `00ee7f9`, sobre d1a5523, aprovado em quatro larguras com ações acessíveis por teclado; não implantado. A correspondência com a falha humana permanece a confirmar, sem atribuir essa tela à pessoa. [Método e evidências](revisao-humana-20261019/README.md).
+
+
+## Atualização de 03/11/2026
+
+Novos relatos e decisões: DEF-004/005/006, UX-007 a UX-014 e DATA-015 estão no [fechamento de 03/11/2026](fechamento-20261103/README.md), com observação, reprodução, causa, decisão e reteste separados. Não houve limpeza publicada.

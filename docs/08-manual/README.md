@@ -291,3 +291,8 @@ As sete turmas A01–A05 são espaços de avaliação separados; não usar esses
 As 38 capturas acima pertencem à preparação de 13/10 e não são novas opiniões humanas. O [roteiro definitivo](roteiro-video-final.md) usa consultas reais reconferidas e mantém a voz do estudante/edição final de 300s. Os novos registros SIM alteram indicadores globais; use o filtro Python/abril explicitado para a apresentação estável.
 
 Limite atual: DEF-004 deixa campos de data nativos vazios na edição; não anunciar edição simples aprovada até implantação/reteste do candidato local. A oferta humana A05-I antiga encerrou; consultar [A05 atualizado](../07-avaliacoes/roteiros/A05.md). Não misturar tarefas SIM já realizadas com tarefas atribuídas às pessoas.
+
+
+## Candidato de fechamento de 03/11/2026
+
+As mudanças do candidato `9f0fd32` ainda não estão publicadas. [Fluxos e capturas atuais](../06-testes/fechamento-20261103/README.md): edição preserva valores, Pessoas → Instrutores → Novo instrutor → Criar acesso e cadastrar instrutor, Início → Nova turma para ADMIN sem staff, confirmação de cancelamento e vagas. O PDF/manual de outubro documenta a publicação antiga; este complemento e o [roteiro final](roteiro-video-final.md) identificam a versão nova.

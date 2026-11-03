@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-03",
+  "source_kind": "textos fornecidos pelo estudante na conversa",
+  "restricted_integral_source_sha256": "d75f2b6f6b8b24487ddd0fc587d69dd0a57f6362ed2be308247d389d7957c5f8",
+  "identified_source_private": true,
+  "human_reports_available": 3,
+  "additional_HUM001_session_proven": false,
+  "cases": [
+    {
+      "id": "HUM-001",
+      "alias": "A01",
+      "profile": "ADMIN",
+      "date_status": "data do teste a confirmar",
+      "historical_capture_date": "2026-10-13",
+      "student_reported_new_date": "2026-11-03",
+      "second_session_evidence": false,
+      "worked": [
+        "Alteração de nome do usuário para aparecer no Header.",
+        "Registrar Inscrição.",
+        "Cancelar Inscrição.",
+        "Tentativa de editar dados de um Encontro: erro ao tentar determinar um período do encontro fora do período da turma funcionou corretamente.",
+        "Filtro do painel de indicadores.",
+        "Consultar e baixar PDF."
+      ],
+      "failed": [
+        "Responsividade mobile quebra."
+      ],
+      "untested": "não informado",
+      "browser": "não informado",
+      "eligibility": "a confirmar"
+    },
+    {
+      "id": "HUM-002",
+      "alias": "A02",
+      "profile": "ADMIN, acesso confirmado pelo estudante",
+      "test_date": "2026-11-03",
+      "worked": [
+        "Teste navegação do sistema."
+      ],
+      "failed": [
+        "Melhorar responsividade em dispositivo mobile.",
+        "Procurei aonde faz o registro de uma turma e não encontrei.",
+        "Se não existir essa funcionalidade, poderia ser adicionada."
+      ],
+      "untested": "não informado",
+      "browser": "não informado",
+      "eligibility": "a confirmar"
+    },
+    {
+      "id": "HUM-003",
+      "alias": "não informado",
+      "profile": "ADMIN, informado no relato",
+      "test_date": "2026-11-03",
+      "worked_summary": "Navegação pelos menus; cadastro de participante, responsável/vínculo, instituição, oficina rascunho, turma e inscrição; edição do participante; cancelamento de inscrição/turma; espera quando lotada; PDF e três CSV; validações intencionais. Observação humana, não nova reprodução técnica.",
+      "worked_quote": "Depois editei o participante de teste e funcionou.",
+      "failed_summary": "Nascimento, telefone e CPF vieram vazios ao abrir edição, inclusive cadastro antigo que não foi salvo; cadastro de instrutor bloqueado por seletor Usuário vazio.",
+      "untested_exact": [
+        "Cadastro de instrutor e vínculo de instrutor a uma turma, pelo motivo acima.",
+        "Botão \"Publicar\" da oficina: deixei como rascunho para não publicar nada no sistema real.",
+        "Outros perfis (instrutor, participante e responsável): só tive acesso de administrador.",
+        "Cronograma da turma e outras edições: priorizei o fluxo principal."
+      ],
+      "apparent_contradiction": "O relato de edição bem-sucedida é preservado junto da falha de preenchimento inicial. Conseguir editar/redigitar não comprova pré-carregamento correto.",
+      "browser": "não informado",
+      "device": "não informado",
+      "eligibility": "a confirmar"
+    }
+  ]
+}

@@ -101,3 +101,6 @@ As cinco pessoas e o vídeo ainda são pendentes; contas e simulações não equ
 A PR #13 foi integrada em develop 58db4fc. [Índice para o tutor](09-entrega/README.md), [simulações técnicas](07-avaliacoes/relatorio-simulacoes.md), [laudo](09-entrega/laudo-qualidade.md) e [roteiro definitivo do vídeo](08-manual/roteiro-video-final.md) registram o estado atual: 37/39 tarefas técnicas aprovadas, DEF-004 com correção local ainda não implantada, cinco avaliações humanas e vídeo pendentes. Simulações não equivalem a cinco pessoas. Novos commits desta tarefa permanecem locais.
 
 Atualização após recebimento do modelo e print: modelo oficial preenchido parcialmente fora do Git; um relato humano identificado privadamente, quatro pendentes e lacunas explícitas. DEF-005 móvel reproduzido tecnicamente, candidato local 00ee7f9 sobre d1a5523, sem implantação.
+
+
+Fechamento de 03/11/2026: [relatos/decisões](07-avaliacoes/fechamento-20261103/README.md), [testes](06-testes/fechamento-20261103/README.md) e [roteiro final 5:00](08-manual/roteiro-video-final.md). Candidato 9f0fd32 ainda aguarda revisão/integração/publicação; sem exclusão de dados publicados.

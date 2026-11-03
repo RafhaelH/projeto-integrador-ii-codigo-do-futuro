@@ -1,35 +1,24 @@
-# Laudo técnico de qualidade — parecer condicionado
+# Laudo de qualidade — fechamento de 03/11/2026
 
-## Objeto e natureza
+**Parecer condicionado.** Candidato funcional `9f0fd32f0d57f97c953a1e39cb62b0b601d1aeb5`, testado em PostgreSQL isolado e navegador local; não implantado. Identificação do estudante e dos avaliadores apenas na cópia privada. [Fontes, causas e decisões](../07-avaliacoes/fechamento-20261103/README.md).
 
-Código do Futuro, aplicação web Python/Django e PostgreSQL. Base documental 58db4fc, publicação a351c5a reconfirmada em 19/10/2026 por 122 hashes. Autoria desta verificação: agente Codex, a pedido do estudante; não é laudo assinado por cinco colegas nem certificação de segurança/acessibilidade. Identificação pessoal do estudante fica na cópia de entrega fora do Git.
+## Histórico preservado
 
-## Três defeitos históricos e retestes comprovados
+DEF-001: encontro duplicado retornava 500; validação e tratamento da constraint passaram a informar erro útil. DEF-002: perfil próprio ausente; formulário/view/rota limitados ao próprio nome/e-mail. DEF-003: conclusão acadêmica indevida pelo Django admin; campos protegidos e fluxo canônico exigido. [Retestes históricos](../06-testes/consolidacao-verificacao.md) permanecem preservados, sem atribuição retroativa a avaliadores humanos.
 
-| ID | Descoberta e correção técnica | Evidência / resultado |
-|---|---|---|
-| DEF-001 | Encontro com início duplicado retornava 500. MeetingForm e tratamento atômico da constraint específica passaram a informar erro útil | cccfa6e / PR #11; R-08 e tests/workshops/test_defect_regressions.py. HTTP 200 com mensagem, dados preservados |
-| DEF-002 | RF-006 não tinha perfil próprio. Criados view/form/rota/template com alvo request.user e whitelist nome/e-mail | R-18–R-21 e tests/accounts/test_profile.py: papéis, CSRF, privilégios/campos alheios, duplicidade/race |
-| DEF-003 | Admin permitia concluir turma sem registros acadêmicos. Campos readonly e POSTs/inlines forjados bloqueados; fluxo canônico obrigatório | R-22–R-24, regressões de admin e completion: transição indevida rejeitada; conclusão canônica validada |
+## Correções e limites atuais
 
-Fontes preservadas: [consolidação histórica](../06-testes/consolidacao-verificacao.md), [defeitos originais](../06-testes/validacao-publicada/VALIDATION-20261013-120621/defeitos.md), [reteste](../06-testes/correcoes-publicadas/RETEST-20261013-130005/relatorio.md). Descobertos na validação técnica; não atribuídos a pessoas avaliadoras.
+- **Edição de participante:** data ISO corrige valor nativo vazio. CPF/telefone existentes estavam preenchidos no fixture da base; o esvaziamento relatado não foi reproduzido. Candidato formata valores iniciais sem sobrescrever POST inválido, preserva os demais campos e a precisão do consentimento. Testes de persistência e navegador aprovados.
+- **Instrutor:** consulta de elegíveis correta, com zero opções no inventário publicado. Criado fluxo acessível ao administrador funcional para provisionar apenas INSTRUCTOR e cadastro, com senha validada/hash, transação e rollback; nenhum staff/superusuário/grupo adicional. Vínculo à turma testado.
+- **Responsividade e descoberta:** duas combinações com overflow na base; 52 candidatas sem overflow. Rótulos acessíveis contidos, menus/ações com quebra e campos ajustados. A02 sem staff encontrou Nova turma pelo início, cadastrou e vinculou instrutor em 390px; A01 conferido em 320px. Cadastro de turma já existia, não foi inventado como funcionalidade nova.
+- **Operação:** confirmação explícita antes do cancelamento, GET sem alteração e POST com CSRF/papel; indicadores de pendentes/espera separados; vagas visíveis antes da confirmação e validação transacional preservada contra página desatualizada; obrigatórios padronizados; mensagem numérica em PT-BR; consentimento explicado sem coleta automática; download apenas solicitado, sem afirmação indevida de conclusão.
+- **Menores:** regra existente bloqueia inscrição sem responsável ativo quando menor na inscrição ou no início. Cadastro preparatório continua permitido com aviso. Relato de inscrição permitida não reproduzido nas condições da regra; faltam IDs/datas para concluir esse caso humano. Não foi aplicada restrição nova arbitrária.
+- **Certificados SIM:** dois IDs correspondem aos manifests. Inventário/plano restritos preparados; nenhuma exclusão ou revogação publicada. Registros continuam no histórico, inclusive os que poluem apresentação global.
 
-## Evidência quantitativa e novo achado
+## Evidência e avaliação humana
 
-Histórico: 235 testes, zero skip e cobertura 89,84% em PostgreSQL isolado; [CI de develop 58db4fc](https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro/actions/runs/38471294257) confirmada. Reteste anterior: 25 cenários HTTP consolidados, 278 verificações/465 requisições; preparação anterior: 57 verificações/81 requisições. São universos diferentes, não somar como cenários novos.
+**264 testes aprovados, zero skips, 90,54% de cobertura**, PostgreSQL 17 isolado; Ruff, Django check, ausência de migrations novas e sintaxe JS aprovados. Comparação visual: 44 combinações de base / 52 candidatas, quatro larguras; 12 fluxos completos aprovados. [Evidências](../06-testes/fechamento-20261103/README.md). Não somar combinações/requisições como novas pessoas ou cenários. Não há prova de AA, aparelhos físicos, carga ou todos os navegadores.
 
-Em 19/10: [39 tarefas por perfil](../07-avaliacoes/relatorio-simulacoes.md), 37 aprovadas e duas reprovadas pelo único DEF-004, mais cinco reexecuções de diagnóstico/continuação. Chromium real verifica renderização básica; viewport móvel não é aceite humano. Novo defeito: datas localizadas esvaziam controles HTML5 e bloqueiam edição simples. Gravidade média; a correção é necessária antes da rodada que dependa dessa edição.
+Três relatos humanos preservados; não cinco. HUM-003 conseguiu editar, mas relatou campos vazios ao abrir: fatos compatíveis quando houve redigitação. Não testados foram transcritos exatamente. HUM-001 mantém captura 13/10/2026 e informação do estudante 03/11/2026, **data do teste a confirmar**, sem segunda sessão comprovada. Senhas, fontes nominais e dump não estão no Git.
 
-Candidato local d1a5523: dez widgets ISO, dez regressões reproduzidas antes, 41 testes direcionados aprovados em SQLite isolado e conferência nativa de dez campos no Chromium. Não houve CI remota desta branch nem implantação; não atribuir a ela a cobertura histórica. Requer revisão/integração/implantação autorizadas posteriores e reteste no publicado.
-
-## Relato humano e DEF-005
-
-Recebido HUM-001/A01 por print, data informada 13/10/2026; nome e computador confirmados pelo estudante na cópia privada. Seis itens funcionaram; relatada quebra mobile sem tela/navegador/método. Quatro opiniões faltam e a condição de colega/profissional do primeiro deve ser confirmada. Nenhuma nota ou tarefa não informada foi inferida.
-
-Conferência técnica posterior, separada do relato: 24 leituras HTTPS em oito telas e três larguras, 22 sem transbordamento e duas com documento de 435px na lista de participantes a 320/390px. DEF-005: rótulo acessível absoluto escapava do contêiner. Candidato mínimo 00ee7f9 (sobre d1a5523): contêiner posicionado; quatro larguras e navegação por teclado aprovadas em HTML/CSS isolados. Não implantado; a correspondência com a tela do relato humano permanece a confirmar. [Evidências móveis](../07-avaliacoes/revisao-humana-20261019/README.md).
-
-## Parecer e pendências
-
-O MVP tem implementação, testes e correções históricas demonstráveis. **Parecer condicionado, não aprovação integral:** DEF-004 e DEF-005 permanecem publicados; há um relato humano parcial, quatro faltantes e identificação de elegibilidade ainda a confirmar. PDF definitivo das cinco opiniões e vídeo ainda pendentes. Modelo oficial AVA recebido e preenchido parcialmente em cópia privada; documentos originais I continuam ausentes. SMTP externo, carga/escala, versões exigidas de navegadores e auditoria completa de acessibilidade não estão aprovados.
-
-Preservação: backup verificado antes das alterações, 57 registros fictícios novos rastreáveis e nenhum registro preexistente de negócio alterado/excluído. Autenticação modifica last_login das contas usadas. Produção não foi reimplantada. Reavaliar o parecer somente com evidências finais e versão identificada.
+Antes da gravação final na aplicação pública: revisar/integrar PR em develop, publicar em tarefa separada autorizada, identificar SHA implantado e repetir smoke HTTPS. Sem isso, apresentar somente o candidato isolado com versão explícita. Vídeo e requisito de cinco colegas/orientação do tutor seguem pendentes, além dos documentos originais I ausentes.

@@ -1,3 +1,9 @@
+# Entrega atual — fechamento de 03/11/2026
+
+Prazo: **17/11/2026**. [Relatório final](relatorio-final.md), [laudo](laudo-qualidade.md), [matriz](matriz-conformidade.md), [checklist](checklist-final.md), [três relatos e decisões](../07-avaliacoes/fechamento-20261103/README.md), [testes](../06-testes/fechamento-20261103/README.md) e [roteiro 5:00](../08-manual/roteiro-video-final.md). Fontes integrais/identidades/modelo AVA ficam fora do Git público. Candidato testado, ainda não implantado; não anunciar correções na URL pública antes de publicação/reteste.
+
+## Índice e histórico da preparação anterior
+
 # Índice atual de entrega para o tutor
 
 Preparação de 19/10/2026, base develop 58db4fc (PR #13 integrada), aplicação a351c5a reconfirmada por 122 hashes. **Entrega acadêmica parcial:** um relato humano recebido e modelo oficial preenchido parcialmente; quatro opiniões adicionais, lacunas do primeiro relato, vídeo e implantação/reteste de DEF-004/005 continuam pendentes. Simulações não substituem pessoas.

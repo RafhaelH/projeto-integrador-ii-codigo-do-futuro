@@ -42,3 +42,8 @@ Cinco opiniões/PDF consolidado real, vídeo narrado e revisão após feedback. 
 ## Atualização de 19/10/2026
 
 [Simulações técnicas atuais](../07-avaliacoes/relatorio-simulacoes.md): 39 tarefas únicas, 37 aprovadas e duas reprovadas pelo DEF-004. São execuções do agente, sem pessoas avaliadoras. Três falhas do executor corrigidas em cinco reexecuções estão preservadas. Candidato d1a5523 tem 41 testes direcionados e comparação nativa de widgets em ambiente isolado; não foi implantado nem tem nova CI remota. A suíte histórica 235/89,84% foi reconfirmada na CI de develop 58db4fc, sem reexecução na produção. Histórico acima permanece identificado por versão/data.
+
+
+## Atualização de 03/11/2026
+
+[Fechamento de 03/11/2026](fechamento-20261103/README.md): candidato funcional 9f0fd32f0d57f97c953a1e39cb62b0b601d1aeb5, 264 testes PostgreSQL isolado/90,54%, 52 combinações candidatas e 12 fluxos de navegador; sem deploy. Não substituir resultados históricos anteriores.

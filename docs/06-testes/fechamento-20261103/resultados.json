@@ -1,0 +1,17 @@
+{
+  "code_commit": "9f0fd32f0d57f97c953a1e39cb62b0b601d1aeb5",
+  "tests": 264,
+  "failed": 0,
+  "skipped": 0,
+  "coverage_percent": 90.54,
+  "database": "PostgreSQL 17 isolado e efêmero",
+  "visual_baseline_combinations": 44,
+  "visual_candidate_combinations": 52,
+  "candidate_page_overflows": 0,
+  "browser_flows": 12,
+  "production_data_mutations_by_agent": 0,
+  "new_migrations": 0,
+  "human_reports": 3,
+  "additional_Rafa_session_proven": false,
+  "restricted_source_sha256": "d75f2b6f6b8b24487ddd0fc587d69dd0a57f6362ed2be308247d389d7957c5f8"
+}

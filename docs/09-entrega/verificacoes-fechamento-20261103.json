@@ -8,7 +8,7 @@
   "HUM001_date": "a confirmar; captura 13/10/2026, estudante informou 03/11/2026; segunda sessão não comprovada",
   "relative_document_links": 474,
   "broken_links": 0,
-  "public_files_scanned": 130,
+  "public_files_scanned": 132,
   "secrets_or_identified_evaluator_leaks": 0,
   "private_pdfs_rendered": 8,
   "private_pdf_pages": 38,
@@ -26,5 +26,6 @@
   "video_recorded": false,
   "published": false,
   "published_data_deleted": false,
-  "note": "As verificações antigas de outubro são históricas. Identificação, fontes integrais e modelo oficial permanecem fora do Git."
+  "note": "As verificações antigas de outubro são históricas. Identificação, fontes integrais e modelo oficial permanecem fora do Git.",
+  "pull_request": "https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro/pull/14"
 }

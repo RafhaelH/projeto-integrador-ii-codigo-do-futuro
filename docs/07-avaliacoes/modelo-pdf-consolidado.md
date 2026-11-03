@@ -1,6 +1,6 @@
 # Modelo do PDF consolidado das cinco opiniões/testes
 
-Estado: **aguardando avaliação humana**. [PDF modelo em branco](modelo-consolidado.pdf) e [HTML imprimível](modelo-consolidado.html). Estes arquivos são preparação, **não** o PDF definitivo exigido com opiniões reais. As cinco fichas são incorporadas dos [originais individuais](resultados/README.md), sem inventar respostas.
+Estado em 03/11/2026: **três fontes humanas recebidas, duas avaliações pendentes**. [PDF consolidado parcial anonimizado](modelo-consolidado.pdf) e [HTML imprimível](modelo-consolidado.html). A transcrição nominal e o modelo oficial AVA atualizado ficam na cópia restrita para o tutor, fora do Git. Estes arquivos não são o consolidado definitivo de cinco colegas. As [fichas de distribuição](resultados/README.md) continuam em branco.
 
 ## Como completar depois das sessões
 
@@ -10,4 +10,4 @@ Estado: **aguardando avaliação humana**. [PDF modelo em branco](modelo-consoli
 4. Gerar PDF definitivo para submissão, renderizar e conferir todas as páginas, nomes/datas/campos e links/evidências. Usar título “Consolidação das cinco avaliações reais”, versão e data efetivas; guardar fonte e hash do arquivo final.
 5. Preservar nomes/originais no material destinado ao tutor. Publicação no Git de identidade/opiniões reais exige autorização; eventual cópia pública anonimizada não substitui original identificado solicitado pela disciplina.
 
-O arquivo modelo contém capa com aviso, cinco fichas em branco, consolidação e decisões. As contas A01–A05 definem papéis, não nomes humanos. A05-I encerra 16/10/2026 às 18h São Paulo: se posterior, registrar ajuste operacional ou motivo verdadeiro de não teste. Nenhum ajuste no banco foi feito nesta auditoria.
+O PDF atual contém capa com aviso, consolidação/decisões, três fontes anonimizadas e indicação de HUM-004/HUM-005 aguardando avaliação. Preserva a data histórica 13/10 de HUM-001 e a informação de 03/11 fornecida pelo estudante, sem comprovar segunda sessão: data a confirmar. As contas A01–A05 definem papéis, não nomes humanos. A05-I encerrou em 16/10/2026 às 18h de São Paulo; não orientar nova inscrição nessa oferta como se estivesse aberta. Nenhum ajuste no banco publicado foi feito neste fechamento.

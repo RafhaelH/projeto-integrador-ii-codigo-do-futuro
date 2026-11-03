@@ -10,6 +10,7 @@
 - [x] Conferir regra de responsável e manter bloqueio na inscrição; aviso no cadastro sem regra arbitrária nova.
 - [x] Inventariar dois certificados por IDs/manifests e preparar plano restrito, sem exclusão publicada.
 - [x] Executar 264 testes em PostgreSQL isolado, 52 combinações candidatas e 12 fluxos no navegador; preservar limites.
+- [x] Abrir [PR #14 para develop](https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro/pull/14) com código, testes e documentação sanitizada.
 - [ ] Revisar/integrar PR para develop em ação posterior; nenhum merge, deploy ou promoção de main nesta tarefa.
 - [ ] Publicar SHA aprovado em tarefa operacional separada e repetir smoke HTTPS antes da gravação final.
 - [ ] Confirmar data de HUM-001 e elegibilidade/campos humanos; completar requisito de cinco colegas ou orientação do tutor.

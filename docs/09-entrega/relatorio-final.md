@@ -14,7 +14,7 @@ Correções: edição/data e preservação dos campos, fluxo seguro de acesso de
 
 1. Revisar a PR, integrar em develop e publicar o SHA aprovado em tarefa posterior; a continuação autoriza integração e implantação restritas ao projeto, após CI e backup.
 2. Repetir smoke HTTPS no SHA publicado: edição válida/inválida, instrutor/vínculo, A02 mobile/Nova turma, confirmação de cancelamento, vagas e CSV/PDF.
-3. Obter fonte de um quinto avaliador distinto; não duplicar o relato anterior de Rafa. A data está esclarecida por confirmação do estudante; manter campos ausentes sinalizados.
+3. Obter fonte de um quinto avaliador distinto; não duplicar o relato anterior de HUM-001. A data está esclarecida por confirmação do estudante; manter campos ausentes sinalizados.
 4. Rever o plano nominal de apresentação sem excluir dados publicados nesta tarefa; usar certificado previamente identificado ou escopo do participante, pois a lista global de certificados não possui filtro.
 5. Conferir modelo AVA privado e documentos originais I; manter ausências explícitas.
 6. Gravar o [roteiro final 5:00](../08-manual/roteiro-video-final.md) com voz do estudante e versão demonstrada identificada; medir 300s, publicar e testar acesso do tutor.

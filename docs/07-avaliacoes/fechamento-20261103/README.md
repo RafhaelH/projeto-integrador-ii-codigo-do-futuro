@@ -11,7 +11,7 @@ Há **quatro relatos humanos disponíveis**, separados das simulações de outub
 
 ## Reconciliação e fonte adicional
 
-O relato anterior localizado é a fonte de HUM-001, identificada como Rafael/Rafa Passoni pelo estudante, e não uma quinta pessoa. HUM-004 foi recebido integralmente na conversa nesta continuação. Há quatro avaliadores distintos comprovados. Falta o conteúdo de um quinto avaliador distinto e sua identificação; não se atribuem simulações a essa pessoa.
+O relato anterior localizado é a fonte de HUM-001, cuja identidade o estudante já confirmou, e não uma quinta pessoa. HUM-004 foi recebido integralmente na conversa nesta continuação. Há quatro avaliadores distintos comprovados. Falta o conteúdo de um quinto avaliador distinto e sua identificação; não se atribuem simulações a essa pessoa.
 
 HUM-004 relatou frequência com justificativas, percentuais de presença, revisão de projetos, edição de avaliações, notas e devolutivas funcionando; descreveu experiência positiva. Falhas e itens não testados não foram informados — isso não significa ausência de falhas ou aprovação dos demais recursos. A fonte integral e a atribuição nominal permanecem restritas.
 

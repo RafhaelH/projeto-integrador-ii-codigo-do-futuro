@@ -1,12 +1,19 @@
 # Fechamento após relatos humanos — 03/11/2026
 
-Há **três relatos humanos disponíveis**, separados das simulações de outubro. Identidades e fonte integral estão na cópia privada de entrega. A fonte fornecida pelo estudante foi preservada em UTF-8, SHA-256 `d75f2b6f6b8b24487ddd0fc587d69dd0a57f6362ed2be308247d389d7957c5f8`. Não há assinatura, satisfação ou dado ausente preenchido por inferência.
+Há **quatro relatos humanos disponíveis**, separados das simulações de outubro. Identidades e fonte integral estão na cópia privada de entrega. A fonte fornecida pelo estudante foi preservada em UTF-8, SHA-256 `d75f2b6f6b8b24487ddd0fc587d69dd0a57f6362ed2be308247d389d7957c5f8`. Não há assinatura, satisfação ou dado ausente preenchido por inferência.
 
 | Fonte | Acesso / perfil | Data e limite |
 |---|---|---|
-| HUM-001 | A01 / administrador | Captura original: 13/10/2026. Estudante também informou 03/11/2026; **data do teste a confirmar**. Sem prova de segunda sessão. O original de outubro foi preservado |
+| HUM-001 | A01 / administrador | Data do teste corrigida para 03/11/2026 conforme confirmação do estudante responsável em 03/11/2026; a captura original foi preservada. Não se inventa segunda sessão. |
 | HUM-002 | A02 / administrador, confirmado pelo estudante | Relato datado 03/11/2026. Navegador e detalhes do aparelho não informados |
 | HUM-003 | Administrador; username não informado | Relato datado 03/11/2026. Dispositivo/navegador não informados |
+| HUM-004 | Instrutor 03; turma PY-2026-A03; username não informado | 03/11/2026, conforme confirmação do estudante. Dispositivo/navegador não informados |
+
+## Reconciliação e fonte adicional
+
+O relato anterior localizado é a fonte de HUM-001, identificada como Rafael/Rafa Passoni pelo estudante, e não uma quinta pessoa. HUM-004 foi recebido integralmente na conversa nesta continuação. Há quatro avaliadores distintos comprovados. Falta o conteúdo de um quinto avaliador distinto e sua identificação; não se atribuem simulações a essa pessoa.
+
+HUM-004 relatou frequência com justificativas, percentuais de presença, revisão de projetos, edição de avaliações, notas e devolutivas funcionando; descreveu experiência positiva. Falhas e itens não testados não foram informados — isso não significa ausência de falhas ou aprovação dos demais recursos. A fonte integral e a atribuição nominal permanecem restritas.
 
 ## Observações e limites humanos
 
@@ -49,4 +56,4 @@ Candidato funcional `9f0fd32f0d57f97c953a1e39cb62b0b601d1aeb5`. Base develop 58d
 - [12 fluxos completos no navegador](../../06-testes/fechamento-20261103/fluxos-navegador.json), com ações apenas em dados fictícios isolados.
 - [Dados humanos anonimizados](avaliacoes.json). Fonte integral e inventário nominal ficam fora do Git.
 
-Até 17/11/2026: revisar/integrar PR para develop em ação posterior, publicar o SHA aprovado, repetir smoke HTTPS, confirmar lacunas/data de HUM-001 e elegibilidade, completar o requisito acadêmico de cinco colegas ou obter orientação do tutor, gravar/exportar 300s e submeter. Nesta tarefa não há merge, deploy ou promoção de main.
+Até 17/11/2026: revisar/integrar PR para develop em ação posterior, publicar o SHA aprovado, repetir smoke HTTPS, confirmar somente lacunas efetivamente ausentes e completar a evidência de um quinto avaliador distinto, gravar/exportar 300s e submeter. A continuação autoriza integrar e publicar exclusivamente este Compose; main será preservada. Resultados de implantação serão registrados após a execução.

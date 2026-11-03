@@ -2,7 +2,7 @@
 
 ## Sequência exata para concluir
 
-- [x] Preservar fontes integrais dos três relatos em cópia privada e a data histórica de HUM-001.
+- [x] Preservar fontes integrais dos quatro relatos em cópia privada e a data histórica de HUM-001.
 - [x] Separar relato, reprodução, causa, decisão e reteste; manter campos ausentes e não testados sem inferência.
 - [x] Corrigir e testar edição, instrutor/vínculo e ações responsivas específicas de A02.
 - [x] Confirmar cancelamento por POST/CSRF; separar indicadores; exibir vagas antes de confirmar sem remover a trava transacional.
@@ -13,7 +13,7 @@
 - [x] Abrir [PR #14 para develop](https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro/pull/14) com código, testes e documentação sanitizada.
 - [ ] Revisar/integrar PR para develop em ação posterior; nenhum merge, deploy ou promoção de main nesta tarefa.
 - [ ] Publicar SHA aprovado em tarefa operacional separada e repetir smoke HTTPS antes da gravação final.
-- [ ] Confirmar data de HUM-001 e elegibilidade/campos humanos; completar requisito de cinco colegas ou orientação do tutor.
+- [ ] Obter relato de um quinto avaliador distinto e somente os campos ausentes; data de HUM-001 esclarecida.
 - [ ] Conferir modelo oficial AVA privado e anexos, mantendo originais I ausentes sinalizados.
 - [ ] Gravar narração própria, identificar versão, editar/exportar exatamente 300s e testar link do tutor.
 - [ ] Preencher link do vídeo, conferir permissões/anexos e submeter no AVA até 17/11/2026; guardar recibo.

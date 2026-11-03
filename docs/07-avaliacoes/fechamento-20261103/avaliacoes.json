@@ -3,14 +3,14 @@
   "source_kind": "textos fornecidos pelo estudante na conversa",
   "restricted_integral_source_sha256": "d75f2b6f6b8b24487ddd0fc587d69dd0a57f6362ed2be308247d389d7957c5f8",
   "identified_source_private": true,
-  "human_reports_available": 3,
+  "human_reports_available": 4,
   "additional_HUM001_session_proven": false,
   "cases": [
     {
       "id": "HUM-001",
       "alias": "A01",
       "profile": "ADMIN",
-      "date_status": "data do teste a confirmar",
+      "date_status": "corrigida por confirmação do estudante",
       "historical_capture_date": "2026-10-13",
       "student_reported_new_date": "2026-11-03",
       "second_session_evidence": false,
@@ -27,7 +27,9 @@
       ],
       "untested": "não informado",
       "browser": "não informado",
-      "eligibility": "a confirmar"
+      "eligibility": "a confirmar",
+      "test_date": "2026-11-03",
+      "date_correction_note": "Data do teste corrigida para 03/11/2026 conforme confirmação do estudante responsável em 03/11/2026; a captura original foi preservada."
     },
     {
       "id": "HUM-002",
@@ -64,6 +66,27 @@
       "browser": "não informado",
       "device": "não informado",
       "eligibility": "a confirmar"
+    },
+    {
+      "id": "HUM-004",
+      "alias": "Instrutor 03; username não informado",
+      "profile": "INSTRUCTOR, informado no relato",
+      "test_date": "2026-11-03",
+      "date_source": "confirmação expressa do estudante, não consta no texto original",
+      "class_reported": "PY-2026-A03",
+      "worked": [
+        "Registro de frequência: presentes, ausentes e falta justificada, com justificativas.",
+        "Resumo da turma com indicadores percentuais de presença.",
+        "Revisão de projetos e edição de avaliações com notas e devolutivas individuais."
+      ],
+      "opinion": "Experiência positiva; interface organizada e intuitiva; atende à centralização do acompanhamento de turmas.",
+      "failed": "não informado",
+      "untested": "não informado",
+      "device": "não informado",
+      "browser": "não informado",
+      "eligibility": "não informado"
     }
-  ]
+  ],
+  "date_confirmation_source": "Confirmação expressa do estudante responsável em 03/11/2026, America/Sao_Paulo",
+  "human_report_missing": "Quinto avaliador distinto: nenhum texto ou identidade adicional comprovados; o relato anterior localizado corresponde a HUM-001 e não é contado duas vezes."
 }

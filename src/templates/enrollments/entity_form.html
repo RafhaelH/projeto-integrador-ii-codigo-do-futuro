@@ -9,17 +9,16 @@
     <h1>{{ page_title }}</h1>
   </header>
 
+  {% if capacity_summary %}
+  <section class="panel" aria-label="Vagas antes da confirmação">
+    <h2>{{ capacity_summary.class_group.code }} — vagas da turma</h2>
+    <p>Capacidade: <strong>{{ capacity_summary.capacity }}</strong> · Ocupadas: <strong>{{ capacity_summary.occupied }}</strong> · Disponíveis: <strong>{{ capacity_summary.available }}</strong></p>
+    <p>As vagas serão conferidas novamente ao confirmar. Outra inscrição pode ocupar a última vaga enquanto esta tela está aberta.</p>
+  </section>
+  {% endif %}
   <form class="panel form-grid" method="post" novalidate>
     {% csrf_token %}
-    {% if form.non_field_errors %}<div class="form-alert form-span">{{ form.non_field_errors }}</div>{% endif %}
-    {% for field in form %}
-      <div class="form-field {% if field.name == 'reason' %}form-span{% endif %}">
-        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-        {{ field }}
-        {% if field.help_text %}<small class="field-help">{{ field.help_text }}</small>{% endif %}
-        {% for error in field.errors %}<span class="field-error">{{ error }}</span>{% endfor %}
-      </div>
-    {% endfor %}
+    {% include "shared/form_fields.html" %}
     <div class="form-actions">
       <a class="button button-secondary" href="{{ cancel_url }}">Cancelar</a>
       <button class="button button-primary" type="submit">Confirmar</button>

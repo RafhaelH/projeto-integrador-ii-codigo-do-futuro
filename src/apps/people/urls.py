@@ -8,6 +8,7 @@ from .views import (
     InstitutionCreateView,
     InstitutionListView,
     InstitutionUpdateView,
+    InstructorAccessCreateView,
     InstructorCreateView,
     InstructorListView,
     InstructorUpdateView,
@@ -44,6 +45,11 @@ urlpatterns = [
     ),
     path("instrutores/", InstructorListView.as_view(), name="instructor-list"),
     path("instrutores/novo/", InstructorCreateView.as_view(), name="instructor-create"),
+    path(
+        "instrutores/novo-acesso/",
+        InstructorAccessCreateView.as_view(),
+        name="instructor-access-create",
+    ),
     path(
         "instrutores/<uuid:pk>/editar/",
         InstructorUpdateView.as_view(),

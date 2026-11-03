@@ -55,7 +55,7 @@
           <td>{{ certificate.workload_hours }} h</td>
           <td>{{ certificate.issued_at|date:"d/m/Y" }}</td>
           <td>{% if certificate.is_active %}<span class="badge badge-success">Ativo</span>{% else %}<span class="badge badge-danger">Revogado</span>{% endif %}</td>
-          <td><div class="action-row"><a href="{% url 'learning:certificate-detail' certificate.pk %}">Consultar</a>{% if certificate.is_active %}<a href="{% url 'learning:certificate-download' certificate.pk %}">Baixar PDF</a>{% endif %}</div></td>
+          <td><div class="action-row"><a href="{% url 'learning:certificate-detail' certificate.pk %}">Consultar</a>{% if certificate.is_active %}<a data-download-feedback href="{% url 'learning:certificate-download' certificate.pk %}">Baixar PDF</a>{% endif %}</div></td>
         </tr>
       {% empty %}
         <tr><td colspan="6">Nenhum certificado disponível.</td></tr>

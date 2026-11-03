@@ -10,7 +10,7 @@
     <p>{{ certificate.enrollment.participant }} · {{ certificate.enrollment.class_group.code }}</p>
   </div>
   {% if certificate.is_active %}
-    <a class="button button-primary" href="{% url 'learning:certificate-download' certificate.pk %}">Baixar PDF</a>
+    <a class="button button-primary" data-download-feedback href="{% url 'learning:certificate-download' certificate.pk %}">Baixar PDF</a>
   {% endif %}
 </header>
 

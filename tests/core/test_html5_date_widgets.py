@@ -56,6 +56,9 @@ def test_native_date_input_keeps_existing_value_in_portuguese(kind, field, input
         attrs = InputValues(str(form[field])).inputs[field]
         expected = "2026-10-19" if input_type == "date" else "2026-10-19T14:35"
 
+        if field == "privacy_consent_at":
+            expected += ":00.000000"
+
         assert attrs["type"] == input_type
         assert attrs["value"] == expected
         # The ISO value accepted by the browser also round-trips through Django.

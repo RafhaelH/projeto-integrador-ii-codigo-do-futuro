@@ -12,6 +12,9 @@
     <a class="button button-secondary" href="{% url 'people:participant-update' participant.pk %}">Editar participante</a>
   </div>
 
+  {% if guardian_warning %}
+    <p class="message" role="status">Este participante é menor de idade e ainda não possui responsável ativo. Você pode completar o cadastro e vincular o responsável. A inscrição será bloqueada sem responsável ativo quando ele for menor de 18 anos na data da inscrição ou no início da turma.</p>
+  {% endif %}
   <div class="detail-grid">
     <section class="panel" aria-labelledby="participant-data-title">
       <h2 id="participant-data-title">Dados principais</h2>

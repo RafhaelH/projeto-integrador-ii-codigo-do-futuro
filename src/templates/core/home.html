@@ -39,6 +39,9 @@
         {% if user.role == "ADMIN" or user.role == "INSTRUCTOR" %}
           <a class="card-link" href="{% url 'workshops:class-list' %}">Consultar turmas</a>
         {% endif %}
+        {% if user.role == "ADMIN" %}
+          <a class="card-link" href="{% url 'workshops:class-create' %}">Nova turma</a>
+        {% endif %}
       </article>
       <article class="card">
         <span class="card-icon" aria-hidden="true">03</span>

@@ -1,9 +1,12 @@
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
-from django.shortcuts import get_object_or_404
+from django.db import IntegrityError, transaction
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse, reverse_lazy
+from django.utils import timezone
 from django.views.generic import CreateView, DetailView, ListView, TemplateView, UpdateView
 
+from apps.accounts.forms import InstructorAccessCreationForm
 from apps.accounts.mixins import AdminRequiredMixin
 
 from .forms import (
@@ -14,6 +17,7 @@ from .forms import (
     ParticipantGuardianForm,
 )
 from .models import Guardian, Institution, Instructor, Participant, ParticipantGuardian
+from .services import calculate_age, participant_has_active_guardian
 
 
 class PeopleIndexView(AdminRequiredMixin, TemplateView):
@@ -38,6 +42,13 @@ class ParticipantDetailView(AdminRequiredMixin, DetailView):
     model = Participant
     template_name = "people/participant_detail.html"
     context_object_name = "participant"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["guardian_warning"] = calculate_age(
+            self.object.birth_date, timezone.localdate()
+        ) < 18 and not participant_has_active_guardian(self.object)
+        return context
 
     def get_queryset(self):
         return (
@@ -176,6 +187,40 @@ class InstructorCreateView(AdminRequiredMixin, SuccessMessageMixin, CreateView):
             **kwargs,
             page_title="Novo instrutor",
             cancel_url=reverse("people:instructor-list"),
+            instructor_access_url=reverse("people:instructor-access-create"),
+        )
+
+
+class InstructorAccessCreateView(AdminRequiredMixin, CreateView):
+    form_class = InstructorAccessCreationForm
+    template_name = "people/entity_form.html"
+
+    def form_valid(self, form):
+        try:
+            with transaction.atomic():
+                user = form.save()
+                Instructor.objects.create(
+                    user=user,
+                    biography=form.cleaned_data["biography"],
+                    specialties=form.cleaned_data["specialties"],
+                    is_active=True,
+                )
+        except IntegrityError:
+            form.add_error(
+                "email", "Não foi possível criar o acesso. Confira se o e-mail já existe."
+            )
+            return self.form_invalid(form)
+        messages.success(
+            self.request,
+            "Acesso de instrutor e cadastro criados. Entregue a senha em canal privado.",
+        )
+        return redirect("people:instructor-list")
+
+    def get_context_data(self, **kwargs):
+        return super().get_context_data(
+            **kwargs,
+            page_title="Criar acesso e cadastrar instrutor",
+            cancel_url=reverse("people:instructor-create"),
         )
 
 

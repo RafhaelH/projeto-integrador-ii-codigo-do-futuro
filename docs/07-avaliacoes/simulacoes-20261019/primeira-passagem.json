@@ -1,0 +1,1184 @@
+[
+  {
+    "id": "A01-T01",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:25:26.843588-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Entrar e reconhecer perfil",
+    "preconditions": "Conta existente comprovada pelo manifest; senha restrita.",
+    "expected": "Login aprovado, início e perfil previstos",
+    "observed": "Login e identidade confirmados; menus renderizados conforme o papel. Senha não capturada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A01-T01.png",
+        "sha256": "84cd581b9b93e41726d037d2e12e8a4506d618b92b69735f98ad4d37f4b8219f",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:25:29.623430-03:00",
+    "path": "/",
+    "request_indexes": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "id": "A02-T01",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:25:30.520968-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Entrar e reconhecer perfil",
+    "preconditions": "Conta existente comprovada pelo manifest; senha restrita.",
+    "expected": "Login aprovado, início e perfil previstos",
+    "observed": "Login e identidade confirmados; menus renderizados conforme o papel. Senha não capturada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A02-T01.png",
+        "sha256": "6590779dc4c1332bb9a8370e0f9768f64024974d791de6b7e37be5d3b4d082f4",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:25:32.982190-03:00",
+    "path": "/",
+    "request_indexes": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "A03-T01",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:25:33.941878-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Entrar e reconhecer perfil",
+    "preconditions": "Conta existente comprovada pelo manifest; senha restrita.",
+    "expected": "Login aprovado, início e perfil previstos",
+    "observed": "Login e identidade confirmados; menus renderizados conforme o papel. Senha não capturada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A03-T01.png",
+        "sha256": "dc0976c817e982d93f08d2b294592b8ca1e6ffcc905a033dcbdb8c841546ef5d",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:25:36.340315-03:00",
+    "path": "/",
+    "request_indexes": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ]
+  },
+  {
+    "id": "A04-T01",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:25:36.924144-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Entrar e reconhecer perfil",
+    "preconditions": "Conta existente comprovada pelo manifest; senha restrita.",
+    "expected": "Login aprovado, início e perfil previstos",
+    "observed": "Login e identidade confirmados; menus renderizados conforme o papel. Senha não capturada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A04-T01.png",
+        "sha256": "dc0976c817e982d93f08d2b294592b8ca1e6ffcc905a033dcbdb8c841546ef5d",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:25:39.295248-03:00",
+    "path": "/",
+    "request_indexes": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  {
+    "id": "A05-T01",
+    "profile": "PARTICIPANT",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:25:40.131845-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Entrar e reconhecer perfil",
+    "preconditions": "Conta existente comprovada pelo manifest; senha restrita.",
+    "expected": "Login aprovado, início e perfil previstos",
+    "observed": "Login e identidade confirmados; menus renderizados conforme o papel. Senha não capturada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A05-T01.png",
+        "sha256": "f05892bb070b207b8c147cb9c72988590f4acdc4370e7bc143ecd4bd2b9600c4",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:25:42.308265-03:00",
+    "path": "/",
+    "request_indexes": [
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
+  },
+  {
+    "id": "A01-T02",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:25:42.731330-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Consultar Meu perfil por teclado",
+    "preconditions": "Sessão autenticada; página de início.",
+    "expected": "Enter abre perfil; Tab move do nome ao e-mail sem salvar",
+    "observed": "Link ativado com Enter; foco moveu de nome para e-mail com Tab. Formulário não submetido. Isso é verificação instrumental, sem aceite humano de acessibilidade.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A01-T02.png",
+        "sha256": "8c4f8756117d51bba3c4df20bb7747fe241dd245596bff830c39ce009968b0a1",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:25:43.507231-03:00",
+    "path": "/conta/perfil/",
+    "request_indexes": [
+      25,
+      26
+    ]
+  },
+  {
+    "id": "A01-T03",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:25:43.653491-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Consultar/editar participante fictício exclusivo",
+    "preconditions": "Participante SIM novo, sem CPF/telefone/vínculo de pessoa real.",
+    "expected": "Salvar autorização de imagem somente no novo participante",
+    "observed": "A execução técnica não confirmou o esperado; AssertionError no passo registrado. Não é opinião humana.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A01-T03.png",
+        "sha256": "08ade2a90d1be4f2bf688ed34c2eb4920bae7bc67d2de71e5c6957d6a7def222",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "REPROVADO",
+    "exception_type": "AssertionError",
+    "ended_at": "2026-10-19T20:25:45.515836-03:00",
+    "path": "/pessoas/participantes/cf3eca4f-9ac6-504e-b207-27193ab3859b/editar/",
+    "request_indexes": [
+      27,
+      28,
+      29
+    ]
+  },
+  {
+    "id": "A01-T04",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:25:45.662489-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Interpretar vagas/fila de Robótica em consulta",
+    "preconditions": "ROB-2026-01 é cenário de apresentação, somente GET.",
+    "expected": "Duas confirmadas, fila e pendência; sem alteração",
+    "observed": "Fila de Robótica renderizada com Elisa e estados existentes; somente consulta. A interpretação por uma pessoa não foi avaliada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A01-T04.png",
+        "sha256": "8088a15447a85df4b34c44692b432eea9bd0b70fd5f0716bfce8b01997a95be1",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:25:46.276485-03:00",
+    "path": "/inscricoes/turmas/3c505321-dbbd-4ba1-b342-0e63dcecef2b/fila/",
+    "request_indexes": [
+      30
+    ]
+  },
+  {
+    "id": "A01-T05",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:25:46.375301-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Inspecionar frequência/projeto e revisar feedback da avaliação SIM",
+    "preconditions": "Uma inscrição confirmada nova, encontro passado processado e avaliação sintética publicada.",
+    "expected": "100%, projeto entregue, nota 8; só feedback atualizado",
+    "observed": "Frequência de 100% e entrega consultadas; feedback técnico salvo mantendo nota 8. Não se modificou avaliação humana nem turma antiga.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A01-T05.png",
+        "sha256": "cabeb90514f1138d1a1f00331d325e1d0e563242db2f258e87c4c4bc55bd5d4d",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:25:48.897624-03:00",
+    "path": "/acompanhamento/inscricoes/99f56bb5-cab0-4830-ab68-0ea71ad58242/avaliacao/",
+    "request_indexes": [
+      31,
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  {
+    "id": "A01-T06",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:25:48.999997-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Concluir turma SIM e emitir certificado uma vez",
+    "preconditions": "Apenas turma e inscrição novas; critérios acadêmicos prontos.",
+    "expected": "Uma aprovação; certificado 2h; repetição não duplica",
+    "observed": "A execução técnica não confirmou o esperado; TimeoutError no passo registrado. Não é opinião humana.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A01-T06.png",
+        "sha256": "ba1018deb9f999732d65c26d2dee54f0947740a498aa6f796e27cc05f38c334d",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "REPROVADO",
+    "exception_type": "TimeoutError",
+    "ended_at": "2026-10-19T20:26:02.976163-03:00",
+    "path": "/acompanhamento/certificados/1e09ef33-0618-4324-980b-8f84d24d41f0/",
+    "request_indexes": [
+      36,
+      37,
+      38,
+      39,
+      40
+    ]
+  },
+  {
+    "id": "A01-T07",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:03.266609-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Consultar painel e exportar CSV",
+    "preconditions": "Papel ADMIN; novos dados SIM podem alterar totais globais.",
+    "expected": "CSV real UTF-8 BOM; universo global explicitado",
+    "observed": "Painel renderizado; CSV de conclusão real contém a turma SIM e usa UTF-8 BOM/;. Totais são globais, sem afirmar isolamento de tenant.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A01-T07.png",
+        "sha256": "5a0241ad0caba41e33c49660d7f34c76710fc5950e86af76e225311f23334139",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:04.238493-03:00",
+    "path": "/painel/",
+    "request_indexes": [
+      41,
+      42
+    ]
+  },
+  {
+    "id": "A01-T08",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:04.967666-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Explorar início/perfil em viewport móvel e sair",
+    "preconditions": "Viewport 390×844, não aparelho físico.",
+    "expected": "Layout renderizado e logout; registrar limites de observação",
+    "observed": "Perfil renderizado em 390×844; overflow global=False. Logout voltou ao login. Sem opinião humana de toque/legibilidade ou aprovação AA.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A01-mobile-perfil.png",
+        "sha256": "c2e0d5aea19bded56b946498d638ab51f87a5770b460427bccce02e438f0fe2e",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      {
+        "file": "restrito:capturas-completas/A01-T08.png",
+        "sha256": "52a7f830aa1b9be6d55060ebb034f38cb39c6a3b7869404f22560a197dfd0b2d",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:05.891214-03:00",
+    "path": "/entrar/",
+    "request_indexes": [
+      43,
+      44,
+      45
+    ]
+  },
+  {
+    "id": "A02-T02",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:05.972940-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Consultar Meu perfil por teclado",
+    "preconditions": "Sessão autenticada; página de início.",
+    "expected": "Enter abre perfil; Tab move do nome ao e-mail sem salvar",
+    "observed": "Link ativado com Enter; foco moveu de nome para e-mail com Tab. Formulário não submetido. Isso é verificação instrumental, sem aceite humano de acessibilidade.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A02-T02.png",
+        "sha256": "fd171ecec91fc25674e110912af4ae502d036580d6228811dac255e7db10d5d4",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:06.704127-03:00",
+    "path": "/conta/perfil/",
+    "request_indexes": [
+      46,
+      47
+    ]
+  },
+  {
+    "id": "A02-T03",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:06.810813-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Consultar/editar participante fictício exclusivo",
+    "preconditions": "Participante SIM novo, sem CPF/telefone/vínculo de pessoa real.",
+    "expected": "Salvar autorização de imagem somente no novo participante",
+    "observed": "A execução técnica não confirmou o esperado; AssertionError no passo registrado. Não é opinião humana.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A02-T03.png",
+        "sha256": "e1fc53429d4eb98050f3236e9e20e4c5b982d6d14362ca8d44c0696cd44cb23c",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "REPROVADO",
+    "exception_type": "AssertionError",
+    "ended_at": "2026-10-19T20:26:08.612496-03:00",
+    "path": "/pessoas/participantes/5a5bdf1f-0bcb-5f41-9652-e6abcf326b5a/editar/",
+    "request_indexes": [
+      48,
+      49,
+      50
+    ]
+  },
+  {
+    "id": "A02-T04",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:08.767566-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Interpretar vagas/fila de Robótica em consulta",
+    "preconditions": "ROB-2026-01 é cenário de apresentação, somente GET.",
+    "expected": "Duas confirmadas, fila e pendência; sem alteração",
+    "observed": "Fila de Robótica renderizada com Elisa e estados existentes; somente consulta. A interpretação por uma pessoa não foi avaliada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A02-T04.png",
+        "sha256": "a58ce9268c549b86c9a008ac0a158907f766fb6a1089c0c1dc84985b49c078aa",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:09.349924-03:00",
+    "path": "/inscricoes/turmas/3c505321-dbbd-4ba1-b342-0e63dcecef2b/fila/",
+    "request_indexes": [
+      51
+    ]
+  },
+  {
+    "id": "A02-T05",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:09.468438-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Inspecionar frequência/projeto e revisar feedback da avaliação SIM",
+    "preconditions": "Uma inscrição confirmada nova, encontro passado processado e avaliação sintética publicada.",
+    "expected": "100%, projeto entregue, nota 8; só feedback atualizado",
+    "observed": "Frequência de 100% e entrega consultadas; feedback técnico salvo mantendo nota 8. Não se modificou avaliação humana nem turma antiga.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A02-T05.png",
+        "sha256": "be90c26666a8181c95a742aa8c4838fdfb6a3835f209c84f12fc36a5a3546dfc",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:11.901224-03:00",
+    "path": "/acompanhamento/inscricoes/440b1650-8e5f-4773-9253-62cb7184c963/avaliacao/",
+    "request_indexes": [
+      52,
+      53,
+      54,
+      55,
+      56
+    ]
+  },
+  {
+    "id": "A02-T06",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:11.998559-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Concluir turma SIM e emitir certificado uma vez",
+    "preconditions": "Apenas turma e inscrição novas; critérios acadêmicos prontos.",
+    "expected": "Uma aprovação; certificado 2h; repetição não duplica",
+    "observed": "A execução técnica não confirmou o esperado; TimeoutError no passo registrado. Não é opinião humana.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A02-T06.png",
+        "sha256": "363f4a0188ae24a0930625c7e4a59d4358adc5e05f0e0cb03286703d0451fc48",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "REPROVADO",
+    "exception_type": "TimeoutError",
+    "ended_at": "2026-10-19T20:26:25.856485-03:00",
+    "path": "/acompanhamento/certificados/d5fe4d2a-6097-4303-8f31-10bec6e0bd90/",
+    "request_indexes": [
+      57,
+      58,
+      59,
+      60,
+      61
+    ]
+  },
+  {
+    "id": "A02-T07",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:26.082298-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Consultar painel e exportar CSV",
+    "preconditions": "Papel ADMIN; novos dados SIM podem alterar totais globais.",
+    "expected": "CSV real UTF-8 BOM; universo global explicitado",
+    "observed": "Painel renderizado; CSV de conclusão real contém a turma SIM e usa UTF-8 BOM/;. Totais são globais, sem afirmar isolamento de tenant.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A02-T07.png",
+        "sha256": "de47e188682b06b769aa66db87482fa429b1d59a10274aeb8c7f18e499cb5061",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:26.850962-03:00",
+    "path": "/painel/",
+    "request_indexes": [
+      62,
+      63
+    ]
+  },
+  {
+    "id": "A02-T08",
+    "profile": "ADMIN",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:27.546177-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Explorar início/perfil em viewport móvel e sair",
+    "preconditions": "Viewport 390×844, não aparelho físico.",
+    "expected": "Layout renderizado e logout; registrar limites de observação",
+    "observed": "Perfil renderizado em 390×844; overflow global=False. Logout voltou ao login. Sem opinião humana de toque/legibilidade ou aprovação AA.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A02-mobile-perfil.png",
+        "sha256": "f2470f11f7ce0575f99db7d03eede7ecdb361804bad216005fe894ede16f8f0f",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      {
+        "file": "restrito:capturas-completas/A02-T08.png",
+        "sha256": "52a7f830aa1b9be6d55060ebb034f38cb39c6a3b7869404f22560a197dfd0b2d",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:28.371864-03:00",
+    "path": "/entrar/",
+    "request_indexes": [
+      64,
+      65,
+      66
+    ]
+  },
+  {
+    "id": "A03-T02",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:28.452343-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Consultar Meu perfil por teclado",
+    "preconditions": "Sessão autenticada; página de início.",
+    "expected": "Enter abre perfil; Tab move do nome ao e-mail sem salvar",
+    "observed": "Link ativado com Enter; foco moveu de nome para e-mail com Tab. Formulário não submetido. Isso é verificação instrumental, sem aceite humano de acessibilidade.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A03-T02.png",
+        "sha256": "925a68f523a60c1f159f96f25653ed7f8786f1bc665403e55804090e01ddc338",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:29.148118-03:00",
+    "path": "/conta/perfil/",
+    "request_indexes": [
+      67,
+      68
+    ]
+  },
+  {
+    "id": "A03-T03",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:29.258181-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Localizar turma e cronograma SIM",
+    "preconditions": "Instrutor possui vínculo antigo preservado e novo vínculo SIM.",
+    "expected": "Turma atribuída e encontro fictício presentes",
+    "observed": "Turma SIM atribuída e encontro localizados; turma SIM do outro instrutor ausente. Vínculo antigo permanece disponível.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A03-T03.png",
+        "sha256": "12e873c4a52df2f05f3c2f1369977fa7d6a9afc6cd37096e5967df562eeb0fea",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:30.493254-03:00",
+    "path": "/oficinas/turmas/0d112155-dbb6-57bc-88eb-98c145ce994d/",
+    "request_indexes": [
+      69,
+      70
+    ]
+  },
+  {
+    "id": "A03-T04",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:30.646422-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Registrar chamada somente da turma SIM",
+    "preconditions": "Encontro passado PLANNED e inscrição confirmada novos.",
+    "expected": "Uma presença e 100%, sem duplicação",
+    "observed": "Chamada salva por formulário com CSRF; acompanhamento mostra 1 presença/1 encontro e 100% no registro novo.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A03-T04.png",
+        "sha256": "36b1a9a3ab1f72ad06216c4c1dd4c19f2894b2b0e18a046daad98ed072b1f91c",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:31.978135-03:00",
+    "path": "/acompanhamento/turmas/0d112155-dbb6-57bc-88eb-98c145ce994d/frequencia/",
+    "request_indexes": [
+      71,
+      72,
+      73
+    ]
+  },
+  {
+    "id": "A03-T05",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:32.079043-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Revisar projeto SIM",
+    "preconditions": "Projeto novo entregue na turma em andamento atribuída.",
+    "expected": "Devolutiva fictícia salva",
+    "observed": "Devolutiva técnica salva e reaberta no projeto SIM; original preservado.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A03-T05.png",
+        "sha256": "d7cae95faac6e188d90af0d291a3ae7a302f3870887eebd9cd03bcce63f3f8f0",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:33.901377-03:00",
+    "path": "/acompanhamento/projetos/11364bc2-2687-54b4-9a3a-4bba4c25cf3b/revisao/",
+    "request_indexes": [
+      74,
+      75,
+      76,
+      77
+    ]
+  },
+  {
+    "id": "A03-T06",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:33.997703-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Cadastrar/publicar avaliação acadêmica fictícia SIM",
+    "preconditions": "Sem avaliação inicial no novo vínculo.",
+    "expected": "Nota 8 publicada com autoria de instrutor",
+    "observed": "Nota 8, feedback fictício e publicação persistidos; autoria será conferida no banco. Não é nota de um avaliador humano.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A03-T06.png",
+        "sha256": "39526232457fdb987613b711ec97fbfcf41be2e38704368085698c37c1a8c5fa",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:35.318366-03:00",
+    "path": "/acompanhamento/turmas/0d112155-dbb6-57bc-88eb-98c145ce994d/frequencia/",
+    "request_indexes": [
+      78,
+      79,
+      80
+    ]
+  },
+  {
+    "id": "A03-T07",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:35.438829-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Observar limites de autorização",
+    "preconditions": "Instrutor sem staff/superusuário.",
+    "expected": "Painel vinculado; Pessoas e turma alheia negados; sem concluir/emitir",
+    "observed": "Painel próprio acessível; Pessoas retornou 403 e turma alheia 404; botões de conclusão/emissão ausentes. Nenhuma operação alheia executada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A03-T07.png",
+        "sha256": "b2781b97d10f19a693f371713ab4663f849791c58d0a4e3d031c2ac30c55eb5e",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:37.799269-03:00",
+    "path": "/acompanhamento/turmas/0d112155-dbb6-57bc-88eb-98c145ce994d/frequencia/",
+    "request_indexes": [
+      81,
+      82,
+      83,
+      84
+    ]
+  },
+  {
+    "id": "A03-T08",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:37.917124-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Ler chamada em viewport móvel e sair",
+    "preconditions": "390×844 no Chromium, sem pessoa/dispositivo físico.",
+    "expected": "Formulário renderizado, sem nova alteração; logout",
+    "observed": "Chamada renderizada em viewport móvel; não submetida novamente; sessão encerrada. Usabilidade humana não mensurada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A03-mobile-chamada.png",
+        "sha256": "dd6aad86aeeadaef719718f55c5384179045d428ab98b07c1473f439908e6591",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      {
+        "file": "restrito:capturas-completas/A03-T08.png",
+        "sha256": "52a7f830aa1b9be6d55060ebb034f38cb39c6a3b7869404f22560a197dfd0b2d",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:38.686061-03:00",
+    "path": "/entrar/",
+    "request_indexes": [
+      85,
+      86,
+      87
+    ]
+  },
+  {
+    "id": "A04-T02",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:38.768792-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Consultar Meu perfil por teclado",
+    "preconditions": "Sessão autenticada; página de início.",
+    "expected": "Enter abre perfil; Tab move do nome ao e-mail sem salvar",
+    "observed": "Link ativado com Enter; foco moveu de nome para e-mail com Tab. Formulário não submetido. Isso é verificação instrumental, sem aceite humano de acessibilidade.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A04-T02.png",
+        "sha256": "f3d4e499b1014b0739206220bcd9237541ca40f35372e6ffb53fb8ee7f696fc7",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:39.422228-03:00",
+    "path": "/conta/perfil/",
+    "request_indexes": [
+      88,
+      89
+    ]
+  },
+  {
+    "id": "A04-T03",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:39.542880-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Localizar turma e cronograma SIM",
+    "preconditions": "Instrutor possui vínculo antigo preservado e novo vínculo SIM.",
+    "expected": "Turma atribuída e encontro fictício presentes",
+    "observed": "Turma SIM atribuída e encontro localizados; turma SIM do outro instrutor ausente. Vínculo antigo permanece disponível.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A04-T03.png",
+        "sha256": "8894b2edb5ff4ba53f48ef459a18d7f02631d7b4c1050eeedf529a33e65abf5e",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:40.729811-03:00",
+    "path": "/oficinas/turmas/7bb34582-8fef-59cb-b40e-29d18242b497/",
+    "request_indexes": [
+      90,
+      91
+    ]
+  },
+  {
+    "id": "A04-T04",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:40.852304-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Registrar chamada somente da turma SIM",
+    "preconditions": "Encontro passado PLANNED e inscrição confirmada novos.",
+    "expected": "Uma presença e 100%, sem duplicação",
+    "observed": "Chamada salva por formulário com CSRF; acompanhamento mostra 1 presença/1 encontro e 100% no registro novo.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A04-T04.png",
+        "sha256": "7d149ed7671d70705f57422013b104b05507eb9d0aa2a2572b17054549e3b7c0",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:42.153639-03:00",
+    "path": "/acompanhamento/turmas/7bb34582-8fef-59cb-b40e-29d18242b497/frequencia/",
+    "request_indexes": [
+      92,
+      93,
+      94
+    ]
+  },
+  {
+    "id": "A04-T05",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:42.264657-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Revisar projeto SIM",
+    "preconditions": "Projeto novo entregue na turma em andamento atribuída.",
+    "expected": "Devolutiva fictícia salva",
+    "observed": "Devolutiva técnica salva e reaberta no projeto SIM; original preservado.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A04-T05.png",
+        "sha256": "8a063d5f03c8c7e3c1cf89fb9b603d4d56a1efe2c3d66059dc152bfb0781c8dd",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:44.075528-03:00",
+    "path": "/acompanhamento/projetos/93ca042e-194d-512d-963c-7578619c4400/revisao/",
+    "request_indexes": [
+      95,
+      96,
+      97,
+      98
+    ]
+  },
+  {
+    "id": "A04-T06",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:44.194754-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Cadastrar/publicar avaliação acadêmica fictícia SIM",
+    "preconditions": "Sem avaliação inicial no novo vínculo.",
+    "expected": "Nota 8 publicada com autoria de instrutor",
+    "observed": "Nota 8, feedback fictício e publicação persistidos; autoria será conferida no banco. Não é nota de um avaliador humano.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A04-T06.png",
+        "sha256": "d3cb7bab33c2f02af96d269625243d2c9e61397e217c081e2e21ee2d43027389",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:45.537659-03:00",
+    "path": "/acompanhamento/turmas/7bb34582-8fef-59cb-b40e-29d18242b497/frequencia/",
+    "request_indexes": [
+      99,
+      100,
+      101
+    ]
+  },
+  {
+    "id": "A04-T07",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:45.649669-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Observar limites de autorização",
+    "preconditions": "Instrutor sem staff/superusuário.",
+    "expected": "Painel vinculado; Pessoas e turma alheia negados; sem concluir/emitir",
+    "observed": "Painel próprio acessível; Pessoas retornou 403 e turma alheia 404; botões de conclusão/emissão ausentes. Nenhuma operação alheia executada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A04-T07.png",
+        "sha256": "847fdd182b548c9bafd0cbe2aa5aee8a3ac0e4700370250172bb95a762c93a45",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:48.040545-03:00",
+    "path": "/acompanhamento/turmas/7bb34582-8fef-59cb-b40e-29d18242b497/frequencia/",
+    "request_indexes": [
+      102,
+      103,
+      104,
+      105
+    ]
+  },
+  {
+    "id": "A04-T08",
+    "profile": "INSTRUCTOR",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:48.145490-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Ler chamada em viewport móvel e sair",
+    "preconditions": "390×844 no Chromium, sem pessoa/dispositivo físico.",
+    "expected": "Formulário renderizado, sem nova alteração; logout",
+    "observed": "Chamada renderizada em viewport móvel; não submetida novamente; sessão encerrada. Usabilidade humana não mensurada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A04-mobile-chamada.png",
+        "sha256": "301fbfbaf680c0fff9b244762e67b984c959ca4a8d6357893331a56e486116c1",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      {
+        "file": "restrito:capturas-completas/A04-T08.png",
+        "sha256": "52a7f830aa1b9be6d55060ebb034f38cb39c6a3b7869404f22560a197dfd0b2d",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:48.935740-03:00",
+    "path": "/entrar/",
+    "request_indexes": [
+      106,
+      107,
+      108
+    ]
+  },
+  {
+    "id": "A05-T02",
+    "profile": "PARTICIPANT",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:49.023125-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Consultar Meu perfil por teclado",
+    "preconditions": "Sessão autenticada; página de início.",
+    "expected": "Enter abre perfil; Tab move do nome ao e-mail sem salvar",
+    "observed": "Link ativado com Enter; foco moveu de nome para e-mail com Tab. Formulário não submetido. Isso é verificação instrumental, sem aceite humano de acessibilidade.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A05-T02.png",
+        "sha256": "6645e2112530b89ae4dd159a042ab4cf6c52476fb35da974abf191920656b9a4",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:49.707780-03:00",
+    "path": "/conta/perfil/",
+    "request_indexes": [
+      109,
+      110
+    ]
+  },
+  {
+    "id": "A05-T03",
+    "profile": "PARTICIPANT",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:49.840755-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Conferir prazo histórico e solicitar somente na nova oferta SIM",
+    "preconditions": "Oferta antiga encerrada 16/10; nova SIM aberta até 22/10; sem inscrição inicial nela.",
+    "expected": "Histórica indisponível; POST histórico bloqueado; nova solicitação pendente",
+    "observed": "Oferta antiga ausente e tentativa direta bloqueada por prazo sem mudança; nova oferta recebeu solicitação PENDING, sem confirmação automática. A histórica não foi renovada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A05-T03.png",
+        "sha256": "02c0aea6b3036c02588b9c61b8c6f7af23612419a929755e15cbf0853fc50989",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:51.699485-03:00",
+    "path": "/inscricoes/",
+    "request_indexes": [
+      111,
+      112,
+      113,
+      114
+    ]
+  },
+  {
+    "id": "A05-T04",
+    "profile": "PARTICIPANT",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:51.829168-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Interpretar jornada própria em consulta",
+    "preconditions": "Marina fictícia, inscrição nova confirmada e projeto rascunho.",
+    "expected": "Somente inscrições do titular; 100% na turma SIM",
+    "observed": "Jornada própria renderizada com turma SIM, presença integral e rascunho; nomes dos participantes exclusivos dos outros perfis ausentes. Compreensão humana não avaliada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A05-T04.png",
+        "sha256": "18d1bcf3298ead195cd4dac1e836d35d1d852c0c092098159b99be64ce36aaf2",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:52.421681-03:00",
+    "path": "/acompanhamento/frequencia/",
+    "request_indexes": [
+      115
+    ]
+  },
+  {
+    "id": "A05-T05",
+    "profile": "PARTICIPANT",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:52.560965-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Atualizar e entregar somente projeto SIM",
+    "preconditions": "Novo projeto do titular em turma IN_PROGRESS.",
+    "expected": "Descrição fictícia e entregue; devolutiva ainda pendente",
+    "observed": "A execução técnica não confirmou o esperado; Error no passo registrado. Não é opinião humana.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A05-T05.png",
+        "sha256": "9b35423a0bb64ee988eaa2048d1768e85c8e758882df8005fbe1b87b65bba89d",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "REPROVADO",
+    "exception_type": "Error",
+    "ended_at": "2026-10-19T20:26:53.159047-03:00",
+    "path": "/acompanhamento/inscricoes/46422f35-f31f-4d2b-b326-a2e7199bc426/projeto/",
+    "request_indexes": [
+      116
+    ]
+  },
+  {
+    "id": "A05-T06",
+    "profile": "PARTICIPANT",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:53.272695-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Consultar/baixar certificado próprio existente em leitura",
+    "preconditions": "Certificado anterior A05-F consultado, nunca editado.",
+    "expected": "PDF ativo de 2h; nenhum certificado alheio",
+    "observed": "Documento próprio ativo consultado e PDF real de 2h baixado; nenhuma emissão ou revogação.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A05-T06.png",
+        "sha256": "db83d81905e3f496f13973e315543ebfc794531aedc5c6349569d8f334a072ab",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:53.928570-03:00",
+    "path": "/acompanhamento/certificados/77b66ea8-b2d5-421a-a904-42c20c9d931a/",
+    "request_indexes": [
+      117,
+      118
+    ]
+  },
+  {
+    "id": "A05-T07",
+    "profile": "PARTICIPANT",
+    "author": "agente Codex; nenhuma participação humana nesta execução",
+    "started_at": "2026-10-19T20:26:54.072180-03:00",
+    "method": "Chromium/Playwright, HTTPS real, TLS validado, contexto de sessão independente e formulários HTML com CSRF",
+    "objective": "Usar oferta/jornada em viewport móvel e sair",
+    "preconditions": "390×844, sessão do participante; uma nova inscrição já pendente.",
+    "expected": "Renderização própria e logout; não enviar outra inscrição",
+    "observed": "Jornada/ofertas renderizadas em viewport móvel; a oferta já solicitada não aparece novamente. Logout concluído; responsividade universal não aprovada.",
+    "evidence": [
+      {
+        "file": "restrito:capturas-completas/A05-mobile-jornada.png",
+        "sha256": "aef823b49b258c987af388b86c9682dc42bbd237cde037fd2f0b2ed681991d24",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      {
+        "file": "restrito:capturas-completas/A05-T07.png",
+        "sha256": "52a7f830aa1b9be6d55060ebb034f38cb39c6a3b7869404f22560a197dfd0b2d",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      }
+    ],
+    "status": "APROVADO",
+    "ended_at": "2026-10-19T20:26:55.489352-03:00",
+    "path": "/entrar/",
+    "request_indexes": [
+      119,
+      120,
+      121,
+      122
+    ]
+  }
+]

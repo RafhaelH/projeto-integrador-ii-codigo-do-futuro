@@ -1,0 +1,154 @@
+{
+  "run": "SIM-20261019",
+  "author": "agente Codex",
+  "human_evaluations_available": 0,
+  "human_substitution_authorized_by_tutor": false,
+  "published_code": "a351c5a",
+  "src_files_matched": 122,
+  "base_develop": "58db4fc7a65873ed44b1cdc7145359106e34a2b9",
+  "unique_tasks": 39,
+  "approved": 37,
+  "failed": 2,
+  "blocked": 0,
+  "not_executed": 0,
+  "initial_task_executions": 39,
+  "retest_task_executions": 5,
+  "http_responses_initial_and_retest": 150,
+  "new_defects": 1,
+  "executor_failures_corrected": 3,
+  "corrective_candidate_commit": "d1a55239fb6518d7610eded64966dce41abe2917",
+  "corrective_candidate_deployed": false,
+  "isolated_targeted_tests": 41,
+  "historical_suite": {
+    "passed": 235,
+    "coverage_percent": 89.84,
+    "ci_run": 38471294257,
+    "note": "resultado histórico confirmado; não uma nova suíte na produção"
+  },
+  "preservation": {
+    "old_business_records_unchanged": true,
+    "new_managed_records": 57,
+    "new_record_counts": {
+      "enrollments.Enrollment": 6,
+      "enrollments.EnrollmentStatusHistory": 13,
+      "learning.Attendance": 5,
+      "learning.StudentProject": 5,
+      "learning.Evaluation": 4,
+      "learning.Certificate": 2,
+      "people.Participant": 4,
+      "workshops.ClassGroup": 6,
+      "workshops.ClassInstructor": 6,
+      "workshops.Meeting": 6
+    },
+    "old_offer_unchanged": true,
+    "preexisting_login_timestamps_changed": 8,
+    "containers_unchanged": 66,
+    "configuration_hashes_unchanged": 3,
+    "historical_files_unchanged": 83,
+    "note": "Somente last_login nas cinco contas de avaliação e três contas de captura; registros de negócio anteriores preservados."
+  },
+  "browser": "Chromium, Playwright; 1440×1000 e viewport 390×844",
+  "limitations": [
+    "não é avaliação humana",
+    "não comprova usabilidade, dispositivos reais, navegadores exigidos ou acessibilidade AA",
+    "DEF-004 segue reproduzível na aplicação publicada"
+  ],
+  "screenshots": [
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/A01-T03-defeito-data.png",
+      "sha256": "9d28b89f2c3008126af3361b9e43a50c96305da93ad11414ffc3fc3ff90a2018"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/A01-T06-certificado.png",
+      "sha256": "2dda9798d61c4bc56be4af358b0f8153896d1f8efea9e1eb42f6d4dc641c89cb"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/A02-T03-defeito-data.png",
+      "sha256": "cb3ff0f5c7a1727de7e924f4d72bae4f5b27d48dd81b6b86c4218f1a5ec74bac"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/A02-T06-certificado.png",
+      "sha256": "d227e32ed14570a8e688f0dda657ec036fc320def40bdc486710cbea1796798d"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/A05-T05-entrega.png",
+      "sha256": "aa039c546a9ebe26e3880129fe6c1f53aadfce4c640e1038e1984d20373e9a3c"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/DEF004-widgets-corrigido-isolados.png",
+      "sha256": "c716d483b0c2598bb1f303ba3224e88d77b934eb68bb9de4334e8fd0bb30fcb3"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/DEF004-widgets-original-isolados.png",
+      "sha256": "125081a15b311cc097a35bba88ba0d26096200f79cb58575084730e7ea7d034b"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/video-ana-responsavel.png",
+      "sha256": "69c5edfd593c7c9907a8e5e7ddb8735b7704e8c5f6042ecefad0d53386372bf5"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/video-certificado-ana.png",
+      "sha256": "77519ab0f2f15ee74f8f90182812e8a717eee848abc195a44eda29d52530fab5"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/video-conclusao-python.png",
+      "sha256": "89bccd17639cba8b25b1c180361c694aa9099d7c78d19c871eb5629e6abc86e0"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/video-fila-robotica.png",
+      "sha256": "88bdce3d81d7d04b30ebecea2c4870d95e4d6697d9b4daec256d235cf3018f06"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/video-jornada-ana.png",
+      "sha256": "af53eb18edd71b31445f1e117f24a5181184fd36f2c9322cc79ccbd79ca86637"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/video-oficina-python.png",
+      "sha256": "b6aadaecf9a9617a062f586087b8fb29a58e2e2fc908b242c46b96307208e6a7"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/video-painel-python-abril.png",
+      "sha256": "4091c9bbe26b1487731886e6a2159112739bfe9de4d550b5c801e303b4ebc2ac"
+    },
+    {
+      "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/video-web-acompanhamento.png",
+      "sha256": "23ae47aafc52d090f8075bd236973bfe16279ff80812fd90565d79a4df5a68b3"
+    }
+  ],
+  "document_checks": {
+    "relative_links_checked": 446,
+    "broken_relative_links": 0,
+    "video_segments": 8,
+    "video_target_seconds": 300,
+    "actual_video_recorded": false,
+    "official_AVA_template_found": true,
+    "student_identity_kept_outside_public_git": true,
+    "public_preparation_pdfs": [
+      {
+        "file": "docs/07-avaliacoes/modelo-consolidado.pdf",
+        "pages": 9,
+        "sha256": "bb936cf3e39f1c93711e2b0c9fbc950f32585fbb060593598a7575b0f0838314",
+        "visual_review": true
+      },
+      {
+        "file": "docs/07-avaliacoes/pacote-imprimivel.pdf",
+        "pages": 16,
+        "sha256": "37c9a2a2d554eb8879126c300e39f742183c331bc391bb208e45179d8f31e387",
+        "visual_review": true
+      }
+    ]
+  },
+  "backup": {
+    "created_before_mutations": true,
+    "script": "deploy/backup.sh",
+    "dump_sha256": "8d8eafbbdbb47cd2d3cf7c3cb005762d05022c40dec0e722f379bb9e2760dc27",
+    "catalog_entries_verified": 193,
+    "dump_in_public_git": false
+  },
+  "human_report_received_after_run": {
+    "count": 1,
+    "other_reports_pending": 4,
+    "details": "../revisao-humana-20261019/evidencias.json",
+    "note": "human_evaluations_available=0 descreve a execução original antes do recebimento do print; não o estado atual."
+  }
+}

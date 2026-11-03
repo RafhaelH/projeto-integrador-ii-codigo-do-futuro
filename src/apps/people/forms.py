@@ -4,12 +4,22 @@ from django.db.models import Q
 from apps.accounts.models import User, UserRole
 
 from .models import Guardian, Institution, Instructor, Participant, ParticipantGuardian
-from .validators import only_digits, validate_cnpj, validate_cpf, validate_phone
+from .validators import format_phone, only_digits, validate_cnpj, validate_cpf, validate_phone
 
 
 class ParticipantForm(forms.ModelForm):
-    cpf = forms.CharField(label="CPF", max_length=14, required=False)
-    phone = forms.CharField(label="Telefone", max_length=15, required=False)
+    cpf = forms.CharField(
+        label="CPF",
+        max_length=14,
+        required=False,
+        widget=forms.TextInput(attrs={"inputmode": "numeric", "placeholder": "000.000.000-00"}),
+    )
+    phone = forms.CharField(
+        label="Telefone",
+        max_length=15,
+        required=False,
+        widget=forms.TextInput(attrs={"type": "tel", "placeholder": "(00) 00000-0000"}),
+    )
 
     class Meta:
         model = Participant
@@ -25,12 +35,26 @@ class ParticipantForm(forms.ModelForm):
             "is_active",
         )
         widgets = {
-            "birth_date": forms.DateInput(attrs={"type": "date"}),
-            "privacy_consent_at": forms.DateTimeInput(attrs={"type": "datetime-local"}),
+            "birth_date": forms.DateInput(format="%Y-%m-%d", attrs={"type": "date"}),
+            "privacy_consent_at": forms.DateTimeInput(
+                format="%Y-%m-%dT%H:%M:%S.%f",
+                attrs={"type": "datetime-local", "step": "any"},
+            ),
         }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        if not self.is_bound:
+            cpf = self.initial.get("cpf")
+            if cpf and len(cpf) == 11:
+                self.initial["cpf"] = f"{cpf[:3]}.{cpf[3:6]}.{cpf[6:9]}-{cpf[9:]}"
+            if self.initial.get("phone"):
+                self.initial["phone"] = format_phone(self.initial["phone"])
+        self.fields["privacy_consent_at"].help_text = (
+            "Registre somente a data e hora de um consentimento de privacidade efetivamente "
+            "obtido do titular ou responsável. Deixe em branco se não houver esse registro. "
+            "O campo não autoriza uso de imagem; essa autorização é separada."
+        )
         available_users = User.objects.filter(role=UserRole.PARTICIPANT, is_active=True)
         if self.instance.pk and self.instance.user_id:
             available_users = available_users.filter(
@@ -102,6 +126,10 @@ class InstructorForm(forms.ModelForm):
         else:
             available_users = available_users.filter(instructor_profile__isnull=True)
         self.fields["user"].queryset = available_users.order_by("full_name")
+        self.fields["user"].help_text = (
+            "Selecione um acesso ativo de instrutor ainda não vinculado. "
+            "Se não houver opção, use ‘Criar acesso e cadastrar instrutor’ nesta página."
+        )
 
 
 class InstitutionForm(forms.ModelForm):

@@ -23,6 +23,14 @@ Recomendações de vídeos, ferramentas e linguagens são contexto pedagógico; 
 
 Não foi identificado no repositório um artefato atribuível ao **Projeto Integrador I**, nem seu protótipo original. O primeiro planejamento comprovado neste Git é `5730e37`, de 11/09/2026, já identificado como Integrador II. O estudante deve apresentar os documentos I e sua revisão, ou registrar com o tutor a ausência/inaplicabilidade; a descrição atual não é prova dessa comparação histórica.
 
-Não foi encontrado o **modelo específico da Atividade de Entrega do AVA** nos arquivos versionados ou PDFs locais do projeto. A p. 40 refere um download, mas a cópia não contém esse modelo nem link recuperável nessa página. Obtê-lo no AVA e conferir campos/formato/anexos antes de entregar. Este pacote não inventa esse formulário.
+O **modelo oficial PIT_atividade (8).docx** foi disponibilizado posteriormente pelo estudante na raiz de projetos, fora do repositório. Original preservado por hash e cópia de entrega preenchida fora do Git público. Contém tabela técnica, cinco tabelas humanas, laudo e link do vídeo. Na atualização de 03/11/2026, quatro relatos foram incorporados; uma tabela e demais lacunas permanecem explícitas. A data de HUM-001 é divergente e fica a confirmar, preservando a captura histórica. O arquivo não foi reconstruído como suposto original.
 
 Há inconsistência de duração: até cinco minutos (p. 36) e pelo menos cinco minutos (p. 38). A interseção é **exatamente 5:00, 300 segundos**. O roteiro inclui abertura e créditos nesse total; conferir o arquivo exportado. Não presumir tolerância autorizada pelo tutor.
+
+
+## Preparação de 19/10/2026
+
+PR #13 foi integrada em 58db4fc após autorização posterior; as restrições citadas acima descrevem a auditoria original. A tarefa atual permite simulações reais em dados exclusivos e commits locais, sem push/merge/deploy/promoção. Simulações do agente não satisfazem cinco colegas/profissionais. Modelo PIT_atividade (8).docx e relatos só podem ser incorporados quando efetivamente disponibilizados; se ausentes, ficha auxiliar não é apresentada como original AVA.
+
+
+O modelo recebido também usa “no mínimo 5 min” na tabela técnica e “até 5 minutos” na seção final. Exatamente 300 segundos atende ambos; o vídeo ainda será gravado e medido pelo estudante. As instruções do formulário são requisitos documentais, não autorização para publicar credenciais ou inventar opiniões.

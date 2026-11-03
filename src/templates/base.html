@@ -7,6 +7,7 @@
   <meta name="description" content="Plataforma Código do Futuro">
   <title>{% block title %}Código do Futuro{% endblock %}</title>
   <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  <script src="{% static 'js/download-feedback.js' %}" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -46,6 +47,7 @@
   </header>
 
   <main id="conteudo" class="page-shell" tabindex="-1">
+    <p id="download-feedback" class="message" role="status" aria-live="polite" hidden></p>
     {% if messages %}
       <div class="messages" aria-live="polite">
         {% for message in messages %}

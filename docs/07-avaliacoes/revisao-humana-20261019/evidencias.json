@@ -1,0 +1,109 @@
+{
+  "revision": "2026-10-19-modelo-oficial-e-relato",
+  "author": "agente Codex",
+  "official_template_received": true,
+  "official_original_sha256": "f0b3adaeda3a583db3f33f9363ced9a6855c1a26a905f6870e6176c63d75aa32",
+  "official_original_unchanged": true,
+  "official_copy_private": true,
+  "human_reports_received": 1,
+  "human_tables_partially_filled": 1,
+  "other_human_tables_pending": 4,
+  "reviewer_identity_in_public_git": false,
+  "reviewer_eligibility": "a confirmar",
+  "device": "computador, informado pelo estudante",
+  "mobile_human_screen_browser_method": "a confirmar",
+  "technical_mobile_read_checks": 24,
+  "technical_mobile_no_page_overflow": 22,
+  "technical_mobile_page_overflow": 2,
+  "new_defect": "DEF-005",
+  "isolated_mobile_checks": 4,
+  "isolated_mobile_passed": 4,
+  "candidate_mobile_commit": "00ee7f918ccebb3232065898d099cc840df17c0f",
+  "candidate_includes_date_fix_d1a5523": true,
+  "deployed": false,
+  "main_unchanged": true,
+  "containers_unchanged": 66,
+  "configuration_hashes_unchanged": 3,
+  "preexisting_business_records_unchanged": true,
+  "business_mutations_this_revision": 0,
+  "preexisting_changes_this_revision": "somente last_login de A01",
+  "new_session_awaiting_normal_expiry": 1,
+  "backup_before_authentication_verified": true,
+  "relative_document_links_checked": 446,
+  "broken_links": 0,
+  "video_target_seconds": 300,
+  "video_recorded": false,
+  "public_preparation_pdfs": [
+    {
+      "file": "docs/07-avaliacoes/modelo-consolidado.pdf",
+      "pages": 9,
+      "sha256": "bb936cf3e39f1c93711e2b0c9fbc950f32585fbb060593598a7575b0f0838314",
+      "visual_review": true
+    },
+    {
+      "file": "docs/07-avaliacoes/pacote-imprimivel.pdf",
+      "pages": 16,
+      "sha256": "37c9a2a2d554eb8879126c300e39f742183c331bc391bb208e45179d8f31e387",
+      "visual_review": true
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "docs/07-avaliacoes/revisao-humana-20261019/DEF005-candidato-mobile-isolado.png",
+      "sha256": "fc0bb5892492483c550f3f9f4f5206f3ccf90d17fd366246989b7e620e3f573e"
+    },
+    {
+      "file": "docs/07-avaliacoes/revisao-humana-20261019/mobile-inicio-320.png",
+      "sha256": "028b304a154cafe0790edf17c9ab3bd5d63d73cb5c37d76d7bde0aa5b3571375"
+    },
+    {
+      "file": "docs/07-avaliacoes/revisao-humana-20261019/mobile-inicio-390.png",
+      "sha256": "8f37ac01753318e7b7fe7bba77b34f8d4058a1a436596afcf35904b3291c69d4"
+    },
+    {
+      "file": "docs/07-avaliacoes/revisao-humana-20261019/mobile-inicio-768.png",
+      "sha256": "28f23324105cecd218eec8104447327a8d8be6a02bd1dea90d132f2d8c89795a"
+    },
+    {
+      "file": "docs/07-avaliacoes/revisao-humana-20261019/mobile-participantes-320.png",
+      "sha256": "4a9d1ace9890ae725db0e10d6b880a5320d03907cf327e3dcbcb820b4c3f1b39"
+    },
+    {
+      "file": "docs/07-avaliacoes/revisao-humana-20261019/mobile-participantes-390.png",
+      "sha256": "7fe97f4dff880d33a9cc234bb51705e7ffd6b9b82a8b4b4f86abf5f75fcaac29"
+    },
+    {
+      "file": "docs/07-avaliacoes/revisao-humana-20261019/mobile-perfil-320.png",
+      "sha256": "6f43e2510f1d7b765be9c572c1e89bae9991b930a2e5ae475b28aff71cd6bcc9"
+    },
+    {
+      "file": "docs/07-avaliacoes/revisao-humana-20261019/mobile-perfil-390.png",
+      "sha256": "c2e0d5aea19bded56b946498d638ab51f87a5770b460427bccce02e438f0fe2e"
+    },
+    {
+      "file": "docs/07-avaliacoes/revisao-humana-20261019/mobile-perfil-768.png",
+      "sha256": "8322fc321c9672cf3eb85dd2500021babb62db80a8453a2f95cae4002d5cd377"
+    },
+    {
+      "file": "docs/07-avaliacoes/revisao-humana-20261019/robotica-fila-atual.png",
+      "sha256": "1a79cbfa828d7663e336e639df3afe5b1f8032f2264ac5334b6cf8cc7a198761"
+    }
+  ],
+  "concurrent_new_business_records": {
+    "enrollments.Enrollment": 1,
+    "enrollments.EnrollmentStatusHistory": 1,
+    "note": "Nova inscrição em espera por A05 na Robótica durante esta revisão, fora das operações do agente; autoria humana não inferida, registros preservados."
+  },
+  "current_robotics_queue": {
+    "at": "2026-10-19T20:59:11.008075-03:00",
+    "method": "Django somente leitura e conferência HTTPS/TLS em Chromium, CSRF nativo; nenhuma operação de negócio",
+    "path": "/inscricoes/turmas/3c505321-dbbd-4ba1-b342-0e63dcecef2b/fila/",
+    "status": 200,
+    "counts": {
+      "WAITLISTED": 2,
+      "PENDING": 1,
+      "CONFIRMED": 2
+    },
+    "evidence": "docs/07-avaliacoes/revisao-humana-20261019/robotica-fila-atual.png"
+  }
+}

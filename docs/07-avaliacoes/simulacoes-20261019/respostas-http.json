@@ -1,0 +1,1052 @@
+[
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:26.999646-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:28.232189-03:00",
+    "method": "POST",
+    "path": "/entrar/",
+    "status": 302
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:28.259480-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:28.316810-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:29.047633-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:25:30.544834-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:25:31.713649-03:00",
+    "method": "POST",
+    "path": "/entrar/",
+    "status": 302
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:25:31.723970-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:25:31.765472-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:25:32.404004-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:25:33.972493-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:25:35.047711-03:00",
+    "method": "POST",
+    "path": "/entrar/",
+    "status": 302
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:25:35.059258-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:25:35.112093-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:25:35.764325-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:25:36.965226-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:25:38.026144-03:00",
+    "method": "POST",
+    "path": "/entrar/",
+    "status": 302
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:25:38.037479-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:25:38.099461-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:25:38.740537-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:25:40.166029-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:25:41.135068-03:00",
+    "method": "POST",
+    "path": "/entrar/",
+    "status": 302
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:25:41.144388-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:25:41.186227-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:25:41.758932-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:42.757359-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:43.392967-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:43.695151-03:00",
+    "method": "GET",
+    "path": "/pessoas/participantes/cf3eca4f-9ac6-504e-b207-27193ab3859b/editar/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:44.405378-03:00",
+    "method": "POST",
+    "path": "/pessoas/participantes/cf3eca4f-9ac6-504e-b207-27193ab3859b/editar/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:44.950549-03:00",
+    "method": "GET",
+    "path": "/pessoas/participantes/cf3eca4f-9ac6-504e-b207-27193ab3859b/editar/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:45.726168-03:00",
+    "method": "GET",
+    "path": "/inscricoes/turmas/3c505321-dbbd-4ba1-b342-0e63dcecef2b/fila/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:46.444833-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/db32dd98-6c10-5841-9817-ad25a36902f5/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:47.031216-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/inscricoes/99f56bb5-cab0-4830-ab68-0ea71ad58242/avaliacao/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:47.748698-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/inscricoes/99f56bb5-cab0-4830-ab68-0ea71ad58242/avaliacao/",
+    "status": 302
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:47.787735-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/db32dd98-6c10-5841-9817-ad25a36902f5/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:48.350311-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/inscricoes/99f56bb5-cab0-4830-ab68-0ea71ad58242/avaliacao/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:49.065957-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/db32dd98-6c10-5841-9817-ad25a36902f5/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:49.732874-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/turmas/db32dd98-6c10-5841-9817-ad25a36902f5/conclusao/",
+    "status": 302
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:49.776894-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/db32dd98-6c10-5841-9817-ad25a36902f5/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:50.421051-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/inscricoes/99f56bb5-cab0-4830-ab68-0ea71ad58242/certificado/emitir/",
+    "status": 302
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:25:50.444176-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/certificados/1e09ef33-0618-4324-980b-8f84d24d41f0/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:26:03.397952-03:00",
+    "method": "GET",
+    "path": "/painel/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:26:04.196983-03:00",
+    "method": "GET",
+    "path": "/painel/relatorios/conclusao.csv",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:26:05.028195-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:26:05.807295-03:00",
+    "method": "POST",
+    "path": "/sair/",
+    "status": 302
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:26:05.818062-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:06.019145-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:06.625115-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:06.837818-03:00",
+    "method": "GET",
+    "path": "/pessoas/participantes/5a5bdf1f-0bcb-5f41-9652-e6abcf326b5a/editar/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:07.503315-03:00",
+    "method": "POST",
+    "path": "/pessoas/participantes/5a5bdf1f-0bcb-5f41-9652-e6abcf326b5a/editar/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:08.053367-03:00",
+    "method": "GET",
+    "path": "/pessoas/participantes/5a5bdf1f-0bcb-5f41-9652-e6abcf326b5a/editar/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:08.799919-03:00",
+    "method": "GET",
+    "path": "/inscricoes/turmas/3c505321-dbbd-4ba1-b342-0e63dcecef2b/fila/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:09.514063-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/43bced83-1aeb-579e-bbeb-3e8e918cd80a/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:10.106099-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/inscricoes/440b1650-8e5f-4773-9253-62cb7184c963/avaliacao/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:10.781337-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/inscricoes/440b1650-8e5f-4773-9253-62cb7184c963/avaliacao/",
+    "status": 302
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:10.812044-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/43bced83-1aeb-579e-bbeb-3e8e918cd80a/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:11.354651-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/inscricoes/440b1650-8e5f-4773-9253-62cb7184c963/avaliacao/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:12.032448-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/43bced83-1aeb-579e-bbeb-3e8e918cd80a/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:12.669004-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/turmas/43bced83-1aeb-579e-bbeb-3e8e918cd80a/conclusao/",
+    "status": 302
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:12.700123-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/43bced83-1aeb-579e-bbeb-3e8e918cd80a/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:13.323432-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/inscricoes/440b1650-8e5f-4773-9253-62cb7184c963/certificado/emitir/",
+    "status": 302
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:13.337791-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/certificados/d5fe4d2a-6097-4303-8f31-10bec6e0bd90/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:26.151744-03:00",
+    "method": "GET",
+    "path": "/painel/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:26.831975-03:00",
+    "method": "GET",
+    "path": "/painel/relatorios/conclusao.csv",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:27.587853-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:28.312483-03:00",
+    "method": "POST",
+    "path": "/sair/",
+    "status": 302
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:26:28.320574-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:28.492782-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:29.079243-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:29.306145-03:00",
+    "method": "GET",
+    "path": "/oficinas/turmas/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:29.932654-03:00",
+    "method": "GET",
+    "path": "/oficinas/turmas/0d112155-dbb6-57bc-88eb-98c145ce994d/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:30.704140-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/encontros/3935cc07-f28b-5447-bbc5-fb02bed6a7ce/chamada/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:31.397932-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/encontros/3935cc07-f28b-5447-bbc5-fb02bed6a7ce/chamada/",
+    "status": 302
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:31.431924-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/0d112155-dbb6-57bc-88eb-98c145ce994d/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:32.108984-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/projetos/11364bc2-2687-54b4-9a3a-4bba4c25cf3b/revisao/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:32.757116-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/projetos/11364bc2-2687-54b4-9a3a-4bba4c25cf3b/revisao/",
+    "status": 302
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:32.791180-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/0d112155-dbb6-57bc-88eb-98c145ce994d/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:33.356001-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/projetos/11364bc2-2687-54b4-9a3a-4bba4c25cf3b/revisao/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:34.022911-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/inscricoes/7955f20c-3c7b-47eb-a459-08e8a1415c3b/avaliacao/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:34.741119-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/inscricoes/7955f20c-3c7b-47eb-a459-08e8a1415c3b/avaliacao/",
+    "status": 302
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:34.768372-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/0d112155-dbb6-57bc-88eb-98c145ce994d/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:35.509041-03:00",
+    "method": "GET",
+    "path": "/painel/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:36.110525-03:00",
+    "method": "GET",
+    "path": "/pessoas/",
+    "status": 403
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:36.680807-03:00",
+    "method": "GET",
+    "path": "/oficinas/turmas/7bb34582-8fef-59cb-b40e-29d18242b497/",
+    "status": 404
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:37.250028-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/0d112155-dbb6-57bc-88eb-98c145ce994d/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:37.957669-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/encontros/3935cc07-f28b-5447-bbc5-fb02bed6a7ce/chamada/",
+    "status": 200
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:38.639537-03:00",
+    "method": "POST",
+    "path": "/sair/",
+    "status": 302
+  },
+  {
+    "account": "A03",
+    "at": "2026-10-19T20:26:38.643836-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:38.786568-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:39.364874-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:39.577996-03:00",
+    "method": "GET",
+    "path": "/oficinas/turmas/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:40.172452-03:00",
+    "method": "GET",
+    "path": "/oficinas/turmas/7bb34582-8fef-59cb-b40e-29d18242b497/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:40.877278-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/encontros/e3dd97e6-2b1c-5596-8b05-9aa31c238d06/chamada/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:41.565809-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/encontros/e3dd97e6-2b1c-5596-8b05-9aa31c238d06/chamada/",
+    "status": 302
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:41.600783-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/7bb34582-8fef-59cb-b40e-29d18242b497/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:42.288046-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/projetos/93ca042e-194d-512d-963c-7578619c4400/revisao/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:42.921232-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/projetos/93ca042e-194d-512d-963c-7578619c4400/revisao/",
+    "status": 302
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:42.957894-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/7bb34582-8fef-59cb-b40e-29d18242b497/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:43.512211-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/projetos/93ca042e-194d-512d-963c-7578619c4400/revisao/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:44.224419-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/inscricoes/4012b608-131f-4b67-b50c-f99de9e6e67e/avaliacao/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:44.947811-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/inscricoes/4012b608-131f-4b67-b50c-f99de9e6e67e/avaliacao/",
+    "status": 302
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:44.982982-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/7bb34582-8fef-59cb-b40e-29d18242b497/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:45.714048-03:00",
+    "method": "GET",
+    "path": "/painel/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:46.338384-03:00",
+    "method": "GET",
+    "path": "/pessoas/",
+    "status": 403
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:46.906836-03:00",
+    "method": "GET",
+    "path": "/oficinas/turmas/0d112155-dbb6-57bc-88eb-98c145ce994d/",
+    "status": 404
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:47.490837-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/turmas/7bb34582-8fef-59cb-b40e-29d18242b497/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:48.177943-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/encontros/e3dd97e6-2b1c-5596-8b05-9aa31c238d06/chamada/",
+    "status": 200
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:48.870374-03:00",
+    "method": "POST",
+    "path": "/sair/",
+    "status": 302
+  },
+  {
+    "account": "A04",
+    "at": "2026-10-19T20:26:48.878645-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:49.053419-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:49.635136-03:00",
+    "method": "GET",
+    "path": "/conta/perfil/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:49.864220-03:00",
+    "method": "GET",
+    "path": "/inscricoes/turmas-disponiveis/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:50.512807-03:00",
+    "method": "GET",
+    "path": "/inscricoes/turmas-disponiveis/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:51.128150-03:00",
+    "method": "POST",
+    "path": "/inscricoes/turmas/01a0f9fc-414f-5a63-8d65-c12def3542d4/solicitar/",
+    "status": 302
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:51.146714-03:00",
+    "method": "GET",
+    "path": "/inscricoes/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:51.878377-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:52.593469-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/inscricoes/46422f35-f31f-4d2b-b326-a2e7199bc426/projeto/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:53.297476-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/certificados/77b66ea8-b2d5-421a-a904-42c20c9d931a/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:53.914768-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/certificados/77b66ea8-b2d5-421a-a904-42c20c9d931a/baixar/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:54.137928-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:54.817096-03:00",
+    "method": "GET",
+    "path": "/inscricoes/turmas-disponiveis/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:55.424255-03:00",
+    "method": "POST",
+    "path": "/sair/",
+    "status": 302
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:26:55.430766-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:28:40.657224-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:28:41.577856-03:00",
+    "method": "POST",
+    "path": "/entrar/",
+    "status": 302
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:28:41.606943-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:28:41.677990-03:00",
+    "method": "GET",
+    "path": "/pessoas/participantes/cf3eca4f-9ac6-504e-b207-27193ab3859b/editar/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:28:42.430589-03:00",
+    "method": "POST",
+    "path": "/pessoas/participantes/cf3eca4f-9ac6-504e-b207-27193ab3859b/editar/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:28:46.081097-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/certificados/1e09ef33-0618-4324-980b-8f84d24d41f0/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:28:46.732005-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/certificados/1e09ef33-0618-4324-980b-8f84d24d41f0/baixar/",
+    "status": 200
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:28:48.448725-03:00",
+    "method": "POST",
+    "path": "/sair/",
+    "status": 302
+  },
+  {
+    "account": "A01",
+    "at": "2026-10-19T20:28:48.456097-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:28:48.637954-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:28:49.524635-03:00",
+    "method": "POST",
+    "path": "/entrar/",
+    "status": 302
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:28:49.535750-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:28:49.589221-03:00",
+    "method": "GET",
+    "path": "/pessoas/participantes/5a5bdf1f-0bcb-5f41-9652-e6abcf326b5a/editar/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:28:50.291166-03:00",
+    "method": "POST",
+    "path": "/pessoas/participantes/5a5bdf1f-0bcb-5f41-9652-e6abcf326b5a/editar/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:28:52.489782-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/certificados/d5fe4d2a-6097-4303-8f31-10bec6e0bd90/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:28:53.117998-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/certificados/d5fe4d2a-6097-4303-8f31-10bec6e0bd90/baixar/",
+    "status": 200
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:28:54.737996-03:00",
+    "method": "POST",
+    "path": "/sair/",
+    "status": 302
+  },
+  {
+    "account": "A02",
+    "at": "2026-10-19T20:28:54.745756-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:28:54.950278-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:28:55.897280-03:00",
+    "method": "POST",
+    "path": "/entrar/",
+    "status": 302
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:28:55.911371-03:00",
+    "method": "GET",
+    "path": "/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:28:55.966866-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/inscricoes/46422f35-f31f-4d2b-b326-a2e7199bc426/projeto/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:28:56.689641-03:00",
+    "method": "POST",
+    "path": "/acompanhamento/inscricoes/46422f35-f31f-4d2b-b326-a2e7199bc426/projeto/",
+    "status": 302
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:28:56.742235-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/frequencia/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:28:57.283712-03:00",
+    "method": "GET",
+    "path": "/acompanhamento/inscricoes/46422f35-f31f-4d2b-b326-a2e7199bc426/projeto/",
+    "status": 200
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:28:58.075254-03:00",
+    "method": "POST",
+    "path": "/sair/",
+    "status": 302
+  },
+  {
+    "account": "A05",
+    "at": "2026-10-19T20:28:58.085758-03:00",
+    "method": "GET",
+    "path": "/entrar/",
+    "status": 200
+  }
+]

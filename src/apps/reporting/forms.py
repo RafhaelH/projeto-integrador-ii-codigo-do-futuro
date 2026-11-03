@@ -8,12 +8,12 @@ class ReportingFilterForm(forms.Form):
     period_start = forms.DateField(
         label="Turmas iniciadas a partir de",
         required=False,
-        widget=forms.DateInput(attrs={"type": "date"}),
+        widget=forms.DateInput(format="%Y-%m-%d", attrs={"type": "date"}),
     )
     period_end = forms.DateField(
         label="Turmas iniciadas até",
         required=False,
-        widget=forms.DateInput(attrs={"type": "date"}),
+        widget=forms.DateInput(format="%Y-%m-%d", attrs={"type": "date"}),
     )
     workshop = forms.ModelChoiceField(
         label="Oficina",

@@ -1,0 +1,84 @@
+[
+  {
+    "id": "A01-T03",
+    "started_at": "2026-10-19T20:28:41.631384-03:00",
+    "ended_at": "2026-10-19T20:28:43.777907-03:00",
+    "status": "REPROVADO",
+    "method": "Chromium, formulário real, TLS/CSRF",
+    "observed": "DEF-004 reproduzido: value HTML 15/02/2007 mas valor nativo vazio; salvar apenas imagem retorna data obrigatória, sem persistir.",
+    "evidence": [
+      {
+        "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/A01-T03-defeito-data.png",
+        "sha256": "9d28b89f2c3008126af3361b9e43a50c96305da93ad11414ffc3fc3ff90a2018",
+        "mask": "saudação/nome da conta ocultos na captura"
+      }
+    ],
+    "classification": "defeito da aplicação publicada"
+  },
+  {
+    "id": "A01-T06",
+    "started_at": "2026-10-19T20:28:43.777927-03:00",
+    "ended_at": "2026-10-19T20:28:48.392879-03:00",
+    "status": "APROVADO",
+    "method": "continuação Chromium + POST idempotente com CSRF e conferência somente leitura do banco",
+    "observed": "Conclusão/primeira emissão da passagem inicial confirmadas; PDF real 2h baixado e repetição reutilizou exatamente um certificado. Falha inicial era navegação do executor após redirect direto para o certificado, não defeito.",
+    "evidence": [
+      {
+        "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/A01-T06-certificado.png",
+        "sha256": "2dda9798d61c4bc56be4af358b0f8153896d1f8efea9e1eb42f6d4dc641c89cb",
+        "mask": "saudação/nome da conta ocultos na captura"
+      }
+    ],
+    "classification": "erro do executor corrigido, sem alteração da aplicação",
+    "pdf_sha256": "753ffd6272db02589caf801ec290615262007dd0369a05d1e1c3bd5f0daed2da"
+  },
+  {
+    "id": "A02-T03",
+    "started_at": "2026-10-19T20:28:49.559605-03:00",
+    "ended_at": "2026-10-19T20:28:51.023203-03:00",
+    "status": "REPROVADO",
+    "method": "Chromium, formulário real, TLS/CSRF",
+    "observed": "DEF-004 reproduzido: value HTML 15/02/2007 mas valor nativo vazio; salvar apenas imagem retorna data obrigatória, sem persistir.",
+    "evidence": [
+      {
+        "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/A02-T03-defeito-data.png",
+        "sha256": "cb3ff0f5c7a1727de7e924f4d72bae4f5b27d48dd81b6b86c4218f1a5ec74bac",
+        "mask": "saudação/nome da conta ocultos na captura"
+      }
+    ],
+    "classification": "defeito da aplicação publicada"
+  },
+  {
+    "id": "A02-T06",
+    "started_at": "2026-10-19T20:28:51.023225-03:00",
+    "ended_at": "2026-10-19T20:28:54.648644-03:00",
+    "status": "APROVADO",
+    "method": "continuação Chromium + POST idempotente com CSRF e conferência somente leitura do banco",
+    "observed": "Conclusão/primeira emissão da passagem inicial confirmadas; PDF real 2h baixado e repetição reutilizou exatamente um certificado. Falha inicial era navegação do executor após redirect direto para o certificado, não defeito.",
+    "evidence": [
+      {
+        "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/A02-T06-certificado.png",
+        "sha256": "d227e32ed14570a8e688f0dda657ec036fc320def40bdc486710cbea1796798d",
+        "mask": "saudação/nome da conta ocultos na captura"
+      }
+    ],
+    "classification": "erro do executor corrigido, sem alteração da aplicação",
+    "pdf_sha256": "f8e65379fd766d9d7763e1588ed67a819b7c2391672aa33724070662f36e709e"
+  },
+  {
+    "id": "A05-T05",
+    "started_at": "2026-10-19T20:28:55.932141-03:00",
+    "ended_at": "2026-10-19T20:28:58.001957-03:00",
+    "status": "APROVADO",
+    "method": "Chromium, formulário real com CSRF",
+    "observed": "Descrição e entrega do novo projeto persistidas. Seletor do executor foi limitado a textarea; meta description não é campo editável. Não houve correção da aplicação.",
+    "evidence": [
+      {
+        "file": "docs/07-avaliacoes/simulacoes-20261019/capturas/A05-T05-entrega.png",
+        "sha256": "aa039c546a9ebe26e3880129fe6c1f53aadfce4c640e1038e1984d20373e9a3c",
+        "mask": "saudação/nome da conta ocultos na captura"
+      }
+    ],
+    "classification": "erro do executor corrigido"
+  }
+]

@@ -181,3 +181,13 @@ O sistema evolui o projeto de extensão **Código do Futuro: Oficina de Programa
 Rafhael Henrique — Engenharia de Software.
 
 Repositório: <https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro>
+
+
+## Preparação de entrega em 19/10/2026
+
+PR #13 integrada em develop 58db4fc; aplicação permanece em a351c5a. O [índice atual](docs/09-entrega/README.md), o [laudo](docs/09-entrega/laudo-qualidade.md) e o [roteiro definitivo 5:00](docs/08-manual/roteiro-video-final.md) registram 37/39 tarefas técnicas aprovadas, um novo defeito de datas com correção somente local, cinco opiniões humanas e vídeo pendentes. As novas alterações desta tarefa não foram publicadas no GitHub nem implantadas.
+
+Atualização após recebimento do modelo e print: modelo oficial preenchido parcialmente fora do Git; um relato humano identificado privadamente, quatro pendentes e lacunas explícitas. DEF-005 móvel reproduzido tecnicamente, candidato local 00ee7f9 sobre d1a5523, sem implantação.
+
+
+Fechamento de 03/11/2026: [relatos/decisões](docs/07-avaliacoes/fechamento-20261103/README.md), [testes](docs/06-testes/fechamento-20261103/README.md) e [roteiro final 5:00](docs/08-manual/roteiro-video-final.md). Candidato 9f0fd32 ainda aguarda revisão/integração/publicação; sem exclusão de dados publicados.

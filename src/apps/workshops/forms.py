@@ -16,6 +16,13 @@ from .models import (
 MEETING_DUPLICATE_MESSAGE = "Esta turma já possui um encontro com esse início."
 
 
+class ClassCancellationConfirmationForm(forms.Form):
+    confirmed = forms.BooleanField(
+        label="Confirmo o cancelamento desta turma",
+        error_messages={"required": "Confirme o cancelamento para continuar, ou volte à turma."},
+    )
+
+
 class ProtectedStatusAdminForm(forms.ModelForm):
     """Readonly status also rejects forged POSTs before any main/inline save."""
 
@@ -57,6 +64,13 @@ class WorkshopForm(forms.ModelForm):
     class Meta:
         model = Workshop
         fields = ("title", "slug", "summary", "objective", "syllabus", "estimated_hours")
+        error_messages = {
+            "estimated_hours": {"min_value": "Informe uma carga horária maior que zero."},
+        }
+        help_texts = {
+            "estimated_hours": "Informe a carga horária em horas, com até duas casas decimais.",
+            "slug": "Identificador curto da oficina, sem espaços. Exemplo: introducao-python.",
+        }
         widgets = {
             "summary": forms.Textarea(attrs={"rows": 3}),
             "objective": forms.Textarea(attrs={"rows": 4}),
@@ -81,11 +95,18 @@ class ClassGroupForm(forms.ModelForm):
             "start_date",
             "end_date",
         )
+        error_messages = {
+            "capacity": {"min_value": "Informe uma capacidade de pelo menos uma vaga."},
+        }
         widgets = {
-            "registration_opens_at": forms.DateTimeInput(attrs={"type": "datetime-local"}),
-            "registration_closes_at": forms.DateTimeInput(attrs={"type": "datetime-local"}),
-            "start_date": forms.DateInput(attrs={"type": "date"}),
-            "end_date": forms.DateInput(attrs={"type": "date"}),
+            "registration_opens_at": forms.DateTimeInput(
+                format="%Y-%m-%dT%H:%M", attrs={"type": "datetime-local"}
+            ),
+            "registration_closes_at": forms.DateTimeInput(
+                format="%Y-%m-%dT%H:%M", attrs={"type": "datetime-local"}
+            ),
+            "start_date": forms.DateInput(format="%Y-%m-%d", attrs={"type": "date"}),
+            "end_date": forms.DateInput(format="%Y-%m-%d", attrs={"type": "date"}),
             "capacity": forms.NumberInput(attrs={"min": 1}),
         }
 
@@ -128,8 +149,12 @@ class MeetingForm(forms.ModelForm):
         fields = ("title", "description", "starts_at", "ends_at")
         widgets = {
             "description": forms.Textarea(attrs={"rows": 4}),
-            "starts_at": forms.DateTimeInput(attrs={"type": "datetime-local"}),
-            "ends_at": forms.DateTimeInput(attrs={"type": "datetime-local"}),
+            "starts_at": forms.DateTimeInput(
+                format="%Y-%m-%dT%H:%M", attrs={"type": "datetime-local"}
+            ),
+            "ends_at": forms.DateTimeInput(
+                format="%Y-%m-%dT%H:%M", attrs={"type": "datetime-local"}
+            ),
         }
 
     def __init__(self, *args, class_group: ClassGroup | None = None, **kwargs):

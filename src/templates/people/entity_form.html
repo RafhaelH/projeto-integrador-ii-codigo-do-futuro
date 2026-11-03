@@ -11,30 +11,13 @@
       </div>
     </div>
 
+    {% if instructor_access_url %}
+      <p class="message">Não há um acesso de instrutor disponível? <a href="{{ instructor_access_url }}">Criar acesso e cadastrar instrutor</a>. Somente o perfil de instrutor será criado, sem acesso administrativo.</p>
+    {% endif %}
     <form class="panel form-grid" method="post" novalidate>
       {% csrf_token %}
-      {% if form.non_field_errors %}
-        <div class="form-alert form-span" role="alert">{{ form.non_field_errors }}</div>
-      {% endif %}
-
-      {% for hidden in form.hidden_fields %}{{ hidden }}{% endfor %}
-      {% for field in form.visible_fields %}
-        <div class="form-field{% if field.field.widget.input_type == 'checkbox' %} form-field-checkbox{% endif %}">
-          {% if field.field.widget.input_type == "checkbox" %}
-            {{ field }}
-            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-          {% else %}
-            <label for="{{ field.id_for_label }}">
-              {{ field.label }}{% if field.field.required %}<span aria-hidden="true"> *</span>{% endif %}
-            </label>
-            {{ field }}
-          {% endif %}
-          {% if field.help_text %}<small class="field-help">{{ field.help_text|safe }}</small>{% endif %}
-          {% for error in field.errors %}<small class="field-error">{{ error }}</small>{% endfor %}
-        </div>
-      {% endfor %}
-
-      <div class="form-actions form-span">
+      {% include "shared/form_fields.html" %}
+    <div class="form-actions form-span">
         <a class="button button-ghost" href="{{ cancel_url }}">Cancelar</a>
         <button class="button button-primary" type="submit">Salvar</button>
       </div>

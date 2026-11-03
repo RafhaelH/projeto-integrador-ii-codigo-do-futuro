@@ -2,8 +2,8 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.core.exceptions import PermissionDenied, ValidationError
 from django.db import IntegrityError, transaction
-from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, redirect
+from django.http import HttpResponseNotAllowed, HttpResponseRedirect
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.views import View
 from django.views.generic import CreateView, DetailView, ListView, UpdateView
@@ -13,6 +13,7 @@ from apps.accounts.models import UserRole
 
 from .forms import (
     MEETING_DUPLICATE_MESSAGE,
+    ClassCancellationConfirmationForm,
     ClassGroupForm,
     ClassInstructorForm,
     MeetingForm,
@@ -173,8 +174,31 @@ class ClassGroupUpdateView(AdminRequiredMixin, SuccessMessageMixin, UpdateView):
 
 
 class ClassGroupTransitionView(AdminRequiredMixin, View):
+    def get(self, request, pk, target):
+        if target.upper() != ClassGroupStatus.CANCELLED:
+            return HttpResponseNotAllowed(["POST"])
+        return render(
+            request,
+            "workshops/class_cancel.html",
+            {
+                "class_group": get_object_or_404(ClassGroup, pk=pk),
+                "form": ClassCancellationConfirmationForm(),
+            },
+        )
+
     def post(self, request, pk, target):
         class_group = get_object_or_404(ClassGroup, pk=pk)
+        if target.upper() == ClassGroupStatus.CANCELLED:
+            form = ClassCancellationConfirmationForm(request.POST)
+            if not form.is_valid():
+                return render(
+                    request,
+                    "workshops/class_cancel.html",
+                    {
+                        "class_group": class_group,
+                        "form": form,
+                    },
+                )
         try:
             updated = transition_class_group(class_group, target.upper())
         except ValidationError as error:

@@ -1,0 +1,557 @@
+[
+  {
+    "id": "MOB-INICIO-320",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:39.052236-03:00",
+    "path": "/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "overflowElements": [],
+      "tables": []
+    },
+    "status": "APROVADO",
+    "evidence": "docs/07-avaliacoes/revisao-humana-20261019/mobile-inicio-320.png",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PERFIL-320",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:39.749487-03:00",
+    "path": "/conta/perfil/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "overflowElements": [],
+      "tables": []
+    },
+    "status": "APROVADO",
+    "evidence": "docs/07-avaliacoes/revisao-humana-20261019/mobile-perfil-320.png",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PESSOAS-320",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:40.311207-03:00",
+    "path": "/pessoas/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "overflowElements": [],
+      "tables": []
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PARTICIPANTES-320",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:41.049049-03:00",
+    "path": "/pessoas/participantes/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 320,
+      "document": 435,
+      "body": 320,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 298,
+          "scroll": 488
+        }
+      ]
+    },
+    "status": "REPROVADO",
+    "evidence": "docs/07-avaliacoes/revisao-humana-20261019/mobile-participantes-320.png",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-TURMAS-320",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:41.630223-03:00",
+    "path": "/oficinas/turmas/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 298,
+          "scroll": 619
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-INSCRICOES-320",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:42.211474-03:00",
+    "path": "/inscricoes/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 298,
+          "scroll": 589
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PAINEL-320",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:42.839138-03:00",
+    "path": "/painel/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 258,
+          "scroll": 879
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-CERTIFICADOS-320",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:43.423395-03:00",
+    "path": "/acompanhamento/certificados/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "body": 320,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 258,
+          "scroll": 711
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-INICIO-390",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:44.174476-03:00",
+    "path": "/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "overflowElements": [],
+      "tables": []
+    },
+    "status": "APROVADO",
+    "evidence": "docs/07-avaliacoes/revisao-humana-20261019/mobile-inicio-390.png",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PERFIL-390",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:44.843676-03:00",
+    "path": "/conta/perfil/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "overflowElements": [],
+      "tables": []
+    },
+    "status": "APROVADO",
+    "evidence": "docs/07-avaliacoes/revisao-humana-20261019/mobile-perfil-390.png",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PESSOAS-390",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:45.387228-03:00",
+    "path": "/pessoas/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "overflowElements": [],
+      "tables": []
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PARTICIPANTES-390",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:46.111577-03:00",
+    "path": "/pessoas/participantes/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 390,
+      "document": 435,
+      "body": 390,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 368,
+          "scroll": 488
+        }
+      ]
+    },
+    "status": "REPROVADO",
+    "evidence": "docs/07-avaliacoes/revisao-humana-20261019/mobile-participantes-390.png",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-TURMAS-390",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:46.667810-03:00",
+    "path": "/oficinas/turmas/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 368,
+          "scroll": 619
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-INSCRICOES-390",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:47.233309-03:00",
+    "path": "/inscricoes/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 368,
+          "scroll": 589
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PAINEL-390",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:47.810131-03:00",
+    "path": "/painel/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 328,
+          "scroll": 879
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-CERTIFICADOS-390",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:48.361437-03:00",
+    "path": "/acompanhamento/certificados/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "body": 390,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 328,
+          "scroll": 711
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-INICIO-768",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:49.117084-03:00",
+    "path": "/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "overflowElements": [],
+      "tables": []
+    },
+    "status": "APROVADO",
+    "evidence": "docs/07-avaliacoes/revisao-humana-20261019/mobile-inicio-768.png",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PERFIL-768",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:49.789418-03:00",
+    "path": "/conta/perfil/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "overflowElements": [],
+      "tables": []
+    },
+    "status": "APROVADO",
+    "evidence": "docs/07-avaliacoes/revisao-humana-20261019/mobile-perfil-768.png",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PESSOAS-768",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:50.333837-03:00",
+    "path": "/pessoas/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "overflowElements": [],
+      "tables": []
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PARTICIPANTES-768",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:50.893660-03:00",
+    "path": "/pessoas/participantes/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 734,
+          "scroll": 734
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-TURMAS-768",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:51.447707-03:00",
+    "path": "/oficinas/turmas/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 734,
+          "scroll": 734
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-INSCRICOES-768",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:52.015595-03:00",
+    "path": "/inscricoes/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 734,
+          "scroll": 734
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-PAINEL-768",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:52.599970-03:00",
+    "path": "/painel/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 688,
+          "scroll": 879
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  },
+  {
+    "id": "MOB-CERTIFICADOS-768",
+    "author": "agente Codex",
+    "profile": "A01 ADMIN funcional",
+    "method": "Chromium/Playwright, HTTPS real com TLS validado e sessão/CSRF nativos; somente leitura após login",
+    "at": "2026-10-19T20:49:53.150847-03:00",
+    "path": "/acompanhamento/certificados/",
+    "http_status": 200,
+    "expected": "Conteúdo sem transbordamento horizontal da página; tabelas podem rolar dentro do contêiner",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "body": 768,
+      "overflowElements": [],
+      "tables": [
+        {
+          "client": 688,
+          "scroll": 711
+        }
+      ]
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro",
+    "relation_to_human_report": "Conferência técnica em viewports emulados; o estudante informou uso de computador pelo avaliador. Tela, navegador e método da observação mobile humana ainda a confirmar, sem equivalência afirmada."
+  }
+]

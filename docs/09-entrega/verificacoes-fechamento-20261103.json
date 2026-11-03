@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-03",
+  "code_candidate": "9f0fd32f0d57f97c953a1e39cb62b0b601d1aeb5",
+  "private_official_model_updated": true,
+  "private_identified_sources_preserved": true,
+  "human_sources": 3,
+  "human_pending": 2,
+  "HUM001_date": "a confirmar; captura 13/10/2026, estudante informou 03/11/2026; segunda sessão não comprovada",
+  "relative_document_links": 474,
+  "broken_links": 0,
+  "public_files_scanned": 132,
+  "secrets_or_identified_evaluator_leaks": 0,
+  "private_pdfs_rendered": 8,
+  "private_pdf_pages": 38,
+  "all_pdf_pages_within_bounds": true,
+  "contact_sheets_visually_reviewed": true,
+  "public_pdf": {
+    "file": "docs/07-avaliacoes/modelo-consolidado.pdf",
+    "pages": 7,
+    "sha256": "eea53d0597ac3e110ea53e9ea6435ec8c518ab726a6f9686892b91b28b1380b7",
+    "out_of_bounds": [],
+    "http_links": 0,
+    "all_pages_rendered": true
+  },
+  "video_timeline_seconds": 300,
+  "video_recorded": false,
+  "published": false,
+  "published_data_deleted": false,
+  "note": "As verificações antigas de outubro são históricas. Identificação, fontes integrais e modelo oficial permanecem fora do Git.",
+  "pull_request": "https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro/pull/14"
+}

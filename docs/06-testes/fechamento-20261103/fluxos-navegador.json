@@ -1,0 +1,122 @@
+[
+  {
+    "id": "WEB-01",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:25.471631-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "Carregamento inicial nativo de nascimento, CPF e telefone",
+    "observed": "Os três valores salvos aparecem; data ISO e textos formatados.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-01.png"
+  },
+  {
+    "id": "WEB-02",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:25.819455-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "Submissão inválida preserva valores digitados",
+    "observed": "Erro útil no CPF; CPF inválido e novo telefone permanecem no formulário; data preservada.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-02.png"
+  },
+  {
+    "id": "WEB-03",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:26.317998-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "Editar outro campo mantém os demais dados",
+    "observed": "Nome atualizado, CPF/telefone/data reabertos com seus valores.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-03.png"
+  },
+  {
+    "id": "WEB-04",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:27.235216-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "Criar instrutor quando o seletor não tem usuários elegíveis",
+    "observed": "A02 funcional criou acesso e cadastro pelo fluxo guiado, sem usar Django admin.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-04.png"
+  },
+  {
+    "id": "WEB-05",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:28.033348-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "A02 encontra e cadastra turma em viewport móvel",
+    "observed": "Atalho Nova turma no início; formulário preenchido e turma planejada salva.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-05.png"
+  },
+  {
+    "id": "WEB-06",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:28.507291-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "Vincular o instrutor recém-criado à turma",
+    "observed": "Novo instrutor vinculado à turma planejada por A02 funcional.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-06.png"
+  },
+  {
+    "id": "WEB-07",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:28.686144-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "Exibir confirmação antes de cancelar turma",
+    "observed": "Tela explica efeito e preservação do histórico; checkbox de confirmação inicialmente desmarcado.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-07.png"
+  },
+  {
+    "id": "WEB-08",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:29.019076-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "Cancelar somente após POST com confirmação e CSRF",
+    "observed": "Apenas a nova turma fictícia foi cancelada, após confirmação explícita.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-08.png"
+  },
+  {
+    "id": "WEB-09",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:29.191766-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "Informar ocupação antes de confirmar inscrição",
+    "observed": "Capacidade 1, ocupação 1 e disponibilidade 0 visíveis antes do botão; validação transacional permanece no serviço.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-09.png"
+  },
+  {
+    "id": "WEB-10",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:29.592187-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "Obrigatórios padronizados e mensagem de carga horária em PT-BR",
+    "observed": "Campos assinalados e valor zero rejeitado com orientação clara.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-10.png"
+  },
+  {
+    "id": "WEB-11",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:30.003648-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "Retorno visual honesto ao solicitar download",
+    "observed": "Status orienta conferir o navegador; arquivo CSV real recebido pelo navegador de teste, sem anunciar conclusão ao usuário.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-11.png"
+  },
+  {
+    "id": "WEB-12",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:06:31.023213-03:00",
+    "environment": "HTTP loopback com PostgreSQL isolado; dados fictícios; sessão/CSRF nativos",
+    "objective": "Conferir navegação de A01 também em 320px",
+    "observed": "Atalho administrativo visível; página contida na largura.",
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/WEB-12.png"
+  }
+]

@@ -222,6 +222,14 @@ class EnrollmentConfirmView(AdminRequiredMixin, FormView):
     def get_context_data(self, **kwargs):
         return super().get_context_data(**kwargs) | {
             "page_title": f"Confirmar inscrição de {self.enrollment.participant}",
+            "capacity_summary": {
+                "class_group": self.enrollment.class_group,
+                "capacity": self.enrollment.class_group.capacity,
+                "occupied": self.enrollment.class_group.enrollments.filter(
+                    status=EnrollmentStatus.CONFIRMED
+                ).count(),
+                "available": available_places(self.enrollment.class_group),
+            },
             "cancel_url": reverse(
                 "enrollments:class-queue",
                 kwargs={"class_pk": self.enrollment.class_group_id},

@@ -11,9 +11,9 @@
   </div>
   {% if user.role == "ADMIN" %}
     <div class="action-row">
-      <a class="button button-secondary" href="{% url 'reporting:export' 'inscricoes' %}{% if filter_query %}?{{ filter_query }}{% endif %}">Inscrições CSV</a>
-      <a class="button button-secondary" href="{% url 'reporting:export' 'frequencia' %}{% if filter_query %}?{{ filter_query }}{% endif %}">Frequência CSV</a>
-      <a class="button button-secondary" href="{% url 'reporting:export' 'conclusao' %}{% if filter_query %}?{{ filter_query }}{% endif %}">Conclusão CSV</a>
+      <a class="button button-secondary" data-download-feedback href="{% url 'reporting:export' 'inscricoes' %}{% if filter_query %}?{{ filter_query }}{% endif %}">Inscrições CSV</a>
+      <a class="button button-secondary" data-download-feedback href="{% url 'reporting:export' 'frequencia' %}{% if filter_query %}?{{ filter_query }}{% endif %}">Frequência CSV</a>
+      <a class="button button-secondary" data-download-feedback href="{% url 'reporting:export' 'conclusao' %}{% if filter_query %}?{{ filter_query }}{% endif %}">Conclusão CSV</a>
     </div>
   {% endif %}
 </header>
@@ -39,6 +39,8 @@
   <article class="metric-card"><small>Turmas</small><strong>{{ snapshot.classes }}</strong></article>
   <article class="metric-card"><small>Participantes únicos</small><strong>{{ snapshot.participants }}</strong></article>
   <article class="metric-card"><small>Inscrições</small><strong>{{ snapshot.enrollments }}</strong></article>
+  <article class="metric-card"><small>Inscrições pendentes</small><strong>{{ snapshot.pending }}</strong></article>
+  <article class="metric-card"><small>Lista de espera</small><strong>{{ snapshot.waitlisted }}</strong></article>
   <article class="metric-card"><small>Ocupação</small><strong>{{ snapshot.occupancy_percentage }}%</strong><span>{{ snapshot.occupied }} de {{ snapshot.capacity }} vagas</span></article>
   <article class="metric-card"><small>Frequência média</small><strong>{{ snapshot.average_attendance }}%</strong></article>
   <article class="metric-card"><small>Projetos entregues</small><strong>{{ snapshot.delivered_projects }}</strong></article>
@@ -65,7 +67,7 @@
   <div class="panel-heading"><h2>Resumo por turma</h2><span class="badge badge-primary">Mesmo universo dos indicadores</span></div>
   <div class="table-wrap">
     <table>
-      <thead><tr><th>Turma</th><th>Oficina</th><th>Início</th><th>Situação</th><th>Ocupação</th><th>Espera</th><th>Resultado</th></tr></thead>
+      <thead><tr><th>Turma</th><th>Oficina</th><th>Início</th><th>Situação</th><th>Ocupação</th><th>Pendentes</th><th>Lista de espera</th><th>Resultado</th></tr></thead>
       <tbody>
       {% for class_group in class_rows %}
         <tr>
@@ -74,11 +76,12 @@
           <td>{{ class_group.start_date|date:"d/m/Y" }}</td>
           <td><span class="badge badge-muted">{{ class_group.get_status_display }}</span></td>
           <td>{{ class_group.occupied_count }}/{{ class_group.capacity }}</td>
+          <td>{{ class_group.pending_count }}</td>
           <td>{{ class_group.waitlisted_count }}</td>
           <td>{{ class_group.approved_count }} aprovado(s)<br><small>{{ class_group.not_completed_count }} não concluinte(s)</small></td>
         </tr>
       {% empty %}
-        <tr><td colspan="7">Nenhuma turma corresponde aos filtros selecionados.</td></tr>
+        <tr><td colspan="8">Nenhuma turma corresponde aos filtros selecionados.</td></tr>
       {% endfor %}
       </tbody>
     </table>

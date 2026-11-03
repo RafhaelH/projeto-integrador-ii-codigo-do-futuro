@@ -1,0 +1,1954 @@
+[
+  {
+    "id": "baseline-inicio-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:18.550619-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-perfil-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:18.598771-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/conta/perfil/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-participantes-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:18.660308-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/participantes/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 482,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "REPROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-editar-participante-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:18.950988-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/participantes/f4d38f84-5f03-4ae3-abeb-a28ec99ccb6f/editar/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {
+      "birth_date": "",
+      "cpf": "52998224725",
+      "phone": "16999991234"
+    },
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/baseline-editar-participante-320.png"
+  },
+  {
+    "id": "baseline-instrutor-existente-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:19.021692-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/instrutores/novo/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-turmas-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:19.209495-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/turmas/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/baseline-turmas-320.png"
+  },
+  {
+    "id": "baseline-nova-turma-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:19.564132-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/turmas/nova/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/baseline-nova-turma-320.png"
+  },
+  {
+    "id": "baseline-painel-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:19.721952-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/painel/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-fila-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:19.947541-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/inscricoes/turmas/e14c6556-965f-4b17-94dc-ac6986f4c708/fila/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/baseline-fila-320.png"
+  },
+  {
+    "id": "baseline-confirmacao-inscricao-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:20.030127-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/inscricoes/3643efbd-680e-4ae7-b164-428e31613701/confirmar/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-nova-oficina-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:20.095826-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/nova/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-inicio-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:20.158667-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-perfil-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:20.206580-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/conta/perfil/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-participantes-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:20.263314-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/participantes/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 482,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "REPROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-editar-participante-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:20.498203-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/participantes/f4d38f84-5f03-4ae3-abeb-a28ec99ccb6f/editar/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {
+      "birth_date": "",
+      "cpf": "52998224725",
+      "phone": "16999991234"
+    },
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/baseline-editar-participante-390.png"
+  },
+  {
+    "id": "baseline-instrutor-existente-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:20.555312-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/instrutores/novo/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-turmas-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:20.723110-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/turmas/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/baseline-turmas-390.png"
+  },
+  {
+    "id": "baseline-nova-turma-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:20.915610-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/turmas/nova/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/baseline-nova-turma-390.png"
+  },
+  {
+    "id": "baseline-painel-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:21.028210-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/painel/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-fila-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:21.257746-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/inscricoes/turmas/e14c6556-965f-4b17-94dc-ac6986f4c708/fila/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/baseline-fila-390.png"
+  },
+  {
+    "id": "baseline-confirmacao-inscricao-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:21.306684-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/inscricoes/3643efbd-680e-4ae7-b164-428e31613701/confirmar/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-nova-oficina-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:21.380221-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/nova/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-inicio-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:21.442571-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-perfil-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:21.508776-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/conta/perfil/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-participantes-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:21.616230-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/participantes/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-editar-participante-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:21.747931-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/participantes/f4d38f84-5f03-4ae3-abeb-a28ec99ccb6f/editar/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {
+      "birth_date": "",
+      "cpf": "52998224725",
+      "phone": "16999991234"
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-instrutor-existente-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:21.802299-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/instrutores/novo/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-turmas-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:21.895964-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/turmas/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-nova-turma-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:21.957836-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/turmas/nova/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-painel-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:22.115219-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/painel/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-fila-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:22.254821-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/inscricoes/turmas/e14c6556-965f-4b17-94dc-ac6986f4c708/fila/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-confirmacao-inscricao-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:22.362482-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/inscricoes/3643efbd-680e-4ae7-b164-428e31613701/confirmar/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-nova-oficina-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:22.533930-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/nova/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-inicio-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:22.677620-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-perfil-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:22.753469-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/conta/perfil/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-participantes-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:22.827394-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/participantes/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-editar-participante-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:23.127224-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/participantes/f4d38f84-5f03-4ae3-abeb-a28ec99ccb6f/editar/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {
+      "birth_date": "",
+      "cpf": "52998224725",
+      "phone": "16999991234"
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-instrutor-existente-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:23.215634-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/pessoas/instrutores/novo/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-turmas-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:23.308447-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/turmas/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-nova-turma-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:23.439299-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/turmas/nova/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-painel-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:23.629612-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/painel/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-fila-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:23.772959-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/inscricoes/turmas/e14c6556-965f-4b17-94dc-ac6986f4c708/fila/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-confirmacao-inscricao-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:23.893294-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/inscricoes/3643efbd-680e-4ae7-b164-428e31613701/confirmar/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "baseline-nova-oficina-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:24.077330-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "64efb3b/base 58db4fc",
+    "page": "/oficinas/nova/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-inicio-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:25.245953-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-perfil-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:25.300013-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/conta/perfil/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-participantes-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:25.378033-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/participantes/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-editar-participante-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:25.671613-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/participantes/f4d38f84-5f03-4ae3-abeb-a28ec99ccb6f/editar/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {
+      "birth_date": "2007-02-15",
+      "cpf": "529.982.247-25",
+      "phone": "(16) 99999-1234"
+    },
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-editar-participante-320.png"
+  },
+  {
+    "id": "candidate-instrutor-existente-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:25.741484-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/instrutores/novo/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-novo-acesso-instrutor-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:25.966179-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/instrutores/novo-acesso/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-novo-acesso-instrutor-320.png"
+  },
+  {
+    "id": "candidate-turmas-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:26.259606-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-turmas-320.png"
+  },
+  {
+    "id": "candidate-nova-turma-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:26.523722-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/nova/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-nova-turma-320.png"
+  },
+  {
+    "id": "candidate-painel-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:26.631867-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/painel/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-fila-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:26.848588-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/inscricoes/turmas/e14c6556-965f-4b17-94dc-ac6986f4c708/fila/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-fila-320.png"
+  },
+  {
+    "id": "candidate-confirmacao-inscricao-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:26.915017-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/inscricoes/3643efbd-680e-4ae7-b164-428e31613701/confirmar/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-cancelamento-turma-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:27.138070-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/75d8a15f-e34c-4d0a-97ae-638e2a4693be/situacao/cancelled/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-cancelamento-turma-320.png"
+  },
+  {
+    "id": "candidate-nova-oficina-320",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:27.264885-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/nova/",
+    "viewport": 320,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 320,
+      "document": 320,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-inicio-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:27.416332-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-perfil-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:27.496964-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/conta/perfil/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-participantes-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:27.564346-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/participantes/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-editar-participante-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:27.862877-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/participantes/f4d38f84-5f03-4ae3-abeb-a28ec99ccb6f/editar/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {
+      "birth_date": "2007-02-15",
+      "cpf": "529.982.247-25",
+      "phone": "(16) 99999-1234"
+    },
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-editar-participante-390.png"
+  },
+  {
+    "id": "candidate-instrutor-existente-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:27.926958-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/instrutores/novo/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-novo-acesso-instrutor-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:28.170611-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/instrutores/novo-acesso/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-novo-acesso-instrutor-390.png"
+  },
+  {
+    "id": "candidate-turmas-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:28.377639-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-turmas-390.png"
+  },
+  {
+    "id": "candidate-nova-turma-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:28.613163-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/nova/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-nova-turma-390.png"
+  },
+  {
+    "id": "candidate-painel-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:28.731197-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/painel/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-fila-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:28.963798-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/inscricoes/turmas/e14c6556-965f-4b17-94dc-ac6986f4c708/fila/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-fila-390.png"
+  },
+  {
+    "id": "candidate-confirmacao-inscricao-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:29.073158-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/inscricoes/3643efbd-680e-4ae7-b164-428e31613701/confirmar/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-cancelamento-turma-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:29.306528-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/75d8a15f-e34c-4d0a-97ae-638e2a4693be/situacao/cancelled/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "docs/06-testes/fechamento-20261103/capturas/candidate-cancelamento-turma-390.png"
+  },
+  {
+    "id": "candidate-nova-oficina-390",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:29.374577-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/nova/",
+    "viewport": 390,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-inicio-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:29.440822-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-perfil-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:29.506194-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/conta/perfil/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-participantes-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:29.578302-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/participantes/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-editar-participante-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:29.728294-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/participantes/f4d38f84-5f03-4ae3-abeb-a28ec99ccb6f/editar/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {
+      "birth_date": "2007-02-15",
+      "cpf": "529.982.247-25",
+      "phone": "(16) 99999-1234"
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-instrutor-existente-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:29.825205-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/instrutores/novo/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-novo-acesso-instrutor-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:29.923371-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/instrutores/novo-acesso/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-turmas-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:30.028772-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-nova-turma-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:30.206729-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/nova/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-painel-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:30.684370-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/painel/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-fila-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:30.850635-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/inscricoes/turmas/e14c6556-965f-4b17-94dc-ac6986f4c708/fila/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-confirmacao-inscricao-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:30.952140-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/inscricoes/3643efbd-680e-4ae7-b164-428e31613701/confirmar/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-cancelamento-turma-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:31.173690-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/75d8a15f-e34c-4d0a-97ae-638e2a4693be/situacao/cancelled/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-nova-oficina-768",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:31.304103-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/nova/",
+    "viewport": 768,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-inicio-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:31.358297-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-perfil-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:31.468364-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/conta/perfil/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-participantes-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:31.557374-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/participantes/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-editar-participante-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:31.754134-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/participantes/f4d38f84-5f03-4ae3-abeb-a28ec99ccb6f/editar/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {
+      "birth_date": "2007-02-15",
+      "cpf": "529.982.247-25",
+      "phone": "(16) 99999-1234"
+    },
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-instrutor-existente-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:31.819643-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/instrutores/novo/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-novo-acesso-instrutor-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:31.879775-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/pessoas/instrutores/novo-acesso/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-turmas-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:31.965935-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-nova-turma-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:32.034935-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/nova/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-painel-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:32.145261-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/painel/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-fila-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:32.274625-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/inscricoes/turmas/e14c6556-965f-4b17-94dc-ac6986f4c708/fila/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-confirmacao-inscricao-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:32.366471-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/inscricoes/3643efbd-680e-4ae7-b164-428e31613701/confirmar/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-cancelamento-turma-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:32.424965-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/turmas/75d8a15f-e34c-4d0a-97ae-638e2a4693be/situacao/cancelled/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  },
+  {
+    "id": "candidate-nova-oficina-1440",
+    "author": "agente Codex",
+    "at": "2026-11-03T20:03:32.507628-03:00",
+    "profile": "A02 ADMIN funcional fictício, sem staff/superusuário",
+    "environment": "PostgreSQL isolado; HTTP loopback, sem implantação ou teste no banco publicado",
+    "code": "candidato de fechamento, fonte local",
+    "page": "/oficinas/nova/",
+    "viewport": 1440,
+    "http_status": 200,
+    "expected": "Página sem transbordamento horizontal externo; tabelas podem rolar internamente",
+    "observed": {
+      "viewport": 1440,
+      "document": 1440,
+      "overflow": []
+    },
+    "initial_field_values": {},
+    "status": "APROVADO",
+    "evidence": "medidas DOM neste registro"
+  }
+]

@@ -32,6 +32,8 @@ class DashboardSnapshot:
     classes: int
     participants: int
     enrollments: int
+    pending: int
+    waitlisted: int
     capacity: int
     occupied: int
     occupancy_percentage: Decimal
@@ -91,6 +93,11 @@ def class_summary_rows(queryset: QuerySet[ClassGroup]) -> QuerySet[ClassGroup]:
         waitlisted_count=Count(
             "enrollments",
             filter=Q(enrollments__status=EnrollmentStatus.WAITLISTED),
+            distinct=True,
+        ),
+        pending_count=Count(
+            "enrollments",
+            filter=Q(enrollments__status=EnrollmentStatus.PENDING),
             distinct=True,
         ),
         approved_count=Count(
@@ -162,6 +169,8 @@ def dashboard_snapshot(queryset: QuerySet[ClassGroup]) -> DashboardSnapshot:
         classes=queryset.count(),
         participants=enrollments.values("participant_id").distinct().count(),
         enrollments=enrollments.count(),
+        pending=enrollments.filter(status=EnrollmentStatus.PENDING).count(),
+        waitlisted=enrollments.filter(status=EnrollmentStatus.WAITLISTED).count(),
         capacity=capacity,
         occupied=occupied,
         occupancy_percentage=_percentage(occupied, capacity),

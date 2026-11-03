@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Confirmar cancelamento | Código do Futuro{% endblock %}
+{% block content %}
+<section class="form-page">
+  <h1>Cancelar turma {{ class_group.code }}?</h1>
+  <p>{{ class_group.title }}</p>
+  <p>Os próximos encontros planejados também serão cancelados. O histórico será preservado. Confira a turma antes de confirmar.</p>
+  <form class="panel form-grid" method="post">
+    {% csrf_token %}
+    {% include "shared/form_fields.html" %}
+    <div class="form-actions form-span">
+      <a class="button button-secondary" href="{% url 'workshops:class-detail' class_group.pk %}">Voltar sem cancelar</a>
+      <button class="button button-danger" type="submit">Confirmar cancelamento</button>
+    </div>
+  </form>
+</section>
+{% endblock %}

@@ -17,7 +17,7 @@
   "second_session_invented": false,
   "video_timeline_seconds": 300,
   "video_recorded": false,
-  "relative_links": 495,
+  "relative_links": 473,
   "broken_links": 0,
   "private_pdfs": 10,
   "private_pdf_pages": 66,
@@ -25,5 +25,6 @@
   "current_public_tree_nominal_or_secret_leaks": 0,
   "main_preserved": true,
   "published_deletions": 0,
-  "notes": "Atualiza a verificação candidata anterior. Fontes nominais/modelo oficial privados. O histórico intermediário da branch foi preservado sem force push; o squash integrado e a árvore atual estão sanitizados."
+  "notes": "Atualiza a verificação candidata anterior. Fontes nominais/modelo oficial privados. O histórico intermediário da branch foi preservado sem force push; o squash integrado e a árvore atual estão sanitizados.",
+  "public_changed_files_scanned": 84
 }

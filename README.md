@@ -1,3 +1,5 @@
+Atualização vigente: PR #14 integrada e publicada em **10210ad**, CI e retestes HTTPS aprovados. [Entrega atual](docs/09-entrega/relatorio-final.md). Quatro fontes humanas; uma quinta distinta e gravação/link/submissão pendentes. main preservada.
+
 # Código do Futuro
 
 Projeto acadêmico desenvolvido para o **Projeto Integrador Transdisciplinar em Engenharia de Software II**.
@@ -10,7 +12,7 @@ A especificação, a fundação executável e os módulos operacionais do MVP es
 
 ## Estado acadêmico verificado
 
-Em 13/10/2026, develop está em `644e7a6` e código publicado em `a351c5a` (mesmo src), com 235 testes em PostgreSQL isolado e cobertura 89,84%. Manual ilustrado, 38 imagens e modelos estão preparados; **cinco avaliações humanas e vídeo narrado continuam pendentes**. O [índice para o tutor](docs/09-entrega/README.md), a [matriz](docs/09-entrega/matriz-conformidade.md) e o [checklist](docs/09-entrega/checklist-final.md) distinguem evidências e lacunas. A revisão do planejamento original I e o modelo específico AVA ainda precisam ser conferidos pelo estudante. Main permanece preservada.
+Em 03/11/2026, PR #14 integrada/publicada em `10210ad`, CI com 264 testes e cobertura 90,54%; retestes HTTPS e layout aprovados. Há quatro fontes humanas distintas e falta uma quinta, além de gravação/link/submissão pelo estudante. Modelo oficial AVA preenchido privadamente; originais do Integrador I não localizados, limitação registrada. [Índice do tutor](docs/09-entrega/README.md), [matriz](docs/09-entrega/matriz-conformidade.md) e [checklist](docs/09-entrega/checklist-final.md) distinguem evidências e lacunas. main preservada.
 
 ## Objetivo
 

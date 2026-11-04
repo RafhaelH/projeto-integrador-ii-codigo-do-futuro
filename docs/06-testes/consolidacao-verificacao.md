@@ -1,3 +1,7 @@
+## Estado vigente após publicação — 03/11/2026
+
+PR #14 integrada/publicada em `10210ad7bc9c995c90207fa1c2dce6c546d217f6`; [retestes HTTPS](../06-testes/publicacao-20261103/README.md). Quatro fontes humanas, data 03/11 confirmada, uma fonte distinta faltante. Vídeo: **PENDENTE — inserir após gravação**. Os blocos anteriores abaixo são históricos e não substituem o [relatório final](../09-entrega/relatorio-final.md).
+
 # Consolidação de verificação, validação e melhorias
 
 ## Método e limites

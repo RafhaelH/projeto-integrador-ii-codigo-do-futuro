@@ -47,13 +47,19 @@ O relato cita “responsável” entre outros perfis. A implementação possui t
 
 Os casos não reproduzidos continuam identificados; correção técnica não se converte em reteste humano. Não atribuir a HUM-001 a mesma tela de overflow sem confirmação.
 
-## Versão e evidências
+## Versão publicada e evidências
 
-Candidato funcional `9f0fd32f0d57f97c953a1e39cb62b0b601d1aeb5`. Base develop 58db4fc; inclui os candidatos anteriores de datas/layout. **Não implantado.** Publicação anteriormente identificada como a351c5a não recebeu essas alterações nesta tarefa.
+PR #14 integrada e publicada em `10210ad7bc9c995c90207fa1c2dce6c546d217f6`. [Publicação, CI e retestes HTTPS](../../06-testes/publicacao-20261103/README.md). Testes isolados anteriores: 264/90,54%, 52 combinações candidatas e 12 fluxos; são históricos e separados dos retestes publicados.
 
-- [Relatório de testes](../../06-testes/fechamento-20261103/README.md): 264 testes em PostgreSQL isolado, zero skips, cobertura 90,54%; Ruff/check/migrations/JS aprovados.
-- [96 verificações de largura](../../06-testes/fechamento-20261103/verificacao-visual.json): 44 da base, 52 do candidato; não são 96 pessoas nem cenários funcionais independentes.
-- [12 fluxos completos no navegador](../../06-testes/fechamento-20261103/fluxos-navegador.json), com ações apenas em dados fictícios isolados.
-- [Dados humanos anonimizados](avaliacoes.json). Fonte integral e inventário nominal ficam fora do Git.
+| Achado | Evidência publicada |
+|---|---|
+| DEF-004 — edição | PUB-03/04/05: três campos preenchidos, erro retido, edição preserva os demais. A causa do esvaziamento de CPF/telefone continua não reproduzida na base |
+| DEF-006 — instrutor | PUB-06/07 e conferência do banco: provisionamento restrito e vínculo |
+| DEF-005 e localização da turma | PUB-02/07/19, 24 combinações e ação de tabela acessível em 320px |
+| UX-007 — cancelamento | PUB-08/09: confirmação antes do POST, só turma fictícia nova |
+| UX-008/009 — fila/vagas | PUB-14/15/16; trava transacional também coberta pela suíte |
+| UX-010/011/012 — clareza/consentimento | PUB-03/05/10, regressões de precisão histórica; sem coleta automática |
+| UX-014 — download | PUB-16/17: arquivos recebidos; interface sem falso anúncio de conclusão |
+| RN-005/020 e DATA-015 | Regra existente mantida; caso humano de menor sem responsável não reproduzido. Inventário de dois certificados antigo preservado, nenhuma exclusão |
 
-Até 17/11/2026: revisar/integrar PR para develop em ação posterior, publicar o SHA aprovado, repetir smoke HTTPS, confirmar somente lacunas efetivamente ausentes e completar a evidência de um quinto avaliador distinto, gravar/exportar 300s e submeter. A continuação autoriza integrar e publicar exclusivamente este Compose; main será preservada. Resultados de implantação serão registrados após a execução.
+As sugestões foram tratadas na versão publicada; não houve reteste humano posterior comprovado. Não se converte teste técnico em nova opinião humana. A data dos quatro relatos é **03/11/2026**, por confirmação do estudante; a nota de correção de HUM-001 e sua captura histórica permanecem preservadas. Falta somente fonte/identificação de **um quinto avaliador distinto**; o relato anterior de HUM-001 não é contado duas vezes. Campos não informados continuam sinalizados.

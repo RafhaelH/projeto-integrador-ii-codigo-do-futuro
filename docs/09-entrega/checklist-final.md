@@ -1,19 +1,19 @@
-# Checklist de fechamento — prazo 17/11/2026
+# Checklist final — entrega até 17/11/2026
 
 ## Sequência exata para concluir
 
-- [x] Preservar fontes integrais dos quatro relatos em cópia privada e a data histórica de HUM-001.
-- [x] Separar relato, reprodução, causa, decisão e reteste; manter campos ausentes e não testados sem inferência.
-- [x] Corrigir e testar edição, instrutor/vínculo e ações responsivas específicas de A02.
-- [x] Confirmar cancelamento por POST/CSRF; separar indicadores; exibir vagas antes de confirmar sem remover a trava transacional.
-- [x] Padronizar obrigatórios/mensagens, explicar consentimento sem coleta automática, avaliar download sem falso sucesso.
-- [x] Conferir regra de responsável e manter bloqueio na inscrição; aviso no cadastro sem regra arbitrária nova.
-- [x] Inventariar dois certificados por IDs/manifests e preparar plano restrito, sem exclusão publicada.
-- [x] Executar 264 testes em PostgreSQL isolado, 52 combinações candidatas e 12 fluxos no navegador; preservar limites.
-- [x] Abrir [PR #14 para develop](https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro/pull/14) com código, testes e documentação sanitizada.
-- [ ] Revisar/integrar PR para develop em ação posterior; nenhum merge, deploy ou promoção de main nesta tarefa.
-- [ ] Publicar SHA aprovado em tarefa operacional separada e repetir smoke HTTPS antes da gravação final.
-- [ ] Obter relato de um quinto avaliador distinto e somente os campos ausentes; data de HUM-001 esclarecida.
-- [ ] Conferir modelo oficial AVA privado e anexos, mantendo originais I ausentes sinalizados.
-- [ ] Gravar narração própria, identificar versão, editar/exportar exatamente 300s e testar link do tutor.
-- [ ] Preencher link do vídeo, conferir permissões/anexos e submeter no AVA até 17/11/2026; guardar recibo.
+- [x] Preservar quatro fontes reais e originais; reconciliar relato anterior sem duplicar pessoa.
+- [x] Consolidar 03/11/2026 por confirmação do estudante, com nota de correção e captura histórica de HUM-001 preservada.
+- [x] Revisar PR #14, CI do HEAD e pós-merge; integrar em develop sem alterar main ou excluir branches.
+- [x] Verificar backup/catálogo/checksum e preservar imagem anterior; publicar somente o Compose deste projeto.
+- [x] Retestar HTTPS, sessões/CSRF/perfis, dados/validações, instrutor/vínculo, A02, cancelamento, fila/vagas, acompanhamento e downloads.
+- [x] Conferir 24 combinações de layout, ação da tabela e 12 rotas estáveis de gravação.
+- [x] Preservar cenários anteriores, certificados e outros 73 contêineres; inventariar registros novos, sem exclusões.
+- [x] Atualizar laudo, decisões, matriz, manual/capturas, modelo AVA, PDFs e roteiro.
+- [x] Conferir planejamento II; registrar ausência do original/protótipo I sem fabricar histórico.
+- [ ] Receber fonte/identificação de um quinto avaliador distinto e incorporá-la fielmente.
+- [ ] Gravar com voz do estudante, conferir áudio e exportar exatamente 300 segundos.
+- [ ] Publicar no canal escolhido; conferir acesso em sessão sem login do proprietário.
+- [ ] Inserir link no modelo AVA, regenerar PDF e ZIP, submeter até 17/11/2026 e guardar comprovante.
+
+Vídeo: **PENDENTE — inserir após gravação**. Não publicar nem submeter em nome do estudante.

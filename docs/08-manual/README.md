@@ -1,9 +1,33 @@
 # Manual do usuário — Código do Futuro
 
 Este manual descreve a release candidata do Projeto Integrador Transdisciplinar em Engenharia de
-Software II. Esta edição apresenta a candidata publicada `a351c5a`, preparada em 13/10/2026. As capturas reais estão no [plano e registro](plano-de-capturas.md), com fonte, legenda e hash. Todos os dados apresentados são fictícios. A versão definitiva continua dependente das cinco avaliações humanas.
+Software II. Edição atualizada para a versão publicada `10210ad` em 03/11/2026. As imagens de outubro permanecem identificadas como históricas; as telas alteradas são apresentadas na atualização abaixo. As capturas reais estão no [plano e registro](plano-de-capturas.md), com fonte, legenda e hash. Todos os dados apresentados são fictícios. Há quatro fontes humanas disponíveis; falta uma quinta distinta e o vídeo/link/submissão.
 
 Use o [manual HTML imprimível](manual-imprimivel.html), o [PDF](manual-imprimivel.pdf) e o [roteiro do vídeo](roteiro-video.md). Os PDFs e imagens não contêm credenciais.
+
+## Atualização publicada de formulários e ações
+
+No administrador, **Início → Nova turma** abre o cadastro já existente. Em **Pessoas → Participantes → Editar**, nascimento/CPF/telefone salvos aparecem; erros preservam entradas e editar outro campo preserva os demais. Consentimento só registra um fato efetivamente obtido, permanece opcional e não é preenchido automaticamente nem substitui autorização de imagem.
+
+Em **Pessoas → Instrutores → Novo instrutor**, selecione acesso elegível ou use **Criar acesso e cadastrar instrutor**. O fluxo específico cria apenas instrutor, sem privilégios administrativos; entregue a senha por canal privado. Em turma planejada, use **Vincular** na seção Instrutores.
+
+**Cancelar turma** agora abre confirmação. Voltar não cancela; o envio exige confirmação, autorização e CSRF. A fila separa **Inscrições pendentes** e **Lista de espera**; **Confirmar** mostra capacidade, ocupação e disponibilidade antes do envio e confere vagas novamente. Downloads exibem **Download solicitado**, para conferir na área de downloads do navegador. Campos obrigatórios têm * e ajuda textual. Menores podem ter cadastro preparatório, mas a inscrição exige responsável ativo conforme a regra existente.
+
+Imagens atuais, renderizadas por HTTPS, com saudação nominal ocultada:
+
+![Edição publicada, dados fictícios](../06-testes/publicacao-20261103/capturas/publicado-editar-participante-1440.png)
+
+![Provisionamento restrito de instrutor](../06-testes/publicacao-20261103/capturas/publicado-novo-instrutor-390.png)
+
+![Nova turma pelo administrador](../06-testes/publicacao-20261103/capturas/publicado-nova-turma-390.png)
+
+![Confirmação prévia de cancelamento](../06-testes/publicacao-20261103/capturas/PUB-08.png)
+
+![Indicadores separados na fila](../06-testes/publicacao-20261103/capturas/publicado-fila-1440.png)
+
+![Resumo de vagas antes da confirmação](../06-testes/publicacao-20261103/capturas/publicado-confirmacao-390.png)
+
+Menus/formulários adaptam-se à largura; tabelas largas permitem rolagem interna. Confira [evidências atuais](../06-testes/publicacao-20261103/README.md). O [roteiro definitivo](roteiro-video-final.md) usa apenas consultas nos cenários de apresentação.
 
 ## 1. Acesso
 
@@ -214,12 +238,11 @@ inclua senha, cookie ou dados pessoais na evidência.
 
 ## 8. Identificação da versão
 
-O PDF final do manual deve registrar domínio, tag/SHA, data de captura e autor. Esses campos serão
-preenchidos depois das cinco avaliações, quando a versão definitiva for promovida para `main`.
+Versão publicada: **10210ad7bc9c995c90207fa1c2dce6c546d217f6**, domínio https://projeto-integrador.tesseratointegra.com.br, atualização de 03/11/2026. Capturas técnicas: agente Codex, Chromium/HTTPS/TLS; fonte, largura e hashes nos manifests. main não foi promovida.
 
 
 
-## 9. Cenários preparados e ilustrações
+## 9. Acervo histórico das ilustrações — 13/10/2026
 
 Referência: 13/10/2026. Os registros originais são reutilizados por ID. PY-2026-01 está concluída (Ana aprovada, Bruno não concluinte por 50% de frequência; certificado ativo de Ana, 8h). WEB-2026-01 está em andamento (Carla 100%, Diego 50% em dois encontros; projeto entregue e rascunho; nota de Carla não publicada). ROB-2026-01 tem 2 vagas preenchidas e uma pessoa em espera; PY-2026-02 permanece planejada.
 
@@ -286,13 +309,7 @@ As sete turmas A01–A05 são espaços de avaliação separados; não usar esses
 ![Figura 36](capturas/fig-36-mobile-jornada.png)
 
 
-## Preparação de entrega em 19/10/2026
 
-As 38 capturas acima pertencem à preparação de 13/10 e não são novas opiniões humanas. O [roteiro definitivo](roteiro-video-final.md) usa consultas reais reconferidas e mantém a voz do estudante/edição final de 300s. Os novos registros SIM alteram indicadores globais; use o filtro Python/abril explicitado para a apresentação estável.
+## Uso atual na gravação
 
-Limite atual: DEF-004 deixa campos de data nativos vazios na edição; não anunciar edição simples aprovada até implantação/reteste do candidato local. A oferta humana A05-I antiga encerrou; consultar [A05 atualizado](../07-avaliacoes/roteiros/A05.md). Não misturar tarefas SIM já realizadas com tarefas atribuídas às pessoas.
-
-
-## Candidato de fechamento de 03/11/2026
-
-As mudanças do candidato `9f0fd32` ainda não estão publicadas. [Fluxos e capturas atuais](../06-testes/fechamento-20261103/README.md): edição preserva valores, Pessoas → Instrutores → Novo instrutor → Criar acesso e cadastrar instrutor, Início → Nova turma para ADMIN sem staff, confirmação de cancelamento e vagas. O PDF/manual de outubro documenta a publicação antiga; este complemento e o [roteiro final](roteiro-video-final.md) identificam a versão nova.
+Os cenários Python/Web foram reconferidos por leitura em 03/11. Na fila de Robótica atual há duas confirmadas, uma pendente e duas em espera, além de estados cancelados históricos; o acervo de 13/10 registra a fila daquela data. Use as [capturas atuais](../06-testes/publicacao-20261103/capturas/) e o [roteiro vigente](roteiro-video-final.md). Edição/data, instrutor, responsividade e ações corrigidas já estão publicadas e retestadas em 10210ad. As contas de apresentação e filtros de Python/abril mantêm o vídeo separado dos cenários de avaliação e reteste. A05-I histórica encerrou em 16/10; não solicitar nela como se estivesse aberta.

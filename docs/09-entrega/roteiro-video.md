@@ -1,3 +1,3 @@
-# Roteiro canônico do vídeo
+# Roteiro vigente da gravação
 
-Use o [roteiro operacional definitivo de 300 segundos](../08-manual/roteiro-video-final.md). A escolha atende aos dois limites do enunciado, conforme [referência acadêmica](referencia-academica.md). Vídeo e link permanecem PENDENTES. Os tempos são metas de edição, sem garantia apenas por contagem de palavras.
+Use o [roteiro definitivo de 5:00](../08-manual/roteiro-video-final.md), atualizado para a versão efetivamente publicada 10210ad, com tabela e texto corrido. Os roteiros candidatos anteriores permanecem somente no histórico Git. Nome/RGM e guia de acessos estão na cópia restrita; nenhuma senha na gravação.

@@ -1,3 +1,5 @@
+Atualização vigente: PR #14 integrada e publicada em **10210ad**, CI e retestes HTTPS aprovados. [Entrega atual](09-entrega/relatorio-final.md). Quatro fontes humanas; uma quinta distinta e gravação/link/submissão pendentes. main preservada.
+
 # Índice da documentação
 
 Esta documentação é a fonte oficial das decisões do projeto. Cada requisito utiliza um identificador estável para permitir sua ligação com regras de negócio, casos de uso e testes.

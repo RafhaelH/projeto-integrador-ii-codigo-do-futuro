@@ -1,3 +1,3 @@
-# Roteiro do vídeo acadêmico
+# Roteiro vigente da gravação
 
-O roteiro atual é [roteiro-video-final.md](roteiro-video-final.md), preparado em 19/10/2026: 300 segundos em oito blocos, ações reais, narração integral, contas/abas, resultados, alternativas e checklist. Substitui o plano de sete minutos e a fala-base intermediária, sem anunciar gravação já realizada. O estudante deve narrar, exportar e medir o arquivo final em 5:00.
+Use o [roteiro definitivo de 5:00](roteiro-video-final.md), atualizado para a versão efetivamente publicada 10210ad, com tabela e texto corrido. Os roteiros candidatos anteriores permanecem somente no histórico Git. Nome/RGM e guia de acessos estão na cópia restrita; nenhuma senha na gravação.

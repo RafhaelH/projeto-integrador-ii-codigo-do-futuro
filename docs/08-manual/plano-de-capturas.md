@@ -1,3 +1,9 @@
+# Capturas atuais e acervo histórico
+
+Atualização publicada 10210ad, 03/11/2026: [manifest](../06-testes/publicacao-20261103/capturas.json), [layout](../06-testes/publicacao-20261103/layout.json) e [rotas do vídeo](../06-testes/publicacao-20261103/cenarios-video.json). Essas capturas substituem as imagens históricas nas instruções sobre formulários/ações corrigidas. As 24 combinações de layout são emulação Chromium por HTTPS, com menus visíveis e somente saudação nominal ocultada; uma imagem adicional mostra as ações à direita da tabela.
+
+## Acervo de 13/10 — preservado como histórico
+
 # Plano e registro das capturas reais
 
 Capturado em 13/10/2026 com código publicado **a351c5a**, Chromium/Playwright, TLS validado e contas estáveis de captura, diferentes de A01–A05. As telas da aplicação são PNG de páginas realmente renderizadas, com página completa e sem edição de números/estados. O certificado PDF foi realmente baixado; sua página foi renderizada sem alteração. O CSV foi realmente exportado e renderizado num visualizador local, explicitamente identificado; não se apresenta como tela do sistema ou Excel.

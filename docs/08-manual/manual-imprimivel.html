@@ -1,7 +1,19 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Código do Futuro — manual da candidata preparada</title><style>@page {size:A4;margin:14mm} body{font:11pt Arial,sans-serif;color:#142d40;line-height:1.35} h1{font-size:22pt} h2{font-size:16pt;margin-top:20px} h3{font-size:13pt} table{border-collapse:collapse;width:100%;font-size:9pt}th,td{border:1px solid #aaa;padding:6px;vertical-align:top}th{background:#edf3f6} img{max-width:100%;max-height:220mm;object-fit:contain} a{color:#155576}pre,code{white-space:pre-wrap;overflow-wrap:anywhere;font-size:9pt}.sheet{break-before:page}.blank{min-height:18mm} tr{break-inside:avoid}h1,h2,h3{break-after:avoid}</style></head><body><section><h1>Manual do usuário — Código do Futuro</h1>
+<html lang="pt-BR"><meta charset="utf-8"><title>Manual — publicação 10210ad</title><style>@page{size:A4;margin:15mm 14mm 16mm}*{box-sizing:border-box}body{font-family:Arial,sans-serif;font-size:9.5pt;line-height:1.26;color:#152331;margin:0}h1{font-size:19pt;color:#123d54;margin:0 0 6mm}h2{font-size:14pt;margin:7mm 0 3mm}h3{font-size:11pt}p{margin:0 0 2mm}a{color:#17465e;text-decoration:none;overflow-wrap:anywhere}table{width:100%;border-collapse:collapse;font-size:8.6pt;margin:3mm 0;table-layout:fixed}td,th{border:1px solid #c3cbd0;padding:1.2mm;vertical-align:top;overflow-wrap:anywhere}th{background:#e7f0f4}tr{break-inside:avoid}thead{display:table-header-group}ul,ol{padding-left:5mm}li{margin-bottom:1.3mm}code{overflow-wrap:anywhere;font-size:9pt}section{break-before:page}section:first-child{break-before:auto}.notice{padding:4mm;border:2px solid #34657b;background:#eef5f7;margin:6mm 0}h1,h2,h3{break-after:avoid}img{max-width:100%}img{max-height:230mm;object-fit:contain}</style><body><h1>Manual do usuário — Código do Futuro</h1>
 <p>Este manual descreve a release candidata do Projeto Integrador Transdisciplinar em Engenharia de
-Software II. Esta edição apresenta a candidata publicada <code>a351c5a</code>, preparada em 13/10/2026. As capturas reais estão no <a href="plano-de-capturas.md">plano e registro</a>, com fonte, legenda e hash. Todos os dados apresentados são fictícios. A versão definitiva continua dependente das cinco avaliações humanas.</p>
-<p>Use o <a href="manual-imprimivel.html">manual HTML imprimível</a>, o <a href="manual-imprimivel.pdf">PDF</a> e o <a href="roteiro-video.md">roteiro do vídeo</a>. Os PDFs e imagens não contêm credenciais.</p>
+Software II. Edição atualizada para a versão publicada <code>10210ad</code> em 03/11/2026. As imagens de outubro permanecem identificadas como históricas; as telas alteradas são apresentadas na atualização abaixo. As capturas reais estão no <a>plano e registro</a>, com fonte, legenda e hash. Todos os dados apresentados são fictícios. Há quatro fontes humanas disponíveis; falta uma quinta distinta e o vídeo/link/submissão.</p>
+<p>Use o <a>manual HTML imprimível</a>, o <a>PDF</a> e o <a>roteiro do vídeo</a>. Os PDFs e imagens não contêm credenciais.</p>
+<h2>Atualização publicada de formulários e ações</h2>
+<p>No administrador, <strong>Início → Nova turma</strong> abre o cadastro já existente. Em <strong>Pessoas → Participantes → Editar</strong>, nascimento/CPF/telefone salvos aparecem; erros preservam entradas e editar outro campo preserva os demais. Consentimento só registra um fato efetivamente obtido, permanece opcional e não é preenchido automaticamente nem substitui autorização de imagem.</p>
+<p>Em <strong>Pessoas → Instrutores → Novo instrutor</strong>, selecione acesso elegível ou use <strong>Criar acesso e cadastrar instrutor</strong>. O fluxo específico cria apenas instrutor, sem privilégios administrativos; entregue a senha por canal privado. Em turma planejada, use <strong>Vincular</strong> na seção Instrutores.</p>
+<p><strong>Cancelar turma</strong> agora abre confirmação. Voltar não cancela; o envio exige confirmação, autorização e CSRF. A fila separa <strong>Inscrições pendentes</strong> e <strong>Lista de espera</strong>; <strong>Confirmar</strong> mostra capacidade, ocupação e disponibilidade antes do envio e confere vagas novamente. Downloads exibem <strong>Download solicitado</strong>, para conferir na área de downloads do navegador. Campos obrigatórios têm * e ajuda textual. Menores podem ter cadastro preparatório, mas a inscrição exige responsável ativo conforme a regra existente.</p>
+<p>Imagens atuais, renderizadas por HTTPS, com saudação nominal ocultada:</p>
+<p><img alt="Edição publicada, dados fictícios" src="../06-testes/publicacao-20261103/capturas/publicado-editar-participante-1440.png"></p>
+<p><img alt="Provisionamento restrito de instrutor" src="../06-testes/publicacao-20261103/capturas/publicado-novo-instrutor-390.png"></p>
+<p><img alt="Nova turma pelo administrador" src="../06-testes/publicacao-20261103/capturas/publicado-nova-turma-390.png"></p>
+<p><img alt="Confirmação prévia de cancelamento" src="../06-testes/publicacao-20261103/capturas/PUB-08.png"></p>
+<p><img alt="Indicadores separados na fila" src="../06-testes/publicacao-20261103/capturas/publicado-fila-1440.png"></p>
+<p><img alt="Resumo de vagas antes da confirmação" src="../06-testes/publicacao-20261103/capturas/publicado-confirmacao-390.png"></p>
+<p>Menus/formulários adaptam-se à largura; tabelas largas permitem rolagem interna. Confira <a>evidências atuais</a>. O <a>roteiro definitivo</a> usa apenas consultas nos cenários de apresentação.</p>
 <h2>1. Acesso</h2>
 <ol>
 <li>abra o endereço HTTPS fornecido pelo responsável;</li>
@@ -211,32 +223,33 @@ inclua senha, cookie ou dados pessoais na evidência.</p>
 <li>encaminhe vulnerabilidades diretamente ao responsável, sem issue pública.</li>
 </ul>
 <h2>8. Identificação da versão</h2>
-<p>O PDF final do manual deve registrar domínio, tag/SHA, data de captura e autor. Esses campos serão
-preenchidos depois das cinco avaliações, quando a versão definitiva for promovida para <code>main</code>.</p>
-<h2>9. Cenários preparados e ilustrações</h2>
+<p>Versão publicada: <strong>10210ad7bc9c995c90207fa1c2dce6c546d217f6</strong>, domínio https://projeto-integrador.tesseratointegra.com.br, atualização de 03/11/2026. Capturas técnicas: agente Codex, Chromium/HTTPS/TLS; fonte, largura e hashes nos manifests. main não foi promovida.</p>
+<h2>9. Acervo histórico das ilustrações — 13/10/2026</h2>
 <p>Referência: 13/10/2026. Os registros originais são reutilizados por ID. PY-2026-01 está concluída (Ana aprovada, Bruno não concluinte por 50% de frequência; certificado ativo de Ana, 8h). WEB-2026-01 está em andamento (Carla 100%, Diego 50% em dois encontros; projeto entregue e rascunho; nota de Carla não publicada). ROB-2026-01 tem 2 vagas preenchidas e uma pessoa em espera; PY-2026-02 permanece planejada.</p>
 <p>As sete turmas A01–A05 são espaços de avaliação separados; não usar esses acessos para captura. A conta operacional foi preservada integralmente e não é usada neste manual.</p>
 <h3>Figura 1 — Login vazio servido por HTTPS.</h3>
-<p><img alt="Figura 1" src="capturas/fig-01-login.png" /></p>
+<p><img alt="Figura 1" src="capturas/fig-01-login.png"></p>
 <h3>Figura 3 — Meu perfil com nome e e-mail fictícios.</h3>
-<p><img alt="Figura 3" src="capturas/fig-03-meu-perfil.png" /></p>
+<p><img alt="Figura 3" src="capturas/fig-03-meu-perfil.png"></p>
 <h3>Figura 5 — Ana, menor de idade, com responsável ativo vinculado.</h3>
-<p><img alt="Figura 5" src="capturas/fig-05-menor-responsavel.png" /></p>
+<p><img alt="Figura 5" src="capturas/fig-05-menor-responsavel.png"></p>
 <h3>Figura 13 — Web em andamento: encontros realizados e futuros coerentes.</h3>
-<p><img alt="Figura 13" src="capturas/fig-13-turma-cronograma.png" /></p>
+<p><img alt="Figura 13" src="capturas/fig-13-turma-cronograma.png"></p>
 <h3>Figura 15 — Capacidade 2; confirmadas 2; disponíveis 0; uma pendente e uma em espera.</h3>
-<p><img alt="Figura 15" src="capturas/fig-15-vagas-fila.png" /></p>
+<p><img alt="Figura 15" src="capturas/fig-15-vagas-fila.png"></p>
 <h3>Figura 16 — Carla com 100% e Diego com 50% nos dois encontros realizados.</h3>
-<p><img alt="Figura 16" src="capturas/fig-16-frequencia.png" /></p>
+<p><img alt="Figura 16" src="capturas/fig-16-frequencia.png"></p>
 <h3>Figura 19 — Ana aprovada; Bruno não concluinte por frequência 50%; critérios explicitados.</h3>
-<p><img alt="Figura 19" src="capturas/fig-19-conclusao.png" /></p>
+<p><img alt="Figura 19" src="capturas/fig-19-conclusao.png"></p>
 <h3>Figura 20 — Certificado ativo de Ana: quatro encontros de 2h, total 8h.</h3>
-<p><img alt="Figura 20" src="capturas/fig-20-certificado.png" /></p>
+<p><img alt="Figura 20" src="capturas/fig-20-certificado.png"></p>
 <h3>Figura 27 — Universo: Python iniciado em abril; 1 turma, 2 participantes, 75% de frequência média e 50% de aprovação.</h3>
-<p><img alt="Figura 27" src="capturas/fig-27-painel-filtrado.png" /></p>
+<p><img alt="Figura 27" src="capturas/fig-27-painel-filtrado.png"></p>
 <h3>Figura 28 — CSV realmente exportado, renderizado em visualizador HTML local; não é tela da aplicação nem Excel.</h3>
-<p><img alt="Figura 28" src="capturas/fig-28-csv-exportado.png" /></p>
+<p><img alt="Figura 28" src="capturas/fig-28-csv-exportado.png"></p>
 <h3>Figura 29 — Página do PDF real de Ana, renderizada por PyMuPDF; 8h e código histórico preservados. Não é screenshot da interface.</h3>
-<p><img alt="Figura 29" src="capturas/fig-29-certificado-pdf.png" /></p>
+<p><img alt="Figura 29" src="capturas/fig-29-certificado-pdf.png"></p>
 <h3>Figura 36 — Jornada própria de Carla no celular.</h3>
-<p><img alt="Figura 36" src="capturas/fig-36-mobile-jornada.png" /></p></section></body></html>
+<p><img alt="Figura 36" src="capturas/fig-36-mobile-jornada.png"></p>
+<h2>Uso atual na gravação</h2>
+<p>Os cenários Python/Web foram reconferidos por leitura em 03/11. Na fila de Robótica atual há duas confirmadas, uma pendente e duas em espera, além de estados cancelados históricos; o acervo de 13/10 registra a fila daquela data. Use as <a>capturas atuais</a> e o <a>roteiro vigente</a>. Edição/data, instrutor, responsividade e ações corrigidas já estão publicadas e retestadas em 10210ad. As contas de apresentação e filtros de Python/abril mantêm o vídeo separado dos cenários de avaliação e reteste. A05-I histórica encerrou em 16/10; não solicitar nela como se estivesse aberta.</p></body></html>

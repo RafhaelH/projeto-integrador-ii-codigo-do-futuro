@@ -1,0 +1,185 @@
+{
+  "classes": {
+    "PY-2026-01": {
+      "id": "0e5fb336-9b6a-420f-8889-43e158237c6c",
+      "status": "COMPLETED",
+      "capacity": 12,
+      "counts": {
+        "NOT_COMPLETED": 1,
+        "APPROVED": 1
+      }
+    },
+    "WEB-2026-01": {
+      "id": "f34c4a46-da23-42d9-871a-949ef728aea0",
+      "status": "IN_PROGRESS",
+      "capacity": 10,
+      "counts": {
+        "CANCELLED": 1,
+        "CONFIRMED": 2
+      }
+    },
+    "ROB-2026-01": {
+      "id": "3c505321-dbbd-4ba1-b342-0e63dcecef2b",
+      "status": "OPEN",
+      "capacity": 2,
+      "counts": {
+        "CANCELLED": 1,
+        "WAITLISTED": 2,
+        "PENDING": 1,
+        "CONFIRMED": 2
+      }
+    }
+  },
+  "projects": [
+    {
+      "participant": "Carla Mendes",
+      "review": "/acompanhamento/projetos/30e87b46-344f-40f1-b841-877611e1c685/revisao/",
+      "evaluation": "/acompanhamento/inscricoes/58730ee0-ba3d-4119-9f23-256f5c70674c/avaliacao/"
+    },
+    {
+      "participant": "Diego Rocha",
+      "review": "/acompanhamento/projetos/183b5a39-ebc2-48b6-8e26-4b4877db0933/revisao/",
+      "evaluation": "/acompanhamento/inscricoes/b2c465fd-f1f4-4697-995d-6fccc53d58ce/avaliacao/"
+    }
+  ],
+  "certificate": {
+    "active": true,
+    "hours": "8.00",
+    "detail": "/acompanhamento/certificados/7b12afd3-f75b-4815-b3df-61eaca1b2935/"
+  },
+  "routes": [
+    {
+      "account_alias": "captura-admin",
+      "path": "/painel/?period_start=2026-04-01&period_end=2026-04-30&workshop=80aba861-8563-46aa-86c9-98c671d1e561&class_status=COMPLETED",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-painel-python.png",
+      "read_only": true,
+      "tls_verified": true
+    },
+    {
+      "account_alias": "captura-admin",
+      "path": "/pessoas/participantes/520d1b34-6ea0-466e-91b9-cf89acf17732/",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-ana-responsavel.png",
+      "read_only": true,
+      "tls_verified": true
+    },
+    {
+      "account_alias": "captura-admin",
+      "path": "/oficinas/80aba861-8563-46aa-86c9-98c671d1e561/",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-oficina-python.png",
+      "read_only": true,
+      "tls_verified": true
+    },
+    {
+      "account_alias": "captura-admin",
+      "path": "/inscricoes/turmas/3c505321-dbbd-4ba1-b342-0e63dcecef2b/fila/",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-fila-robotica.png",
+      "read_only": true,
+      "tls_verified": true
+    },
+    {
+      "account_alias": "captura-admin",
+      "path": "/acompanhamento/turmas/0e5fb336-9b6a-420f-8889-43e158237c6c/frequencia/",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-conclusao-python.png",
+      "read_only": true,
+      "tls_verified": true
+    },
+    {
+      "account_alias": "captura-admin",
+      "path": "/acompanhamento/certificados/7b12afd3-f75b-4815-b3df-61eaca1b2935/",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-certificado-ana.png",
+      "read_only": true,
+      "tls_verified": true
+    },
+    {
+      "account_alias": "captura-instrutor",
+      "path": "/acompanhamento/turmas/f34c4a46-da23-42d9-871a-949ef728aea0/frequencia/",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-web-acompanhamento.png",
+      "read_only": true,
+      "tls_verified": true
+    },
+    {
+      "account_alias": "captura-instrutor",
+      "path": "/acompanhamento/projetos/30e87b46-344f-40f1-b841-877611e1c685/revisao/",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-review-0.png",
+      "read_only": true,
+      "tls_verified": true
+    },
+    {
+      "account_alias": "captura-instrutor",
+      "path": "/acompanhamento/inscricoes/58730ee0-ba3d-4119-9f23-256f5c70674c/avaliacao/",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-evaluation-0.png",
+      "read_only": true,
+      "tls_verified": true
+    },
+    {
+      "account_alias": "captura-instrutor",
+      "path": "/acompanhamento/projetos/183b5a39-ebc2-48b6-8e26-4b4877db0933/revisao/",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-review-1.png",
+      "read_only": true,
+      "tls_verified": true
+    },
+    {
+      "account_alias": "captura-instrutor",
+      "path": "/acompanhamento/inscricoes/b2c465fd-f1f4-4697-995d-6fccc53d58ce/avaliacao/",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-evaluation-1.png",
+      "read_only": true,
+      "tls_verified": true
+    },
+    {
+      "account_alias": "captura-participante",
+      "path": "/acompanhamento/frequencia/",
+      "status": 200,
+      "browser": "153.0.8010.12",
+      "width": 1440,
+      "height": 900,
+      "screenshot": "video-jornada-ana.png",
+      "read_only": true,
+      "tls_verified": true
+    }
+  ],
+  "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6"
+}

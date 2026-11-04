@@ -1,0 +1,9 @@
+{
+  "width": 320,
+  "table_action": "Confirmar",
+  "action_reachable_after_internal_scroll": true,
+  "page_overflow": false,
+  "mutable_action_executed": false,
+  "screenshot": "publicado-fila-acoes-direita-320.png",
+  "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6"
+}

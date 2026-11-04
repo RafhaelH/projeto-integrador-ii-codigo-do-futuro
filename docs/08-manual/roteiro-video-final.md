@@ -1,178 +1,76 @@
-# Roteiro final de vídeo — 5:00 / candidato 9f0fd32
+# Roteiro definitivo do vídeo — versão publicada 10210ad
 
-Preparação de 03/11/2026. **Versão demonstrada: candidato funcional `9f0fd32f0d57f97c953a1e39cb62b0b601d1aeb5` em ambiente isolado com dados fictícios**, conforme validações descritas. Vídeo ainda não gravado. A aplicação pública não foi reimplantada nesta tarefa. O estudante narra com sua voz; nome/RGM completos constam somente da cópia privada.
+Linha de edição: **5:00, 300 segundos**, incluindo abertura e encerramento. O vídeo ainda deve ser gravado, cronometrado e exportado pelo estudante; esta tabela não é comprovação da duração de um arquivo gravado. Nome/RGM completos e texto de leitura identificado ficam somente na cópia restrita. Vídeo: **PENDENTE — inserir após gravação**.
 
-Para a gravação final na URL pública, antes: revisar/integrar a PR em develop, publicar o SHA aprovado em operação autorizada separada, repetir smoke HTTPS e atualizar a identificação da versão efetivamente implantada. Não usar o site antigo para afirmar que estas melhorias estão publicadas. Para mostrar o candidato antes disso, usar capturas ou ambiente isolado, sempre identificado.
+Versão efetivamente publicada: `10210ad7bc9c995c90207fa1c2dce6c546d217f6`, PR #14 integrada, CI e retestes HTTPS aprovados. [Evidências](../06-testes/publicacao-20261103/README.md). Fonte humana disponível: quatro pessoas distintas; falta um quinto relato distinto. Data dos relatos consolidada em 03/11/2026 por confirmação do estudante; captura de HUM-001 preservada com nota de correção, sem inventar outra sessão. A data não é pendência.
 
-Os tempos são metas de edição, não garantia por contagem de palavras. Exportar e medir exatamente 300 segundos, incluindo abertura, transições e encerramento.
+## Preparação das abas e contas
 
-| Início | Fim | Duração | Cena |
-|---|---|---:|---|
-| 0:00 | 0:30 | 30s | Identificação, problema e versão |
-| 0:30 | 1:10 | 40s | Edição de participante e preservação de dados |
-| 1:10 | 1:50 | 40s | Cadastro seguro de instrutor e vínculo |
-| 1:50 | 2:35 | 45s | A02 mobile, Nova turma e confirmação de cancelamento |
-| 2:35 | 3:05 | 30s | Vagas, indicadores e regra de responsável |
-| 3:05 | 4:10 | 65s | Relatos, qualidade, datas e organização dos testes |
-| 4:10 | 4:40 | 30s | Arquitetura e evidência das correções |
-| 4:40 | 5:00 | 20s | Entrega e passos antes da publicação |
+Use três perfis de navegador separados: administrador, instrutor e participante de apresentação. Consulte acessos no terminal privado antes de começar; nenhuma senha na gravação. As contas e o comando de consulta ficam no guia restrito. O vídeo prioriza o administrador e o instrutor; o participante fica preparado para mostrar jornada própria caso necessário.
 
-## 0:00–0:30 — Identificação, problema e versão
+Abas: capa privada; Ana/responsável; oficina Python/turma; Nova turma vazio; fila ROB; Web/acompanhamento/revisão/avaliação; Python/conclusão/certificado; consolidação anonimizada e capturas das melhorias; CI/arquitetura/manual/laudo/modelo. Faça login antes e feche o terminal de acessos. Use dados fictícios; não altere os cenários nem execute Salvar, Confirmar, Cancelar, Promover, Processar conclusão, Emitir ou Revogar para gravar. No certificado, apenas Baixar PDF é leitura.
 
-Conta/perfil: sem conta; capa privada e identificação do candidato.
+## A. Tabela de gravação
 
-Tela e caminho: capa do documento e commit local 9f0fd32.
+| Tempo | Tela | Navegação | Ação | Narração |
+|---|---|---|---|---|
+| 0:00–0:25 | Identificação e objetivo | Capa privada, nome/RGM e versão 10210ad | Mostrar capa; depois abrir início já autenticado. Não gravar login. | Eu sou o estudante responsável, identificado com nome e RGM na capa privada. Apresento o Código do Futuro, do Projeto Integrador em Engenharia de Software Dois. A plataforma organiza oficinas gratuitas de tecnologia para jovens, com cadastros, turmas, inscrições e acompanhamento. Demonstro a versão publicada identificada na tela, usando dados fictícios. |
+| 0:25–1:10 | Pessoas, responsáveis, oficinas e turmas | Administrador de apresentação: Pessoas → Participantes → Ana Oliveira; oficina Python; Turmas | Consultar Ana e responsável vinculado; oficina Python e turma. Mostrar Início → Nova turma e o formulário vazio, sem salvar. | No perfil de administrador, eu consulto Ana Oliveira e seu responsável ativo. Esse vínculo atende à regra de inscrição de menores. As oficinas organizam objetivo, conteúdo e carga horária; as turmas definem calendário, capacidade, local e instrutores. O cadastro de turma já existia, e agora também pode ser encontrado pelo atalho Nova turma no início. Os campos obrigatórios estão indicados. Nesta gravação, eu apenas consulto os cadastros e abro formulários; os cenários já estão preparados, preservando os dados para a apresentação. |
+| 1:10–1:50 | Inscrições e lista de espera | Administrador: ROB-2026-01 → Ver inscrições | Mostrar capacidade 2, confirmadas 2, disponíveis 0, pendentes 1 e espera 2. Não registrar, promover, confirmar ou cancelar inscrições. | Na turma de Robótica, a fila mostra duas vagas de capacidade e duas inscrições confirmadas, portanto nenhuma disponível. Uma inscrição está pendente e duas estão em espera. Esses indicadores agora aparecem separados, evitando a ambiguidade dos números juntos. Antes de confirmar uma inscrição, o sistema apresenta capacidade e ocupação, e confere novamente as vagas no servidor. A lista de espera preserva a ordem e o histórico. Aqui, eu consulto os estados existentes sem enviar novas inscrições ou alterar a fila. |
+| 1:50–2:35 | Frequência, projetos e avaliações | Instrutor de apresentação: Minhas turmas → WEB-2026-01 → Acompanhamento → Revisar projeto / Editar avaliação | Mostrar Carla 100%, Diego 50%, projeto entregue, revisão e avaliação 8,5 não publicada; não salvar nem publicar. | No perfil de instrutor, eu acesso somente as turmas vinculadas. No acompanhamento da turma Web, Carla tem cem por cento de presença e Diego tem cinquenta por cento nos encontros realizados. A chamada permite registrar presença, ausência ou falta justificada, com observação. Os projetos e as avaliações ficam junto desse acompanhamento. Eu abro a revisão do projeto de Carla e sua avaliação acadêmica, com nota e devolutiva. O resultado ainda não publicado é mostrado nessa condição. A gravação consulta esses dados, sem alterar chamada, nota ou publicação. |
+| 2:35–3:05 | Conclusão e certificado | Administrador: PY-2026-01 → Acompanhamento → Certificado de Ana | Consultar turma concluída, Ana aprovada e Bruno não concluinte; abrir certificado ativo de 8 horas e opcionalmente Baixar PDF. Não processar conclusão nem emitir/revogar. | Na turma de Python já concluída, Ana foi aprovada, enquanto Bruno não concluiu por frequência abaixo do mínimo, mesmo tendo nota e projeto. O sistema considera os critérios acadêmicos antes da conclusão. Eu consulto o certificado ativo de Ana, com oito horas, correspondente aos encontros realizados. O PDF pode ser baixado; a interface informa que o download foi solicitado e orienta conferir o navegador. Não emito nem revogo certificados durante a gravação. |
+| 3:05–4:15 | Avaliações reais e melhorias publicadas | Consolidação anonimizada; formulário do participante fictício; novo acesso de instrutor; confirmação; layout 390px | Mostrar quatro fontes e uma quinta faltante. Data 03/11 confirmada, captura original preservada. Mostrar capturas publicadas/GET dos formulários; nada mutável. | Recebi quatro relatos humanos distintos, separados dos testes automáticos. O instrutor relatou frequência, projetos e avaliações funcionando. Os relatos administrativos apontaram dificuldade para localizar a turma, problemas em telas menores, edição com campos vazios e impedimento no cadastro de instrutor. A data consolidada é três de novembro, confirmada pelo estudante; a captura original com outra data foi preservada com uma nota de correção, sem inventar nova sessão. Ainda falta a fonte de uma quinta pessoa distinta. As melhorias já estão publicadas: formato de data corrigido, valores preservados após erro e edição, provisionamento restrito de instrutor, atalho Nova turma, ajuste de menus e formulários, confirmação antes de cancelar, indicadores separados e mensagens mais claras. O esvaziamento de CPF e telefone não foi reproduzido na base; o relato permanece registrado, e os testes comprovaram o carregamento e a preservação atuais. Nenhum certificado antigo foi apagado. |
+| 4:15–4:45 | Testes e documentação | CI pós-merge; relatório HTTPS; arquitetura; manual, laudo e modelo AVA | Mostrar CI aprovada, 264/90,54%, 24 verificações publicadas, 24 combinações e documentos. Não mostrar fontes nominais nem terminal com acessos. | A aplicação utiliza Python e Django, PostgreSQL, templates HTML e CSS, com regras de negócio em serviços. A CI aprovada executou duzentos e sessenta e quatro testes, com noventa vírgula cinquenta e quatro por cento de cobertura. Depois da publicação, conferi acessos, permissões, formulários, acompanhamento e downloads por HTTPS. Também passaram vinte e quatro combinações de tela e largura. O pacote contém manual, laudo, evidências, decisões sobre sugestões e o modelo oficial do AVA, com lacunas explicitadas. |
+| 4:45–5:00 | Encerramento | Capa final e checklist | Encerrar no ponto de edição 5:00; link do vídeo ainda pendente até publicação real. | O Código do Futuro está publicado e retestado para esta demonstração. A entrega preserva as fontes reais e distingue avaliações humanas de testes técnicos. Finalizo a gravação, confiro o acesso ao vídeo e atualizo o modelo antes da submissão acadêmica. |
 
-Ação exata: Mostrar identificação do estudante e a legenda CANDIDATO 9f0fd32 — AMBIENTE ISOLADO. Não apresentar o site público antigo como atualizado.
+## Rotas reais verificadas
 
-Narração integral em primeira pessoa:
+Todas são caminhos relativos ao domínio HTTPS. Abra previamente, autenticado no perfil indicado. Não presumir que uma URL permita edição em outro perfil.
 
-> Eu sou o estudante responsável pelo Código do Futuro, um sistema para organizar oficinas de tecnologia, pessoas, turmas, inscrições e acompanhamento. Apresento a versão candidata de três de novembro, identificada pelo commit na tela. Esta demonstração utiliza dados fictícios em ambiente de testes. As melhorias foram verificadas, mas ainda dependem de integração e publicação para chegar à aplicação pública.
+- Administrador — Ana/responsável: `/pessoas/participantes/520d1b34-6ea0-466e-91b9-cf89acf17732/`
+- Administrador — oficina Python: `/oficinas/80aba861-8563-46aa-86c9-98c671d1e561/`
+- Administrador — Nova turma: `/oficinas/turmas/nova/`
+- Administrador — fila Robótica: `/inscricoes/turmas/3c505321-dbbd-4ba1-b342-0e63dcecef2b/fila/`
+- Instrutor — Web/acompanhamento: `/acompanhamento/turmas/f34c4a46-da23-42d9-871a-949ef728aea0/frequencia/`
+- Instrutor — revisão Carla: `/acompanhamento/projetos/30e87b46-344f-40f1-b841-877611e1c685/revisao/`
+- Instrutor — avaliação Carla: `/acompanhamento/inscricoes/58730ee0-ba3d-4119-9f23-256f5c70674c/avaliacao/`
+- Administrador — conclusão Python: `/acompanhamento/turmas/0e5fb336-9b6a-420f-8889-43e158237c6c/frequencia/`
+- Administrador/participante autorizado — certificado Ana: `/acompanhamento/certificados/7b12afd3-f75b-4815-b3df-61eaca1b2935/`
+- Participante — jornada própria: `/acompanhamento/frequencia/`
+- Administrador — novo acesso instrutor: `/pessoas/instrutores/novo-acesso/`
+- Administrador — edição fictícia retestada: `/pessoas/participantes/0546f839-d73f-4c38-82a9-d0338b57db98/editar/`
+- Administrador — confirmação sem envio: `/oficinas/turmas/a31cd3c3-7fc4-4553-b81e-4391b42fe675/situacao/cancelled/`
 
-Resultado a mostrar: Nome/RGM na capa privada, versão 9f0fd32 e ambiente claramente identificados.
+Na fila de Robótica conferida: capacidade 2, confirmadas 2, disponíveis 0, pendentes 1, espera 2. Os estados cancelados históricos também aparecem. Na Web: Carla 100%, Diego 50%; nota de Carla 8,5 ainda não publicada. Em Python: Ana aprovada/100%, Bruno não concluinte/50%; certificado de Ana ativo, 8 horas. Confira as telas antes de gravar; se houver mudança posterior, narre o valor atual e atualize este texto, sem editar dados para fazê-los coincidir.
 
-Alternativa: Usar capa e capturas do candidato identificadas; informar que são imagens da validação, sem afirmar navegação ao vivo.
+Para mobile, identifique a emulação em 390px; não diga que foi teste em celular físico. Pode usar as capturas publicadas em vez de alternar ao vivo; diga que são capturas da versão publicada, sem fingir navegação ao vivo. Sobre CPF/telefone, não afirmar causa que não foi reproduzida. Não apresentar testes técnicos como opiniões humanas nem contar o relato anterior de HUM-001 como outra pessoa. Não usar a lista global de certificados como se tivesse filtro; abra o certificado já identificado.
 
-## 0:30–1:10 — Edição de participante e preservação de dados
+## B. Texto corrido para leitura
 
-Conta/perfil: A02 administrador funcional no fixture isolado.
+Eu sou o estudante responsável, identificado com nome e RGM na capa privada. Apresento o Código do Futuro, do Projeto Integrador em Engenharia de Software Dois. A plataforma organiza oficinas gratuitas de tecnologia para jovens, com cadastros, turmas, inscrições e acompanhamento. Demonstro a versão publicada identificada na tela, usando dados fictícios.
 
-Tela e caminho: Pessoas → Participantes → participante fictício → Editar; /pessoas/participantes/ e /pessoas/participantes/<uuid>/editar/.
+No perfil de administrador, eu consulto Ana Oliveira e seu responsável ativo. Esse vínculo atende à regra de inscrição de menores. As oficinas organizam objetivo, conteúdo e carga horária; as turmas definem calendário, capacidade, local e instrutores. O cadastro de turma já existia, e agora também pode ser encontrado pelo atalho Nova turma no início. Os campos obrigatórios estão indicados. Nesta gravação, eu apenas consulto os cadastros e abro formulários; os cenários já estão preparados, preservando os dados para a apresentação.
 
-Ação exata: Mostrar WEB-01, WEB-02 e WEB-03 ou repetir somente em novo dado fictício isolado: três campos carregados, CPF inválido preservado e edição de nome. Explicar consentimento opcional.
+Na turma de Robótica, a fila mostra duas vagas de capacidade e duas inscrições confirmadas, portanto nenhuma disponível. Uma inscrição está pendente e duas estão em espera. Esses indicadores agora aparecem separados, evitando a ambiguidade dos números juntos. Antes de confirmar uma inscrição, o sistema apresenta capacidade e ocupação, e confere novamente as vagas no servidor. A lista de espera preserva a ordem e o histórico. Aqui, eu consulto os estados existentes sem enviar novas inscrições ou alterar a fila.
 
-Narração integral em primeira pessoa:
+No perfil de instrutor, eu acesso somente as turmas vinculadas. No acompanhamento da turma Web, Carla tem cem por cento de presença e Diego tem cinquenta por cento nos encontros realizados. A chamada permite registrar presença, ausência ou falta justificada, com observação. Os projetos e as avaliações ficam junto desse acompanhamento. Eu abro a revisão do projeto de Carla e sua avaliação acadêmica, com nota e devolutiva. O resultado ainda não publicado é mostrado nessa condição. A gravação consulta esses dados, sem alterar chamada, nota ou publicação.
 
-> Na edição de participante, eu mostro nascimento, CPF e telefone já preenchidos. A falha da data foi reproduzida e corrigida com o formato aceito pelo navegador. No teste isolado, CPF e telefone não apareceram vazios; mantive o relato e acrescentei verificações de carregamento e preservação. Uma submissão inválida informa o problema sem apagar os valores digitados. Ao editar o nome, os demais dados permanecem. O registro de consentimento é explicado e não é preenchido automaticamente.
+Na turma de Python já concluída, Ana foi aprovada, enquanto Bruno não concluiu por frequência abaixo do mínimo, mesmo tendo nota e projeto. O sistema considera os critérios acadêmicos antes da conclusão. Eu consulto o certificado ativo de Ana, com oito horas, correspondente aos encontros realizados. O PDF pode ser baixado; a interface informa que o download foi solicitado e orienta conferir o navegador. Não emito nem revogo certificados durante a gravação.
 
-Resultado a mostrar: Controles preenchidos, erro útil no CPF, valores preservados; nenhuma coleta automática de consentimento.
+Recebi quatro relatos humanos distintos, separados dos testes automáticos. O instrutor relatou frequência, projetos e avaliações funcionando. Os relatos administrativos apontaram dificuldade para localizar a turma, problemas em telas menores, edição com campos vazios e impedimento no cadastro de instrutor. A data consolidada é três de novembro, confirmada pelo estudante; a captura original com outra data foi preservada com uma nota de correção, sem inventar nova sessão. Ainda falta a fonte de uma quinta pessoa distinta. As melhorias já estão publicadas: formato de data corrigido, valores preservados após erro e edição, provisionamento restrito de instrutor, atalho Nova turma, ajuste de menus e formulários, confirmação antes de cancelar, indicadores separados e mensagens mais claras. O esvaziamento de CPF e telefone não foi reproduzido na base; o relato permanece registrado, e os testes comprovaram o carregamento e a preservação atuais. Nenhum certificado antigo foi apagado.
 
-Alternativa: Mostrar as capturas WEB-01–03 e dizer que os resultados são do teste isolado.
+A aplicação utiliza Python e Django, PostgreSQL, templates HTML e CSS, com regras de negócio em serviços. A CI aprovada executou duzentos e sessenta e quatro testes, com noventa vírgula cinquenta e quatro por cento de cobertura. Depois da publicação, conferi acessos, permissões, formulários, acompanhamento e downloads por HTTPS. Também passaram vinte e quatro combinações de tela e largura. O pacote contém manual, laudo, evidências, decisões sobre sugestões e o modelo oficial do AVA, com lacunas explicitadas.
 
-## 1:10–1:50 — Cadastro seguro de instrutor e vínculo
+O Código do Futuro está publicado e retestado para esta demonstração. A entrega preserva as fontes reais e distingue avaliações humanas de testes técnicos. Finalizo a gravação, confiro o acesso ao vídeo e atualizo o modelo antes da submissão acadêmica.
 
-Conta/perfil: A02 ADMIN sem staff/superusuário, ambiente isolado.
+## Checklist curto de gravação e entrega
 
-Tela e caminho: Pessoas → Instrutores → Novo instrutor → Criar acesso e cadastrar instrutor; /pessoas/instrutores/novo/ e /pessoas/instrutores/novo-acesso/; turma planejada → Instrutores → Vincular.
+- [ ] Gravar com voz do estudante; conferir microfone, áudio inteligível, nome/RGM e versão na capa.
+- [ ] Editar/exportar exatamente 300 segundos, incluindo abertura e encerramento; conferir a duração real do arquivo.
+- [ ] Publicar no canal escolhido pelo estudante.
+- [ ] Abrir o link em janela privada ou outra sessão sem login do proprietário e conferir reprodução e áudio.
+- [ ] Inserir o link no DOCX oficial onde está “PENDENTE — inserir após gravação”.
+- [ ] Regenerar o PDF correspondente e o ZIP; conferir links, legibilidade e a fonte humana restante, se recebida.
+- [ ] Submeter no AVA até 17/11/2026 e guardar comprovante.
 
-Ação exata: Mostrar o seletor vazio explicado, o novo fluxo com senhas em branco e o instrutor fictício já criado/vinculado. Não exibir nem digitar senhas na gravação.
-
-Narração integral em primeira pessoa:
-
-> O cadastro de instrutor dependia de um usuário elegível. A consulta estava correta, mas não havia um caminho acessível para o administrador funcional criar esse acesso. Eu acrescentei orientação e um fluxo específico, que cria somente o perfil de instrutor e seu cadastro. A senha é validada e armazenada protegida. O usuário criado não recebe acesso administrativo, grupos ou privilégios adicionais. Eu mostro o instrutor fictício vinculado à turma planejada; esse fluxo também foi testado no navegador.
-
-Resultado a mostrar: Fluxo acessível sem Django admin; formulário sem credenciais visíveis e vínculo persistido.
-
-Alternativa: Mostrar formulário vazio e capturas WEB-04/06, identificadas como dados isolados.
-
-## 1:50–2:35 — A02 mobile, Nova turma e confirmação de cancelamento
-
-Conta/perfil: A02 administrador funcional fictício; A01 como conferência complementar.
-
-Tela e caminho: Início → Nova turma (/oficinas/turmas/nova/); Turmas → turma fictícia → Cancelar turma → confirmação (/oficinas/turmas/<uuid>/situacao/cancelled/).
-
-Ação exata: Demonstrar viewport 390px identificado como emulação; mostrar o atalho e a turma fictícia cadastrada. Abrir confirmação sem marcar/cancelar registros publicados.
-
-Narração integral em primeira pessoa:
-
-> No perfil A zero dois, eu mostro menus, ações e formulários em largura móvel. O cadastro de turma já existia; a dificuldade relatada foi de localização. Agora há um atalho Nova turma no início, e o teste confirmou cadastro e vínculo do instrutor por um administrador sem privilégios extras. Menus e ações se ajustam à largura, enquanto tabelas podem rolar dentro do seu espaço. Cancelar turma abre uma confirmação explícita. A alteração exige envio autorizado e proteção contra requisições indevidas. Estas são verificações emuladas, não testes em celulares físicos.
-
-Resultado a mostrar: A02 encontra Nova turma; ações legíveis e acessíveis; GET de confirmação não cancela nada.
-
-Alternativa: Usar capturas candidate-nova-turma-320, WEB-05, WEB-07/08. Não cancelar uma turma publicada para a gravação.
-
-## 2:35–3:05 — Vagas, indicadores e regra de responsável
-
-Conta/perfil: A02 administrador; dados fictícios isolados.
-
-Tela e caminho: Turma → Ver inscrições → Confirmar inscrição; /inscricoes/turmas/<uuid>/fila/ e /inscricoes/<uuid>/confirmar/.
-
-Ação exata: Mostrar pendentes e espera separados, capacidade/ocupação/disponibilidade antes de confirmar. Consultar aviso de responsável em participante menor.
-
-Narração integral em primeira pessoa:
-
-> Na fila, eu separo inscrições pendentes da lista de espera. Antes de confirmar, apresento capacidade, ocupação e vagas disponíveis. O banco verifica as vagas novamente, protegendo a última vaga contra outra confirmação. Para menores, mantenho a regra existente: o cadastro preparatório é permitido, mas a inscrição sem responsável ativo é bloqueada. Acrescentei um aviso para explicar essa etapa, sem criar uma restrição nova arbitrária.
-
-Resultado a mostrar: Indicadores distintos; resumo de vagas; aviso coerente com o bloqueio existente na inscrição.
-
-Alternativa: Mostrar candidate-fila-390 e WEB-09; citar o teste de página desatualizada, sem afirmar concorrência manual não executada.
-
-## 3:05–4:10 — Relatos, qualidade, datas e organização dos testes
-
-Conta/perfil: sem conta; laudo e fontes anonimizadas.
-
-Tela e caminho: docs/09-entrega/laudo-qualidade.md → docs/07-avaliacoes/fechamento-20261103/README.md → resultados e evidências.
-
-Ação exata: Mostrar três fontes humanas sem nomes/dados pessoais; data histórica/divergência do primeiro avaliador; 264/90,54%; comparação visual e plano de certificados sem exclusão.
-
-Narração integral em primeira pessoa:
-
-> Eu separei três relatos humanos das reproduções técnicas. O segundo avaliador informou navegação e dificuldade para localizar a turma. O terceiro avaliador relatou fluxos funcionando, mas identificou campos vazios ao abrir a edição; conseguir editar após redigitar não elimina essa falha inicial. Na evidência do primeiro avaliador aparece treze de outubro. A informação de três de novembro fica separada, com a data a confirmar, sem inventar outra sessão. A suíte completa passou em duzentos e sessenta e quatro testes, com noventa vírgula cinquenta e quatro por cento de cobertura em PostgreSQL isolado. Também passaram cinquenta e duas combinações de tela e largura e doze fluxos no navegador. Dois certificados de simulação foram identificados pelos manifests e IDs; nenhum foi apagado.
-
-Resultado a mostrar: Fontes e datas preservadas, reprodução parcial explicitada, contagens corretas e plano de dados sem limpeza.
-
-Alternativa: Usar PDFs locais e resultados.json. Não atribuir testes técnicos aos avaliadores nem mostrar o relato nominal em gravação pública.
-
-## 4:10–4:40 — Arquitetura e evidência das correções
-
-Conta/perfil: sem conta; arquivos locais sanitizados.
-
-Tela e caminho: Arquitetura MTV/MVC → modelo de dados → PR para develop e evidências de validação.
-
-Ação exata: Mostrar camadas e testes. Destacar mensagens/obrigatórios e feedback “Download solicitado”; nenhum texto “concluído”.
-
-Narração integral em primeira pessoa:
-
-> A aplicação utiliza Python e Django, PostgreSQL, templates HTML e CSS. Views coordenam a entrada, serviços concentram regras e transações, e models preservam a integridade. As correções mantêm essa estrutura e não exigem migrations novas. Padronizei campos obrigatórios, mensagens em português e a orientação de download. O sistema informa que o download foi solicitado; não afirma que terminou. Código, testes e documentação seguem para revisão em develop.
-
-Resultado a mostrar: Arquitetura preservada, migrations ausentes, orientação honesta e branch de revisão identificada.
-
-Alternativa: Mostrar diagrama e logs identificados. Só anunciar CI remota concluída se o resultado real estiver disponível.
-
-## 4:40–5:00 — Entrega e passos antes da publicação
-
-Conta/perfil: sem conta; índice e checklist privados.
-
-Tela e caminho: Modelo oficial e checklist-final.md.
-
-Ação exata: Mostrar materiais e pendências. Encerrar no tempo de edição 5:00.
-
-Narração integral em primeira pessoa:
-
-> Eu entrego o laudo, as fontes preservadas, as evidências e o modelo atualizado. Avaliações humanas e testes técnicos continuam separados, com campos pendentes sinalizados. Antes de demonstrar essas melhorias na aplicação pública, ainda é necessário integrar, publicar e retestar por HTTPS. Confiro a versão, os links e a duração final antes da entrega.
-
-Resultado a mostrar: Versão candidata e pendências claras; link do vídeo ainda pendente até gravação/publicação reais.
-
-Alternativa: Mostrar o checklist local; não anunciar merge, deploy ou vídeo publicado que ainda não ocorreram.
-
-## Preparação da gravação
-
-- [ ] Escolher explicitamente candidato isolado ou versão pública já integrada/publicada e retestada; exibir o SHA correto.
-- [ ] Usar apenas dados fictícios; abrir previamente telas ou capturas na ordem das oito cenas.
-- [ ] Preparar A02 administrador funcional; A01 somente conferência. Não usar administrador operacional nem conceder staff.
-- [ ] Autenticar antes da gravação e fechar terminal/arquivo de senhas; não gravar credenciais, cookies, tokens, dados reais ou fontes nominais de avaliadores.
-- [ ] Deixar capa privada, laudo, formulários/capturas, fila/vagas, resultados, arquitetura e checklist abertos.
-- [ ] Identificar emulação mobile e capturas isoladas. Não afirmar teste em aparelho físico nem reteste de produção.
-- [ ] Preservar a data histórica 13/10 do primeiro avaliador e a divergência 03/11; não inventar segunda sessão ou preencher campos ausentes.
-- [ ] Não cancelar turmas, emitir/revogar certificados ou excluir registros publicados para gravar.
-- [ ] Testar áudio e legibilidade; ler a narração fora da área capturada; ensaiar os tempos e ajustar pausas/cortes sem apagar fatos.
-- [ ] Exportar exatamente 300s incluindo abertura/créditos e conferir duração/voz/textos no arquivo final.
-- [ ] Publicar e testar acesso do tutor sem sessão do proprietário; somente então preencher “PENDENTE — inserir após gravação e publicação” no DOCX.
-
-## Texto corrido para leitura
-
-Eu sou o estudante responsável pelo Código do Futuro, um sistema para organizar oficinas de tecnologia, pessoas, turmas, inscrições e acompanhamento. Apresento a versão candidata de três de novembro, identificada pelo commit na tela. Esta demonstração utiliza dados fictícios em ambiente de testes. As melhorias foram verificadas, mas ainda dependem de integração e publicação para chegar à aplicação pública.
-
-Na edição de participante, eu mostro nascimento, CPF e telefone já preenchidos. A falha da data foi reproduzida e corrigida com o formato aceito pelo navegador. No teste isolado, CPF e telefone não apareceram vazios; mantive o relato e acrescentei verificações de carregamento e preservação. Uma submissão inválida informa o problema sem apagar os valores digitados. Ao editar o nome, os demais dados permanecem. O registro de consentimento é explicado e não é preenchido automaticamente.
-
-O cadastro de instrutor dependia de um usuário elegível. A consulta estava correta, mas não havia um caminho acessível para o administrador funcional criar esse acesso. Eu acrescentei orientação e um fluxo específico, que cria somente o perfil de instrutor e seu cadastro. A senha é validada e armazenada protegida. O usuário criado não recebe acesso administrativo, grupos ou privilégios adicionais. Eu mostro o instrutor fictício vinculado à turma planejada; esse fluxo também foi testado no navegador.
-
-No perfil A zero dois, eu mostro menus, ações e formulários em largura móvel. O cadastro de turma já existia; a dificuldade relatada foi de localização. Agora há um atalho Nova turma no início, e o teste confirmou cadastro e vínculo do instrutor por um administrador sem privilégios extras. Menus e ações se ajustam à largura, enquanto tabelas podem rolar dentro do seu espaço. Cancelar turma abre uma confirmação explícita. A alteração exige envio autorizado e proteção contra requisições indevidas. Estas são verificações emuladas, não testes em celulares físicos.
-
-Na fila, eu separo inscrições pendentes da lista de espera. Antes de confirmar, apresento capacidade, ocupação e vagas disponíveis. O banco verifica as vagas novamente, protegendo a última vaga contra outra confirmação. Para menores, mantenho a regra existente: o cadastro preparatório é permitido, mas a inscrição sem responsável ativo é bloqueada. Acrescentei um aviso para explicar essa etapa, sem criar uma restrição nova arbitrária.
-
-Eu separei três relatos humanos das reproduções técnicas. O segundo avaliador informou navegação e dificuldade para localizar a turma. O terceiro avaliador relatou fluxos funcionando, mas identificou campos vazios ao abrir a edição; conseguir editar após redigitar não elimina essa falha inicial. Na evidência do primeiro avaliador aparece treze de outubro. A informação de três de novembro fica separada, com a data a confirmar, sem inventar outra sessão. A suíte completa passou em duzentos e sessenta e quatro testes, com noventa vírgula cinquenta e quatro por cento de cobertura em PostgreSQL isolado. Também passaram cinquenta e duas combinações de tela e largura e doze fluxos no navegador. Dois certificados de simulação foram identificados pelos manifests e IDs; nenhum foi apagado.
-
-A aplicação utiliza Python e Django, PostgreSQL, templates HTML e CSS. Views coordenam a entrada, serviços concentram regras e transações, e models preservam a integridade. As correções mantêm essa estrutura e não exigem migrations novas. Padronizei campos obrigatórios, mensagens em português e a orientação de download. O sistema informa que o download foi solicitado; não afirma que terminou. Código, testes e documentação seguem para revisão em develop.
-
-Eu entrego o laudo, as fontes preservadas, as evidências e o modelo atualizado. Avaliações humanas e testes técnicos continuam separados, com campos pendentes sinalizados. Antes de demonstrar essas melhorias na aplicação pública, ainda é necessário integrar, publicar e retestar por HTTPS. Confiro a versão, os links e a duração final antes da entrega.
+O agente não publica vídeo nem submete no AVA em nome do estudante. A ausência do planejamento/protótipo original I está registrada no laudo; não inventar histórico na narração.

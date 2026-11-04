@@ -1,0 +1,383 @@
+[
+  {
+    "id": "PUB-01",
+    "objective": "Login A02 administrador funcional por HTTPS",
+    "status": "APROVADO",
+    "at": "2026-11-03T20:59:30.576812-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Sessão nativa autenticada; senha/cookies não capturados.",
+    "browser": null,
+    "viewport": null,
+    "path": null,
+    "screenshot": null,
+    "identity_mask": null
+  },
+  {
+    "id": "PUB-02",
+    "objective": "Atalho Nova turma acessível para A02 em 390px",
+    "status": "APROVADO",
+    "at": "2026-11-03T20:59:31.415896-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/oficinas/turmas/nova/",
+    "screenshot": "PUB-02.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-03",
+    "objective": "Nascimento, CPF e telefone salvos aparecem no formulário publicado",
+    "status": "APROVADO",
+    "at": "2026-11-03T20:59:33.387694-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Somente novo participante fictício; consentimento vazio, sem coleta automática.",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/pessoas/participantes/0546f839-d73f-4c38-82a9-d0338b57db98/editar/",
+    "screenshot": "PUB-03.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-04",
+    "objective": "Submissão inválida mantém valores e explica erro",
+    "status": "APROVADO",
+    "at": "2026-11-03T20:59:34.211197-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/pessoas/participantes/0546f839-d73f-4c38-82a9-d0338b57db98/editar/",
+    "screenshot": "PUB-04.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-05",
+    "objective": "Editar nome preserva nascimento, CPF, telefone e consentimento",
+    "status": "APROVADO",
+    "at": "2026-11-03T20:59:36.150576-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/pessoas/participantes/0546f839-d73f-4c38-82a9-d0338b57db98/editar/",
+    "screenshot": "PUB-05.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-06",
+    "objective": "Provisionamento de instrutor disponível ao administrador funcional",
+    "status": "APROVADO",
+    "at": "2026-11-03T20:59:38.455842-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Novo acesso/cadastro criado; formulário da captura vazio, sem senha; atributos de segurança conferidos no banco.",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/pessoas/instrutores/novo-acesso/",
+    "screenshot": "PUB-06.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-07",
+    "objective": "Cadastro de turma e vínculo do instrutor por A02",
+    "status": "APROVADO",
+    "at": "2026-11-03T20:59:41.466738-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/oficinas/turmas/b6177697-b1d1-430e-94bf-7cc9379a88d2/",
+    "screenshot": "PUB-07.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-08",
+    "objective": "GET somente mostra confirmação explícita de cancelamento",
+    "status": "APROVADO",
+    "at": "2026-11-03T20:59:41.695716-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/oficinas/turmas/b6177697-b1d1-430e-94bf-7cc9379a88d2/situacao/cancelled/",
+    "screenshot": "PUB-08.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-09",
+    "objective": "POST com confirmação cancela somente a turma nova",
+    "status": "APROVADO",
+    "at": "2026-11-03T20:59:42.064460-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/oficinas/turmas/b6177697-b1d1-430e-94bf-7cc9379a88d2/",
+    "screenshot": "PUB-09.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-10",
+    "objective": "Obrigatórios e mensagem numérica em PT-BR",
+    "status": "APROVADO",
+    "at": "2026-11-03T20:59:43.529676-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Submissão inválida não criou oficina.",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/oficinas/nova/",
+    "screenshot": "PUB-10.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-11",
+    "objective": "Instrutor registra frequência somente na turma nova",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:00:26.296629-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/acompanhamento/turmas/a31cd3c3-7fc4-4553-b81e-4391b42fe675/frequencia/",
+    "screenshot": "PUB-11.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-12",
+    "objective": "Revisão de projeto fictício persiste devolutiva",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:00:29.271668-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/acompanhamento/projetos/bc820ad1-8ba3-4a48-b9f5-24063b8b4b27/revisao/",
+    "screenshot": "PUB-12.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-13",
+    "objective": "Avaliação acadêmica fictícia persiste nota e feedback",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:00:32.896337-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/acompanhamento/inscricoes/97240fb3-1191-44de-b9b6-3f0feac2b130/avaliacao/",
+    "screenshot": "PUB-13.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-14",
+    "objective": "Vagas e ocupação visíveis antes de confirmar",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:01:37.842191-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Somente GET; nenhuma confirmação de inscrição nesse reteste.",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/inscricoes/3b247fca-db18-4f22-b38c-9bc74a73e7fc/confirmar/",
+    "screenshot": "PUB-14.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-15",
+    "objective": "Pendentes e espera em indicadores separados",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:01:38.678620-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/inscricoes/turmas/a31cd3c3-7fc4-4553-b81e-4391b42fe675/fila/",
+    "screenshot": "PUB-15.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-16",
+    "objective": "Três CSV recebidos e retorno visual honesto",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:01:39.926746-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Arquivos recebidos no navegador; interface não afirma download concluído.",
+    "browser": "153.0.8010.12",
+    "viewport": {
+      "width": 390,
+      "height": 900
+    },
+    "path": "/painel/",
+    "screenshot": "PUB-16.png",
+    "identity_mask": "user-nav para ocultar identificação da conta"
+  },
+  {
+    "id": "PUB-17",
+    "objective": "Certificado existente consultado e PDF recebido",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:01:40.616019-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Somente leitura: nenhuma emissão, revogação ou exclusão.",
+    "browser": null,
+    "viewport": null,
+    "path": null,
+    "screenshot": null,
+    "identity_mask": null
+  },
+  {
+    "id": "PERFIL-A01",
+    "objective": "Login e autorização do perfil A01",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:01:42.694743-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Sessão própria por HTTPS; leitura e negativas conforme papel, sem alteração dos cenários antigos.",
+    "browser": null,
+    "viewport": null,
+    "path": null,
+    "screenshot": null,
+    "identity_mask": null
+  },
+  {
+    "id": "PERFIL-A02",
+    "objective": "Login e autorização do perfil A02",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:01:44.703094-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Sessão própria por HTTPS; leitura e negativas conforme papel, sem alteração dos cenários antigos.",
+    "browser": null,
+    "viewport": null,
+    "path": null,
+    "screenshot": null,
+    "identity_mask": null
+  },
+  {
+    "id": "PERFIL-A03",
+    "objective": "Login e autorização do perfil A03",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:01:48.481757-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Sessão própria por HTTPS; leitura e negativas conforme papel, sem alteração dos cenários antigos.",
+    "browser": null,
+    "viewport": null,
+    "path": null,
+    "screenshot": null,
+    "identity_mask": null
+  },
+  {
+    "id": "PERFIL-A04",
+    "objective": "Login e autorização do perfil A04",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:01:52.424430-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Sessão própria por HTTPS; leitura e negativas conforme papel, sem alteração dos cenários antigos.",
+    "browser": null,
+    "viewport": null,
+    "path": null,
+    "screenshot": null,
+    "identity_mask": null
+  },
+  {
+    "id": "PERFIL-A05",
+    "objective": "Login e autorização do perfil A05",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:01:56.248480-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Sessão própria por HTTPS; leitura e negativas conforme papel, sem alteração dos cenários antigos.",
+    "browser": null,
+    "viewport": null,
+    "path": null,
+    "screenshot": null,
+    "identity_mask": null
+  },
+  {
+    "id": "PUB-18",
+    "objective": "Cinco sessões independentes",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:01:56.471019-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "Identificadores distintos conferidos em memória; não persistidos em relatório.",
+    "browser": null,
+    "viewport": null,
+    "path": null,
+    "screenshot": null,
+    "identity_mask": null
+  },
+  {
+    "id": "PUB-19",
+    "objective": "Responsividade publicada em desktop e larguras móveis",
+    "status": "APROVADO",
+    "at": "2026-11-03T21:02:22.475298-03:00",
+    "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+    "method": "Chromium HTTPS, TLS validado, sessão independente e CSRF nativo; execução técnica, não relato humano",
+    "detail": "24 combinações de tela/largura sem overflow externo. Emulação Chromium; não aparelho físico.",
+    "browser": null,
+    "viewport": null,
+    "path": null,
+    "screenshot": null,
+    "identity_mask": null
+  }
+]

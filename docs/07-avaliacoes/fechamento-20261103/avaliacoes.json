@@ -84,9 +84,11 @@
       "untested": "não informado",
       "device": "não informado",
       "browser": "não informado",
-      "eligibility": "não informado"
+      "eligibility": "não informado",
+      "restricted_source_sha256": "03d6c597448d2c74ab0b9e44a9c9ecb1c19305135c0bb30bd9d37c0ec3cf19b2"
     }
   ],
   "date_confirmation_source": "Confirmação expressa do estudante responsável em 03/11/2026, America/Sao_Paulo",
-  "human_report_missing": "Quinto avaliador distinto: nenhum texto ou identidade adicional comprovados; o relato anterior localizado corresponde a HUM-001 e não é contado duas vezes."
+  "human_report_missing": "Quinto avaliador distinto: nenhum texto ou identidade adicional comprovados; o relato anterior localizado corresponde a HUM-001 e não é contado duas vezes.",
+  "date_confirmation_source_sha256": "01d9cd50f63a37b325b121ceb65ba492462e7c40aa39bee6d6cef938be78d7a1"
 }

@@ -1,32 +1,13 @@
-# Entrega atual — fechamento de 03/11/2026
+# Índice vigente para o tutor — 03/11/2026
 
-Prazo: **17/11/2026**. [Relatório final](relatorio-final.md), [laudo](laudo-qualidade.md), [matriz](matriz-conformidade.md), [checklist](checklist-final.md), [quatro relatos e decisões](../07-avaliacoes/fechamento-20261103/README.md), [testes](../06-testes/fechamento-20261103/README.md) e [roteiro 5:00](../08-manual/roteiro-video-final.md). Fontes integrais/identidades/modelo AVA ficam fora do Git público. Candidato testado, ainda não implantado; não anunciar correções na URL pública antes de publicação/reteste.
+Prazo: **17/11/2026**. Site publicado e validado: https://projeto-integrador.tesseratointegra.com.br. PR #14 integrada em develop, SHA 10210ad7bc9c995c90207fa1c2dce6c546d217f6; main preservada. CI 264/90,54%, retestes HTTPS e layout aprovados.
 
-## Índice e histórico da preparação anterior
+- [Relatório final](relatorio-final.md), [laudo](laudo-qualidade.md), [matriz](matriz-conformidade.md) e [checklist](checklist-final.md).
+- [Quatro fontes humanas e decisões](../07-avaliacoes/fechamento-20261103/README.md), [PDF anonimizado parcial](../07-avaliacoes/modelo-consolidado.pdf). Falta fonte de um quinto avaliador distinto; relato anterior não duplicado. Data 03/11 confirmada com nota e captura histórica preservada.
+- [Publicação e retestes HTTPS](../06-testes/publicacao-20261103/README.md), [capturas atuais](../06-testes/publicacao-20261103/capturas/), [testes isolados anteriores](../06-testes/fechamento-20261103/README.md).
+- [Manual atualizado](../08-manual/README.md), [PDF](../08-manual/manual-imprimivel.pdf), [roteiro integral 5:00](../08-manual/roteiro-video-final.md).
+- [Arquitetura](../04-arquitetura/arquitetura.md), [modelagem/diagramas](../03-modelagem/diagramas.md), [planejamento II](../05-planejamento/roadmap.md) e [limitação do original I](referencia-academica.md#limitações-documentais-reais).
 
-# Índice atual de entrega para o tutor
+Modelo oficial AVA, nome/RGM, fontes nominais e PDF identificado das quatro avaliações estão na cópia restrita fora do Git, no pacote entregue ao estudante. A quinta tabela está pendente; não usar simulações como pessoas. O vídeo continua **PENDENTE — inserir após gravação**. Gravação, publicação/teste do link, atualização de PDF/ZIP e submissão no AVA cabem ao estudante; não foram realizadas pelo agente.
 
-Preparação de 19/10/2026, base develop 58db4fc (PR #13 integrada), aplicação a351c5a reconfirmada por 122 hashes. **Entrega acadêmica parcial:** um relato humano recebido e modelo oficial preenchido parcialmente; quatro opiniões adicionais, lacunas do primeiro relato, vídeo e implantação/reteste de DEF-004/005 continuam pendentes. Simulações não substituem pessoas.
-
-1. [Relatório final](relatorio-final.md), [matriz de conformidade](matriz-conformidade.md), [laudo técnico de qualidade](laudo-qualidade.md) e [checklist](checklist-final.md).
-2. [Simulações por perfil](../07-avaliacoes/relatorio-simulacoes.md), [39 tarefas CSV](../07-avaliacoes/simulacoes-20261019/matriz-tarefas.csv), [JSON](../07-avaliacoes/simulacoes-20261019/tarefas.json) e [manifesto sanitizado](../07-avaliacoes/simulacoes-20261019/evidencias.json).
-3. [Avaliações humanas disponíveis / pendências](../07-avaliacoes/consolidacao.md), [cinco fichas em branco](../07-avaliacoes/resultados/README.md) e [decisões técnicas separadas](../07-avaliacoes/registro-de-melhorias.md).
-4. [Manual](../08-manual/README.md), [PDF do manual](../08-manual/manual-imprimivel.pdf) e [roteiro definitivo de vídeo 5:00](../08-manual/roteiro-video-final.md), com narração completa e alternativas.
-5. [Arquitetura MTV/MVC](../04-arquitetura/arquitetura.md), [UML/DER](../03-modelagem/diagramas.md), [normalização](../03-modelagem/modelo-de-dados.md), [banco físico](../03-modelagem/banco-fisico.md) e [dicionário](../03-modelagem/dicionario-de-dados.md).
-6. [Histórico de testes/correções preservado](../06-testes/consolidacao-verificacao.md) e [enunciado com páginas/limitações](referencia-academica.md).
-
-Aplicação: https://projeto-integrador.tesseratointegra.com.br. Código já acessível: https://github.com/RafhaelH/projeto-integrador-ii-codigo-do-futuro/tree/develop. As novas alterações desta tarefa estão somente em commits locais, sem push/merge/tag/release/deploy; não presumir que os arquivos novos já estejam disponíveis no GitHub.
-
-A cópia de entrega DOCX/PDF, identificação/RGM, anexos completos e arquivos originais de avaliação ficam fora do Git público. O inventário privado identifica arquivos disponíveis e limitações do modelo oficial. Vídeo: **PENDENTE — inserir após gravação e publicação**. Nomes/relatos de pessoas só entram após recebimento e com lacunas explicitadas.
-
-O arquivo `verificacoes-documentais.json` preserva o retrato histórico de 13/10/2026, recuperável na base 58db4fc. Os PDFs em branco foram atualizados em 19/10/2026; páginas e hashes atuais constam no [manifesto das simulações](../07-avaliacoes/simulacoes-20261019/evidencias.json), sem substituir os resultados históricos.
-
-
-## Atualização após recebimento do modelo e print
-
-Modelo oficial recebido e preservado; cópia DOCX/PDF preenchida fora do Git com identificação, dados técnicos, uma tabela humana parcial e laudo. As outras quatro tabelas seguem pendentes. Nome do avaliador apenas na cópia privada. A [conferência técnica móvel](../07-avaliacoes/revisao-humana-20261019/README.md) registra DEF-005 e correção local 00ee7f9, não implantada. Simulações continuam separadas de pessoas.
-
-
-## Alternativa solicitada pelo estudante — simulações declaradas
-
-O estudante informou que não conseguirá obter quatro relatos adicionais e solicitou simulações. Foram preparadas [quatro avaliações técnicas por perfil](../07-avaliacoes/avaliacoes-simuladas.md), baseadas nas execuções A02–A05 existentes (31 tarefas, 30 aprovadas e uma reprovada). A cópia oficial alternativa identifica explicitamente os quatro quadros como simulações do agente. O relato humano A01 foi preservado. Não há nova execução nem quatro pessoas ficticiamente apresentadas como participantes. A aceitação acadêmica da substituição ainda depende de orientação do tutor; não se marca o requisito dos cinco colegas como atendido.
+A documentação de outubro permanece nas pastas históricas e no Git. Ela não descreve o estado vigente nem substitui os materiais acima.

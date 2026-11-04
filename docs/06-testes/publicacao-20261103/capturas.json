@@ -1,0 +1,216 @@
+{
+  "published_sha": "10210ad7bc9c995c90207fa1c2dce6c546d217f6",
+  "screenshots": [
+    {
+      "file": "PUB-02.png",
+      "sha256": "5e18db9887a932618beac002a569fa7e5d7ac4bc4c22e435c68cbc671c29f5b9"
+    },
+    {
+      "file": "PUB-03.png",
+      "sha256": "42125769268de2f5a54f8354b23a3a50cf826714f8ebcd9cb0c05e3e49fc6f15"
+    },
+    {
+      "file": "PUB-04.png",
+      "sha256": "8bc79e1d558e1eeb8a9e21fb1aca3351ec16006d2dbcd260dc3967a74f946894"
+    },
+    {
+      "file": "PUB-05.png",
+      "sha256": "80ac8e9d449dcd6c79c4642d60784c225267f0e36ddc9edf961c0825e644c473"
+    },
+    {
+      "file": "PUB-06.png",
+      "sha256": "65b214f28fb53d5b93eb632fbe6371977478e275936e49968d0a42806e487d3f"
+    },
+    {
+      "file": "PUB-07.png",
+      "sha256": "2fea390a39926a46f6540669e15a9a2369ec42816f51f46783cee88e9d9a7355"
+    },
+    {
+      "file": "PUB-08.png",
+      "sha256": "856f37d30fbf6ab07bcef2d7b4724da0d682451517237ef21c910718954b57dd"
+    },
+    {
+      "file": "PUB-09.png",
+      "sha256": "60fdb3bb8fe668046322a0024b203096400b192ba01837bb2b9a887712daccaa"
+    },
+    {
+      "file": "PUB-10.png",
+      "sha256": "92d7c04d8e789f579ccc477d6eb1f471a12684ee2bebcd2aee537b6be2f0a90e"
+    },
+    {
+      "file": "PUB-11.png",
+      "sha256": "5f89532a9249b860f78f8b96cfd178ffb64beebdb7d6088c1013d8caac06b147"
+    },
+    {
+      "file": "PUB-12.png",
+      "sha256": "adcd04b52518abd01a37478c2cbd670387dd803b50d9958c377c36016e6218ec"
+    },
+    {
+      "file": "PUB-13.png",
+      "sha256": "32a57445708073b317adcd12395f65d6384c871039890240d074998b1c037790"
+    },
+    {
+      "file": "PUB-14.png",
+      "sha256": "a6fad691e876c49067c1a2baf5470397f2c4dfdc0cd01155ca294ea3a3c21fb2"
+    },
+    {
+      "file": "PUB-15.png",
+      "sha256": "35ab1f30b06744c40830e4e8c10ba65e62ac0e083526df6c26b7b25661c655d3"
+    },
+    {
+      "file": "PUB-16.png",
+      "sha256": "6659b5a9ff7a642fd7981d1cb8a4dc3c6df9a80771a26e7fb805a6c7e3077e2b"
+    },
+    {
+      "file": "publicado-avaliacao-1440.png",
+      "sha256": "f06a952a66723100cb97d010cdd06fda55d8f11fd52cba2b630477cd6b9023e7"
+    },
+    {
+      "file": "publicado-avaliacao-320.png",
+      "sha256": "44b06c00a9a909452e3870882fe0a258c607bf64c887066a0b0c202e5abd9dec"
+    },
+    {
+      "file": "publicado-avaliacao-390.png",
+      "sha256": "7588343e20656ac8efaf72a4cf4f8a8e7e5353f799d30d921245a359ad505c12"
+    },
+    {
+      "file": "publicado-chamada-1440.png",
+      "sha256": "c4c7f3d5b13508a6dfd32478585e468dcb61f74642e79707c6dd0c74ff9a7c77"
+    },
+    {
+      "file": "publicado-chamada-320.png",
+      "sha256": "e2f43dcbaead05189a3cfdf88de378d1a6e807389d7934468baf4da01e6a28b2"
+    },
+    {
+      "file": "publicado-chamada-390.png",
+      "sha256": "229c65aa0a3475646bb26dd59046f78127bdbedcdb2d3657ba55d380fe14d307"
+    },
+    {
+      "file": "publicado-confirmacao-1440.png",
+      "sha256": "d677ba32f38546f1c08ba1adada9ee854b2d79d788299001e0be529f7b523eae"
+    },
+    {
+      "file": "publicado-confirmacao-320.png",
+      "sha256": "5db9dcee9c8bee78b455244b76b67d68c33ed4135a59d05e67defd63f9e55e47"
+    },
+    {
+      "file": "publicado-confirmacao-390.png",
+      "sha256": "ae157ab02077c86d0d881f0e3ee0f0b87b9ad878b06a3b132cc26ba48d1503cf"
+    },
+    {
+      "file": "publicado-editar-participante-1440.png",
+      "sha256": "521607e76adf69f23bac22afbd99539459eea442850ccb56b9bc1e5a66ea2859"
+    },
+    {
+      "file": "publicado-editar-participante-320.png",
+      "sha256": "8209564db4b6f0f1e4953b8207fe607e9bb5bd0e0d37ca16b0f19e807e94a6bb"
+    },
+    {
+      "file": "publicado-editar-participante-390.png",
+      "sha256": "bc137d748a1c6021f602c7376476cac07a1737d62e80ff41624d87dcf6a3700d"
+    },
+    {
+      "file": "publicado-fila-1440.png",
+      "sha256": "c15ce18b80d3c5f80501805ab6beba575197770e2794f20cd0b93fdce103599d"
+    },
+    {
+      "file": "publicado-fila-320.png",
+      "sha256": "60741017678fe196394c4c852d5051de7f5309ba55ab49883f2fba998a9c5118"
+    },
+    {
+      "file": "publicado-fila-390.png",
+      "sha256": "628d2b0b0e009464399727a001e23e3bd3ff3b67ea31817f1d691e75d120c03d"
+    },
+    {
+      "file": "publicado-fila-acoes-direita-320.png",
+      "sha256": "4b07e0e267522c9cdb4c5747a862e192ccc7e90606ecca0b216181477e4a5247"
+    },
+    {
+      "file": "publicado-inicio-1440.png",
+      "sha256": "7ea08b01f4160665025da505118cafd6943926d91a11aa43dfa7fff95d2dbc1a"
+    },
+    {
+      "file": "publicado-inicio-320.png",
+      "sha256": "83046ab588df478c3002e2f6d5f9ab9a07e077405caf8e4457dd1684e4d2e6b1"
+    },
+    {
+      "file": "publicado-inicio-390.png",
+      "sha256": "e22e44593b18f3e46b8d73477d27dcd28cbeecad98b8d3f30c09c1ac77b62920"
+    },
+    {
+      "file": "publicado-nova-turma-1440.png",
+      "sha256": "20dbcbc4ab9798d27a41d4f4e317ec6d6b9a809d3b8eb02969a6d86301be5d65"
+    },
+    {
+      "file": "publicado-nova-turma-320.png",
+      "sha256": "5e42bb83e2081dfec9f111995b071a703744dbe824fadf50585797a4c18e88e6"
+    },
+    {
+      "file": "publicado-nova-turma-390.png",
+      "sha256": "12577ebe79bf9779213f27518467a76b4d52251ae84062a899687928ca1211c6"
+    },
+    {
+      "file": "publicado-novo-instrutor-1440.png",
+      "sha256": "e39dab7b54b28eb5e293e7b497d4802bce69ca9aba08da2f2f429bad8e83a0ee"
+    },
+    {
+      "file": "publicado-novo-instrutor-320.png",
+      "sha256": "8579ce9f586c485f6bf585f4e99bb1deaaba9ee16e69a0573068ce1702ffe78e"
+    },
+    {
+      "file": "publicado-novo-instrutor-390.png",
+      "sha256": "1dd27c1aaffc3c788c285b7a61dc349eda2d6321861b8ba71ba7b5b77f725cb9"
+    },
+    {
+      "file": "video-ana-responsavel.png",
+      "sha256": "0ee9d9094bb5db7eaf145dd58a92f9d2ffb441192d8927aaaa66f0158cc510b5"
+    },
+    {
+      "file": "video-certificado-ana.png",
+      "sha256": "77519ab0f2f15ee74f8f90182812e8a717eee848abc195a44eda29d52530fab5"
+    },
+    {
+      "file": "video-conclusao-python.png",
+      "sha256": "89bccd17639cba8b25b1c180361c694aa9099d7c78d19c871eb5629e6abc86e0"
+    },
+    {
+      "file": "video-evaluation-0.png",
+      "sha256": "b88bb17ef4b475566199745797ab893e41360f4656566df34a048abb0968ada9"
+    },
+    {
+      "file": "video-evaluation-1.png",
+      "sha256": "2bc1e9ccbc98c720b58e242d78b1416a8b2607ee6bb97181fbeac936fc280f90"
+    },
+    {
+      "file": "video-fila-robotica.png",
+      "sha256": "e525c35e94e0c8e189815ccca13995a8889a9fd07594ce52ecd400b661bd0f39"
+    },
+    {
+      "file": "video-jornada-ana.png",
+      "sha256": "5eb0cc561b2b5011132186ba26659674b9169f93834622cd9bfcb2a97419b60e"
+    },
+    {
+      "file": "video-oficina-python.png",
+      "sha256": "b6aadaecf9a9617a062f586087b8fb29a58e2e2fc908b242c46b96307208e6a7"
+    },
+    {
+      "file": "video-painel-python.png",
+      "sha256": "1a789622de7f98f43278adfb44a7721d4d5639a334aa70adb4f4925f72dfae26"
+    },
+    {
+      "file": "video-review-0.png",
+      "sha256": "e811169b07df92c609c15fd91cd4144360941119a7ce3d8eac87a10f6ec87ecb"
+    },
+    {
+      "file": "video-review-1.png",
+      "sha256": "1dda3330d07917df22230a3ab4ee0672c76d080bc201d534222dd69ad925e915"
+    },
+    {
+      "file": "video-web-acompanhamento.png",
+      "sha256": "23ae47aafc52d090f8075bd236973bfe16279ff80812fd90565d79a4df5a68b3"
+    }
+  ],
+  "masking": "Saudação nominal ocultada; capturas instrumentais PUB-02–16 ocultam user-nav inteira. Capturas publicado-* e video-* preservam menus e ocultam somente a saudação. Sem edição de valores/estados.",
+  "browser": "Chromium/Playwright",
+  "tls_verified": true
+}

@@ -1,6 +1,6 @@
 # Laudo de qualidade — versão publicada em 03/11/2026
 
-**Apta para gravação técnica no escopo retestado. Entrega acadêmica parcial quanto à quinta fonte humana e ao vídeo.** Publicação `10210ad7bc9c995c90207fa1c2dce6c546d217f6`, imagem `sha256:8bcc8d37eb5b397eaf2695286904b6f065bdd8176253733a2b1f775e88816bd3`; PR #14 integrada em develop, main preservada. Nome/RGM e fontes nominais somente na cópia privada do tutor.
+**Apta para gravação técnica no escopo retestado. Cinco fontes humanas recebidas; vídeo e submissão ainda pendentes.** Publicação `10210ad7bc9c995c90207fa1c2dce6c546d217f6`, imagem `sha256:8bcc8d37eb5b397eaf2695286904b6f065bdd8176253733a2b1f775e88816bd3`; PR #14 integrada em develop, main preservada. Nome/RGM e fontes nominais somente na cópia privada do tutor.
 
 ## Achados, decisões e comprovação
 
@@ -20,7 +20,7 @@ Certificados de simulação: dois IDs conferidos por manifests/vínculos. Invent
 
 ## Verificação e fontes humanas
 
-Quatro relatos humanos disponíveis, todos consolidados em 03/11/2026 conforme confirmação expressa do estudante. HUM-001: captura original com 13/10/26 preservada; “Data do teste corrigida para 03/11/2026 conforme confirmação do estudante responsável em 03/11/2026; a captura original foi preservada.” Não se inventa segunda sessão. HUM-002 usou A02 administrador; HUM-003 administrador, username não informado; HUM-004 instrutor 03, turma PY-2026-A03, username não informado. O relato anterior localizado é HUM-001, não uma quinta pessoa. Falta a fonte de um quinto avaliador distinto. Não testados de HUM-003 preservados literalmente; demais itens omitidos são “não informado”.
+Cinco relatos humanos disponíveis, todos consolidados em 03/11/2026 conforme confirmação expressa do estudante. HUM-001: captura original com 13/10/26 preservada; “Data do teste corrigida para 03/11/2026 conforme confirmação do estudante responsável em 03/11/2026; a captura original foi preservada.” Não se inventa segunda sessão. HUM-002 usou A02 administrador; HUM-003 administrador, username não informado; HUM-004 instrutor 03, turma PY-2026-A03, username não informado; HUM-005 participante A05, com relato de navegação/inscrições/certificados e dificuldade mobile. O relato anterior localizado é HUM-001, não uma quinta pessoa. A quinta fonte distinta foi recebida como HUM-005, sem duplicar o relato anterior. Não testados de HUM-003 preservados literalmente; demais itens omitidos são “não informado”.
 
 CI do HEAD da PR e pós-merge aprovada: **264 testes PostgreSQL, zero skips, cobertura 90,54%**, Ruff, configuração, migrations, build/startup. [Retestes publicados](../06-testes/publicacao-20261103/README.md): 24 verificações registradas, 24 combinações de tela/largura e 12 consultas estáveis do vídeo, HTTPS/TLS, sessões independentes e CSRF. A rodada isolada anterior de 52 combinações/12 fluxos é evidência distinta, não duplicada. Não se afirma AA, aparelhos físicos, carga ou cobertura de todos os navegadores.
 
@@ -28,4 +28,6 @@ Backup com checksum/catálogo verificados e imagem anterior preservada. Zero alt
 
 ## Limitações e entrega
 
-Planejamento/backlog/roadmap atuais do Integrador II foram conferidos; não foi localizado planejamento/protótipo original atribuível ao Integrador I. Isso é limitação histórica, sem fabricar continuidade. Fontes nominais, original AVA e cópias DOCX/PDF ficam restritos. Falta a fonte de uma quinta pessoa distinta; campos ausentes ficam sinalizados. Vídeo: **PENDENTE — inserir após gravação**. Prazo informado: 17/11/2026. O estudante ainda deve gravar, medir 300s, publicar/testar o link, inserir no AVA, regenerar PDF/ZIP e submeter/guardar recibo.
+Planejamento/backlog/roadmap atuais do Integrador II foram conferidos; não foi localizado planejamento/protótipo original atribuível ao Integrador I. Isso é limitação histórica, sem fabricar continuidade. Fontes nominais, original AVA e cópias DOCX/PDF ficam restritos. As cinco fontes distintas foram recebidas; campos ausentes ficam sinalizados. Vídeo: **PENDENTE — inserir após gravação**. Prazo informado: 17/11/2026. O estudante ainda deve gravar, medir 300s, publicar/testar o link, inserir no AVA, regenerar PDF/ZIP e submeter/guardar recibo.
+
+HUM-005 foi preservado integralmente, incluindo os dois parágrafos sobre funcionalidades não testadas. Verificação técnica A05 adicional: 15 leituras sem overflow externo nas páginas consultadas; não equivale a reteste humano em celular físico. Notificações, lembretes e ampliação de informações/jornada ficam como evolução futura, sem implementação nesta entrega.

@@ -1,6 +1,6 @@
 # Estado atual de fechamento
 
-Prazo confirmado pelo estudante: **17/11/2026**. PR #14 integrada/publicada e retestada em 10210ad. Há quatro fontes humanas e falta uma quinta distinta; vídeo/link/submissão pendentes. O roteiro usa cenários estáveis, sem limpeza de dados. Planejamento/protótipo original do Integrador I não foi localizado; o roadmap abaixo documenta o Integrador II.
+Prazo confirmado pelo estudante: **17/11/2026**. PR #14 integrada/publicada e retestada em 10210ad. Há cinco fontes humanas recebidas; vídeo/link/submissão pendentes. O roteiro usa cenários estáveis, sem limpeza de dados. Planejamento/protótipo original do Integrador I não foi localizado; o roadmap abaixo documenta o Integrador II.
 
 # Roadmap de execução
 

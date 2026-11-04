@@ -24,3 +24,7 @@ O primeiro executor de negativas esperava um elemento main na página padrão 40
 Backup pelo script do projeto, diretório restrito novo sem remover backups antigos; catálogo com 193 entradas e SHA-256 verificado. Dump e plano operacional somente na cópia restrita. Imagem anterior preservada por ID/tag para rollback de código; sem migrations novas, não se prevê restauração do banco para esse rollback.
 
 **Zero alterações em registros de negócio preexistentes e zero exclusões.** Foram criados 19 registros fictícios exclusivos da rodada, inventariados privadamente. Somente last_login das contas utilizadas mudou nos registros anteriores. Cenários de apresentação e certificados de simulação antigos preservados. 73 contêineres de outros projetos sem alteração de ID/imagem/início/restarts/portas; banco deste projeto preservou o ID. Nginx/certificados/configuração global e main permaneceram inalterados.
+
+## Complemento após HUM-005
+
+[15 leituras específicas de A05](reteste-A05-HUM005.json), início/inscrições/certificados/jornada/ofertas em 320/390/1440, sem overflow externo; cinco capturas. Somente consulta, sem alteração de registros de negócio. O dispositivo/navegador/versão da sessão humana não foram informados; não se declara reprodução exata, causa ou aceite em aparelho físico. Esses dados são um complemento técnico aos resultados anteriores, não cinco novas opiniões nem substituição do relato.

@@ -208,9 +208,34 @@
     {
       "file": "video-web-acompanhamento.png",
       "sha256": "23ae47aafc52d090f8075bd236973bfe16279ff80812fd90565d79a4df5a68b3"
+    },
+    {
+      "file": "A05-certificados-390.png",
+      "sha256": "cbaf2c40220e3766600c1cd03d48a4d0bf6f5f3683550520c671b206101f092a"
+    },
+    {
+      "file": "A05-inicio-390.png",
+      "sha256": "a5d1599bd53238a0aafc2b015dcb991046a5b4e9708c2955dfd86fcfc5a38e16"
+    },
+    {
+      "file": "A05-inscricoes-390.png",
+      "sha256": "4db531eacbf1176187e7cfa94613c45211f999172fa7c6d02aa527d15b95916c"
+    },
+    {
+      "file": "A05-jornada-390.png",
+      "sha256": "e937e06828522e1fa1acbd15d2db04001d176a2ddf444146ea1f5c9cc014fb06"
+    },
+    {
+      "file": "A05-ofertas-390.png",
+      "sha256": "8c8dfd776e8d999a9b332b749f5594e74cee94bcc0b21b9940d67d3535e537c4"
+    },
+    {
+      "file": "A05-certificados-acoes-390.png",
+      "sha256": "15a999154c8d7ba27ca33638d2d8283a0cd10ff99d96dc609eebc7715873e642"
     }
   ],
   "masking": "Saudação nominal ocultada; capturas instrumentais PUB-02–16 ocultam user-nav inteira. Capturas publicado-* e video-* preservam menus e ocultam somente a saudação. Sem edição de valores/estados.",
   "browser": "Chromium/Playwright",
-  "tls_verified": true
+  "tls_verified": true,
+  "additional_A05_review": "15 combinações de leitura e uma conferência de ação da tabela; seis PNG, sem avaliação humana nova."
 }

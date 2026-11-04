@@ -1,7 +1,7 @@
 # Manual do usuário — Código do Futuro
 
 Este manual descreve a release candidata do Projeto Integrador Transdisciplinar em Engenharia de
-Software II. Edição atualizada para a versão publicada `10210ad` em 03/11/2026. As imagens de outubro permanecem identificadas como históricas; as telas alteradas são apresentadas na atualização abaixo. As capturas reais estão no [plano e registro](plano-de-capturas.md), com fonte, legenda e hash. Todos os dados apresentados são fictícios. Há quatro fontes humanas disponíveis; falta uma quinta distinta e o vídeo/link/submissão.
+Software II. Edição atualizada para a versão publicada `10210ad` em 03/11/2026. As imagens de outubro permanecem identificadas como históricas; as telas alteradas são apresentadas na atualização abaixo. As capturas reais estão no [plano e registro](plano-de-capturas.md), com fonte, legenda e hash. Todos os dados apresentados são fictícios. Há cinco fontes humanas disponíveis; faltam vídeo/link/submissão.
 
 Use o [manual HTML imprimível](manual-imprimivel.html), o [PDF](manual-imprimivel.pdf) e o [roteiro do vídeo](roteiro-video.md). Os PDFs e imagens não contêm credenciais.
 

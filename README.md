@@ -1,4 +1,4 @@
-Atualização vigente: PR #14 integrada e publicada em **10210ad**, CI e retestes HTTPS aprovados. [Entrega atual](docs/09-entrega/relatorio-final.md). Quatro fontes humanas; uma quinta distinta e gravação/link/submissão pendentes. main preservada.
+Atualização vigente: PR #14 integrada e publicada em **10210ad**, CI e retestes HTTPS aprovados. [Entrega atual](docs/09-entrega/relatorio-final.md). Cinco fontes humanas recebidas; gravação/link/submissão pendentes. main preservada.
 
 # Código do Futuro
 
@@ -12,7 +12,7 @@ A especificação, a fundação executável e os módulos operacionais do MVP es
 
 ## Estado acadêmico verificado
 
-Em 03/11/2026, PR #14 integrada/publicada em `10210ad`, CI com 264 testes e cobertura 90,54%; retestes HTTPS e layout aprovados. Há quatro fontes humanas distintas e falta uma quinta, além de gravação/link/submissão pelo estudante. Modelo oficial AVA preenchido privadamente; originais do Integrador I não localizados, limitação registrada. [Índice do tutor](docs/09-entrega/README.md), [matriz](docs/09-entrega/matriz-conformidade.md) e [checklist](docs/09-entrega/checklist-final.md) distinguem evidências e lacunas. main preservada.
+Em 03/11/2026, PR #14 integrada/publicada em `10210ad`, CI com 264 testes e cobertura 90,54%; retestes HTTPS e layout aprovados. Há cinco fontes humanas distintas; restam gravação/link/submissão pelo estudante. Modelo oficial AVA preenchido privadamente; originais do Integrador I não localizados, limitação registrada. [Índice do tutor](docs/09-entrega/README.md), [matriz](docs/09-entrega/matriz-conformidade.md) e [checklist](docs/09-entrega/checklist-final.md) distinguem evidências e lacunas. main preservada.
 
 ## Objetivo
 

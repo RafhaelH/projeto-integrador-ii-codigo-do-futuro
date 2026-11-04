@@ -90,3 +90,15 @@
 Histórias operacionais dos épicos E1–E6 possuem implementação e testes ligados na [rastreabilidade](../02-requisitos/rastreabilidade-implementada.md). A definição de pronto de US-004 ainda depende de observação humana/metas de acessibilidade; não se presume aceitação de clareza somente por CSS. US-026/027/028 têm dados/controle técnico documentados, mas não aprovam metas de carga/navegadores sem medição.
 
 US-029 está **PENDENTE** (cinco colegas/profissionais reais). US-030 está **PARCIAL**: manual, evidências e modelos preparados, vídeo/PDF real pendentes. Não inventar sugestões humanas para gerar novas histórias. [Checklist e sequência de fechamento](../09-entrega/checklist-final.md) concentram ações restantes, incluindo planejamento I e modelo AVA.
+
+## Sugestões de HUM-005 — evolução futura
+
+Fonte: relato humano do participante A05, 03/11/2026; identidade e texto integral restritos. Não são defeitos de funções já prometidas nem implementação concluída nesta tarefa. Sem prazo ou entrega adicional assumidos antes de 17/11/2026.
+
+| Sugestão | Decisão |
+|---|---|
+| Notificações de mudanças nas inscrições | Backlog; requer definir canais, destinatários e permissões |
+| Lembretes de atividades e prazos | Backlog; requer requisito, preferências e processamento |
+| Mais informações sobre oficinas | Backlog; esclarecer quais informações além dos campos existentes |
+| Jornada com mais acompanhamento/interação | Backlog; detalhar fluxos com usuários antes de ampliar escopo |
+| Melhor responsividade | Relacionada às correções publicadas; 15 leituras específicas de A05 registradas, sem inventar aceite humano |

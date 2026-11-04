@@ -3,7 +3,7 @@
   "source_kind": "textos fornecidos pelo estudante na conversa",
   "restricted_integral_source_sha256": "d75f2b6f6b8b24487ddd0fc587d69dd0a57f6362ed2be308247d389d7957c5f8",
   "identified_source_private": true,
-  "human_reports_available": 4,
+  "human_reports_available": 5,
   "additional_HUM001_session_proven": false,
   "cases": [
     {
@@ -86,9 +86,50 @@
       "browser": "não informado",
       "eligibility": "não informado",
       "restricted_source_sha256": "03d6c597448d2c74ab0b9e44a9c9ecb1c19305135c0bb30bd9d37c0ec3cf19b2"
+    },
+    {
+      "id": "HUM-005",
+      "alias": "A05",
+      "profile": "PARTICIPANT, informado no relato",
+      "test_date": "2026-11-03",
+      "worked": [
+        "Acesso ao sistema e navegação pelas opções disponíveis.",
+        "Consulta à página inicial e aos módulos da plataforma.",
+        "Acesso à área de inscrições, com visualização das turmas, datas das solicitações e respectivas situações.",
+        "Acesso à área de certificados, com opção de visualizar e baixar o documento em PDF.",
+        "Navegação geral pelo ambiente, que apresentou as funcionalidades de maneira organizada e coerente com a proposta do sistema."
+      ],
+      "opinion": "Expectativas atendidas nas funcionalidades testadas; boa experiência e potencial de evolução, conforme relato.",
+      "failed": [
+        "A principal dificuldade identificada foi a responsividade da plataforma em dispositivos móveis.",
+        "Ao acessar pelo celular, percebi problemas na adaptação do layout à tela, com elementos desalinhados, distribuição inadequada dos menus e dificuldade de visualização de algumas informações.",
+        "O sistema funciona, mas a experiência de navegação pelo celular poderia ser melhor."
+      ],
+      "untested_exact": [
+        "Não foi possível avaliar todas as funcionalidades disponíveis, especialmente aquelas que dependem de inscrições confirmadas, participação em oficinas ou disponibilização de resultados específicos.",
+        "Também não foi possível avaliar o funcionamento de todas as etapas relacionadas aos projetos e às atividades acadêmicas."
+      ],
+      "suggestions": [
+        "Melhorias na responsividade para navegação intuitiva, organizada e acessível pelo celular.",
+        "Notificações sobre alterações nas inscrições.",
+        "Lembretes de atividades e prazos.",
+        "Informações mais detalhadas sobre oficinas.",
+        "Acompanhamento mais completo da jornada do participante."
+      ],
+      "device": "celular; modelo não informado",
+      "browser": "não informado",
+      "viewport": "não informado",
+      "version_tested": "não informado",
+      "test_time": "não informado",
+      "help_received": "não informado",
+      "duration": "não informado",
+      "eligibility": "não informado",
+      "restricted_source_sha256": "205f0561e0b3e87031616dbc00f1188bc20ade2f7d7c01b96863643448d117c5",
+      "technical_followup": "15 leituras HTTPS em A05, cinco páginas × 320/390/1440, sem overflow externo; não comprova aceite em aparelho físico ou reprodução exata do relato."
     }
   ],
   "date_confirmation_source": "Confirmação expressa do estudante responsável em 03/11/2026, America/Sao_Paulo",
-  "human_report_missing": "Quinto avaliador distinto: nenhum texto ou identidade adicional comprovados; o relato anterior localizado corresponde a HUM-001 e não é contado duas vezes.",
-  "date_confirmation_source_sha256": "01d9cd50f63a37b325b121ceb65ba492462e7c40aa39bee6d6cef938be78d7a1"
+  "human_report_missing": null,
+  "date_confirmation_source_sha256": "01d9cd50f63a37b325b121ceb65ba492462e7c40aa39bee6d6cef938be78d7a1",
+  "five_distinct_sources_received": true
 }
